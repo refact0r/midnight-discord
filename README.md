@@ -2,5 +2,4 @@
 
 A darkened discord theme.
 
-<img width=1000 src="https://user-images.githubusercontent.com/34758569/135725825-90d87d5c-5b61-4a73-8206-6df6418eda59.png">
-
+<img width=1000 src="https://user-images.githubusercontent.com/34758569/135725909-02971c45-aaed-414a-8320-61d744821225.png">
