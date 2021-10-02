@@ -96,6 +96,10 @@
 }
 
 .withFrame-haYltI .winButton-iRh8-Z {
+    background: none;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z {
     top: 0;
     width: 12px;
     height: 12px;
@@ -117,7 +121,7 @@
     background-color: hsl(120, 50%, 50%) !important;
 }
 
-.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(4):after {
+.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(4)::after {
     background-color: hsl(50, 50%, 50%) !important;
 }
 
