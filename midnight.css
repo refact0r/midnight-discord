@@ -73,12 +73,12 @@
 .message-2qRu38,
 .root-1gCeng,
 .container-3ayLPN {
-    background: var(--background-primary) !important;
+    background-color: var(--background-primary) !important;
 }
 
 .footer-3mqk7D,
 .footer-2gL1pp {
-    background: var(--background-secondary) !important;
+    background-color: var(--background-secondary) !important;
 }
 
 /* fix some other things */
@@ -88,6 +88,11 @@
 
 .itemCard-v9viV7 {
     border: none;
+}
+
+.outer-1AjyKL.active-1xchHY, 
+.outer-1AjyKL.interactive-3B9GmY:hover {
+    background-color: var(--background-modifier-hover) !important;
 }
 
 /* create new window control buttons*/
