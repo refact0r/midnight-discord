@@ -95,6 +95,28 @@
     background-color: var(--background-modifier-hover) !important;
 }
 
+/* get rid of border radius */
+.threadSidebar-1o3BTy {
+    border-radius: 0 !important;
+}
+
+.chat-3bRxxu {
+    border-radius: 0 !important;
+}
+
+.sidebar-2K8pFh {
+    border-radius: 0 !important;
+}
+
+/* hide scrollbars */
+.scroller-2LSbBU::-webkit-scrollbar-thumb {
+    visibility: hidden;
+}
+
+.scroller-2LSbBU:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
 /* create new window control buttons*/
 .withFrame-haYltI .winButton-iRh8-Z > svg {
     display: none;
@@ -162,7 +184,7 @@
 }
 
 /* rearrange top toolbar for window controls */
-.toolbar-1t6TWx {
+.content-98HsJk > :last-child .toolbar-1t6TWx {
     margin-right: 95px;
 }
 
