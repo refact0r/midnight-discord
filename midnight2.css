@@ -40,7 +40,7 @@
     --scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 13%);
     --scrollbar-auto-scrollbar-color-track: transparent;
     --elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
-    --elevation-low: 0 1px 0 hsla(240, 11%, 2%, 0.2), 0 1.5px 0 hsla(240, 8%, 3%, 0.05), 0 2px 0 hsla(240, 11%, 2%, 0.05);
+    --elevation-low: none;
     --elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
     --elevation-high: 0 8px 16px hsla(0, 0%, 0%, 0.24);
     --logo-primary: hsl(0, 0%, 100%);
@@ -106,7 +106,9 @@
     margin-bottom: 10px;
 }
 
-.container-1D34oG {
+.container-1D34oG,
+.container-1a3EgQ,
+.applicationStore-1pNvnv {
     border-radius: 10px !important;
     margin: 0px 10px 10px 10px;
 }
@@ -177,14 +179,6 @@
 
 .scrollerBase-289Jih::-webkit-scrollbar {
     visibility: hidden;
-}
-
-
-/* hide shadow lines */
-.content-yTz4x3::before,
-.tabBody-3YRQ8W::before,
-.chat-15Vmww::before {
-    display: none;  
 }
 
 
