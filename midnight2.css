@@ -1,0 +1,222 @@
+/* change colors */
+.theme-dark {
+    --header-primary: hsl(220, 15%, 60%);
+    --header-secondary: hsl(220, 15%, 40%);
+    --text-normal: hsl(220, 15%, 60%);
+    --text-muted: hsl(220, 15%, 20%);
+    --text-link: hsl(197, 100%, 47.8%);
+    --text-link-low-saturation: hsl(197, 100%, 52.9%);
+    --text-positive: hsl(139, 66.8%, 58.6%);
+    --text-warning: hsl(38, 95.7%, 54.1%);
+    --text-danger: hsl(359, 82.6%, 59.4%);
+    --text-brand: hsl(235, 86.1%, 77.5%);
+    --interactive-normal: hsl(220, 15%, 40%);
+    --interactive-hover: hsl(220, 15%, 60%);
+    --interactive-active: hsl(220, 15%, 60%);
+    --interactive-muted: hsl(220, 15%, 20%);
+    --background-primary: hsl(220, 15%, 10%);
+    --background-secondary: hsl(220, 15%, 10%);
+    --background-secondary-alt: hsl(220, 15%, 10%);
+    --background-tertiary: hsl(220, 15%, 13%);
+    --background-accent: hsl(220, 15%, 18%);
+    --background-floating: hsl(220, 15%, 8%);
+    --background-mobile-primary: hsl(220, 15%, 10%);
+    --background-mobile-secondary: hsl(220, 15%, 10%);
+    --background-modifier-hover: hsla(220, 15%, 20%, .2);
+    --background-modifier-active: hsla(220, 15%, 20%, .3);
+    --background-modifier-selected: hsla(220, 15%, 20%, .4);
+    --background-modifier-accent: hsla(220, 15%, 20%, .4);
+    --info-positive-text: hsl(0, 0%, 100%);
+    --info-warning-text: hsl(0, 0%, 100%);
+    --info-danger-text: hsl(0, 0%, 100%);
+    --info-help-background: hsla(197, 100%, 47.8%, 0.1);
+    --info-help-foreground: hsl(197, 100%, 47.8%);
+    --info-help-text: hsl(0, 0%, 100%);
+    --status-warning-text: hsl(0, 0%, 0%);
+    --scrollbar-thin-thumb: hsl(220, 15%, 11%);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: hsl(220, 15%, 11%);
+    --scrollbar-auto-track: transparent;
+    --scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 13%);
+    --scrollbar-auto-scrollbar-color-track: transparent;
+    --elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
+    --elevation-low: 0 1px 0 hsla(240, 11%, 2%, 0.2), 0 1.5px 0 hsla(240, 8%, 3%, 0.05), 0 2px 0 hsla(240, 11%, 2%, 0.05);
+    --elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
+    --elevation-high: 0 8px 16px hsla(0, 0%, 0%, 0.24);
+    --logo-primary: hsl(0, 0%, 100%);
+    --control-brand-foreground: hsl(235, 86.1%, 77.5%);
+    --control-brand-foreground-new: hsl(235, 86.1%, 77.5%);
+    --background-mentioned: hsla(38, 95.7%, 54.1%, 0.1);
+    --background-mentioned-hover: hsla(38, 95.7%, 54.1%, 0.08);
+    --background-message-hover: hsla(220, 15%, 20%, .2);
+    --channels-default: hsl(220, 15%, 40%);
+    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --channeltextarea-background: hsl(220, 15%, 13%);
+    --activity-card-background: hsl(220, 15%, 13%);
+    --textbox-markdown-syntax: hsl(220, 15%, 40%);
+    --deprecated-card-bg: hsla(216, 7%, 14%, 0.6);
+    --deprecated-card-editable-bg: hsla(216, 7%, 14%, 0.3);
+    --deprecated-store-bg: hsl(220, 15%, 10%);
+    --deprecated-quickswitcher-input-background: hsl(220, 15%, 20%);
+    --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
+    --deprecated-text-input-bg: hsla(0, 0%, 0%, 0.1);
+    --deprecated-text-input-border: hsla(0, 0%, 0%, 0.3);
+    --deprecated-text-input-border-hover: hsl(240, 11%, 2%);
+    --deprecated-text-input-border-disabled: hsl(220, 15%, 13%);
+    --deprecated-text-input-prefix: hsl(210, 3%, 87%);
+}
+
+/* force elements to use color vars */
+.peopleColumn-29fq28,
+.uploadModal-2ifh8j,
+.pageWrapper-1PgVDX,
+.message-2qRu38,
+.root-1gCeng,
+.container-3ayLPN {
+    background-color: var(--background-primary) !important;
+}
+
+.footer-3mqk7D,
+.footer-2gL1pp {
+    background-color: var(--background-secondary) !important;
+}
+
+/* fix some other things */
+.option-96V44q:after {
+    background: none !important;
+}
+
+.itemCard-v9viV7 {
+    border: none;
+}
+
+.outer-1AjyKL.active-1xchHY, 
+.outer-1AjyKL.interactive-3B9GmY:hover {
+    background-color: var(--background-modifier-hover) !important;
+}
+
+
+.sidebar-2K8pFh {
+    border-radius: 10px !important;
+    margin-bottom: 10px;
+}
+
+.container-1D34oG {
+    border-radius: 10px !important;
+    margin: 0px 10px 10px 10px;
+}
+
+.chat-3bRxxu {
+    margin: 0px 10px 10px 10px;
+    background: none !important;
+}
+
+.threadSidebar-1o3BTy {
+    border-radius: 10px !important;
+    margin: 0px 10px 10px 0px;
+}
+
+.membersWrap-2h-GB4 {
+    position: relative;
+    margin-top: -48px;
+    z-index: 2;
+}
+
+.members-1998pB {
+    border-radius: 10px !important;
+    margin: 0px 0px 0px 10px;
+}
+
+.chatContent-a9vAAp {
+    background: var(--background-primary);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.title-3qD0b- {
+    background: var(--background-primary);
+    margin-right: 250px;
+    width: auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.chat-3bRxxu.threadSidebarOpen-vdkwIh .title-3qD0b- {
+    margin-right: 0px;
+}
+
+.iconWrapper-2OrFZ1[aria-label="Help"] {
+    display: none;
+}
+
+.iconWrapper-2OrFZ1[aria-label*="Member List"] {
+    display: none;
+}
+
+.search-36MZv- {
+    order: 1;
+}
+
+.members-1998pB div h2:first-of-type {
+    height: 25px;
+    padding-top: 9px;
+}
+
+
+
+.scrollerBase-289Jih:hover::-webkit-scrollbar {
+    visibility: visible;
+}
+
+.scrollerBase-289Jih::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+
+
+.content-yTz4x3::before {
+    display: none;  
+}
+
+.chat-15Vmww::before {
+    display: none;
+}
+
+
+
+.withFrame-haYltI .winButton-iRh8-Z > svg {
+    display: none;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z {
+    background: none;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z {
+    top: 0;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z::after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    transition: 0.1s;
+}
+
+.withFrame-haYltI .winButtonClose-1HsbF-::after {
+    background-color: hsl(0, 50%, 50%) !important;
+}
+
+.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(3)::after {
+    background-color: hsl(120, 50%, 50%) !important;
+}
+
+.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(4)::after {
+    background-color: hsl(50, 50%, 50%) !important;
+}
+
+.typeWindows-1za-n7>div:hover::after {
+    transform: scale(1.1);
+}
