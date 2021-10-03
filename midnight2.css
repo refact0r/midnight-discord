@@ -2,7 +2,7 @@
 .theme-dark {
     --header-primary: hsl(220, 15%, 60%);
     --header-secondary: hsl(220, 15%, 40%);
-    --text-normal: hsl(220, 15%, 60%);
+    --text-normal: var(--header-primary);
     --text-muted: hsl(220, 15%, 20%);
     --text-link: hsl(197, 100%, 47.8%);
     --text-link-low-saturation: hsl(197, 100%, 52.9%);
@@ -10,18 +10,18 @@
     --text-warning: hsl(38, 95.7%, 54.1%);
     --text-danger: hsl(359, 82.6%, 59.4%);
     --text-brand: hsl(235, 86.1%, 77.5%);
-    --interactive-normal: hsl(220, 15%, 40%);
-    --interactive-hover: hsl(220, 15%, 60%);
-    --interactive-active: hsl(220, 15%, 60%);
-    --interactive-muted: hsl(220, 15%, 20%);
+    --interactive-normal: var(--header-secondary);
+    --interactive-hover: var(--header-primary);
+    --interactive-active: var(--header-primary);
+    --interactive-muted: var(--text-muted);
     --background-primary: hsl(220, 15%, 10%);
-    --background-secondary: hsl(220, 15%, 10%);
-    --background-secondary-alt: hsl(220, 15%, 10%);
+    --background-secondary: hsl(220, 15%, 12%);
+    --background-secondary-alt: hsl(220, 15%, 12%);
     --background-tertiary: hsl(220, 15%, 13%);
     --background-accent: hsl(220, 15%, 18%);
     --background-floating: hsl(220, 15%, 8%);
-    --background-mobile-primary: hsl(220, 15%, 10%);
-    --background-mobile-secondary: hsl(220, 15%, 10%);
+    --background-mobile-primary: var(--background-primary);
+    --background-mobile-secondary: var(--background-secondary);
     --background-modifier-hover: hsla(220, 15%, 20%, .2);
     --background-modifier-active: hsla(220, 15%, 20%, .3);
     --background-modifier-selected: hsla(220, 15%, 20%, .4);
@@ -33,11 +33,11 @@
     --info-help-foreground: hsl(197, 100%, 47.8%);
     --info-help-text: hsl(0, 0%, 100%);
     --status-warning-text: hsl(0, 0%, 0%);
-    --scrollbar-thin-thumb: hsl(220, 15%, 11%);
+    --scrollbar-thin-thumb: hsl(220, 15%, 12%);
     --scrollbar-thin-track: transparent;
-    --scrollbar-auto-thumb: hsl(220, 15%, 11%);
+    --scrollbar-auto-thumb: hsl(220, 15%, 12%);
     --scrollbar-auto-track: transparent;
-    --scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 13%);
+    --scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 12%);
     --scrollbar-auto-scrollbar-color-track: transparent;
     --elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
     --elevation-low: none;
@@ -54,20 +54,10 @@
     --channeltextarea-background: hsl(220, 15%, 13%);
     --activity-card-background: hsl(220, 15%, 13%);
     --textbox-markdown-syntax: hsl(220, 15%, 40%);
-    --deprecated-card-bg: hsla(216, 7%, 14%, 0.6);
-    --deprecated-card-editable-bg: hsla(216, 7%, 14%, 0.3);
-    --deprecated-store-bg: hsl(220, 15%, 10%);
-    --deprecated-quickswitcher-input-background: hsl(220, 15%, 20%);
-    --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
-    --deprecated-text-input-bg: hsla(0, 0%, 0%, 0.1);
-    --deprecated-text-input-border: hsla(0, 0%, 0%, 0.3);
-    --deprecated-text-input-border-hover: hsl(240, 11%, 2%);
-    --deprecated-text-input-border-disabled: hsl(220, 15%, 13%);
-    --deprecated-text-input-prefix: hsl(210, 3%, 87%);
 }
 
 
-/* force elements to use color vars */
+/* adjust colors */
 .peopleColumn-29fq28,
 .uploadModal-2ifh8j,
 .pageWrapper-1PgVDX,
@@ -75,6 +65,17 @@
 .root-1gCeng,
 .container-3ayLPN {
     background-color: var(--background-primary) !important;
+}
+
+.sidebarRegionScroller-3MXcoP,
+.scroller-1JbKMe,
+.privateChannels-1nO12o,
+.panels-j1Uci_,
+.sidebar-2K8pFh,
+.container-3w7J-x,
+.members-1998pB, 
+.members-1998pB > div {
+    background: var(--background-primary) !important;
 }
 
 .footer-3mqk7D,
