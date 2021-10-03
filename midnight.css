@@ -98,6 +98,11 @@
 /* get rid of border radius */
 .threadSidebar-1o3BTy {
     border-radius: 0 !important;
+    margin-left: 0;
+}
+
+.chat-15Vmww {
+    border-left: 1px solid var(--background-modifier-accent);
 }
 
 .chat-3bRxxu {
