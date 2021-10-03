@@ -66,6 +66,7 @@
     --deprecated-text-input-prefix: hsl(210, 3%, 87%);
 }
 
+
 /* force elements to use color vars */
 .peopleColumn-29fq28,
 .uploadModal-2ifh8j,
@@ -81,11 +82,14 @@
     background-color: var(--background-secondary) !important;
 }
 
+
 /* fix some other things */
 .option-96V44q:after {
     background: none !important;
 }
 
+
+/* fix activity cards */
 .itemCard-v9viV7 {
     border: none;
 }
@@ -96,6 +100,7 @@
 }
 
 
+/* add rounded chat/sidebars */
 .sidebar-2K8pFh {
     border-radius: 10px !important;
     margin-bottom: 10px;
@@ -116,17 +121,6 @@
     margin: 0px 10px 10px 0px;
 }
 
-.membersWrap-2h-GB4 {
-    position: relative;
-    margin-top: -48px;
-    z-index: 2;
-}
-
-.members-1998pB {
-    border-radius: 10px !important;
-    margin: 0px 0px 0px 10px;
-}
-
 .chatContent-a9vAAp {
     background: var(--background-primary);
     border-radius: 0px 0px 10px 10px;
@@ -143,6 +137,8 @@
     margin-right: 0px;
 }
 
+
+/* arrange toolbar */
 .iconWrapper-2OrFZ1[aria-label="Help"] {
     display: none;
 }
@@ -155,13 +151,26 @@
     order: 1;
 }
 
+
+/* position and fix members list */
+.membersWrap-2h-GB4 {
+    position: relative;
+    margin-top: -48px;
+    z-index: 2;
+}
+
+.members-1998pB {
+    border-radius: 10px !important;
+    margin: 0px 0px 0px 10px;
+}
+
 .members-1998pB div h2:first-of-type {
     height: 25px;
     padding-top: 9px;
 }
 
 
-
+/* hide scrollbar */
 .scrollerBase-289Jih:hover::-webkit-scrollbar {
     visibility: visible;
 }
@@ -171,17 +180,15 @@
 }
 
 
-
-.content-yTz4x3::before {
+/* hide shadow lines */
+.content-yTz4x3::before,
+.tabBody-3YRQ8W::before,
+.chat-15Vmww::before {
     display: none;  
 }
 
-.chat-15Vmww::before {
-    display: none;
-}
 
-
-
+/* window controls */
 .withFrame-haYltI .winButton-iRh8-Z > svg {
     display: none;
 }
