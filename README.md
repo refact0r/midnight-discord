@@ -1,6 +1,10 @@
 # midnight
 
-A darkened discord theme.
+A darkened discord theme with rounded chat and sidebars.
+
+Fixes the top toolbar problem that other rounded themes like https://github.com/PlusInsta/discord-plus have.
+
+Credit to https://github.com/Dyzean/Tokyo-Night for the window controls
 
 <img width=800 src="https://user-images.githubusercontent.com/34758569/135788450-950c3206-29c8-4b1f-94d4-763d66516534.png">
 
