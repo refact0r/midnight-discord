@@ -17,7 +17,7 @@
     --background-primary: hsl(220, 15%, 10%);
     --background-secondary: hsl(220, 15%, 12%);
     --background-secondary-alt: hsl(220, 15%, 12%);
-    --background-tertiary: hsl(220, 15%, 13%);
+    --background-tertiary: hsl(220, 15%, 14%);
     --background-accent: hsl(220, 15%, 18%);
     --background-floating: hsl(220, 15%, 8%);
     --background-mobile-primary: var(--background-primary);
@@ -46,14 +46,27 @@
     --logo-primary: hsl(0, 0%, 100%);
     --control-brand-foreground: hsl(235, 86.1%, 77.5%);
     --control-brand-foreground-new: hsl(235, 86.1%, 77.5%);
-    --background-mentioned: hsla(38, 95.7%, 54.1%, 0.1);
-    --background-mentioned-hover: hsla(38, 95.7%, 54.1%, 0.08);
-    --background-message-hover: hsla(220, 15%, 20%, .2);
-    --channels-default: hsl(220, 15%, 40%);
+    --background-mentioned: /* hsla(38, 95.7%, 54.1%, 0.1)*/ hsla(220, 60%, 60%, 0.10);
+    --background-mentioned-hover: /*hsla(38, 95.7%, 54.1%, 0.08)*/ hsla(220, 60%, 60%, 0.08);
+    --background-message-hover: var(--background-modifier-hover);
+    --channels-default: var(--header-secondary);
     --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    --channeltextarea-background: hsl(220, 15%, 13%);
-    --activity-card-background: hsl(220, 15%, 13%);
-    --textbox-markdown-syntax: hsl(220, 15%, 40%);
+    --channeltextarea-background: var(--background-tertiary);
+    --activity-card-background: var(--background-tertiary);
+    --textbox-markdown-syntax: var(--header-secondary);
+
+    --info-positive-background: hsla(139,calc(var(--saturation-factor, 1)*47.3%),43.9%,0.1);
+    --info-positive-foreground: hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%);
+    --info-warning-background: hsla(38,calc(var(--saturation-factor, 1)*95.7%),54.1%,0.1);
+    --info-warning-foreground: /* hsl(38,calc(var(--saturation-factor, 1)*95.7%),54.1%)*/ hsl(220, 60%, 60%);
+    --info-danger-background: hsla(359,calc(var(--saturation-factor, 1)*82.6%),59.4%,0.1);
+    --info-danger-foreground: hsl(359,calc(var(--saturation-factor, 1)*82.6%),59.4%);
+    --status-positive-background: hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%);
+    --status-positive-text: #fff;
+    --status-warning-background: hsl(38,calc(var(--saturation-factor, 1)*95.7%),54.1%);
+    --status-danger-background: hsl(359,calc(var(--saturation-factor, 1)*82.6%),59.4%);
+    --status-danger-text: #fff;
+    --focus-primary: hsl(197,calc(var(--saturation-factor, 1)*100%),47.8%);
 }
 
 
@@ -102,30 +115,34 @@
 
 
 /* add rounded chat/sidebars and margins */
+.callContainer-36WRfH,
+.notice-3bPHh-,
+.threadSidebar-1o3BTy,
+.container-1D34oG,
+.container-1a3EgQ,
+.applicationStore-1pNvnv,
 .sidebar-2K8pFh {
     border-radius: 10px !important;
-    margin-bottom: 10px;
 }
 
 .container-1D34oG,
 .container-1a3EgQ,
-.applicationStore-1pNvnv {
-    border-radius: 10px !important;
+.applicationStore-1pNvnv,
+.chat-3bRxxu {
     margin: 0px 10px 10px 10px;
+}
+
+.threadSidebar-1o3BTy,
+.notice-3bPHh- {
+    margin: 0px 10px 10px 0px;
+}
+
+.sidebar-2K8pFh {
+    margin-bottom: 10px;
 }
 
 .chat-3bRxxu {
-    margin: 0px 10px 10px 10px;
     background: none !important;
-}
-
-.callContainer-36WRfH {
-    border-radius: 10px !important;
-}
-
-.threadSidebar-1o3BTy {
-    border-radius: 10px !important;
-    margin: 0px 10px 10px 0px;
 }
 
 .chatContent-a9vAAp {
