@@ -42,7 +42,7 @@
     --elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
     --elevation-low: none;
     --elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
-    --elevation-high: 0 8px 16px hsla(0, 0%, 0%, 0.24);
+    --elevation-high: 0 8px 10px hsla(0, 0%, 0%, 0.24);
     --logo-primary: hsl(0, 0%, 100%);
     --control-brand-foreground: hsl(235, 86.1%, 77.5%);
     --control-brand-foreground-new: hsl(235, 86.1%, 77.5%);
@@ -101,7 +101,7 @@
 }
 
 
-/* add rounded chat/sidebars */
+/* add rounded chat/sidebars and margins */
 .sidebar-2K8pFh {
     border-radius: 10px !important;
     margin-bottom: 10px;
@@ -117,6 +117,10 @@
 .chat-3bRxxu {
     margin: 0px 10px 10px 10px;
     background: none !important;
+}
+
+.callContainer-36WRfH {
+    border-radius: 10px !important;
 }
 
 .threadSidebar-1o3BTy {
@@ -139,7 +143,6 @@
 .chat-3bRxxu.threadSidebarOpen-vdkwIh .title-3qD0b- {
     margin-right: 0px;
 }
-
 
 /* arrange toolbar */
 .iconWrapper-2OrFZ1[aria-label="Help"] {
@@ -174,7 +177,7 @@
 
 
 /* hide scrollbar */
-.scrollerBase-289Jih:hover::-webkit-scrollbar {
+.scrollerBase-289Jih::-webkit-scrollbar:hover {
     visibility: visible;
 }
 
@@ -190,12 +193,13 @@
 
 .withFrame-haYltI .winButton-iRh8-Z {
     background: none;
-}
-
-.withFrame-haYltI .winButton-iRh8-Z {
     top: 0;
     width: 12px;
     height: 12px;
+    margin-right: 12px;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z:nth-child(2) {
     margin-right: 12px;
 }
 
