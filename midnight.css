@@ -1,4 +1,3 @@
-
 /* change colors */
 .theme-dark {
     --header-primary: hsl(220, 15%, 60%);
@@ -123,7 +122,8 @@
 .container-1D34oG,
 .container-1a3EgQ,
 .applicationStore-1pNvnv,
-.sidebar-2K8pFh {
+.sidebar-2K8pFh,
+.pageWrapper-1PgVDX {
     border-radius: 10px !important;
 }
 
@@ -131,8 +131,9 @@
 .container-1D34oG,
 .container-1a3EgQ,
 .applicationStore-1pNvnv,
-.chat-3bRxxu {
-    margin: 10px 10px 10px 10px;
+.chat-3bRxxu,
+.pageWrapper-1PgVDX {
+    margin: 10px;
 }
 
 .threadSidebar-1o3BTy,
