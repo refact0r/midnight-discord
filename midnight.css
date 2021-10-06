@@ -22,10 +22,10 @@
     --background-floating: hsl(220, 15%, 8%);
     --background-mobile-primary: var(--background-primary);
     --background-mobile-secondary: var(--background-secondary);
-    --background-modifier-hover: hsla(220, 15%, 20%, .2);
-    --background-modifier-active: hsla(220, 15%, 20%, .3);
-    --background-modifier-selected: hsla(220, 15%, 20%, .4);
-    --background-modifier-accent: hsla(220, 15%, 20%, .4);
+    --background-modifier-hover: hsla(220, 15%, 20%, .1);
+    --background-modifier-active: hsla(220, 15%, 20%, .2);
+    --background-modifier-selected: hsla(220, 15%, 20%, .3);
+    --background-modifier-accent: hsla(220, 15%, 20%, .3);
     --info-positive-text: hsl(0, 0%, 100%);
     --info-warning-text: hsl(0, 0%, 100%);
     --info-danger-text: hsl(0, 0%, 100%);
@@ -70,7 +70,7 @@
 }
 
 
-/* adjust colors */
+/* force elements to use colors variables */
 .peopleColumn-29fq28,
 .uploadModal-2ifh8j,
 .pageWrapper-1PgVDX,
@@ -80,6 +80,8 @@
     background-color: var(--background-primary) !important;
 }
 
+
+/* adjust colors for chat and sidebars */
 .sidebarRegionScroller-3MXcoP,
 .scroller-1JbKMe,
 .privateChannels-1nO12o,
@@ -97,11 +99,10 @@
 }
 
 
-/* fix some other things */
+/* remove weird shadow on search suggestions */
 .option-96V44q:after {
     background: none !important;
 }
-
 
 /* fix activity cards */
 .itemCard-v9viV7 {
@@ -114,7 +115,7 @@
 }
 
 
-/* add rounded chat/sidebars and margins */
+/* add rounded borders */
 .callContainer-36WRfH,
 .notice-3bPHh-,
 .threadSidebar-1o3BTy,
@@ -125,6 +126,7 @@
     border-radius: 10px !important;
 }
 
+/* add margins around edges */
 .container-1D34oG,
 .container-1a3EgQ,
 .applicationStore-1pNvnv,
@@ -141,27 +143,46 @@
     margin-bottom: 10px;
 }
 
+/* remove chat background */
 .chat-3bRxxu {
     background: none !important;
 }
 
+/* remove title bar background */
+.title-3qD0b- {
+    background: none !important;
+    width: auto;
+}
+
+/* add chat background and make rounded */
 .chatContent-a9vAAp {
-    background: var(--background-primary);
+    background: var(--background-primary) !important;
     border-radius: 0px 0px 10px 10px;
 }
 
-.title-3qD0b- {
+/* add background to title bar and make rounded */
+.chatContent-a9vAAp::before {
+    content: "";
+    position: relative;
+    margin-top: -48px;
     background: var(--background-primary);
-    margin-right: 250px;
-    width: auto;
+    width: 100%;
+    height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
 
-.chat-3bRxxu.threadSidebarOpen-vdkwIh .title-3qD0b- {
-    margin-right: 0px;
+/* put thread join/archive banner on top */
+.chatHeaderBar-4vZS1x {
+    z-index: 1;
 }
 
-/* arrange toolbar */
+/* put toolbar on top */
+.toolbar-1t6TWx {
+    position: relative;
+    z-index: 1;
+}
+
+/* hide toolbar icons */
 .iconWrapper-2OrFZ1[aria-label="Help"] {
     display: none;
 }
@@ -170,16 +191,22 @@
     display: none;
 }
 
+/* position search */
 .search-36MZv- {
     order: 1;
+    margin-left: 30px;
+    margin-right: 2px;
 }
 
+.searchBar-3dMhjb {
+    width: 220px !important;
+    padding: 0;
+}
 
-/* position and fix members list */
+/* position members list and add margins/rounded */
 .membersWrap-2h-GB4 {
     position: relative;
     margin-top: -48px;
-    z-index: 2;
 }
 
 .members-1998pB {
@@ -187,13 +214,24 @@
     margin: 0px 0px 0px 10px;
 }
 
+/* create space for search bar */
 .members-1998pB div h2:first-of-type {
-    height: 25px;
-    padding-top: 9px;
+    margin-top: 30px;
+}
+
+/* add search bar background */
+.members-1998pB::before {
+    z-index: 1;
+    content: "";
+    position: fixed;
+    background: var(--background-primary);
+    width: 240px;
+    height: 48px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 
-/* hide scrollbar */
+/* only show scrollbar when hover */
 .scrollerBase-289Jih::-webkit-scrollbar:hover {
     visibility: visible;
 }
