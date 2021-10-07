@@ -1,12 +1,13 @@
-
 /* change colors */
 .theme-dark {
+    --brand-experiment: hsl(220, 60%, 60%);
+    
     --header-primary: hsl(220, 15%, 60%);
     --header-secondary: hsl(220, 15%, 40%);
     --text-normal: var(--header-primary);
     --text-muted: hsl(220, 15%, 20%);
     --text-link: hsl(197, 100%, 47.8%);
-    --text-link-low-saturation: hsl(197, 100%, 52.9%);
+    --text-link-low-saturation: /* hsl(197, 100%, 52.9%) */ var(--text-link);
     --text-positive: hsl(139, 66.8%, 58.6%);
     --text-warning: hsl(38, 95.7%, 54.1%);
     --text-danger: hsl(359, 82.6%, 59.4%);
@@ -16,8 +17,8 @@
     --interactive-active: var(--header-primary);
     --interactive-muted: var(--text-muted);
     --background-primary: hsl(220, 15%, 10%);
-    --background-secondary: hsl(220, 15%, 12%);
-    --background-secondary-alt: hsl(220, 15%, 12%);
+    --background-secondary: hsl(220, 15%, 13%);
+    --background-secondary-alt: hsl(220, 15%, 13%);
     --background-tertiary: hsl(220, 15%, 13%);
     --background-accent: hsl(220, 15%, 18%);
     --background-floating: hsl(220, 15%, 8%);
@@ -81,6 +82,15 @@
     background-color: var(--background-primary) !important;
 }
 
+.expandedFolderIconWrapper-Huv7rA svg {
+    color: var(--brand-experiment) !important;
+}
+
+.folderIconWrapper-1_bOZe,
+.expandedFolderBackground-1cujaW {
+    background-color: var(--background-primary) !important;
+}
+
 
 /* adjust colors for chat and sidebars */
 .sidebarRegionScroller-3MXcoP,
@@ -123,7 +133,8 @@
 .container-1D34oG,
 .container-1a3EgQ,
 .applicationStore-1pNvnv,
-.sidebar-2K8pFh {
+.sidebar-2K8pFh,
+.pageWrapper-1PgVDX {
     border-radius: 10px !important;
 }
 
@@ -131,8 +142,9 @@
 .container-1D34oG,
 .container-1a3EgQ,
 .applicationStore-1pNvnv,
-.chat-3bRxxu {
-    margin: 10px 10px 10px 10px;
+.chat-3bRxxu,
+.pageWrapper-1PgVDX {
+    margin: 10px;
 }
 
 .threadSidebar-1o3BTy,
