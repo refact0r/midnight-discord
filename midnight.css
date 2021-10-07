@@ -147,9 +147,12 @@
     margin: 10px;
 }
 
-.threadSidebar-1o3BTy,
-.notice-3bPHh- {
+.threadSidebar-1o3BTy { 
     margin: 0px 10px 10px 0px;
+}
+
+.notice-3bPHh- {
+    margin: 10px 10px 0px 0px;
 }
 
 .sidebar-2K8pFh {
@@ -266,6 +269,10 @@
 .typeWindows-1za-n7 {
     height: 10px;
     margin: 0;
+}
+
+.wordmarkWindows-1v0lYD {
+    padding: 2px 9px;
 }
 
 .typeWindows-1za-n7 .winButton-iRh8-Z > svg {
