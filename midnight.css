@@ -71,7 +71,6 @@
     --focus-primary: hsl(197,calc(var(--saturation-factor, 1)*100%),47.8%);
 }
 
-
 /* force elements to use colors variables */
 .peopleColumn-29fq28,
 .uploadModal-2ifh8j,
@@ -185,7 +184,7 @@
 }
 
 .threadSidebar-1o3BTy { 
-    margin: 0px 10px 10px 0px;
+    margin: 10px 10px 10px 0px;
 }
 
 .notice-3bPHh- {
@@ -309,13 +308,18 @@ button[type="button"]:focus {
 
 
 /* window controls */
+.typeWindows-1za-n7 + .app-1q1i1E .container-2lgZY8 {
+    padding-top: 10px;
+}
+
 .scroller-1Bvpku {
     padding: 0;
 }
 
 .typeWindows-1za-n7 {
-    height: 10px;
+    height: 0px;
     margin: 0;
+    background: none;
 }
 
 .wordmarkWindows-1v0lYD {
@@ -329,19 +333,19 @@ button[type="button"]:focus {
 .typeWindows-1za-n7 .winButton-iRh8-Z {
     background: none;
     top: 0;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     margin: 4px 12px 0px 0px;
 }
 
 .typeWindows-1za-n7 .winButton-iRh8-Z:nth-child(2) {
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .typeWindows-1za-n7 .winButton-iRh8-Z::after {
     content: "";
-    height: 12px;
-    width: 12px;
+    height: 10px;
+    width: 10px;
     border-radius: 12px;
     transition: 0.1s;
 }
