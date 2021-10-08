@@ -307,25 +307,31 @@ button[type="button"]:focus {
 }
 
 
-/* window controls */
-.typeWindows-1za-n7 + .app-1q1i1E .container-2lgZY8 {
-    padding-top: 10px;
-}
-
-.scroller-1Bvpku {
-    padding: 0;
-}
-
+/* position window controls bar */
 .typeWindows-1za-n7 {
     height: 0px;
     margin: 0;
     background: none;
 }
 
+/* fix padding */
+.typeWindows-1za-n7 + .app-1q1i1E .container-2lgZY8 {
+    padding-top: 10px;
+}
+
+.typeWindows-1za-n7 + .app-1q1i1E .standardSidebarView-3F1I7i {
+    padding-top: 20px;
+}
+
+.scroller-1Bvpku {
+    padding: 0;
+}
+
 .wordmarkWindows-1v0lYD {
     padding: 2px 9px;
 }
 
+/* create window control buttons */
 .typeWindows-1za-n7 .winButton-iRh8-Z > svg {
     display: none;
 }
@@ -365,3 +371,4 @@ button[type="button"]:focus {
 .typeWindows-1za-n7 > div:hover::after {
     transform: scale(1.1);
 }
+
