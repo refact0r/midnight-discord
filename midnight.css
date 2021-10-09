@@ -1,7 +1,8 @@
 /* base color variables */
 .theme-dark {
     --accent-color: hsl(190, 60%, 50%);
-    --accent-color-darker: hsl(190, 60%, 30%);
+    --accent-color-2: hsl(190, 60%, 40%);
+    --accent-color-3: hsl(190, 60%, 30%);
     --link-color: hsl(190, 90%, 50%);
     --mention-background: hsl(190, 60%, 50%, 0.3);
     --mentioned-background: hsla(190, 60%, 50%, 0.1);
@@ -63,8 +64,9 @@
     --activity-card-background: var(--secondary-background);
     --textbox-markdown-syntax: var(--secondary-text);
     --info-warning-foreground: var(--accent-color);
-    --brand-experiment-560: var(--accent-color-darker);
     --brand-experiment-30a: var(--mention-background);
+    --brand-experiment-600: var(--accent-color-3);
+    --brand-experiment-560: var(--accent-color-2);
 }
 
 /* force elements to use colors variables */
