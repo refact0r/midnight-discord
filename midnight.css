@@ -1,16 +1,17 @@
 /* base color variables */
-* {
-    --accent-color: hsl(190, 50%, 50%);
-    --accent-color-darker: hsl(190, 70%, 30%);
-    --mention-background: hsl(190, 50%, 50%, 0.3);
+.theme-dark {
+    --accent-color: hsl(190, 60%, 50%);
+    --accent-color-darker: hsl(190, 60%, 30%);
+    --link-color: hsl(190, 90%, 50%);
+    --mention-background: hsl(190, 60%, 50%, 0.3);
+    --mentioned-background: hsla(190, 60%, 50%, 0.1);
+    --mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
     --primary-text: hsl(220, 15%, 60%);
     --secondary-text: hsl(220, 15%, 40%);
     --muted-text: hsl(220, 15%, 20%);
     --primary-background: hsl(220, 15%, 10%);
     --secondary-background: hsl(220, 15%, 13%);
     --accent-background: hsl(220, 15%, 16%);
-    --mentioned-background: hsla(190, 50%, 50%, 0.1);
-    --mentioned-hover-background: hsla(190, 50%, 50%, 0.08);
     --scrollbar-color: hsl(220, 15%, 11%);
     --hover-modifier: hsla(220, 15%, 20%, .1);
     --active-modifier: hsla(220, 15%, 20%, .2);
@@ -25,8 +26,8 @@
     --header-secondary: var(--secondary-text);
     --text-normal: var(--primary-text);
     --text-muted: var(--muted-text);
-    --text-link: hsl(197, 100%, 47.8%);
-    --text-link-low-saturation: var(--text-link);
+    --text-link: var(--link-color);
+    --text-link-low-saturation: var(--link-color);
     --interactive-normal: var(--secondary-text);
     --interactive-hover: var(--primary-text);
     --interactive-active: var(--primary-text);
@@ -295,22 +296,49 @@
     z-index: 1;
     content: "";
     position: fixed;
-    background: var(--background-primary);
+    background-color: var(--background-primary);
     width: 240px;
     height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
 
+
+/* fix search results */
 .searchResultsWrap-3-pOjs {
-    width: 440px;
+    width: 430px;
+    margin-left: 10px;
+    background-color: var(--background-primary);
+}
+
+.searchResultsWrap-3-pOjs::before {
+    margin-top: -48px;
+    z-index: 1;
+    content: "";
+    position: fixed;
+    background-color: var(--background-primary);
+    width: 430px;
+    height: 48px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.searchHeader-2XoQg7 {
+    background-color: var(--background-primary);
+}
+
+.channelName-1JRO3C {
+    background: none;
+}
+
+.message-1Ng5AR {
+    background-color: var(--background-tertiary);
 }
 
 /* only show scrollbar when hover */
-.scrollerBase-289Jih::-webkit-scrollbar:hover {
+.scrollerBase-289Jih:hover::-webkit-scrollbar-thumb {
     visibility: visible;
 }
 
-.scrollerBase-289Jih::-webkit-scrollbar {
+.scrollerBase-289Jih::-webkit-scrollbar-thumb {
     visibility: hidden;
 }
 
