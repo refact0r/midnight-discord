@@ -1,74 +1,65 @@
+/* base color variables */
+* {
+    --accent-color: hsl(190, 50%, 50%);
+    --primary-text: hsl(220, 15%, 60%);
+    --secondary-text: hsl(220, 15%, 40%);
+    --muted-text: hsl(220, 15%, 20%);
+    --primary-background: hsl(220, 15%, 10%);
+    --secondary-background: hsl(220, 15%, 13%);
+    --accent-background: hsl(220, 15%, 16%);
+    --mentioned-background: hsla(190, 50%, 50%, 0.10);
+    --mentioned-hover-background: hsla(190, 50%, 50%, 0.08);
+    --scrollbar-color: hsl(220, 15%, 11%);
+    --hover-modifier: hsla(220, 15%, 20%, .1);
+    --active-modifier: hsla(220, 15%, 20%, .2);
+    --selected-modifier: hsla(220, 15%, 20%, .3);
+}
+
 /* change colors */
 .theme-dark {
-    --brand-experiment: hsl(220, 60%, 60%);
+    --brand-experiment: var(--accent-color);
 
-    --header-primary: hsl(220, 15%, 60%);
-    --header-secondary: hsl(220, 15%, 40%);
-    --text-normal: var(--header-primary);
-    --text-muted: hsl(220, 15%, 20%);
+    --header-primary: var(--primary-text);
+    --header-secondary: var(--secondary-text);
+    --text-normal: var(--primary-text);
+    --text-muted: var(--muted-text);
     --text-link: hsl(197, 100%, 47.8%);
-    --text-link-low-saturation: /* hsl(197, 100%, 52.9%) */ var(--text-link);
-    --text-positive: hsl(139, 66.8%, 58.6%);
-    --text-warning: hsl(38, 95.7%, 54.1%);
-    --text-danger: hsl(359, 82.6%, 59.4%);
-    --text-brand: hsl(235, 86.1%, 77.5%);
-    --interactive-normal: var(--header-secondary);
-    --interactive-hover: var(--header-primary);
-    --interactive-active: var(--header-primary);
-    --interactive-muted: var(--text-muted);
-    --background-primary: hsl(220, 15%, 10%);
-    --background-secondary: hsl(220, 15%, 13%);
-    --background-secondary-alt: hsl(220, 15%, 13%);
-    --background-tertiary: hsl(220, 15%, 13%);
-    --background-accent: hsl(220, 15%, 16%);
-    --background-floating: hsl(220, 15%, 8%);
-    --background-mobile-primary: var(--background-primary);
-    --background-mobile-secondary: var(--background-secondary);
-    --background-modifier-hover: hsla(220, 15%, 20%, .1);
-    --background-modifier-active: hsla(220, 15%, 20%, .2);
-    --background-modifier-selected: hsla(220, 15%, 20%, .3);
-    --background-modifier-accent: hsla(220, 15%, 20%, .3);
-    --info-positive-text: hsl(0, 0%, 100%);
-    --info-warning-text: hsl(0, 0%, 100%);
-    --info-danger-text: hsl(0, 0%, 100%);
-    --info-help-background: hsla(197, 100%, 47.8%, 0.1);
-    --info-help-foreground: hsl(197, 100%, 47.8%);
-    --info-help-text: hsl(0, 0%, 100%);
-    --status-warning-text: hsl(0, 0%, 0%);
-    --scrollbar-thin-thumb: hsl(220, 15%, 12%);
+    --text-link-low-saturation: var(--text-link);
+    --interactive-normal: var(--secondary-text);
+    --interactive-hover: var(--primary-text);
+    --interactive-active: var(--primary-text);
+    --interactive-muted: var(--muted-text);
+    --background-primary: var(--primary-background);
+    --background-secondary: var(--secondary-background);
+    --background-secondary-alt: var(--secondary-background);
+    --background-tertiary: var(--secondary-background);
+    --background-accent: var(--accent-background);
+    --background-floating: var(--primary-background);
+    --background-mobile-primary: var(--primary-background);
+    --background-mobile-secondary: var(--secondary-background);
+    --background-modifier-hover: var(--hover-modifier);
+    --background-modifier-active: var(--active-modifier);
+    --background-modifier-selected: var(--selected-modifier);
+    --background-modifier-accent: var(--selected-modifier);
+    --scrollbar-thin-thumb: var(--scrollbar-color);
     --scrollbar-thin-track: transparent;
-    --scrollbar-auto-thumb: hsl(220, 15%, 12%);
+    --scrollbar-auto-thumb: var(--scrollbar-color);
     --scrollbar-auto-track: transparent;
-    --scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 12%);
+    --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-color);
     --scrollbar-auto-scrollbar-color-track: transparent;
-    --elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
+    --elevation-stroke: 0 0 0 1px hsla(0, 0%, 0%, 0.15);
     --elevation-low: none;
     --elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
-    --elevation-high: 0 8px 10px hsla(0, 0%, 0%, 0.24);
-    --logo-primary: hsl(0, 0%, 100%);
-    --control-brand-foreground: hsl(235, 86.1%, 77.5%);
-    --control-brand-foreground-new: hsl(235, 86.1%, 77.5%);
-    --background-mentioned: /* hsla(38, 95.7%, 54.1%, 0.1)*/ hsla(220, 60%, 60%, 0.10);
-    --background-mentioned-hover: /*hsla(38, 95.7%, 54.1%, 0.08)*/ hsla(220, 60%, 60%, 0.08);
-    --background-message-hover: var(--background-modifier-hover);
-    --channels-default: var(--header-secondary);
+    --elevation-high: 0 4px 8px hsla(0, 0%, 0%, 0.24);
     --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    --channeltextarea-background: var(--background-tertiary);
-    --activity-card-background: var(--background-tertiary);
-    --textbox-markdown-syntax: var(--header-secondary);
-
-    --info-positive-background: hsla(139,calc(var(--saturation-factor, 1)*47.3%),43.9%,0.1);
-    --info-positive-foreground: hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%);
-    --info-warning-background: hsla(38,calc(var(--saturation-factor, 1)*95.7%),54.1%,0.1);
-    --info-warning-foreground: /* hsl(38,calc(var(--saturation-factor, 1)*95.7%),54.1%)*/ hsl(220, 60%, 60%);
-    --info-danger-background: hsla(359,calc(var(--saturation-factor, 1)*82.6%),59.4%,0.1);
-    --info-danger-foreground: hsl(359,calc(var(--saturation-factor, 1)*82.6%),59.4%);
-    --status-positive-background: hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%);
-    --status-positive-text: #fff;
-    --status-warning-background: hsl(38,calc(var(--saturation-factor, 1)*95.7%),54.1%);
-    --status-danger-background: hsl(359,calc(var(--saturation-factor, 1)*82.6%),59.4%);
-    --status-danger-text: #fff;
-    --focus-primary: hsl(197,calc(var(--saturation-factor, 1)*100%),47.8%);
+    --background-mentioned: var(--mentioned-background);
+    --background-mentioned-hover: var(--mentioned-hover-background);
+    --background-message-hover: var(--hover-modifier);
+    --channels-default: var(--secondary-text);
+    --channeltextarea-background: var(--secondary-background);
+    --activity-card-background: var(--secondary-background);
+    --textbox-markdown-syntax: var(--secondary-text);
+    --info-warning-foreground: var(--accent-color);
 }
 
 /* force elements to use colors variables */
@@ -127,6 +118,17 @@
     color: var(--text-normal) !important;
 }
 
+.divider-JfaTT5 {
+    --divider-color: var(--brand-experiment) !important;
+}
+
+.circleIconButton-1XqULR {
+    color: var(--brand-experiment);
+}
+
+.circleIconButton-1XqULR.selected-2jcQaY {
+    background-color: var(--brand-experiment);;
+}
 
 /* adjust colors for chat and sidebars */
 .sidebarRegionScroller-3MXcoP,
@@ -299,13 +301,6 @@
     width: 440px;
 }
 
-
-/* other */
-button[type="button"]:focus {
-    transform: scale(0.95);
-}
-
-
 /* only show scrollbar when hover */
 .scrollerBase-289Jih::-webkit-scrollbar:hover {
     visibility: visible;
@@ -381,3 +376,5 @@ button[type="button"]:focus {
     transform: scale(1.1);
 }
 
+
+/* other */
