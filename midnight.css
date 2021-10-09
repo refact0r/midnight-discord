@@ -236,6 +236,15 @@
 .toolbar-1t6TWx {
     position: relative;
     z-index: 1;
+    margin-left: 8px;
+}
+
+.iconWrapper-2OrFZ1[aria-label="Threads"] {
+    width: 36.1px;
+}
+
+.iconWrapper-2OrFZ1[aria-label="Threads"] .icon-22AiRD {
+    margin-left: auto;
 }
 
 /* hide toolbar icons */
@@ -287,7 +296,7 @@
 }
 
 .searchResultsWrap-3-pOjs {
-    width: 430px;
+    width: 440px;
 }
 
 
