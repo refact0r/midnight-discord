@@ -1,13 +1,15 @@
 /* base color variables */
 * {
     --accent-color: hsl(190, 50%, 50%);
+    --accent-color-darker: hsl(190, 70%, 30%);
+    --mention-background: hsl(190, 50%, 50%, 0.3);
     --primary-text: hsl(220, 15%, 60%);
     --secondary-text: hsl(220, 15%, 40%);
     --muted-text: hsl(220, 15%, 20%);
     --primary-background: hsl(220, 15%, 10%);
     --secondary-background: hsl(220, 15%, 13%);
     --accent-background: hsl(220, 15%, 16%);
-    --mentioned-background: hsla(190, 50%, 50%, 0.10);
+    --mentioned-background: hsla(190, 50%, 50%, 0.1);
     --mentioned-hover-background: hsla(190, 50%, 50%, 0.08);
     --scrollbar-color: hsl(220, 15%, 11%);
     --hover-modifier: hsla(220, 15%, 20%, .1);
@@ -47,10 +49,10 @@
     --scrollbar-auto-track: transparent;
     --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-color);
     --scrollbar-auto-scrollbar-color-track: transparent;
-    --elevation-stroke: 0 0 0 1px hsla(0, 0%, 0%, 0.15);
+    --elevation-stroke: 0 0 4px 1px hsla(0, 0%, 0%, 0.15);
     --elevation-low: none;
-    --elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
-    --elevation-high: 0 4px 8px hsla(0, 0%, 0%, 0.24);
+    --elevation-medium: 0 4px 8px hsla(0, 0%, 0%, 0.2);
+    --elevation-high: 0 4px 8px hsla(0, 0%, 0%, 0.3);
     --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     --background-mentioned: var(--mentioned-background);
     --background-mentioned-hover: var(--mentioned-hover-background);
@@ -60,6 +62,8 @@
     --activity-card-background: var(--secondary-background);
     --textbox-markdown-syntax: var(--secondary-text);
     --info-warning-foreground: var(--accent-color);
+    --brand-experiment-560: var(--accent-color-darker);
+    --brand-experiment-30a: var(--mention-background);
 }
 
 /* force elements to use colors variables */
