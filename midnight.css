@@ -67,6 +67,7 @@
     --brand-experiment-30a: var(--mention-background);
     --brand-experiment-600: var(--accent-color-3);
     --brand-experiment-560: var(--accent-color-2);
+    --brand-experiment-360: var(--accent-color);
 }
 
 /* force elements to use colors variables */
@@ -112,10 +113,10 @@
     color: var(--header-secondary) !important;
 }
 
-.theme-dark .resultsGroup-r_nuzN .header-2N-gMV, 
-.theme-dark .resultsGroup-r_nuzN .plusIcon-v0BTrL, 
-.theme-dark .resultsGroup-r_nuzN .searchClearHistory-2cSSMO, 
-.theme-dark .resultsGroup-r_nuzN .searchLearnMore-3SQUAj a {
+.header-2N-gMV, 
+.plusIcon-v0BTrL, 
+.searchClearHistory-2cSSMO, 
+.searchLearnMore-3SQUAj a {
     color: var(--header-primary) !important;
 }
 
@@ -134,7 +135,7 @@
 }
 
 .circleIconButton-1XqULR.selected-2jcQaY {
-    background-color: var(--brand-experiment);;
+    background-color: var(--brand-experiment);
 }
 
 /* adjust colors for chat and sidebars */
@@ -410,5 +411,17 @@
     transform: scale(1.1);
 }
 
+/* blur spoiler text */
+.spoilerText-3p6IlD,
+.spoilerText-3p6IlD.hidden-HHr2R9 {
+    background-color: transparent !important;
+}
+
+.spoilerText-3p6IlD.hidden-HHr2R9 > .inlineContent-3ZjPuv {
+    opacity: 1 !important;
+    filter: blur(5px);
+    pointer-events: unset;
+}
 
 /* other */
+
