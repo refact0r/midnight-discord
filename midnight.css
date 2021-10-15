@@ -348,7 +348,9 @@
 
 /* position window controls bar */
 .typeWindows-1za-n7 {
-    height: 0px;
+    position: absolute;
+    height: 20px;
+    width: 100%;
     margin: 0;
     background: none;
 }
