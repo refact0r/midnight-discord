@@ -68,6 +68,8 @@
     --brand-experiment-600: var(--accent-color-3);
     --brand-experiment-560: var(--accent-color-2);
     --brand-experiment-360: var(--accent-color);
+
+    --SC-spotify-green: var(--accent-color);
 }
 
 /* force elements to use colors variables */
@@ -133,6 +135,12 @@
 }
 
 .circleIconButton-1XqULR.selected-2jcQaY {
+    background-color: var(--brand-experiment);
+}
+
+.containerDragAfter-3Fp7LC:after, 
+.containerDragBefore-3iTCc7:before,
+.target-3LqNfV.dragOver-Iim8_W:before {
     background-color: var(--brand-experiment);
 }
 
@@ -207,6 +215,10 @@
 
 .notice-3bPHh- {
     margin: 10px 10px 0px 0px;
+}
+
+.notice-3bPHh-.noticeWrapper-8z511t {
+    margin: 10px 10px 0px 10px;
 }
 
 .sidebar-2K8pFh {
@@ -364,7 +376,7 @@
 }
 
 /* fix padding */
-.typeWindows-1za-n7 + .app-1q1i1E .container-2lgZY8 {
+.app-2rEoOp {
     padding-top: 10px;
 }
 
