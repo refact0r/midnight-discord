@@ -6,3 +6,28 @@
 */
 
 @import url("https://refact0r.github.io/midnight-discord/midnight.css");
+
+/* change colors here */
+/* a color picker should show up if you hover over the "hsl(x, y, z)" part */
+.theme-dark {
+    --accent-color: hsl(190, 60%, 50%); /* main accent color */
+    --accent-color-2: hsl(190, 60%, 40%); /* color of accent color buttons on hover */
+    --accent-color-3: hsl(190, 60%, 30%); /* color of accent color buttons on click */
+    --link-color: hsl(190, 90%, 50%); /* link color */
+
+    --mention-background: hsl(190, 60%, 50%, 0.3); /* user mention background */
+    --mentioned-background: hsla(190, 60%, 50%, 0.1); /* background of messages that mention you */
+    --mentioned-hover-background: hsla(190, 60%, 50%, 0.08); /* background of messages that mention you on hover */
+
+    --primary-text: hsl(220, 15%, 60%); /* main text color (messages, titles, unread text/indicators) */
+    --secondary-text: hsl(220, 15%, 40%); /* secondary text color (channels, descriptions, buttons) */
+    --muted-text: hsl(220, 15%, 20%); /* muted text color (input box placeholders, muted channels, message times) */
+
+    --primary-background: hsl(220, 15%, 10%); /* main chat/channel list/member list background */
+    --secondary-background: hsl(220, 15%, 13%); /* background of pretty much everything else */
+    --scrollbar-color: hsl(220, 15%, 11%); /* scrollbar thumb color */
+
+    --hover-modifier: hsla(220, 15%, 20%, .1); /* color of things on hover */
+    --active-modifier: hsla(220, 15%, 20%, .2); /* color of things when clicked */
+    --selected-modifier: hsla(220, 15%, 20%, .3); /* color of things when selected */
+}
