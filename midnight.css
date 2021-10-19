@@ -221,7 +221,7 @@
 }
 
 .notice-3bPHh-.noticeWrapper-8z511t {
-    margin: 10px 10px 0px 10px;
+    margin: 20px 10px 0px 10px;
 }
 
 .sidebar-2K8pFh {
@@ -379,12 +379,12 @@
 }
 
 /* fix padding */
-.app-2rEoOp {
+.typeWindows-1za-n7 + .app-1q1i1E .container-2lgZY8 {
     padding-top: 10px;
 }
 
-.typeWindows-1za-n7 + .app-1q1i1E .standardSidebarView-3F1I7i {
-    padding-top: 20px;
+.typeWindows-1za-n7 + .app-1q1i1E .notice-3bPHh-.noticeWrapper-8z511t + .layers-3iHuyZ .container-2lgZY8 {
+    padding-top: 0px;
 }
 
 .scroller-1Bvpku {
