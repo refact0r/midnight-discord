@@ -11,8 +11,8 @@
 /* a color picker should show up if you hover over the "hsl(x, y, z)" part */
 .theme-dark {
     --accent-color: hsl(190, 60%, 50%); /* main accent color */
-    --accent-color-2: hsl(190, 60%, 40%); /* color of accent color buttons on hover */
-    --accent-color-3: hsl(190, 60%, 30%); /* color of accent color buttons on click */
+    --accent-color-2: hsl(190, 60%, 55%); /* color of accent color buttons on hover */
+    --accent-color-3: hsl(190, 60%, 40%); /* color of accent color buttons on click */
     --link-color: hsl(190, 90%, 50%); /* link color */
 
     --mention-background: hsl(190, 60%, 50%, 0.3); /* user mention background */
