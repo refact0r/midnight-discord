@@ -286,7 +286,7 @@
 }
 
 .iconWrapper-2OrFZ1[aria-label*="Member List"] {
-    display: none;
+    order: 1;
 }
 
 /* position search */
