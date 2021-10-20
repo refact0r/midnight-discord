@@ -331,7 +331,7 @@
 
 /* fix search results */
 .searchResultsWrap-3-pOjs {
-    width: 430px;
+    width: 470px;
     margin-left: 10px;
     background-color: var(--background-primary);
 }
@@ -342,7 +342,7 @@
     content: "";
     position: fixed;
     background-color: var(--background-primary);
-    width: 430px;
+    width: 470px;
     height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
