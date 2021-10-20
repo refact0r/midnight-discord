@@ -2,11 +2,7 @@
 
 A darkened discord theme with rounded chat and sidebars.
 
-<img width=700 src="https://user-images.githubusercontent.com/34758569/135788450-950c3206-29c8-4b1f-94d4-763d66516534.png">
-
-midnight classic (only changes colors)
-
-<img width=700 src="https://user-images.githubusercontent.com/34758569/135788551-395436ee-fb1a-47bb-8f14-4d62d2c8181c.png">
+<img width=700 src="https://user-images.githubusercontent.com/34758569/138004478-fcbf94a2-bc5b-4580-b6f3-bc0547a2ea93.png">
 
 Midnight fixes the connected top toolbar problem that other rounded themes like https://github.com/PlusInsta/discord-plus have.
 
@@ -14,6 +10,13 @@ Midnight fixes the connected top toolbar problem that other rounded themes like 
 
 Credit to https://github.com/Dyzean/Tokyo-Night for the window controls.
 
-# how to install
+# install
 
 Download and put the `midnight.theme.css` or `midnight-classic.theme.css` files into your betterdiscord themes folder.
+
+
+# classic
+
+a version of midnight that only changes the colors and keeps the default discord layout
+
+<img width=700 src="https://user-images.githubusercontent.com/34758569/135788551-395436ee-fb1a-47bb-8f14-4d62d2c8181c.png">
