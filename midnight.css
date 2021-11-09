@@ -304,30 +304,30 @@
 /* position members list and add margins/rounded */
 .membersWrap-2h-GB4 {
     position: relative;
-    margin-top: -48px;
+    height: 100%;
 }
 
 .members-1998pB {
-    border-radius: 10px !important;
-    margin: 0px 0px 0px 10px;
+    border-radius: 0px 0px 10px 10px !important;
 }
 
-/* create space for search bar */
-.members-1998pB div h2:first-of-type {
-    margin-top: 30px;
+.container-2wlB3z {
+    margin-left: 10px;
 }
 
-/* add search bar background */
-.members-1998pB::before {
-    z-index: 1;
+.container-2wlB3z::before {
     content: "";
-    position: fixed;
-    background-color: var(--background-primary);
-    width: 240px;
+    position: relative;
+    margin-top: -48px;
+    background: var(--background-primary);
     height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
 
+/* create space for search bar */
+.members-1998pB div h2:first-of-type {
+    margin-top: -10px;
+}
 
 /* fix search results */
 .searchResultsWrap-3-pOjs {
