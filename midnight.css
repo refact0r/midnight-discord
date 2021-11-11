@@ -67,6 +67,18 @@
     --activity-card-background: var(--secondary-background);
     --textbox-markdown-syntax: var(--secondary-text);
     --info-warning-foreground: var(--accent-color);
+
+    --deprecated-card-bg: var(--secondary-background);
+    --deprecated-card-editable-bg: var(--secondary-background);
+    --deprecated-store-bg: var(--background-primary);
+    --deprecated-quickswitcher-input-background: var(--secondary-background);
+    --deprecated-quickswitcher-input-placeholder: var(--text-muted);
+    --deprecated-text-input-bg: var(--secondary-background);
+    --deprecated-text-input-border: transparent;
+    --deprecated-text-input-border-hover: transparent;
+    --deprecated-text-input-border-disabled: #202225;
+    --deprecated-text-input-prefix: blue;
+
     --brand-experiment-30a: var(--mention-background);
     --brand-experiment-600: var(--accent-color-3);
     --brand-experiment-560: var(--accent-color-2);
@@ -84,29 +96,31 @@
 .container-3ayLPN,
 .autocomplete-1vrmpx,
 .categoryHeader-O1zU94 {
-    background-color: var(--background-primary) !important;
+    background-color: var(--primary-background) !important;
 }
 
 .selected-1Tbx07,
 .selected-rZcOL- {
-    background-color: var(--background-modifier-selected) !important;
+    background-color: var(--selected-modifier) !important;
 }
 
 .lookFilled-1Gx00P.colorGrey-2DXtkV {
-    background-color: var(--background-accent) !important;
+    background-color: var(--muted-text) !important;
 }
 
-.focused-2bY0OD {
-    background-color: var(--background-tertiary) !important;
+.focused-2bY0OD,
+.headerClickable-g5d9lT, 
+.headerDefault-2D4Kcg {
+    background-color: var(--secondary-background) !important;
 }
 
 .queryContainer-RKFJW- {
-    color: var(--text-normal) !important;
+    color: var(--primary-text) !important;
     border-bottom: none !important;
 }
 
 .dim-1l4L4y span {
-    background-color: var(--text-muted) !important;
+    background-color: var(--muted-text) !important;
     color: var(--header-secondary) !important;
     border: none;
 }
@@ -126,35 +140,47 @@
 .option-96V44q .answer-1n6g43, 
 .option-96V44q .nonText-3CRkO0, 
 .theme-dark .option-96V44q strong {
-    color: var(--text-normal) !important;
+    color: var(--primary-text) !important;
 }
 
 .divider-JfaTT5 {
-    --divider-color: var(--brand-experiment) !important;
+    --divider-color: var(--accent-color) !important;
 }
 
 .circleIconButton-1XqULR {
-    color: var(--brand-experiment);
+    color: var(--accent-color);
 }
 
 .circleIconButton-1XqULR.selected-2jcQaY {
-    background-color: var(--brand-experiment);
+    background-color: var(--accent-color);
 }
 
 .containerDragAfter-3Fp7LC:after, 
 .containerDragBefore-3iTCc7:before,
 .target-3LqNfV.dragOver-Iim8_W:before {
-    background-color: var(--brand-experiment);
+    background-color: var(--accent-color);
+}
+
+.auditLog-2ph_aK {
+    border: none;
+}
+
+.auditLog-2ph_aK .header-1oWRg0 {
+    border-radius: 4px;
+}
+
+.divider-3wNib3 {
+    border-color: var(--secondary-background) !important;
 }
 
 /* folder colors */
 .expandedFolderIconWrapper-3fmTfW svg {
-    color: var(--brand-experiment) !important;
+    color: var(--accent-color) !important;
 }
 
 .folderIconWrapper-1Ml_1q,
 .expandedFolderBackground-3ZDF05 {
-    background-color: var(--background-primary) !important;
+    background-color: var(--primary-background) !important;
 }
 
 /* adjust colors for chat and sidebars */
@@ -166,12 +192,12 @@
 .container-3w7J-x,
 .members-1998pB, 
 .members-1998pB > div {
-    background: var(--background-primary) !important;
+    background: var(--primary-background) !important;
 }
 
 .footer-3mqk7D,
 .footer-2gL1pp {
-    background-color: var(--background-secondary) !important;
+    background-color: var(--secondary-background) !important;
 }
 
 
@@ -187,7 +213,7 @@
 
 .outer-1AjyKL.active-1xchHY, 
 .outer-1AjyKL.interactive-3B9GmY:hover {
-    background-color: var(--background-modifier-hover) !important;
+    background-color: var(--hover-modifier) !important;
 }
 
 
@@ -245,7 +271,7 @@
 
 /* add chat background and make rounded */
 .chatContent-a9vAAp {
-    background: var(--background-primary) !important;
+    background: var(--primary-background) !important;
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -254,7 +280,7 @@
     content: "";
     position: relative;
     margin-top: -48px;
-    background: var(--background-primary);
+    background: var(--primary-background);
     width: 100%;
     height: 48px;
     border-radius: 10px 10px 0px 0px;
@@ -319,7 +345,7 @@
     content: "";
     position: relative;
     margin-top: -48px;
-    background: var(--background-primary);
+    background: var(--primary-background);
     height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
@@ -333,7 +359,7 @@
 .searchResultsWrap-3-pOjs {
     width: 470px;
     margin-left: 10px;
-    background-color: var(--background-primary);
+    background-color: var(--primary-background);
 }
 
 .searchResultsWrap-3-pOjs::before {
@@ -341,14 +367,14 @@
     z-index: 1;
     content: "";
     position: fixed;
-    background-color: var(--background-primary);
+    background-color: var(--primary-background);
     width: 470px;
     height: 48px;
     border-radius: 10px 10px 0px 0px;
 }
 
 .searchHeader-2XoQg7 {
-    background-color: var(--background-primary);
+    background-color: var(--primary-background);
 }
 
 .channelName-1JRO3C {
@@ -356,7 +382,7 @@
 }
 
 .message-1Ng5AR {
-    background-color: var(--background-tertiary);
+    background-color: var(--secondary-background);
 }
 
 /* only show scrollbar when hover */
@@ -449,4 +475,3 @@
 }
 
 /* other */
-
