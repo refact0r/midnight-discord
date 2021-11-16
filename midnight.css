@@ -110,7 +110,10 @@
 
 .focused-2bY0OD,
 .headerClickable-g5d9lT, 
-.headerDefault-2D4Kcg {
+.headerDefault-2D4Kcg,
+.changeDetails-2dV5gP,
+.headerExpanded-2egR38,
+.divider-1tf9AP {
     background-color: var(--secondary-background) !important;
 }
 
@@ -121,26 +124,38 @@
 
 .dim-1l4L4y span {
     background-color: var(--muted-text) !important;
-    color: var(--header-secondary) !important;
+    color: var(--secondary-text) !important;
     border: none;
 }
 
+.bar-2Qqk5Z {
+    background-color: var(--muted-text) !important;
+}
+
 .option-96V44q .filter-3Y_im-,
-.searchOption-zQ-1l6 .answer-1n6g43 {
-    color: var(--header-secondary) !important;
+.searchOption-zQ-1l6 .answer-1n6g43,
+.headerClickable-g5d9lT,
+.headerExpanded-2egR38,
+.auditLog-2ph_aK,
+.keybind-KpFkfr {
+    color: var(--secondary-text) !important;
 }
 
 .header-2N-gMV, 
 .plusIcon-v0BTrL, 
 .searchClearHistory-2cSSMO, 
-.searchLearnMore-3SQUAj a {
-    color: var(--header-primary) !important;
-}
-
+.searchLearnMore-3SQUAj a,
+.userHook-yu9TNk,
+.changeStr-1jn8yV,
+.headerDefault-2D4Kcg,
 .option-96V44q .answer-1n6g43, 
 .option-96V44q .nonText-3CRkO0, 
-.theme-dark .option-96V44q strong {
+strong {
     color: var(--primary-text) !important;
+}
+
+.timestamp-3B0F1C {
+    color: var(--text-muted) !important;
 }
 
 .divider-JfaTT5 {
@@ -151,13 +166,10 @@
     color: var(--accent-color);
 }
 
-.circleIconButton-1XqULR.selected-2jcQaY {
-    background-color: var(--accent-color);
-}
-
 .containerDragAfter-3Fp7LC:after, 
 .containerDragBefore-3iTCc7:before,
-.target-3LqNfV.dragOver-Iim8_W:before {
+.target-3LqNfV.dragOver-Iim8_W:before,
+.circleIconButton-1XqULR.selected-2jcQaY {
     background-color: var(--accent-color);
 }
 
@@ -169,8 +181,16 @@
     border-radius: 4px;
 }
 
+.headerExpanded-2egR38 {
+    border-radius: 4px 4px 0 0 !important;
+}
+
 .divider-3wNib3 {
     border-color: var(--secondary-background) !important;
+}
+
+.closeButton-1tv5uR {
+    border-color: var(--secondary-text) !important;
 }
 
 /* folder colors */
@@ -475,3 +495,4 @@
 }
 
 /* other */
+
