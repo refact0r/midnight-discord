@@ -149,7 +149,8 @@
 .changeStr-1jn8yV,
 .headerDefault-2D4Kcg,
 .option-96V44q .answer-1n6g43, 
-.option-96V44q .nonText-3CRkO0 {
+.option-96V44q .nonText-3CRkO0,
+.auditLog-2ph_aK strong {
     color: var(--primary-text) !important;
 }
 
@@ -481,7 +482,7 @@
     transform: scale(1.1);
 }
 
-/* blur spoiler text */
+/* blur spoiler text (by ashtrath#9079) */
 .spoilerText-3p6IlD,
 .spoilerText-3p6IlD.hidden-HHr2R9 {
     background-color: transparent !important;
@@ -493,5 +494,24 @@
     pointer-events: unset;
 }
 
-/* other */
+/* hide status picker descriptions */
+.description-2L932D {
+    display: none;
+}
 
+/* custom title text */
+.wordmarkWindows-1v0lYD svg {
+    display: none;
+}
+.wordmarkWindows-1v0lYD::after {
+    content: "Midnight";
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    font-family: var(--font-headline);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted-text);
+}
