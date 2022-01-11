@@ -500,10 +500,10 @@
 }
 
 /* custom title text */
-.wordmarkWindows-1v0lYD svg {
+.wordmarkWindows-2dq6rw svg {
     display: none;
 }
-.wordmarkWindows-1v0lYD::after {
+.wordmarkWindows-2dq6rw::after {
     content: "Midnight";
     display: block;
     position: relative;
