@@ -514,17 +514,59 @@
 
 /* custom title text */
 .wordmarkWindows-2dq6rw svg {
-    display: none;
+	display: none;
 }
 .wordmarkWindows-2dq6rw::after {
-    content: "Midnight";
-    display: block;
-    position: relative;
-    width: 200px;
-    height: 16px;
-    line-height: 16px;
-    font-family: var(--font-headline);
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--muted-text);
+	content: 'Midnight';
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	font-family: var(--font-headline);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--muted-text);
+}
+
+/* glow? */
+.mentioned-xhSam7:before,
+.replying-1x3H0T:before {
+	box-shadow: 0px 0px 10px 0px var(--accent-color);
+}
+.colorLink-2vG20E {
+	text-shadow: 0px 0px 10px var(--link-color);
+}
+#---new-messages-bar {
+	box-shadow: 0px 0px 10px 0px var(--accent-color);
+}
+.pill-ZqtR4i span {
+	box-shadow: 0px 0px 10px 0px var(--primary-text);
+}
+.pill-ZqtR4i {
+	overflow: visible;
+}
+.unread-2lAfLh {
+	box-shadow: 0px 0px 10px 0px var(--primary-text);
+}
+.newMessagesBar-265mhP {
+	box-shadow: 0px 0px 10px 0px var(--accent-color);
+}
+.container-3baos1 {
+	background-color: var(--primary-background);
+	z-index: 1;
+	margin: 0;
+}
+
+/* replace discord message links with Jump to Message (by ItMeSarah#2090) */
+[title^="https://discord.com/channels/"], [title^="https://ptb.discord.com/channels/"], [title^="https://canary.discord.com/channels/"]
+{
+	line-height: 0;
+	font-size: 0;
+}
+[title^="https://discord.com/channels/"]::before, [title^="https://ptb.discord.com/channels/"]::before, [title^="https://canary.discord.com/channels/"]::before
+{
+	content: 'Jump to Message';
+	font-size: 16px;
+	font-weight: 700;
 }
