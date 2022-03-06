@@ -354,6 +354,10 @@
 }
 
 /* position members list and add margins/rounded */
+.content-1jQy2l {
+	gap: 10px;
+}
+
 .membersWrap-3NUR2t {
 	position: relative;
 	height: 100%;
@@ -363,17 +367,15 @@
 	border-radius: 0px 0px 10px 10px !important;
 }
 
-.container-2o3qEW {
-	margin-left: 10px;
-}
-
-.container-2o3qEW::before {
+.membersWrap-3NUR2t::before {
+	display: block;
 	content: '';
-	position: relative;
+	position: absolute;
 	margin-top: -48px;
 	background: var(--primary-background);
 	height: 48px;
 	border-radius: 10px 10px 0px 0px;
+	width: 100%;
 }
 
 /* create space for search bar */
