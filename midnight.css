@@ -216,7 +216,6 @@
 }
 
 /* adjust colors for chat and sidebars */
-.sidebarRegionScroller-FXiQOh,
 .scroller-WSmht3,
 .privateChannels-oVe7HL,
 .panels-3wFtMD,
@@ -233,7 +232,8 @@
 }
 
 /* remove weird shadow on search suggestions */
-.option-2KkUJO:after {
+.option-ayUoaq:after,
+.children-3xh0VB:after {
 	background: none !important;
 }
 
@@ -323,9 +323,6 @@
 
 /* put toolbar on top */
 .toolbar-3_r2xA {
-	position: relative;
-	z-index: 1;
-	margin-left: 8px;
 }
 
 .iconWrapper-2awDjA[aria-label='Threads'] {
@@ -349,10 +346,9 @@
 .search-39IXmY {
 	order: 1;
 	margin-left: 36px;
-	margin-right: 8px;
 }
 
-.searchBar-zdmu7v {
+.searchBar-jGtisZ {
 	width: 208px !important;
 	padding: 0px 2px;
 }
@@ -387,9 +383,10 @@
 
 /* fix search results */
 .searchResultsWrap-5RVOkx {
-	width: 470px;
+	width: 510px;
 	margin-left: 10px;
 	background-color: var(--primary-background);
+	border-radius: 0px 0px 10px 10px;
 }
 
 .searchResultsWrap-5RVOkx::before {
@@ -398,7 +395,7 @@
 	content: '';
 	position: fixed;
 	background-color: var(--primary-background);
-	width: 470px;
+	width: 510px;
 	height: 48px;
 	border-radius: 10px 10px 0px 0px;
 }
