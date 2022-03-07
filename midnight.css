@@ -260,10 +260,13 @@
 }
 
 /* add margins around edges */
+.base-2jDfDU {
+	padding: 10px 10px 10px 0;
+}
+
 .container-2cd8Mz,
 .container-1a3EgQ,
 .applicationStore-2nk7Lo,
-.chat-2ZfjoI,
 .pageWrapper-2PwDoS {
 	margin: 10px;
 }
@@ -280,16 +283,13 @@
 	margin: 20px 10px 0px 10px;
 }
 
-.sidebar-1tnWFu {
-	margin: 10px 0px 10px 0px;
-}
-
 .wrapper-1_HaEi {
 	margin: 10px 0px 0px 0px;
 }
 
 /* remove chat background */
 .chat-2ZfjoI {
+	margin-left: 10px;
 	background: none !important;
 }
 
@@ -316,13 +316,13 @@
 	border-radius: 10px 10px 0px 0px;
 }
 
+.container-3XgAHv {
+	background: none;
+}
+
 /* put thread join/archive banner on top */
 .chatHeaderBar-2fUORh {
 	z-index: 1;
-}
-
-/* put toolbar on top */
-.toolbar-3_r2xA {
 }
 
 .iconWrapper-2awDjA[aria-label='Threads'] {
