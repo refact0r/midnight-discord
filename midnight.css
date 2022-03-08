@@ -106,6 +106,7 @@
 .message-G6O-Wv,
 .root-g14mjS,
 .container-2McqkF,
+.container-2cd8Mz,
 .autocomplete-3NRXG8,
 .categoryHeader-OpJ1Ly {
 	background-color: var(--primary-background) !important;
@@ -264,7 +265,10 @@
 	padding: 10px 10px 10px 0;
 }
 
-.container-2cd8Mz,
+.container-2cd8Mz {
+	margin-left: 10px;
+}
+
 .container-1a3EgQ,
 .applicationStore-2nk7Lo,
 .pageWrapper-2PwDoS {
@@ -323,6 +327,10 @@
 /* put thread join/archive banner on top */
 .chatHeaderBar-2fUORh {
 	z-index: 1;
+}
+
+/* put toolbar on top */
+.toolbar-3_r2xA {
 }
 
 .iconWrapper-2awDjA[aria-label='Threads'] {
