@@ -262,7 +262,7 @@
 
 /* add margins around edges */
 .base-2jDfDU {
-	padding: 10px 10px 10px 0;
+    padding: 10px 10px 10px 0;
 }
 
 .container-2cd8Mz {
@@ -293,7 +293,7 @@
 
 /* remove chat background */
 .chat-2ZfjoI {
-	margin-left: 10px;
+    margin-left: 10px;
 	background: none !important;
 }
 
@@ -321,7 +321,7 @@
 }
 
 .container-3XgAHv {
-	background: none;
+    background: none;
 }
 
 /* put thread join/archive banner on top */
@@ -393,8 +393,7 @@
 
 /* fix search results */
 .searchResultsWrap-5RVOkx {
-	width: 510px;
-	margin-left: 10px;
+	width: 550px;
 	background-color: var(--primary-background);
 	border-radius: 0px 0px 10px 10px;
 }
@@ -405,7 +404,7 @@
 	content: '';
 	position: fixed;
 	background-color: var(--primary-background);
-	width: 510px;
+	width: 550px;
 	height: 48px;
 	border-radius: 10px 10px 0px 0px;
 }
