@@ -76,9 +76,13 @@
 	--background-message-hover: var(--hover-modifier);
 	--channels-default: var(--secondary-text);
 	--channeltextarea-background: var(--secondary-background);
+	--channel-text-area-placeholder: var(--muted-text);
+	--channel-icon: var(--secondary-text);
 	--activity-card-background: var(--secondary-background);
 	--textbox-markdown-syntax: var(--secondary-text);
 	--info-warning-foreground: var(--accent-color);
+	--input-background: var(--secondary-background);
+	--brand-experiment-30a: var(--mention-background);
 
 	--deprecated-card-bg: var(--secondary-background);
 	--deprecated-card-editable-bg: var(--secondary-background);
@@ -91,7 +95,6 @@
 	--deprecated-text-input-border-disabled: #202225;
 	--deprecated-text-input-prefix: blue;
 
-	--brand-experiment-30a: var(--mention-background);
 	--brand-experiment-600: var(--accent-color-3);
 	--brand-experiment-560: var(--accent-color-2);
 	--brand-experiment-360: var(--accent-color);
@@ -223,7 +226,7 @@
 .sidebar-1tnWFu,
 .container-1NXEtd,
 .members-3WRCEx,
-.members-3WRCEx > div {
+.members-3WRCEx>div {
 	background: var(--primary-background) !important;
 }
 
@@ -262,7 +265,7 @@
 
 /* add margins around edges */
 .base-2jDfDU {
-    padding: 10px 10px 10px 0;
+	padding: 10px 10px 10px 0;
 }
 
 .container-2cd8Mz {
@@ -293,7 +296,7 @@
 
 /* remove chat background */
 .chat-2ZfjoI {
-    margin-left: 10px;
+	margin-left: 10px;
 	background: none !important;
 }
 
@@ -321,7 +324,7 @@
 }
 
 .container-3XgAHv {
-    background: none;
+	background: none;
 }
 
 /* put thread join/archive banner on top */
@@ -330,8 +333,7 @@
 }
 
 /* put toolbar on top */
-.toolbar-3_r2xA {
-}
+.toolbar-3_r2xA {}
 
 .iconWrapper-2awDjA[aria-label='Threads'] {
 	width: 36.1px;
@@ -440,15 +442,11 @@
 }
 
 /* fix padding */
-.typeWindows-2-g3UY + .app-3xd6d0 .container-1eFtFS {
+.typeWindows-2-g3UY+.app-3xd6d0 .container-1eFtFS {
 	padding-top: 10px;
 }
 
-.typeWindows-2-g3UY
-	+ .app-3xd6d0
-	.notice-2HEN-u.noticeWrapper-8z511t
-	+ .layers-OrUESM
-	.container-1eFtFS {
+.typeWindows-2-g3UY+.app-3xd6d0 .notice-2HEN-u.noticeWrapper-8z511t+.layers-OrUESM .container-1eFtFS {
 	padding-top: 0px;
 }
 
@@ -461,7 +459,7 @@
 }
 
 /* create window control buttons */
-.typeWindows-2-g3UY .winButton-3UMjdg > svg {
+.typeWindows-2-g3UY .winButton-3UMjdg>svg {
 	display: none;
 }
 
@@ -497,7 +495,7 @@
 	background-color: hsl(50, 50%, 50%) !important;
 }
 
-.typeWindows-2-g3UY > div:hover::after {
+.typeWindows-2-g3UY>div:hover::after {
 	transform: scale(1.1);
 }
 
@@ -507,7 +505,7 @@
 	background-color: transparent !important;
 }
 
-.spoilerText-27bIiA.hidden-3B-Rum > .inlineContent-2YnoDy {
+.spoilerText-27bIiA.hidden-3B-Rum>.inlineContent-2YnoDy {
 	opacity: 1 !important;
 	filter: blur(5px);
 	pointer-events: unset;
@@ -522,6 +520,7 @@
 .wordmarkWindows-2dq6rw svg {
 	display: none;
 }
+
 .wordmarkWindows-2dq6rw::after {
 	content: 'Midnight';
 	display: block;
@@ -540,24 +539,31 @@
 .replying-eZ7p5z:before {
 	box-shadow: 0px 0px 10px 0px var(--accent-color);
 }
+
 .colorLink-2apWfY {
 	text-shadow: 0px 0px 10px var(--link-color);
 }
+
 #---new-messages-bar {
 	box-shadow: 0px 0px 10px 0px var(--accent-color);
 }
+
 .pill-2RsI5Q span {
 	box-shadow: 0px 0px 10px 0px var(--primary-text);
 }
+
 .pill-2RsI5Q {
 	overflow: visible;
 }
+
 .unread-36eUEm {
 	box-shadow: 0px 0px 10px 0px var(--primary-text);
 }
+
 .newMessagesBar-1hF-9G {
 	box-shadow: 0px 0px 10px 0px var(--accent-color);
 }
+
 .container-YkUktl {
 	background-color: var(--primary-background);
 	z-index: 1;
@@ -565,13 +571,16 @@
 }
 
 /* replace discord message links with Jump to Message (by ItMeSarah#2090) */
-[title^="https://discord.com/channels/"], [title^="https://ptb.discord.com/channels/"], [title^="https://canary.discord.com/channels/"]
-{
+[title^="https://discord.com/channels/"],
+[title^="https://ptb.discord.com/channels/"],
+[title^="https://canary.discord.com/channels/"] {
 	line-height: 0;
 	font-size: 0;
 }
-[title^="https://discord.com/channels/"]::before, [title^="https://ptb.discord.com/channels/"]::before, [title^="https://canary.discord.com/channels/"]::before
-{
+
+[title^="https://discord.com/channels/"]::before,
+[title^="https://ptb.discord.com/channels/"]::before,
+[title^="https://canary.discord.com/channels/"]::before {
 	content: 'Jump to Message';
 	font-size: 16px;
 	font-weight: 700;
