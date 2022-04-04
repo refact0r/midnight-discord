@@ -44,4 +44,6 @@
 	--active-modifier: hsla(220, 15%, 20%, 0.2);
 	/* color of things when selected */
 	--selected-modifier: hsla(220, 15%, 20%, 0.3);
+	/* amount of glow (set to 0 to disable) */
+	--glow-amount: 10px;
 }
