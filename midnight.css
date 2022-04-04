@@ -32,6 +32,8 @@
 	--active-modifier: hsla(220, 15%, 20%, 0.2);
 	/* color of things when selected */
 	--selected-modifier: hsla(220, 15%, 20%, 0.3);
+	/* amount of glow (set to 0 to disable) */
+	--glow-amount: 10px;
 }
 
 /* change colors */
@@ -537,19 +539,19 @@
 /* glow? */
 .mentioned-Tre-dv:before,
 .replying-eZ7p5z:before {
-	box-shadow: 0px 0px 10px 0px var(--accent-color);
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
 }
 
 .colorLink-2apWfY {
-	text-shadow: 0px 0px 10px var(--link-color);
+	text-shadow: 0px 0px var(--glow-amount) var(--link-color);
 }
 
 #---new-messages-bar {
-	box-shadow: 0px 0px 10px 0px var(--accent-color);
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
 }
 
 .pill-2RsI5Q span {
-	box-shadow: 0px 0px 10px 0px var(--primary-text);
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--primary-text);
 }
 
 .pill-2RsI5Q {
@@ -557,11 +559,11 @@
 }
 
 .unread-36eUEm {
-	box-shadow: 0px 0px 10px 0px var(--primary-text);
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--primary-text);
 }
 
 .newMessagesBar-1hF-9G {
-	box-shadow: 0px 0px 10px 0px var(--accent-color);
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
 }
 
 .container-YkUktl {
