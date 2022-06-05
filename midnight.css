@@ -286,17 +286,50 @@
 	height: 100%;
 }
 
+/* rearrange toolbar */
+.iconWrapper-2awDjA[aria-label='Help'] {
+	display: none;
+}
+.iconWrapper-2awDjA[aria-label*='Member List'] {
+	order: 1;
+}
+.search-39IXmY {
+	order: 1;
+	margin-left: 30px;
+}
+.searchBar-jGtisZ {
+	width: 208px !important;
+	padding: 0px 2px;
+}
+.searchResultsWrap-5RVOkx {
+	width: 470px;
+}
+
 /* remove header bar shadows */
-.content-1jQy2l::before,
-.tabBody-2dgbAs::before,
-.searchBar-3TnChZ,
-.header-3OsQeK {
+.content-1jQy2l::before /* main chat */, 
+.tabBody-2dgbAs::before, /* friend list */
+.searchBar-3TnChZ, /* dm list */
+.chat-1-OBC7::before, /* channel chat */ 
+.header-3OsQeK /* channel list */ {
 	box-shadow: none;
+}
+
+/* remove toolbar shadow */
+.children-3xh0VB:after {
+	background: none !important;
 }
 
 /* remove active now card borders */
 .itemCard-3Etziu {
 	border: none;
+}
+
+/* only show scrollbar when hover */
+.scrollerBase-_bVAAt:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+.scrollerBase-_bVAAt::-webkit-scrollbar-thumb {
+	visibility: hidden;
 }
 
 /* window controls */
