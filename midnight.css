@@ -223,8 +223,7 @@
 .divider-2rZFJK /* unread divider */ {
 	--divider-color: var(--accent-color);
 }
-.colorPrimary-2AuQVo,
-.colorBrand-I6CyqQ {
+.colorPrimary-2AuQVo {
 	color: var(--primary-text) !important;
 }
 .queryContainer-ZunrLZ, /* search suggestions top */
