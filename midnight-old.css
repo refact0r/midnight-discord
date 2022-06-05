@@ -1,0 +1,589 @@
+/* base color variables */
+.theme-dark {
+	/* main accent color */
+	--accent-color: hsl(190, 60%, 50%);
+	/* color of accent color buttons on hover */
+	--accent-color-2: hsl(190, 60%, 55%);
+	/* color of accent color buttons on click */
+	--accent-color-3: hsl(190, 60%, 40%);
+	/* link color */
+	--link-color: hsl(190, 90%, 50%);
+	/* user mention background */
+	--mention-background: hsl(190, 60%, 50%, 0.3);
+	/* background of messages that mention you */
+	--mentioned-background: hsla(190, 60%, 50%, 0.1);
+	/* background of messages that mention you on hover */
+	--mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
+	/* main text color (messages, titles, unread text/indicators) */
+	--primary-text: hsl(220, 15%, 60%);
+	/* secondary text color (channels, descriptions, buttons) */
+	--secondary-text: hsl(220, 15%, 40%);
+	/* muted text color (input box placeholders, muted channels, message times) */
+	--muted-text: hsl(220, 15%, 20%);
+	/* main chat/channel list/member list background */
+	--primary-background: hsl(220, 15%, 10%);
+	/* background of pretty much everything else */
+	--secondary-background: hsl(220, 15%, 13%);
+	/* scrollbar thumb color */
+	--scrollbar-color: hsl(220, 15%, 11%);
+	/* color of things on hover */
+	--hover-modifier: hsla(220, 15%, 20%, 0.1);
+	/* color of things when clicked */
+	--active-modifier: hsla(220, 15%, 20%, 0.2);
+	/* color of things when selected */
+	--selected-modifier: hsla(220, 15%, 20%, 0.3);
+	/* amount of glow (set to 0 to disable) */
+	--glow-amount: 10px;
+}
+
+/* change colors */
+.theme-dark {
+	--brand-experiment: var(--accent-color);
+
+	--header-primary: var(--primary-text);
+	--header-secondary: var(--secondary-text);
+	--text-normal: var(--primary-text);
+	--text-muted: var(--muted-text);
+	--text-link: var(--link-color);
+	--text-link-low-saturation: var(--link-color);
+	--interactive-normal: var(--secondary-text);
+	--interactive-hover: var(--primary-text);
+	--interactive-active: var(--primary-text);
+	--interactive-muted: var(--muted-text);
+	--background-primary: var(--primary-background);
+	--background-secondary: var(--secondary-background);
+	--background-secondary-alt: var(--secondary-background);
+	--background-tertiary: var(--secondary-background);
+	--background-accent: var(--muted-text);
+	--background-floating: var(--primary-background);
+	--background-mobile-primary: var(--primary-background);
+	--background-mobile-secondary: var(--secondary-background);
+	--background-modifier-hover: var(--hover-modifier);
+	--background-modifier-active: var(--active-modifier);
+	--background-modifier-selected: var(--selected-modifier);
+	--background-modifier-accent: var(--selected-modifier);
+	--scrollbar-thin-thumb: var(--scrollbar-color);
+	--scrollbar-thin-track: transparent;
+	--scrollbar-auto-thumb: var(--scrollbar-color);
+	--scrollbar-auto-track: transparent;
+	--scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-color);
+	--scrollbar-auto-scrollbar-color-track: transparent;
+	--elevation-stroke: 0 0 4px 1px hsla(0, 0%, 0%, 0.15);
+	--elevation-low: none;
+	--elevation-medium: 0 4px 8px hsla(0, 0%, 0%, 0.2);
+	--elevation-high: 0 4px 8px hsla(0, 0%, 0%, 0.3);
+	--guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	--background-mentioned: var(--mentioned-background);
+	--background-mentioned-hover: var(--mentioned-hover-background);
+	--background-message-hover: var(--hover-modifier);
+	--channels-default: var(--secondary-text);
+	--channeltextarea-background: var(--secondary-background);
+	--channel-text-area-placeholder: var(--muted-text);
+	--channel-icon: var(--secondary-text);
+	--activity-card-background: var(--secondary-background);
+	--textbox-markdown-syntax: var(--secondary-text);
+	--info-warning-foreground: var(--accent-color);
+	--input-background: var(--secondary-background);
+	--brand-experiment-30a: var(--mention-background);
+
+	--deprecated-card-bg: var(--secondary-background);
+	--deprecated-card-editable-bg: var(--secondary-background);
+	--deprecated-store-bg: var(--background-primary);
+	--deprecated-quickswitcher-input-background: var(--secondary-background);
+	--deprecated-quickswitcher-input-placeholder: var(--text-muted);
+	--deprecated-text-input-bg: var(--secondary-background);
+	--deprecated-text-input-border: transparent;
+	--deprecated-text-input-border-hover: transparent;
+	--deprecated-text-input-border-disabled: #202225;
+	--deprecated-text-input-prefix: blue;
+
+	--brand-experiment-600: var(--accent-color-3);
+	--brand-experiment-560: var(--accent-color-2);
+	--brand-experiment-360: var(--accent-color);
+
+	--SC-spotify-green: var(--accent-color);
+}
+
+/* force elements to use colors variables */
+.peopleColumn-1wMU14,
+.uploadModal-2ie9O_,
+.pageWrapper-2PwDoS,
+.message-G6O-Wv,
+.root-g14mjS,
+.container-2McqkF,
+.container-2cd8Mz,
+.autocomplete-3NRXG8,
+.categoryHeader-OpJ1Ly {
+	background-color: var(--primary-background) !important;
+}
+
+.selected-3H3-RC,
+.selected-rZcOL- {
+	background-color: var(--selected-modifier) !important;
+}
+
+.lookFilled-1Gx00P.colorGrey-2DXtkV {
+	background-color: var(--muted-text) !important;
+}
+
+.focused-2FU0YH,
+.headerClickable-zGQJz3,
+.headerDefault-1e6yjj,
+.changeDetails-1kMZqI,
+.headerExpanded-1-zwDr,
+.divider-M3saWq {
+	background-color: var(--secondary-background) !important;
+}
+
+.queryContainer-ZunrLZ {
+	color: var(--primary-text) !important;
+	border-bottom: none !important;
+}
+
+.dim-2Uxgxb span {
+	background-color: var(--muted-text) !important;
+	color: var(--secondary-text) !important;
+	border: none;
+}
+
+.bar-1Bhnl9 {
+	background-color: var(--muted-text) !important;
+}
+
+.option-2KkUJO .filter-5YbOzJ,
+.searchOption-351dTI .answer-2fBfuP,
+.headerClickable-zGQJz3,
+.headerExpanded-1-zwDr,
+.auditLog-1NVAY0,
+.keybind-13vtq8 {
+	color: var(--secondary-text) !important;
+}
+
+.header-3A13BX,
+.plusIcon-2V7coV,
+.searchClearHistory-2Be-92,
+.searchLearnMore-7__o_n a,
+.userHook-3R3zjr,
+.changeStr--UjBBu,
+.headerDefault-1e6yjj,
+.option-2KkUJO .answer-2fBfuP,
+.option-2KkUJO .nonText-3_4gtu,
+.auditLog-1NVAY0 strong {
+	color: var(--primary-text) !important;
+}
+
+.timestamp-147bcs {
+	color: var(--text-muted) !important;
+}
+
+.divider-2rZFJK {
+	--divider-color: var(--accent-color) !important;
+}
+
+.circleIconButton-3lUBQk {
+	color: var(--accent-color);
+}
+
+.containerDragAfter-3aBiOW:after,
+.containerDragBefore-1s5Qg6:before,
+.target-1eRTCg.dragOver-1OKbo2:before,
+.circleIconButton-3lUBQk.selected-2tb4pB {
+	background-color: var(--accent-color);
+}
+
+.auditLog-1NVAY0 {
+	border: none;
+}
+
+.auditLog-1NVAY0 .header-2pgFQm {
+	border-radius: 4px;
+}
+
+.headerExpanded-1-zwDr {
+	border-radius: 4px 4px 0 0 !important;
+}
+
+.divider-3wNib3 {
+	border-color: var(--secondary-background) !important;
+}
+
+.closeButton-PCZcma {
+	border-color: var(--secondary-text) !important;
+}
+
+/* folder colors */
+.expandedFolderIconWrapper-3RwQpD svg {
+	color: var(--accent-color) !important;
+}
+
+.folderIconWrapper-1oRIZr,
+.expandedFolderBackground-1kSAf6 {
+	background-color: var(--primary-background) !important;
+}
+
+/* adjust colors for chat and sidebars */
+.scroller-WSmht3,
+.privateChannels-oVe7HL,
+.panels-3wFtMD,
+.sidebar-1tnWFu,
+.container-1NXEtd,
+.members-3WRCEx,
+.members-3WRCEx>div {
+	background: var(--primary-background) !important;
+}
+
+.footer-VCsJQY,
+.footer-31IekZ {
+	background-color: var(--secondary-background) !important;
+}
+
+/* remove weird shadow on search suggestions */
+.option-ayUoaq:after,
+.children-3xh0VB:after {
+	background: none !important;
+}
+
+/* fix activity cards */
+.itemCard-3Etziu {
+	border: none;
+}
+
+.outer-2JOHae.active-1W_Gl9,
+.outer-2JOHae.interactive-2zD88a:hover {
+	background-color: var(--hover-modifier) !important;
+}
+
+/* add rounded borders */
+.callContainer-HtHELf,
+.notice-2HEN-u,
+.threadSidebar-1o3BTy,
+.container-2cd8Mz,
+.container-1a3EgQ,
+.applicationStore-2nk7Lo,
+.sidebar-1tnWFu,
+.pageWrapper-2PwDoS {
+	border-radius: 10px !important;
+}
+
+/* add margins around edges */
+.base-2jDfDU {
+	padding: 10px 10px 10px 0;
+}
+
+.container-2cd8Mz {
+	margin-left: 10px;
+}
+
+.container-1a3EgQ,
+.applicationStore-2nk7Lo,
+.pageWrapper-2PwDoS {
+	margin: 10px;
+}
+
+.threadSidebar-1o3BTy {
+	margin: 10px 10px 10px 0px;
+}
+
+.notice-2HEN-u {
+	margin: 10px 10px 0px 0px;
+}
+
+.notice-2HEN-u.noticeWrapper-8z511t {
+	margin: 20px 10px 0px 10px;
+}
+
+.wrapper-1_HaEi {
+	margin: 10px 0px 0px 0px;
+}
+
+/* remove chat background */
+.chat-2ZfjoI {
+	margin-left: 10px;
+	background: none !important;
+}
+
+/* remove title bar background */
+.title-31SJ6t {
+	background: none !important;
+	width: auto;
+}
+
+/* add chat background and make rounded */
+.chatContent-3KubbW {
+	background: var(--primary-background) !important;
+	border-radius: 0px 0px 10px 10px;
+}
+
+/* add background to title bar and make rounded */
+.chatContent-3KubbW::before {
+	content: '';
+	position: relative;
+	margin-top: -48px;
+	background: var(--primary-background);
+	width: 100%;
+	height: 48px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.container-3XgAHv {
+	background: none;
+}
+
+/* put thread join/archive banner on top */
+.chatHeaderBar-2fUORh {
+	z-index: 1;
+}
+
+/* put toolbar on top */
+.toolbar-3_r2xA {}
+
+.iconWrapper-2awDjA[aria-label='Threads'] {
+	width: 36.1px;
+}
+
+.iconWrapper-2awDjA[aria-label='Threads'] .icon-2xnN2Y {
+	margin-left: auto;
+}
+
+/* hide toolbar icons */
+.iconWrapper-2awDjA[aria-label='Help'] {
+	display: none;
+}
+
+.iconWrapper-2awDjA[aria-label*='Member List'] {
+	order: 1;
+}
+
+/* position search */
+.search-39IXmY {
+	order: 1;
+	margin-left: 36px;
+}
+
+.searchBar-jGtisZ {
+	width: 208px !important;
+	padding: 0px 2px;
+}
+
+/* position members list and add margins/rounded */
+.content-1jQy2l {
+	gap: 10px;
+}
+
+.membersWrap-3NUR2t {
+	position: relative;
+	height: 100%;
+}
+
+.members-3WRCEx {
+	border-radius: 0px 0px 10px 10px !important;
+}
+
+.membersWrap-3NUR2t::before {
+	display: block;
+	content: '';
+	position: absolute;
+	margin-top: -48px;
+	background: var(--primary-background);
+	height: 48px;
+	border-radius: 10px 10px 0px 0px;
+	width: 100%;
+}
+
+/* create space for search bar */
+.members-3WRCEx div h2:first-of-type {
+	margin-top: -10px;
+}
+
+/* fix search results */
+.searchResultsWrap-5RVOkx {
+	width: 550px;
+	background-color: var(--primary-background);
+	border-radius: 0px 0px 10px 10px;
+}
+
+.searchResultsWrap-5RVOkx::before {
+	margin-top: -48px;
+	z-index: 1;
+	content: '';
+	position: fixed;
+	background-color: var(--primary-background);
+	width: 550px;
+	height: 48px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.searchHeader-1r_ZSh {
+	background-color: var(--primary-background);
+}
+
+.channelName-3w2Y3c {
+	background: none;
+}
+
+.message-24k8JL {
+	background-color: var(--secondary-background);
+}
+
+/* only show scrollbar when hover */
+.scrollerBase-_bVAAt:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+.scrollerBase-_bVAAt::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
+/* position window controls bar */
+.typeWindows-2-g3UY {
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	margin: 0;
+	background: none;
+}
+
+/* fix padding */
+.typeWindows-2-g3UY+.app-3xd6d0 .container-1eFtFS {
+	padding-top: 10px;
+}
+
+.typeWindows-2-g3UY+.app-3xd6d0 .notice-2HEN-u.noticeWrapper-8z511t+.layers-OrUESM .container-1eFtFS {
+	padding-top: 0px;
+}
+
+.scroller-3X7KbA {
+	padding: 0;
+}
+
+.wordmarkWindows-2dq6rw {
+	padding: 2px 9px;
+}
+
+/* create window control buttons */
+.typeWindows-2-g3UY .winButton-3UMjdg>svg {
+	display: none;
+}
+
+.typeWindows-2-g3UY .winButton-3UMjdg {
+	background: none;
+	top: 0;
+	width: 12px;
+	height: 12px;
+	margin: 4px 12px 0px 0px;
+}
+
+.typeWindows-2-g3UY .winButton-3UMjdg:nth-child(2) {
+	margin-right: 12px;
+}
+
+.typeWindows-2-g3UY .winButton-3UMjdg::after {
+	content: '';
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+	transition: 0.1s;
+}
+
+.typeWindows-2-g3UY .winButtonClose-3Q8ZH5::after {
+	background-color: hsl(0, 50%, 50%) !important;
+}
+
+.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(3)::after {
+	background-color: hsl(120, 50%, 50%) !important;
+}
+
+.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(4)::after {
+	background-color: hsl(50, 50%, 50%) !important;
+}
+
+.typeWindows-2-g3UY>div:hover::after {
+	transform: scale(1.1);
+}
+
+/* blur spoiler text (by ashtrath#9079) */
+.spoilerText-27bIiA,
+.spoilerText-27bIiA.hidden-3B-Rum {
+	background-color: transparent !important;
+}
+
+.spoilerText-27bIiA.hidden-3B-Rum>.inlineContent-2YnoDy {
+	opacity: 1 !important;
+	filter: blur(5px);
+	pointer-events: unset;
+}
+
+/* hide status picker descriptions */
+.description-3Cwkxk {
+	display: none;
+}
+
+/* custom title text */
+.wordmarkWindows-2dq6rw svg {
+	display: none;
+}
+
+.wordmarkWindows-2dq6rw::after {
+	content: 'Midnight';
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	font-family: var(--font-headline);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--muted-text);
+}
+
+/* glow? */
+.mentioned-Tre-dv:before,
+.replying-eZ7p5z:before {
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
+}
+
+.colorLink-2apWfY {
+	text-shadow: 0px 0px var(--glow-amount) var(--link-color);
+}
+
+#---new-messages-bar {
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
+}
+
+.pill-2RsI5Q span {
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--primary-text);
+}
+
+.pill-2RsI5Q {
+	overflow: visible;
+}
+
+.unread-36eUEm {
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--primary-text);
+}
+
+.newMessagesBar-1hF-9G {
+	box-shadow: 0px 0px var(--glow-amount) 0px var(--accent-color);
+}
+
+.container-YkUktl {
+	background-color: var(--primary-background);
+	z-index: 1;
+	margin: 0;
+}
+
+/* replace discord message links with Jump to Message (by ItMeSarah#2090) */
+[title^="https://discord.com/channels/"],
+[title^="https://ptb.discord.com/channels/"],
+[title^="https://canary.discord.com/channels/"] {
+	line-height: 0;
+	font-size: 0;
+}
+
+[title^="https://discord.com/channels/"]::before,
+[title^="https://ptb.discord.com/channels/"]::before,
+[title^="https://canary.discord.com/channels/"]::before {
+	content: 'Jump to Message';
+	font-size: 16px;
+	font-weight: 700;
+}
