@@ -204,14 +204,18 @@
 	--brand-experiment-600: var(--accent-color-3);
 }
 
-/* fix colors */
+/* fix things that don't use color vars */
 .peopleColumn-1wMU14, /* friend list */
+.autocomplete-3NRXG8, /* autocomplete (slash commands, mentions) */
+.categoryHeader-OpJ1Ly, /* slash commands list headers */
 .folderIconWrapper-1oRIZr, /* folder closed */
 .expandedFolderBackground-1kSAf6, /* folder expanded */
-.queryContainer-ZunrLZ /* search suggestions top */ {
+.queryContainer-ZunrLZ, /* search suggestions top */
+.container-KM8BU6, .reactors-1VXca7 /* reactions panel */ {
 	background-color: var(--primary-background) !important;
 }
-.dim-2Uxgxb .key-N5VmHN /* keyboard button */ {
+.dim-2Uxgxb .key-N5VmHN, /* keyboard button */ 
+.scroller-2GkvCq /* reactions panel sidebar */ {
 	background-color: var(--secondary-background) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icon */ {
@@ -223,7 +227,8 @@
 .divider-2rZFJK /* unread divider */ {
 	--divider-color: var(--accent-color);
 }
-.colorPrimary-2AuQVo {
+.colorPrimary-2AuQVo, /* buttons */
+.queryContainer-ZunrLZ strong /* "search for" below search box */ {
 	color: var(--primary-text) !important;
 }
 .queryContainer-ZunrLZ, /* search suggestions top */
@@ -233,10 +238,14 @@
 .dim-2Uxgxb .key-N5VmHN /* keyboard button */ {
 	box-shadow: var(--secondary-background) !important;
 }
+.searchAnswer-23w-CH, /* search filters */
+.searchFilter-2UfsDk {
+	color: var(--primary-text) !important;
+	background-color: var(--muted-text) !important;
+}
 
 /* change colors */
-.scroller-18M1mG, /*  dm list */
-.scroller-2MALzE, /* slash commands list */
+.scroller-WSmht3, /*  dm list */
 .privateChannels-oVe7HL, /* top of dm list */
 .panels-3wFtMD, /* user panel with mute button */
 .container-1NXEtd, /* channel list */
@@ -244,8 +253,13 @@
 .members-3WRCEx > div, /* members list */ 
 .searchResultsWrap-5RVOkx, /* search results */
 .searchHeader-1r_ZSh, /* search results header */
-.channelName-3w2Y3c /* search result channel name */ {
+.channelName-3w2Y3c, /* search result channel name */ 
+.container-2oNtJn, /* gif panel search bar */
+.container-1SX9VC /* emoji/sticker panel search bar */ {
 	background-color: var(--primary-background);
+}
+.searchResult-O9NDji {
+	background-color: var(--secondary-background);
 }
 
 /* add margins */
@@ -342,8 +356,11 @@
 .chat-1-OBC7::before, /* channel chat header */ 
 .headerBar-1dSpQr:before, /* nitro page header */
 .searchBar-3TnChZ, /* dm list header */
-.header-3OsQeK /* channel list header */ {
-	box-shadow: none;
+.header-3OsQeK, /* channel list header */ 
+.header-uVCAlo, /* sticker panel header */
+.header-2TLOnc, /* gif panel header */ 
+.header-11eigE /* emoji panel header */ {
+	box-shadow: none !important;
 }
 .children-3xh0VB:after /* toolbar shadow */ {
 	background: none !important;
