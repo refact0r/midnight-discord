@@ -391,6 +391,7 @@
 	width: 12px;
 	height: 12px;
 	margin: 2px 12px 0px 0px;
+	border-radius: 12px;
 }
 .typeWindows-2-g3UY .winButton-3UMjdg::after {
 	content: '';
