@@ -215,7 +215,8 @@
 	background-color: var(--primary-background) !important;
 }
 .dim-2Uxgxb .key-N5VmHN, /* keyboard button */ 
-.scroller-2GkvCq /* reactions panel sidebar */ {
+.scroller-2GkvCq, /* reactions panel sidebar */
+.message-G6O-Wv /* delete message confirmation message */  {
 	background-color: var(--secondary-background) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icon */ {
