@@ -216,7 +216,7 @@
 }
 .dim-2Uxgxb .key-N5VmHN, /* keyboard button */ 
 .scroller-2GkvCq, /* reactions panel sidebar */
-.message-G6O-Wv /* delete message confirmation message */  {
+.message-G6O-Wv /* delete message confirmation message */ {
 	background-color: var(--secondary-background) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icon */ {
@@ -255,7 +255,7 @@
 .searchResultsWrap-5RVOkx, /* search results */
 .searchHeader-1r_ZSh, /* search results header */
 .channelName-3w2Y3c, /* search result channel name */ 
-.container-2oNtJn, /* gif panel search bar */
+.searchBar-3aIzc-, /* gif panel search bar */
 .container-1SX9VC /* emoji/sticker panel search bar */ {
 	background-color: var(--primary-background);
 }
