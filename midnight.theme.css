@@ -11,39 +11,37 @@
 
 /* change colors here */
 /* a color picker should show up if you hover over the "hsl(x, y, z)" part */
-.theme-dark {
+:root {
 	/* main accent color */
-	--accent-color: hsl(190, 60%, 50%);
-	/* color of accent color buttons on hover */
-	--accent-color-2: hsl(190, 60%, 55%);
-	/* color of accent color buttons on click */
-	--accent-color-3: hsl(190, 60%, 40%);
+	--accent-color: hsl(190, 60%, 40%);
+	--accent-color-2: hsl(190, 60%, 50%);
+	--accent-color-3: hsl(190, 60%, 30%);
+	/* converted rgb of accent-color-2 (used for mention message backgrounds) */
+	--accent-color-rgb: 51, 179, 204;
 	/* link color */
-	--link-color: hsl(190, 90%, 50%);
-	/* user mention background */
-	--mention-background: hsl(190, 60%, 50%, 0.3);
+	--link-color: hsl(190, 70%, 60%);
 	/* background of messages that mention you */
 	--mentioned-background: hsla(190, 60%, 50%, 0.1);
 	/* background of messages that mention you on hover */
 	--mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
+	/* bright text for colored buttons */
+	--bright-text: hsl(220, 30%, 90%);
+	/* header text for headers and certain text */
+	--header-text: hsl(220, 30%, 70%);
 	/* main text color (messages, titles, unread text/indicators) */
 	--primary-text: hsl(220, 15%, 60%);
 	/* secondary text color (channels, descriptions, buttons) */
 	--secondary-text: hsl(220, 15%, 40%);
 	/* muted text color (input box placeholders, muted channels, message times) */
-	--muted-text: hsl(220, 15%, 20%);
+	--muted-text: hsl(220, 15%, 24%);
+	--muted-text-hover: hsl(220, 15%, 27%);
+	--muted-text-active: hsl(220, 15%, 30%);
+	/* converted rgb of muted-text (used for message hover backgrounds) */
+	--muted-text-rgb: 52, 58, 70;
 	/* main chat/channel list/member list background */
 	--primary-background: hsl(220, 15%, 10%);
 	/* background of pretty much everything else */
 	--secondary-background: hsl(220, 15%, 13%);
 	/* scrollbar thumb color */
 	--scrollbar-color: hsl(220, 15%, 11%);
-	/* color of things on hover */
-	--hover-modifier: hsla(220, 15%, 20%, 0.1);
-	/* color of things when clicked */
-	--active-modifier: hsla(220, 15%, 20%, 0.2);
-	/* color of things when selected */
-	--selected-modifier: hsla(220, 15%, 20%, 0.3);
-	/* amount of glow (set to 0 to disable) */
-	--glow-amount: 10px;
 }
