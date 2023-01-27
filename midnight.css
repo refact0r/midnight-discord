@@ -82,7 +82,6 @@
 .scroller-WSmht3, /*  dm list */
 .privateChannels-oVe7HL, /* top of dm list */
 .panels-3wFtMD, /* user panel with mute button */
-.container-1NXEtd, /* channel list */
 .membersWrap-3NUR2t, /* members list */
 .searchResultsWrap-5RVOkx, /* search results */
 .searchHeader-1r_ZSh, /* search results header */
@@ -93,7 +92,8 @@
 .callContainer-HtHELf /* voice channel background */ {
 	background-color: var(--primary-dark-600);
 }
-.folderIconWrapper-1oRIZr /* folder closed */ {
+.folderIconWrapper-1oRIZr, /* folder closed */
+.container-1NXEtd /* channel list */ {
 	background-color: var(--primary-dark-600) !important;
 }
 .searchResult-O9NDji {
