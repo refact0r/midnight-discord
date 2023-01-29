@@ -79,7 +79,7 @@
 }
 
 /* change colors */
-.scroller-WSmht3, /*  dm list */
+.theme-dark .scroller-WSmht3, /*  dm list */
 .privateChannels-oVe7HL, /* top of dm list */
 .panels-3wFtMD, /* user panel with mute button */
 .membersWrap-3NUR2t, /* members list */
@@ -90,7 +90,8 @@
 .searchBar-3aIzc-, /* gif panel search bar */
 .container-1SX9VC, /* emoji/sticker panel search bar */ 
 .expandedFolderBackground-1kSAf6, /* folder expanded */
-.callContainer-HtHELf /* voice channel background */ {
+.callContainer-HtHELf, /* voice channel background */
+.theme-dark .container-1zzFcN /* vc panel background */ {
 	background-color: var(--primary-dark-600);
 }
 .folderIconWrapper-1oRIZr /* folder closed */ {
@@ -228,7 +229,8 @@
 }*/
 
 /* remove borders */
-.itemCard-3Etziu /* active now card */ {
+.itemCard-3Etziu, /* active now card */
+.container-1zzFcN /* vc panel bottom */ {
 	border: none;
 }
 
