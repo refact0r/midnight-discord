@@ -2,7 +2,7 @@
  * @name midnight
  * @description A darkened discord theme.
  * @author refact0r
- * @version 1.3.1
+ * @version 1.4.0
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
 */
@@ -12,20 +12,22 @@
 /* change colors here */
 /* a color picker should show up if you hover over the "hsl(x, y, z)" part */
 :root {
-	/* main accent color */
-	--accent-color: hsl(190, 60%, 40%);
-	--accent-color-2: hsl(190, 60%, 50%);
-	--accent-color-3: hsl(190, 60%, 30%);
-	/* converted rgb of accent-color-2 (used for mention message backgrounds) */
-	--accent-color-rgb: 51, 179, 204;
 	/* link color */
 	--link-color: hsl(190, 70%, 60%);
-	/* background of messages that mention you */
-	--mentioned-background: hsla(190, 60%, 50%, 0.1);
+	/* main accent color (mentions, folder icons, unread indicators) */
+	--accent-color: hsl(190, 60%, 50%);
+	/* darker accent color (background of any accent items with text) */
+	--accent-background: hsl(190, 60%, 40%);
+	/* even darker accent color (background of accent buttons when hover) */
+	--accent-background-2: hsl(190, 60%, 30%);
+	/* even darker accent color (background of accent buttons when clicked) */
+	--accent-background-3: hsl(190, 60%, 20%);
+	/* background of mention text and messages that mention you */
+	--mention-modifier: hsla(190, 60%, 50%, 0.1);
 	/* background of messages that mention you on hover */
-	--mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
+	--mention-hover-modifier: hsla(190, 60%, 50%, 0.05);
 	/* bright text for colored buttons */
-	--bright-text: hsl(220, 30%, 90%);
+	--bright-text: hsl(220, 40%, 90%);
 	/* header text for headers and certain text */
 	--header-text: hsl(220, 30%, 70%);
 	/* main text color (messages, titles, unread text/indicators) */
@@ -34,14 +36,20 @@
 	--secondary-text: hsl(220, 15%, 40%);
 	/* muted text color (input box placeholders, muted channels, message times) */
 	--muted-text: hsl(220, 15%, 24%);
-	--muted-text-hover: hsl(220, 15%, 27%);
-	--muted-text-active: hsl(220, 15%, 30%);
-	/* converted rgb of muted-text (used for message hover backgrounds) */
-	--muted-text-rgb: 52, 58, 70;
+	/* background of muted colored buttons on hover */
+	--muted-background-hover: hsl(220, 15%, 20%);
+	/* background of muted colored buttons on click */
+	--muted-background-active: hsl(220, 15%, 16%);
+	/* background of pretty much everything not using primary background */
+	--secondary-background: hsl(220, 15%, 13%);
 	/* main chat/channel list/member list background */
 	--primary-background: hsl(220, 15%, 10%);
-	/* background of pretty much everything else */
-	--secondary-background: hsl(220, 15%, 13%);
-	/* scrollbar thumb color */
-	--scrollbar-color: hsl(220, 15%, 11%);
+	/* overlay background on stuff when hovered over */
+	--hover-modifier: hsl(230, 20%, 40%, 0.1);
+	/* overlay background on stuff when clicked or selected */
+	--active-modifier: hsl(220, 20%, 40%, 0.2);
+	/* overlay background on messages when hovered over */
+	--message-hover-modifier: hsl(220, 0%, 0%, 0.1);
+	/* radius of round corners */
+	--roundness: 16px;
 }
