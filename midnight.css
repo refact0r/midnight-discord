@@ -1,18 +1,20 @@
 :root {
-	/* main accent color */
-	--accent-color: hsl(190, 60%, 40%);
-	--accent-color-2: hsl(190, 60%, 50%);
-	--accent-color-3: hsl(190, 60%, 30%);
-	/* converted rgb of accent-color-2 (used for mention message backgrounds) */
-	--accent-color-rgb: 51, 179, 204;
 	/* link color */
 	--link-color: hsl(190, 70%, 60%);
-	/* background of messages that mention you */
-	--mentioned-background: hsla(190, 60%, 50%, 0.1);
+	/* main accent color (mentions, folder icons, unread indicators) */
+	--accent-color: hsl(190, 60%, 50%);
+	/* darker accent color (background of any accent items with text) */
+	--accent-background: hsl(190, 60%, 40%);
+	/* even darker accent color (background of accent buttons when hover) */
+	--accent-background-2: hsl(190, 60%, 30%);
+	/* even darker accent color (background of accent buttons when clicked) */
+	--accent-background-3: hsl(190, 60%, 20%);
+	/* background of mention text and messages that mention you */
+	--mention-modifier: hsla(190, 60%, 50%, 0.1);
 	/* background of messages that mention you on hover */
-	--mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
+	--mention-hover-modifier: hsla(190, 60%, 50%, 0.05);
 	/* bright text for colored buttons */
-	--bright-text: hsl(220, 30%, 90%);
+	--bright-text: hsl(220, 40%, 90%);
 	/* header text for headers and certain text */
 	--header-text: hsl(220, 30%, 70%);
 	/* main text color (messages, titles, unread text/indicators) */
@@ -21,127 +23,81 @@
 	--secondary-text: hsl(220, 15%, 40%);
 	/* muted text color (input box placeholders, muted channels, message times) */
 	--muted-text: hsl(220, 15%, 24%);
-	--muted-text-hover: hsl(220, 15%, 27%);
-	--muted-text-active: hsl(220, 15%, 30%);
-	/* converted rgb of muted-text (used for message hover backgrounds) */
-	--muted-text-rgb: 52, 58, 70;
+	/* background of muted colored buttons on hover */
+	--muted-background-hover: hsl(220, 15%, 20%);
+	/* background of muted colored buttons on click */
+	--muted-background-active: hsl(220, 15%, 16%);
+	/* background of pretty much everything not using primary background */
+	--secondary-background: hsl(220, 15%, 13%);
 	/* main chat/channel list/member list background */
 	--primary-background: hsl(220, 15%, 10%);
-	/* background of pretty much everything else */
-	--secondary-background: hsl(220, 15%, 13%);
-	/* scrollbar thumb color */
-	--scrollbar-color: hsl(220, 15%, 11%);
+	/* overlay background on stuff when hovered over */
+	--hover-modifier: hsl(230, 20%, 40%, 0.1);
+	/* overlay background on stuff when clicked or selected */
+	--active-modifier: hsl(220, 20%, 40%, 0.2);
+	/* overlay background on messages when hovered over */
+	--message-hover-modifier: hsl(220, 0%, 0%, 0.1);
+	/* radius of round corners */
+	--roundness: 16px;
 }
 
 :root.theme-dark,
 .theme-dark,
 .default-colors {
+	--primary-130: var(--header-text);
+	--primary-230: var(--primary-text);
+	--primary-330: var(--secondary-text);
+	--primary-360: var(--secondary-text);
+	--primary-400: var(--secondary-text);
+	--primary-430: var(--muted-text);
+	--primary-500: var(--muted-text);
+	--primary-530: var(--muted-text);
+	--primary-560: var(--secondary-background);
+	--primary-600: var(--primary-background);
+	--primary-630: var(--primary-background);
+	--primary-660: var(--primary-background);
+	--primary-700: var(--secondary-background);
+	--primary-730: var(--secondary-background);
+	--primary-800: var(--secondary-background);
+
 	--white-500: var(--bright-text);
-	--white-400: var(--header-text);
-	--link-500: var(--link-color);
-	--brand-260: var(--accent-color-2);
-	--brand-360: var(--accent-color-2);
-	--brand-500: var(--accent-color);
-	--brand-500-rgb: var(--accent-color-rgb);
-	--brand-new-430: var(--accent-color);
-	--brand-new-500: var(--accent-color);
-	--brand-new-560: var(--accent-color-2);
-	--brand-new-600: var(--accent-color-3);
-	--primary-dark-200: var(--primary-text);
-	--primary-dark-300: var(--secondary-text);
-	--primary-dark-330: var(--muted-text);
-	--primary-dark-345: var(--secondary-text);
-	--primary-dark-360: var(--secondary-text);
-	--primary-dark-400: var(--muted-text-active);
-	--primary-dark-430: var(--muted-text-hover);
-	--primary-dark-500: var(--muted-text);
-	--primary-dark-500-rgb: var(--muted-text-rgb);
-	--primary-dark-560: var(--secondary-background);
-	--primary-dark-600: var(--primary-background);
-	--primary-dark-630: var(--secondary-background);
-	--primary-dark-660: var(--secondary-background);
-	--primary-dark-700: var(--secondary-background);
-	--primary-dark-800: var(--primary-background);
+	--blue-345: var(--link-color);
+	--brand-260: var(--accent-color);
+	--brand-360: var(--accent-color);
+	--brand-500: var(--accent-background);
+	--brand-560: var(--accent-background-2);
+	--brand-600: var(--accent-background-3);
+	--brand-experiment-15a: var(--mention-modifier);
 
-	--header-primary: var(--white-400);
-	--interactive-active: var(--white-400);
-	--logo-primary: var(--white-400);
-	--background-modifier-hover: rgba(var(--primary-dark-500-rgb), 0.1);
-	--background-modifier-active: rgba(var(--primary-dark-500-rgb), 0.2);
-	--background-modifier-selected: rgba(var(--primary-dark-500-rgb), 0.3);
-	--background-modifier-accent: rgba(var(--primary-dark-500-rgb), 0.2);
-	--background-mentioned: rgba(var(--brand-500-rgb), 0.1);
-	--background-mentioned-hover: rgba(var(--brand-500-rgb), 0.08);
-	--scrollbar-thin-track: none;
-	--scrollbar-auto-track: none;
-	--scrollbar-auto-scrollbar-color-track: none;
-	--status-danger: var(--brand-new-560);
+	--background-modifier-hover: var(--hover-modifier);
+	--background-modifier-active: var(--active-modifier);
+	--background-modifier-selected: var(--active-modifier);
+	--background-modifier-accent: var(--active-modifier);
+	--background-message-hover: var(--message-hover-modifier);
+	--background-mentioned: var(--mention-modifier);
+	--background-mentioned-hover: var(--mention-hover-modifier);
+	--mention-background: var(--mention-modifier);
+	--button-secondary-background-hover: var(--muted-background-hover);
+	--button-secondary-background-active: var(--muted-background-active);
 }
 
-/* change colors */
-.theme-dark .scroller-WSmht3, /*  dm list */
-.privateChannels-oVe7HL, /* top of dm list */
-.panels-3wFtMD, /* user panel with mute button */
-.membersWrap-3NUR2t, /* members list */
-.theme-dark .container-1NXEtd, /* channel list */
-.searchResultsWrap-5RVOkx, /* search results */
-.searchHeader-1r_ZSh, /* search results header */
-.channelName-3w2Y3c, /* search result channel name */ 
-.searchBar-3aIzc-, /* gif panel search bar */
-.container-1SX9VC, /* emoji/sticker panel search bar */ 
-.expandedFolderBackground-1kSAf6, /* folder expanded */
-.callContainer-HtHELf, /* voice channel background */
-.theme-dark .container-1zzFcN /* vc panel background */ {
-	background-color: var(--primary-dark-600);
+/* fix colors */
+.wrapper-22rqw6 /* emoji selector server list */ {
+	background-color: var(--primary-background);
 }
-.folderIconWrapper-1oRIZr /* folder closed */ {
-	background-color: var(--primary-dark-600) !important;
+.mentioned-Tre-dv:before /* mention message left edge */,
+.container-1QtPKm.default-colors:checked {
+    background-color: var(--accent-background) !important;
 }
-.searchResult-O9NDji {
-	background-color: var(--primary-dark-630);
+.expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
+.strikethrough-2Kl6HF /* mute button strikethrough */ {
+	color: var(--accent-color) !important;
 }
-.container-2o3qEW, /* members list background (servers only) */
-.members-3WRCEx, /* members list foreground */  
-.member-48YF_l, /* members list members */
-.sidebar-1tnWFu, /* channel list back */
-.gradientBottom-uB_-4E, /* voice channel top gradient */
-.gradientTop-1UBZHm, /* voice channel bottom gradient */ 
-.theme-dark .container-YkUktl /* user panel */ {
-	background: none;
+.divider-2rZFJK {
+	--divider-color: var(--accent-color);
 }
-.expandedFolderIconWrapper-3RwQpD svg /* expanded folder icon */ {
-	color: var(--brand-new-560) !important;
-}
-.mentioned-Tre-dv:before, /* mention message left bar */
-.colorDefault-CDqZdO.focused-3qFvc8 /* message menu hover */ {
-	background-color: var(--brand-new-500);
-}
-.numberBadge-37OJ3S /* mention number badge */ {
-	background-color: var(--brand-new-560) !important;
-}
-.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .wrapper-3kah-n:hover .childWrapper-1j_1ub /* selected/hovered server icon */ {
-	background-color: var(--text-muted);
-}
-
-/* add rounded corners */
-.container-3XgAHv, /* new thread */
-.callContainer-HtHELf, /* voice channel */
-.applicationStore-2nk7Lo /* nitro page */ {
-	border-radius: 10px !important;
-}
-.chatContent-3KubbW, /* main chat */
-.membersWrap-3NUR2t,  /* member list */
-.searchResultsWrap-5RVOkx, /* search results */
-.panels-3wFtMD /* user panel with mute button */ {
-	border-radius: 0px 0px 10px 10px;
-}
-.privateChannels-oVe7HL, /* friends list */
-.container-1NXEtd, /* channel list */ 
-.chatContent-3KubbW::before, /* top of main chat */
-.membersWrap-3NUR2t::before, /* top of member list */
-.searchResultsWrap-5RVOkx::before, /* top of search results */ 
-.wrapper-1gVUIN /* private call */ {
-	border-radius: 10px 10px 0px 0px;
+.iconBadge-3Mmg92 {
+	background-color: var(--accent-color) !important;
 }
 
 /* remove big chat background and add back smaller */
@@ -149,7 +105,7 @@
 	background: none !important;
 }
 .chatContent-3KubbW {
-	background-color: var(--primary-dark-600) !important;
+	background-color: var(--primary-background) !important;
 }
 
 /* remove chat header background */
@@ -158,23 +114,33 @@
 }
 
 /* add header backgrounds */
-.membersWrap-3NUR2t::before, /* member list */
-.chatContent-3KubbW::before, /* main chat */
+.membersWrap-3NUR2t::before /* member list */,
+.chatContent-3KubbW::before /* main chat */,
 .searchResultsWrap-5RVOkx::before /* search results */ {
 	content: '';
 	position: absolute;
 	margin-top: -48px;
-	background-color: var(--primary-dark-600);
+	background-color: var(--primary-background);
 	width: 100%;
 	height: 48px;
+	border-radius: var(--roundness) var(--roundness) 0 0;
 }
 .searchResultsWrap-5RVOkx /* show header on search results */ {
 	overflow: visible;
 }
 
-/* fix members list height */
-.membersWrap-3NUR2t {
-	height: 100%;
+/* add rounded corners */
+.container-2cd8Mz /* homepage */,
+.content-1SgpWY .sidebar-1tnWFu /* server list back */,
+.callContainer-HtHELf /* vc */,
+.container-3XgAHv /* vc chat */ {
+	border-radius: var(--roundness) !important;
+	overflow: hidden;
+}
+.chatContent-3KubbW /* main chat */,
+.container-2o3qEW /* members list back */,
+.members-3WRCEx /* members list */ {
+	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
 /* rearrange toolbar */
@@ -200,8 +166,8 @@
 .base-2jDfDU /* outside edges */ {
 	padding: 0px 10px 10px 0;
 }
-.container-2cd8Mz, /* friend list*/
-.chat-2ZfjoI, /* main chat */
+.container-2cd8Mz /* friend list*/,
+.chat-2ZfjoI /* main chat */,
 .applicationStore-2nk7Lo /* nitro page */ {
 	margin-left: 10px;
 }
@@ -214,13 +180,13 @@
 
 /* remove shadows */
 .content-1jQy2l::before /* main chat header */, 
-.tabBody-2dgbAs::before, /* friend list header */
-.chat-1-OBC7::before, /* voice channel chat header */ 
-.headerBar-1dSpQr:before, /* nitro page header */
-.searchBar-3TnChZ, /* dm list header */
-.header-3OsQeK, /* channel list header */ 
-.header-uVCAlo, /* sticker panel header */
-.header-2TLOnc, /* gif panel header */ 
+.tabBody-2dgbAs::before /* friend list header */,
+.chat-1-OBC7::before /* voice channel chat header */,
+.headerBar-1dSpQr:before /* nitro page header */,
+.searchBar-3TnChZ /* dm list header */,
+.header-3OsQeK /* channel list header */,
+.header-uVCAlo /* sticker panel header */,
+.header-2TLOnc /* gif panel header */,
 .header-11eigE /* emoji panel header */ {
 	box-shadow: none !important;
 }
@@ -229,7 +195,7 @@
 }*/
 
 /* remove borders */
-.itemCard-3Etziu, /* active now card */
+.itemCard-3Etziu /* active now card */,
 .container-1zzFcN /* vc panel bottom */ {
 	border: none;
 }
@@ -258,7 +224,7 @@
 	font-family: var(--font-headline);
 	font-size: 11px;
 	font-weight: 600;
-	color: var(--primary-dark-330);
+	color: var(--muted-text);
 }
 
 /* window controls */
