@@ -100,6 +100,9 @@
 .divider-2rZFJK /* unread dividers */ {
 	--divider-color: var(--accent-color);
 }
+.divider-AZrXIA /* forum post dividers */ {
+	background: none;
+}
 .iconBadge-3Mmg92 /* dm button */ {
 	background-color: var(--accent-color) !important;
 }
@@ -150,7 +153,8 @@
 .container-2o3qEW /* members list back */,
 .members-3WRCEx /* members list */,
 .container-3wLKDe /* forum channel */,
-.profilePanel-2PWEok, .userPanelOuter-xc-WYi, .userPanelInnerThemed-2xZFjl /* dm profile */ {
+.profilePanel-2PWEok, .userPanelOuter-xc-WYi, .userPanelInnerThemed-2xZFjl /* dm profile */,
+.searchResultsWrap-5RVOkx /* search results */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
@@ -170,7 +174,7 @@
 	padding: 0px 2px;
 }
 .searchResultsWrap-5RVOkx {
-	width: 470px;
+	width: 466px;
 }
 .iconWrapper-2awDjA[aria-label='Hide User Profile'] {
 	margin-left: 34px;
