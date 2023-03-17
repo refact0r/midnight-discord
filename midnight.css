@@ -87,8 +87,8 @@
 	background-color: var(--primary-background);
 }
 .mentioned-Tre-dv:before /* mention message left edge */,
-.container-1QtPKm.default-colors:checked /* settings checkbuttons */{
-    background-color: var(--accent-background) !important;
+.container-1QtPKm.default-colors:checked /* settings checkbuttons */ {
+	background-color: var(--accent-background) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
 .strikethrough-2Kl6HF /* mute button strikethrough */ {
@@ -144,7 +144,7 @@
 .container-2o3qEW /* members list back */,
 .members-3WRCEx /* members list */,
 .container-3wLKDe /* forum channel */,
-.profilePanel-2PWEok, .userPanelOuter-xc-WYi /* dm profile */ {
+.profilePanel-2PWEok, .userPanelOuter-xc-WYi, .userPanelInnerThemed-2xZFjl /* dm profile */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
@@ -164,29 +164,29 @@
 	padding: 0px 2px;
 }
 .toolbar-3_r2xA {
-    margin-left: 35px;
+	margin-left: 35px;
 }
 .searchResultsWrap-5RVOkx {
 	width: 470px;
 }
 
 .profilePanel-2PWEok {
-    width: 505px;
+	width: 505px;
 }
 .avatarPositionPanel-3P4Ted {
-    top: 107px;
-    left: 26.5px;
+	top: 107px;
+	left: 26.5px;
 }
 .profilePanel-2PWEok .wrapper-3Un6-K {
-    width: 120px !important;
-    height: 120px !important;
+	width: 120px !important;
+	height: 120px !important;
 }
 .profilePanel-2PWEok .wrapper-3Un6-K svg {
-    width: 138px !important;
-    height: 138px !important;
+	width: 138px !important;
+	height: 138px !important;
 }
 .profilePanel-2PWEok .userPanelOverlayBackground-3xwDMp {
-    margin-top: 32px;
+	margin-top: 32px;
 }
 
 /* add margins */
