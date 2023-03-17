@@ -160,36 +160,20 @@
 }
 .search-39IXmY {
 	order: 1;
-	margin-left: 30px;
+	margin-left: 34px;
 }
 .searchBar-jGtisZ {
 	width: 208px !important;
 	padding: 0px 2px;
 }
-.toolbar-3_r2xA {
-	margin-left: 35px;
-}
 .searchResultsWrap-5RVOkx {
 	width: 470px;
 }
-
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
+	margin-left: 34px;
+}
 .profilePanel-2PWEok {
-	width: 505px;
-}
-.avatarPositionPanel-3P4Ted {
-	top: 107px;
-	left: 26.5px;
-}
-.profilePanel-2PWEok .wrapper-3Un6-K {
-	width: 120px !important;
-	height: 120px !important;
-}
-.profilePanel-2PWEok .wrapper-3Un6-K svg {
-	width: 138px !important;
-	height: 138px !important;
-}
-.profilePanel-2PWEok .userPanelOverlayBackground-3xwDMp {
-	margin-top: 32px;
+	width: 340px;
 }
 
 /* add margins */
