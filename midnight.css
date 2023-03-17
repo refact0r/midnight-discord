@@ -54,6 +54,7 @@
 	--primary-530: var(--muted-text);
 	--primary-560: var(--secondary-background);
 	--primary-600: var(--primary-background);
+	--primary-645: var(--primary-background);
 	--primary-630: var(--primary-background);
 	--primary-660: var(--primary-background);
 	--primary-700: var(--secondary-background);
@@ -86,17 +87,17 @@
 	background-color: var(--primary-background);
 }
 .mentioned-Tre-dv:before /* mention message left edge */,
-.container-1QtPKm.default-colors:checked {
+.container-1QtPKm.default-colors:checked /* settings checkbuttons */{
     background-color: var(--accent-background) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
 .strikethrough-2Kl6HF /* mute button strikethrough */ {
 	color: var(--accent-color) !important;
 }
-.divider-2rZFJK {
+.divider-2rZFJK /* unread dividers */ {
 	--divider-color: var(--accent-color);
 }
-.iconBadge-3Mmg92 {
+.iconBadge-3Mmg92 /* dm button */ {
 	background-color: var(--accent-color) !important;
 }
 
@@ -116,7 +117,9 @@
 /* add header backgrounds */
 .membersWrap-3NUR2t::before /* member list */,
 .chatContent-3KubbW::before /* main chat */,
-.searchResultsWrap-5RVOkx::before /* search results */ {
+.searchResultsWrap-5RVOkx::before /* search results */,
+.profilePanel-2PWEok::before /* dm profile */,
+.container-3wLKDe::before /* forum channel */ {
 	content: '';
 	position: absolute;
 	margin-top: -48px;
@@ -139,7 +142,9 @@
 }
 .chatContent-3KubbW /* main chat */,
 .container-2o3qEW /* members list back */,
-.members-3WRCEx /* members list */ {
+.members-3WRCEx /* members list */,
+.container-3wLKDe /* forum channel */,
+.profilePanel-2PWEok, .userPanelOuter-xc-WYi /* dm profile */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
@@ -158,8 +163,30 @@
 	width: 208px !important;
 	padding: 0px 2px;
 }
+.toolbar-3_r2xA {
+    margin-left: 35px;
+}
 .searchResultsWrap-5RVOkx {
 	width: 470px;
+}
+
+.profilePanel-2PWEok {
+    width: 505px;
+}
+.avatarPositionPanel-3P4Ted {
+    top: 107px;
+    left: 26.5px;
+}
+.profilePanel-2PWEok .wrapper-3Un6-K {
+    width: 120px !important;
+    height: 120px !important;
+}
+.profilePanel-2PWEok .wrapper-3Un6-K svg {
+    width: 138px !important;
+    height: 138px !important;
+}
+.profilePanel-2PWEok .userPanelOverlayBackground-3xwDMp {
+    margin-top: 32px;
 }
 
 /* add margins */
@@ -190,9 +217,9 @@
 .header-11eigE /* emoji panel header */ {
 	box-shadow: none !important;
 }
-/*.children-3xh0VB:after  toolbar shadow  {
+.children-3xh0VB:after  /* toolbar shadow */ {
 	background: none !important;
-}*/
+}
 
 /* remove borders */
 .itemCard-3Etziu /* active now card */,
