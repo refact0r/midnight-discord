@@ -103,6 +103,9 @@
 .iconBadge-3Mmg92 /* dm button */ {
 	background-color: var(--accent-color) !important;
 }
+.searchHeader-1r_ZSh /* search results number box */ {
+	background-color: var(--primary-background);
+}
 
 /* remove big chat background and add back smaller */
 .chat-2ZfjoI {
