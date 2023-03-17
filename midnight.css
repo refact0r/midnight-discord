@@ -80,6 +80,9 @@
 	--mention-background: var(--mention-modifier);
 	--button-secondary-background-hover: var(--muted-background-hover);
 	--button-secondary-background-active: var(--muted-background-active);
+
+	--search-popout-option-fade: none;
+	--search-popout-option-fade-hover: none;
 }
 
 /* fix colors */
@@ -273,7 +276,6 @@
 	height: 12px;
 	width: 12px;
 	border-radius: 12px;
-	transition: 0.1s;
 }
 .typeWindows-2-g3UY .winButtonClose-3Q8ZH5::after {
 	background-color: hsl(0, 50%, 50%) !important;
@@ -286,4 +288,7 @@
 }
 .typeWindows-2-g3UY > div:hover::after {
 	transform: scale(1.1);
+}
+.typeWindows-2-g3UY > div:active::after {
+	transform: scale(1);
 }
