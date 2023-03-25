@@ -109,6 +109,10 @@
 .searchHeader-1r_ZSh /* search results number box */ {
 	background-color: var(--primary-background);
 }
+.mainCard-3KBsBI /* forum search bar and posts */,
+.reaction-3vwAF2 /* reactions */ {
+	background-color: var(--secondary-background);
+}
 
 /* remove big chat background and add back smaller */
 .chat-2ZfjoI {
@@ -145,7 +149,8 @@
 .container-2cd8Mz /* homepage */,
 .content-1SgpWY .sidebar-1tnWFu /* server list back */,
 .callContainer-HtHELf /* vc */,
-.container-3XgAHv /* vc chat */ {
+.container-3XgAHv /* vc chat */,
+.pageWrapper-2PwDoS /* discover page */ {
 	border-radius: var(--roundness) !important;
 	overflow: hidden;
 }
@@ -189,7 +194,8 @@
 }
 .container-2cd8Mz /* friend list*/,
 .chat-2ZfjoI /* main chat */,
-.applicationStore-2nk7Lo /* nitro page */ {
+.applicationStore-2nk7Lo /* nitro page */,
+.pageWrapper-2PwDoS /* discover page */ {
 	margin-left: 10px;
 }
 .content-1jQy2l /* between chat and member list */ {
@@ -229,6 +235,11 @@
 .scrollerBase-_bVAAt::-webkit-scrollbar-thumb,
 .scrollerBase-_bVAAt::-webkit-scrollbar-track {
 	visibility: hidden;
+}
+
+/* filter login image */
+.artwork-L5TAwQ {
+	filter: saturate(0.2) hue-rotate(-20deg) brightness(0.15);
 }
 
 /* top corner title */
