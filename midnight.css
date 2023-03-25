@@ -204,6 +204,9 @@
 .resizeHandle-PBRzPC /* pretend to be a margin */ {
 	width: 10px;
 }
+.wrapper-1gVUIN.fullScreen-KhZZcz /* fullscreen voice channel */ {
+	margin-top: 10px;
+}
 
 /* remove shadows */
 .content-1jQy2l::before /* main chat header */, 
