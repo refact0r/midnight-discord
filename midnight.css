@@ -183,6 +183,12 @@
 	width: 340px;
 }
 
+/* remove login artwork */
+svg.artwork-L5TAwQ {
+	display: none !important;
+	visibility: hidden !important;
+}
+
 /* add margins */
 .base-2jDfDU /* outside edges */ {
 	padding: 0px 10px 10px 0;
