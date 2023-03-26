@@ -139,6 +139,7 @@
 .attachment-1PZZB2, /* file embeds - txts, etc */
 .hoverButtonGroup-2yZIzC, /* download button */
 .embedCard-bDyD5S, /* embed card */
+.vc-plugins-card, /* vencord plugins card */
 .reaction-3vwAF2 /* reactions */ {
 	background-color: var(--secondary-background) !important;
 }
