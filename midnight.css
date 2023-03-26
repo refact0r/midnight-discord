@@ -143,6 +143,16 @@
 .reaction-3vwAF2 /* reactions */ {
 	background-color: var(--secondary-background) !important;
 }
+.theme-dark .container-2IKOsH, /* channels and roles container */
+.theme-dark .header-3xB4vB, /* channels and roles header */
+.optionButtonWrapper-2lbogO.selected-KQBgNS { /* selected role */
+	background-color: var(--primary-background);
+}
+.prompt-1sE27N, /* channels and roles role section background */
+.channelRow-4X_3fi, /* channels and roles channel background */
+.profileCard-2gVmvm { /* channels and roles profile card */
+	background-color: var(--secondary-background);
+}
 
 /* make emoji selector same color */
 .emojiButtonNormal-35P0_i .sprite-2lxwfc {
@@ -185,6 +195,7 @@
 .content-1SgpWY .sidebar-1tnWFu /* server list back */,
 .callContainer-HtHELf /* vc */,
 .container-3XgAHv /* vc chat */,
+.chat-2ZfjoI /* channels and roles */,
 .pageWrapper-2PwDoS /* discover page */ {
 	border-radius: var(--roundness) !important;
 	overflow: hidden;
@@ -214,7 +225,7 @@
 	padding: 0px 2px;
 }
 .searchResultsWrap-5RVOkx {
-	width: 466px;
+	width: 476px;
 }
 .iconWrapper-2awDjA[aria-label='Hide User Profile'] {
 	margin-left: 34px;
