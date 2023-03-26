@@ -28,7 +28,9 @@
 	/* background of muted colored buttons on click */
 	--muted-background-active: hsl(220, 15%, 16%);
 	/* background of pretty much everything not using primary background */
+	/* lighter variant is used for the side of embeds and borders */
 	--secondary-background: hsl(220, 15%, 13%);
+	--secondary-background-lighter: hsl(220, 15%, 33%);
 	/* main chat/channel list/member list background */
 	--primary-background: hsl(220, 15%, 10%);
 	/* overlay background on stuff when hovered over */
@@ -109,8 +111,12 @@
 .searchHeader-1r_ZSh /* search results number box */ {
 	background-color: var(--primary-background);
 }
+.embedFull-1HGV2S /* regular embed side outline */ {
+	border-color: var(--secondary-background-lighter) !important;
+}
 .mainCard-3KBsBI /* forum search bar and posts */,
 .container-3i3IzO /* threads */,
+.embedFull-1HGV2S, /* regular embeds like GitHub links */
 .reaction-3vwAF2 /* reactions */ {
 	background-color: var(--secondary-background);
 }
