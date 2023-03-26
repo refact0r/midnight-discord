@@ -145,6 +145,11 @@
 	overflow: visible;
 }
 
+/* make emoji selector darker for improved consistency */
+.sprite-2lxwfc {
+	filter: grayscale(100%) brightness(70%) !important;
+}
+
 /* add rounded corners */
 .container-2cd8Mz /* homepage */,
 .content-1SgpWY .sidebar-1tnWFu /* server list back */,
