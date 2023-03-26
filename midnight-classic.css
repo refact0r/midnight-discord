@@ -176,6 +176,16 @@
 	border-radius: 0 !important;
 }
 
+/* improve notice */
+.notice-2HEN-u {
+	border-radius: var(--roundness);
+	margin-bottom: 10px;
+	box-shadow: none !important;
+}
+.button-1iHNQ2 { /* make notice button rounded */
+	border-radius: var(--roundness);
+}
+
 /* hide scrollbars */
 .scroller-2LSbBU::-webkit-scrollbar-thumb {
 	visibility: hidden;
