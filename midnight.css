@@ -114,10 +114,20 @@
 .embedFull-1HGV2S /* regular embed side outline */ {
 	border-color: var(--secondary-background-lighter) !important;
 }
-.textContainer-36wgKK,
-.footer-GXWBBp,
+.withFooter-3i6JUa.embedCard-bDyD5S.embedCard-PLiVm2 /* automod embed, no conflicts with footer */ {
+	border-bottom: none !important;
+}
+.footerContainer-11-cKL /* automod footer outline */ {
+	border: 1px solid var(--secondary-background-lighter) !important;
+}
+.textContainer-36wgKK, /* container for text file embeds */
+.footer-GXWBBp, /* footer for text file embeds */
+.attachment-1PZZB2, /* generic files, like pdfs */
+.hoverButtonGroup-2yZIzC, /* download button */
+.embedCard-bDyD5S, /* embed card */
+.markup-eYLPri code, /* codeblocks */
 .modalTextContainer-1FUO2W {
-	/* borders for text file embeds */
+	/* borders for things like embeds */
 	border: 1px solid var(--secondary-background-lighter) !important;
 }
 .mainCard-3KBsBI /* forum search bar and posts */,
@@ -125,8 +135,12 @@
 .embedFull-1HGV2S, /* regular embeds like GitHub links */
 .scrollbarGhostHairline-2LpzZ9.scrollbar-3vVt8d.codeView-12LUIl, /* file embeds - txts, etc */
 .textContainer-36wgKK, /* file embeds - txts, etc */
+.markup-eYLPri code, /* codeblocks */
+.attachment-1PZZB2, /* file embeds - txts, etc */
+.hoverButtonGroup-2yZIzC, /* download button */
+.embedCard-bDyD5S, /* embed card */
 .reaction-3vwAF2 /* reactions */ {
-	background-color: var(--secondary-background);
+	background-color: var(--secondary-background) !important;
 }
 
 /* make emoji selector same color */
@@ -246,6 +260,7 @@
 }
 
 /* remove borders */
+.markup-eYLPri code.inline /* inline codeblocks */,
 .itemCard-3Etziu /* active now card */,
 .container-1zzFcN /* vc panel bottom */ {
 	border: none;
