@@ -146,7 +146,7 @@
 }
 
 /* make emoji selector darker for improved consistency */
-.sprite-2lxwfc {
+.sprite-2lxwfc:not([style*="scale(1.1"]) {
 	filter: grayscale(100%) brightness(70%) !important;
 }
 
