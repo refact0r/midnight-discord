@@ -114,6 +114,11 @@
 	background-color: var(--secondary-background);
 }
 
+/* make emoji selector same color */
+.emojiButtonNormal-35P0_i .sprite-2lxwfc {
+	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
+}
+
 /* remove big chat background and add back smaller */
 .chat-2ZfjoI {
 	background: none !important;
