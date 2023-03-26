@@ -263,7 +263,7 @@
 .markup-eYLPri code.inline /* inline codeblocks */,
 .itemCard-3Etziu /* active now card */,
 .container-1zzFcN /* vc panel bottom */ {
-	border: none;
+	border: none !important;
 }
 
 /* only show scrollbar when hover */
