@@ -204,7 +204,8 @@
 .resizeHandle-PBRzPC /* pretend to be a margin */ {
 	width: 10px;
 }
-.wrapper-1gVUIN.fullScreen-KhZZcz /* fullscreen voice channel */ {
+.wrapper-1gVUIN.fullScreen-KhZZcz .callContainer-HtHELf /* fullscreen voice channel */,
+.wrapper-1gVUIN.fullScreen-KhZZcz .channelChatWrapper-35N3nR {
 	margin-top: 10px;
 }
 
