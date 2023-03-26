@@ -114,9 +114,16 @@
 .embedFull-1HGV2S /* regular embed side outline */ {
 	border-color: var(--secondary-background-lighter) !important;
 }
+.textContainer-36wgKK,
+.footer-GXWBBp,
+.modalTextContainer-1FUO2W {
+	/* borders for text file embeds */
+	border: 1px solid var(--secondary-background-lighter) !important;
+}
 .mainCard-3KBsBI /* forum search bar and posts */,
 .container-3i3IzO /* threads */,
 .embedFull-1HGV2S, /* regular embeds like GitHub links */
+.scrollbarGhostHairline-2LpzZ9.scrollbar-3vVt8d.codeView-12LUIl, /* file embeds - txts, etc */
 .reaction-3vwAF2 /* reactions */ {
 	background-color: var(--secondary-background);
 }
