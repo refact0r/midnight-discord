@@ -44,7 +44,8 @@
 
 :root.theme-dark,
 .theme-dark,
-.default-colors {
+.default-colors,
+.theme-light {
 	--primary-130: var(--header-text);
 	--primary-230: var(--primary-text);
 	--primary-330: var(--secondary-text);
@@ -81,6 +82,7 @@
 	--mention-background: var(--mention-modifier);
 	--button-secondary-background-hover: var(--muted-background-hover);
 	--button-secondary-background-active: var(--muted-background-active);
+	--modal-footer-background: var(--primary-background);
 
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
@@ -129,6 +131,27 @@
 	background-color: var(--primary-background);
 }
 
+/* fix create a server modal which is LIGHT THEME FOR SOME REASON */
+.root-1CAIjD {
+	background-color: var(--primary-background);
+}
+.defaultColor-1GKx81 {
+	color: var(--header-text);
+}
+.container-x8Y1ix {
+	background-color: var(--primary-background);
+}
+.defaultColor-1EVLSt,
+.closeButton-2ygCkj:hover {
+	color: var(--primary-text);
+}
+.header-1c1AhF .subtitle-3m-md1 {
+	color: var(--secondary-text) !important;
+}
+.closeButton-2ygCkj {
+	color: var(--secondary-text);
+}
+
 /* make emoji selector same color */
 .emojiButtonNormal-35P0_i .sprite-2lxwfc {
 	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
@@ -171,7 +194,8 @@
 .callContainer-HtHELf /* vc */,
 .container-3XgAHv /* vc chat */,
 .chat-2ZfjoI /* channels and roles */,
-.pageWrapper-2PwDoS /* discover page */ {
+.pageWrapper-2PwDoS /* discover page */,
+.root-1CAIjD /* create a server */ {
 	border-radius: var(--roundness) !important;
 	overflow: hidden;
 }
@@ -254,6 +278,11 @@
 }
 .embedFull-1HGV2S /* regular embed - remove left border */ {
 	border-color: var(--secondary-background) !important;
+}
+.footerSeparator-3U8YsT, /* modal footer */
+.rootWithShadow-2hdL2J /* create a server */ {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 /* only show scrollbar when hover */
