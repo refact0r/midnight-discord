@@ -28,6 +28,7 @@
 	/* background of muted colored buttons on click */
 	--muted-background-active: hsl(220, 15%, 16%);
 	/* background of pretty much everything not using primary background */
+	/* lighter variant is used for the side of embeds and borders */
 	--secondary-background: hsl(220, 15%, 13%);
 	/* main chat/channel list/member list background */
 	--primary-background: hsl(220, 15%, 10%);
@@ -88,9 +89,6 @@
 }
 
 /* fix colors */
-.wrapper-22rqw6 /* emoji selector server list */ {
-	background-color: var(--primary-background);
-}
 .mentioned-Tre-dv:before /* mention message left edge */,
 .container-1QtPKm.default-colors:checked /* settings checkbuttons */ {
 	background-color: var(--accent-background) !important;
@@ -108,24 +106,29 @@
 .iconBadge-3Mmg92 /* dm button */ {
 	background-color: var(--accent-color) !important;
 }
-.searchHeader-1r_ZSh /* search results number box */ {
-	background-color: var(--primary-background);
-}
 .mainCard-3KBsBI /* forum search bar and posts */,
+.container-3i3IzO /* threads */,
+.embedFull-1HGV2S, /* regular embeds like GitHub links */
+.scrollbarGhostHairline-2LpzZ9.scrollbar-3vVt8d.codeView-12LUIl, /* file embeds - txts, etc */
+.attachment-1PZZB2, /* file embeds - txts, etc */
+.footer-GXWBBp,  /* file embed footers - txts, etc */
+.textContainer-36wgKK, /* file embeds - txts, etc */
+.hoverButtonGroup-2yZIzC, /* download button on embeds */
+.embedCard-bDyD5S, /* embed card */
+.markup-eYLPri code, /* codeblocks */
+.vc-plugins-card, /* vencord plugins card */
+.prompt-1sE27N, /* channels and roles role section background */
+.channelRow-4X_3fi, /* channels and roles channel background */
+.profileCard-2gVmvm, /* channels and roles profile card */
 .reaction-3vwAF2 /* reactions */ {
-	background-color: var(--secondary-background);
+	background-color: var(--secondary-background) !important;
 }
 .theme-dark .container-2IKOsH, /* channels and roles container */
 .theme-dark .header-3xB4vB, /* channels and roles header */
-.optionButtonWrapper-2lbogO.selected-KQBgNS {
-	/* selected role */
+.searchHeader-1r_ZSh, /* search results number box */ 
+.wrapper-22rqw6, /* emoji selector server list */
+.optionButtonWrapper-2lbogO.selected-KQBgNS { /* selected role */
 	background-color: var(--primary-background);
-}
-.prompt-1sE27N, /* channels and roles role section background */
-.channelRow-4X_3fi, /* channels and roles channel background */
-.profileCard-2gVmvm {
-	/* channels and roles profile card */
-	background-color: var(--secondary-background);
 }
 
 /* fix create a server modal which is LIGHT THEME FOR SOME REASON */
@@ -268,9 +271,13 @@
 }
 
 /* remove borders */
+.markup-eYLPri code.inline /* inline codeblocks */,
 .itemCard-3Etziu /* active now card */,
 .container-1zzFcN /* vc panel bottom */ {
-	border: none;
+	border: none !important;
+}
+.embedFull-1HGV2S /* regular embed - remove left border */ {
+	border-color: var(--secondary-background) !important;
 }
 .footerSeparator-3U8YsT, /* modal footer */
 .rootWithShadow-2hdL2J /* create a server */ {
