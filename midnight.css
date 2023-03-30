@@ -192,7 +192,7 @@
 .container-3XgAHv /* vc chat */,
 .chat-2ZfjoI /* channels and roles */,
 .pageWrapper-2PwDoS /* discover page */,
-.root-1CAIjD /* create a server */ {
+.root-1CAIjD:has(.container-1Lk8p7) /* create a server */ {
 	border-radius: var(--roundness) !important;
 	overflow: hidden;
 }
