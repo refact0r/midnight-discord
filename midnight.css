@@ -127,7 +127,8 @@
 .theme-dark .header-3xB4vB, /* channels and roles header */
 .searchHeader-1r_ZSh, /* search results number box */ 
 .wrapper-22rqw6, /* emoji selector server list */
-.optionButtonWrapper-2lbogO.selected-KQBgNS { /* selected role */
+.optionButtonWrapper-2lbogO.selected-KQBgNS {
+	/* selected role */
 	background-color: var(--primary-background);
 }
 
@@ -275,9 +276,6 @@
 .itemCard-3Etziu /* active now card */,
 .container-1zzFcN /* vc panel bottom */ {
 	border: none !important;
-}
-.embedFull-1HGV2S /* regular embed - remove left border */ {
-	border-color: var(--secondary-background) !important;
 }
 .footerSeparator-3U8YsT, /* modal footer */
 .rootWithShadow-2hdL2J /* create a server */ {
