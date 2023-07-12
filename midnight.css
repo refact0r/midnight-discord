@@ -50,7 +50,8 @@
 
 /* fix colors */
 .mentioned-Tre-dv:before /* mention message left edge */,
-.container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {
+.container-1QtPKm.checked-16gMAN /* settings checkbuttons */,
+.numberBadge-37OJ3S /* dm unread number */ {
 	background: var(--accent-3) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
@@ -128,7 +129,6 @@
 	margin-top: var(--spacing);
 }
 
-/* add padding */
 #vc-spotify-player /* vencord spotify */,
 .container-1zzFcN /* vc panel */,
 .panel-2ZFCRb /* stream panel */ {
@@ -161,7 +161,7 @@
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
-/* separate header bars */
+/* separate header bar */
 .title-31SJ6t.themed-Hp1KC_ /* remove bg */ {
 	background: none;
 }
