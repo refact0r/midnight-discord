@@ -77,12 +77,13 @@
 .theme-dark .header-3xB4vB /* browse channels header */,
 .theme-dark .container-1um7CU /* browse channels body */,
 .searchHeader-1r_ZSh /* search results number box */,
-.wrapper-22rqw6 /* emoji selector server list */ {
+.wrapper-22rqw6 /* emoji selector server list */,
+.chat-2ZfjoI.container-2YMsb4 /* message requests */ {
 	background-color: var(--bg-4);
 }
 .wrapper-2RrXDg /* friend activity cards */,
 .mainCard-3KBsBI /* forum posts and search */,
-.container-3i3IzO /* threads */,
+.container-3i3IzO /* thread embed */,
 .embedFull-1HGV2S /* regular embeds like GitHub links */,
 .attachment-1PZZB2 /* attachments */,
 .textContainer-36wgKK /* embedded attachment text */,
@@ -218,7 +219,8 @@
 .header-uVCAlo /* sticker panel header */,
 .header-2TLOnc /* gif panel header */,
 .header-11eigE /* emoji panel header */,
-.theme-dark .separator-3C440w /* events panel */ {
+.theme-dark .separator-3C440w /* events panel */,
+.chat-25x62K:before /* forum post header */ {
 	box-shadow: none !important;
 }
 .children-3xh0VB:after  /* toolbar shadow */ {
@@ -249,7 +251,7 @@
 	font-family: var(--font-headline);
 	font-size: 11px;
 	font-weight: 600;
-	color: var(--muted-text);
+	color: var(--text-5);
 }
 
 /* window controls */
@@ -501,7 +503,7 @@
 	--redesign-only-background-active: var(--primary-530);
 	--redesign-only-background-default: var(--primary-700);
 	--redesign-only-background-overlay: var(--primary-600);
-	--redesign-only-background-raised: var(--primary-630);
+	--redesign-only-background-raised: blue;
 	--redesign-only-background-sunken: var(--primary-800);
 	--scrollbar-auto-scrollbar-color-thumb: var(--bg-3);
 	--scrollbar-auto-scrollbar-color-track: transparent;
@@ -536,8 +538,6 @@
 	--user-profile-header-overflow-background: hsl(
 		var(--primary-700-hsl) / 0.5
 	);
-	--white: var(--white-500);
-
 	--white-500: var(--text-1);
 	--blue-345: var(--accent-1);
 	--brand-260: var(--accent-2);
@@ -545,6 +545,24 @@
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
+	--brand-experiment-15a: var(--mention-modifier);
+
+	--primary-130: var(--text-2);
+	--primary-230: var(--text-3);
+	--primary-330: var(--text-4);
+	--primary-360: var(--text-4);
+	--primary-400: var(--text-4);
+	--primary-430: var(--text-5);
+	--primary-500: var(--text-5);
+	--primary-530: var(--text-5);
+	--primary-560: var(--bg-3);
+	--primary-600: var(--bg-4);
+	--primary-645: var(--bg-4);
+	--primary-630: var(--bg-4);
+	--primary-660: var(--bg-4);
+	--primary-700: var(--bg-3);
+	--primary-730: var(--bg-3);
+	--primary-800: var(--bg-3);
 
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
