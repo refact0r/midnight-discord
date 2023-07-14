@@ -93,6 +93,7 @@
 .hoverButtonGroup-2yZIzC /* download button on embeds */,
 .messageContainer-3VTXBC /* inbox messages */,
 .channelRow-4X_3fi /* browse channels channels */,
+.container-18GwIk /* channel threads dropdown */
 .reaction-3vwAF2 /* reactions */,
 .vc-plugins-card /* vencord plugins card */ {
 	background: var(--bg-3);
@@ -185,28 +186,34 @@
 }
 
 /* rearrange toolbar */
-.iconWrapper-2awDjA[aria-label='Help'] {
+.iconWrapper-2awDjA[aria-label='Help'] /* hide help */ {
 	display: none;
 }
-.iconWrapper-2awDjA[aria-label*='Member List'] {
+.search-39IXmY /* push searchbar to right */ {
 	order: 1;
 }
-.search-39IXmY {
+.iconWrapper-2awDjA[aria-label*='Member List'] /* member list button to right */, 
+.iconWrapper-2awDjA[aria-label*='User Profile'] /* member list button to right */ {
 	order: 1;
-	margin-left: 34px;
 }
-.searchBar-jGtisZ {
+.iconWrapper-2awDjA[aria-label='Hide Member List'] /* add gap when member list open */,
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] /* add gap when user profile open */ {
+	margin-right: calc(26px + var(--spacing));
+}
+.searchBar-jGtisZ /* make searchbar fit member list width */ {
 	width: 208px !important;
-	padding: 0px 2px;
 }
-.searchResultsWrap-5RVOkx {
-	width: 476px;
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] ~ .search-39IXmY .searchBar-jGtisZ /* make searchbar fit user profile width */ {
+	width: 308px !important;
 }
-.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
-	margin-left: 34px;
+.searchResultsWrap-5RVOkx /* make search results fit all header buttons */ {
+	width: 480px;
 }
-.profilePanel-2PWEok {
-	width: 340px;
+.iconWrapper-2awDjA[aria-label='Threads'] /* prevent long channel descriptions overflowing into search results */ {
+	margin-left: calc(64px + var(--spacing));
+}
+.iconWrapper-2awDjA[aria-label='Start Voice Call'] /* prevent long aka overflowing into search results */ {
+	margin-left: calc(24px + var(--spacing));
 }
 
 /* remove shadows */
@@ -545,7 +552,6 @@
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
-	--brand-experiment-15a: var(--mention-modifier);
 
 	--primary-130: var(--text-2);
 	--primary-230: var(--text-3);
