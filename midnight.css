@@ -192,13 +192,18 @@
 .search-39IXmY /* push searchbar to right */ {
 	order: 1;
 }
-.iconWrapper-2awDjA[aria-label*='Member List'] /* member list button to right */, 
-.iconWrapper-2awDjA[aria-label*='User Profile'] /* member list button to right */ {
+.iconWrapper-2awDjA[aria-label='Show Member List'] /* push toggle buttons to right */, 
+.iconWrapper-2awDjA[aria-label='Show User Profile'] {
 	order: 1;
 }
-.iconWrapper-2awDjA[aria-label='Hide Member List'] /* add gap when member list open */,
-.iconWrapper-2awDjA[aria-label='Hide User Profile'] /* add gap when user profile open */ {
-	margin-right: calc(26px + var(--spacing));
+.iconWrapper-2awDjA[aria-label='Hide Member List'] /* add gap when member list/user profile open */,
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
+	order: 1;
+	margin-right: calc(24px + var(--spacing));
+}
+.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show Member List'] /* add gap when search results */, 
+.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show User Profile'] {
+	margin-right: calc(24px + var(--spacing));
 }
 .searchBar-jGtisZ /* make searchbar fit member list width */ {
 	width: 208px !important;
@@ -206,14 +211,8 @@
 .iconWrapper-2awDjA[aria-label='Hide User Profile'] ~ .search-39IXmY .searchBar-jGtisZ /* make searchbar fit user profile width */ {
 	width: 308px !important;
 }
-.searchResultsWrap-5RVOkx /* make search results fit all header buttons */ {
-	width: 480px;
-}
-.iconWrapper-2awDjA[aria-label='Threads'] /* prevent long channel descriptions overflowing into search results */ {
-	margin-left: calc(64px + var(--spacing));
-}
-.iconWrapper-2awDjA[aria-label='Start Voice Call'] /* prevent long aka overflowing into search results */ {
-	margin-left: calc(24px + var(--spacing));
+.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .searchBar-jGtisZ /* make searchbar fit search results width */ {
+	width: 386px !important;
 }
 
 /* remove shadows */
