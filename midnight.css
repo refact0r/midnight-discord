@@ -23,13 +23,13 @@
 	/* color of bright text on colored buttons */
 	--text-1: hsl(220, 40%, 90%);
 	/* color of headings and important text */
-	--text-2: hsl(220, 30%, 70%);
+	--text-2: hsl(220, 25%, 70%);
 	/* color of normal text */
 	--text-3: hsl(220, 15%, 60%);
 	/* color of icon buttons and channels */
 	--text-4: hsl(220, 15%, 40%);
 	/* color of muted channels/chats and timestamps */
-	--text-5: hsl(220, 15%, 24%);
+	--text-5: hsl(220, 15%, 25%);
 
 	/* color of dark buttons when clicked */
 	--bg-1: hsl(220, 15%, 20%);
