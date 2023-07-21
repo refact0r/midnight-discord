@@ -48,6 +48,16 @@
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 }
 
+/* create a server modal color fix */
+.theme-light {
+    --background-primary: var(--bg-3);
+    --modal-background: var(--bg-4);
+    --modal-footer-background: var(--bg-4);
+    --header-primary: var(--text-3);
+    --header-secondary: var(--text-4);
+    --text-normal: var(--text-4);
+}
+
 /* fix colors */
 .mentioned-Tre-dv:before /* mention message left edge */,
 .container-1QtPKm.checked-16gMAN /* settings checkbuttons */,
