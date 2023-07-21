@@ -48,17 +48,17 @@
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 }
 
-/* create a server modal color fix */
-.theme-light {
-    --background-primary: var(--bg-3);
-    --modal-background: var(--bg-4);
-    --modal-footer-background: var(--bg-4);
-    --header-primary: var(--text-3);
-    --header-secondary: var(--text-4);
-    --text-normal: var(--text-4);
-    --background-secondary: var(--bg-3);
-    --input-background: var(--bg-1);
-    --input-placeholder-text: var(--bg-3);
+/* create/join a server modal color fix */
+.theme-light /* modal colors definition */ {
+    --background-primary: var(--bg-3); /* template buttons & create my own button */
+    --modal-background: var(--bg-4); /* general background of the modal */
+    --modal-footer-background: var(--bg-4); /* general background of the modal footer */
+    --header-primary: var(--text-3); /* color of bolded headers */
+    --header-secondary: var(--text-4); /* color of unbolded headers */
+    --text-normal: var(--text-4); /* color of button text */
+    --background-secondary: var(--bg-3); /* don't have an invite button background */
+    --input-background: var(--bg-1); /* background of the invite link textbox */
+    --input-placeholder-text: var(--bg-3); /* color of invite link textbox text */
 }
 
 /* fix colors */
