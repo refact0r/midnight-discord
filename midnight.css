@@ -48,24 +48,14 @@
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 }
 
-/* create/join a server modal color fix */
-.theme-light /* modal colors definition */ {
-    --background-primary: var(--bg-3); /* template buttons & create my own button */
-    --modal-background: var(--bg-4); /* general background of the modal */
-    --modal-footer-background: var(--bg-4); /* general background of the modal footer */
-    --header-primary: var(--text-3); /* color of bolded headers */
-    --header-secondary: var(--text-4); /* color of unbolded headers */
-    --text-normal: var(--text-4); /* color of button text */
-    --background-secondary: var(--bg-3); /* don't have an invite button background */
-    --input-background: var(--bg-1); /* background of the invite link textbox */
-    --input-placeholder-text: var(--bg-3); /* color of invite link textbox text */
-}
-
 /* fix colors */
 .mentioned-Tre-dv:before /* mention message left edge */,
-.container-1QtPKm.checked-16gMAN /* settings checkbuttons */,
-.numberBadge-37OJ3S /* dm unread number */ {
+.container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {
 	background: var(--accent-3) !important;
+}
+.numberBadge-37OJ3S /* dm unread number */ {
+	background: var(--accent-2) !important;
+	/* color: var(--bg-4); */
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
 .strikethrough-2Kl6HF /* mute button strikethrough */ {
@@ -114,6 +104,42 @@
 .theme-dark .outer-2JOHae.active-1W_Gl9, .theme-dark .outer-2JOHae.interactive-2zD88a:hover /* friend activity cards on hover */,
 .channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
 	background: var(--bg-2);
+}
+
+/* create/join a server modal color fix */
+.layer-fP3xEz .theme-light {
+	--background-primary: var(
+		--bg-3
+	); /* template buttons & create my own button */
+	--modal-background: var(--bg-4); /* general background of the modal */
+	--modal-footer-background: var(
+		--bg-4
+	); /* general background of the modal footer */
+	--header-primary: var(--text-3); /* color of bolded headers */
+	--header-secondary: var(--text-4); /* color of unbolded headers */
+	--text-normal: var(--text-3); /* color of button text */
+	--background-modifier-accent: none; /* remove borders */
+	--background-modifier-hover: var(--bg-2); /* button hover */
+	--background-modifier-active: var(--bg-1); /* button active */
+	--button-secondary-background: var(--bg-2); /* join a server button */
+	--button-secondary-background-active: var(--text-5);
+	--button-secondary-background-hover: var(--bg-1);
+	--input-background: var(--bg-3); /* background of the invite link textbox */
+	--input-placeholder-text: var(
+		--text-5
+	); /* color of invite link textbox text */
+}
+.layer-fP3xEz .footerSeparator-3U8YsT /* remove footer separator border */,
+.layer-fP3xEz .rootWithShadow-2hdL2J /* remove modal border */ {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.lookBlank-FgPMy6 .contents-3NembX /* fix back button */ {
+	color: var(--text-4);
+}
+.layer-fP3xEz .input-m1-Y7Q /* remove input borderish thing */,
+.layer-fP3xEz .rowContainer-3t7486 /* fix server discovery */ {
+	background: var(--bg-3);
 }
 
 /* make emoji selector same color */
@@ -385,10 +411,10 @@
 	--button-positive-background-active: var(--green-530);
 	--button-positive-background-disabled: var(--green-430);
 	--button-positive-background-hover: var(--green-500);
-	--button-secondary-background: var(--bg-3);
-	--button-secondary-background-active: var(--bg-1);
+	--button-secondary-background: var(--bg-2);
+	--button-secondary-background-active: var(--text-5);
 	--button-secondary-background-disabled: var(--bg-3);
-	--button-secondary-background-hover: var(--bg-2);
+	--button-secondary-background-hover: var(--bg-1);
 	--channel-icon: var(--text-4);
 	--channel-text-area-placeholder: var(--text-5);
 	--channels-default: var(--text-4);
