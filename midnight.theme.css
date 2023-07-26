@@ -39,7 +39,7 @@
 	/* color of headings and important text */
 	--text-2: hsl(220, 30%, 70%);
 	/* color of normal text */
-	--text-3: hsl(210, 9%, 87%)
+	--text-3: hsl(210, 9%, 87%);
 	/* color of icon buttons and channels */
 	--text-4: hsl(220, 15%, 40%);
 	/* color of muted channels/chats and timestamps */
