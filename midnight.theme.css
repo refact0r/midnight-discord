@@ -1,4 +1,4 @@
-/**
+/**s
  * @name midnight
  * @description A darkened discord theme.
  * @author refact0r
@@ -21,13 +21,13 @@
 	/* color of links */
 	--accent-1: hsl(190, 70%, 60%);
 	/* color of unread dividers and some indicators */
-	--accent-2: hsl(190, 70%, 50%);
+	--accent-2: hsl(317, 86%, 70%);
 	/* color of accented buttons */
-	--accent-3: hsl(190, 70%, 40%);
+	--accent-3: hsl(317, 86%, 60%);
 	/* color of accented buttons when hovered */
-	--accent-4: hsl(190, 70%, 30%);
+	--accent-4: hsl(317, 86%, 50%);
 	/* color of accented buttons when clicked */
-	--accent-5: hsl(190, 70%, 20%);
+	--accent-5: hsl(317, 86%, 40%);
 
 	/* color of mentions and messages that mention you */
 	--mention: hsla(190, 60%, 50%, 0.1);
