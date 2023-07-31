@@ -16,7 +16,7 @@
 	/* amount of spacing and padding */
 	--spacing: 12px;
 	/* radius of round corners */
-	--roundness: 16px;
+	--roundness: 14px;
 
 	/* color of links */
 	--accent-1: hsl(190, 70%, 70%);
@@ -46,18 +46,18 @@
 	--text-5: hsl(220, 15%, 34%);
 
 	/* color of dark buttons when clicked */
-	--bg-1: hsl(220, 15%, 20%);
+	--bg-1: hsl(220, 15%, 24%);
 	/* color of dark buttons */
-	--bg-2: hsl(220, 15%, 16%);
+	--bg-2: hsl(220, 15%, 20%);
 	/* color of spacing around panels and secondary elements */
-	--bg-3: hsl(220, 15%, 13%);
+	--bg-3: hsl(220, 15%, 17%);
 	/* main background color */
-	--bg-4: hsl(220, 15%, 10%);
+	--bg-4: hsl(220, 15%, 14%);
 
 	/* color of channels and icon buttons when hovered */
 	--hover: hsla(230, 20%, 40%, 0.1);
 	/* color of channels and icon buttons when clicked or selected */
 	--active: hsla(220, 20%, 40%, 0.2);
 	/* color of messages when hovered */
-	--message-hover: hsla(220, 0%, 0%, 0.07);
+	--message-hover: hsla(220, 0%, 0%, 0.01);
 }
