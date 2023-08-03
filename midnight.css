@@ -48,6 +48,14 @@
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 }
 
+/* extra top margin for macos and custom clients */
+.base-2jDfDU {
+	margin-top: var(--spacing);
+}
+.platform-win .base-2jDfDU {
+	margin-top: 0;
+}
+
 /* fix colors */
 .mentioned-Tre-dv:before /* mention message left edge */,
 .container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {

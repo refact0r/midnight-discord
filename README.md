@@ -13,7 +13,7 @@ Download from <https://betterdiscord.app/theme/midnight> or download this repo.
 Put the `midnight.theme.css` or `midnight-classic.theme.css` files into your betterdiscord (or other client) theme folder.
 
 IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!
-
+ 
 ## credits
 
 original design inspired by <https://github.com/schnensch0/zelk>
