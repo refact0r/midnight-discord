@@ -89,7 +89,9 @@
 .theme-dark .container-1um7CU /* browse channels body */,
 .searchHeader-1r_ZSh /* search results number box */,
 .wrapper-22rqw6 /* emoji selector server list */,
-.chat-2ZfjoI.container-2YMsb4 /* message requests */ {
+.chat-2ZfjoI.container-2YMsb4 /* message requests */,
+.theme-dark .emptyPage-2TGR7j /* channels and roles */,
+.theme-dark .scrollerContainer-y16Rs9 /* channels and roles */ {
 	background-color: var(--bg-4);
 }
 .wrapper-2RrXDg /* friend activity cards */,
@@ -104,9 +106,11 @@
 .hoverButtonGroup-2yZIzC /* download button on embeds */,
 .messageContainer-3VTXBC /* inbox messages */,
 .channelRow-4X_3fi /* browse channels channels */,
-.container-18GwIk /* channel threads dropdown */,
+.container-18GwIk /* channel threads dropdown */
 .reaction-3vwAF2 /* reactions */,
-.vc-plugins-card /* vencord plugins card */ {
+.vc-plugins-card /* vencord plugins card */,
+.replyBar-1oi75v /* reply bar */,
+.attachedBars-2BCP3l /* thingy behind reply bar */ {
 	background: var(--bg-3);
 }
 .theme-dark .outer-2JOHae.active-1W_Gl9, .theme-dark .outer-2JOHae.interactive-2zD88a:hover /* friend activity cards on hover */,
