@@ -5,47 +5,47 @@
 	--roundness: 16px;
 
 	/* color of links */
-	--accent-1: hsl(190, 70%, 60%);
+	--accent-1: hsl(30, 70%, 60%);
 	/* color of unread dividers and some indicators */
-	--accent-2: hsl(190, 70%, 50%);
+	--accent-2: hsl(30, 70%, 50%);
 	/* color of accented buttons */
-	--accent-3: hsl(190, 70%, 40%);
+	--accent-3: hsl(30, 70%, 40%);
 	/* color of accented buttons when hovered */
-	--accent-4: hsl(190, 70%, 30%);
+	--accent-4: hsl(30, 70%, 30%);
 	/* color of accented buttons when clicked */
-	--accent-5: hsl(190, 70%, 20%);
+	--accent-5: hsl(30, 70%, 20%);
 
 	/* color of mentions and messages that mention you */
-	--mention: hsla(190, 60%, 50%, 0.1);
+	--mention: hsla(30, 60%, 50%, 0.1);
 	/* color of mentions and messages that mention you when hovered */
-	--mention-hover: hsla(190, 60%, 50%, 0.05);
+	--mention-hover: hsla(30, 60%, 50%, 0.05);
 
 	/* color of bright text on colored buttons */
-	--text-1: hsl(220, 40%, 90%);
+	--text-1: hsl(30, 40%, 90%);
 	/* color of headings and important text */
-	--text-2: hsl(220, 25%, 70%);
+	--text-2: hsl(30, 25%, 70%);
 	/* color of normal text */
-	--text-3: hsl(220, 15%, 60%);
+	--text-3: hsl(30, 15%, 60%);
 	/* color of icon buttons and channels */
-	--text-4: hsl(220, 15%, 40%);
+	--text-4: hsl(30, 15%, 40%);
 	/* color of muted channels/chats and timestamps */
-	--text-5: hsl(220, 15%, 25%);
+	--text-5: hsl(30, 15%, 25%);
 
 	/* color of dark buttons when clicked */
-	--bg-1: hsl(220, 15%, 20%);
+	--bg-1: hsl(30, 15%, 20%);
 	/* color of dark buttons */
-	--bg-2: hsl(220, 15%, 16%);
+	--bg-2: hsl(30, 15%, 16%);
 	/* color of spacing around panels and secondary elements */
-	--bg-3: hsl(220, 15%, 13%);
+	--bg-3: hsl(30, 15%, 13%);
 	/* main background color */
-	--bg-4: hsl(220, 15%, 10%);
+	--bg-4: hsl(30, 15%, 10%);
 
 	/* color of channels and icon buttons when hovered */
-	--hover: hsla(230, 20%, 40%, 0.1);
+	--hover: hsla(30, 20%, 40%, 0.1);
 	/* color of channels and icon buttons when clicked or selected */
-	--active: hsla(220, 20%, 40%, 0.2);
+	--active: hsla(30, 20%, 40%, 0.2);
 	/* color of messages when hovered */
-	--message-hover: hsla(220, 0%, 0%, 0.1);
+	--message-hover: hsla(30, 0%, 0%, 0.1);
 }
 
 /* extra top margin for macos and custom clients */
