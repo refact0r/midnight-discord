@@ -117,6 +117,9 @@
 .channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
 	background: var(--bg-2);
 }
+path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
+	fill: var(--accent-2) !important;
+}
 
 /* create/join a server modal color fix */
 .layer-fP3xEz .theme-light {
