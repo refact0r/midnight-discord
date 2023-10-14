@@ -5,20 +5,20 @@
 	--roundness: 16px;
 
 	/* color of links */
-	--accent-1: hsl(190, 70%, 60%);
+	--accent-1: hsl(190, 80%, 60%);
 	/* color of unread dividers and some indicators */
-	--accent-2: hsl(190, 70%, 50%);
+	--accent-2: hsl(190, 80%, 48%);
 	/* color of accented buttons */
-	--accent-3: hsl(190, 70%, 40%);
+	--accent-3: hsl(190, 80%, 42%);
 	/* color of accented buttons when hovered */
-	--accent-4: hsl(190, 70%, 30%);
+	--accent-4: hsl(190, 80%, 36%);
 	/* color of accented buttons when clicked */
-	--accent-5: hsl(190, 70%, 20%);
+	--accent-5: hsl(190, 80%, 30%);
 
 	/* color of mentions and messages that mention you */
-	--mention: hsla(190, 60%, 50%, 0.1);
+	--mention: hsla(190, 80%, 52%, 0.08);
 	/* color of mentions and messages that mention you when hovered */
-	--mention-hover: hsla(190, 60%, 50%, 0.05);
+	--mention-hover: hsla(190, 80%, 52%, 0.05);
 
 	/* color of bright text on colored buttons */
 	--text-1: hsl(220, 40%, 90%);
@@ -61,9 +61,9 @@
 .container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {
 	background: var(--accent-3) !important;
 }
-.numberBadge-37OJ3S /* dm unread number */ {
+.numberBadge-37OJ3S /* dm unread number */,
+.mention-3XBnnZ /* "NEW" serverlist indicator */ {
 	background: var(--accent-2) !important;
-	/* color: var(--bg-4); */
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
 .strikethrough-2Kl6HF /* mute button strikethrough */ {
@@ -117,7 +117,8 @@
 .channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
 	background: var(--bg-2);
 }
-path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
+path[fill="var(--status-danger)"] /* vencord game activity toggle */,
+.wrapper-3Un6-K[aria-label*="Online"] .pointerEvents-2KjWnj /* replace green online circles */ {
 	fill: var(--accent-2) !important;
 }
 
@@ -491,7 +492,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
 	--logo-primary: var(--white-500);
 	--mention-background: var(--mention);
-	--mention-foreground: var(--brand-260);
+	--mention-foreground: var(--accent-2);
 	--modal-background: var(--bg-4);
 	--modal-footer-background: var(--bg-4);
 	--profile-gradient-message-input-border: hsl(var(--primary-500-hsl) / 0.48);
@@ -622,6 +623,11 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--primary-700: var(--bg-3);
 	--primary-730: var(--bg-3);
 	--primary-800: var(--bg-3);
+
+	--green-360: var(--accent-2); /* replace other green stuff */
+	--green-430: var(--accent-3); /* green buttons (like invite) */
+	--green-500: var(--accent-4); /* green button hover */
+	--green-530: var(--accent-5); /* green button click */
 
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
