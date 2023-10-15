@@ -118,7 +118,7 @@
 	background: var(--bg-2);
 }
 path[fill="var(--status-danger)"] /* vencord game activity toggle */,
-.wrapper-3Un6-K[aria-label*="Online"] .pointerEvents-2KjWnj /* replace green online circles */ {
+.wrapper-3Un6-K[aria-label*="Online"] rect[fill="#23a55a"]  /* replace green online circles */ {
 	fill: var(--accent-2) !important;
 }
 
