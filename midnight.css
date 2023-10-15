@@ -91,7 +91,8 @@
 .wrapper-22rqw6 /* emoji selector server list */,
 .chat-2ZfjoI.container-2YMsb4 /* message requests */,
 .theme-dark .emptyPage-2TGR7j /* channels and roles */,
-.theme-dark .scrollerContainer-y16Rs9 /* channels and roles */ {
+.theme-dark .scrollerContainer-y16Rs9 /* channels and roles */,
+.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
 	background-color: var(--bg-4);
 }
 .wrapper-2RrXDg /* friend activity cards */,
@@ -110,7 +111,9 @@
 .reaction-3vwAF2 /* reactions */,
 .vc-plugins-card /* vencord plugins card */,
 .replyBar-1oi75v /* reply bar */,
-.attachedBars-2BCP3l /* thingy behind reply bar */ {
+.attachedBars-2BCP3l /* thingy behind reply bar */,
+.connection-YOVI9j, /* settings connections */
+.connectionHeader-Ixbb1s /* settings connections header */ {
 	background: var(--bg-3);
 }
 .theme-dark .outer-2JOHae.active-1W_Gl9, .theme-dark .outer-2JOHae.interactive-2zD88a:hover /* friend activity cards on hover */,
@@ -120,6 +123,9 @@
 path[fill="var(--status-danger)"] /* vencord game activity toggle */,
 .wrapper-3Un6-K[aria-label*="Online"] rect[fill="#23a55a"]  /* replace green online circles */ {
 	fill: var(--accent-2) !important;
+}
+.icon-2O29O0 /* reset this back to green because its an image :( */ {
+	background-color: #3ba55c;
 }
 
 /* create/join a server modal color fix */
@@ -206,7 +212,9 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */,
 .chat-2ZfjoI /* blanket for main chat area */,
 .chat-2ZfjoI.threadSidebarOpen-1LSXvU /* main chat with thread sidebar open */,
 .container-3XgAHv /* thread */,
-.applicationStore-2nk7Lo {
+.applicationStore-2nk7Lo,
+.pageWrapper-2PwDoS /* server discover page */,
+.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
@@ -593,7 +601,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */,
 	--text-link-low-saturation: var(--blue-330);
 	--text-muted: var(--text-5);
 	--text-normal: var(--text-3);
-	--text-positive: var(--green-330);
+	--text-positive: var(--accent-1);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--text-4);
 	--user-profile-header-overflow-background: hsl(
