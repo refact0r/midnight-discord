@@ -15,6 +15,9 @@
 	/* color of accented buttons when clicked */
 	--accent-5: hsl(190, 80%, 30%);
 
+	/* color of green online dot, discord default is #23a55a */
+	--online-indicator: var(--accent-2);
+
 	/* color of mentions and messages that mention you */
 	--mention: hsla(190, 80%, 52%, 0.08);
 	/* color of mentions and messages that mention you when hovered */
@@ -66,7 +69,8 @@
 	background: var(--accent-2) !important;
 }
 .expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
-.strikethrough-2Kl6HF /* mute button strikethrough */ {
+.strikethrough-3nXjYr /* mute button strikethrough */,
+.strikethrough-958bun /* channel mute button strikethrough */ {
 	color: var(--accent-2) !important;
 }
 .folderIconWrapper-1oRIZr {
@@ -120,12 +124,19 @@
 .channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
 	background: var(--bg-2);
 }
-path[fill="var(--status-danger)"] /* vencord game activity toggle */,
-.wrapper-3Un6-K[aria-label*="Online"] rect[fill="#23a55a"]  /* replace green online circles */ {
+path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	fill: var(--accent-2) !important;
 }
 .icon-2O29O0 /* reset this back to green because its an image :( */ {
 	background-color: #3ba55c;
+}
+.mouse-mode.full-motion .replying-eZ7p5z:hover /* reply message when hover */ {
+	background-color: var(--mention-hover);
+}
+
+/* change online indicator color */
+.wrapper-3Un6-K[aria-label*="Online"] rect[fill="#23a55a"]  /* replace green online circles */ {
+	fill: var(--online-indicator) !important;
 }
 
 /* create/join a server modal color fix */
@@ -370,8 +381,8 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */,
 	--background-mentioned-hover: var(--mention-hover);
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
-	--background-message-highlight: hsl(var(--brand-360-hsl) / 0.08);
-	--background-message-highlight-hover: hsl(var(--brand-360-hsl) / 0.06);
+	--background-message-highlight: var(--mention);
+	--background-message-highlight-hover: var(--mention-hover);
 	--background-message-hover: var(--message-hover);
 	--background-mobile-primary: var(--bg-4);
 	--background-mobile-secondary: var(--bg-3);
@@ -379,7 +390,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */,
 	--background-modifier-active: var(--active);
 	--background-modifier-hover: var(--hover);
 	--background-modifier-selected: var(--active);
-	--background-nested-floating: blue;
+	--background-nested-floating: var(--primary-630);
 	--background-primary: var(--bg-4);
 	--background-secondary: var(--bg-4);
 	--background-secondary-alt: var(--bg-4);
