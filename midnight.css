@@ -93,7 +93,7 @@
 .theme-dark .container-1um7CU /* browse channels body */,
 .searchHeader-1r_ZSh /* search results number box */,
 .wrapper-22rqw6 /* emoji selector server list */,
-.chat-2ZfjoI.container-2YMsb4 /* message requests */,
+.chat-9g_3Xj.container-2YMsb4 /* message requests */,
 .theme-dark .emptyPage-2TGR7j /* channels and roles */,
 .theme-dark .scrollerContainer-y16Rs9 /* channels and roles */,
 .sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
@@ -190,7 +190,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	margin: 0 var(--spacing) var(--spacing) 0;
 }
 .sidebar-1tnWFu /* channel list and user panel */,
-.content-1jQy2l /* between chat and member list */ {
+.content-18rAwf /* between chat and member list */ {
 	gap: var(--spacing);
 }
 .sidebar-1tnWFu /* channel list and chat */ {
@@ -211,7 +211,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 
 /* remove backgrounds to show gaps */
 .sidebar-1tnWFu /* channel list and user panel */,
-.chat-2ZfjoI /* chat and member list */ {
+.chat-9g_3Xj /* chat and member list */ {
 	background: none;
 }
 
@@ -220,8 +220,8 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 .panels-3wFtMD /* user panels */,
 .privateChannels-oVe7HL /* dms list */,
 .container-2cd8Mz /* friends page */,
-.chat-2ZfjoI /* blanket for main chat area */,
-.chat-2ZfjoI.threadSidebarOpen-1LSXvU /* main chat with thread sidebar open */,
+.chat-9g_3Xj /* blanket for main chat area */,
+.chat-9g_3Xj.threadSidebarOpen-1LSXvU /* main chat with thread sidebar open */,
 .container-3XgAHv /* thread */,
 .applicationStore-2nk7Lo,
 .pageWrapper-2PwDoS /* server discover page */,
@@ -229,23 +229,22 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
-.chatContent-3KubbW /* main chat */,
+.chatContent-2O4SXb /* main chat */,
 .container-3wLKDe /* forum */,
-.container-2o3qEW /* member list outer (when main chat) */,
-.membersWrap-3NUR2t /* member list */,
-.members-3WRCEx /* member list inner (when forum post) */ {
+.members-2y1nVj, /* members list */
+.container-2vWgD2 /* members list outer */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
 /* separate header bar */
-.title-31SJ6t.themed-Hp1KC_ /* remove bg */ {
+.title-5wgnIa.themed-Hp1KC_ /* remove bg */ {
 	background: none;
 }
 .searchResultsWrap-5RVOkx /* allow overflow */ {
 	overflow: visible;
 }
-.chatContent-3KubbW::before /* main chat */,
-.membersWrap-3NUR2t::before /* member list */,
+.chatContainer-2XIz4Y::before /* main chat */,
+.membersWrap-3GwLFp::before /* member list */,
 .searchResultsWrap-5RVOkx::before /* search results */,
 .profilePanel-2PWEok::before /* dm profile */,
 .container-3wLKDe::before /* forum channel */,
@@ -275,8 +274,8 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	order: 1;
 	margin-right: calc(24px + var(--spacing));
 }
-.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show Member List'] /* add gap when search results */, 
-.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show User Profile'] {
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show Member List'] /* add gap when search results */, 
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show User Profile'] {
 	margin-right: calc(24px + var(--spacing));
 }
 .searchBar-jGtisZ /* make searchbar fit member list width */ {
@@ -285,12 +284,12 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 .iconWrapper-2awDjA[aria-label='Hide User Profile'] ~ .search-39IXmY .searchBar-jGtisZ /* make searchbar fit user profile width */ {
 	width: 308px !important;
 }
-.chat-2ZfjoI:has(.searchResultsWrap-5RVOkx) .searchBar-jGtisZ /* make searchbar fit search results width */ {
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .searchBar-jGtisZ /* make searchbar fit search results width */ {
 	width: 386px !important;
 }
 
 /* remove shadows */
-.content-1jQy2l::before /* main chat header */, 
+.content-18rAwf::before /* main chat header */, 
 .tabBody-2dgbAs::before /* friend list header */,
 .chat-1-OBC7::before /* voice channel chat header */,
 .headerBar-1dSpQr:before /* nitro page header */,
@@ -318,10 +317,10 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 }
 
 /* top corner title */
-.wordmarkWindows-2dq6rw svg {
+.wordmarkWindows-1rsity svg {
 	display: none;
 }
-.wordmarkWindows-2dq6rw::after {
+.wordmarkWindows-1rsity::after {
 	content: 'Midnight';
 	display: block;
 	position: relative;
@@ -329,44 +328,44 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	height: 16px;
 	line-height: 16px;
 	font-family: var(--font-headline);
-	font-size: 11px;
+	font-size: 10px;
 	font-weight: 600;
 	color: var(--text-5);
 }
 
 /* window controls */
-.withFrame-2dL45i {
+.withFrame-1sEfxu {
 	height: 20px;
 }
-.typeWindows-2-g3UY .winButton-3UMjdg > svg {
+.typeWindows-3ILlhq .winButton-3SigSb > svg {
 	display: none;
 }
-.typeWindows-2-g3UY .winButton-3UMjdg {
+.typeWindows-3ILlhq .winButton-3SigSb {
 	top: 0;
 	width: 12px;
 	height: 12px;
 	margin: 2px 12px 0px 0px;
 	border-radius: 12px;
 }
-.typeWindows-2-g3UY .winButton-3UMjdg::after {
+.typeWindows-3ILlhq .winButton-3SigSb::after {
 	content: '';
 	height: 12px;
 	width: 12px;
 	border-radius: 12px;
 }
-.typeWindows-2-g3UY .winButtonClose-3Q8ZH5::after {
+.typeWindows-3ILlhq .winButtonClose-23zAIt::after {
 	background-color: hsl(350, 50%, 50%) !important;
 }
-.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(3)::after {
+.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(3)::after {
 	background-color: hsl(150, 50%, 50%) !important;
 }
-.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(4)::after {
+.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(4)::after {
 	background-color: hsl(50, 50%, 50%) !important;
 }
-.typeWindows-2-g3UY > div:hover::after {
+.typeWindows-3ILlhq > div:hover::after {
 	transform: scale(1.1);
 }
-.typeWindows-2-g3UY > div:active::after {
+.typeWindows-3ILlhq > div:active::after {
 	transform: scale(1);
 }
 
