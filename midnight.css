@@ -135,7 +135,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 }
 
 /* change online indicator color */
-.wrapper-3Un6-K[aria-label*="Online"] rect[fill="#23a55a"]  /* replace green online circles */ {
+.wrapper-3Un6-K rect[fill="#23a55a"]  /* replace green online circles */ {
 	fill: var(--online-indicator) !important;
 }
 
@@ -621,6 +621,7 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--blue-345: var(--accent-1);
 	--brand-260: var(--accent-2);
 	--brand-360: var(--accent-2);
+	--brand-430: var(--accent-4);
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
