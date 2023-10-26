@@ -51,149 +51,58 @@
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 }
 
-/* extra top margin for macos and custom clients */
-.base-2jDfDU {
-	margin-top: var(--spacing);
+/* modify colors */
+.sidebar_ded4b5 .container__590e2 /* channel list */,
+.privateChannels__93473 /* dms list */,
+.panels__58331 .container_ca50b9 /* user panel inner */,
+.container_b2ce9c /* member list */,
+.members__9f47b /* member list inner */,
+.member_aa4760 /* member list members */,
+.expandedFolderBackground__1bec6 /* expanded folder bg */,
+.folder__17546 /* folder circle when expanded */,
+.searchResultsWrap__9f374 /* search results */,
+.searchHeader__19d87 /* search results header */,
+.chat__52833.container_d3a736 /* message requests */ {
+	background: var(--bg-4);
 }
-.platform-win .base-2jDfDU {
-	margin-top: 0;
+.folderIconWrapper__72239 /* closed folder */ {
+	background: var(--bg-4) !important;
 }
-
-/* fix colors */
-.mentioned-Tre-dv:before /* mention message left edge */,
-.container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {
-	background: var(--accent-3) !important;
-}
-.numberBadge-37OJ3S /* dm unread number */,
-.mention-3XBnnZ /* "NEW" serverlist indicator */ {
-	background: var(--accent-2) !important;
-}
-.expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
-.strikethrough-3nXjYr /* mute button strikethrough */,
-.strikethrough-4IgyqA /* channel mute button strikethrough */ {
-	color: var(--accent-2) !important;
-}
-.folderIconWrapper-1oRIZr {
-	background-color: transparent !important;
-}
-.container-1QtPKm /* settings checkbuttons default */ {
-	background: var(--bg-1) !important;
-}
-.clickable-vvKY2q .header-3OsQeK:hover, .selected-1GtAC5 .header-3OsQeK /* server name hover */ {
-	background: var(--message-hover);
-}
-.divider-2rZFJK /* unread dividers */ {
-	--divider-color: var(--accent-2);
-}
-.iconBadge-3Mmg92 /* dm button */ {
-	background: var(--accent-2) !important;
-}
-.theme-dark .container-2IKOsH /* browse channels back */,
-.theme-dark .header-3xB4vB /* browse channels header */,
-.theme-dark .container-1um7CU /* browse channels body */,
-.searchHeader-1r_ZSh /* search results number box */,
-.wrapper-22rqw6 /* emoji selector server list */,
-.chat-9g_3Xj.container-2YMsb4 /* message requests */,
-.theme-dark .emptyPage-2TGR7j /* channels and roles */,
-.theme-dark .scrollerContainer-y16Rs9 /* channels and roles */,
-.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
-	background-color: var(--bg-4);
-}
-.wrapper-2RrXDg /* friend activity cards */,
-.mainCard-3KBsBI /* forum posts and search */,
-.container-3i3IzO /* thread embed */,
-.embedFull-1HGV2S /* regular embeds like GitHub links */,
-.attachment-1PZZB2 /* attachments */,
-.textContainer-36wgKK /* embedded attachment text */,
-.footer-GXWBBp /* embedded attachment footer */,
-.hljs /* embedded attachment code */,
-.markup-eYLPri code /* codeblocks */,
-.hoverButtonGroup-2yZIzC /* download button on embeds */,
-.messageContainer-3VTXBC /* inbox messages */,
-.channelRow-4X_3fi /* browse channels channels */,
-.container-18GwIk /* channel threads dropdown */,
-.reaction-3vwAF2 /* reactions */,
-.vc-plugins-card /* vencord plugins card */,
-.replyBar-1oi75v /* reply bar */,
-.attachedBars-2BCP3l /* thingy behind reply bar */,
-.connection-YOVI9j, /* settings connections */
-.connectionHeader-Ixbb1s /* settings connections header */ {
-	background: var(--bg-3);
-}
-.theme-dark .outer-2JOHae.active-1W_Gl9, .theme-dark .outer-2JOHae.interactive-2zD88a:hover /* friend activity cards on hover */,
-.channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
-	background: var(--bg-2);
-}
-path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
-	fill: var(--accent-2) !important;
-}
-.icon-2O29O0 /* reset this back to green because its an image :( */ {
-	background-color: #3ba55c;
-}
-.mouse-mode.full-motion .replying-eZ7p5z:hover /* reply message when hover */ {
-	background-color: var(--mention-hover);
+.chat__52833 /* chat + member list */,
+.sidebar_ded4b5 /* channel sidebar */
+.privateChannels__93473 .scroller__4b984 /* dms list inner */ {
+	background: none;
 }
 
-/* change online indicator color */
-.wrapper-3Un6-K rect[fill="#23a55a"]  /* replace green online circles */ {
-	fill: var(--online-indicator) !important;
+/* separate header bar */
+.title_b7d661.themed_b152d4 /* remove bg */ {
+	background: none;
+}
+.searchResultsWrap__9f374 /* allow overflow */ {
+	overflow: visible;
+}
+.container__93316::before /* main chat */,
+.membersWrap__90226::before /* member list */,
+.searchResultsWrap__9f374::before /* search results */,
+.profilePanel__12596::before /* dm profile */ {
+	content: '';
+	position: absolute;
+	margin-top: -48px;
+	background: var(--background-primary);
+	width: 100%;
+	height: 48px;
+	border-radius: var(--roundness) var(--roundness) 0 0;
 }
 
-/* create/join a server modal color fix */
-.layer-fP3xEz .theme-light {
-	--background-primary: var(
-		--bg-3
-	); /* template buttons & create my own button */
-	--modal-background: var(--bg-4); /* general background of the modal */
-	--modal-footer-background: var(
-		--bg-4
-	); /* general background of the modal footer */
-	--header-primary: var(--text-3); /* color of bolded headers */
-	--header-secondary: var(--text-4); /* color of unbolded headers */
-	--text-normal: var(--text-3); /* color of button text */
-	--background-modifier-accent: none; /* remove borders */
-	--background-modifier-hover: var(--bg-2); /* button hover */
-	--background-modifier-active: var(--bg-1); /* button active */
-	--button-secondary-background: var(--bg-2); /* join a server button */
-	--button-secondary-background-active: var(--text-5);
-	--button-secondary-background-hover: var(--bg-1);
-	--input-background: var(--bg-3); /* background of the invite link textbox */
-	--input-placeholder-text: var(
-		--text-5
-	); /* color of invite link textbox text */
-}
-.layer-fP3xEz .footerSeparator-3U8YsT /* remove footer separator border */,
-.layer-fP3xEz .rootWithShadow-2hdL2J /* remove modal border */ {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-.lookBlank-FgPMy6 .contents-3NembX /* fix back button */ {
-	color: var(--text-4);
-}
-.layer-fP3xEz .input-m1-Y7Q /* remove input borderish thing */,
-.layer-fP3xEz .rowContainer-3t7486 /* fix server discovery */ {
-	background: var(--bg-3);
-}
-
-/* make emoji selector same color */
-.emojiButtonNormal-35P0_i .sprite-2lxwfc {
-	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
-}
-
-/* filter login image */
-.artwork-L5TAwQ {
-	filter: saturate(0.2) hue-rotate(-20deg) brightness(0.15);
-}
-
-/* add margin */
-.content-1SgpWY /* outside edges */ {
+/* add spacing */
+.content__4bf10 /* outside edges */ {
 	margin: 0 var(--spacing) var(--spacing) 0;
 }
-.sidebar-1tnWFu /* channel list and user panel */,
-.content-18rAwf /* between chat and member list */ {
+.sidebar_ded4b5 /* channel list and user panel */,
+.content__1a4fe /* between chat and member list */ {
 	gap: var(--spacing);
 }
-.sidebar-1tnWFu /* channel list and chat */ {
+.sidebar_ded4b5 /* channel list and chat */ {
 	margin-right: var(--spacing);
 }
 .resizeHandle-PBRzPC /* pretend to be a margin */ {
@@ -203,124 +112,39 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	margin-top: var(--spacing);
 }
 
-#vc-spotify-player /* vencord spotify */,
-.container-1zzFcN /* vc panel */,
-.panel-2ZFCRb /* stream panel */ {
-	padding: 10px;
-}
-
-/* remove backgrounds to show gaps */
-.sidebar-1tnWFu /* channel list and user panel */,
-.chat-9g_3Xj /* chat and member list */ {
-	background: none;
-}
-
 /* add rounded corners */
-.container-1NXEtd /* channel list */,
-.panels-3wFtMD /* user panels */,
-.privateChannels-oVe7HL /* dms list */,
-.container-2cd8Mz /* friends page */,
-.chat-9g_3Xj /* blanket for main chat area */,
-.chat-9g_3Xj.threadSidebarOpen-1LSXvU /* main chat with thread sidebar open */,
-.container-3XgAHv /* thread */,
-.applicationStore-2nk7Lo,
-.pageWrapper-2PwDoS /* server discover page */,
-.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
+.container__590e2 /* channel list */,
+.panels__58331 /* user panels */,
+.privateChannels__93473 /* dms list */,
+.container__5c7e7 /* friends page */,
+.applicationStore_fc7d76 /* nitro page */,
+.container_d3a736 /* message requests */,
+.shop_b31ed2 /* discord shop */,
+.container_a87c5e /* family center */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
-.chatContent-2O4SXb /* main chat */,
-.container-3wLKDe /* forum */,
-.members-2y1nVj, /* members list */
-.container-2vWgD2 /* members list outer */ {
+.container__93316 /* main chat */,
+.chatContent__5dca8 /* main chat inner */,
+.container_b2ce9c /* members list */,
+.members__9f47b /* members list inner */,
+.searchResultsWrap__9f374 /* search results */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
-/* separate header bar */
-.title-5wgnIa.themed-Hp1KC_ /* remove bg */ {
-	background: none;
+/* extra top margin for macos and custom clients */
+.base__3e6af {
+	margin-top: var(--spacing);
 }
-.searchResultsWrap-5RVOkx /* allow overflow */ {
-	overflow: visible;
-}
-.chatContainer-2XIz4Y::before /* main chat */,
-.membersWrap-3GwLFp::before /* member list */,
-.searchResultsWrap-5RVOkx::before /* search results */,
-.profilePanel-2PWEok::before /* dm profile */,
-.container-3wLKDe::before /* forum channel */,
-.profilePanel-2VBkh8::before {
-	content: '';
-	position: absolute;
-	margin-top: -48px;
-	background-color: var(--background-primary);
-	width: 100%;
-	height: 48px;
-	border-radius: var(--roundness) var(--roundness) 0 0;
-}
-
-/* rearrange toolbar */
-.iconWrapper-2awDjA[aria-label='Help'] /* hide help */ {
-	display: none;
-}
-.search-39IXmY /* push searchbar to right */ {
-	order: 1;
-}
-.iconWrapper-2awDjA[aria-label='Show Member List'] /* push toggle buttons to right */, 
-.iconWrapper-2awDjA[aria-label='Show User Profile'] {
-	order: 1;
-}
-.iconWrapper-2awDjA[aria-label='Hide Member List'] /* add gap when member list/user profile open */,
-.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
-	order: 1;
-	margin-right: calc(24px + var(--spacing));
-}
-.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show Member List'] /* add gap when search results */, 
-.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show User Profile'] {
-	margin-right: calc(24px + var(--spacing));
-}
-.searchBar-jGtisZ /* make searchbar fit member list width */ {
-	width: 208px !important;
-}
-.iconWrapper-2awDjA[aria-label='Hide User Profile'] ~ .search-39IXmY .searchBar-jGtisZ /* make searchbar fit user profile width */ {
-	width: 308px !important;
-}
-.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .searchBar-jGtisZ /* make searchbar fit search results width */ {
-	width: 386px !important;
-}
-
-/* remove shadows */
-.content-18rAwf::before /* main chat header */, 
-.tabBody-2dgbAs::before /* friend list header */,
-.chat-1-OBC7::before /* voice channel chat header */,
-.headerBar-1dSpQr:before /* nitro page header */,
-.searchBar-3TnChZ /* dm list header */,
-.header-3OsQeK /* channel list header */,
-.header-uVCAlo /* sticker panel header */,
-.header-2TLOnc /* gif panel header */,
-.header-11eigE /* emoji panel header */,
-.theme-dark .separator-3C440w /* events panel */,
-.chat-25x62K:before /* forum post header */ {
-	box-shadow: none !important;
-}
-.children-3xh0VB:after  /* toolbar shadow */ {
-	background: none !important;
-}
-
-/* only show scrollbar when hover */
-.auto-2TJ1RH:hover::-webkit-scrollbar-thumb,
-.auto-2TJ1RH:hover::-webkit-scrollbar-track {
-	visibility: visible;
-}
-.auto-2TJ1RH::-webkit-scrollbar-thumb,
-.auto-2TJ1RH::-webkit-scrollbar-track {
-	visibility: hidden;
+.platform-win .base__3e6af {
+	margin-top: 0;
 }
 
 /* top corner title */
-.wordmarkWindows-1rsity svg {
+div[class^='wordmarkWindows'] svg {
 	display: none;
 }
-.wordmarkWindows-1rsity::after {
+div[class^='wordmarkWindows']::after {
 	content: 'Midnight';
 	display: block;
 	position: relative;
@@ -334,67 +158,82 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 }
 
 /* window controls */
-.withFrame-1sEfxu {
+div[class^='typeWindows'] {
 	height: 20px;
 }
-.typeWindows-3ILlhq .winButton-3SigSb > svg {
+div[class^='winButton'] svg {
 	display: none;
 }
-.typeWindows-3ILlhq .winButton-3SigSb {
+div[class^='winButton'] {
+	background: none !important;
 	top: 0;
-	width: 12px;
-	height: 12px;
-	margin: 2px 12px 0px 0px;
-	border-radius: 12px;
+	width: 20px;
+	height: 20px;
+	margin: -2px 4px 0px 0px;
 }
-.typeWindows-3ILlhq .winButton-3SigSb::after {
+div[class^='winButton']::after {
 	content: '';
 	height: 12px;
 	width: 12px;
 	border-radius: 12px;
 }
-.typeWindows-3ILlhq .winButtonClose-23zAIt::after {
+div[class^='winButton']:hover::after {
+	filter: brightness(0.8);
+}
+div[class^='winButton']:active::after {
+	transform: scale(0.9);
+}
+div[class^='winButtonClose']::after {
 	background-color: hsl(350, 50%, 50%) !important;
 }
-.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(3)::after {
+div[class^='winButtonMinMax']:nth-child(3)::after {
 	background-color: hsl(150, 50%, 50%) !important;
 }
-.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(4)::after {
+div[class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: hsl(50, 50%, 50%) !important;
-}
-.typeWindows-3ILlhq > div:hover::after {
-	transform: scale(1.1);
-}
-.typeWindows-3ILlhq > div:active::after {
-	transform: scale(1);
 }
 
 .theme-dark {
-	--activity-card-background: blue;
-	--android-navigation-bar-background: blue;
-	--android-navigation-scrim-background: blue;
-	--android-ripple: blue;
-	--background-accent: var(--bg-1);
+	--activity-card-background: var(--primary-700);
+	--android-navigation-bar-background: var(--primary-830);
+	--android-navigation-scrim-background: hsl(var(--primary-830-hsl) / 0.5);
+	--android-ripple: hsl(var(--white-500-hsl) / 0.07);
+	--background-accent: var(--primary-530);
 	--background-floating: var(--primary-800);
-	--background-mentioned: var(--mention);
-	--background-mentioned-hover: var(--mention-hover);
+	--background-mentioned: hsl(var(--yellow-300-hsl) / 0.1);
+	--background-mentioned-hover: hsl(var(--yellow-300-hsl) / 0.08);
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
-	--background-message-highlight: var(--mention);
-	--background-message-highlight-hover: var(--mention-hover);
-	--background-message-hover: var(--message-hover);
-	--background-mobile-primary: var(--bg-4);
-	--background-mobile-secondary: var(--bg-3);
-	--background-modifier-accent: var(--bg-3);
+	--background-message-highlight: hsl(var(--brand-360-hsl) / 0.08);
+	--background-message-highlight-hover: hsl(var(--brand-360-hsl) / 0.06);
+	--background-message-hover: hsl(var(--primary-900-hsl) / 0.06);
+	--background-mobile-primary: var(--primary-600);
+	--background-mobile-secondary: var(--primary-630);
+	--background-modifier-accent: var(--hover);
+	--background-modifier-accent-2: red;
 	--background-modifier-active: var(--active);
 	--background-modifier-hover: var(--hover);
 	--background-modifier-selected: var(--active);
 	--background-nested-floating: var(--primary-630);
 	--background-primary: var(--bg-4);
-	--background-secondary: var(--bg-4);
-	--background-secondary-alt: var(--bg-4);
+	--background-secondary: var(--bg-3);
+	--background-secondary-alt: var(--bg-3);
 	--background-tertiary: var(--bg-3);
+	--bg-backdrop: hsl(var(--black-500-hsl) / 0.7);
+	--bg-backdrop-no-opacity: var(--black-500);
+	--bg-base-primary: var(--primary-600);
+	--bg-base-secondary: var(--primary-630);
+	--bg-base-tertiary: var(--primary-660);
+	--bg-mod-faint: hsl(var(--primary-500-hsl) / 0.3);
+	--bg-mod-strong: hsl(var(--primary-500-hsl) / 0.54);
+	--bg-mod-subtle: hsl(var(--primary-500-hsl) / 0.48);
+	--bg-surface-overlay: var(--primary-800);
+	--bg-surface-overlay-tmp: var(--primary-800);
+	--bg-surface-raised: var(--primary-600);
 	--black: var(--black-500);
+	--blur-fallback: hsl(var(--primary-700-hsl) / 0.96);
+	--blur-fallback-pressed: hsl(var(--primary-730-hsl) / 0.96);
+	--border-faint: hsl(var(--white-500-hsl) / 0.03);
 	--border-strong: hsl(var(--white-500-hsl) / 0.16);
 	--border-subtle: hsl(var(--white-500-hsl) / 0.08);
 	--bug-reporter-modal-submitting-background: hsl(
@@ -432,30 +271,37 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--button-outline-positive-text: var(--white-500);
 	--button-outline-positive-text-active: var(--white-500);
 	--button-outline-positive-text-hover: var(--white-500);
-	--button-outline-primary-background: none;
-	--button-outline-primary-background-active: var(--bg-1);
-	--button-outline-primary-background-hover: var(--bg-2);
-	--button-outline-primary-border: var(--bg-1);
-	--button-outline-primary-border-active: var(--bg-1);
-	--button-outline-primary-border-hover: var(--bg-2);
-	--button-outline-primary-text: var(--text-3);
-	--button-outline-primary-text-active: var(--text-2);
-	--button-outline-primary-text-hover: var(--text-2);
+	--button-outline-primary-background: hsl(var(--white-500-hsl) / 0);
+	--button-outline-primary-background-active: var(--primary-430);
+	--button-outline-primary-background-hover: var(--primary-500);
+	--button-outline-primary-border: var(--primary-500);
+	--button-outline-primary-border-active: var(--primary-430);
+	--button-outline-primary-border-hover: var(--primary-500);
+	--button-outline-primary-text: var(--white-500);
+	--button-outline-primary-text-active: var(--white-500);
+	--button-outline-primary-text-hover: var(--white-500);
 	--button-positive-background: var(--green-430);
 	--button-positive-background-active: var(--green-530);
 	--button-positive-background-disabled: var(--green-430);
 	--button-positive-background-hover: var(--green-500);
-	--button-secondary-background: var(--bg-2);
-	--button-secondary-background-active: var(--text-5);
-	--button-secondary-background-disabled: var(--bg-3);
-	--button-secondary-background-hover: var(--bg-1);
+	--button-secondary-background: var(--primary-500);
+	--button-secondary-background-active: var(--primary-400);
+	--button-secondary-background-disabled: var(--primary-500);
+	--button-secondary-background-hover: var(--primary-430);
+	--card-gradient-bg: hsl(var(--black-500-hsl) / 0.4);
+	--card-gradient-pressed-bg: hsl(var(--black-500-hsl) / 0.5);
+	--card-primary-bg: var(--primary-560);
+	--card-primary-pressed-bg: var(--primary-645);
+	--card-secondary-bg: var(--primary-560);
+	--card-secondary-pressed-bg: var(--primary-645);
 	--channel-icon: var(--text-4);
 	--channel-text-area-placeholder: var(--text-5);
 	--channels-default: var(--text-4);
 	--channeltextarea-background: var(--bg-3);
-	--chat-background: blue;
-	--chat-border: blue;
-	--chat-input-container-background: blue;
+	--chat-background: var(--primary-600);
+	--chat-border: var(--primary-700);
+	--chat-input-container-background: var(--primary-600);
+	--chat-swipe-to-reply-background: var(--primary-660);
 	--control-brand-foreground: var(--brand-360);
 	--control-brand-foreground-new: var(--brand-360);
 	--creator-revenue-icon-gradient-end: var(--teal-430);
@@ -484,10 +330,15 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 		var(--primary-660-hsl) / 0.8
 	);
 	--forum-post-tag-background: hsl(var(--primary-660-hsl) / 0.9);
+	--guild-notifications-bottom-sheet-pill-background: var(--primary-700);
+	--header-muted: red;
 	--header-primary: var(--text-2);
 	--header-secondary: var(--text-4);
-	--home-background: var(--bg-4);
-	--home-card-resting-border: none;
+	--home-background: var(--primary-645);
+	--home-card-resting-border: hsl(var(--transparent-hsl) / 0);
+	--icon-muted: var(--primary-400);
+	--icon-primary: var(--primary-130);
+	--icon-secondary: var(--primary-330);
 	--info-box-background: hsl(var(--blue-345-hsl) / 0.1);
 	--info-danger-background: hsl(var(--red-400-hsl) / 0.1);
 	--info-danger-foreground: var(--red-400);
@@ -507,12 +358,25 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--interactive-hover: var(--text-3);
 	--interactive-muted: var(--text-5);
 	--interactive-normal: var(--text-4);
+	--legacy-android-blur-overlay-default: hsl(var(--primary-660-hsl) / 0.5);
+	--legacy-android-blur-overlay-ultra-thin: hsl(var(--black-500-hsl) / 0.025);
+	--legacy-blur-fallback-default: hsl(var(--primary-660-hsl) / 0.975);
+	--legacy-blur-fallback-ultra-thin: hsl(var(--black-500-hsl) / 0.95);
 	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
 	--logo-primary: var(--white-500);
-	--mention-background: var(--mention);
-	--mention-foreground: var(--accent-2);
-	--modal-background: var(--bg-4);
-	--modal-footer-background: var(--bg-4);
+	--mention-background: hsl(var(--brand-500-hsl) / 0.3);
+	--mention-foreground: var(--brand-260);
+	--modal-background: var(--primary-600);
+	--modal-footer-background: var(--primary-630);
+	--navigator-header-tint: var(--white-500);
+	--polls-image-normal-border: hsl(var(--black-430-hsl) / 0.9);
+	--polls-victor-border: var(--yellow-300);
+	--polls-victor-fill: var(--yellow-200);
+	--polls-victor-label: var(--primary-600);
+	--polls-voted-border: var(--green-330);
+	--polls-voted-fill: var(--green-160);
+	--polls-voted-label: var(--primary-600);
+	--profile-gradient-card-background: hsl(var(--black-500-hsl) / 0.7);
 	--profile-gradient-message-input-border: hsl(var(--primary-500-hsl) / 0.48);
 	--profile-gradient-note-background: hsl(var(--black-500-hsl) / 0.3);
 	--profile-gradient-overlay: hsl(var(--black-500-hsl) / 0.6);
@@ -527,7 +391,9 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--profile-gradient-section-box: hsl(var(--black-500-hsl) / 0.45);
 	--redesign-activity-card-background: var(--primary-560);
 	--redesign-activity-card-background-pressed: var(--primary-630);
+	--redesign-activity-card-badge-icon: var(--primary-360);
 	--redesign-activity-card-border: hsl(var(--white-500-hsl) / 0.02);
+	--redesign-activity-card-overflow-background: var(--primary-630);
 	--redesign-button-danger-background: var(--red-430);
 	--redesign-button-danger-pressed-background: var(--red-460);
 	--redesign-button-danger-text: var(--white-500);
@@ -570,28 +436,35 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--redesign-button-primary-on-blurple-text: var(--brand-500);
 	--redesign-button-primary-pressed-background: var(--brand-560);
 	--redesign-button-primary-text: var(--white-500);
-	--redesign-button-secondary-alt-background: var(--primary-530);
+	--redesign-button-secondary-alt-background: var(--primary-660);
 	--redesign-button-secondary-alt-pressed-background: var(--primary-560);
-	--redesign-button-secondary-alt-text: var(--white-500);
+	--redesign-button-secondary-alt-pressed-text: var(--primary-330);
+	--redesign-button-secondary-alt-text: var(--primary-230);
 	--redesign-button-secondary-background: var(--primary-460);
-	--redesign-button-secondary-border: var(--primary-460);
+	--redesign-button-secondary-border: hsl(var(--white-500-hsl) / 0.08);
 	--redesign-button-secondary-pressed-background: var(--primary-500);
-	--redesign-button-secondary-pressed-border: var(--primary-500);
-	--redesign-button-secondary-text: var(--white-500);
+	--redesign-button-secondary-pressed-border: hsl(var(--transparent-hsl) / 0);
+	--redesign-button-secondary-text: var(--primary-230);
+	--redesign-channel-category-name-text: var(--primary-330);
+	--redesign-channel-message-preview-text: var(--primary-360);
+	--redesign-channel-name-muted-text: var(--primary-360);
+	--redesign-channel-name-text: var(--primary-130);
+	--redesign-chat-input-background: var(--primary-700);
+	--redesign-input-control-active-bg: var(--primary-645);
 	--redesign-input-control-selected: var(--brand-500);
 	--redesign-only-background-active: var(--primary-530);
-	--redesign-only-background-default: var(--primary-700);
-	--redesign-only-background-overlay: var(--primary-600);
-	--redesign-only-background-raised: blue;
-	--redesign-only-background-sunken: var(--primary-800);
-	--scrollbar-auto-scrollbar-color-thumb: var(--bg-3);
-	--scrollbar-auto-scrollbar-color-track: transparent;
+	--redesign-only-background-default: var(--primary-600);
+	--redesign-only-background-overlay: var(--primary-645);
+	--redesign-only-background-raised: var(--primary-630);
+	--redesign-only-background-sunken: var(--primary-660);
+	--scrollbar-auto-scrollbar-color-thumb: var(--primary-730);
+	--scrollbar-auto-scrollbar-color-track: var(--primary-630);
 	--scrollbar-auto-thumb: var(--bg-3);
 	--scrollbar-auto-track: transparent;
 	--scrollbar-thin-thumb: var(--bg-3);
 	--scrollbar-thin-track: transparent;
-	--spoiler-hidden-background: var(--bg-3);
-	--spoiler-revealed-background: var(--bg-3);
+	--spoiler-hidden-background: var(--primary-700);
+	--spoiler-revealed-background: var(--primary-660);
 	--status-danger: var(--red-400);
 	--status-danger-background: var(--red-400);
 	--status-danger-text: var(--white-500);
@@ -600,8 +473,9 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--status-offline: var(--primary-360);
 	--status-online: var(--green-360);
 	--status-positive: var(--green-360);
-	--status-positive-background: var(--accent-3);
+	--status-positive-background: var(--green-430);
 	--status-positive-text: var(--white-500);
+	--status-speaking: var(--green-360);
 	--status-warning: var(--yellow-300);
 	--status-warning-background: var(--yellow-300);
 	--status-warning-text: var(--black-500);
@@ -609,45 +483,24 @@ path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
 	--text-danger: var(--red-345);
 	--text-link: var(--blue-345);
 	--text-link-low-saturation: var(--blue-330);
+	--text-low-contrast: var(--primary-360);
+	--text-message-preview-low-sat: var(--primary-360);
 	--text-muted: var(--text-5);
+	--text-muted-on-default: red;
 	--text-normal: var(--text-3);
-	--text-positive: var(--accent-1);
+	--text-positive: var(--green-330);
+	--text-primary: var(--primary-230);
+	--text-secondary: red;
 	--text-warning: var(--yellow-300);
-	--textbox-markdown-syntax: var(--text-4);
+	--textbox-markdown-syntax: var(--primary-360);
+	--theme-locked-blur-fallback: hsl(var(--primary-700-hsl) / 0.96);
 	--user-profile-header-overflow-background: hsl(
 		var(--primary-700-hsl) / 0.5
 	);
-	--white-500: var(--text-1);
-	--blue-345: var(--accent-1);
-	--brand-260: var(--accent-2);
-	--brand-360: var(--accent-2);
-	--brand-430: var(--accent-4);
-	--brand-500: var(--accent-3);
-	--brand-560: var(--accent-4);
-	--brand-600: var(--accent-5);
+	--voice-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
+	--voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
+	--white: var(--white-500);
 
-	--primary-130: var(--text-2);
-	--primary-230: var(--text-3);
-	--primary-330: var(--text-4);
-	--primary-360: var(--text-4);
-	--primary-400: var(--text-4);
-	--primary-430: var(--text-5);
-	--primary-500: var(--text-5);
-	--primary-530: var(--text-5);
-	--primary-560: var(--bg-3);
-	--primary-600: var(--bg-4);
-	--primary-645: var(--bg-4);
-	--primary-630: var(--bg-4);
-	--primary-660: var(--bg-4);
-	--primary-700: var(--bg-3);
-	--primary-730: var(--bg-3);
-	--primary-800: var(--bg-3);
-
-	--green-360: var(--accent-2); /* replace other green stuff */
-	--green-430: var(--accent-3); /* green buttons (like invite) */
-	--green-500: var(--accent-4); /* green button hover */
-	--green-530: var(--accent-5); /* green button click */
-
-	--search-popout-option-fade: none;
-	--search-popout-option-fade-hover: none;
+	--profile-gradient-primary-color: var(--bg-4);
+	--profile-gradient-secondary-color: var(--bg-4);
 }
