@@ -68,6 +68,10 @@
 .folderIconWrapper__72239 /* closed folder */ {
 	background: var(--bg-3) !important;
 }
+#app-mount .searchAnswer_b452e7, /* search filter answer */
+#app-mount .searchFilter__118cb /* search filter */ {
+	background: var(--bg-1);
+}
 .chat__52833 /* chat + member list */,
 .sidebar_ded4b5 /* channel sidebar */
 .privateChannels__93473 .scroller__4b984 /* dms list inner */ {
@@ -113,15 +117,15 @@ div[class^='toolbar'] > div[class^='search'] {
 	order: 1;
 	margin: 0 4px 0 12px;
 }
-.chat__52833:has(section[class^='searchResultsWrap']) div[class^='searchBar'] {
+.chat__52833:has(.searchResultsWrap__9f374) div[class^='searchBar'] {
 	width: 394px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
-.chat__52833:has(aside[class^='profilePanel']) div[class^='searchBar'] {
+.chat__52833:has(.profilePanel__12596) div[class^='searchBar'] {
 	width: 316px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
-.chat__52833:has([class^='membersWrap']) div[class^='searchBar'] {
+.chat__52833:has(.membersWrap__90226) div[class^='searchBar'] {
 	width: 216px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
@@ -438,7 +442,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
 	--logo-primary: var(--white-500);
 	--mention-background: var(--mention);
-	--mention-foreground: var(--brand-260);
+	--mention-foreground: var(--accent-2);
 	--modal-background: var(--bg-4);
 	--modal-footer-background: var(--bg-4);
 	--navigator-header-tint: var(--white-500);
@@ -578,6 +582,8 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--profile-gradient-secondary-color: var(--bg-4);
 
 	--elevation-low: none;
+	--search-popout-option-fade: none;
+	--search-popout-option-fade-hover: none;
 
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
@@ -588,4 +594,5 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	); /* background of reacted reactions */
 
 	--primary-500: var(--bg-2); /* progress bars */
+	--primary-660: var(--bg-3); /* search popout "enter" bar */
 }
