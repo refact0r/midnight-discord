@@ -52,9 +52,9 @@
 }
 
 /* modify colors */
-.sidebar_ded4b5 .container__590e2 /* channel list */,
+#app-mount .container__590e2 /* channel list */,
 .privateChannels__93473 /* dms list */,
-.panels__58331 .container_ca50b9 /* user panel inner */,
+#app-mount .container_ca50b9 /* user panel inner */,
 .container_b2ce9c /* member list */,
 .members__9f47b /* member list inner */,
 .member_aa4760 /* member list members */,
@@ -62,7 +62,9 @@
 .folder__17546 /* folder circle when expanded */,
 .searchResultsWrap__9f374 /* search results */,
 .searchHeader__19d87 /* search results header */,
-.chat__52833.container_d3a736 /* message requests */ {
+.chat__52833.container_d3a736 /* message requests */,
+#app-mount .panels__58331 > div /* user panel children */,
+.container_d667ff /* vc panel */ {
 	background: var(--bg-4);
 }
 .folderIconWrapper__72239 /* closed folder */ {
@@ -94,6 +96,28 @@
 	border-radius: var(--roundness) var(--roundness) 0 0;
 }
 
+/* rearrange toolbar */
+a[href="https://support.discord.com/"] /* hide help */
+{
+	display: none;
+}
+div[class^='toolbar'] > div[class^='search'] {
+	order: 1;
+	margin: 0 4px 0 12px;
+}
+.chat__52833:has(section[class^='searchResultsWrap']) div[class^='searchBar'] {
+	width: 394px !important;
+	margin-left: calc(var(--spacing) + 8px);
+}
+.chat__52833:has(aside[class^='profilePanel']) div[class^='searchBar'] {
+	width: 316px !important;
+	margin-left: calc(var(--spacing) + 8px);
+}
+.chat__52833:has(aside[class^='membersWrap']) div[class^='searchBar'] {
+	width: 216px !important;
+	margin-left: calc(var(--spacing) + 8px);
+}
+
 /* add spacing */
 .content__4bf10 /* outside edges */ {
 	margin: 0 var(--spacing) var(--spacing) 0;
@@ -112,15 +136,23 @@
 	margin-top: var(--spacing);
 }
 
+/* fix padding */
+#vc-spotify-player /* vencord spotify */,
+.container_d667ff /* vc panel */,
+.panel_bd8c76 /* stream panel */ {
+	padding: 10px;
+}
+
 /* add rounded corners */
 .container__590e2 /* channel list */,
 .panels__58331 /* user panels */,
 .privateChannels__93473 /* dms list */,
 .container__5c7e7 /* friends page */,
 .applicationStore_fc7d76 /* nitro page */,
-.container_d3a736 /* message requests */,
+#app-mount .container_d3a736 /* message requests */,
 .shop_b31ed2 /* discord shop */,
-.container_a87c5e /* family center */ {
+.container_a87c5e /* family center */,
+.container_def45c /* message request */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
@@ -503,4 +535,6 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 
 	--profile-gradient-primary-color: var(--bg-4);
 	--profile-gradient-secondary-color: var(--bg-4);
+
+	--elevation-low: none;
 }
