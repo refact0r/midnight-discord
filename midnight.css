@@ -58,8 +58,6 @@
 .container_b2ce9c /* member list */,
 .members__9f47b /* member list inner */,
 .member_aa4760 /* member list members */,
-.expandedFolderBackground__1bec6 /* expanded folder bg */,
-.folder__17546 /* folder circle when expanded */,
 .searchResultsWrap__9f374 /* search results */,
 .searchHeader__19d87 /* search results header */,
 .chat__52833.container_d3a736 /* message requests */,
@@ -68,12 +66,22 @@
 	background: var(--bg-4);
 }
 .folderIconWrapper__72239 /* closed folder */ {
-	background: var(--bg-4) !important;
+	background: var(--bg-3) !important;
 }
 .chat__52833 /* chat + member list */,
 .sidebar_ded4b5 /* channel sidebar */
 .privateChannels__93473 .scroller__4b984 /* dms list inner */ {
 	background: none;
+}
+div[class^="control"] > div[class^="container"]/* settings checkbuttons default */ {
+	background: var(--bg-1) !important;
+}
+div[class^="message"][class*="mentioned"]:before /* mention message left edge */,
+div[class^="control"] > div[class*="checked"] /* settings checkbuttons */ {
+	background: var(--accent-3) !important;
+}
+path[fill='rgba(35, 165, 90, 1)'] {
+	fill: var(--accent-3);
 }
 
 /* separate header bar */
@@ -97,7 +105,7 @@
 }
 
 /* rearrange toolbar */
-a[href="https://support.discord.com/"] /* hide help */
+a[href="https://support.discord.com"] /* hide help */
 {
 	display: none;
 }
@@ -113,14 +121,14 @@ div[class^='toolbar'] > div[class^='search'] {
 	width: 316px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
-.chat__52833:has(aside[class^='membersWrap']) div[class^='searchBar'] {
+.chat__52833:has([class^='membersWrap']) div[class^='searchBar'] {
 	width: 216px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
 
 /* add spacing */
-.content__4bf10 /* outside edges */ {
-	margin: 0 var(--spacing) var(--spacing) 0;
+.appAsidePanelWrapper__714a6 /* outside edges */ {
+	margin: 0 var(--spacing) var(--spacing) var(--spacing);
 }
 .sidebar_ded4b5 /* channel list and user panel */,
 .content__1a4fe /* between chat and member list */ {
@@ -129,10 +137,13 @@ div[class^='toolbar'] > div[class^='search'] {
 .sidebar_ded4b5 /* channel list and chat */ {
 	margin-right: var(--spacing);
 }
-.resizeHandle-PBRzPC /* pretend to be a margin */ {
+.sidebar_ded4b5.hidden__3ab58 {
+	margin-right: 0;
+}
+.resizeHandle_f1a098 /* pretend to be a margin */ {
 	width: var(--spacing);
 }
-.wrapper-1gVUIN.fullScreen-KhZZcz /* fullscreen vc */ {
+.wrapper_bd2abe.fullScreen__5263c .callContainer_cbde45 /* fullscreen vc */ {
 	margin-top: var(--spacing);
 }
 
@@ -152,7 +163,9 @@ div[class^='toolbar'] > div[class^='search'] {
 #app-mount .container_d3a736 /* message requests */,
 .shop_b31ed2 /* discord shop */,
 .container_a87c5e /* family center */,
-.container_def45c /* message request */ {
+.container_def45c /* message request */,
+#app-mount .callContainer_cbde45 /* vc */, 
+.chat__52833 /* general chat container (for browse channels page */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
@@ -160,8 +173,36 @@ div[class^='toolbar'] > div[class^='search'] {
 .chatContent__5dca8 /* main chat inner */,
 .container_b2ce9c /* members list */,
 .members__9f47b /* members list inner */,
-.searchResultsWrap__9f374 /* search results */ {
+.searchResultsWrap__9f374 /* search results */,
+.profilePanel__12596 /* profile panel outer */,
+.userPanelOuter__880e5 /* profile panel inner */,
+.userPanelInner_eddf4c /* profile panel inner inner */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
+}
+
+/* separate guilds panel */
+.guilds__2b93a {
+	background: var(--bg-4);
+	border-radius: var(--roundness);
+	margin: 0 var(--spacing) 0 0;
+}
+.guilds__2b93a.hidden__7c832 {
+	margin: 0;
+}
+#app-mount .scroller__3d071 {
+	padding: 12px 0;
+}
+
+/* add bottom scroll shadow */
+.guilds__2b93a::after,
+.members__9f47b::after {
+	content: '';
+	position: absolute;
+	background: linear-gradient(transparent, var(--bg-4));
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+	pointer-events: none;
 }
 
 /* extra top margin for macos and custom clients */
@@ -230,10 +271,10 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--android-navigation-bar-background: var(--primary-830);
 	--android-navigation-scrim-background: hsl(var(--primary-830-hsl) / 0.5);
 	--android-ripple: hsl(var(--white-500-hsl) / 0.07);
-	--background-accent: var(--primary-530);
-	--background-floating: var(--primary-800);
-	--background-mentioned: hsl(var(--yellow-300-hsl) / 0.1);
-	--background-mentioned-hover: hsl(var(--yellow-300-hsl) / 0.08);
+	--background-accent: var(--bg-2);
+	--background-floating: var(--bg-3);
+	--background-mentioned: var(--mention);
+	--background-mentioned-hover: var(--mention-hover);
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
 	--background-message-highlight: hsl(var(--brand-360-hsl) / 0.08);
@@ -316,10 +357,10 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--button-positive-background-active: var(--green-530);
 	--button-positive-background-disabled: var(--green-430);
 	--button-positive-background-hover: var(--green-500);
-	--button-secondary-background: var(--primary-500);
-	--button-secondary-background-active: var(--primary-400);
-	--button-secondary-background-disabled: var(--primary-500);
-	--button-secondary-background-hover: var(--primary-430);
+	--button-secondary-background: var(--bg-2);
+	--button-secondary-background-active: var(--text-5);
+	--button-secondary-background-disabled: red;
+	--button-secondary-background-hover: var(--bg-1);
 	--card-gradient-bg: hsl(var(--black-500-hsl) / 0.4);
 	--card-gradient-pressed-bg: hsl(var(--black-500-hsl) / 0.5);
 	--card-primary-bg: var(--primary-560);
@@ -396,10 +437,10 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--legacy-blur-fallback-ultra-thin: hsl(var(--black-500-hsl) / 0.95);
 	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
 	--logo-primary: var(--white-500);
-	--mention-background: hsl(var(--brand-500-hsl) / 0.3);
+	--mention-background: var(--mention);
 	--mention-foreground: var(--brand-260);
-	--modal-background: var(--primary-600);
-	--modal-footer-background: var(--primary-630);
+	--modal-background: var(--bg-4);
+	--modal-footer-background: var(--bg-4);
 	--navigator-header-tint: var(--white-500);
 	--polls-image-normal-border: hsl(var(--black-430-hsl) / 0.9);
 	--polls-victor-border: var(--yellow-300);
@@ -497,7 +538,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--scrollbar-thin-track: transparent;
 	--spoiler-hidden-background: var(--primary-700);
 	--spoiler-revealed-background: var(--primary-660);
-	--status-danger: var(--red-400);
+	--status-danger: var(--accent-2);
 	--status-danger-background: var(--red-400);
 	--status-danger-text: var(--white-500);
 	--status-dnd: var(--red-400);
@@ -511,9 +552,9 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--status-warning: var(--yellow-300);
 	--status-warning-background: var(--yellow-300);
 	--status-warning-text: var(--black-500);
-	--text-brand: var(--brand-360);
+	--text-brand: var(--accent-1);
 	--text-danger: var(--red-345);
-	--text-link: var(--blue-345);
+	--text-link: var(--accent-1);
 	--text-link-low-saturation: var(--blue-330);
 	--text-low-contrast: var(--primary-360);
 	--text-message-preview-low-sat: var(--primary-360);
@@ -537,4 +578,14 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--profile-gradient-secondary-color: var(--bg-4);
 
 	--elevation-low: none;
+
+	--brand-500: var(--accent-3);
+	--brand-560: var(--accent-4);
+	--brand-600: var(--accent-5);
+
+	--brand-experiment-15a: var(
+		--mention
+	); /* background of reacted reactions */
+
+	--primary-500: var(--bg-2); /* progress bars */
 }
