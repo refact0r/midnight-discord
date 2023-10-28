@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
 	/* amount of spacing and padding */
 	--spacing: 12px;
@@ -49,6 +51,9 @@
 	--active: hsla(220, 20%, 40%, 0.2);
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
+
+	--font-primary: 'gg sans'; /* change to "gg sans" for default discord font */
+	--font-display: 'gg sans'; /* change to "gg sans" for default discord font */
 }
 
 /* modify colors */
@@ -63,8 +68,17 @@
 .chat__52833.container_d3a736 /* message requests */,
 #app-mount .panels__58331 > div /* user panel children */,
 .container_d667ff /* vc panel */,
-.sidebarRegionScroller__1fa7e /* settings left */ {
+.sidebarRegionScroller__1fa7e /* settings left */,
+.theme-dark .container__10dc7 /* browse channels container */,
+.theme-dark .header__60bef /* browse channels header */,
+.theme-dark .container__7590f /* browse channels inner */,
+.chat__52833.background_cb0a80 /* server guide body */,
+.theme-dark .scrollerContainer_bf5dbd /* channels and roles customize */,
+.shop_b31ed2 /* shop */ {
 	background: var(--bg-4);
+}
+.mainCard__8a660 /* forum post */ {
+	background: var(--bg-3);
 }
 .folderIconWrapper__72239 /* closed folder */ {
 	background: var(--bg-3) !important;
@@ -74,8 +88,9 @@
 	background: var(--bg-1);
 }
 .chat__52833 /* chat + member list */,
-.sidebar_ded4b5 /* channel sidebar */
-.privateChannels__93473 .scroller__4b984 /* dms list inner */ {
+.sidebar_ded4b5 /* channel sidebar */,
+.privateChannels__93473 .scroller__4b984 /* dms list inner */,
+.theme-dark .innerHeader_afca2f:after /* channels and roles header shadow */ {
 	background: none;
 }
 .container__871ba /* settings checkbuttons default */ {
@@ -96,6 +111,9 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 .expandedFolderIconWrapper__458cf svg {
 	color: var(--accent-2) !important;
+}
+.lookFilled__19298.colorBrand_b2253e .defaultColor__77578 {
+	color: var(--white-500);
 }
 
 /* separate header bar */
@@ -206,7 +224,6 @@ a[href="https://support.discord.com"] /* hide help */
 #app-mount .scroller__3d071 {
 	padding: 12px 0;
 }
-
 /* add bottom scroll shadow */
 .guilds__2b93a::after,
 .members__9f47b::after {
@@ -227,7 +244,28 @@ a[href="https://support.discord.com"] /* hide help */
 	width: 100%;
 	height: 20px;
 	pointer-events: none;
-	z-index: 1;
+	z-index: 2;
+}
+
+.tutorialContainer__890ea .childWrapper__01b9c {
+	background: var(--bg-3);
+}
+.tutorialContainer__890ea .childWrapper__01b9c svg {
+	display: none;
+}
+.tutorialContainer__890ea .childWrapper__01b9c::before {
+	content: '';
+	position: absolute;
+	width: 65%;
+	height: 65%;
+	background: var(--text-4);
+	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+}
+.tutorialContainer__890ea .wrapper_d281dd:hover .childWrapper__01b9c::before,
+.tutorialContainer__890ea
+	.wrapper_d281dd.selected_f5ec8e
+	.childWrapper__01b9c::before {
+	background: var(--bg-3);
 }
 
 /* extra top margin for macos and custom clients */
@@ -432,7 +470,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--header-muted: red;
 	--header-primary: var(--text-2);
 	--header-secondary: var(--text-4);
-	--home-background: var(--primary-645);
+	--home-background: var(--bg-4);
 	--home-card-resting-border: hsl(var(--transparent-hsl) / 0);
 	--icon-muted: var(--primary-400);
 	--icon-primary: var(--primary-130);
