@@ -17,7 +17,7 @@
 	/* color of accented buttons when clicked */
 	--accent-5: hsl(190, 80%, 30%);
 
-	/* color of green online dot, discord default is #23a55a */
+	/* color of green online dot, change to #23a55a for default green */
 	--online-indicator: var(--accent-2);
 
 	/* color of mentions and messages that mention you */
@@ -52,8 +52,11 @@
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 
-	--font-primary: 'gg sans'; /* change to "gg sans" for default discord font */
-	--font-display: 'gg sans'; /* change to "gg sans" for default discord font */
+	--font-primary: 'gg sans'; /* change to 'gg sans' for default discord font */
+	--font-display: 'gg sans'; /* change to 'gg sans' for default discord font */
+
+	--moon-icon: block; /* change to 'none' to hide top left moon icon */
+	--discord-icon: none; /* change to 'block' to show default discord top left icon */
 }
 
 /* modify colors */
@@ -229,7 +232,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
-/* separate guilds panel */
+/* separate guilds panel background */
 .guilds__2b93a {
 	background: var(--bg-4);
 	border-radius: var(--roundness);
@@ -263,6 +266,12 @@ a[href="https://support.discord.com"] /* hide help */
 }
 .childWrapper__01b9c {
 	background: var(--bg-3);
+}
+/* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background" */
+.expandedFolderBackground__1bec6 /* expanded folder bg */,
+.folder__17546 /* folder circle when expanded */,
+.folderIconWrapper__72239 /* folder circle inner */ {
+	/* background-color: var(--bg-4) !important; */
 }
 
 /* extra top margin for macos and custom clients */
@@ -328,10 +337,11 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 
 /* add moon */
 .childWrapper__01b9c > svg {
-	display: none;
+	display: var(--discord-icon);
 }
 .childWrapper__01b9c:has(> svg)::before {
 	content: '';
+	display: var(--moon-icon);
 	position: absolute;
 	width: 65%;
 	height: 65%;
