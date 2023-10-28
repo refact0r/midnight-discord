@@ -339,15 +339,6 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	padding-top: 2px;
 }
 
-/* shorten jump to present bar */
-.jumpToPresentBar__0ff7f {
-	width: fit-content;
-	margin-left: auto;
-}
-.jumpToPresentBar__0ff7f .barButtonMain__0f5c6 {
-	display: none;
-}
-
 .theme-dark {
 	--activity-card-background: var(--primary-700);
 	--android-navigation-bar-background: var(--primary-830);
@@ -673,5 +664,6 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 
 	--primary-500: var(--bg-2); /* progress bars */
 	--primary-600: var(--bg-3); /* delete message preview */
+	--primary-630: var(--bg-3); /* billing transaction history */
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
 }
