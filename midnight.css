@@ -21,7 +21,7 @@
 	--online-indicator: var(--accent-2);
 
 	/* color of mentions and messages that mention you */
-	--mention: hsla(190, 80%, 52%, 0.08);
+	--mention: hsla(190, 80%, 52%, 0.1);
 	/* color of mentions and messages that mention you when hovered */
 	--mention-hover: hsla(190, 80%, 52%, 0.05);
 
@@ -97,10 +97,12 @@
 	background: var(--bg-1) !important;
 }
 .container_ca50b9 /* user panel button strikethroughs */,
-.divider_b9338f /* unread divider */,
 .numberBadge__50328 /* unread number badge */,
 .toolbar__88c63 /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
+}
+.divider_b9338f /* unread divider */ {
+	--status-danger: var(--accent-3);
 }
 .message__80c10.mentioned__58017:before /* mention message left edge */,
 .container__871ba.checked__6bdb0 /* settings checkbuttons */ {
@@ -197,7 +199,8 @@ a[href="https://support.discord.com"] /* hide help */
 .container_a87c5e /* family center */,
 .container_def45c /* message request */,
 #app-mount .callContainer_cbde45 /* vc */, 
-.chat__52833 /* general chat container (for browse channels page */ {
+.chat__52833 /* general chat container (for browse channels page */,
+.animatedContainer__341f6 /* server image card */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
@@ -245,27 +248,6 @@ a[href="https://support.discord.com"] /* hide help */
 	height: 20px;
 	pointer-events: none;
 	z-index: 2;
-}
-
-.tutorialContainer__890ea .childWrapper__01b9c {
-	background: var(--bg-3);
-}
-.tutorialContainer__890ea .childWrapper__01b9c svg {
-	display: none;
-}
-.tutorialContainer__890ea .childWrapper__01b9c::before {
-	content: '';
-	position: absolute;
-	width: 65%;
-	height: 65%;
-	background: var(--text-4);
-	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
-}
-.tutorialContainer__890ea .wrapper_d281dd:hover .childWrapper__01b9c::before,
-.tutorialContainer__890ea
-	.wrapper_d281dd.selected_f5ec8e
-	.childWrapper__01b9c::before {
-	background: var(--bg-3);
 }
 
 /* extra top margin for macos and custom clients */
@@ -327,6 +309,47 @@ div[class^='winButtonMinMax']:nth-child(3)::after {
 }
 div[class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: hsl(50, 50%, 50%) !important;
+}
+
+/* add moon */
+.tutorialContainer__890ea .childWrapper__01b9c {
+	background: var(--bg-3);
+}
+.tutorialContainer__890ea .childWrapper__01b9c svg {
+	display: none;
+}
+.tutorialContainer__890ea .childWrapper__01b9c::before {
+	content: '';
+	position: absolute;
+	width: 65%;
+	height: 65%;
+	background: var(--text-4);
+	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+}
+.tutorialContainer__890ea .wrapper_d281dd:hover .childWrapper__01b9c::before,
+.tutorialContainer__890ea
+	.wrapper_d281dd.selected_f5ec8e
+	.childWrapper__01b9c::before {
+	background: var(--bg-3);
+}
+
+/* improve unread divider */
+.divider_b9338f {
+	border-width: 4px;
+	border-radius: 4px;
+}
+.endCap__95d53 {
+	margin-top: -1px;
+	padding-top: 2px;
+}
+
+/* shorten jump to present bar */
+.jumpToPresentBar__0ff7f {
+	width: fit-content;
+	margin-left: auto;
+}
+.jumpToPresentBar__0ff7f .barButtonMain__0f5c6 {
+	display: none;
 }
 
 .theme-dark {
@@ -501,7 +524,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
 	--logo-primary: var(--white-500);
 	--mention-background: var(--mention);
-	--mention-foreground: var(--accent-2);
+	--mention-foreground: var(--accent-1);
 	--modal-background: var(--bg-4);
 	--modal-footer-background: var(--bg-4);
 	--navigator-header-tint: var(--white-500);
