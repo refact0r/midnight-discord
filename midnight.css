@@ -123,8 +123,12 @@
 path[fill='rgba(35, 165, 90, 1)'] {
 	fill: var(--accent-3);
 }
-.icon__28d6c /* revert explore discoverable servers icon color */ {
+.container_a308ae:last-child .icon__28d6c /* explore discoverable servers icon color */ {
 	background-color: #3ba55c;
+	filter: hue-rotate(56deg) saturate(1.43);
+}
+.container_a308ae:first-child .icon__28d6c {
+	filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
 }
 .lookFilled__19298.colorBrand_b2253e .defaultColor__77578 /* vc choose an activity button */ {
 	color: var(--white-500);
@@ -350,7 +354,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 }
 .wrapper_d281dd:hover > .childWrapper__01b9c::before,
 .wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
-	background: var(--bg-3);
+	background: var(--text-1);
 }
 
 /* improve unread divider */
