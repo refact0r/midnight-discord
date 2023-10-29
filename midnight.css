@@ -352,9 +352,14 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	background: var(--text-4);
 	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
 }
+.wrapper_d281dd:hover .childWrapper__01b9c::before {
+	transition: background-color 0.15s ease-out, transform 0.3s ease-out;
+	transform: rotate(0deg) scale(1);
+}
 .wrapper_d281dd:hover > .childWrapper__01b9c::before,
 .wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
 	background: var(--text-1);
+	transform: rotate(-360deg) scale(0.8);
 }
 
 /* improve unread divider */
