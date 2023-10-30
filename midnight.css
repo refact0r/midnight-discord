@@ -240,7 +240,7 @@ a[href="https://support.discord.com"] /* hide help */
 .guilds__2b93a {
 	background: var(--bg-4);
 	border-radius: var(--roundness);
-	margin: 0 var(--spacing) var(--spacing) var(--spacing);
+	margin: var(--spacing);
 }
 .guilds__2b93a.hidden__7c832 {
 	margin: 0;
