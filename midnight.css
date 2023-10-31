@@ -186,7 +186,7 @@ a[href="https://support.discord.com"] /* hide help */
 
 /* add spacing */
 .base__3e6af /* outside edges */ {
-	margin: 0 var(--spacing) var(--spacing) 0;
+	margin: 0 var(--spacing) var(--spacing) var(--spacing);
 }
 .sidebar_ded4b5 /* channel list and user panel */,
 .content__1a4fe /* between chat and member list */ {
@@ -202,7 +202,7 @@ a[href="https://support.discord.com"] /* hide help */
 	width: var(--spacing);
 }
 .wrapper_bd2abe.fullScreen__5263c .callContainer_cbde45 /* fullscreen vc */ {
-	margin: var(--spacing) 0 0 var(--spacing);
+	margin: var(--spacing) 0 0 0;
 }
 
 /* fix padding */
@@ -243,7 +243,7 @@ a[href="https://support.discord.com"] /* hide help */
 .guilds__2b93a {
 	background: var(--bg-4);
 	border-radius: var(--roundness);
-	margin: 0 var(--spacing) var(--spacing) var(--spacing);
+	margin: 0 0 var(--spacing) var(--spacing);
 }
 .guilds__2b93a.hidden__7c832 {
 	margin: 0;
@@ -274,11 +274,11 @@ a[href="https://support.discord.com"] /* hide help */
 .childWrapper__01b9c {
 	background: var(--bg-3);
 }
-.container__037ed > div > .guilds__2b93a {
+.container__037ed > div[style$='display: flex;'] > .guilds__2b93a {
 	margin: 0;
 }
-.container__037ed > div:has(.guilds__2b93a) {
-	margin: 0 var(--spacing) var(--spacing) 0;
+.container__037ed > div[style$='display: flex;'] {
+	margin: 0 0 var(--spacing) var(--spacing);
 }
 /* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background" */
 .expandedFolderBackground__1bec6 /* expanded folder bg */,
