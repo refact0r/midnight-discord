@@ -274,6 +274,12 @@ a[href="https://support.discord.com"] /* hide help */
 .childWrapper__01b9c {
 	background: var(--bg-3);
 }
+.container__037ed > div > .guilds__2b93a {
+	margin: 0;
+}
+.container__037ed > div:has(.guilds__2b93a) {
+	margin: 0 var(--spacing) var(--spacing) 0;
+}
 /* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background" */
 .expandedFolderBackground__1bec6 /* expanded folder bg */,
 .folder__17546 /* folder circle when expanded */,
