@@ -235,7 +235,8 @@ a[href="https://support.discord.com"] /* hide help */
 .searchResultsWrap__9f374 /* search results */,
 .profilePanel__12596 /* profile panel outer */,
 .userPanelOuter__880e5 /* profile panel inner */,
-.userPanelInner_eddf4c /* profile panel inner inner */ {
+.userPanelInner_eddf4c /* profile panel inner inner */,
+.userPanelInner_eddf4c::before /* profile panel inner inner filter */ {
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
@@ -376,13 +377,16 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	border-width: 4px;
 	border-radius: 4px;
 }
+.divider_b9338f .content_d67847 {
+	margin-top: -3px;
+}
 .endCap__95d53 {
 	margin-top: -1px;
 	padding-top: 2px;
 }
 /* improve highlight message left edge */
-.message__80c10.mentioned__58017:before,
-.replying_d7b6ad:before {
+.message__80c10.mentioned__58017::before,
+.replying_d7b6ad::before {
 	width: 4px;
 	border-radius: 4px;
 }
