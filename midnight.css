@@ -105,6 +105,9 @@
 .selected__0b1ad .header__104ca, .clickable__2d589 .header__104ca:hover /* server name hover */ {
 	background: var(--message-hover);
 }
+.activeButtonChild__6e162 {
+	color: var(--accent-2);
+}
 .container_ca50b9 /* user panel button strikethroughs */,
 .numberBadge__50328 /* unread number badge */,
 .toolbar__88c63 /* toolbar button strikethroughs */ {
@@ -279,10 +282,10 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* extra top margin for macos and custom clients */
-.base__3e6af {
+.container__037ed {
 	margin-top: var(--spacing);
 }
-.platform-win .base__3e6af {
+.platform-win .container__037ed {
 	margin-top: 0;
 }
 
@@ -702,6 +705,7 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
 
+	--brand-430: var(--accent-3);
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
