@@ -52,11 +52,13 @@
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 
-	--font-primary: 'gg sans'; /* change to 'gg sans' for default discord font */
-	--font-display: 'gg sans'; /* change to 'gg sans' for default discord font */
+	/* font */
+	--font-primary: 'figtree'; /* change to 'gg sans' for default discord font */
+	--font-display: 'figtree'; /* change to 'gg sans' for default discord font */
 
-	--moon-icon: block; /* change to 'none' to hide top left moon icon */
-	--discord-icon: none; /* change to 'block' to show default discord top left icon */
+	/* top left icon */
+	--moon-icon: block; /* change to 'none' to hide moon icon */
+	--discord-icon: none; /* change to 'block' to show default discord icon */
 }
 
 /* modify colors */
