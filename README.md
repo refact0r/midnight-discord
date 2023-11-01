@@ -22,9 +22,9 @@ A darkened discord theme with rounded chat and sidebars.
 3. (optional) Copy and paste the contents of `midnight.theme.css` into your quickcss file.
 4. (optional) Customize the variables in quickcss.
 
-## support
+## server
 
-need help? want to report a bug? https://discord.gg/nz87hXyvcy
+need help? want to report a bug? want to give feedback on upcoming changes? https://discord.gg/nz87hXyvcy
  
 ## credits
 
