@@ -2,7 +2,7 @@
  * @name midnight
  * @description A darkened discord theme.
  * @author refact0r
- * @version 1.5.1
+ * @version 1.6.0
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
 */
@@ -29,11 +29,11 @@
 	/* color of accented buttons when clicked */
 	--accent-5: hsl(190, 80%, 30%);
 
-	/* color of green online dot, discord default is #23a55a */
+	/* color of green online dot, change to #23a55a for default green */
 	--online-indicator: var(--accent-2);
 
 	/* color of mentions and messages that mention you */
-	--mention: hsla(190, 80%, 52%, 0.08);
+	--mention: hsla(190, 80%, 52%, 0.1);
 	/* color of mentions and messages that mention you when hovered */
 	--mention-hover: hsla(190, 80%, 52%, 0.05);
 
@@ -63,4 +63,12 @@
 	--active: hsla(220, 20%, 40%, 0.2);
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
+
+	/* font */
+	--font-primary: 'figtree'; /* change to 'gg sans' for default discord font */
+	--font-display: 'figtree'; /* change to 'gg sans' for default discord font */
+
+	/* top left icon */
+	--moon-icon: block; /* change to 'none' to hide moon icon */
+	--discord-icon: none; /* change to 'block' to show default discord icon */
 }
