@@ -107,6 +107,12 @@
 .selected__0b1ad .header__104ca, .clickable__2d589 .header__104ca:hover /* server name hover */ {
 	background: var(--message-hover);
 }
+.message__80c10.replying_d7b6ad.selected_fd9051, .mouse-mode.full-motion .replying_d7b6ad:hover /* fix reply message hover */ {
+	background: var(--background-message-highlight-hover);
+}
+.replying_d7b6ad::before /* change reply message bar to neutral */ {
+	background: var(--text-2);
+}
 .activeButtonChild__6e162 {
 	color: var(--accent-2);
 }
@@ -277,10 +283,10 @@ a[href="https://support.discord.com"] /* hide help */
 .childWrapper__01b9c {
 	background: var(--bg-3);
 }
-.container__037ed > div[style$='display: flex;'] > .guilds__2b93a {
+.container__037ed > [style$='display: flex;'] > .guilds__2b93a {
 	margin: 0;
 }
-.container__037ed > div[style$='display: flex;'] {
+.container__037ed > [style$='display: flex;'] {
 	margin: 0 0 var(--spacing) var(--spacing);
 }
 /* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background" */
@@ -299,10 +305,10 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* top corner title */
-div[class^='wordmarkWindows'] > svg {
+[class^='wordmarkWindows'] > svg {
 	display: none;
 }
-div[class^='wordmarkWindows']::after {
+[class^='wordmarkWindows']::after {
 	content: 'Midnight';
 	display: block;
 	position: relative;
@@ -316,38 +322,38 @@ div[class^='wordmarkWindows']::after {
 }
 
 /* window controls */
-div[class^='typeWindows'] {
+[class^='typeWindows'] {
 	height: 20px;
 }
-div[class^='winButton'] > svg {
+[class^='winButton'] > svg {
 	display: none;
 }
-div[class^='winButton'] {
+[class^='winButton'] {
 	background: none !important;
 	top: 0;
 	width: 20px;
 	height: 20px;
 	margin: -2px 4px 0px 0px;
 }
-div[class^='winButton']::after {
+[class^='winButton']::after {
 	content: '';
 	height: 12px;
 	width: 12px;
 	border-radius: 12px;
 }
-div[class^='winButton']:hover::after {
+[class^='winButton']:hover::after {
 	filter: brightness(0.8);
 }
-div[class^='winButton']:active::after {
+[class^='winButton']:active::after {
 	transform: scale(0.9);
 }
-div[class^='winButtonClose']::after {
+[class^='winButtonClose']::after {
 	background-color: hsl(350, 50%, 50%) !important;
 }
-div[class^='winButtonMinMax']:nth-child(3)::after {
+[class^='winButtonMinMax']:nth-child(3)::after {
 	background-color: hsl(150, 50%, 50%) !important;
 }
-div[class^='winButtonMinMax']:nth-child(4)::after {
+[class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: hsl(50, 50%, 50%) !important;
 }
 
@@ -413,8 +419,8 @@ div[class^='winButtonMinMax']:nth-child(4)::after {
 	--background-mentioned-hover: var(--mention-hover);
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
-	--background-message-highlight: hsl(var(--brand-360-hsl) / 0.08);
-	--background-message-highlight-hover: hsl(var(--brand-360-hsl) / 0.06);
+	--background-message-highlight: var(--hover);
+	--background-message-highlight-hover: var(--active);
 	--background-message-hover: var(--message-hover);
 	--background-mobile-primary: var(--bg-4);
 	--background-mobile-secondary: var(--primary-630);
