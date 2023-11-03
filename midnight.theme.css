@@ -13,6 +13,10 @@
 
 /* change colors and variables here */
 :root {
+	/* font */
+	--font-primary: 'figtree'; /* change to 'gg sans' for default discord font */
+	--font-display: 'figtree'; /* change to 'gg sans' for default discord font */
+
 	/* amount of spacing and padding */
 	--spacing: 12px;
 	/* radius of round corners */
@@ -63,10 +67,6 @@
 	--active: hsla(220, 20%, 40%, 0.2);
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
-
-	/* font */
-	--font-primary: 'figtree'; /* change to 'gg sans' for default discord font */
-	--font-display: 'figtree'; /* change to 'gg sans' for default discord font */
 
 	/* top left icon */
 	--moon-icon: block; /* change to 'none' to hide moon icon */

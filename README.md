@@ -24,8 +24,8 @@ A darkened discord theme with rounded chat and sidebars.
 
 ## server
 
-need help? want to report a bug? want to give feedback on upcoming changes? https://discord.gg/nz87hXyvcy
- 
+need help? want to report a bug? want to give feedback on upcoming changes? join <https://discord.gg/nz87hXyvcy>
+
 ## credits
 
 original design inspired by <https://github.com/schnensch0/zelk>
