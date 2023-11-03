@@ -110,7 +110,7 @@
 .message__80c10.replying_d7b6ad.selected_fd9051, .mouse-mode.full-motion .replying_d7b6ad:hover /* fix reply message hover */ {
 	background: var(--background-message-highlight-hover);
 }
-.replying_d7b6ad::before /* change reply message bar to neutral */ {
+div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutral */ {
 	background: var(--text-2);
 }
 .activeButtonChild__6e162 {
@@ -127,7 +127,9 @@
 .divider_b9338f /* unread divider */ {
 	--status-danger: var(--accent-3);
 }
-.message__80c10.mentioned__58017:before /* mention message left edge */,
+.message__80c10.mentioned__58017:before /* mention message left edge */ {
+	background: var(--accent-3);
+}
 .container__871ba.checked__6bdb0 /* settings checkbuttons */ {
 	background: var(--accent-3) !important;
 }
@@ -419,8 +421,8 @@ a[href="https://support.discord.com"] /* hide help */
 	--background-mentioned-hover: var(--mention-hover);
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
-	--background-message-highlight: var(--hover);
-	--background-message-highlight-hover: var(--active);
+	--background-message-highlight: var(--active);
+	--background-message-highlight-hover: var(--hover);
 	--background-message-hover: var(--message-hover);
 	--background-mobile-primary: var(--bg-4);
 	--background-mobile-secondary: var(--primary-630);
