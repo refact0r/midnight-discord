@@ -214,6 +214,9 @@ a[href="https://support.discord.com"] /* hide help */
 .wrapper_bd2abe.fullScreen__5263c .callContainer_cbde45 /* fullscreen vc */ {
 	margin: var(--spacing) 0 0 0;
 }
+.notice__5fd4c /* banner notice */ {
+	margin-bottom: var(--spacing);
+}
 
 /* fix padding */
 #vc-spotify-player /* vencord spotify */,
@@ -234,7 +237,8 @@ a[href="https://support.discord.com"] /* hide help */
 .container_def45c /* message request */,
 #app-mount .callContainer_cbde45 /* vc */, 
 .chat__52833 /* general chat container (for browse channels page */,
-.animatedContainer__341f6 /* server image card */ {
+.animatedContainer__341f6 /* server image card */,
+.notice__5fd4c /* banner notice */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
