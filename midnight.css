@@ -18,7 +18,7 @@
 	--accent-5: hsl(190, 80%, 30%);
 
 	/* color of green online dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
+	--online-indicator: #23a55a;
 
 	/* color of mentions and messages that mention you */
 	--mention: hsla(190, 80%, 52%, 0.1);
@@ -150,6 +150,9 @@ path[fill='rgba(35, 165, 90, 1)'] {
 /* change online indicator color */
 rect[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
+}
+.status__1c26d {
+	background-color: var(--online-indicator) !important;
 }
 
 /* separate header bar */
