@@ -423,6 +423,11 @@ a[href="https://support.discord.com"] /* hide help */
 	filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
 }
 
+/* horizontal server list fix */
+#app-mount .app_b1f720 .base__3e6af {
+	top: calc(var(--server-container) + var(--spacing)) !important;
+}
+
 .theme-dark {
 	--activity-card-background: var(--primary-700);
 	--android-navigation-bar-background: var(--primary-830);
