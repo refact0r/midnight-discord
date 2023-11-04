@@ -79,7 +79,8 @@
 .theme-dark .container__7590f /* browse channels inner */,
 .chat__52833.background_cb0a80 /* server guide body */,
 .theme-dark .scrollerContainer_bf5dbd /* channels and roles customize */,
-.shop_b31ed2 /* shop */ {
+.shop_b31ed2 /* shop */,
+.wrapper_bd2abe.minimum_ebf000 /* private call */ {
 	background: var(--bg-4);
 }
 .mainCard__8a660 /* forum post */ {
@@ -174,6 +175,9 @@ rect[fill='#23a55a'] {
 	height: 48px;
 	border-radius: var(--roundness) var(--roundness) 0 0;
 }
+.wrapper_bd2abe.minimum_ebf000 ~ .content__1a4fe .container__93316::before /* remove when in private call */ {
+	display: none;
+}
 
 /* rearrange toolbar */
 a[href="https://support.discord.com"] /* hide help */
@@ -215,12 +219,12 @@ a[href="https://support.discord.com"] /* hide help */
 	width: var(--spacing);
 }
 .wrapper_bd2abe.fullScreen__5263c .callContainer_cbde45 /* fullscreen vc */ {
-	margin: var(--spacing) 0 0 0;
+	margin-top: var(--spacing);
 }
-.notice__5fd4c /* banner notice */ {
+.notice__5fd4c /* banner notice */,
+.wrapper_bd2abe.minimum_ebf000 /* private call */ {
 	margin-bottom: var(--spacing);
 }
-
 /* fix padding */
 #vc-spotify-player /* vencord spotify */,
 .container_d667ff /* vc panel */,
@@ -241,7 +245,9 @@ a[href="https://support.discord.com"] /* hide help */
 #app-mount .callContainer_cbde45 /* vc */, 
 .chat__52833 /* general chat container (for browse channels page */,
 .animatedContainer__341f6 /* server image card */,
-.notice__5fd4c /* banner notice */ {
+.notice__5fd4c /* banner notice */,
+.wrapper_bd2abe.minimum_ebf000, /* private call */
+.wrapper_bd2abe.minimum_ebf000 ~ .content__1a4fe /* chat under private call */ {
 	border-radius: var(--roundness);
 	overflow: hidden;
 }
