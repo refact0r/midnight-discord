@@ -8,12 +8,13 @@ A darkened discord theme with rounded chat and sidebars.
 
 ## install
 
-*IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!*
+> [!IMPORTANT]  
+> make sure to enable dark mode in discord settings for the theme to apply properly!!
 
 ### betterdiscord (or client with local theme folder)
 
 1. Download `midnight.theme.css` from <https://betterdiscord.app/theme/midnight> or this repo.
-2. Put the file into your betterdiscord (or other client) theme folder.
+2. Put the file into your theme folder.
 3. (optional) Customize the variables in `midnight.theme.css`.
 
 ### vencord (or client without local theme folder)
