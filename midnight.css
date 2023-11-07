@@ -6,6 +6,12 @@
 	/* radius of round corners */
 	--roundness: 16px;
 
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* color of green online dot, change to #23a55a for default green */
+	--online-indicator: var(--accent-2);
+
 	/* color of links */
 	--accent-1: hsl(190, 80%, 60%);
 	/* color of unread dividers and some indicators */
@@ -16,9 +22,6 @@
 	--accent-4: hsl(190, 80%, 36%);
 	/* color of accented buttons when clicked */
 	--accent-5: hsl(190, 80%, 30%);
-
-	/* color of green online dot, change to #23a55a for default green */
-	--online-indicator: #23a55a;
 
 	/* color of mentions and messages that mention you */
 	--mention: hsla(190, 80%, 52%, 0.1);
@@ -52,13 +55,16 @@
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
 
-	/* font */
-	--font-primary: 'figtree'; /* change to 'gg sans' for default discord font */
-	--font-display: 'figtree'; /* change to 'gg sans' for default discord font */
-
 	/* top left icon */
 	--moon-icon: block; /* change to 'none' to hide moon icon */
 	--discord-icon: none; /* change to 'block' to show default discord icon */
+}
+
+:root {
+	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial,
+		sans-serif;
+	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial,
+		sans-serif;
 }
 
 /* modify colors */
@@ -152,7 +158,8 @@ path[fill='rgba(35, 165, 90, 1)'] {
 rect[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
 }
-.status__1c26d {
+.status__1c26d[style='background-color: var(--green-360);'],
+.status__1c26d[style='background-color: currentcolor;'] {
 	background-color: var(--online-indicator) !important;
 }
 
