@@ -24,6 +24,10 @@
 	/* color of green online dot, change to #23a55a for default green */
 	--online-indicator: var(--accent-2);
 
+	/* top left icon */
+	--moon-icon: block; /* change to 'none' to hide moon icon */
+	--discord-icon: none; /* change to 'block' to show default discord icon */
+
 	/* color of links */
 	--accent-1: hsl(190, 80%, 60%);
 	/* color of unread dividers and some indicators */
@@ -66,8 +70,4 @@
 	--active: hsla(220, 20%, 40%, 0.2);
 	/* color of messages when hovered */
 	--message-hover: hsla(220, 0%, 0%, 0.1);
-
-	/* top left icon */
-	--moon-icon: block; /* change to 'none' to hide moon icon */
-	--discord-icon: none; /* change to 'block' to show default discord icon */
 }
