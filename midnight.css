@@ -528,7 +528,7 @@ a[href="https://support.discord.com"] /* hide help */
 	--button-positive-background-hover: var(--green-500);
 	--button-secondary-background: var(--bg-2);
 	--button-secondary-background-active: var(--text-5);
-	--button-secondary-background-disabled: red;
+	--button-secondary-background-disabled: var(--bg-2);
 	--button-secondary-background-hover: var(--bg-1);
 	--card-gradient-bg: hsl(var(--black-500-hsl) / 0.4);
 	--card-gradient-pressed-bg: hsl(var(--black-500-hsl) / 0.5);
