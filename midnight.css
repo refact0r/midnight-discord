@@ -346,10 +346,12 @@ a[href="https://support.discord.com"] /* hide help */
 	color: var(--text-5);
 }
 
-/* window controls */
+/* top bar height */
 [class^='typeWindows'] {
-	height: 20px;
+	height: var(--spacing) + 8px;
 }
+
+/* window controls */
 [class^='winButton'] > svg {
 	display: none;
 }
