@@ -210,7 +210,7 @@ a[href="https://support.discord.com"] /* hide help */
 
 /* add spacing */
 .base__3e6af /* outside edges */ {
-	margin: 0 var(--spacing) var(--spacing) var(--spacing);
+	margin: 0 var(--spacing) var(--spacing) 0;
 }
 .sidebar_ded4b5 /* channel list and user panel */,
 .content__1a4fe /* between chat and member list */ {
@@ -281,6 +281,9 @@ a[href="https://support.discord.com"] /* hide help */
 }
 #app-mount .scroller__3d071 {
 	padding: 12px 0;
+}
+.base__3e6af {
+	margin-left: var(--spacing);
 }
 .guilds__2b93a::after /* add bottom scroll shadow */,
 .members__9f47b::after {
