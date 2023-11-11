@@ -292,7 +292,7 @@ a[href="https://support.discord.com"] /* hide help */
 	background: linear-gradient(transparent, var(--bg-4));
 	bottom: 0px;
 	width: 100%;
-	height: 20px;
+	height: 15px;
 	pointer-events: none;
 }
 .guilds__2b93a::before /* add top scroll shadow */ {
@@ -301,7 +301,7 @@ a[href="https://support.discord.com"] /* hide help */
 	background: linear-gradient(var(--bg-4), transparent);
 	top: 0px;
 	width: 100%;
-	height: 20px;
+	height: 15px;
 	pointer-events: none;
 	z-index: 2;
 }
