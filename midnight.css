@@ -385,10 +385,10 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* add moon */
-.childWrapper__01b9c > svg;not(.favoriteIcon__91c06) {
+.childWrapper__01b9c > svg:not(.favoriteIcon__91c06) {
 	display: var(--discord-icon);
 }
-.childWrapper__01b9c:has(> svg;not(.favoriteIcon__91c06))::before {
+.childWrapper__01b9c:has(> svg:not(.favoriteIcon__91c06))::before {
 	content: '';
 	display: var(--moon-icon);
 	position: absolute;
