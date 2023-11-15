@@ -385,10 +385,10 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* add moon */
-.tutorialContainer__890ea .childWrapper__01b9c > svg {
+.childWrapper__01b9c > svg {
 	display: var(--discord-icon);
 }
-.tutorialContainer__890ea .childWrapper__01b9c:has(> svg)::before {
+.childWrapper__01b9c:has(> svg)::before {
 	content: '';
 	display: var(--moon-icon);
 	position: absolute;
@@ -397,14 +397,12 @@ a[href="https://support.discord.com"] /* hide help */
 	background: var(--text-4);
 	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
 }
-.tutorialContainer__890ea .wrapper_d281dd:hover .childWrapper__01b9c::before {
+.wrapper_d281dd:hover .childWrapper__01b9c::before {
 	transition: background-color 0.15s ease-out, transform 0.3s ease-out;
 	transform: rotate(0deg) scale(1);
 }
-.tutorialContainer__890ea .wrapper_d281dd:hover > .childWrapper__01b9c::before,
-.tutorialContainer__890ea
-	.wrapper_d281dd.selected_f5ec8e
-	> .childWrapper__01b9c::before {
+.wrapper_d281dd:hover > .childWrapper__01b9c::before,
+.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
 	background: var(--text-1);
 	transform: rotate(-360deg) scale(0.8);
 }
