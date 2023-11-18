@@ -329,6 +329,9 @@ a[href="https://support.discord.com"] /* hide help */
 }
 
 /* top corner title */
+[class^='wordmarkWindows'] {
+	padding: 4px var(--spacing);
+}
 [class^='wordmarkWindows'] > svg {
 	display: none;
 }
@@ -336,18 +339,19 @@ a[href="https://support.discord.com"] /* hide help */
 	content: 'Midnight';
 	display: block;
 	position: relative;
-	width: 200px;
 	height: 16px;
 	line-height: 16px;
-	font-family: var(--font-headline);
-	font-size: 10px;
-	font-weight: 600;
+	font-family: var(--font);
+	font-size: 13px;
+	font-weight: 900;
 	color: var(--text-5);
+	transform: scaleX(1.2);
+	margin-left: 6px;
 }
 
 /* top bar height */
 [class^='typeWindows'] {
-	height: var(--spacing) + 8px;
+	height: calc(var(--spacing) + 8px);
 }
 
 /* window controls */
@@ -357,9 +361,12 @@ a[href="https://support.discord.com"] /* hide help */
 [class^='winButton'] {
 	background: none !important;
 	top: 0;
-	width: 20px;
-	height: 20px;
+	width: calc(var(--spacing) + 8px);
+	height: calc(var(--spacing) + 8px);
 	margin: -2px 4px 0px 0px;
+}
+[class^='winButtonClose'] {
+	margin: -2px calc(var(--spacing) - 4px) 0px 0px;
 }
 [class^='winButton']::after {
 	content: '';
