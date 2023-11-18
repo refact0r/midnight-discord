@@ -16,7 +16,7 @@
 	/* amount of spacing and padding */
 	--spacing: 12px;
 
-	/* radius of big panel outer corners */
+	/* big panels outer corners */
 	--roundness-xl: 22px;
 	/* popout panels */
 	--roundness-l: 20px;
