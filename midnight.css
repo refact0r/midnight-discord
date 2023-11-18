@@ -269,6 +269,33 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: 0 0 var(--roundness) var(--roundness);
 }
 
+/* More rounded corners*/
+.link__95dc0, /* Channels */
+.layout_bb8e67, /* Members */
+.interactive__776ee, /* Friends list */
+.content_b60865, /* Member connected to the voice channel*/
+.embed_d3cbe3, /* Embeds */
+.side_b4b3f6 .item__48dda, /* Settings */
+.button_afdfd9, /* Buttons */
+.wrapper_f46140, /* Mentions */
+.messagesPopoutWrap_b3b384, /* Inbox, Pinned Messages Pop ups */
+.container__8261a, /* Threads Pop up */
+.menu_dc52c6, /* Pop ups */
+.menu_dc52c6 .item__183e8d, /* Server option list */
+.scrollableContainer__33e06 /* Scrollable container (Text Input where you type to send messages) */
+.searchBar_e0c60b, /* Search bar */
+.contentWrapper__321ed, /* Emoji, Sticker, Gif pickers */
+.userProfileOuter__46bb7, /* User profile */
+.overlayBackground__86b78 /* Overlay */{
+	border-radius: var(--roundness);
+}
+.roundedBanner__9fa0a {
+    border-radius: 16px 16px 0 0;
+}
+.userPopoutInner_f545a3:before {
+    border-radius: 16px;
+}
+
 /* separate guilds panel background */
 .guilds__2b93a {
 	background: var(--bg-4);
