@@ -290,7 +290,6 @@ a[href="https://support.discord.com"] /* hide help */
 .contentWrapper__321ed /* emoji, sticker, gif pickers */ {
 	border-radius: var(--roundness-l);
 }
-
 .roundedBanner__9fa0a /* user profile popout top */ {
 	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px)
 		0 0;
@@ -302,7 +301,6 @@ a[href="https://support.discord.com"] /* hide help */
 .overlayBackground__86b78 /* user profile inner */ {
 	border-radius: var(--roundness-s);
 }
-
 .menu_dc52c6 /* general popouts */,
 .embed_d3cbe3 /* embeds */,
 .mediaAttachmentsContainer_edba75 /* image container */,
@@ -313,7 +311,6 @@ a[href="https://support.discord.com"] /* hide help */
 .peopleListItem_d14722:hover /* online list friends */ {
 	border-radius: var(--roundness-m);
 }
-
 .scrollableContainer__33e06 /* message bar */,
 .select__0eb48 /* bot dropdown select */,
 .layout_bb8e67 /* members */,
@@ -324,15 +321,13 @@ a[href="https://support.discord.com"] /* hide help */
 .item_b7fb7e .radioBar__40e1b /* settings radiobutton bars */ {
 	border-radius: var(--roundness-s);
 }
-
-.scrollableContainer__33e06.hasConnectedBar__277ab {
+.scrollableContainer__33e06.hasConnectedBar__277ab /* fix message bar with reply bar */ {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
 .replyBar_b64d74 {
 	border-radius: var(--roundness-s) var(--roundness-s) 0 0;
 }
-
 .link__95dc0 /* channels */,
 .content_b60865 /* member connected to vc */,
 .side_b4b3f6 .item__48dda /* settings tabs */,
@@ -341,12 +336,14 @@ button.button_afdfd9 /* small buttons */,
 .item__183e8 /* general popout buttons */ {
 	border-radius: var(--roundness-xs);
 }
-
 .wrapper_f46140 /* mentions */,
 .searchBar_e0c60b /* search bar */,
 .searchBar_e4ea2a .searchBarComponent__22760 /* find conversation search bar */,
 .topPill__0cdf1 .item__48dda /* friend online/categories */ {
 	border-radius: var(--roundness-xxs);
+}
+#app-mount .centerButton__3205b /* fix vc buttons */ {
+	border-radius: 50%;
 }
 
 /* separate guilds panel background */
@@ -513,6 +510,10 @@ button.button_afdfd9 /* small buttons */,
 .replying_d7b6ad::before {
 	width: 4px;
 	border-radius: 4px;
+}
+/* modify embeds */
+.embedFull__8dc21 {
+	border: 3px solid var(--bg-2);
 }
 
 /* make emoji selector same color */
