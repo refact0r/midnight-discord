@@ -284,7 +284,6 @@ a[href="https://support.discord.com"] /* hide help */
 /* more rounded corners */
 .messagesPopoutWrap_b3b384 /* inbox, pinned messages popout */,
 .container__8261a /* thread popout */,
-.menu_dc52c6 /* general popouts */,
 .menu_dc52c6 .item__183e8d /* server option popout */,
 .userPopoutOuter_d739b2 /* user profile popout */,
 .root_ba16f0 /* user profile modal */,
@@ -304,6 +303,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-s);
 }
 
+.menu_dc52c6 /* general popouts */,
 .embed_d3cbe3 /* embeds */,
 .mediaAttachmentsContainer_edba75 /* image container */,
 .oneByOneGridSingle__01756 /* image container single */,
@@ -337,7 +337,8 @@ a[href="https://support.discord.com"] /* hide help */
 .content_b60865 /* member connected to vc */,
 .side_b4b3f6 .item__48dda /* settings tabs */,
 button.button_afdfd9 /* small buttons */,
-.container__7712a /* friend searchbar */ {
+.container__7712a /* friend searchbar */,
+.item__183e8 /* general popout buttons */ {
 	border-radius: var(--roundness-xs);
 }
 
