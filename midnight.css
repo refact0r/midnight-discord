@@ -118,7 +118,9 @@
 .chat__52833 /* chat + member list */,
 .sidebar_ded4b5 /* channel sidebar */,
 .privateChannels__93473 .scroller__4b984 /* dms list inner */,
-.theme-dark .innerHeader_afca2f:after /* channels and roles header shadow */ {
+.theme-dark .innerHeader_afca2f:after /* channels and roles header shadow */,
+.channelTextArea__2e60f /* message bar underneath */,
+.attachedBars_da3c74 /* reply bar underneath */ {
 	background: none;
 }
 .selected__0b1ad .header__104ca, .clickable__2d589 .header__104ca:hover /* server name hover */ {
@@ -286,6 +288,7 @@ a[href="https://support.discord.com"] /* hide help */
 .menu_dc52c6 /* general popouts */,
 .menu_dc52c6 .item__183e8d /* server option popout */,
 .userPopoutOuter_d739b2 /* user profile popout */,
+.root_ba16f0 /* user profile modal */,
 .contentWrapper__321ed /* emoji, sticker, gif pickers */ {
 	border-radius: var(--roundness-l);
 }
@@ -294,7 +297,8 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px)
 		0 0;
 }
-.userPopoutInner_f545a3:before /* user profile popout bottom */ {
+.userPopoutInner_f545a3:before /* user profile popout bottom */,
+.userProfileModalInner__7c87d:before /* user profile modal bottom */ {
 	border-radius: calc(var(--roundness-l) - 4px);
 }
 .overlayBackground__86b78 /* user profile inner */ {
@@ -320,6 +324,14 @@ a[href="https://support.discord.com"] /* hide help */
 .item_b7fb7e /* settings radiobutton bars */,
 .item_b7fb7e .radioBar__40e1b /* settings radiobutton bars */ {
 	border-radius: var(--roundness-s);
+}
+
+.scrollableContainer__33e06.hasConnectedBar__277ab {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.replyBar_b64d74 {
+	border-radius: var(--roundness-s) var(--roundness-s) 0 0;
 }
 
 .link__95dc0 /* channels */,
