@@ -11,12 +11,22 @@
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
-/* change colors and variables here */
+/* customize things here */
 :root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* color of green online dot, change to #23a55a for default green */
+	--online-indicator: var(--accent-2);
+
+	/* top left icon */
+	--moon-icon: block; /* change to none to hide moon icon */
+	--discord-icon: none; /* change to block to show default discord icon */
+
 	/* amount of spacing and padding */
 	--spacing: 12px;
 
-	/* big panels outer corners */
+	/* roundness of big panel outer corners */
 	--roundness-xl: 22px;
 	/* popout panels */
 	--roundness-l: 20px;
@@ -29,16 +39,6 @@
 	/* searchbar, small elements */
 	--roundness-xxs: 8px;
 
-	/* font, change to 'gg sans' for default discord font*/
-	--font: 'figtree';
-
-	/* color of green online dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
-
-	/* top left icon */
-	--moon-icon: block; /* change to 'none' to hide moon icon */
-	--discord-icon: none; /* change to 'block' to show default discord icon */
-
 	/* color of links */
 	--accent-1: hsl(190, 80%, 60%);
 	/* color of unread dividers and some indicators */
@@ -49,7 +49,6 @@
 	--accent-4: hsl(190, 80%, 36%);
 	/* color of accented buttons when clicked */
 	--accent-5: hsl(190, 80%, 30%);
-
 	/* color of mentions and messages that mention you */
 	--mention: hsla(190, 80%, 52%, 0.1);
 	/* color of mentions and messages that mention you when hovered */
@@ -74,7 +73,6 @@
 	--bg-3: hsl(220, 15%, 13%);
 	/* main background color */
 	--bg-4: hsl(220, 15%, 10%);
-
 	/* color of channels and icon buttons when hovered */
 	--hover: hsla(230, 20%, 40%, 0.1);
 	/* color of channels and icon buttons when clicked or selected */
