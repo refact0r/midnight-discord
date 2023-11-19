@@ -365,24 +365,27 @@ button.button_afdfd9 /* small buttons */,
 	margin-left: var(--spacing);
 }
 .guilds__2b93a::after /* add bottom scroll shadow */,
-.members__9f47b::after {
+.membersWrap__90226::after {
 	content: '';
 	position: absolute;
-	background: linear-gradient(transparent, var(--bg-4));
-	bottom: 0px;
-	width: 100%;
-	height: 15px;
+	background: linear-gradient(transparent 85%, var(--bg-4) 100%);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
 	pointer-events: none;
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 .guilds__2b93a::before /* add top scroll shadow */ {
 	content: '';
 	position: absolute;
-	background: linear-gradient(var(--bg-4), transparent);
-	top: 0px;
-	width: 100%;
-	height: 15px;
+	background: linear-gradient(var(--bg-4) 0%, transparent 15%);
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
 	pointer-events: none;
-	z-index: 2;
+	z-index: 1;
 }
 .childWrapper__01b9c {
 	background: var(--bg-3);
