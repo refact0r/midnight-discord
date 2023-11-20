@@ -513,7 +513,10 @@ button.button_afdfd9 /* small buttons */,
 }
 /* modify embeds */
 .embedFull__8dc21 {
-	border: 3px solid var(--bg-2);
+	border: 4px solid var(--bg-2);
+	border-top-color: transparent !important;
+	border-bottom-color: transparent !important;
+	border-right-color: transparent !important;
 }
 
 /* make emoji selector same color */
