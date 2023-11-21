@@ -142,7 +142,8 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 .expandedFolderIconWrapper__458cf > svg {
 	color: var(--accent-2) !important;
 }
-.divider_b9338f /* unread divider */ {
+.divider_b9338f /* unread divider */,
+.mention__1afd3 /* NEW unread pill */ {
 	--status-danger: var(--accent-3);
 }
 .message__80c10.mentioned__58017:before /* mention message left edge */ {
@@ -308,7 +309,8 @@ a[href="https://support.discord.com"] /* hide help */
 .imageContainer__04362 .imageWrapper_fd6587 /* gif wrapper */,
 .markup_a7e664 code /* code block */,
 .itemCard__1f162 /* friend activity */,
-.peopleListItem_d14722:hover /* online list friends */ {
+.peopleListItem_d14722:hover /* online list friends */,
+.withTagAsButton_cc125f:hover, .withTagless__98b7d:hover /* user panel username */ {
 	border-radius: var(--roundness-m);
 }
 .scrollableContainer__33e06 /* message bar */,
