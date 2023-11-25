@@ -288,7 +288,9 @@ a[href="https://support.discord.com"] /* hide help */
 .menu_dc52c6 .item__183e8d /* server option popout */,
 .userPopoutOuter_d739b2 /* user profile popout */,
 .root_ba16f0 /* user profile modal */,
-.contentWrapper__321ed /* emoji, sticker, gif pickers */ {
+.contentWrapper__321ed /* emoji, sticker, gif pickers */,
+.root_a28985 /* edit modal */,
+.footer__89240 /* edit modal footer */ {
 	border-radius: var(--roundness-l);
 }
 .roundedBanner__9fa0a /* user profile popout top */ {
@@ -320,7 +322,8 @@ a[href="https://support.discord.com"] /* hide help */
 .container__767d1 /* thread link */,
 .input_d266e7 /* settings inputs */,
 .item_b7fb7e /* settings radiobutton bars */,
-.item_b7fb7e .radioBar__40e1b /* settings radiobutton bars */ {
+.item_b7fb7e .radioBar__40e1b /* settings radiobutton bars */,
+.tooltip__01384 /* server hover name */ {
 	border-radius: var(--roundness-s);
 }
 .scrollableContainer__33e06.hasConnectedBar__277ab /* fix message bar with reply bar */ {
@@ -335,7 +338,9 @@ a[href="https://support.discord.com"] /* hide help */
 .side_b4b3f6 .item__48dda /* settings tabs */,
 button.button_afdfd9 /* small buttons */,
 .container__7712a /* friend searchbar */,
-.item__183e8 /* general popout buttons */ {
+.item__183e8 /* general popout buttons */,
+.icon_c1b424 /* streaming icon */,
+#vc-spotify-album-image {
 	border-radius: var(--roundness-xs);
 }
 .wrapper_f46140 /* mentions */,
