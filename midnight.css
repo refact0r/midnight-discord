@@ -535,11 +535,11 @@ button.button_afdfd9 /* small buttons */,
 .wrapper__7bcde .link__95dc0 /* channels */,
 .container__4f20e /* members */,
 .channel_c21703 /* dms */,
-.item__48dda /* settings */ {
+.side_b4b3f6 .item__48dda /* settings */ {
 	transition: margin-left var(--hover-push);
 }
 .wrapper__7bcde:hover .link__95dc0,
-.item__48dda:hover {
+.side_b4b3f6 .item__48dda:hover {
 	margin-left: 10px;
 }
 .container__4f20e:hover,
