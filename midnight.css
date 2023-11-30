@@ -5,7 +5,7 @@
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'figtree';
 
-	/* color of green online dot, change to #23a55a for default green */
+	/* color of online status dot, change to #23a55a for default green */
 	--online-indicator: var(--accent-2);
 
 	/* top left icon */
@@ -15,66 +15,46 @@
 	/* amount of spacing and padding */
 	--spacing: 12px;
 
-	/* roundness of big panel outer corners */
-	--roundness-xl: 22px;
-	/* popout panels */
-	--roundness-l: 20px;
-	/* smaller panels, images, embeds */
-	--roundness-m: 16px;
-	/* members, settings inputs */
-	--roundness-s: 12px;
-	/* channels, buttons*/
-	--roundness-xs: 10px;
-	/* searchbar, small elements */
-	--roundness-xxs: 8px;
+	/* animations */
+	--hover-push: 0.2s ease;
 
-	/* color of links */
-	--accent-1: hsl(190, 80%, 60%);
-	/* color of unread dividers and some indicators */
-	--accent-2: hsl(190, 80%, 48%);
-	/* color of accented buttons */
-	--accent-3: hsl(190, 80%, 42%);
-	/* color of accented buttons when hovered */
-	--accent-4: hsl(190, 80%, 36%);
-	/* color of accented buttons when clicked */
-	--accent-5: hsl(190, 80%, 30%);
-	/* color of mentions and messages that mention you */
-	--mention: hsla(190, 80%, 52%, 0.1);
-	/* color of mentions and messages that mention you when hovered */
-	--mention-hover: hsla(190, 80%, 52%, 0.05);
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
 
-	/* color of bright text on colored buttons */
-	--text-1: hsl(220, 40%, 90%);
-	/* color of headings and important text */
-	--text-2: hsl(220, 25%, 70%);
-	/* color of normal text */
-	--text-3: hsl(220, 15%, 60%);
-	/* color of icon buttons and channels */
-	--text-4: hsl(220, 15%, 40%);
-	/* color of muted channels/chats and timestamps */
-	--text-5: hsl(220, 15%, 25%);
+	/* accent colors */
+	--accent-1: hsl(190, 80%, 60%); /* links */
+	--accent-2: hsl(190, 80%, 48%); /* general unread/mention elements */
+	--accent-3: hsl(190, 80%, 42%); /* accent buttons */
+	--accent-4: hsl(190, 80%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 80%, 30%); /* accent buttons when clicked */
+	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
 
-	/* color of dark buttons when clicked */
-	--bg-1: hsl(220, 15%, 20%);
-	/* color of dark buttons */
-	--bg-2: hsl(220, 15%, 16%);
-	/* color of spacing around panels and secondary elements */
-	--bg-3: hsl(220, 15%, 13%);
-	/* main background color */
-	--bg-4: hsl(220, 15%, 10%);
-	/* color of channels and icon buttons when hovered */
-	--hover: hsla(230, 20%, 40%, 0.1);
-	/* color of channels and icon buttons when clicked or selected */
-	--active: hsla(220, 20%, 40%, 0.2);
-	/* color of messages when hovered */
-	--message-hover: hsla(220, 0%, 0%, 0.1);
+	/* text colors */
+	--text-1: hsl(220, 40%, 90%); /* bright text on colored elements */
+	--text-2: hsl(220, 25%, 70%); /* headings and important text */
+	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
+	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
+	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
 }
 
 :root {
-	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial,
-		sans-serif;
-	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial,
-		sans-serif;
+	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* modify colors */
@@ -294,8 +274,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-l);
 }
 .roundedBanner__9fa0a /* user profile popout top */ {
-	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px)
-		0 0;
+	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px) 0 0;
 }
 .userPopoutInner_f545a3:before /* user profile popout bottom */,
 .userProfileModalInner__7c87d:before /* user profile modal bottom */ {
@@ -540,6 +519,20 @@ button.button_afdfd9 /* small buttons */,
 	top: calc(var(--server-container) + var(--spacing)) !important;
 }
 
+/* experimental transitions */
+.wrapper__7bcde .link__95dc0 /* channels */,
+.container__4f20e /* members */,
+.channel_c21703 /* dms */ {
+	transition: margin-left var(--hover-push);
+}
+.wrapper__7bcde:hover .link__95dc0 {
+	margin-left: 10px;
+}
+.container__4f20e:hover,
+.channel_c21703:hover {
+	margin-left: 18px;
+}
+
 .theme-dark {
 	--activity-card-background: var(--primary-700);
 	--android-navigation-bar-background: var(--primary-830);
@@ -583,9 +576,7 @@ button.button_afdfd9 /* small buttons */,
 	--border-faint: hsl(var(--white-500-hsl) / 0.03);
 	--border-strong: hsl(var(--white-500-hsl) / 0.16);
 	--border-subtle: hsl(var(--white-500-hsl) / 0.08);
-	--bug-reporter-modal-submitting-background: hsl(
-		var(--primary-800-hsl) / 0.6
-	);
+	--bug-reporter-modal-submitting-background: hsl(var(--primary-800-hsl) / 0.6);
 	--button-creator-revenue-background: var(--teal-430);
 	--button-danger-background: var(--red-430);
 	--button-danger-background-active: var(--red-530);
@@ -660,9 +651,7 @@ button.button_afdfd9 /* small buttons */,
 	--deprecated-card-bg: hsl(var(--primary-700-hsl) / 0.6);
 	--deprecated-card-editable-bg: hsl(var(--primary-700-hsl) / 0.3);
 	--deprecated-quickswitcher-input-background: var(--primary-400);
-	--deprecated-quickswitcher-input-placeholder: hsl(
-		var(--white-500-hsl) / 0.3
-	);
+	--deprecated-quickswitcher-input-placeholder: hsl(var(--white-500-hsl) / 0.3);
 	--deprecated-store-bg: var(--primary-600);
 	--deprecated-text-input-bg: var(--bg-3);
 	--deprecated-text-input-border: hsl(var(--black-500-hsl) / 0.3);
@@ -673,9 +662,7 @@ button.button_afdfd9 /* small buttons */,
 	--divider-strong: hsl(var(--white-500-hsl) / 0.16);
 	--divider-subtle: hsl(var(--white-500-hsl) / 0.08);
 	--focus-primary: var(--blue-345);
-	--forum-post-extra-media-count-container-background: hsl(
-		var(--primary-660-hsl) / 0.8
-	);
+	--forum-post-extra-media-count-container-background: hsl(var(--primary-660-hsl) / 0.8);
 	--forum-post-tag-background: hsl(var(--primary-660-hsl) / 0.9);
 	--guild-notifications-bottom-sheet-pill-background: var(--primary-700);
 	--header-muted: red;
@@ -727,12 +714,8 @@ button.button_afdfd9 /* small buttons */,
 	--profile-gradient-message-input-border: hsl(var(--primary-500-hsl) / 0.48);
 	--profile-gradient-note-background: hsl(var(--black-500-hsl) / 0.3);
 	--profile-gradient-overlay: hsl(var(--black-500-hsl) / 0.6);
-	--profile-gradient-overlay-synced-with-user-theme: hsl(
-		var(--black-500-hsl) / 0.8
-	);
-	--profile-gradient-profile-body-background-hover: hsl(
-		var(--white-500-hsl) / 0.16
-	);
+	--profile-gradient-overlay-synced-with-user-theme: hsl(var(--black-500-hsl) / 0.8);
+	--profile-gradient-profile-body-background-hover: hsl(var(--white-500-hsl) / 0.16);
 	--profile-gradient-role-pill-background: hsl(var(--primary-660-hsl) / 0.5);
 	--profile-gradient-role-pill-border: hsl(var(--white-500-hsl) / 0.2);
 	--profile-gradient-section-box: hsl(var(--black-500-hsl) / 0.45);
@@ -744,12 +727,8 @@ button.button_afdfd9 /* small buttons */,
 	--redesign-button-danger-background: var(--red-430);
 	--redesign-button-danger-pressed-background: var(--red-460);
 	--redesign-button-danger-text: var(--white-500);
-	--redesign-button-overlay-alpha-background: hsl(
-		var(--black-500-hsl) / 0.54
-	);
-	--redesign-button-overlay-alpha-pressed-background: hsl(
-		var(--black-500-hsl) / 0.64
-	);
+	--redesign-button-overlay-alpha-background: hsl(var(--black-500-hsl) / 0.54);
+	--redesign-button-overlay-alpha-pressed-background: hsl(var(--black-500-hsl) / 0.64);
 	--redesign-button-overlay-alpha-text: var(--white-500);
 	--redesign-button-overlay-background: var(--white-500);
 	--redesign-button-overlay-pressed-background: var(--primary-230);
@@ -759,21 +738,13 @@ button.button_afdfd9 /* small buttons */,
 	--redesign-button-positive-text: var(--white-500);
 	--redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
 	--redesign-button-primary-alt-border: var(--brand-360);
-	--redesign-button-primary-alt-on-blurple-background: hsl(
-		var(--brand-530-hsl) / 0
-	);
+	--redesign-button-primary-alt-on-blurple-background: hsl(var(--brand-530-hsl) / 0);
 	--redesign-button-primary-alt-on-blurple-border: var(--white-500);
-	--redesign-button-primary-alt-on-blurple-pressed-background: var(
-		--brand-530
-	);
+	--redesign-button-primary-alt-on-blurple-pressed-background: var(--brand-530);
 	--redesign-button-primary-alt-on-blurple-pressed-border: var(--brand-360);
 	--redesign-button-primary-alt-on-blurple-text: var(--white-500);
-	--redesign-button-primary-alt-pressed-background: hsl(
-		var(--brand-700-hsl) / 0.16
-	);
-	--redesign-button-primary-alt-pressed-border: hsl(
-		var(--brand-400-hsl) / 0.5
-	);
+	--redesign-button-primary-alt-pressed-background: hsl(var(--brand-700-hsl) / 0.16);
+	--redesign-button-primary-alt-pressed-border: hsl(var(--brand-400-hsl) / 0.5);
 	--redesign-button-primary-alt-pressed-text: var(--brand-360);
 	--redesign-button-primary-alt-text: var(--brand-360);
 	--redesign-button-primary-background: var(--brand-500);
@@ -841,9 +812,7 @@ button.button_afdfd9 /* small buttons */,
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
 	--theme-locked-blur-fallback: hsl(var(--primary-700-hsl) / 0.96);
-	--user-profile-header-overflow-background: hsl(
-		var(--primary-700-hsl) / 0.5
-	);
+	--user-profile-header-overflow-background: hsl(var(--primary-700-hsl) / 0.5);
 	--voice-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
 	--voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
 	--white: var(--white-500);
@@ -866,9 +835,7 @@ button.button_afdfd9 /* small buttons */,
 	--green-500: var(--accent-4);
 	--green-530: var(--accent-5);
 
-	--brand-experiment-15a: var(
-		--mention
-	); /* background of reacted reactions */
+	--brand-experiment-15a: var(--mention); /* background of reacted reactions */
 
 	--primary-500: var(--bg-2); /* progress bars */
 	--primary-600: var(--bg-3); /* delete message preview */
