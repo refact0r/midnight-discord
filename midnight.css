@@ -111,7 +111,7 @@
 div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutral */ {
 	background: var(--text-2);
 }
-.activeButtonChild__6e162 {
+.activeButtonChild__6e162 /* send button */ {
 	color: var(--accent-2);
 }
 .container_ca50b9 /* user panel button strikethroughs */,
@@ -120,7 +120,7 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 	--status-danger: var(--accent-2);
 }
 .expandedFolderIconWrapper__458cf > svg {
-	color: var(--accent-2) !important;
+	color: var(--accent-3) !important;
 }
 .divider_b9338f /* unread divider */,
 .mention__1afd3 /* NEW unread pill */ {
@@ -144,6 +144,10 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 .lookFilled__19298.colorBrand_b2253e .defaultColor__77578 /* vc choose an activity button */ {
 	color: var(--white-500);
+}
+::selection {
+	background: var(--accent-4);
+	color: white;
 }
 
 /* change online indicator color */
@@ -319,7 +323,8 @@ button.button_afdfd9 /* small buttons */,
 .container__7712a /* friend searchbar */,
 .item__183e8 /* general popout buttons */,
 .icon_c1b424 /* streaming icon */,
-#vc-spotify-album-image {
+#vc-spotify-album-image,
+.background__584e7 /* settings nitro tab selected */ {
 	border-radius: var(--roundness-xs);
 }
 .wrapper_f46140 /* mentions */,
@@ -379,12 +384,12 @@ button.button_afdfd9 /* small buttons */,
 .container__037ed > [style$='display: flex;'] {
 	margin: 0 0 var(--spacing) var(--spacing);
 }
-/* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background" */
-.expandedFolderBackground__1bec6 /* expanded folder bg */,
-.folder__17546 /* folder circle when expanded */,
-.folderIconWrapper__72239 /* folder circle inner */ {
-	/* background-color: var(--bg-4) !important; */
-}
+/* UNCOMMENT IF YOU REMOVE THE ABOVE SECTION "separate guilds panel background"
+.expandedFolderBackground__1bec6,
+.folder__17546,
+.folderIconWrapper__72239 {
+	background-color: var(--bg-4) !important;
+} */
 
 /* extra top margin for macos and custom clients */
 .container__037ed {
@@ -393,6 +398,13 @@ button.button_afdfd9 /* small buttons */,
 .platform-win .container__037ed {
 	margin-top: 0;
 }
+/* UNCOMMENT if you want to make panels evenly sized on macos 
+.platform-osx .wrapper_a7e7a8 {
+    margin-top: 0;
+}
+.platform-osx .container__037ed {
+    margin-top: 32px;
+} */
 
 /* top corner title */
 [class^='wordmarkWindows'] {
@@ -522,10 +534,12 @@ button.button_afdfd9 /* small buttons */,
 /* experimental transitions */
 .wrapper__7bcde .link__95dc0 /* channels */,
 .container__4f20e /* members */,
-.channel_c21703 /* dms */ {
+.channel_c21703 /* dms */,
+.item__48dda /* settings */ {
 	transition: margin-left var(--hover-push);
 }
-.wrapper__7bcde:hover .link__95dc0 {
+.wrapper__7bcde:hover .link__95dc0,
+.item__48dda:hover {
 	margin-left: 10px;
 }
 .container__4f20e:hover,
