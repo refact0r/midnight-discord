@@ -98,7 +98,6 @@
 .sidebar_ded4b5 /* channel sidebar */,
 .privateChannels__93473 .scroller__4b984 /* dms list inner */,
 .theme-dark .innerHeader_afca2f:after /* channels and roles header shadow */,
-.channelTextArea__2e60f /* message bar underneath */,
 .attachedBars_da3c74 /* reply bar underneath */ {
 	background: none;
 }
@@ -148,6 +147,12 @@ path[fill='rgba(35, 165, 90, 1)'] {
 ::selection {
 	background: var(--accent-4);
 	color: white;
+}
+
+/* fix weird message bar padding */
+.clipContainer__99c30 {
+	padding-top: 0;
+	margin-top: 0;
 }
 
 /* change online indicator color */
@@ -299,6 +304,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-m);
 }
 .scrollableContainer__33e06 /* message bar */,
+.channelTextArea__2e60f /* message bar underneath */,
 .select__0eb48 /* bot dropdown select */,
 .layout_bb8e67 /* members */,
 .interactive__776ee /* dms */,
