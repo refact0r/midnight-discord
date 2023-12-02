@@ -8,7 +8,10 @@
 	/* color of online status dot, change to #23a55a for default green */
 	--online-indicator: var(--accent-2);
 
-	/* top left icon */
+	/* top left text */
+	--corner-text: 'Midnight';
+
+	/* home icon */
 	--moon-icon: block; /* change to none to hide moon icon */
 	--discord-icon: none; /* change to block to show default discord icon */
 
@@ -185,6 +188,9 @@ rect[fill='#23a55a'] {
 }
 .wrapper_bd2abe.minimum_ebf000 ~ .content__1a4fe .container__93316::before /* remove when in private call */ {
 	display: none;
+}
+.membersWrap__90226 /* fix members list height when not scroll */ {
+	height: 100%;
 }
 
 /* rearrange toolbar */
@@ -420,7 +426,7 @@ button.button_afdfd9 /* small buttons */,
 	display: none;
 }
 [class^='wordmarkWindows']::after {
-	content: 'Midnight';
+	content: var(--corner-text);
 	display: block;
 	position: relative;
 	height: 16px;
