@@ -499,10 +499,10 @@ button.button_afdfd9 /* small buttons */,
 }
 
 /* add moon */
-.childWrapper__01b9c > svg:not(.favoriteIcon__91c06) {
+.childWrapper__01b9c > svg:not(.favoriteIcon_adf80e) {
 	display: var(--discord-icon);
 }
-.childWrapper__01b9c:has(> svg:not(.favoriteIcon__91c06))::before {
+.childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e))::before {
 	content: '';
 	display: var(--moon-icon);
 	position: absolute;
