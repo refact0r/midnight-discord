@@ -162,10 +162,12 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 
 /* change online indicator color */
-rect[fill='#23a55a'] {
+rect[fill='#23a55a'],
+svg[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
 }
 .status__1c26d[style='background-color: var(--green-360);'],
+.status__1c26d[style='background-color: rgb(35, 165, 90);'],
 .status__1c26d[style='background-color: currentcolor;'] {
 	background-color: var(--online-indicator) !important;
 }
@@ -324,6 +326,13 @@ a[href="https://support.discord.com"] /* hide help */
 .item_b7fb7e .radioBar__40e1b /* settings radiobutton bars */,
 .tooltip__01384 /* server hover name */ {
 	border-radius: var(--roundness-s);
+}
+.select__0eb48.open_cd27aa /* vencord plugin show all */ {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.popout_a6e77f /* vencord plugin show all */ {
+	border-radius: 0 0 var(--roundness-s) var(--roundness-s);
 }
 .scrollableContainer__33e06.hasConnectedBar__277ab /* fix message bar with reply bar */ {
 	border-top-left-radius: 0;
@@ -883,6 +892,7 @@ button.button_afdfd9 /* small buttons */,
 	--green-530: var(--accent-5);
 
 	--brand-experiment-15a: var(--mention); /* background of reacted reactions */
+	--brand-360: var(--accent-3);
 
 	--primary-500: var(--bg-2); /* progress bars */
 	--primary-600: var(--bg-3); /* delete message preview */
