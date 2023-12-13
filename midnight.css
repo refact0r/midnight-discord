@@ -84,8 +84,11 @@
 .mainCard__8a660 /* forum post */ {
 	background: var(--bg-3);
 }
-.folderIconWrapper__72239 /* closed folder */ {
-	background: var(--bg-3) !important;
+.folderIconWrapper__72239[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
+	background: var(--mention) !important;
+}
+.folder__17546.hover__043de /* folder opened on hover */ {
+	background-color: var(--bg-2);
 }
 .theme-dark .outer_a41cf3.interactive__01cfa:hover, .theme-dark .outer_a41cf3.active__76f42 /* friend activity cards on hover */ {
 	background: var(--bg-2);
@@ -121,7 +124,7 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 .toolbar__88c63 /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
 }
-.expandedFolderIconWrapper__458cf > svg {
+.expandedFolderIconWrapper__458cf > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
 	color: var(--accent-3) !important;
 }
 .divider_b9338f /* unread divider */,
