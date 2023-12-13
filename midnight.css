@@ -296,7 +296,8 @@ a[href="https://support.discord.com"] /* hide help */
 .footer__89240 /* edit modal footer */ {
 	border-radius: var(--roundness-l);
 }
-.roundedBanner__9fa0a /* user profile popout top */ {
+.roundedBanner__9fa0a /* user profile popout top */,
+.banner_b7f1fb /* user profile top when edit */ {
 	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px) 0 0;
 }
 .userPopoutInner_f545a3:before /* user profile popout bottom */,
@@ -895,7 +896,7 @@ button.button_afdfd9 /* small buttons */,
 	--green-530: var(--accent-5);
 
 	--brand-experiment-15a: var(--mention); /* background of reacted reactions */
-	--brand-360: var(--accent-3);
+	--brand-360: var(--accent-2); /* invite text */
 
 	--primary-500: var(--bg-2); /* progress bars */
 	--primary-600: var(--bg-3); /* delete message preview */
