@@ -63,6 +63,7 @@
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 }
 
+/* change fonts (edit the variables above, not this part) */
 :root {
 	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -93,7 +94,7 @@
 	background: var(--bg-3);
 }
 .folderIconWrapper__72239[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
-	background: var(--mention) !important;
+	background: var(--bg-3) !important;
 }
 .folder__17546.hover__043de /* folder opened on hover */ {
 	background-color: var(--bg-2);
