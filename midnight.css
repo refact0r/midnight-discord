@@ -11,15 +11,17 @@
 	/* top left text */
 	--corner-text: 'Midnight';
 
-	/* home icon */
-	--moon-icon: block; /* change to none to hide moon icon */
-	--discord-icon: none; /* change to block to show default discord icon */
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: block; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 
 	/* amount of spacing and padding */
 	--spacing: 12px;
 
 	/* animations */
-	--hover-push: 0.2s ease;
+	--hover-push: 0.2s ease; /* channels/members when hovered */
 
 	/* corner roundness (border-radius) */
 	--roundness-xl: 22px; /* roundness of big panel outer corners */
@@ -39,7 +41,7 @@
 	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
-	--text-1: hsl(220, 40%, 90%); /* bright text on colored elements */
+	--text-1: hsl(220, 40%, 95%); /* bright text on colored elements */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
 	--text-3: hsl(220, 15%, 60%); /* normal text */
 	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
@@ -53,6 +55,12 @@
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 }
 
 :root {
@@ -142,10 +150,13 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 .container_a308ae:last-child .icon__28d6c /* explore discoverable servers icon color */ {
 	background-color: #3ba55c;
-	filter: hue-rotate(56deg) saturate(1.43);
+	filter: var(--green-to-accent-3-filter);
 }
-.container_a308ae:first-child .icon__28d6c {
-	filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
+.container_a308ae:first-child .icon__28d6c /* explore discoverable servers icon color */ {
+	filter: var(--blurple-to-accent-3-filter);
+}
+.artwork__8fc92 /* filter login image */ {
+	filter: var(--login-bg-filter);
 }
 .lookFilled__19298.colorBrand_b2253e .defaultColor__77578 /* vc choose an activity button */ {
 	color: var(--white-500);
@@ -501,7 +512,7 @@ button.button_afdfd9 /* small buttons */,
 	background-color: hsl(50, 50%, 50%) !important;
 }
 
-/* add moon */
+/* custom dm button moon icon */
 .childWrapper__01b9c > svg:not(.favoriteIcon_adf80e) {
 	display: var(--discord-icon);
 }
@@ -513,7 +524,7 @@ button.button_afdfd9 /* small buttons */,
 	height: 65%;
 	background: var(--text-4);
 	overflow: hidden;
-	-webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+	-webkit-mask-image: var(--moon-icon-url);
 }
 .wrapper_d281dd:hover .childWrapper__01b9c::before {
 	transition: background-color 0.15s ease-out, transform 0.3s ease-out;
@@ -535,6 +546,12 @@ button.button_afdfd9 /* small buttons */,
 	background: var(--bg-3);
 	border-radius: 50%;
 }
+/* custom dm button background instead of icon */
+/* .childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
+	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+	background-color: transparent !important;
+	background-size: cover;
+} */
 
 /* improve unread divider */
 .divider_b9338f {
@@ -560,15 +577,6 @@ button.button_afdfd9 /* small buttons */,
 	border-top-color: transparent !important;
 	border-bottom-color: transparent !important;
 	border-right-color: transparent !important;
-}
-
-/* make emoji selector same color */
-.emojiButtonNormal__73cd3 .sprite__294b3 {
-	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
-}
-/* filter login image */
-.artwork__8fc92 {
-	filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
 }
 
 /* horizontal server list fix */
@@ -901,4 +909,6 @@ button.button_afdfd9 /* small buttons */,
 	--primary-600: var(--bg-3); /* delete message preview */
 	--primary-630: var(--bg-3); /* billing transaction history */
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
+
+	--white-500: var(--text-1);
 }
