@@ -5,31 +5,11 @@
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'figtree';
 
-	/* color of online status dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
-
-	/* top left text */
+	/* top left corner text */
 	--corner-text: 'Midnight';
 
-	/* direct messages moon icon */
-	/* change to block to show, none to hide */
-	--discord-icon: none; /* discord icon */
-	--moon-icon: block; /* moon icon */
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
-
-	/* amount of spacing and padding */
-	--spacing: 12px;
-
-	/* animations */
-	--hover-push: 0.2s ease; /* channels/members when hovered */
-
-	/* corner roundness (border-radius) */
-	--roundness-xl: 22px; /* roundness of big panel outer corners */
-	--roundness-l: 20px; /* popout panels */
-	--roundness-m: 16px; /* smaller panels, images, embeds */
-	--roundness-s: 12px; /* members, settings inputs */
-	--roundness-xs: 10px; /* channels, buttons */
-	--roundness-xxs: 8px; /* searchbar, small elements */
+	/* color of online status dot, change to #23a55a for default green */
+	--online-indicator: var(--accent-2);
 
 	/* accent colors */
 	--accent-1: hsl(190, 80%, 60%); /* links */
@@ -55,6 +35,26 @@
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	--hover-push: 0.2s ease; /* channels/members when hovered */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: block; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 
 	/* filter uncolorable elements to fit theme */
 	/* (just set to none, they're too much work to configure) */
