@@ -9,13 +9,13 @@ A darkened discord theme with rounded chat and sidebars.
 ## install
 
 > [!IMPORTANT]  
-> make sure to enable dark mode in discord settings for the theme to apply properly!!
+> make sure to enable dark mode in discord settings for the theme to apply properly! (if you want light mode customize the theme color variables)
 
 #### betterdiscord (or client with local theme folder)
 
 1. Download `midnight.theme.css` from <https://betterdiscord.app/theme/midnight> or this repo.
 2. Put the file into your theme folder. (there should be a button to open the theme folder in theme settings)
-3. (optional) Customize the variables in `midnight.theme.css`.
+3. (optional) Customize the theme in `midnight.theme.css`.
 
 #### install through link
 
@@ -23,7 +23,7 @@ A darkened discord theme with rounded chat and sidebars.
 
 ## flavors
 
-### catppuccin
+### catppuccin (mocha mauve)
 
 [theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin.theme.css)
 
