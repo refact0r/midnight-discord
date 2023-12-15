@@ -605,7 +605,7 @@ button.button_afdfd9 /* small buttons */,
 	--text-link: var(--text-1);
 }
 html.theme-light,
-html.theme-dark {
+.theme-dark {
 	--activity-card-background: var(--primary-700);
 	--android-navigation-bar-background: var(--primary-830);
 	--android-navigation-scrim-background: hsl(var(--primary-830-hsl) / 0.5);
