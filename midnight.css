@@ -602,7 +602,7 @@ button.button_afdfd9 /* small buttons */,
 }
 
 .theme-light {
-	--text-link: var(--text-1);
+	--text-link: var(--accent-5);
 }
 html.theme-light,
 .theme-dark {
