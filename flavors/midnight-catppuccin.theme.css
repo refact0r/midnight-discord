@@ -25,13 +25,15 @@
 	/* accent colors */
 	--accent-1: hsl(267, 84%, 81%); /* links */
 	--accent-2: hsl(267, 84%, 81%); /* general unread/mention elements */
-	--accent-3: hsl(267, 70%, 73%); /* accent buttons */
-	--accent-4: hsl(267, 55%, 65%); /* accent buttons when hovered */
-	--accent-5: hsl(267, 40%, 57%); /* accent buttons when clicked */
+	--accent-3: hsl(267, 84%, 81%); /* accent buttons */
+	--accent-4: hsl(267, 70%, 73%); /* accent buttons when hovered */
+	--accent-5: hsl(267, 55%, 65%); /* accent buttons when clicked */
 	--mention: hsla(267, 70%, 71%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(267, 70%, 71%, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
 	--text-1: hsl(220, 40%, 95%); /* bright text on colored elements */
 	--text-2: hsl(226, 64%, 88%); /* headings and important text */
 	--text-3: hsl(228, 24%, 72%); /* normal text */
