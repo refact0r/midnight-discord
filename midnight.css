@@ -178,9 +178,10 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 .mini_d6d84c .grabber_d2868c /* spotify bar handle */ {
 	margin-top: 5px;
+	border-width: 1px;
 }
 .grabber_d2868c /* settings slider handle */ {
-	border: none;
+	border-width: 0;
 }
 .button__66e8c.buttonColor_a6eb73 /* fix vc buttons */ {
 	color: var(--text-4);

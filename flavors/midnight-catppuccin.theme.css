@@ -33,7 +33,6 @@
 
 	/* text colors */
 	--text-0: var(--bg-4); /* text on colored elements */
-	--text-1: var(--text-2); /* other normally white text */
 	--text-1: hsl(220, 40%, 95%); /* bright text on colored elements */
 	--text-2: hsl(226, 64%, 88%); /* headings and important text */
 	--text-3: hsl(228, 24%, 72%); /* normal text */
