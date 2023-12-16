@@ -56,6 +56,7 @@
 	--discord-icon: none; /* discord icon */
 	--moon-icon: block; /* moon icon */
 	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--moon-icon-size: auto;
 
 	/* filter uncolorable elements to fit theme */
 	/* (just set to none, they're too much work to configure) */
@@ -164,6 +165,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .colorDefault__0b482.focused__27621 .caret_ce50ce /* popup menu hover caret */,
 .colorDefault__0b482:active:not(.hideInteraction__2790e) /* menu option active */,
 .colorDefault__0b482:active:not(.hideInteraction__2790e) .caret_ce50ce /* menu option active */,
+.tabBar__73938 .addFriend__80542.addFriend__80542.addFriend__80542 /* add friend button */,
 .interactive:hover /* mention hover */ {
 	color: var(--text-0);
 }
@@ -177,7 +179,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 	fill: var(--text-1);
 }
 .mini_d6d84c .grabber_d2868c /* spotify bar handle */ {
-	margin-top: 5px;
+	margin-top: 4px;
 	border-width: 1px;
 }
 .grabber_d2868c /* settings slider handle */ {
@@ -575,9 +577,8 @@ button.button_afdfd9 /* small buttons */,
 	width: 65%;
 	height: 65%;
 	background: var(--text-4);
-	overflow: hidden;
 	-webkit-mask-image: var(--moon-icon-url);
-	-webkit-mask-size: contain;
+	-webkit-mask-size: var(--moon-icon-size);
 	-webkit-mask-repeat: none;
 }
 .wrapper_d281dd:hover .childWrapper__01b9c::before {

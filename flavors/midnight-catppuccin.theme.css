@@ -66,7 +66,8 @@
 	/* change to block to show, none to hide */
 	--discord-icon: none; /* discord icon */
 	--moon-icon: none; /* moon icon */
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--moon-icon-url: none; /* custom icon url */
+	--moon-icon-size: auto;
 
 	/* filter uncolorable elements to fit theme */
 	/* (just set to none, they're too much work to configure) */
