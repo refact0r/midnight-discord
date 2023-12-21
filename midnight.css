@@ -170,6 +170,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */,
 .interactive:hover /* mention hover */ {
 	color: var(--text-0);
+	background-color: var(--accent-3);
 }
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */ {
 	border-color: var(--text-0);
