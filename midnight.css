@@ -152,7 +152,7 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 path[fill='rgba(35, 165, 90, 1)'] {
 	fill: var(--accent-3);
 }
-.base__92a12 /* dms number badge */,
+.numberBadge__50328 /* dms number badge */,
 .newMessagesBar__8b6d7 .barButtonBase__8fa46 /* unread bar */,
 .botTagRegular_c89c9a /* bot tag */,
 .endCap__95d53 /* unread divider */,
