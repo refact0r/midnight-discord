@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?famil--dnd-indicatory=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* customize things here */
 :root {
@@ -8,15 +8,17 @@
 	/* top left corner text */
 	--corner-text: 'Midnight';
 
-	/* color of online status dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
+	/* color of status indicators and window controls */
+	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
+	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
 
 	/* accent colors */
-	--accent-1: hsl(190, 80%, 60%); /* links */
-	--accent-2: hsl(190, 80%, 48%); /* general unread/mention elements */
-	--accent-3: hsl(190, 80%, 42%); /* accent buttons */
-	--accent-4: hsl(190, 80%, 36%); /* accent buttons when hovered */
-	--accent-5: hsl(190, 80%, 30%); /* accent buttons when clicked */
+	--accent-1: hsl(190, 70%, 60%); /* links */
+	--accent-2: hsl(190, 70%, 48%); /* general unread/mention elements */
+	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
+	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
 	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
 
@@ -239,13 +241,23 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 
 /* change online indicator color */
-rect[fill='#23a55a'],
-svg[fill='#23a55a'] {
+rect[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
 }
-.status__1c26d[style='background-color: var(--green-360);'],
 .status__1c26d[style='background-color: rgb(35, 165, 90);'] {
 	background-color: var(--online-indicator) !important;
+}
+rect[fill='#f0b232'] {
+	fill: var(--idle-indicator);
+}
+.status__1c26d[style='background-color: rgb(240, 178, 50);'] {
+	background-color: var(--idle-indicator) !important;
+}
+rect[fill='#f23f43'] {
+	fill: var(--dnd-indicator);
+}
+.status__1c26d[style='background-color: rgb(242, 63, 67);'] {
+	background-color: var(--dnd-indicator) !important;
 }
 
 /* color fix filters */
@@ -585,13 +597,13 @@ button.button_afdfd9 /* small buttons */,
 	transform: scale(0.9);
 }
 [class^='winButtonClose']::after {
-	background-color: hsl(350, 50%, 50%) !important;
+	background-color: var(--dnd-indicator) !important;
 }
 [class^='winButtonMinMax']:nth-child(3)::after {
-	background-color: hsl(150, 50%, 50%) !important;
+	background-color: var(--online-indicator) !important;
 }
 [class^='winButtonMinMax']:nth-child(4)::after {
-	background-color: hsl(50, 50%, 50%) !important;
+	background-color: var(--idle-indicator) !important;
 }
 
 /* custom dm button moon icon */
@@ -998,4 +1010,8 @@ html.theme-light,
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
 
 	--white-500: var(--text-1);
+}
+
+.channelInfo_b7ab2e {
+	display: none;
 }
