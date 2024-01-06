@@ -1,7 +1,7 @@
 /**
  * @name midnight (catppuccin macchiato)
  * @description A darkened discord theme. Based on catppuccin theme (https://github.com/catppuccin/catppuccin).
- * @author refact0r, esme
+ * @author refact0r, esme, anubis
  * @version 1.6.2
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
@@ -83,4 +83,20 @@
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
+}
+
+/* color of idle and dnd status dots, change first and last fill values to #f0b232 for default yellow and the inbetween fill values to #f23f43 for default red */
+rect[fill="#f0b232"],
+svg[fill="#f0b232"] {
+  fill: #eed49f    ;
+}
+rect[fill="#f23f43"],
+svg[fill="#f23f43"] {
+  fill: #ed8796;
+}
+[style="background-color: rgb(242, 63, 67);"] {
+  background-color: #ed8796 !important;
+}
+[style="background-color: rgb(240, 178, 50);"] {
+  background-color: #eed49f     !important;
 }
