@@ -20,7 +20,7 @@
 	--corner-text: 'Catppuccin';
 
 	/* color of online status dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
+	--online-indicator: #a6e3a1;
 
 	/* accent colors */
 	--accent-1: hsl(267, 84%, 81%); /* links */
@@ -81,4 +81,20 @@
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
+}
+
+/* color of idle and dnd status dots, change first and last fill values to #f0b232 for default yellow and the inbetween fill values to #f23f43 for default red */
+rect[fill='#f0b232'],
+svg[fill='#f0b232'] {
+	fill: #f9e2af;
+}
+rect[fill='#f23f43'],
+svg[fill='#f23f43'] {
+	fill: #f38ba8;
+}
+[style='background-color: rgb(242, 63, 67);'] {
+	background-color: #f38ba8 !important;
+}
+[style='background-color: rgb(240, 178, 50);'] {
+	background-color: #f9e2af !important;
 }
