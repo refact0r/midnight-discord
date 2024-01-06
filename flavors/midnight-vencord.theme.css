@@ -40,7 +40,7 @@
 	--text-1: var(--text-2); /* other normally white text */
 	--text-2: hsl(37, 40%, 84%); /* headings and important text */
 	--text-3: hsl(37, 40%, 72%); /* normal text */
-	--text-4: hsl(37, 40%, 72%); /* icon buttons and channels */
+	--text-4: hsl(37, 20%, 60%); /* icon buttons and channels */
 	--text-5: #d4be9866; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
