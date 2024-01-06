@@ -89,7 +89,8 @@
 .chat__52833.background_cb0a80 /* server guide body */,
 .theme-dark .scrollerContainer_bf5dbd /* channels and roles customize */,
 .shop_b31ed2 /* shop */,
-.wrapper_bd2abe.minimum_ebf000 /* private call */ {
+.wrapper_bd2abe.minimum_ebf000 /* private call */,
+.container_e4c233, .container__7712a /* emoji/sticker and gif picker searchbars */ {
 	background: var(--bg-4);
 }
 .mainCard__8a660 /* forum post */,
@@ -169,7 +170,9 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .colorDefault__0b482:active:not(.hideInteraction__2790e) .caret_ce50ce /* menu option active */,
 .tabBar__73938 .addFriend__80542.addFriend__80542.addFriend__80542 /* add friend button */,
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */,
-.interactive:hover /* mention hover */ {
+.interactive:hover /* mention hover */,
+.uploadIcon__68f2c /* profile upload image */,
+.focused_f6efd9 .userMenuUsername_f6de35 .userMenuText_a180af /* account switcher account hover */ {
 	color: var(--text-0);
 }
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */ {
@@ -184,7 +187,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 	background: var(--bg-1) !important;
 }
 .container__871ba.checked__6bdb0 > .slider__41d94 > rect /* settings checkbutton circle */,
-.closeIcon_ae6326 path {
+.userMenuItem__38a6a path[fill="var(--white-500)"] /* account switcher account hover */ {
 	fill: var(--text-0);
 }
 .container__871ba > .slider__41d94 > rect /* settings checkbutton circle */ {
@@ -208,8 +211,12 @@ path[fill='rgba(35, 165, 90, 1)'] {
 	background-color: var(--bg-1);
 	color: var(--text-1);
 }
-.bannerVisible__191f6 .headerContent_ee8727 /* server name over banner image */ {
+.bannerVisible__191f6 .headerContent_ee8727 /* server name over banner image */,
+.theme-dark .categoryText_b65948 /* gif chooser category names */ {
 	color: white;
+}
+.gifIcon__5671b /* profile upload image gif chooser */ {
+	background-color: white;
 }
 .controlIcon__25700 /* fix video maximize button */ {
 	color: var(--text-1);
@@ -224,6 +231,11 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 .lookFilled__3dba3.select__0eb48 {
 	border: none;
+}
+
+/* remove shadows */
+#app-mount .header_f7f1f3 /* gif picker */ {
+	box-shadow: none;
 }
 
 /* change online indicator color */
@@ -428,6 +440,7 @@ a[href="https://support.discord.com"] /* hide help */
 .side_b4b3f6 .item__48dda /* settings tabs */,
 button.button_afdfd9 /* small buttons */,
 .container__7712a /* friend searchbar */,
+.container_e4c233, /* sticker/emoji picker searchbar */
 .item__183e8 /* general popout buttons */,
 .icon_c1b424 /* streaming icon */,
 #vc-spotify-album-image,
