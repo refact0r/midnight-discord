@@ -18,8 +18,10 @@
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'Nunito';
 
-	/* color of green online dot, change to #23a55a for default green */
-	--online-indicator: hsl(150, 60%, 60%);
+	/* color of status indicators and window controls */
+	--online-indicator: hsl(160, 50%, 55%); /* change to #23a55a for default green */
+	--dnd-indicator: var(--accent-3); /* change to #f13f43 for default red */
+	--idle-indicator: hsl(50, 50%, 55%); /* change to #f0b232 for default yellow */
 
 	/* top left corner text */
 	--corner-text: 'LilyPichu';
@@ -31,7 +33,7 @@
 	--accent-4: hsl(347, 50%, 50%); /* accent buttons when hovered */
 	--accent-5: hsl(347, 50%, 45%); /* accent buttons when clicked */
 	--mention: hsla(347, 50%, 45%, 0.1); /* mentions & mention messages */
-	--mention-hover: hsla(47, 50%, 45%, 0.05); /* mentions & mention messages when hovered */
+	--mention-hover: hsla(347, 50%, 45%, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
 	--text-0: var(--text-2); /* text on colored elements */
