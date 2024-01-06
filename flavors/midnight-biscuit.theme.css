@@ -15,8 +15,10 @@
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'figtree';
 
-	/* color of green online dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
+	/* color of status indicators and window controls */
+	--online-indicator: #959a6b; /* change to #23a55a for default green */
+	--dnd-indicator: #cf223e; /* change to #f13f43 for default red */
+	--idle-indicator: #e39c45; /* change to #f0b232 for default yellow */
 
 	/* top left corner text */
 	--corner-text: 'Biscuit';
