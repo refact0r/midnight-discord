@@ -44,13 +44,13 @@
 	--text-5: #d4be9866; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: hsl(0, 0%, 24.7%); /* dark buttons when clicked */
-	--bg-2: hsl(0, 0%, 21.7%); /* dark buttons */
-	--bg-3: hsl(0, 0%, 18.7%); /* spacing, secondary elements */
-	--bg-4: hsl(0, 0%, 15.7%); /* main background color */
-	--hover: hsla(0, 0%, 53.7%, 0.1); /* channels and buttons when hovered */
-	--active: hsla(0, 0%, 53.7%, 0.2); /* channels and buttons when clicked or selected */
-	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+	--bg-1: hsl(0, 0%, 25%); /* dark buttons when clicked */
+	--bg-2: hsl(20, 5%, 22%); /* dark buttons */
+	--bg-3: hsl(10, 3%, 20%); /* spacing, secondary elements */
+	--bg-4: hsl(0, 0%, 16%); /* main background color */
+	--hover: rgba(160, 130, 120, 0.1); /* channels and buttons when hovered */
+	--active: rgba(160, 130, 120, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
 	--spacing: 12px;
