@@ -11,12 +11,10 @@
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: 'Varela Round';
+	--font: 'figtree';
 
 	/* top left corner text */
 	--corner-text: 'Catppuccin';
@@ -86,17 +84,17 @@
 }
 
 /* color of idle and dnd status dots, change first and last fill values to #f0b232 for default yellow and the inbetween fill values to #f23f43 for default red */
-rect[fill="#f0b232"],
-svg[fill="#f0b232"] {
-  fill: #eed49f    ;
+rect[fill='#f0b232'],
+svg[fill='#f0b232'] {
+	fill: #eed49f;
 }
-rect[fill="#f23f43"],
-svg[fill="#f23f43"] {
-  fill: #ed8796;
+rect[fill='#f23f43'],
+svg[fill='#f23f43'] {
+	fill: #ed8796;
 }
-[style="background-color: rgb(242, 63, 67);"] {
-  background-color: #ed8796 !important;
+[style='background-color: rgb(242, 63, 67);'] {
+	background-color: #ed8796 !important;
 }
-[style="background-color: rgb(240, 178, 50);"] {
-  background-color: #eed49f     !important;
+[style='background-color: rgb(240, 178, 50);'] {
+	background-color: #eed49f !important;
 }
