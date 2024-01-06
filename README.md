@@ -4,7 +4,7 @@
 
 A darkened discord theme with rounded chat and sidebars.
 
-<img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/cbe7667b-a462-43b6-b24d-cd9c1fc8236d">
+<img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/69de9437-8312-4949-befd-a476a56e2cee">
 
 ## install
 
@@ -19,19 +19,49 @@ A darkened discord theme with rounded chat and sidebars.
 
 #### install through link
 
-1. Add `https://raw.githubusercontent.com/refact0r/midnight-discord/master/midnight.css` to your theme import links.
+Add `https://refact0r.github.io/midnight-discord/midnight.css` to your theme import links.
+
+## discord server
+
+need help? want to report a bug? want to give feedback on upcoming changes? join <https://discord.gg/nz87hXyvcy>
 
 ## flavors
 
 ### catppuccin (mocha mauve)
 
-[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin.theme.css)
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin-mocha.theme.css)
 
-<img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/00cfaa53-cecd-4acf-a860-6f8df4af4616">
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/1d318ced-189b-4ee3-9c55-6602faaa221d">
 
-## discord server
+### catppuccin (macchiato lavender)
 
-need help? want to report a bug? want to give feedback on upcoming changes? join <https://discord.gg/nz87hXyvcy>
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin-macchiato.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/a87c48b7-a424-4e7d-92d7-003406799ac5">
+
+### nord
+
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-nord.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/19dd07f3-7e62-42ca-8481-044400d361ef">
+
+### vencord
+
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-vencord.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/6798b4b3-c44f-4434-b2fb-0fc7981594ac">
+
+### lilypichu
+
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-pichu.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/6e24a95f-1bdc-487c-8524-3524ffd0b471">
+
+### biscuit
+
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-biscuit.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/61c76988-7aa9-4150-b14d-9ad6bab8962e">
 
 ## credits
 
