@@ -176,7 +176,8 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */,
 .interactive:hover /* mention hover */,
 .uploadIcon__68f2c /* profile upload image */,
-.focused_f6efd9 .userMenuUsername_f6de35 .userMenuText_a180af /* account switcher account hover */ {
+.focused_f6efd9 .userMenuUsername_f6de35 .userMenuText_a180af /* account switcher account hover */,
+.dots_a97068 /* typing dots */ {
 	color: var(--text-0);
 }
 .theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */ {
