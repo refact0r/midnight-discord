@@ -39,6 +39,12 @@ need help? want to report a bug? want to give feedback on upcoming changes? join
 
 <img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/a87c48b7-a424-4e7d-92d7-003406799ac5">
 
+### catppuccin (frappé sapphire)
+
+[theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin-frappe.theme.css)
+
+<img width=600 src="https://github.com/refact0r/midnight-discord/assets/34758569/80aedc8b-e223-49b4-8139-14f7877c7fd8">
+
 ### nord
 
 [theme file](https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-nord.theme.css)
