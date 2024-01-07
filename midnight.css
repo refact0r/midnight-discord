@@ -102,15 +102,16 @@
 .folderIconWrapper__72239[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
 	background: var(--bg-3) !important;
 }
-.folder__17546.hover__043de /* folder opened on hover */ {
-	background-color: var(--bg-2);
-}
+.folder__17546.hover__043de /* folder opened on hover */, 
 .theme-dark .outer_a41cf3.interactive__01cfa:hover, .theme-dark .outer_a41cf3.active__76f42 /* friend activity cards on hover */ {
 	background: var(--bg-2);
 }
 #app-mount .searchAnswer_b452e7, /* search filter answer */
 #app-mount .searchFilter__118cb /* search filter */ {
 	background: var(--bg-1);
+}
+.newChannel_f99b92 /* new channel */ {
+	background: var(--bg-1) !important;
 }
 .chat__52833 /* chat + member list */,
 .sidebar_ded4b5 /* channel sidebar */,
