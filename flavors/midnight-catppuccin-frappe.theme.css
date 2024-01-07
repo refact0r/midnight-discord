@@ -1,0 +1,86 @@
+/**
+ * @name midnight (catppuccin frappé)
+ * @description A darkened discord theme. Based on catppuccin theme (https://github.com/catppuccin/catppuccin).
+ * @author refact0r, esme, anubis
+ * @version 1.6.2
+ * @source https://github.com/refact0r/midnight-discord
+ * @authorId 508863359777505290
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* top left corner text */
+	--corner-text: 'Catppuccin';
+
+	/* color of status indicators and window controls */
+	--online-indicator: #a6d189; /* change to #23a55a for default green */
+	--dnd-indicator: #e78284; /* change to #f13f43 for default red */
+	--idle-indicator: #e5c890; /* change to #f0b232 for default yellow */
+
+	/* accent colors */
+	--accent-1: #85c1dc; /* links */
+	--accent-2: #85c1dc; /* general unread/mention elements */
+	--accent-3: hsl(199, 55%, 69%); /* accent buttons */
+	--accent-4: hsl(199, 45%, 59%); /* accent buttons when hovered */
+	--accent-5: hsl(199, 35%, 49%); /* accent buttons when clicked */
+	--mention: hsla(199, 55%, 69%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(199, 55%, 69%, 0.05); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: hsl(227, 70%, 95%); /* other normally white text */
+	--text-2: hsl(227, 70%, 87%); /* headings and important text */
+	--text-3: hsl(228, 29%, 73%); /* normal text */
+	--text-4: hsl(227, 17%, 58%); /* icon buttons and channels */
+	--text-5: hsl(228, 13%, 44%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(227, 15%, 37%); /* dark buttons when clicked */
+	--bg-2: hsl(230, 16%, 30%); /* dark buttons */
+	--bg-3: hsl(231, 19%, 20%); /* spacing, secondary elements */
+	--bg-4: hsl(229, 19%, 23%); /* main background color */
+	--hover: hsla(229, 30%, 60%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(229, 30%, 60%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	--hover-push: 0.2s ease; /* channels/members when hovered */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: none; /* custom icon url */
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: none; /* login background artwork */
+	--green-to-accent-3-filter: none; /* add friend page explore icon */
+	--blurple-to-accent-3-filter: none; /* add friend page school icon */
+}
+
+/* catppuccin icon */
+.childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
+	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+	background-color: transparent !important;
+	background-size: cover;
+}
