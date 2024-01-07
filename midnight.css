@@ -163,6 +163,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .lookFilled__19298.colorBrandNew_fd170a /* accent buttons */,
 .lookFilled__19298.colorGreen__5f181 /* green buttons */,
 .lookFilled__19298.colorRed_d6b062 /* red buttons */,
+.lookFilled__19298.colorYellow_a62893 /* yellow buttons */,
 .bar_edc096 /* NEW unread pill */,
 .wrapper_d281dd:hover .childWrapper__01b9c, /* default server icon text */ 
 .wrapper_d281dd.selected_f5ec8e .childWrapper__01b9c /* default server icon text */,
@@ -241,19 +242,22 @@ path[fill='rgba(35, 165, 90, 1)'] {
 }
 
 /* change online indicator color */
-rect[fill='#23a55a'] {
+rect[fill='#23a55a'],
+svg[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
 }
 .status__1c26d[style='background-color: rgb(35, 165, 90);'] {
 	background-color: var(--online-indicator) !important;
 }
-rect[fill='#f0b232'] {
+rect[fill='#f0b232'],
+svg[fill='#f0b232'] {
 	fill: var(--idle-indicator);
 }
 .status__1c26d[style='background-color: rgb(240, 178, 50);'] {
 	background-color: var(--idle-indicator) !important;
 }
-rect[fill='#f23f43'] {
+rect[fill='#f23f43'],
+svg[fill='#f23f43'] {
 	fill: var(--dnd-indicator);
 }
 .status__1c26d[style='background-color: rgb(242, 63, 67);'] {
