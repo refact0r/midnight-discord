@@ -16,7 +16,7 @@
 	--font: 'figtree';
 
 	/* color of status indicators and window controls */
-	--online-indicator: #959a6b; /* change to #23a55a for default green */
+	--online-indicator: #d0d694; /* change to #23a55a for default green */
 	--dnd-indicator: #cf223e; /* change to #f13f43 for default red */
 	--idle-indicator: #e39c45; /* change to #f0b232 for default yellow */
 
@@ -36,7 +36,7 @@
 	--text-0: var(--text-2); /* text on colored elements */
 	--text-1: hsl(24, 31%, 80%); /* other normally white text */
 	--text-2: hsl(30, 100%, 89%); /* headings and important text */
-	--text-3: hsl(36, 100%, 89%); /* normal text */
+	--text-3: hsl(24, 31%, 80%); /* normal text */
 	--text-4: hsl(0, 12%, 66%); /* icon buttons and channels */
 	--text-5: hsl(0, 12%, 56%); /* muted channels/chats and timestamps */
 
