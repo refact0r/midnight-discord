@@ -12,6 +12,7 @@
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
 	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
 	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--streaming-indicator: hsl(260, 60%, 60%); /* change to #f23f43 for default purple */
 
 	/* accent colors */
 	--accent-1: hsl(190, 70%, 60%); /* links */
@@ -264,6 +265,13 @@ svg[fill='#f23f43'] {
 }
 .status__1c26d[style='background-color: rgb(242, 63, 67);'] {
 	background-color: var(--dnd-indicator) !important;
+}
+rect[fill='#593695'],
+svg[fill='#593695'] {
+	fill: var(--streaming-indicator);
+}
+.status__1c26d[style='background-color: rgb(89, 54, 149);'] {
+	background-color: var(--streaming-indicator) !important;
 }
 
 /* color fix filters */
