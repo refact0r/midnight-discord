@@ -685,7 +685,7 @@ button.button_afdfd9 /* small buttons */,
 	top: calc(var(--server-container) + var(--spacing)) !important;
 }
 
-/* experimental transitions */
+/* list hover animations */
 .wrapper__7bcde .link__95dc0 /* channels */,
 .container__4f20e /* members */,
 .channel_c21703 /* dms */,
@@ -699,6 +699,23 @@ button.button_afdfd9 /* small buttons */,
 .container__4f20e:hover,
 .channel_c21703:hover {
 	margin-left: 18px;
+}
+
+/* spin hover animations */
+button.button__4f306 /* make user panel buttons round */ {
+	border-radius: 50%;
+}
+.button__4f306[aria-label="User Settings"] /* settings button */, 
+.attachButton_b1db83 .attachButtonInner__3ce2b /* upload button */,
+.emojiButton__30ec7 .contents_fb6220 /* emoji button */,
+.closeButton__34341 /* settings exit button */ {
+	transition: transform 1s ease;
+}
+.button__4f306[aria-label='User Settings']:hover,
+.attachButton_b1db83:hover .attachButtonInner__3ce2b,
+.emojiButton__30ec7:hover .contents_fb6220,
+.closeButton__34341:hover {
+	transform: rotate(360deg);
 }
 
 .theme-light {
