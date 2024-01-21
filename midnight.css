@@ -12,7 +12,7 @@
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
 	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
 	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
-	--streaming-indicator: hsl(260, 60%, 60%); /* change to #f23f43 for default purple */
+	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
 	--accent-1: hsl(190, 70%, 60%); /* links */
@@ -636,7 +636,7 @@ button.button_afdfd9 /* small buttons */,
 	-webkit-mask-repeat: none;
 }
 .wrapper_d281dd:hover .childWrapper__01b9c::before {
-	transition: background-color 0.15s ease-out, transform 0.3s ease-out;
+	transition: background-color 0.15s ease-out, transform 0.5s ease-out;
 	transform: rotate(0deg) scale(1);
 }
 .wrapper_d281dd:hover > .childWrapper__01b9c::before,
@@ -713,16 +713,18 @@ button.button_afdfd9 /* small buttons */,
 button.button__4f306 /* make user panel buttons round */ {
 	border-radius: 50%;
 }
-.button__4f306[aria-label="User Settings"] /* settings button */, 
+.button__4f306:last-child /* settings button */, 
 .attachButton_b1db83 .attachButtonInner__3ce2b /* upload button */,
 .emojiButton__30ec7 .contents_fb6220 /* emoji button */,
-.closeButton__34341 /* settings exit button */ {
+.closeButton__34341 /* settings exit button */,
+.contents_fb6220 > .closeIcon__5bab9 /* modal close */ {
 	transition: transform 1s ease;
 }
-.button__4f306[aria-label='User Settings']:hover,
+.button__4f306:last-child:hover,
 .attachButton_b1db83:hover .attachButtonInner__3ce2b,
 .emojiButton__30ec7:hover .contents_fb6220,
-.closeButton__34341:hover {
+.closeButton__34341:hover,
+.contents_fb6220:hover > .closeIcon__5bab9 {
 	transform: rotate(360deg);
 }
 
