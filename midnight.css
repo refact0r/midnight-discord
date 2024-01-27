@@ -645,8 +645,8 @@ button.button_afdfd9 /* small buttons */,
 	transition: background-color 0.15s ease-out, transform 0.5s ease-out;
 	transform: rotate(0deg) scale(1);
 }
-.wrapper_d281dd:hover > .childWrapper__01b9c::before,
-.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
+:root:not(.reduce-motion) .wrapper_d281dd:hover > .childWrapper__01b9c::before,
+:root:not(.reduce-motion) .wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
 	background: var(--text-0);
 	transform: rotate(-360deg) scale(0.8);
 }
@@ -726,11 +726,11 @@ button.button__4f306 /* make user panel buttons round */ {
 .contents_fb6220 > .closeIcon__5bab9 /* modal close */ {
 	transition: transform 1s ease;
 }
-.button__4f306:last-child:hover .contents_fb6220,
-.attachButton_b1db83:hover .attachButtonInner__3ce2b,
-.emojiButton__30ec7:hover .contents_fb6220,
-.closeButton__34341:hover,
-.contents_fb6220:hover > .closeIcon__5bab9 {
+:root:not(.reduce-motion) .button__4f306:last-child:hover .contents_fb6220,
+:root:not(.reduce-motion) .attachButton_b1db83:hover .attachButtonInner__3ce2b,
+:root:not(.reduce-motion) .emojiButton__30ec7:hover .contents_fb6220,
+:root:not(.reduce-motion) .closeButton__34341:hover,
+:root:not(.reduce-motion) .contents_fb6220:hover > .closeIcon__5bab9 {
 	transform: rotate(360deg);
 }
 
