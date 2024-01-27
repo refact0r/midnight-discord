@@ -641,6 +641,9 @@ button.button_afdfd9 /* small buttons */,
 	-webkit-mask-size: var(--moon-icon-size);
 	-webkit-mask-repeat: none;
 }
+.selected_f5ec8e > .childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e))::before {
+	background: var(--text-0);
+}
 .wrapper_d281dd:hover .childWrapper__01b9c::before {
 	transition: background-color 0.15s ease-out, transform 0.5s ease-out;
 	transform: rotate(0deg) scale(1);
