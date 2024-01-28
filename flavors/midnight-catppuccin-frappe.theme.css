@@ -23,6 +23,7 @@
 	--online-indicator: #a6d189; /* change to #23a55a for default green */
 	--dnd-indicator: #e78284; /* change to #f13f43 for default red */
 	--idle-indicator: #e5c890; /* change to #f0b232 for default yellow */
+	--streaming-indicator: #ca9ee6; /* change to #593695 for default purple */
 
 	/* accent colors */
 	--accent-1: #85c1dc; /* links */
@@ -54,7 +55,11 @@
 	--spacing: 12px;
 
 	/* animations */
-	--hover-push: 0.2s ease; /* channels/members when hovered */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
 
 	/* corner roundness (border-radius) */
 	--roundness-xl: 22px; /* roundness of big panel outer corners */
