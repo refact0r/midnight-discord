@@ -98,11 +98,11 @@
 #app-mount .panels__58331 > div /* user panel children */,
 .container_d667ff /* vc panel */,
 .sidebarRegionScroller__1fa7e /* settings left */,
-.theme-dark .container__10dc7 /* browse channels container */,
-.theme-dark .header__60bef /* browse channels header */,
-.theme-dark .container__7590f /* browse channels inner */,
+#app-mount .container__10dc7 /* browse channels container */,
+#app-mount .header__60bef /* browse channels header */,
+#app-mount .container__7590f /* browse channels inner */,
 .chat__52833.background_cb0a80 /* server guide body */,
-.theme-dark .scrollerContainer_bf5dbd /* channels and roles customize */,
+#app-mount .scrollerContainer_bf5dbd /* channels and roles customize */,
 .shop_b31ed2 /* shop */,
 .wrapper_bd2abe.minimum_ebf000 /* private call */,
 .container_e4c233, .container__7712a /* emoji/sticker and gif picker searchbars */ {
@@ -116,7 +116,7 @@
 	background: var(--bg-3) !important;
 }
 .folder__17546.hover__043de /* folder opened on hover */, 
-.theme-dark .outer_a41cf3.interactive__01cfa:hover, .theme-dark .outer_a41cf3.active__76f42 /* friend activity cards on hover */ {
+#app-mount .outer_a41cf3.interactive__01cfa:hover, #app-mount .outer_a41cf3.active__76f42 /* friend activity cards on hover */ {
 	background: var(--bg-2);
 }
 #app-mount .searchAnswer_b452e7, /* search filter answer */
@@ -129,7 +129,7 @@
 .chat__52833 /* chat + member list */,
 .sidebar_ded4b5 /* channel sidebar */,
 .privateChannels__93473 .scroller__4b984 /* dms list inner */,
-.theme-dark .innerHeader_afca2f:after /* channels and roles header shadow */,
+#app-mount .innerHeader_afca2f:after /* channels and roles header shadow */,
 .attachedBars_da3c74 /* reply bar underneath */ {
 	background: none;
 }
@@ -189,7 +189,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .colorDefault__0b482:active:not(.hideInteraction__2790e) /* menu option active */,
 .colorDefault__0b482:active:not(.hideInteraction__2790e) .caret_ce50ce /* menu option active */,
 .tabBar__73938 .addFriend__80542.addFriend__80542.addFriend__80542 /* add friend button */,
-.theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */,
+#app-mount .button__57d93 /* notice banner button */,
 .interactive:hover /* mention hover */,
 .uploadIcon__68f2c /* profile upload image */,
 .focused_f6efd9 .userMenuUsername_f6de35 .userMenuText_a180af /* account switcher account hover */,
@@ -199,12 +199,11 @@ path[fill='rgba(35, 165, 90, 1)'] {
 .categoryItem_b1be5c.selectedCategoryItem__0bf4c {
 	color: var(--text-0);
 }
-.theme-dark .button__57d93, .theme-light .button__57d93 /* notice banner button */,
+#app-mount .button__57d93, .theme-light .button__57d93 /* notice banner button */,
 .lookOutlined__46d54.colorWhite__43488 /* server banner buttons */ {
 	border-color: var(--text-0);
 }
-.theme-dark .button__57d93:hover,
-.theme-light .button__57d93:hover {
+#app-mount .button__57d93:hover {
 	border-color: var(--text-0);
 	background-color: var(--text-0);
 }
@@ -237,7 +236,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 	color: var(--text-1);
 }
 .bannerVisible__191f6 .headerContent_ee8727 /* server name over banner image */,
-.theme-dark .categoryText_b65948 /* gif chooser category names */,
+#app-mount .categoryText_b65948 /* gif chooser category names */,
 .searchTitle__66210 {
 	color: white;
 }
@@ -262,6 +261,9 @@ path[fill='rgba(35, 165, 90, 1)'] {
 /* remove shadows */
 #app-mount .header_f7f1f3 /* gif picker */ {
 	box-shadow: none;
+}
+#app-mount .textContentFooter__5a630 /* forum post image fade */ {
+	background: none;
 }
 
 /* change online indicator color */
