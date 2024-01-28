@@ -44,7 +44,11 @@
 	--spacing: 12px;
 
 	/* animations */
-	--hover-push: 0.2s ease; /* channels/members when hovered */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
 
 	/* corner roundness (border-radius) */
 	--roundness-xl: 22px; /* roundness of big panel outer corners */
@@ -72,6 +76,14 @@
 :root {
 	--font-primary: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* reduced motion */
+:root.reduce-motion {
+	--list-item-transition: none;
+	--unread-bar-transition: none;
+	--moon-spin-transition: none;
+	--icon-spin-transition: none;
 }
 
 /* modify colors */
@@ -152,6 +164,9 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 }
 .container__871ba.checked__6bdb0 /* settings checkbuttons */ {
 	background: var(--accent-3) !important;
+}
+.mention__1afd3:active /* NEW unread pill when clicked */ {
+	background: var(--accent-4);
 }
 path[fill='rgba(35, 165, 90, 1)'] {
 	fill: var(--accent-3);
@@ -642,11 +657,11 @@ button.button_afdfd9 /* small buttons */,
 	-webkit-mask-repeat: none;
 }
 .wrapper_d281dd:hover .childWrapper__01b9c::before {
-	transition: background-color 0.15s ease-out, transform 0.5s ease-out;
+	transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
 	transform: rotate(0deg) scale(1);
 }
-:root:not(.reduce-motion) .wrapper_d281dd:hover > .childWrapper__01b9c::before,
-:root:not(.reduce-motion) .wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
+.wrapper_d281dd:hover > .childWrapper__01b9c::before,
+.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
 	background: var(--text-0);
 	transform: rotate(-360deg) scale(0.8);
 }
@@ -704,7 +719,7 @@ button.button_afdfd9 /* small buttons */,
 .container__4f20e /* members */,
 .channel_c21703 /* dms */,
 .side_b4b3f6 .item__48dda /* settings */ {
-	transition: margin-left var(--hover-push);
+	transition: margin-left var(--list-item-transition);
 }
 .wrapper__7bcde:hover .link__95dc0,
 .side_b4b3f6 .item__48dda:hover {
@@ -724,23 +739,24 @@ button.button__4f306 /* make user panel buttons round */ {
 .emojiButton__30ec7 .contents_fb6220 /* emoji button */,
 .closeButton__34341 /* settings exit button */,
 .contents_fb6220 > .closeIcon__5bab9 /* modal close */ {
-	transition: transform 1s ease;
+	transition: transform var(--icon-spin-transition);
 }
-:root:not(.reduce-motion) .button__4f306:last-child:hover .contents_fb6220,
-:root:not(.reduce-motion) .attachButton_b1db83:hover .attachButtonInner__3ce2b,
-:root:not(.reduce-motion) .emojiButton__30ec7:hover .contents_fb6220,
-:root:not(.reduce-motion) .closeButton__34341:hover,
-:root:not(.reduce-motion) .contents_fb6220:hover > .closeIcon__5bab9 {
+.button__4f306:last-child:hover .contents_fb6220,
+.attachButton_b1db83:hover .attachButtonInner__3ce2b,
+.emojiButton__30ec7:hover .contents_fb6220,
+.closeButton__34341:hover,
+.contents_fb6220:hover > .closeIcon__5bab9 {
 	transform: rotate(360deg);
 }
 
+/* hide unread bar on hover */
 .messagesWrapper_ea2b0b {
 	overflow: hidden;
 }
 .newMessagesBar__8b6d7 {
 	top: -48px;
 	height: 72px;
-	transition: top 0.2s ease;
+	transition: top var(--unread-bar-transition);
 	background: none;
 	box-shadow: none;
 	border-radius: 0;
@@ -756,6 +772,22 @@ button.button__4f306 /* make user panel buttons round */ {
 }
 .newMessagesBar__8b6d7:hover {
 	top: -12px;
+}
+.top__18077 > .containerPadding_b3087b {
+	padding: 16px;
+	margin-top: -40px;
+	transition: margin-top var(--unread-bar-transition);
+}
+.top__18077:hover > .containerPadding_b3087b:hover {
+	margin-top: -12px;
+}
+.bottom__9717f > .containerPadding_b3087b {
+	padding: 16px;
+	margin-bottom: -40px;
+	transition: margin-bottom var(--unread-bar-transition);
+}
+.bottom__9717f > .containerPadding_b3087b:hover {
+	margin-bottom: -12px;
 }
 
 .theme-light {
