@@ -492,6 +492,9 @@ a[href="https://support.discord.com"] /* hide help */
 .popout_a6e77f /* vencord plugin show all */ {
 	border-radius: 0 0 var(--roundness-s) var(--roundness-s);
 }
+.banner_f13f1e /* community server tutorial thing on message bar */ {
+	border-radius: var(--roundness-s) var(--roundness-s) 0 0;
+}
 .scrollableContainer__33e06.hasConnectedBar__277ab /* fix message bar with reply bar */ {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
@@ -510,7 +513,8 @@ button.button_afdfd9 /* small buttons */,
 #vc-spotify-album-image,
 .background__584e7 /* settings nitro tab selected */,
 .hoverButtonGroup__5b423 /* video download button */,
-.wrapper_c727b6 /* message hover menu */ {
+.wrapper_c727b6 /* message hover menu */,
+.previewChannelRowContent_d97574 {
 	border-radius: var(--roundness-xs);
 }
 .hoverButtonGroup__5b423 /* reposition video download button */ {
