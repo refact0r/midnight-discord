@@ -105,7 +105,9 @@
 #app-mount .scrollerContainer_bf5dbd /* channels and roles customize */,
 .shop_b31ed2 /* shop */,
 .wrapper_bd2abe.minimum_ebf000 /* private call */,
-.container_e4c233, .container__7712a /* emoji/sticker and gif picker searchbars */ {
+.container_e4c233, .container__7712a /* emoji/sticker and gif picker searchbars */,
+#app-mount .uploadModal_eae2a0 /* upload modal */,
+.uploadModal_eae2a0 .footer_ceda43 /* upload modal footer */ {
 	background: var(--bg-4);
 }
 .mainCard__8a660 /* forum post */,
@@ -444,7 +446,9 @@ a[href="https://support.discord.com"] /* hide help */
 .userPopoutOuter_d739b2 /* user profile popout */,
 .root_ba16f0 /* user profile modal */,
 .contentWrapper__321ed /* emoji, sticker, gif pickers */,
-.footer__89240 /* edit modal footer */ {
+.footer__89240 /* edit modal footer */,
+.layerContainer_d5a653 .root_a28985 /* upload modal */,
+.uploadModal_eae2a0 .footer_ceda43 /* upload modal footer */ {
 	border-radius: var(--roundness-l);
 }
 .roundedBanner__9fa0a /* user profile popout top */,
