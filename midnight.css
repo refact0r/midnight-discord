@@ -444,12 +444,8 @@ a[href="https://support.discord.com"] /* hide help */
 .userPopoutOuter_d739b2 /* user profile popout */,
 .root_ba16f0 /* user profile modal */,
 .contentWrapper__321ed /* emoji, sticker, gif pickers */,
-.root_a28985 /* edit modal */,
 .footer__89240 /* edit modal footer */ {
 	border-radius: var(--roundness-l);
-}
-.root_a28985 {
-	overflow: hidden;
 }
 .roundedBanner__9fa0a /* user profile popout top */,
 .banner_b7f1fb /* user profile top when edit */ {
