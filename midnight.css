@@ -271,6 +271,18 @@ path[fill='var(--white-500)'] {
 .checkbox_c7f690 /* channel checkboxes */ {
 	border-color: var(--text-4) !important;
 }
+.button66e8c.buttonColor_a6eb73.buttonActive407a7 /* graphic fixes for improved readability */ {
+	color: var(--text-primary);
+}
+.button66e8c.buttonColor_a6eb73.buttonActive407a7:hover{
+	color: var(--text-0);
+}
+.icon_c1b424 {
+	color: var(--text-primary);
+}
+.defaultColor__37d78 {
+	color: var(--text-primary);
+}
 
 /* remove shadows */
 #app-mount .header_f7f1f3 /* gif picker */ {
