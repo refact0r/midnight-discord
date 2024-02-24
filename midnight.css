@@ -204,7 +204,10 @@ path[fill='var(--white-500)'] {
 .categoryItem_b1be5c.selectedCategoryItem__0bf4c,
 .live_b195a5 /* streaming live */,
 #app-mount .activeButton__7a550 /* member page pagination button */ ,
-#app-mount .tooltipBrand__13fbc /* member page filter tooltip */ {
+#app-mount .tooltipBrand__13fbc /* member page filter tooltip */,
+.button__66e8c.buttonColor_a6eb73.buttonActive__407a7 /* active voice channel icons */,
+.vcd-screen-picker-radio[data-checked="true"] .defaultColor__37d78 /* vencord stream resolution picker buttons when active */,
+.icon_c1b424 /* streaming activity type icon  */ {
 	color: var(--text-0);
 }
 #app-mount .button__57d93, .theme-light .button__57d93 /* notice banner button */,
@@ -1090,7 +1093,7 @@ html.theme-light,
 	--text-muted-on-default: red;
 	--text-normal: var(--text-3);
 	--text-positive: var(--green-330);
-	--text-primary: var(--primary-230);
+	--text-primary: red;
 	--text-secondary: red;
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
