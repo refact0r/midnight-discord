@@ -2,7 +2,7 @@
 
 # midnight
 
-A darkened discord theme with rounded chat and sidebars.
+a darkened discord theme with rounded chat and sidebars.
 
 <img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/69de9437-8312-4949-befd-a476a56e2cee">
 
@@ -13,13 +13,13 @@ A darkened discord theme with rounded chat and sidebars.
 
 #### betterdiscord (or client with local theme folder)
 
-1. Download `midnight.theme.css` from <https://betterdiscord.app/theme/midnight> or this repo.
-2. Put the file into your theme folder. (there should be a button to open the theme folder in theme settings)
-3. (optional) Customize the theme in `midnight.theme.css`.
+1. download `midnight.theme.css` from <https://betterdiscord.app/theme/midnight> or this repo.
+2. put the file into your theme folder. (there should be a button to open the theme folder in theme settings)
+3. (optional) customize the theme in `midnight.theme.css`.
 
 #### install through link
 
-Add `https://refact0r.github.io/midnight-discord/midnight.css` to your theme import links.
+add `https://refact0r.github.io/midnight-discord/midnight.css` to your theme import links.
 
 ## discord server
 
