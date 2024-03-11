@@ -1,3 +1,6 @@
+/* adds white borders around black emojis */
+@import url("https://app.staticsave.com/asportnoy/emoji-border.css");
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* customize things here */
@@ -6,7 +9,7 @@
 	--font: 'figtree';
 
 	/* top left corner text */
-	--corner-text: 'Midnight';
+	--corner-text: 'Discord';
 
 	/* color of status indicators and window controls */
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
@@ -28,8 +31,8 @@
 	--text-1: var(--text-2); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
 	--text-3: hsl(220, 15%, 60%); /* normal text */
-	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
-	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+	--text-4: hsl(221, 14%, 49%); /* icon buttons and channels */
+	--text-5: hsl(218, 18%, 39%); /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
@@ -60,8 +63,8 @@
 
 	/* direct messages moon icon */
 	/* change to block to show, none to hide */
-	--discord-icon: none; /* discord icon */
-	--moon-icon: block; /* moon icon */
+	--discord-icon: block; /* discord icon */
+	--moon-icon: none; /* moon icon */
 	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 	--moon-icon-size: auto;
 
@@ -152,17 +155,26 @@ div.message__80c10.replying_d7b6ad::before /* change reply message bar to neutra
 .toolbar__88c63 /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
 }
+
+/* Hide nitro and shop buttons */
+div.sidebar_ded4b5 > nav > div.scroller__4b984 > ul > li:nth-child(3),
+div.sidebar_ded4b5 > nav > div.scroller__4b984 > ul > li:nth-child(4) {
+    display: none;    
+}
+
 .expandedFolderIconWrapper__458cf > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
 	color: var(--accent-3) !important;
 }
 .divider_b9338f /* unread divider */,
 .mention__1afd3 /* NEW unread pill */,
 .mentionsBar__4b47a /* channel list new mention pill */ {
-	--status-danger: var(--accent-3);
+	/* --status-danger: var(--accent-3); */
+    --dummy: 123;
 }
 .message__80c10.mentioned__58017:before /* mention message left edge */,
 .botTagRegular_c89c9a /* OP tag */ {
-	background: var(--accent-3);
+	/* background: var(--accent-3); */
+    --dummy: 123;
 }
 .container__871ba.checked__6bdb0 /* settings checkbuttons */ {
 	background: var(--accent-3) !important;
@@ -285,6 +297,7 @@ path[fill='var(--white-500)'] {
 }
 
 /* change online indicator color */
+/*
 rect[fill='#23a55a'],
 svg[fill='#23a55a'] {
 	fill: var(--online-indicator) !important;
@@ -313,6 +326,7 @@ svg[fill='#593695'] {
 .status__1c26d[style='background-color: rgb(89, 54, 149);'] {
 	background-color: var(--streaming-indicator) !important;
 }
+*/
 
 /* color fix filters */
 .container_a308ae:last-child .icon__28d6c /* explore discoverable servers icon color */ {
@@ -632,6 +646,7 @@ button.button_afdfd9 /* small buttons */,
 }
 
 /* window controls */
+/*
 [class^='winButton'] > svg {
 	display: none;
 }
@@ -666,6 +681,7 @@ button.button_afdfd9 /* small buttons */,
 [class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: var(--idle-indicator) !important;
 }
+*/
 
 /* custom dm button moon icon */
 .childWrapper__01b9c > svg:not(.favoriteIcon_adf80e) {
@@ -691,9 +707,21 @@ button.button_afdfd9 /* small buttons */,
 	background: var(--text-0);
 	transform: rotate(-360deg) scale(0.8);
 }
+
+/* VC microphone select arrow animations */
+.open__37c4a {
+    transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
+    transform: rotate(-180deg);
+}
+
+.contextMenuCaret_d2a844 {
+   	transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
+    transform: rotate(0deg);
+}
+
 .lowerBadge__669e7::before {
 	content: '';
-	display: block;
+	display: hidden;
 	position: absolute;
 	width: 24px;
 	height: 24px;
@@ -702,12 +730,36 @@ button.button_afdfd9 /* small buttons */,
 	background: var(--bg-3);
 	border-radius: 50%;
 }
+/* Hide friend request & ping number pill */
+.lowerBadge__669e7 {
+    display: none;
+}
+.svg_ad7356 defs > rect[id$="-lower_badge_masks"]
+ {
+    display: none;
+}
+
 /* custom dm button background instead of icon */
 /* .childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
 } */
+
+/* Fix some input bgs */
+.input__848cd {
+    background-color: var(--bg-4);
+}
+.searchBar_ff8800 { /* Friends list search */
+    background-color: var(--bg-3);
+}
+
+/* Hide gift, gif, sticker button */
+div.buttons_ce5b56 > button,
+div.buttons_ce5b56 > div:nth-child(6),
+div.buttons_ce5b56 > div:nth-child(7) {
+    display: none;
+}
 
 /* improve unread divider */
 .divider_b9338f {
@@ -819,6 +871,12 @@ button.button__4f306 /* make user panel buttons round */ {
 .theme-light {
 	--text-link: var(--accent-5);
 }
+
+/* Hide the big activities button */
+.buttonContainer__66ac7 {
+    display: none;
+}
+
 html.theme-light,
 .theme-dark {
 	--activity-card-background: var(--primary-700);
@@ -827,8 +885,8 @@ html.theme-light,
 	--android-ripple: hsl(var(--white-500-hsl) / 0.07);
 	--background-accent: var(--bg-2);
 	--background-floating: var(--bg-3);
-	--background-mentioned: var(--mention);
-	--background-mentioned-hover: var(--mention-hover);
+	/*--background-mentioned: var(--mention);
+	--background-mentioned-hover: var(--mention-hover); */
 	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
 	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
 	--background-message-highlight: var(--active);
