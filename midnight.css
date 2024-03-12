@@ -730,7 +730,7 @@ button.button_afdfd9 /* small buttons */,
 	background: var(--bg-3);
 	border-radius: 50%;
 }
-/* Hide friend request & ping number pill */
+/* Hide friend request & ping number pill 
 .lowerBadge__669e7 {
     display: none;
 }
@@ -738,6 +738,7 @@ button.button_afdfd9 /* small buttons */,
  {
     display: none;
 }
+*/
 
 /* custom dm button background instead of icon */
 /* .childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
