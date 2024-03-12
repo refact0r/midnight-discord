@@ -30,9 +30,9 @@
 	--text-0: white; /* text on colored elements */
 	--text-1: var(--text-2); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
-	--text-3: hsl(220, 15%, 60%); /* normal text */
-	--text-4: hsl(221, 14%, 49%); /* icon buttons and channels */
-	--text-5: hsl(218, 18%, 39%); /* muted channels/chats and timestamps */
+	--text-3: hsl(221, 20%, 62%); /* normal text */
+	--text-4: hsl(217, 9%, 49%); /* icon buttons and channels */
+	--text-5: hsl(217, 11%, 41%); /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
@@ -755,6 +755,15 @@ button.button_afdfd9 /* small buttons */,
     background-color: var(--bg-3);
 }
 
+/* Update muted channel colors */
+li.containerDefault__3187b.selected__3b4cb > div > div > a > div > div.iconContainer__3f9b0 > svg {
+    color: var(--text-3);
+}
+
+li.containerDefault__3187b > div > div > a > div > div.iconContainer__3f9b0 > svg {
+    color: var(--text-4);
+}
+
 /* Hide gift, gif, sticker button */
 div.buttons_ce5b56 > button,
 div.buttons_ce5b56 > div:nth-child(6),
@@ -1036,7 +1045,7 @@ html.theme-light,
 	--input-placeholder-text: var(--text-5);
 	--interactive-active: var(--text-3);
 	--interactive-hover: var(--text-3);
-	--interactive-muted: var(--text-5);
+	--interactive-muted: hsl(218, 13%, 28%);
 	--interactive-normal: var(--text-4);
 	--legacy-android-blur-overlay-default: hsl(var(--primary-660-hsl) / 0.5);
 	--legacy-android-blur-overlay-ultra-thin: hsl(var(--black-500-hsl) / 0.025);
