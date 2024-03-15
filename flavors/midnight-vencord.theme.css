@@ -25,7 +25,6 @@
 	--online-indicator: #89b481; /* change to #23a55a for default green */
 	--dnd-indicator: #d3869b; /* change to #f13f43 for default red */
 	--idle-indicator: #d8a656; /* change to #f0b232 for default yellow */
-	--idle-indicator: hsl(260, 47%, 68%); /* change to #f0b232 for default yellow */
 
 	/* accent colors */
 	--accent-1: #7caea3; /* links */
