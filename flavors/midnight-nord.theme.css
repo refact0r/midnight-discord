@@ -39,8 +39,8 @@
 	--text-1: #eceff4; /* other normally white text */
 	--text-2: #e5e9f0; /* headings and important text */
 	--text-3: #d9dee8; /* normal text */
-	--text-4: #c4c9d4; /* icon buttons and channels */
-	--text-5: #acb4c3; /* muted channels/chats and timestamps */
+	--text-4: #a0a3a7; /* icon buttons and channels */
+	--text-5: #65686c; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: #434c5e; /* dark buttons when clicked */
