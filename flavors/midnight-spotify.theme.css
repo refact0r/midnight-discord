@@ -1,7 +1,7 @@
 /**
- * @name midnight (green)
- * @description A darkened discord theme. Based on nord theme (https://github.com/nordtheme/nord).
- * @author refact0r, anubis, Remco0o
+ * @name midnight (spotify)
+ * @description A darkened discord theme. Based on spotify theme.
+ * @author refact0r, anubis
  * @version 0.0.1
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
@@ -17,20 +17,20 @@
 	--font: 'figtree';
 
 	/* top left corner text */
-	--corner-text: 'Nord';
+	--corner-text: 'Spotify';
 
 	/* color of status indicators and window controls */
-	--online-indicator: #23a55a; /* change to #23a55a for default green */
+	--online-indicator: #1dd75e; /* change to #23a55a for default green */
 	--dnd-indicator: #f13f43; /* change to #f13f43 for default red */
 	--idle-indicator: #f0b232; /* change to #f0b232 for default yellow */
 	--streaming-indicator: #593695; /* change to #593695 for default purple */
 
 	/* accent colors */
-	--accent-1: #11dfdf; /* links */
+	--accent-1: #0a9eb1; /* links */
 	--accent-2: #f13f43; /* general unread/mention elements */
-	--accent-3: hsl(164, 42%, 44%); /* accent buttons */
-	--accent-4: hsl(164, 36%, 37%); /* accent buttons when hovered */
-	--accent-5: hsl(164, 30%, 30%); /* accent buttons when clicked */
+	--accent-3: hsl(141, 76%, 48%); /* accent buttons */
+	--accent-4: hsl(141, 70%, 41%); /* accent buttons when hovered */
+	--accent-5: hsl(141, 64%, 34%); /* accent buttons when clicked */
 	--mention: hsla(193, 43%, 51%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(193, 43%, 51%, 0.05); /* mentions & mention messages when hovered */
 
@@ -38,15 +38,15 @@
 	--text-0: #2e3440; /* text on colored elements */
 	--text-1: #eceff4; /* other normally white text */
 	--text-2: #e5e9f0; /* headings and important text */
-	--text-3: #ECEFF4; /* normal text */
-	--text-4: #93a4c2; /* icon buttons and channels */
-	--text-5: #434C5E; /* muted channels/chats and timestamps */
+	--text-3: #ffffff; /* normal text */
+	--text-4: #63767b; /* icon buttons and channels */
+	--text-5: #6d6d6d; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: #434c5e; /* dark buttons when clicked */
-	--bg-2: #3b4252; /* dark buttons */
-	--bg-3: #313847; /* spacing, secondary elements */
-	--bg-4: #23262d; /* main background color */
+	--bg-2: #3b4252; /* dark buttons */	
+	--bg-3: #000000; /* spacing, secondary elements */
+	--bg-4: #121212; /* main background color */
 	--hover: hsla(220, 17%, 32%, 0.3); /* buttons when hovered */
 	--active: hsla(220, 17%, 32%, 0.5); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
