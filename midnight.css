@@ -1132,3 +1132,8 @@ html.theme-light,
 
 	--white-500: var(--text-1);
 }
+
+.auto__76cc7 {
+	scrollbar-width: unset;
+	scrollbar-color: unset;
+}
