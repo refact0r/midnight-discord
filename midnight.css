@@ -275,6 +275,10 @@ path[fill='var(--white-500)'] {
 .checkbox_fcf2ad /* channel checkboxes */ {
 	border-color: var(--text-4) !important;
 }
+.newBadge__40645 /* fix forum new badge */ {
+	color: var(--accent-2);
+	line-height: 16px;
+}
 
 /* remove shadows */
 #app-mount .header_aac16f /* gif picker */ {
@@ -1111,6 +1115,7 @@ html.theme-light,
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
 
+	--brand-260: var(--bg-1); /* new badge */
 	--brand-430: var(--accent-3);
 	--brand-500: var(--accent-3);
 	--brand-560: var(--accent-4);
