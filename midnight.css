@@ -952,7 +952,7 @@ html.theme-light,
 	--forum-post-extra-media-count-container-background: hsl(var(--primary-660-hsl) / 0.8);
 	--forum-post-tag-background: hsl(var(--primary-660-hsl) / 0.9);
 	--guild-notifications-bottom-sheet-pill-background: var(--primary-700);
-	--header-muted: red;
+	--header-muted: var(--text-4);
 	--header-primary: var(--text-2);
 	--header-secondary: var(--text-4);
 	--home-background: var(--bg-4);
@@ -1095,7 +1095,7 @@ html.theme-light,
 	--text-normal: var(--text-3);
 	--text-positive: var(--green-330);
 	--text-primary: red;
-	--text-secondary: red;
+	--text-secondary: var(--text-3);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
 	--theme-locked-blur-fallback: hsl(var(--primary-700-hsl) / 0.96);
