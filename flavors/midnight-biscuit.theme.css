@@ -1,11 +1,15 @@
 /**
  * @name midnight (biscuit)
- * @description A darkened discord theme. Based on Biscuit theme (https://github.com/Biscuit-Colorscheme/biscuit).
+ * @description A dark, rounded discord theme. Based on Biscuit theme (https://github.com/Biscuit-Colorscheme/biscuit).
  * @author refact0r, anubis
  * @version 1.6.2
- * @source https://github.com/refact0r/midnight-discord
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
  * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
 */
+
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
@@ -81,7 +85,7 @@
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
-.childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper_a6ce15:has(> svg:not(.favoriteIcon_adf80e)) {
 	background-image: url('https://raw.githubusercontent.com/Biscuit-Colorscheme/.github/main/assets/icon-dark-nobg.png');
 	background-color: transparent !important;
 	background-size: contain;
