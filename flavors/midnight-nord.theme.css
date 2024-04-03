@@ -1,10 +1,21 @@
 /**
  * @name midnight (nord)
- * @description A darkened discord theme. Based on nord theme (https://github.com/nordtheme/nord).
+ * @description A dark, rounded discord theme. Based on nord theme (https://github.com/nordtheme/nord).
  * @author refact0r, anubis
  * @version 1.6.2
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
+*/
+/**
+ * @name midnight (nord)
+ * @description A dark, rounded discord theme. Based on nord theme (https://github.com/nordtheme/nord).
+ * @author refact0r, anubis
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
 */
 
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
@@ -38,9 +49,9 @@
 	--text-0: #2e3440; /* text on colored elements */
 	--text-1: #eceff4; /* other normally white text */
 	--text-2: #e5e9f0; /* headings and important text */
-	--text-3: #ECEFF4; /* normal text */
+	--text-3: #eceff4; /* normal text */
 	--text-4: #93a4c2; /* icon buttons and channels */
-	--text-5: #434C5E; /* muted channels/chats and timestamps */
+	--text-5: #434c5e; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: #434c5e; /* dark buttons when clicked */
