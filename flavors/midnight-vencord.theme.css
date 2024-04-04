@@ -86,9 +86,9 @@
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
-/* disable DM spin */
-.wrapper_d281dd:hover > .childWrapper__01b9c::before,
-.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
-	background: var(--text-0);
-	transform: rotate(-0deg) scale(0.8);
+	/* disable DM spin */
+	.wrapper__8436d:hover > .childWrapper_a6ce15::before,
+	.wrapper__8436d.selected_ae80f7 > .childWrapper_a6ce15::before {
+		background: var(--text-0);
+		transform: rotate(-0deg) scale(0.8);
 }
