@@ -85,3 +85,7 @@
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
+
+.colorDefault_e361cf:active:not(.hideInteraction__0b569) , .colorDefault_e361cf.focused_dcafb9 .caret_ce50ce,.colorDefault_e361cf.focused_dcafb9,.focused_a7ad64 .userMenuUsername_d2fe10 .userMenuText_b1842d {
+	color: var(--text-1);
+}
