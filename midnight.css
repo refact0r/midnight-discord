@@ -233,10 +233,10 @@ path[fill='var(--white-500)'] {
 .container__2ed72 > .slider__41d94 > rect /* settings checkbutton circle */ {
 	fill: var(--text-1);
 }
-.menu__13d0c .menuItemFocused__7beab {
+.menu__13d0c .menuItemFocused__7beab /* account switch button hover */ {
 	color: var(--text-3);
 }
-.menu__13d0c .menuItemFocused__7beab path {
+.menu__13d0c .menuItemFocused__7beab path /* account switch button hover */ {
 	fill: var(--text-3);
 }
 .mini_d6d84c .grabber_e3daf3 /* spotify bar handle */ {
