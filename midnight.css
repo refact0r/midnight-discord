@@ -862,7 +862,7 @@ html.theme-light,
 	--bg-base-primary: var(--primary-600);
 	--bg-base-secondary: var(--primary-630);
 	--bg-base-tertiary: var(--primary-660);
-	--bg-mod-faint: hsl(var(--primary-500-hsl) / 0.3);
+	--bg-mod-faint: var(--bg-4);
 	--bg-mod-strong: hsl(var(--primary-500-hsl) / 0.54);
 	--bg-mod-subtle: hsl(var(--primary-500-hsl) / 0.48);
 	--bg-surface-overlay: var(--primary-800);
@@ -928,7 +928,7 @@ html.theme-light,
 	--card-gradient-pressed-bg: hsl(var(--black-500-hsl) / 0.5);
 	--card-primary-bg: var(--primary-560);
 	--card-primary-pressed-bg: var(--primary-645);
-	--card-secondary-bg: var(--primary-560);
+	--card-secondary-bg: var(--bg-3);
 	--card-secondary-pressed-bg: var(--primary-645);
 	--channel-icon: var(--text-4);
 	--channel-text-area-placeholder: var(--text-5);
@@ -1003,7 +1003,7 @@ html.theme-light,
 	--navigator-header-tint: var(--white-500);
 	--polls-image-normal-border: hsl(var(--black-430-hsl) / 0.9);
 	--polls-victor-border: var(--yellow-300);
-	--polls-victor-fill: var(--yellow-200);
+	--polls-victor-fill: var(--mention);
 	--polls-victor-label: var(--primary-600);
 	--polls-voted-border: var(--green-330);
 	--polls-voted-fill: var(--green-160);
