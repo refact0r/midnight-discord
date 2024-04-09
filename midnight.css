@@ -161,7 +161,7 @@ div.message_ccca67.replying__38514::before /* change reply message bar to neutra
 	--status-danger: var(--accent-3);
 }
 .message_ccca67.mentioned_fa6fd2:before /* mention message left edge */,
-.botTagRegular_c89c9a /* OP tag */ {
+.botTagOP_fd6360 /* OP tag */ {
 	background: var(--accent-3);
 }
 .container__2ed72.checked__36fdc /* settings checkbuttons */ {
@@ -178,7 +178,7 @@ path[fill='var(--white-500)'] {
 }
 .numberBadge__40d6f /* dms number badge */,
 .newMessagesBar__8b272 .barButtonBase__5e4cf /* unread bar */,
-.botTagRegular_c89c9a /* bot tag */,
+.botTagRegular_fc4b4a /* bot tag */,
 .endCap__95d53 /* unread divider */,
 .lookFilled__950dd.colorBrand__27d57 /* accent buttons */,
 .lookFilled__950dd.colorBrand__27d57 .defaultColor__77578 /* accent buttons */,
