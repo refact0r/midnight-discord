@@ -1006,7 +1006,7 @@ html.theme-light,
 	--polls-victor-fill: var(--mention);
 	--polls-victor-label: var(--primary-600);
 	--polls-voted-border: var(--green-330);
-	--polls-voted-fill: var(--green-160);
+	--polls-voted-fill: var(--mention);
 	--polls-voted-label: var(--primary-600);
 	--profile-gradient-card-background: hsl(var(--black-500-hsl) / 0.7);
 	--profile-gradient-message-input-border: hsl(var(--primary-500-hsl) / 0.48);
