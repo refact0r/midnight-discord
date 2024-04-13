@@ -96,7 +96,7 @@
 }
 
 .childWrapper_a6ce15:has(> svg:not(.favoriteIcon_adf80e)) {
-	background-image: url('https://github.com/yuhkix/midnight-discord/blob/master/assets/amaryllis/amaryllis.png');
+	background-image: url('https://github.com/yuhkix/midnight-discord/blob/master/assets/amaryllis/amaryllis.png?raw=true');
 	background-color: transparent !important;
 	background-size: cover;
 	background-position: center;
