@@ -451,7 +451,8 @@ a[href="https://support.discord.com"] /* hide help */
 .profilePanel_e2cafe /* profile panel outer */,
 .userPanelOuter_eb00b1 /* profile panel inner */,
 .userPanelInner_f9edb8 /* profile panel inner inner */,
-.userPanelInner_f9edb8::before /* profile panel inner inner filter */ {
+.userPanelInner_f9edb8::before /* profile panel inner inner filter */,
+.container_b92032 /* forums */ {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
@@ -1125,6 +1126,7 @@ html.theme-light,
 	--brand-260: var(--bg-1); /* new badge */
 	--brand-430: var(--accent-3);
 	--brand-500: var(--accent-3);
+	--brand-530: var(--accent-4);
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
 
