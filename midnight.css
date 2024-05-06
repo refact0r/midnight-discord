@@ -1136,6 +1136,8 @@ html.theme-light,
 	--brand-560: var(--accent-4);
 	--brand-600: var(--accent-5);
 
+	--brand-experiment-400: var(--accent-3); /* loading spinning animation element */
+
 	--green-330: var(--accent-1);
 	--green-360: var(--accent-3);
 	--green-430: var(--accent-4);
