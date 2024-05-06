@@ -695,6 +695,7 @@ button.button__581d0 /* small buttons */,
 	-webkit-mask-repeat: none;
 }
 .wrapper__8436d:hover .childWrapper_a6ce15::before {
+	/* prettier-ignore */
 	transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
 	transform: rotate(0deg) scale(1);
 }
@@ -720,6 +721,11 @@ button.button__581d0 /* small buttons */,
 	background-color: transparent !important;
 	background-size: cover;
 } */
+
+/* vencord spotify player support */
+#vc-spotify-player {
+	--vc-spotify-green: var(--accent-1);
+}
 
 /* improve unread divider */
 .divider__855e3 {
