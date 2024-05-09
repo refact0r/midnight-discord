@@ -460,7 +460,7 @@ a[href="https://support.discord.com"] /* hide help */
 .messagesPopoutWrap__10dd1 /* inbox, pinned messages popout */,
 .container_f93da8 /* thread popout */,
 .menu__088f7 .item__183e8d /* server option popout */,
-.userPopoutOuter__3884e /* user profile popout */,
+.userPopoutOuter_d67f56 /* user profile popout */,
 .root_ba16f0 /* user profile modal */,
 .contentWrapper_e0bb2c /* emoji, sticker, gif pickers */,
 .footer_e0b400 /* edit modal footer */,
@@ -472,11 +472,11 @@ a[href="https://support.discord.com"] /* hide help */
 .banner_b7f1fb /* user profile top when edit */ {
 	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px) 0 0;
 }
-.userPopoutInner_e90432:before /* user profile popout bottom */,
+.userPopoutInner_ac0960:before /* user profile popout bottom */,
 .userProfileModalInner__99b1e:before /* user profile modal bottom */ {
 	border-radius: calc(var(--roundness-l) - 4px);
 }
-.overlayBackground__2666e /* user profile inner */ {
+.overlayBackground__345c9 /* user profile inner */ {
 	border-radius: var(--roundness-s);
 }
 .menu__088f7 /* general popouts */,
