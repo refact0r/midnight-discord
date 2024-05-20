@@ -14,11 +14,12 @@
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
+@import url('https://api.fontshare.com/v2/css?f[]=chillax@400&display=swap');
+
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font */
-	/*--font: 'figtree';*/
-	--font: 'Chillax';
+	--font: 'Chillax', sans-serif;
 
 	/* top left corner text */
 	--corner-text: 'Amaryllis';
