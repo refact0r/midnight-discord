@@ -148,7 +148,7 @@ div.message_ccca67.replying__38514::before /* change reply message bar to neutra
 	color: var(--accent-2);
 }
 .container_debb33 /* user panel button strikethroughs */,
-.numberBadge__40d6f /* unread number badge */,
+.numberBadge_c1210c  /* unread number badge */,
 .toolbar__62fb5 /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
 }
@@ -176,7 +176,7 @@ path[fill='rgba(35, 165, 90, 1)'] {
 path[fill='var(--white-500)'] {
 	fill: var(--text-0) !important;
 }
-.numberBadge__40d6f /* dms number badge */,
+.numberBadge_c1210c /* dms number badge */,
 .newMessagesBar__8b272 .barButtonBase__5e4cf /* unread bar */,
 .botTagRegular_fc4b4a /* bot tag */,
 .endCap__95d53 /* unread divider */,
