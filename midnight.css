@@ -1112,7 +1112,7 @@ html.theme-light,
 	--text-muted-on-default: red;
 	--text-normal: var(--text-3);
 	--text-positive: var(--green-330);
-	--text-primary: red;
+	--text-primary: var(--text-3);
 	--text-secondary: var(--text-3);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
