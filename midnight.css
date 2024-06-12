@@ -187,8 +187,8 @@ path[fill='var(--white-500)'] {
 .lookFilled__950dd.colorRed__5a617 /* red buttons */,
 .lookFilled__950dd.colorYellow__818c3 /* yellow buttons */,
 .bar_edc096 /* NEW unread pill */,
-.wrapper__8436d:hover .childWrapper__760c6, /* default server icon text */ 
-.wrapper__8436d.selected_ae80f7 .childWrapper__760c6 /* default server icon text */,
+.wrapper_a6f950:hover .childWrapper__760c6, /* default server icon text */ 
+.wrapper_a6f950.selected_ae80f7 .childWrapper__760c6 /* default server icon text */,
 .colorDefault_e361cf.focused_dcafb9 /* menu option hover */,
 .colorDefault_e361cf.focused_dcafb9 .caret_ce50ce /* popup menu hover caret */,
 .colorDefault_e361cf:active:not(.hideInteraction__0b569) /* menu option active */,
@@ -695,13 +695,13 @@ button.button__581d0 /* small buttons */,
 	-webkit-mask-size: var(--moon-icon-size);
 	-webkit-mask-repeat: none;
 }
-.wrapper__8436d:hover .childWrapper__760c6::before {
+.wrapper_a6f950:hover .childWrapper__760c6::before {
 	/* prettier-ignore */
 	transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
 	transform: rotate(0deg) scale(1);
 }
-.wrapper__8436d:hover > .childWrapper__760c6::before,
-.wrapper__8436d.selected_ae80f7 > .childWrapper__760c6::before {
+.wrapper_a6f950:hover > .childWrapper__760c6::before,
+.wrapper_a6f950.selected_b420e6 > .childWrapper__760c6::before {
 	background: var(--text-0);
 	transform: rotate(-360deg) scale(0.8);
 }
