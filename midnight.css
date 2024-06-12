@@ -208,7 +208,8 @@ path[fill='var(--white-500)'] {
 .button_b82d53.buttonColor__7bad9.buttonActive_ae686f /* active voice channel icons */,
 .button_b82d53.buttonColor__7bad9.buttonActive_ae686f:hover /* active voice channel icons */,
 .vcd-screen-picker-radio[data-checked="true"] .defaultColor__30336 /* vencord stream resolution picker buttons when active */,
-.icon__493c1 /* streaming activity type icon  */ {
+.icon__493c1 /* streaming activity type icon  */,
+.theme-dark .tooltipGreen__36421, .theme-light .tooltipGreen__36421 /* tooltip text like vc latency */ {
 	color: var(--text-0);
 }
 #app-mount .button__33db6, .theme-light .button__33db6 /* notice banner button */,
