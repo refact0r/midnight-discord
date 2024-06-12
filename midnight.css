@@ -187,8 +187,8 @@ path[fill='var(--white-500)'] {
 .lookFilled__950dd.colorRed__5a617 /* red buttons */,
 .lookFilled__950dd.colorYellow__818c3 /* yellow buttons */,
 .bar_edc096 /* NEW unread pill */,
-.wrapper__8436d:hover .childWrapper_a6ce15, /* default server icon text */ 
-.wrapper__8436d.selected_ae80f7 .childWrapper_a6ce15 /* default server icon text */,
+.wrapper__8436d:hover .childWrapper__760c6, /* default server icon text */ 
+.wrapper__8436d.selected_ae80f7 .childWrapper__760c6 /* default server icon text */,
 .colorDefault_e361cf.focused_dcafb9 /* menu option hover */,
 .colorDefault_e361cf.focused_dcafb9 .caret_ce50ce /* popup menu hover caret */,
 .colorDefault_e361cf:active:not(.hideInteraction__0b569) /* menu option active */,
@@ -586,7 +586,7 @@ button.button__581d0 /* small buttons */,
 	pointer-events: none;
 	z-index: 1;
 }
-.childWrapper_a6ce15 {
+.childWrapper__760c6 {
 	background: var(--bg-3);
 }
 .container_d1f8f5 > [style$='display: flex;'] > .guilds__2b93a {
@@ -680,10 +680,10 @@ button.button__581d0 /* small buttons */,
 }
 
 /* custom dm button moon icon */
-.childWrapper_a6ce15 > svg:not(.favoriteIcon__901fa) {
+.childWrapper__760c6 > svg:not(.favoriteIcon__901fa) {
 	display: var(--discord-icon);
 }
-.childWrapper_a6ce15:has(> svg:not(.favoriteIcon__901fa))::before {
+.childWrapper__760c6:has(> svg:not(.favoriteIcon__901fa))::before {
 	content: '';
 	display: var(--moon-icon);
 	position: absolute;
@@ -694,13 +694,13 @@ button.button__581d0 /* small buttons */,
 	-webkit-mask-size: var(--moon-icon-size);
 	-webkit-mask-repeat: none;
 }
-.wrapper__8436d:hover .childWrapper_a6ce15::before {
+.wrapper__8436d:hover .childWrapper__760c6::before {
 	/* prettier-ignore */
 	transition: background-color 0.15s ease-out, transform var(--moon-spin-transition);
 	transform: rotate(0deg) scale(1);
 }
-.wrapper__8436d:hover > .childWrapper_a6ce15::before,
-.wrapper__8436d.selected_ae80f7 > .childWrapper_a6ce15::before {
+.wrapper__8436d:hover > .childWrapper__760c6::before,
+.wrapper__8436d.selected_ae80f7 > .childWrapper__760c6::before {
 	background: var(--text-0);
 	transform: rotate(-360deg) scale(0.8);
 }
@@ -716,7 +716,7 @@ button.button__581d0 /* small buttons */,
 	border-radius: 50%;
 }
 /* custom dm button background instead of icon */
-/* .childWrapper_a6ce15:has(> svg:not(.favoriteIcon__901fa)) {
+/* .childWrapper__760c6:has(> svg:not(.favoriteIcon__901fa)) {
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
