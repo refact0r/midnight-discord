@@ -85,7 +85,7 @@
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
-.childWrapper_a6ce15:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper__760c6:has(> svg:not(.favoriteIcon_adf80e)) {
 	background-image: url('https://raw.githubusercontent.com/Biscuit-Colorscheme/.github/main/assets/icon-dark-nobg.png');
 	background-color: transparent !important;
 	background-size: contain;

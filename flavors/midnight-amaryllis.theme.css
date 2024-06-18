@@ -88,7 +88,7 @@
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
 
-.childWrapper_a6ce15:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper__760c6:has(> svg:not(.favoriteIcon_adf80e)) {
 	background-image: url('https://github.com/yuhkix/midnight-discord/blob/master/assets/amaryllis/amaryllis.png?raw=true');
 	background-color: transparent !important;
 	background-size: cover;
