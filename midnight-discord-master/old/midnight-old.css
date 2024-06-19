@@ -1,0 +1,653 @@
+:root {
+	/* amount of spacing and padding */
+	--spacing: 12px;
+	/* radius of round corners */
+	--roundness: 16px;
+
+	/* color of links */
+	--accent-1: hsl(190, 80%, 60%);
+	/* color of unread dividers and some indicators */
+	--accent-2: hsl(190, 80%, 48%);
+	/* color of accented buttons */
+	--accent-3: hsl(190, 80%, 42%);
+	/* color of accented buttons when hovered */
+	--accent-4: hsl(190, 80%, 36%);
+	/* color of accented buttons when clicked */
+	--accent-5: hsl(190, 80%, 30%);
+
+	/* color of green online dot, discord default is #23a55a */
+	--online-indicator: var(--accent-2);
+
+	/* color of mentions and messages that mention you */
+	--mention: hsla(190, 80%, 52%, 0.08);
+	/* color of mentions and messages that mention you when hovered */
+	--mention-hover: hsla(190, 80%, 52%, 0.05);
+
+	/* color of bright text on colored buttons */
+	--text-1: hsl(220, 40%, 90%);
+	/* color of headings and important text */
+	--text-2: hsl(220, 25%, 70%);
+	/* color of normal text */
+	--text-3: hsl(220, 15%, 60%);
+	/* color of icon buttons and channels */
+	--text-4: hsl(220, 15%, 40%);
+	/* color of muted channels/chats and timestamps */
+	--text-5: hsl(220, 15%, 25%);
+
+	/* color of dark buttons when clicked */
+	--bg-1: hsl(220, 15%, 20%);
+	/* color of dark buttons */
+	--bg-2: hsl(220, 15%, 16%);
+	/* color of spacing around panels and secondary elements */
+	--bg-3: hsl(220, 15%, 13%);
+	/* main background color */
+	--bg-4: hsl(220, 15%, 10%);
+
+	/* color of channels and icon buttons when hovered */
+	--hover: hsla(230, 20%, 40%, 0.1);
+	/* color of channels and icon buttons when clicked or selected */
+	--active: hsla(220, 20%, 40%, 0.2);
+	/* color of messages when hovered */
+	--message-hover: hsla(220, 0%, 0%, 0.1);
+}
+
+/* extra top margin for macos and custom clients */
+.base-2jDfDU {
+	margin-top: var(--spacing);
+}
+.platform-win .base-2jDfDU {
+	margin-top: 0;
+}
+
+/* fix colors */
+.mentioned-Tre-dv:before /* mention message left edge */,
+.container-1QtPKm.checked-16gMAN /* settings checkbuttons */ {
+	background: var(--accent-3) !important;
+}
+.numberBadge-37OJ3S /* dm unread number */,
+.mention-3XBnnZ /* "NEW" serverlist indicator */ {
+	background: var(--accent-2) !important;
+}
+.expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
+.strikethrough-3nXjYr /* mute button strikethrough */,
+.strikethrough-4IgyqA /* channel mute button strikethrough */ {
+	color: var(--accent-2) !important;
+}
+.folderIconWrapper-1oRIZr {
+	background-color: transparent !important;
+}
+.container-1QtPKm /* settings checkbuttons default */ {
+	background: var(--bg-1) !important;
+}
+.clickable-vvKY2q .header-3OsQeK:hover, .selected-1GtAC5 .header-3OsQeK /* server name hover */ {
+	background: var(--message-hover);
+}
+.divider-2rZFJK /* unread dividers */ {
+	--divider-color: var(--accent-2);
+}
+.iconBadge-3Mmg92 /* dm button */ {
+	background: var(--accent-2) !important;
+}
+.theme-dark .container-2IKOsH /* browse channels back */,
+.theme-dark .header-3xB4vB /* browse channels header */,
+.theme-dark .container-1um7CU /* browse channels body */,
+.searchHeader-1r_ZSh /* search results number box */,
+.wrapper-22rqw6 /* emoji selector server list */,
+.chat-9g_3Xj.container-2YMsb4 /* message requests */,
+.theme-dark .emptyPage-2TGR7j /* channels and roles */,
+.theme-dark .scrollerContainer-y16Rs9 /* channels and roles */,
+.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
+	background-color: var(--bg-4);
+}
+.wrapper-2RrXDg /* friend activity cards */,
+.mainCard-3KBsBI /* forum posts and search */,
+.container-3i3IzO /* thread embed */,
+.embedFull-1HGV2S /* regular embeds like GitHub links */,
+.attachment-1PZZB2 /* attachments */,
+.textContainer-36wgKK /* embedded attachment text */,
+.footer-GXWBBp /* embedded attachment footer */,
+.hljs /* embedded attachment code */,
+.markup-eYLPri code /* codeblocks */,
+.hoverButtonGroup-2yZIzC /* download button on embeds */,
+.messageContainer-3VTXBC /* inbox messages */,
+.channelRow-4X_3fi /* browse channels channels */,
+.container-18GwIk /* channel threads dropdown */,
+.reaction-3vwAF2 /* reactions */,
+.vc-plugins-card /* vencord plugins card */,
+.replyBar-1oi75v /* reply bar */,
+.attachedBars-2BCP3l /* thingy behind reply bar */,
+.connection-YOVI9j, /* settings connections */
+.connectionHeader-Ixbb1s /* settings connections header */ {
+	background: var(--bg-3);
+}
+.theme-dark .outer-2JOHae.active-1W_Gl9, .theme-dark .outer-2JOHae.interactive-2zD88a:hover /* friend activity cards on hover */,
+.channelRow-4X_3fi:hover:not(.disabled-3cfocy) /* browse channels channel hover */ {
+	background: var(--bg-2);
+}
+path[fill="var(--status-danger)"] /* vencord game activity toggle */ {
+	fill: var(--accent-2) !important;
+}
+.icon-2O29O0 /* reset this back to green because its an image :( */ {
+	background-color: #3ba55c;
+}
+.mouse-mode.full-motion .replying-eZ7p5z:hover /* reply message when hover */ {
+	background-color: var(--mention-hover);
+}
+
+/* change online indicator color */
+.wrapper-3Un6-K rect[fill="#23a55a"]  /* replace green online circles */ {
+	fill: var(--online-indicator) !important;
+}
+
+/* create/join a server modal color fix */
+.layer-fP3xEz .theme-light {
+	--background-primary: var(
+		--bg-3
+	); /* template buttons & create my own button */
+	--modal-background: var(--bg-4); /* general background of the modal */
+	--modal-footer-background: var(
+		--bg-4
+	); /* general background of the modal footer */
+	--header-primary: var(--text-3); /* color of bolded headers */
+	--header-secondary: var(--text-4); /* color of unbolded headers */
+	--text-normal: var(--text-3); /* color of button text */
+	--background-modifier-accent: none; /* remove borders */
+	--background-modifier-hover: var(--bg-2); /* button hover */
+	--background-modifier-active: var(--bg-1); /* button active */
+	--button-secondary-background: var(--bg-2); /* join a server button */
+	--button-secondary-background-active: var(--text-5);
+	--button-secondary-background-hover: var(--bg-1);
+	--input-background: var(--bg-3); /* background of the invite link textbox */
+	--input-placeholder-text: var(
+		--text-5
+	); /* color of invite link textbox text */
+}
+.layer-fP3xEz .footerSeparator-3U8YsT /* remove footer separator border */,
+.layer-fP3xEz .rootWithShadow-2hdL2J /* remove modal border */ {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.lookBlank-FgPMy6 .contents-3NembX /* fix back button */ {
+	color: var(--text-4);
+}
+.layer-fP3xEz .input-m1-Y7Q /* remove input borderish thing */,
+.layer-fP3xEz .rowContainer-3t7486 /* fix server discovery */ {
+	background: var(--bg-3);
+}
+
+/* make emoji selector same color */
+.emojiButtonNormal-35P0_i .sprite-2lxwfc {
+	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
+}
+
+/* filter login image */
+.artwork-L5TAwQ {
+	filter: saturate(0.2) hue-rotate(-20deg) brightness(0.15);
+}
+
+/* add margin */
+.content-1SgpWY /* outside edges */ {
+	margin: 0 var(--spacing) var(--spacing) 0;
+}
+.sidebar-1tnWFu /* channel list and user panel */,
+.content-18rAwf /* between chat and member list */ {
+	gap: var(--spacing);
+}
+.sidebar-1tnWFu /* channel list and chat */ {
+	margin-right: var(--spacing);
+}
+.resizeHandle-PBRzPC /* pretend to be a margin */ {
+	width: var(--spacing);
+}
+.wrapper-1gVUIN.fullScreen-KhZZcz /* fullscreen vc */ {
+	margin-top: var(--spacing);
+}
+
+#vc-spotify-player /* vencord spotify */,
+.container-1zzFcN /* vc panel */,
+.panel-2ZFCRb /* stream panel */ {
+	padding: 10px;
+}
+
+/* remove backgrounds to show gaps */
+.sidebar-1tnWFu /* channel list and user panel */,
+.chat-9g_3Xj /* chat and member list */ {
+	background: none;
+}
+
+/* add rounded corners */
+.container-1NXEtd /* channel list */,
+.panels-3wFtMD /* user panels */,
+.privateChannels-oVe7HL /* dms list */,
+.container-2cd8Mz /* friends page */,
+.chat-9g_3Xj /* blanket for main chat area */,
+.chat-9g_3Xj.threadSidebarOpen-1LSXvU /* main chat with thread sidebar open */,
+.container-3XgAHv /* thread */,
+.applicationStore-2nk7Lo,
+.pageWrapper-2PwDoS /* server discover page */,
+.sidebar-1tnWFu > .scrollerBase-1Pkza4 /* server discover sidebar */ {
+	border-radius: var(--roundness);
+	overflow: hidden;
+}
+.chatContent-2O4SXb /* main chat */,
+.container-3wLKDe /* forum */,
+.members-2y1nVj, /* members list */
+.container-2vWgD2 /* members list outer */ {
+	border-radius: 0 0 var(--roundness) var(--roundness);
+}
+
+/* separate header bar */
+.title-5wgnIa.themed-Hp1KC_ /* remove bg */ {
+	background: none;
+}
+.searchResultsWrap-5RVOkx /* allow overflow */ {
+	overflow: visible;
+}
+.chatContainer-2XIz4Y::before /* main chat */,
+.membersWrap-3GwLFp::before /* member list */,
+.searchResultsWrap-5RVOkx::before /* search results */,
+.profilePanel-2PWEok::before /* dm profile */,
+.container-3wLKDe::before /* forum channel */,
+.profilePanel-2VBkh8::before {
+	content: '';
+	position: absolute;
+	margin-top: -48px;
+	background-color: var(--background-primary);
+	width: 100%;
+	height: 48px;
+	border-radius: var(--roundness) var(--roundness) 0 0;
+}
+
+/* rearrange toolbar */
+.iconWrapper-2awDjA[aria-label='Help'] /* hide help */ {
+	display: none;
+}
+.search-39IXmY /* push searchbar to right */ {
+	order: 1;
+}
+.iconWrapper-2awDjA[aria-label='Show Member List'] /* push toggle buttons to right */, 
+.iconWrapper-2awDjA[aria-label='Show User Profile'] {
+	order: 1;
+}
+.iconWrapper-2awDjA[aria-label='Hide Member List'] /* add gap when member list/user profile open */,
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
+	order: 1;
+	margin-right: calc(24px + var(--spacing));
+}
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show Member List'] /* add gap when search results */, 
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .iconWrapper-2awDjA[aria-label='Show User Profile'] {
+	margin-right: calc(24px + var(--spacing));
+}
+.searchBar-jGtisZ /* make searchbar fit member list width */ {
+	width: 208px !important;
+}
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] ~ .search-39IXmY .searchBar-jGtisZ /* make searchbar fit user profile width */ {
+	width: 308px !important;
+}
+.chat-9g_3Xj:has(.searchResultsWrap-5RVOkx) .searchBar-jGtisZ /* make searchbar fit search results width */ {
+	width: 386px !important;
+}
+
+/* remove shadows */
+.content-18rAwf::before /* main chat header */, 
+.tabBody-2dgbAs::before /* friend list header */,
+.chat-1-OBC7::before /* voice channel chat header */,
+.headerBar-1dSpQr:before /* nitro page header */,
+.searchBar-3TnChZ /* dm list header */,
+.header-3OsQeK /* channel list header */,
+.header-uVCAlo /* sticker panel header */,
+.header-2TLOnc /* gif panel header */,
+.header-11eigE /* emoji panel header */,
+.theme-dark .separator-3C440w /* events panel */,
+.chat-25x62K:before /* forum post header */ {
+	box-shadow: none !important;
+}
+.children-3xh0VB:after  /* toolbar shadow */ {
+	background: none !important;
+}
+
+/* only show scrollbar when hover */
+.auto-2TJ1RH:hover::-webkit-scrollbar-thumb,
+.auto-2TJ1RH:hover::-webkit-scrollbar-track {
+	visibility: visible;
+}
+.auto-2TJ1RH::-webkit-scrollbar-thumb,
+.auto-2TJ1RH::-webkit-scrollbar-track {
+	visibility: hidden;
+}
+
+/* top corner title */
+.wordmarkWindows-1rsity svg {
+	display: none;
+}
+.wordmarkWindows-1rsity::after {
+	content: 'Midnight';
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	font-family: var(--font-headline);
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--text-5);
+}
+
+/* window controls */
+.withFrame-1sEfxu {
+	height: 20px;
+}
+.typeWindows-3ILlhq .winButton-3SigSb > svg {
+	display: none;
+}
+.typeWindows-3ILlhq .winButton-3SigSb {
+	top: 0;
+	width: 12px;
+	height: 12px;
+	margin: 2px 12px 0px 0px;
+	border-radius: 12px;
+}
+.typeWindows-3ILlhq .winButton-3SigSb::after {
+	content: '';
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+}
+.typeWindows-3ILlhq .winButtonClose-23zAIt::after {
+	background-color: hsl(350, 50%, 50%) !important;
+}
+.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(3)::after {
+	background-color: hsl(150, 50%, 50%) !important;
+}
+.typeWindows-3ILlhq .winButtonMinMax-nT2Irc:nth-child(4)::after {
+	background-color: hsl(50, 50%, 50%) !important;
+}
+.typeWindows-3ILlhq > div:hover::after {
+	transform: scale(1.1);
+}
+.typeWindows-3ILlhq > div:active::after {
+	transform: scale(1);
+}
+
+.theme-dark {
+	--activity-card-background: blue;
+	--android-navigation-bar-background: blue;
+	--android-navigation-scrim-background: blue;
+	--android-ripple: blue;
+	--background-accent: var(--bg-1);
+	--background-floating: var(--primary-800);
+	--background-mentioned: var(--mention);
+	--background-mentioned-hover: var(--mention-hover);
+	--background-message-automod: hsl(var(--red-400-hsl) / 0.05);
+	--background-message-automod-hover: hsl(var(--red-400-hsl) / 0.1);
+	--background-message-highlight: var(--mention);
+	--background-message-highlight-hover: var(--mention-hover);
+	--background-message-hover: var(--message-hover);
+	--background-mobile-primary: var(--bg-4);
+	--background-mobile-secondary: var(--bg-3);
+	--background-modifier-accent: var(--bg-3);
+	--background-modifier-active: var(--active);
+	--background-modifier-hover: var(--hover);
+	--background-modifier-selected: var(--active);
+	--background-nested-floating: var(--primary-630);
+	--background-primary: var(--bg-4);
+	--background-secondary: var(--bg-4);
+	--background-secondary-alt: var(--bg-4);
+	--background-tertiary: var(--bg-3);
+	--black: var(--black-500);
+	--border-strong: hsl(var(--white-500-hsl) / 0.16);
+	--border-subtle: hsl(var(--white-500-hsl) / 0.08);
+	--bug-reporter-modal-submitting-background: hsl(
+		var(--primary-800-hsl) / 0.6
+	);
+	--button-creator-revenue-background: var(--teal-430);
+	--button-danger-background: var(--red-430);
+	--button-danger-background-active: var(--red-530);
+	--button-danger-background-disabled: var(--red-430);
+	--button-danger-background-hover: var(--red-500);
+	--button-outline-brand-background: hsl(var(--white-500-hsl) / 0);
+	--button-outline-brand-background-active: var(--brand-560);
+	--button-outline-brand-background-hover: var(--brand-500);
+	--button-outline-brand-border: var(--brand-500);
+	--button-outline-brand-border-active: var(--brand-560);
+	--button-outline-brand-border-hover: var(--brand-500);
+	--button-outline-brand-text: var(--white-500);
+	--button-outline-brand-text-active: var(--white-500);
+	--button-outline-brand-text-hover: var(--white-500);
+	--button-outline-danger-background: hsl(var(--white-500-hsl) / 0);
+	--button-outline-danger-background-active: var(--red-460);
+	--button-outline-danger-background-hover: var(--red-430);
+	--button-outline-danger-border: var(--red-400);
+	--button-outline-danger-border-active: var(--red-430);
+	--button-outline-danger-border-hover: var(--red-430);
+	--button-outline-danger-text: var(--white-500);
+	--button-outline-danger-text-active: var(--white-500);
+	--button-outline-danger-text-hover: var(--white-500);
+	--button-outline-positive-background: hsl(var(--white-500-hsl) / 0);
+	--button-outline-positive-background-active: var(--green-530);
+	--button-outline-positive-background-hover: var(--green-430);
+	--button-outline-positive-border: var(--green-360);
+	--button-outline-positive-border-active: var(--green-530);
+	--button-outline-positive-border-hover: var(--green-430);
+	--button-outline-positive-text: var(--white-500);
+	--button-outline-positive-text-active: var(--white-500);
+	--button-outline-positive-text-hover: var(--white-500);
+	--button-outline-primary-background: none;
+	--button-outline-primary-background-active: var(--bg-1);
+	--button-outline-primary-background-hover: var(--bg-2);
+	--button-outline-primary-border: var(--bg-1);
+	--button-outline-primary-border-active: var(--bg-1);
+	--button-outline-primary-border-hover: var(--bg-2);
+	--button-outline-primary-text: var(--text-3);
+	--button-outline-primary-text-active: var(--text-2);
+	--button-outline-primary-text-hover: var(--text-2);
+	--button-positive-background: var(--green-430);
+	--button-positive-background-active: var(--green-530);
+	--button-positive-background-disabled: var(--green-430);
+	--button-positive-background-hover: var(--green-500);
+	--button-secondary-background: var(--bg-2);
+	--button-secondary-background-active: var(--text-5);
+	--button-secondary-background-disabled: var(--bg-3);
+	--button-secondary-background-hover: var(--bg-1);
+	--channel-icon: var(--text-4);
+	--channel-text-area-placeholder: var(--text-5);
+	--channels-default: var(--text-4);
+	--channeltextarea-background: var(--bg-3);
+	--chat-background: blue;
+	--chat-border: blue;
+	--chat-input-container-background: blue;
+	--control-brand-foreground: var(--brand-360);
+	--control-brand-foreground-new: var(--brand-360);
+	--creator-revenue-icon-gradient-end: var(--teal-430);
+	--creator-revenue-icon-gradient-start: var(--teal-360);
+	--creator-revenue-info-box-background: hsl(var(--teal-430-hsl) / 0.1);
+	--creator-revenue-info-box-border: var(--teal-400);
+	--creator-revenue-locked-channel-icon: var(--teal-345);
+	--creator-revenue-progress-bar: var(--teal-400);
+	--deprecated-card-bg: hsl(var(--primary-700-hsl) / 0.6);
+	--deprecated-card-editable-bg: hsl(var(--primary-700-hsl) / 0.3);
+	--deprecated-quickswitcher-input-background: var(--primary-400);
+	--deprecated-quickswitcher-input-placeholder: hsl(
+		var(--white-500-hsl) / 0.3
+	);
+	--deprecated-store-bg: var(--primary-600);
+	--deprecated-text-input-bg: var(--primary-700);
+	--deprecated-text-input-border: hsl(var(--black-500-hsl) / 0.3);
+	--deprecated-text-input-border-disabled: var(--primary-700);
+	--deprecated-text-input-border-hover: var(--primary-900);
+	--deprecated-text-input-prefix: var(--primary-200);
+	--display-banner-overflow-background: hsl(var(--primary-700-hsl) / 0.5);
+	--divider-strong: hsl(var(--white-500-hsl) / 0.16);
+	--divider-subtle: hsl(var(--white-500-hsl) / 0.08);
+	--focus-primary: var(--blue-345);
+	--forum-post-extra-media-count-container-background: hsl(
+		var(--primary-660-hsl) / 0.8
+	);
+	--forum-post-tag-background: hsl(var(--primary-660-hsl) / 0.9);
+	--header-primary: var(--text-2);
+	--header-secondary: var(--text-4);
+	--home-background: var(--bg-4);
+	--home-card-resting-border: none;
+	--info-box-background: hsl(var(--blue-345-hsl) / 0.1);
+	--info-danger-background: hsl(var(--red-400-hsl) / 0.1);
+	--info-danger-foreground: var(--red-400);
+	--info-danger-text: var(--white-500);
+	--info-help-background: hsl(var(--blue-345-hsl) / 0.1);
+	--info-help-foreground: var(--blue-345);
+	--info-help-text: var(--white-500);
+	--info-positive-background: hsl(var(--green-360-hsl) / 0.1);
+	--info-positive-foreground: var(--green-360);
+	--info-positive-text: var(--white-500);
+	--info-warning-background: hsl(var(--yellow-300-hsl) / 0.1);
+	--info-warning-foreground: var(--yellow-300);
+	--info-warning-text: var(--white-500);
+	--input-background: var(--bg-3);
+	--input-placeholder-text: var(--text-5);
+	--interactive-active: var(--text-3);
+	--interactive-hover: var(--text-3);
+	--interactive-muted: var(--text-5);
+	--interactive-normal: var(--text-4);
+	--live-stage-tile-border: hsl(var(--primary-500-hsl) / 0.6);
+	--logo-primary: var(--white-500);
+	--mention-background: var(--mention);
+	--mention-foreground: var(--accent-2);
+	--modal-background: var(--bg-4);
+	--modal-footer-background: var(--bg-4);
+	--profile-gradient-message-input-border: hsl(var(--primary-500-hsl) / 0.48);
+	--profile-gradient-note-background: hsl(var(--black-500-hsl) / 0.3);
+	--profile-gradient-overlay: hsl(var(--black-500-hsl) / 0.6);
+	--profile-gradient-overlay-synced-with-user-theme: hsl(
+		var(--black-500-hsl) / 0.8
+	);
+	--profile-gradient-profile-body-background-hover: hsl(
+		var(--white-500-hsl) / 0.16
+	);
+	--profile-gradient-role-pill-background: hsl(var(--primary-660-hsl) / 0.5);
+	--profile-gradient-role-pill-border: hsl(var(--white-500-hsl) / 0.2);
+	--profile-gradient-section-box: hsl(var(--black-500-hsl) / 0.45);
+	--redesign-activity-card-background: var(--primary-560);
+	--redesign-activity-card-background-pressed: var(--primary-630);
+	--redesign-activity-card-border: hsl(var(--white-500-hsl) / 0.02);
+	--redesign-button-danger-background: var(--red-430);
+	--redesign-button-danger-pressed-background: var(--red-460);
+	--redesign-button-danger-text: var(--white-500);
+	--redesign-button-overlay-alpha-background: hsl(
+		var(--black-500-hsl) / 0.54
+	);
+	--redesign-button-overlay-alpha-pressed-background: hsl(
+		var(--black-500-hsl) / 0.64
+	);
+	--redesign-button-overlay-alpha-text: var(--white-500);
+	--redesign-button-overlay-background: var(--white-500);
+	--redesign-button-overlay-pressed-background: var(--primary-230);
+	--redesign-button-overlay-text: var(--primary-860);
+	--redesign-button-positive-background: var(--green-430);
+	--redesign-button-positive-pressed-background: var(--green-460);
+	--redesign-button-positive-text: var(--white-500);
+	--redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
+	--redesign-button-primary-alt-border: var(--brand-360);
+	--redesign-button-primary-alt-on-blurple-background: hsl(
+		var(--brand-530-hsl) / 0
+	);
+	--redesign-button-primary-alt-on-blurple-border: var(--white-500);
+	--redesign-button-primary-alt-on-blurple-pressed-background: var(
+		--brand-530
+	);
+	--redesign-button-primary-alt-on-blurple-pressed-border: var(--brand-360);
+	--redesign-button-primary-alt-on-blurple-text: var(--white-500);
+	--redesign-button-primary-alt-pressed-background: hsl(
+		var(--brand-700-hsl) / 0.16
+	);
+	--redesign-button-primary-alt-pressed-border: hsl(
+		var(--brand-400-hsl) / 0.5
+	);
+	--redesign-button-primary-alt-pressed-text: var(--brand-360);
+	--redesign-button-primary-alt-text: var(--brand-360);
+	--redesign-button-primary-background: var(--brand-500);
+	--redesign-button-primary-on-blurple-background: var(--white-500);
+	--redesign-button-primary-on-blurple-pressed-background: var(--brand-200);
+	--redesign-button-primary-on-blurple-pressed-text: var(--brand-530);
+	--redesign-button-primary-on-blurple-text: var(--brand-500);
+	--redesign-button-primary-pressed-background: var(--brand-560);
+	--redesign-button-primary-text: var(--white-500);
+	--redesign-button-secondary-alt-background: var(--primary-530);
+	--redesign-button-secondary-alt-pressed-background: var(--primary-560);
+	--redesign-button-secondary-alt-text: var(--white-500);
+	--redesign-button-secondary-background: var(--primary-460);
+	--redesign-button-secondary-border: var(--primary-460);
+	--redesign-button-secondary-pressed-background: var(--primary-500);
+	--redesign-button-secondary-pressed-border: var(--primary-500);
+	--redesign-button-secondary-text: var(--white-500);
+	--redesign-input-control-selected: var(--brand-500);
+	--redesign-only-background-active: var(--primary-530);
+	--redesign-only-background-default: var(--primary-700);
+	--redesign-only-background-overlay: var(--primary-600);
+	--redesign-only-background-raised: blue;
+	--redesign-only-background-sunken: var(--primary-800);
+	--scrollbar-auto-scrollbar-color-thumb: var(--bg-3);
+	--scrollbar-auto-scrollbar-color-track: transparent;
+	--scrollbar-auto-thumb: var(--bg-3);
+	--scrollbar-auto-track: transparent;
+	--scrollbar-thin-thumb: var(--bg-3);
+	--scrollbar-thin-track: transparent;
+	--spoiler-hidden-background: var(--bg-3);
+	--spoiler-revealed-background: var(--bg-3);
+	--status-danger: var(--red-400);
+	--status-danger-background: var(--red-400);
+	--status-danger-text: var(--white-500);
+	--status-dnd: var(--red-400);
+	--status-idle: var(--yellow-300);
+	--status-offline: var(--primary-360);
+	--status-online: var(--green-360);
+	--status-positive: var(--green-360);
+	--status-positive-background: var(--accent-3);
+	--status-positive-text: var(--white-500);
+	--status-warning: var(--yellow-300);
+	--status-warning-background: var(--yellow-300);
+	--status-warning-text: var(--black-500);
+	--text-brand: var(--brand-360);
+	--text-danger: var(--red-345);
+	--text-link: var(--blue-345);
+	--text-link-low-saturation: var(--blue-330);
+	--text-muted: var(--text-5);
+	--text-normal: var(--text-3);
+	--text-positive: var(--accent-1);
+	--text-warning: var(--yellow-300);
+	--textbox-markdown-syntax: var(--text-4);
+	--user-profile-header-overflow-background: hsl(
+		var(--primary-700-hsl) / 0.5
+	);
+	--white-500: var(--text-1);
+	--blue-345: var(--accent-1);
+	--brand-260: var(--accent-2);
+	--brand-360: var(--accent-2);
+	--brand-430: var(--accent-4);
+	--brand-500: var(--accent-3);
+	--brand-560: var(--accent-4);
+	--brand-600: var(--accent-5);
+
+	--primary-130: var(--text-2);
+	--primary-230: var(--text-3);
+	--primary-330: var(--text-4);
+	--primary-360: var(--text-4);
+	--primary-400: var(--text-4);
+	--primary-430: var(--text-5);
+	--primary-500: var(--text-5);
+	--primary-530: var(--text-5);
+	--primary-560: var(--bg-3);
+	--primary-600: var(--bg-4);
+	--primary-645: var(--bg-4);
+	--primary-630: var(--bg-4);
+	--primary-660: var(--bg-4);
+	--primary-700: var(--bg-3);
+	--primary-730: var(--bg-3);
+	--primary-800: var(--bg-3);
+
+	--green-360: var(--accent-2); /* replace other green stuff */
+	--green-430: var(--accent-3); /* green buttons (like invite) */
+	--green-500: var(--accent-4); /* green button hover */
+	--green-530: var(--accent-5); /* green button click */
+
+	--search-popout-option-fade: none;
+	--search-popout-option-fade-hover: none;
+}

@@ -1,0 +1,287 @@
+/* change colors */
+.theme-dark {
+	--brand-experiment: hsl(220, 60%, 60%);
+
+	--header-primary: hsl(220, 15%, 60%);
+	--header-secondary: hsl(220, 15%, 40%);
+	--text-normal: var(--header-primary);
+	--text-muted: hsl(220, 15%, 20%);
+	--text-link: hsl(197, 100%, 47.8%);
+	--text-link-low-saturation: /* hsl(197, 100%, 52.9%) */ var(--text-link);
+	--text-positive: hsl(139, 66.8%, 58.6%);
+	--text-warning: hsl(38, 95.7%, 54.1%);
+	--text-danger: hsl(359, 82.6%, 59.4%);
+	--text-brand: hsl(235, 86.1%, 77.5%);
+	--interactive-normal: var(--header-secondary);
+	--interactive-hover: var(--header-primary);
+	--interactive-active: var(--header-primary);
+	--interactive-muted: var(--text-muted);
+	--background-primary: hsl(220, 15%, 10%);
+	--background-secondary: hsl(220, 15%, 11%);
+	--background-secondary-alt: hsl(220, 15%, 11%);
+	--background-tertiary: hsl(220, 15%, 12%);
+	--background-accent: hsl(220, 15%, 18%);
+	--background-floating: hsl(220, 15%, 8%);
+	--background-mobile-primary: var(--background-primary);
+	--background-mobile-secondary: var(--background-secondary);
+	--background-modifier-hover: hsla(220, 15%, 20%, 0.1);
+	--background-modifier-active: hsla(220, 15%, 20%, 0.2);
+	--background-modifier-selected: hsla(220, 15%, 20%, 0.3);
+	--background-modifier-accent: hsla(220, 15%, 20%, 0.3);
+	--info-positive-text: hsl(0, 0%, 100%);
+	--info-warning-text: hsl(0, 0%, 100%);
+	--info-danger-text: hsl(0, 0%, 100%);
+	--info-help-background: hsla(197, 100%, 47.8%, 0.1);
+	--info-help-foreground: hsl(197, 100%, 47.8%);
+	--info-help-text: hsl(0, 0%, 100%);
+	--status-warning-text: hsl(0, 0%, 0%);
+	--scrollbar-thin-thumb: hsl(220, 15%, 12%);
+	--scrollbar-thin-track: transparent;
+	--scrollbar-auto-thumb: hsl(220, 15%, 12%);
+	--scrollbar-auto-track: transparent;
+	--scrollbar-auto-scrollbar-color-thumb: hsl(220, 15%, 12%);
+	--scrollbar-auto-scrollbar-color-track: transparent;
+	--elevation-stroke: 0 0 0 1px hsla(240, 11%, 2%, 0.15);
+	--elevation-low: none;
+	--elevation-medium: 0 4px 4px hsla(0, 0%, 0%, 0.16);
+	--elevation-high: 0 8px 10px hsla(0, 0%, 0%, 0.24);
+	--logo-primary: hsl(0, 0%, 100%);
+	--control-brand-foreground: hsl(235, 86.1%, 77.5%);
+	--control-brand-foreground-new: hsl(235, 86.1%, 77.5%);
+	--background-mentioned: /* hsla(38, 95.7%, 54.1%, 0.1)*/ hsla(
+		220,
+		60%,
+		60%,
+		0.1
+	);
+	--background-mentioned-hover: /*hsla(38, 95.7%, 54.1%, 0.08)*/ hsla(
+		220,
+		60%,
+		60%,
+		0.08
+	);
+	--background-message-hover: var(--background-modifier-hover);
+	--channels-default: var(--header-secondary);
+	--guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	--channeltextarea-background: var(--background-tertiary);
+	--activity-card-background: var(--background-tertiary);
+	--textbox-markdown-syntax: var(--header-secondary);
+
+	--info-positive-background: hsla(
+		139,
+		calc(var(--saturation-factor, 1) * 47.3%),
+		43.9%,
+		0.1
+	);
+	--info-positive-foreground: hsl(
+		139,
+		calc(var(--saturation-factor, 1) * 47.3%),
+		43.9%
+	);
+	--info-warning-background: hsla(
+		38,
+		calc(var(--saturation-factor, 1) * 95.7%),
+		54.1%,
+		0.1
+	);
+	--info-warning-foreground: /* hsl(38,calc(var(--saturation-factor, 1)*95.7%),54.1%)*/ hsl(
+		220,
+		60%,
+		60%
+	);
+	--info-danger-background: hsla(
+		359,
+		calc(var(--saturation-factor, 1) * 82.6%),
+		59.4%,
+		0.1
+	);
+	--info-danger-foreground: hsl(
+		359,
+		calc(var(--saturation-factor, 1) * 82.6%),
+		59.4%
+	);
+	--status-positive-background: hsl(
+		139,
+		calc(var(--saturation-factor, 1) * 47.3%),
+		43.9%
+	);
+	--status-positive-text: #fff;
+	--status-warning-background: hsl(
+		38,
+		calc(var(--saturation-factor, 1) * 95.7%),
+		54.1%
+	);
+	--status-danger-background: hsl(
+		359,
+		calc(var(--saturation-factor, 1) * 82.6%),
+		59.4%
+	);
+	--status-danger-text: #fff;
+	--focus-primary: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
+}
+
+/* force elements to use color vars */
+.peopleColumn-29fq28,
+.uploadModal-2ifh8j,
+.pageWrapper-1PgVDX,
+.message-2qRu38,
+.root-1gCeng,
+.container-3ayLPN {
+	background-color: var(--background-primary) !important;
+}
+
+.expandedFolderIconWrapper-Huv7rA svg {
+	color: var(--brand-experiment) !important;
+}
+
+.folderIconWrapper-1_bOZe,
+.expandedFolderBackground-1cujaW {
+	background-color: var(--background-primary) !important;
+}
+
+.footer-3mqk7D,
+.footer-2gL1pp {
+	background-color: var(--background-secondary) !important;
+}
+
+/* fix some other things */
+.option-96V44q:after {
+	background: none !important;
+}
+
+.itemCard-v9viV7 {
+	border: none;
+}
+
+.outer-1AjyKL.active-1xchHY,
+.outer-1AjyKL.interactive-3B9GmY:hover {
+	background-color: var(--background-modifier-hover) !important;
+}
+
+/* get rid of border radius */
+.threadSidebar-1o3BTy {
+	border-radius: 0 !important;
+	margin-left: 0;
+}
+
+.chat-15Vmww {
+	border-left: 1px solid var(--background-modifier-accent);
+}
+
+.chat-3bRxxu {
+	border-radius: 0 !important;
+}
+
+.sidebar-2K8pFh {
+	border-radius: 0 !important;
+}
+
+/* improve notice */
+.notice-2HEN-u {
+	border-radius: var(--roundness);
+	margin-bottom: 10px;
+	box-shadow: none !important;
+}
+.button-1iHNQ2 { /* make notice button rounded */
+	border-radius: var(--roundness);
+}
+
+/* hide scrollbars */
+.scroller-2LSbBU::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
+.scroller-2LSbBU:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+/* create new window control buttons*/
+.withFrame-haYltI .winButton-iRh8-Z > svg {
+	display: none;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z {
+	background: none;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z {
+	top: 0;
+	width: 12px;
+	height: 12px;
+}
+
+.withFrame-haYltI .winButton-iRh8-Z::after {
+	content: '';
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+	transition: 0.1s;
+}
+
+.withFrame-haYltI .winButtonClose-1HsbF-::after {
+	background-color: hsl(0, 50%, 50%) !important;
+}
+
+.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(3)::after {
+	background-color: hsl(120, 50%, 50%) !important;
+}
+
+.withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(4)::after {
+	background-color: hsl(50, 50%, 50%) !important;
+}
+
+.typeWindows-1za-n7 > div:hover::after {
+	transform: scale(1.1);
+}
+
+/* move window controls */
+.withFrame-haYltI {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	width: 110px;
+	height: 48px;
+	padding: 13px 20px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2000;
+}
+
+.notice-3bPHh- {
+	z-index: 2001;
+}
+
+.wordmarkWindows-1v0lYD {
+	display: none;
+}
+
+.tutorialContainer-2sGCg9 {
+	margin-top: 4px;
+}
+
+/* rearrange top toolbar for window controls */
+.content-98HsJk > :last-child .toolbar-1t6TWx {
+	margin-right: 95px;
+}
+
+.searchBar-3dMhjb {
+	width: 130px;
+}
+
+.iconWrapper-2OrFZ1[aria-label='Help'] {
+	display: none;
+}
+
+.iconWrapper-2OrFZ1[aria-label='Inbox'] {
+	order: 1;
+}
+
+.iconWrapper-2OrFZ1[aria-label*='Member List'] {
+	order: 2;
+}
+
+.search-36MZv- {
+	order: 3;
+}

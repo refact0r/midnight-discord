@@ -1,0 +1,352 @@
+:root {
+	/* link color */
+	--link-color: hsl(190, 70%, 60%);
+	/* main accent color (mentions, folder icons, unread indicators) */
+	--accent-color: hsl(190, 60%, 50%);
+	/* darker accent color (background of any accent items with text) */
+	--accent-background: hsl(190, 60%, 40%);
+	/* even darker accent color (background of accent buttons when hover) */
+	--accent-background-2: hsl(190, 60%, 30%);
+	/* even darker accent color (background of accent buttons when clicked) */
+	--accent-background-3: hsl(190, 60%, 20%);
+	/* background of mention text and messages that mention you */
+	--mention-modifier: hsla(190, 60%, 50%, 0.1);
+	/* background of messages that mention you on hover */
+	--mention-hover-modifier: hsla(190, 60%, 50%, 0.05);
+	/* bright text for colored buttons */
+	--bright-text: hsl(220, 40%, 90%);
+	/* header text for headers and certain text */
+	--header-text: hsl(220, 30%, 70%);
+	/* main text color (messages, titles, unread text/indicators) */
+	--primary-text: hsl(220, 15%, 60%);
+	/* secondary text color (channels, descriptions, buttons) */
+	--secondary-text: hsl(220, 15%, 40%);
+	/* muted text color (input box placeholders, muted channels, message times) */
+	--muted-text: hsl(220, 15%, 24%);
+	/* background of muted colored buttons on hover */
+	--muted-background-hover: hsl(220, 15%, 20%);
+	/* background of muted colored buttons on click */
+	--muted-background-active: hsl(220, 15%, 16%);
+	/* background of pretty much everything not using primary background */
+	/* lighter variant is used for the side of embeds and borders */
+	--secondary-background: hsl(220, 15%, 13%);
+	/* main chat/channel list/member list background */
+	--primary-background: hsl(220, 15%, 10%);
+	/* overlay background on stuff when hovered over */
+	--hover-modifier: hsl(230, 20%, 40%, 0.1);
+	/* overlay background on stuff when clicked or selected */
+	--active-modifier: hsl(220, 20%, 40%, 0.2);
+	/* overlay background on messages when hovered over */
+	--message-hover-modifier: hsl(220, 0%, 0%, 0.1);
+	/* radius of round corners */
+	--roundness: 16px;
+}
+
+:root.theme-dark,
+.theme-dark,
+.default-colors,
+.theme-light {
+	--primary-130: var(--header-text);
+	--primary-230: var(--primary-text);
+	--primary-330: var(--secondary-text);
+	--primary-360: var(--secondary-text);
+	--primary-400: var(--secondary-text);
+	--primary-430: var(--muted-text);
+	--primary-500: var(--muted-text);
+	--primary-530: var(--muted-text);
+	--primary-560: var(--secondary-background);
+	--primary-600: var(--primary-background);
+	--primary-645: var(--primary-background);
+	--primary-630: var(--primary-background);
+	--primary-660: var(--primary-background);
+	--primary-700: var(--secondary-background);
+	--primary-730: var(--secondary-background);
+	--primary-800: var(--secondary-background);
+
+	--white-500: var(--bright-text);
+	--blue-345: var(--link-color);
+	--brand-260: var(--accent-color);
+	--brand-360: var(--accent-color);
+	--brand-500: var(--accent-background);
+	--brand-560: var(--accent-background-2);
+	--brand-600: var(--accent-background-3);
+	--brand-experiment-15a: var(--mention-modifier);
+
+	--background-modifier-hover: var(--hover-modifier);
+	--background-modifier-active: var(--active-modifier);
+	--background-modifier-selected: var(--active-modifier);
+	--background-modifier-accent: var(--active-modifier);
+	--background-message-hover: var(--message-hover-modifier);
+	--background-mentioned: var(--mention-modifier);
+	--background-mentioned-hover: var(--mention-hover-modifier);
+	--mention-background: var(--mention-modifier);
+	--button-secondary-background-hover: var(--muted-background-hover);
+	--button-secondary-background-active: var(--muted-background-active);
+	--modal-footer-background: var(--primary-background);
+
+	--search-popout-option-fade: none;
+	--search-popout-option-fade-hover: none;
+}
+
+/* fix colors */
+.mentioned-Tre-dv:before /* mention message left edge */,
+.container-1QtPKm.default-colors:checked /* settings checkbuttons */ {
+	background-color: var(--accent-background) !important;
+}
+.expandedFolderIconWrapper-3RwQpD svg /* folder icons */,
+.strikethrough-2Kl6HF /* mute button strikethrough */ {
+	color: var(--accent-color) !important;
+}
+.divider-2rZFJK /* unread dividers */ {
+	--divider-color: var(--accent-color);
+}
+.divider-AZrXIA /* forum post dividers */ {
+	background: none;
+}
+.iconBadge-3Mmg92 /* dm button */ {
+	background-color: var(--accent-color) !important;
+}
+.mainCard-3KBsBI /* forum search bar and posts */,
+.container-3i3IzO /* threads */,
+.embedFull-1HGV2S, /* regular embeds like GitHub links */
+.scrollbarGhostHairline-2LpzZ9.scrollbar-3vVt8d.codeView-12LUIl, /* file embeds - txts, etc */
+.attachment-1PZZB2, /* file embeds - txts, etc */
+.footer-GXWBBp,  /* file embed footers - txts, etc */
+.textContainer-36wgKK, /* file embeds - txts, etc */
+.hoverButtonGroup-2yZIzC, /* download button on embeds */
+.embedCard-bDyD5S, /* embed card */
+.markup-eYLPri code, /* codeblocks */
+.vc-plugins-card, /* vencord plugins card */
+.prompt-1sE27N, /* channels and roles role section background */
+.channelRow-4X_3fi, /* channels and roles channel background */
+.profileCard-2gVmvm, /* channels and roles profile card */
+.reaction-3vwAF2 /* reactions */ {
+	background-color: var(--secondary-background) !important;
+}
+.theme-dark .container-2IKOsH, /* channels and roles container */
+.theme-dark .header-3xB4vB, /* channels and roles header */
+.searchHeader-1r_ZSh, /* search results number box */ 
+.wrapper-22rqw6, /* emoji selector server list */	
+.optionButtonWrapper-2lbogO.selected-KQBgNS {
+	/* selected role */
+	background-color: var(--primary-background);
+}
+
+/* fix create a server modal which is LIGHT THEME FOR SOME REASON */
+.root-1CAIjD {
+	background-color: var(--primary-background);
+}
+.defaultColor-1GKx81 {
+	color: var(--header-text);
+}
+.container-x8Y1ix {
+	background-color: var(--primary-background);
+}
+.defaultColor-1EVLSt,
+.closeButton-2ygCkj:hover {
+	color: var(--primary-text);
+}
+.header-1c1AhF .subtitle-3m-md1 {
+	color: var(--secondary-text) !important;
+}
+.closeButton-2ygCkj {
+	color: var(--secondary-text);
+}
+
+/* make emoji selector same color */
+.emojiButtonNormal-35P0_i .sprite-2lxwfc {
+	filter: grayscale(100%) brightness(40%) sepia(0.9) hue-rotate(180deg) !important;
+}
+
+/* remove big chat background and add back smaller */
+.chat-2ZfjoI {
+	background: none !important;
+}
+.chatContent-3KubbW {
+	background-color: var(--primary-background) !important;
+}
+
+/* remove chat header background */
+.title-31SJ6t {
+	background: none !important;
+}
+
+/* add header backgrounds */
+.membersWrap-3NUR2t::before /* member list */,
+.chatContent-3KubbW::before /* main chat */,
+.searchResultsWrap-5RVOkx::before /* search results */,
+.profilePanel-2PWEok::before /* dm profile */,
+.container-3wLKDe::before /* forum channel */ {
+	content: '';
+	position: absolute;
+	margin-top: -48px;
+	background-color: var(--primary-background);
+	width: 100%;
+	height: 48px;
+	border-radius: var(--roundness) var(--roundness) 0 0;
+}
+.searchResultsWrap-5RVOkx /* show header on search results */ {
+	overflow: visible;
+}
+
+/* add rounded corners */
+.container-2cd8Mz /* homepage */,
+.content-1SgpWY .sidebar-1tnWFu /* server list back */,
+.callContainer-HtHELf /* vc */,
+.container-3XgAHv /* vc chat */,
+.chat-2ZfjoI /* channels and roles */,
+.pageWrapper-2PwDoS /* discover page */,
+.root-1CAIjD:has(.container-1Lk8p7) /* create a server */ {
+	border-radius: var(--roundness) !important;
+	overflow: hidden;
+}
+.chatContent-3KubbW /* main chat */,
+.container-2o3qEW /* members list back */,
+.members-3WRCEx /* members list */,
+.container-3wLKDe /* forum channel */,
+.profilePanel-2PWEok, .userPanelOuter-xc-WYi, .userPanelInnerThemed-2xZFjl /* dm profile */,
+.searchResultsWrap-5RVOkx /* search results */ {
+	border-radius: 0 0 var(--roundness) var(--roundness);
+}
+
+/* rearrange toolbar */
+.iconWrapper-2awDjA[aria-label='Help'] {
+	display: none;
+}
+.iconWrapper-2awDjA[aria-label*='Member List'] {
+	order: 1;
+}
+.search-39IXmY {
+	order: 1;
+	margin-left: 34px;
+}
+.searchBar-jGtisZ {
+	width: 208px !important;
+	padding: 0px 2px;
+}
+.searchResultsWrap-5RVOkx {
+	width: 476px;
+}
+.iconWrapper-2awDjA[aria-label='Hide User Profile'] {
+	margin-left: 34px;
+}
+.profilePanel-2PWEok {
+	width: 340px;
+}
+
+/* add margins */
+.base-2jDfDU /* outside edges */ {
+	padding: 0px 10px 10px 0;
+}
+.container-2cd8Mz /* friend list*/,
+.chat-2ZfjoI /* main chat */,
+.applicationStore-2nk7Lo /* nitro page */,
+.pageWrapper-2PwDoS /* discover page */ {
+	margin-left: 10px;
+}
+.content-1jQy2l /* between chat and member list */ {
+	gap: 10px;
+}
+.resizeHandle-PBRzPC /* pretend to be a margin */ {
+	width: 10px;
+}
+.wrapper-1gVUIN.fullScreen-KhZZcz .callContainer-HtHELf /* fullscreen voice channel */,
+.wrapper-1gVUIN.fullScreen-KhZZcz .channelChatWrapper-35N3nR {
+	margin-top: 10px;
+}
+
+/* remove shadows */
+.content-1jQy2l::before /* main chat header */, 
+.tabBody-2dgbAs::before /* friend list header */,
+.chat-1-OBC7::before /* voice channel chat header */,
+.headerBar-1dSpQr:before /* nitro page header */,
+.searchBar-3TnChZ /* dm list header */,
+.header-3OsQeK /* channel list header */,
+.header-uVCAlo /* sticker panel header */,
+.header-2TLOnc /* gif panel header */,
+.header-11eigE /* emoji panel header */ {
+	box-shadow: none !important;
+}
+.children-3xh0VB:after  /* toolbar shadow */ {
+	background: none !important;
+}
+
+/* remove borders */
+.markup-eYLPri code.inline /* inline codeblocks */,
+.itemCard-3Etziu /* active now card */,
+.container-1zzFcN /* vc panel bottom */ {
+	border: none !important;
+}
+.footerSeparator-3U8YsT, /* modal footer */
+.rootWithShadow-2hdL2J /* create a server */ {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* only show scrollbar when hover */
+.scrollerBase-_bVAAt:hover::-webkit-scrollbar-thumb,
+.scrollerBase-_bVAAt:hover::-webkit-scrollbar-track {
+	visibility: visible;
+}
+.scrollerBase-_bVAAt::-webkit-scrollbar-thumb,
+.scrollerBase-_bVAAt::-webkit-scrollbar-track {
+	visibility: hidden;
+}
+
+/* filter login image */
+.artwork-L5TAwQ {
+	filter: saturate(0.2) hue-rotate(-20deg) brightness(0.15);
+}
+
+/* top corner title */
+.wordmarkWindows-2dq6rw svg {
+	display: none;
+}
+.wordmarkWindows-2dq6rw::after {
+	content: 'Midnight';
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	font-family: var(--font-headline);
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--muted-text);
+}
+
+/* window controls */
+.withFrame-2dL45i {
+	height: 20px;
+}
+.typeWindows-2-g3UY .winButton-3UMjdg > svg {
+	display: none;
+}
+.typeWindows-2-g3UY .winButton-3UMjdg {
+	top: 0;
+	width: 12px;
+	height: 12px;
+	margin: 2px 12px 0px 0px;
+	border-radius: 12px;
+}
+.typeWindows-2-g3UY .winButton-3UMjdg::after {
+	content: '';
+	height: 12px;
+	width: 12px;
+	border-radius: 12px;
+}
+.typeWindows-2-g3UY .winButtonClose-3Q8ZH5::after {
+	background-color: hsl(0, 50%, 50%) !important;
+}
+.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(3)::after {
+	background-color: hsl(120, 50%, 50%) !important;
+}
+.typeWindows-2-g3UY .winButtonMinMax-3RsPUg:nth-child(4)::after {
+	background-color: hsl(50, 50%, 50%) !important;
+}
+.typeWindows-2-g3UY > div:hover::after {
+	transform: scale(1.1);
+}
+.typeWindows-2-g3UY > div:active::after {
+	transform: scale(1);
+}
