@@ -86,7 +86,7 @@
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
 
-.childWrapper__760c6:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background-image: url('https://raw.githubusercontent.com/rose-pine/rose-pine-theme/main/assets/icon.png');
 	background-color: transparent !important;
 	background-size: cover;
