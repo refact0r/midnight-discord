@@ -87,7 +87,7 @@
 }
 
 /* catppuccin icon */
-.childWrapper__760c6:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
