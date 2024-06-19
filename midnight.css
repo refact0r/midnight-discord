@@ -754,6 +754,13 @@ button.button_dd4f85 /* small buttons */,
 	border-right-color: transparent !important;
 }
 
+/* server selected marker */
+.item_fd07a3 {
+	width: 4px;
+	border-radius: 4px;
+	margin-left: 4px;
+}
+
 /* horizontal server list fix */
 #app-mount .app_bd26cc .base_a4d4d9 {
 	top: calc(var(--server-container) + var(--spacing)) !important;
