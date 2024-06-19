@@ -779,7 +779,6 @@ button.button_dd4f85 /* small buttons */,
 button.button_f67531 /* make user panel buttons round */ {
 	border-radius: 50%;
 }
-.button_f67531:last-child .contents_dd4f85 /* settings button */, 
 .attachButton_f298d4 .attachButtonInner_f298d4 /* upload button */,
 .emojiButton_d0696b .contents_dd4f85 /* emoji button */,
 .closeButton_df5532 /* settings exit button */,
