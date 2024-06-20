@@ -814,7 +814,7 @@ button.button_f67531 /* make user panel buttons round */ {
 }
 .newMessagesBar_cf58b5::before {
 	content: '';
-	background: var(--brand-experiment);
+	background: var(--accent-3);
 	box-shadow: var(--elevation-low);
 	width: 100%;
 	position: absolute;
