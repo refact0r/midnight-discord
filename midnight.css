@@ -155,7 +155,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 .expandedFolderIconWrapper_bc7085 > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
 	color: var(--accent-3) !important;
 }
-.divider_fc5f50 /* unread divider */,
+.divider_c2654d /* unread divider */,
 .mention_c10249 /* NEW unread pill */,
 .mentionsBar_eba0ba /* channel list new mention pill */ {
 	--status-danger: var(--accent-3);
@@ -179,7 +179,7 @@ path[fill='var(--white-500)'] {
 .numberBadge_df8943 /* dms number badge */,
 .newMessagesBar_cf58b5 .barButtonBase_cf58b5 /* unread bar */,
 .botTagRegular_a02df3 /* bot tag */,
-.endCap_fc5f50 /* unread divider */,
+.endCap_c2654d /* unread divider */,
 .lookFilled_dd4f85.colorBrand_dd4f85 /* accent buttons */,
 .lookFilled_dd4f85.colorBrand_dd4f85 .defaultColor__77578 /* accent buttons */,
 .lookFilled_dd4f85.colorBrandNew__8872c /* accent buttons */,
@@ -530,12 +530,12 @@ button.button_dd4f85 /* small buttons */,
 .icon_c07d45 /* streaming icon */,
 #vc-spotify-album-image,
 .background_ae3c77 /* settings nitro tab selected */,
-.hoverButtonGroup__304b2 /* video download button */,
+.hoverButtonGroup_ab8b23 /* video download button */,
 .wrapper_ef319f /* message hover menu */,
 .previewChannelRowContent_c5d9bc {
 	border-radius: var(--roundness-xs);
 }
-.hoverButtonGroup__304b2 /* reposition video download button */ {
+.hoverButtonGroup_ab8b23 /* reposition video download button */ {
 	top: 6px;
 	right: 6px;
 }
