@@ -155,7 +155,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 .expandedFolderIconWrapper_bc7085 > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
 	color: var(--accent-3) !important;
 }
-.divider_c2654d /* unread divider */,
+.divider_d5deea /* unread divider */,
 .mention_c10249 /* NEW unread pill */,
 .mentionsBar_eba0ba /* channel list new mention pill */ {
 	--status-danger: var(--accent-3);
@@ -179,7 +179,7 @@ path[fill='var(--white-500)'] {
 .numberBadge_df8943 /* dms number badge */,
 .newMessagesBar_cf58b5 .barButtonBase_cf58b5 /* unread bar */,
 .botTagRegular_a02df3 /* bot tag */,
-.endCap_c2654d /* unread divider */,
+.endCap_fc5f50 /* unread divider */,
 .lookFilled_dd4f85.colorBrand_dd4f85 /* accent buttons */,
 .lookFilled_dd4f85.colorBrand_dd4f85 .defaultColor__77578 /* accent buttons */,
 .lookFilled_dd4f85.colorBrandNew__8872c /* accent buttons */,
