@@ -1,0 +1,88 @@
+/**
+ * @name midnight
+ * @description A dark, rounded discord theme. Based on the Night Owl VSCode theme. https://github.com/sdras/night-owl-vscode-theme/tree/main
+ * @author refact0r, dragonfleas
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-night-owl.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* top left corner text */
+	--corner-text: 'Midnight - Night Owl';
+
+	/* color of status indicators and window controls */
+	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(0, 100%, 69%); /* change to #f13f43 for default red */
+	--idle-indicator: hsl(180, 9%, 43%); /* change to #f0b232 for default yellow */
+	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
+
+	/* accent colors */
+	--accent-1: hsl(221, 100%, 75%); /* links */
+	--accent-2: hsl(84, 62%, 45%); /* general unread/mention elements */
+	--accent-3: hsl(276, 68%, 45%); /* accent buttons */
+	--accent-4: hsl(276, 68%, 40%); /* accent buttons when hovered */
+	--accent-5: hsl(276, 68%, 35%); /* accent buttons when clicked */
+	--mention: hsla(207, 95%, 50%, 0.05); /* mentions & mention messages */
+	--mention-hover: hsla(207, 95%, 50%, 0.1); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: white; /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
+	--text-2: hsl(217, 34%, 85%); /* headings and important text */
+	--text-3: hsl(217, 34%, 82%); /* normal text */
+	--text-4: hsl(217, 34%, 40%); /* icon buttons and channels */
+	--text-5: hsl(217, 30%, 32%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(207, 95%, 10%); /* dark buttons when clicked */
+	--bg-2: hsl(207, 95%, 8%); /* dark buttons */
+	--bg-3: hsl(207, 95%, 5%); /* spacing, secondary elements */
+	--bg-4: hsl(207, 95%, 8%); /* main background color */
+	--hover: hsla(207, 95%, 20%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(207, 95%, 25%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(207, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+
+	--moon-icon: block; /* owl icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Owl_-_Lorc_-_game-icons.svg'); /* custom icon url */
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: none; /* login background artwork */
+	--green-to-accent-3-filter: none; /* add friend page explore icon */
+	--blurple-to-accent-3-filter: none; /* add friend page school icon */
+}
