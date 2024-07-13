@@ -149,7 +149,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 }
 .container_b2ca13 /* user panel button strikethroughs */,
 .numberBadge_df8943  /* unread number badge */,
-.toolbar_e44302 /* toolbar button strikethroughs */ {
+.toolbar_fc4f04 /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
 }
 .expandedFolderIconWrapper_bc7085 > svg[style="color: rgb(88, 101, 242);"] /* default color folder icons */ {
@@ -179,7 +179,7 @@ path[fill='var(--white-500)'] {
 .numberBadge_df8943 /* dms number badge */,
 .newMessagesBar_cf58b5 .barButtonBase_cf58b5 /* unread bar */,
 .botTagRegular_a02df3 /* bot tag */,
-.endCap_fc5f50 /* unread divider */,
+.endCap_c2654d /* unread divider */,
 .lookFilled_dd4f85.colorBrand_dd4f85 /* accent buttons */,
 .lookFilled_dd4f85.colorBrand_dd4f85 .defaultColor__77578 /* accent buttons */,
 .lookFilled_dd4f85.colorBrandNew__8872c /* accent buttons */,
@@ -345,7 +345,7 @@ svg[fill='#593695'] {
 }
 
 /* separate header bar */
-.title_a7d72e.themed_e44302 /* remove bg */ {
+.title_a7d72e.themed_fc4f04 /* remove bg */ {
 	background: none;
 }
 .searchResultsWrap_c2b47d /* allow overflow */ {
@@ -483,9 +483,9 @@ a[href="https://support.discord.com"] /* hide help */
 .menu_d90b3d /* general popouts */,
 .embed_ad0b71 /* embeds */,
 .mediaAttachmentsContainer__242e2 /* image container */,
-.oneByOneGridSingle_df7417 /* image container single */,
+.oneByOneGridSingle_cda674 /* image container single */,
 .imageContainer_cf58b5 .imageWrapper__178ee /* gif wrapper */,
-.markup_d6076c code /* code block */,
+.markup_f8f345 code /* code block */,
 .itemCard_f02fcf /* friend activity */,
 .peopleListItem_d51464:hover /* online list friends */,
 .withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
@@ -530,12 +530,12 @@ button.button_dd4f85 /* small buttons */,
 .icon_c07d45 /* streaming icon */,
 #vc-spotify-album-image,
 .background_ae3c77 /* settings nitro tab selected */,
-.hoverButtonGroup_ab8b23 /* video download button */,
+.hoverButtonGroup_e5c1dc /* video download button */,
 .wrapper_ef319f /* message hover menu */,
 .previewChannelRowContent_c5d9bc {
 	border-radius: var(--roundness-xs);
 }
-.hoverButtonGroup_ab8b23 /* reposition video download button */ {
+.hoverButtonGroup_e5c1dc /* reposition video download button */ {
 	top: 6px;
 	right: 6px;
 }
@@ -729,14 +729,14 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* improve unread divider */
-.divider_fc5f50 {
+.divider_c2654d {
 	border-width: 4px;
 	border-radius: 4px;
 }
-.divider_fc5f50 .content_fc5f50 {
+.divider_c2654d .content_c2654d {
 	margin-top: -3px;
 }
-.endCap_fc5f50 {
+.endCap_c2654d {
 	margin-top: -1px;
 	padding-top: 2px;
 }
@@ -755,7 +755,7 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* server selected marker */
-.item_fd07a3 {
+.item_c4cd66 {
 	width: 4px;
 	border-radius: 4px;
 	margin-left: 4px;
