@@ -354,7 +354,7 @@ svg[fill='#593695'] {
 .chatContent_a7d72e::before /* main chat */,
 .membersWrap_cbd271::before /* member list */,
 .searchResultsWrap_c2b47d::before /* search results */,
-.profilePanel_b433b4::before /* dm profile */,
+.userPanelOuter_c69a7b::before /* dm profile */,
 .container_a6d69a::before /* forums */ {
 	content: '';
 	position: absolute;
@@ -384,7 +384,7 @@ a[href="https://support.discord.com"] /* hide help */
 	width: 394px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
-.chat_a7d72e:has(.profilePanel_b433b4) .searchBar_a46bef {
+.chat_a7d72e:has(.userPanelOuter_c69a7b) .searchBar_a46bef {
 	width: 316px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
