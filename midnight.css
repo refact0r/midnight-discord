@@ -846,7 +846,7 @@ button.button_f67531 /* make user panel buttons round */ {
 }
 html.theme-light,
 .theme-dark {
-	--activity-card-background: var(--primary-700);
+	--activity-card-background: var(--bg-3);
 	--android-navigation-bar-background: var(--primary-830);
 	--android-navigation-scrim-background: hsl(var(--primary-830-hsl) / 0.5);
 	--android-ripple: hsl(var(--white-500-hsl) / 0.07);
