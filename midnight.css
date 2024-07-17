@@ -164,7 +164,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 	--status-danger: var(--accent-3);
 }
 .message_d5deea.mentioned_d5deea:before /* mention message left edge */,
-.botTagOP_a02df3 /* OP tag */ {
+.botTagOP_a9e77f /* OP tag */ {
 	background: var(--accent-3);
 }
 .container_cebd1c.checked_cebd1c /* settings checkbuttons */ {
@@ -181,7 +181,7 @@ path[fill='var(--white-500)'] {
 }
 .numberBadge_df8943 /* dms number badge */,
 .newMessagesBar_cf58b5 .barButtonBase_cf58b5 /* unread bar */,
-.botTagRegular_a02df3 /* bot tag */,
+.botTagRegular_a9e77f /* bot tag */,
 .endCap_c2654d /* unread divider */,
 .lookFilled_dd4f85.colorBrand_dd4f85 /* accent buttons */,
 .lookFilled_dd4f85.colorBrand_dd4f85 .defaultColor__77578 /* accent buttons */,
@@ -416,7 +416,7 @@ a[href="https://support.discord.com"] /* hide help */
 .wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc /* fullscreen vc */ {
 	margin-top: var(--spacing);
 }
-.notice__5fd4c /* banner notice */,
+.notice_be03aa /* banner notice */,
 .wrapper_d880dc.minimum_d880dc /* private call */ {
 	margin-bottom: var(--spacing);
 }
@@ -440,7 +440,7 @@ a[href="https://support.discord.com"] /* hide help */
 #app-mount .callContainer_d880dc /* vc */, 
 .chat_a7d72e /* general chat container (for browse channels page */,
 .animatedContainer_fd6364 /* server image card */,
-.notice__5fd4c /* banner notice */,
+.notice_be03aa /* banner notice */,
 .wrapper_d880dc.minimum_d880dc, /* private call */
 .wrapper_d880dc.minimum_d880dc ~ .content_a7d72e /* chat under private call */,
 .main_d8215a /* server onboarding */ {
