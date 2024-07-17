@@ -1,0 +1,71 @@
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* top left corner text */
+	--corner-text: 'discor';
+
+	/* color of status indicators and window controls */
+	--online-indicator: oklch(81% 0.124 140); /* change to #23a55a for default green */
+	--dnd-indicator: oklch(78% 0.124 340); /* change to #f13f43 for default red */
+	--idle-indicator: oklch(84% 0.114 100); /* change to #f0b232 for default yellow */
+	--streaming-indicator: oklch(78% 0.124 300); /* change to #593695 for default purple */
+
+	/* accent colors */
+	--accent-1: oklch(83% 0.124 340); /* links */
+	--accent-2: oklch(78% 0.124 340); /* general unread/mention elements */
+	--accent-3: oklch(73% 0.124 340); /* accent buttons */
+	--accent-4: oklch(63% 0.124 340); /* accent buttons when hovered */
+	--accent-5: oklch(53% 0.124 340); /* accent buttons when clicked */
+	--mention: oklch(63% 0.124 340 / 0.1); /* mentions & mention messages */
+	--mention-hover: oklch(63% 0.124 340 / 0.05); /* mentappions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: oklch(95% 0.047 280); /* other normally white text */
+	--text-2: oklch(90% 0.047 280); /* headings and important text */
+	--text-3: oklch(75% 0.047 280); /* normal text */
+	--text-4: oklch(60% 0.041 280); /* icon buttons and channels */
+	--text-5: oklch(45% 0.035 280); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: oklch(30% 0.029 280); /* dark buttons when clicked */
+	--bg-2: oklch(25% 0.023 280); /* dark buttons */
+	--bg-3: oklch(17% 0.017 280); /* spacing, secondary elements */
+	--bg-4: oklch(20% 0.017 280); /* main background color */
+	--hover: oklch(60% 0.034 280 / 0.1); /* channels and buttons when hovered */
+	--active: oklch(60% 0.034 280 / 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: oklch(17% 0.017 280 / 0.3); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 24px; /* roundness of big panel outer corners */
+	--roundness-l: 24px; /* popout panels */
+	--roundness-m: 20px; /* smaller panels, images, embeds */
+	--roundness-s: 16px; /* members, settings inputs */
+	--roundness-xs: 12px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: none; /* custom icon url */
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: none; /* login background artwork */
+	--green-to-accent-3-filter: none; /* add friend page explore icon */
+	--blurple-to-accent-3-filter: none; /* add friend page school icon */
+}
