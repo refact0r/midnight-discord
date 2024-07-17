@@ -644,7 +644,8 @@ button.button_dd4f85 /* small buttons */,
 
 /* top bar height */
 [class^='typeWindows'] {
-	height: calc(var(--spacing) + 8px);
+	height: calc(var(--spacing) + 12px);
+	margin: 0;
 }
 
 /* window controls */
@@ -654,12 +655,12 @@ button.button_dd4f85 /* small buttons */,
 [class^='winButton'] {
 	background: none !important;
 	top: 0;
-	width: calc(var(--spacing) + 8px);
-	height: calc(var(--spacing) + 8px);
-	margin: -2px 4px 0px 0px;
+	width: calc(24px);
+	height: calc(var(--spacing) + 12px);
+	margin: 0;
 }
 [class^='winButtonClose'] {
-	margin: -2px calc(var(--spacing) - 4px) 0px 0px;
+	padding-right: calc(var(--spacing) - 5px);
 }
 [class^='winButton']::after {
 	content: '';
