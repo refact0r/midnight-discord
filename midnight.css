@@ -484,7 +484,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: var(--roundness-s);
 }
 .menu_d90b3d /* general popouts */,
-.embed_ad0b71 /* embeds */,
+.embed_b0068a/* embeds */,
 .mediaAttachmentsContainer__242e2 /* image container */,
 .oneByOneGridSingle_cda674 /* image container single */,
 .imageContainer_cf58b5 .imageWrapper__178ee /* gif wrapper */,
@@ -751,7 +751,7 @@ button.button_dd4f85 /* small buttons */,
 	border-radius: 4px;
 }
 /* modify embeds */
-.embedFull_ad0b71 {
+.embed_b0068a {
 	border: 4px solid var(--bg-2);
 	border-top-color: transparent !important;
 	border-bottom-color: transparent !important;
