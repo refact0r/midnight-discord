@@ -110,6 +110,9 @@
 .uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */ {
 	background: var(--bg-4);
 }
+.userPanelOuter_c69a7b {
+	--background-secondary-alt: var(--bg-4) !important;
+}
 .mainCard_a6d69a /* forum post */,
 .navRow_be9398[data-theme=dark] /* add new account bottom */ {
 	background: var(--bg-3);
@@ -1160,9 +1163,4 @@ html.theme-light,
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
 
 	--white-500: var(--text-1);
-}
-
-* {
-	scrollbar-color: unset !important;
-	scrollbar-width: unset !important;
 }
