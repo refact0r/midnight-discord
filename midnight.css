@@ -492,7 +492,8 @@ a[href="https://support.discord.com"] /* hide help */
 .itemCard_f02fcf /* friend activity */,
 .peopleListItem_d51464:hover /* online list friends */,
 .withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
-.messageGroupWrapper_ac90a2 /* pinned messages */ {
+.messageGroupWrapper_ac90a2 /* pinned messages */,
+.accountProfileCard_b69b77 /* my account settings profile background */ {
 	border-radius: var(--roundness-m);
 }
 .scrollableContainer_d0696b /* message bar */,
