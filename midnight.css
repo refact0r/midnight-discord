@@ -1119,7 +1119,7 @@ html.theme-light,
 	--text-low-contrast: var(--primary-360);
 	--text-message-preview-low-sat: var(--primary-360);
 	--text-muted: var(--text-5);
-	--text-muted-on-default: red;
+	--text-muted-on-default: var(--text-4);
 	--text-normal: var(--text-3);
 	--text-positive: var(--green-330);
 	--text-primary: var(--text-3);
