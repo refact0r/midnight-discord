@@ -1136,6 +1136,7 @@ html.theme-light,
 	--profile-gradient-secondary-color: var(--bg-4);
 
 	--elevation-low: none;
+	--shadow-ledge: none;
 	--search-popout-option-fade: none;
 	--search-popout-option-fade-hover: none;
 
