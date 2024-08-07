@@ -551,6 +551,12 @@ button.button_dd4f85 /* small buttons */,
 	border-radius: 50%;
 }
 
+/* fix view server as role popup */
+.viewAsRolesWarning_adcaac {
+	position: fixed;
+	left: 102px;
+}
+
 /* separate guilds panel background */
 .guilds_a4d4d9 {
 	background: var(--bg-4);
