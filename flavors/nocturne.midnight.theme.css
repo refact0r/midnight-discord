@@ -6,7 +6,7 @@
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/midnight-discord
  * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/nocturne.midnight.theme.css
- * @authorId 508863359777505290
+ * @authorId 508863359777505290, 417953949765730315
  * @authorLink https://www.refact0r.dev
 */
 
@@ -22,6 +22,7 @@ dev (faster reflected changes): https://githubraw.com/refact0r/midnight-discord/
 
 /* addons */
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
 
 /*                 _                         
                   | |                        
@@ -98,4 +99,25 @@ blackxfiied • refact0r      customize here */
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
 	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+}
+
+/* settings modal settings */
+:root {
+	--settingswidth: 	960;			/* default:	960px			(width of the settings modal, px)												*/
+	--settingsheight: 	80;			/* default:	80vh			(height of the settings modal, vh)												*/
+	--settingsbackground: 	transparent;		/* default:	transparent		(lowest BG Color of changed Windows, change it in case another Theme turns them transparent)					*/
+}
+
+/* add bkg blur to settings modal • @blackxfiied */
+#app-mount .layer_d4b6c5.stop-animations:first-child::before {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    /* extra tint background: #00000080 !important; */
+    backdrop-filter: blur(2px) !important;
+    z-index: 998 !important; /* below modal but above everything else */
+    pointer-events: none !important;
 }
