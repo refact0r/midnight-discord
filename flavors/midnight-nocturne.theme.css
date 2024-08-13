@@ -1,0 +1,120 @@
+/**
+ * @name midnight (nocturne)
+ * @description A dark, rounded discord theme with a focus on discord's branding colors, and a mobile-inspired color palette.
+ * @author refact0r, blackxfiied
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/nocturne.midnight.theme.css
+ * @authorId 508863359777505290, 417953949765730315
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+@import url('https://cdn.githubraw.com/refact0r/midnight-discord/master/midnight.css');
+
+/* addons */
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
+
+/*                 _                         
+                  | |                        
+  _ __   ___   ___| |_ _   _ _ __ _ __   ___ 
+ | '_ \ / _ \ / __| __| | | | '__| '_ \ / _ \
+ | | | | (_) | (__| |_| |_| | |  | | | |  __/
+ |_| |_|\___/ \___|\__|\__,_|_|  |_| |_|\___|
+blackxfiied • refact0r      customize here */
+
+:root {
+	/* font */
+	--font: 'gg sans';
+
+	/* top left corner text */
+	--corner-text: 'nocturne';
+
+	/*
+	color of status indicators and window controls
+	note: updated to be more harsh by using discord's own branding kit colors (although unintended) -- https://discord.com/branding
+	*/
+	--online-indicator: #57f287; /* change to #23a55a for default green */
+	--dnd-indicator: #ed4245; /* change to #f13f43 for default red */
+	--idle-indicator: #fee75c; /* change to #f0b232 for default yellow */
+	--streaming-indicator: #5865f2; /* change to #593695 for default purple */
+
+	/*
+	accent colors
+	note: updated to be more harsh by using discord's own branding kit colors (although unintended) -- https://discord.com/branding
+	*/
+	--accent-1: hsl(235, 86%, 75%); /* hsl(0, 25%, 65%); */ /* links */
+	--accent-2: #eb3d40; /* hsl(0, 43%, 67%); */ /* general unread/mention elements */
+	--accent-3: hsl(235, 86%, 65%); /* hsl(0, 43%, 67%); */ /* accent buttons */
+	--accent-4: hsl(235, 76%, 55%); /* hsl(0, 37%, 60%); */ /* accent buttons when hovered */
+	--accent-5: hsl(235, 66%, 45%); /* hsl(0, 31%, 53%); */ /* accent buttons when clicked */
+	--mention: hsla(39.89, 78.17%, 55.1%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(
+		39.89,
+		78.17%,
+		55.1%,
+		0.05
+	); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: white; /* text on colored elements */
+	--text-1: white; /* other normally white text */
+	--text-2: hsl(230, 6%, 90%); /* headings and important text */
+	--text-3: hsl(230, 6%, 85%); /* normal text */
+	--text-4: hsl(230, 6%, 54%); /* icon buttons and channels */
+	--text-5: hsl(230, 6%, 35%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(230, 10%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(230, 10%, 16%); /* dark buttons */
+	--bg-3: hsl(240, 12%, 8%); /* spacing, secondary elements */
+	--bg-4: hsl(230, 10%, 12%); /* main background color */
+	--hover: hsla(230, 6%, 54%, 0.2); /* buttons when hovered */
+	--active: hsla(230, 6%, 54%, 0.1); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: block; /* discord icon */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: none; /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='24' height='24'%3E%3Cpath fill='currentColor' d='M0 0h7v1H6v1H5v1H4v1H3v1H2v1h5v1H0V6h1V5h1V4h1V3h1V2h1V1H0m13 2h5v1h-1v1h-1v1h-1v1h3v1h-5V7h1V6h1V5h1V4h-3m8 5h1v5h1v-1h1v1h-1v1h1v-1h1v1h-1v3h-1v1h-2v1h-1v1h1v-1h2v-1h1v2h-1v1h-2v1h-1v-1h-1v1h-6v-1h-1v-1h-1v-2h1v1h2v1h3v1h1v-1h-1v-1h-3v-1h-4v-4h1v-2h1v-1h1v-1h1v2h1v1h1v-1h1v1h-1v1h2v-2h1v-2h1v-1h1M8 14h2v1H9v4h1v2h1v1h1v1h1v1h4v1h-6v-1H5v-1H4v-5h1v-1h1v-2h2m17 3h1v3h-1v1h-1v1h-1v2h-2v-2h2v-1h1v-1h1m1 0h1v3h-1v1h-2v-1h1v-1h1'%3E%3C/path%3E%3C/svg%3E"); */ /* custom icon url */
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+}
+
+/* settings modal settings */
+:root {
+	--settingswidth: 960; /* default:	960px			(width of the settings modal, px)												*/
+	--settingsheight: 80; /* default:	80vh			(height of the settings modal, vh)												*/
+	--settingsbackground: transparent; /* default:	transparent		(lowest BG Color of changed Windows, change it in case another Theme turns them transparent)					*/
+}
+
+/* add bkg blur to settings modal • @blackxfiied */
+#app-mount .layer_d4b6c5.stop-animations:first-child::before {
+	content: '' !important;
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	/* extra tint background: #00000080 !important; */
+	backdrop-filter: blur(2px) !important;
+	z-index: 998 !important; /* below modal but above everything else */
+	pointer-events: none !important;
+}
