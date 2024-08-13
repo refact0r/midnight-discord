@@ -11,17 +11,9 @@
 */
 
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
-
-/*
-links:
-prod: https://cdn.githubraw.com/refact0r/midnight-discord/master/midnight.css
-dev (faster reflected changes): https://githubraw.com/refact0r/midnight-discord/master/midnight.css
-*/
-
 @import url('https://cdn.githubraw.com/refact0r/midnight-discord/master/midnight.css');
 
 /* addons */
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
 
 /*                 _                         
@@ -52,29 +44,34 @@ blackxfiied • refact0r      customize here */
 	accent colors
 	note: updated to be more harsh by using discord's own branding kit colors (although unintended) -- https://discord.com/branding
 	*/
-	--accent-1: #5865f2; /* hsl(0, 25%, 65%); */ /* links */
-	--accent-2: #ed4245; /* hsl(0, 43%, 67%); */ /* general unread/mention elements */
-	--accent-3: #5865f2; /* hsl(0, 43%, 67%); */ /* accent buttons */
-	--accent-4: var(--bg-4); /* hsl(0, 37%, 60%); */ /* accent buttons when hovered */
-	--accent-5: #5865f2; /* hsl(0, 31%, 53%); */ /* accent buttons when clicked */
+	--accent-1: hsl(235, 86%, 75%); /* hsl(0, 25%, 65%); */ /* links */
+	--accent-2: #eb3d40; /* hsl(0, 43%, 67%); */ /* general unread/mention elements */
+	--accent-3: hsl(235, 86%, 65%); /* hsl(0, 43%, 67%); */ /* accent buttons */
+	--accent-4: hsl(235, 76%, 55%); /* hsl(0, 37%, 60%); */ /* accent buttons when hovered */
+	--accent-5: hsl(235, 66%, 45%); /* hsl(0, 31%, 53%); */ /* accent buttons when clicked */
 	--mention: hsla(39.89, 78.17%, 55.1%, 0.1); /* mentions & mention messages */
-	--mention-hover: hsla(39.89, 78.17%, 55.1%, 0.2); /* mentions & mention messages when hovered */
+	--mention-hover: hsla(
+		39.89,
+		78.17%,
+		55.1%,
+		0.05
+	); /* mentions & mention messages when hovered */
 
 	/* text colors */
 	--text-0: white; /* text on colored elements */
 	--text-1: white; /* other normally white text */
-	--text-2: white; /* headings and important text */
-	--text-3: white; /* normal text */
-	--text-4: #8c8c8c; /* icon buttons and channels */
-	--text-5: #a4a4a4; /* muted channels/chats and timestamps */
+	--text-2: hsl(230, 6%, 90%); /* headings and important text */
+	--text-3: hsl(230, 6%, 85%); /* normal text */
+	--text-4: hsl(230, 6%, 54%); /* icon buttons and channels */
+	--text-5: hsl(230, 6%, 35%); /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: #232323; /* dark buttons when clicked */
-	--bg-2: #1d1c1c; /* dark buttons */
-	--bg-3: #14131a; /* spacing, secondary elements */
-	--bg-4: #1c1d22; /* main background color */
-	--hover: hsla(0, 0%, 1%, 0.3); /* buttons when hovered */
-	--active: hsla(0, 0%, 13%, 0.5); /* channels and buttons when clicked or selected */
+	--bg-1: hsl(230, 10%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(230, 10%, 16%); /* dark buttons */
+	--bg-3: hsl(240, 12%, 8%); /* spacing, secondary elements */
+	--bg-4: hsl(230, 10%, 12%); /* main background color */
+	--hover: hsla(230, 6%, 54%, 0.2); /* buttons when hovered */
+	--active: hsla(230, 6%, 54%, 0.1); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
@@ -103,21 +100,21 @@ blackxfiied • refact0r      customize here */
 
 /* settings modal settings */
 :root {
-	--settingswidth: 	960;			/* default:	960px			(width of the settings modal, px)												*/
-	--settingsheight: 	80;			/* default:	80vh			(height of the settings modal, vh)												*/
-	--settingsbackground: 	transparent;		/* default:	transparent		(lowest BG Color of changed Windows, change it in case another Theme turns them transparent)					*/
+	--settingswidth: 960; /* default:	960px			(width of the settings modal, px)												*/
+	--settingsheight: 80; /* default:	80vh			(height of the settings modal, vh)												*/
+	--settingsbackground: transparent; /* default:	transparent		(lowest BG Color of changed Windows, change it in case another Theme turns them transparent)					*/
 }
 
 /* add bkg blur to settings modal • @blackxfiied */
 #app-mount .layer_d4b6c5.stop-animations:first-child::before {
-    content: "" !important;
-    position: fixed !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    /* extra tint background: #00000080 !important; */
-    backdrop-filter: blur(2px) !important;
-    z-index: 998 !important; /* below modal but above everything else */
-    pointer-events: none !important;
+	content: '' !important;
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	/* extra tint background: #00000080 !important; */
+	backdrop-filter: blur(2px) !important;
+	z-index: 998 !important; /* below modal but above everything else */
+	pointer-events: none !important;
 }
