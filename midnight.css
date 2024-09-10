@@ -8,10 +8,13 @@
 	/* top left corner text */
 	--corner-text: 'Midnight';
 
+	/* width of messages divider */
+	--divider-width: 1px;
+
 	/* color of status indicators and window controls */
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
-	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
 	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f23f43 for default red */
 	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
@@ -167,14 +170,26 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 .botTagOP_a9e77f /* OP tag */ {
 	background: var(--accent-3);
 }
-.container_cebd1c.checked_cebd1c /* settings checkbuttons */ {
+
+/* settings checkbuttons */
+.container_cebd1c {
+	transition: background-color ease .3s;
+}
+.container_cebd1c path {
+	fill: var(--text-4);
+}
+.container_cebd1c.checked_cebd1c {
 	background: var(--accent-3) !important;
 }
+.container_cebd1c.checked_cebd1c path {
+	fill: var(--accent-3) !important;
+}
+.container_cebd1c > .slider_cebd1c > rect {
+	transition: fill ease .3s;
+}
+
 .mention_c10249:active /* NEW unread pill when clicked */ {
 	background: var(--accent-4);
-}
-path[fill='rgba(35, 165, 90, 1)'] {
-	fill: var(--accent-3);
 }
 path[fill='var(--white-500)'] {
 	fill: var(--text-0) !important;
@@ -214,6 +229,9 @@ path[fill='var(--white-500)'] {
 .icon_c07d45 /* streaming activity type icon  */,
 .theme-dark .tooltipGreen_b6c360, .theme-light .tooltipGreen_b6c360 /* tooltip text like vc latency */ {
 	color: var(--text-0);
+}
+.botTagVerified_a9e77f > path /* bot tag checkmark */ {
+	fill: var(--text-0);
 }
 #app-mount .button__33db6, .theme-light .button__33db6 /* notice banner button */,
 .lookOutlined_dd4f85.colorWhite_dd4f85 /* server banner buttons */ {
@@ -413,7 +431,8 @@ a[href="https://support.discord.com"] /* hide help */
 .resizeHandle_d1c246 /* pretend to be a margin */ {
 	width: var(--spacing);
 }
-.wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc /* fullscreen vc */ {
+.wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc,
+.fullScreen_d880dc + .layerContainer_cd0de5 + .layerContainer_cd0de5 .container_d1c246 /* fullscreen vc */ {
 	margin-top: var(--spacing);
 }
 .notice_be03aa /* banner notice */,
@@ -739,15 +758,18 @@ button.button_dd4f85 /* small buttons */,
 
 /* improve unread divider */
 .divider_c2654d {
-	border-width: 4px;
-	border-radius: 4px;
+	border-width: var(--divider-width);
+	border-radius: var(--divider-width);
 }
 .divider_c2654d .content_c2654d {
-	margin-top: -3px;
+	margin-top: calc(var(--divider-width) - var(--divider-width) * 2);
+}
+.divider_c2654d.isUnread_c2654d .content_c2654d {
+	box-shadow: 4px 0 7px 0 var(--bg-overlay-chat,var(--background-primary)),
+				-4px 0 7px 0 var(--bg-overlay-chat,var(--background-primary));
 }
 .endCap_c2654d {
-	margin-top: -1px;
-	padding-top: 2px;
+	margin-top: calc(var(--divider-width) / 2 - var(--divider-width));
 }
 /* improve highlight message left edge */
 .message_d5deea.mentioned_d5deea::before,
@@ -814,7 +836,7 @@ button.button_f67531 /* make user panel buttons round */ {
 	overflow: hidden;
 }
 .newMessagesBar_cf58b5 {
-	top: -48px;
+	top: -12px;
 	height: 72px;
 	transition: top var(--unread-bar-transition);
 	background: none;
@@ -829,9 +851,6 @@ button.button_f67531 /* make user panel buttons round */ {
 	position: absolute;
 	height: 32px;
 	border-radius: var(--roundness-s);
-}
-.newMessagesBar_cf58b5:hover {
-	top: -12px;
 }
 .top_eba0ba > .containerPadding_eba0ba {
 	padding: 16px;
