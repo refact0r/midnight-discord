@@ -89,13 +89,6 @@
 	--icon-spin-transition: none;
 }
 
-/* spoiler colors */
-:root {
-	--__spoiler-background-color--hidden: var(--bg-2);
-	--__spoiler-background-color--hidden--hover: var(--hover);
-	--__spoiler-background-color--revealed: var(--bg-2);
-}
-
 /* modify colors */
 #app-mount .container_ee69e0 /* channel list */,
 .privateChannels_f0963d /* dms list */,
@@ -1128,8 +1121,9 @@ html.theme-light,
 	--scrollbar-auto-track: transparent;
 	--scrollbar-thin-thumb: var(--bg-3);
 	--scrollbar-thin-track: transparent;
-	--spoiler-hidden-background: var(--primary-700);
-	--spoiler-revealed-background: var(--primary-660);
+	--__spoiler-background-color--hidden: var(--bg-2);
+	--__spoiler-background-color--hidden--hover: var(--hover);
+	--__spoiler-background-color--revealed: var(--bg-2);
 	--status-danger: var(--red-400);
 	--status-danger-background: var(--red-400);
 	--status-danger-text: var(--text-0);
