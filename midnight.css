@@ -89,6 +89,13 @@
 	--icon-spin-transition: none;
 }
 
+/* spoiler colors */
+:root {
+	--__spoiler-background-color--hidden: var(--bg-2);
+	--__spoiler-background-color--hidden--hover: var(--hover);
+	--__spoiler-background-color--revealed: var(--bg-2);
+}
+
 /* modify colors */
 #app-mount .container_ee69e0 /* channel list */,
 .privateChannels_f0963d /* dms list */,
