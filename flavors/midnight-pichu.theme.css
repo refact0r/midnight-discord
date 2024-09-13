@@ -20,15 +20,18 @@
 :root {
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'Nunito';
+	
+	/* top left corner text */
+	--corner-text: 'LilyPichu';
+
+	/* width of messages divider */
+	--divider-width: 1px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: hsl(160, 50%, 55%); /* change to #23a55a for default green */
 	--dnd-indicator: var(--accent-3); /* change to #f23f43 for default red */
 	--idle-indicator: hsl(50, 50%, 55%); /* change to #f0b232 for default yellow */
 	--streaming-indicator: hsl(260, 50%, 55%); /* change to #593695 for default purple */
-
-	/* top left corner text */
-	--corner-text: 'LilyPichu';
 
 	/* accent colors */
 	--accent-1: hsl(347, 50%, 65%); /* links */

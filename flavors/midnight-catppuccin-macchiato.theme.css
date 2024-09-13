@@ -22,6 +22,9 @@
 	/* top left corner text */
 	--corner-text: 'Catppuccin';
 
+	/* width of messages divider */
+	--divider-width: 1px;
+
 	/* color of status indicators and window controls */
 	--online-indicator: #a6da95; /* change to #23a55a for default green */
 	--dnd-indicator: #ed8796; /* change to #f23f43 for default red */
