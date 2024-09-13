@@ -113,6 +113,9 @@
 .uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */ {
 	background: var(--bg-4);
 }
+.sidebarContainer_a3a4ce, .container_a56260, .contentContainer_a56260 /* quests page */ {
+	background-color: var(--bg-4) !important;
+}
 .userPanelOuter_c69a7b {
 	--background-secondary-alt: var(--bg-4) !important;
 }
@@ -140,6 +143,9 @@
 #app-mount .innerHeader_f1fd9c:after /* channels and roles header shadow */,
 .attachedBars_d0696b /* reply bar underneath */ {
 	background: none;
+}
+.contentContainer_a56260 /* quests page fix */{
+	background: none !important;
 }
 .selected_fd6364 .header_fd6364, .clickable_fd6364 .header_fd6364:hover /* server name hover */ {
 	background: var(--message-hover);
@@ -219,7 +225,6 @@ path[fill='var(--white-500)'] {
 .dots_ce0450 /* typing dots */,
 .lookOutlined_dd4f85.colorWhite_dd4f85 /* server banner buttons */,
 .header_dd5a33 /* server preview mode banner */,
-.categoryItem_c72b37.selectedCategoryItem_c72b37,
 .live_e17fae /* streaming live */,
 #app-mount .activeButton_b48941 /* member page pagination button */ ,
 #app-mount .tooltipBrand_b6c360 /* member page filter tooltip */,
@@ -229,6 +234,12 @@ path[fill='var(--white-500)'] {
 .icon_c07d45 /* streaming activity type icon  */,
 .theme-dark .tooltipGreen_b6c360, .theme-light .tooltipGreen_b6c360 /* tooltip text like vc latency */ {
 	color: var(--text-0);
+}
+[class*="selectedCategoryItem_"] /* selected discover page */ {
+	color: var(--text-0) !important;
+}
+[class*="selectedCategoryItem_"] path /* fix */ {
+	fill: currentColor;
 }
 .botTagVerified_a9e77f > path /* bot tag checkmark */ {
 	fill: var(--text-0);
@@ -462,9 +473,16 @@ a[href="https://support.discord.com"] /* hide help */
 .notice_be03aa /* banner notice */,
 .wrapper_d880dc.minimum_d880dc, /* private call */
 .wrapper_d880dc.minimum_d880dc ~ .content_a7d72e /* chat under private call */,
-.main_d8215a /* server onboarding */ {
+.main_d8215a /* server onboarding */,
+/* discover page sidebar & wrappers */
+.sidebarContainer_a3a4ce,
+.pageWrapper_a3a4ce,
+.thin_c49869.scrollerBase_c49869 {
 	border-radius: var(--roundness-xl);
 	overflow: hidden;
+}
+.sidebar_a4d4d9 /* fix */ {
+	border-radius: 0 !important;
 }
 .container__93316 /* main chat */,
 .chatContent_a7d72e /* main chat inner */,
