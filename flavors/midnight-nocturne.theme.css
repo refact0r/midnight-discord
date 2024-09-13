@@ -31,6 +31,9 @@ blackxfiied • refact0r      customize here */
 	/* top left corner text */
 	--corner-text: 'nocturne';
 
+	/* width of messages divider */
+	--divider-width: 1px;
+
 	/*
 	color of status indicators and window controls
 	note: updated to be more harsh by using discord's own branding kit colors (although unintended) -- https://discord.com/branding

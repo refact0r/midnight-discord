@@ -24,6 +24,9 @@
 	/* top left corner text */
 	--corner-text: 'Vencord';
 
+	/* width of messages divider */
+	--divider-width: 1px;
+
 	/* color of status indicators and window controls */
 	--online-indicator: #89b481; /* change to #23a55a for default green */
 	--dnd-indicator: #d3869b; /* change to #f23f43 for default red */
