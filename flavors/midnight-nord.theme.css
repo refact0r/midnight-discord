@@ -24,7 +24,7 @@
 
 	/* color of status indicators and window controls */
 	--online-indicator: #a3be8c; /* change to #23a55a for default green */
-	--dnd-indicator: #bf616a; /* change to #f13f43 for default red */
+	--dnd-indicator: #bf616a; /* change to #f23f43 for default red */
 	--idle-indicator: #ebcb8b; /* change to #f0b232 for default yellow */
 	--streaming-indicator: #b48ead; /* change to #593695 for default purple */
 

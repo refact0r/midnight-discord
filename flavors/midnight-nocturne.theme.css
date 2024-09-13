@@ -36,7 +36,7 @@ blackxfiied • refact0r      customize here */
 	note: updated to be more harsh by using discord's own branding kit colors (although unintended) -- https://discord.com/branding
 	*/
 	--online-indicator: #57f287; /* change to #23a55a for default green */
-	--dnd-indicator: #ed4245; /* change to #f13f43 for default red */
+	--dnd-indicator: #ed4245; /* change to #f23f43 for default red */
 	--idle-indicator: #fee75c; /* change to #f0b232 for default yellow */
 	--streaming-indicator: #5865f2; /* change to #593695 for default purple */
 
