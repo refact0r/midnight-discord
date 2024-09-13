@@ -13,8 +13,8 @@
 
 	/* color of status indicators and window controls */
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
-	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
 	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f23f43 for default red */
+	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
 	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
