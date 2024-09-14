@@ -22,7 +22,7 @@
 	/* top left corner text */
 	--corner-text: 'Midnight - Night Owl';
 
-	/* width of messages divider */
+	/* thickness of messages divider */
 	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
