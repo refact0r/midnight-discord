@@ -9,7 +9,7 @@
 	--corner-text: 'Midnight';
 
 	/* width of messages divider */
-	--divider-width: 1px;
+	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
@@ -776,18 +776,14 @@ button.button_dd4f85 /* small buttons */,
 
 /* improve unread divider */
 .divider_c2654d {
-	border-width: var(--divider-width);
-	border-radius: var(--divider-width);
+	border-width: var(--divider-thickness);
+	border-radius: var(--divider-thickness);
 }
 .divider_c2654d .content_c2654d {
-	margin-top: calc(var(--divider-width) - var(--divider-width) * 2);
-}
-.divider_c2654d.isUnread_c2654d .content_c2654d {
-	box-shadow: 4px 0 7px 0 var(--bg-overlay-chat,var(--background-primary)),
-				-4px 0 7px 0 var(--bg-overlay-chat,var(--background-primary));
+	margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
 }
 .endCap_c2654d {
-	margin-top: calc(var(--divider-width) / 2 - var(--divider-width));
+	margin-top: calc(var(--divider-thickness) / 2 - var(--divider-thickness));
 }
 /* improve highlight message left edge */
 .message_d5deea.mentioned_d5deea::before,
@@ -854,7 +850,7 @@ button.button_f67531 /* make user panel buttons round */ {
 	overflow: hidden;
 }
 .newMessagesBar_cf58b5 {
-	top: -12px;
+	top: -48px;
 	height: 72px;
 	transition: top var(--unread-bar-transition);
 	background: none;
@@ -869,6 +865,9 @@ button.button_f67531 /* make user panel buttons round */ {
 	position: absolute;
 	height: 32px;
 	border-radius: var(--roundness-s);
+}
+.newMessagesBar_cf58b5:hover {
+	top: -12px;
 }
 .top_eba0ba > .containerPadding_eba0ba {
 	padding: 16px;

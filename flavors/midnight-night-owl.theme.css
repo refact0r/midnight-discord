@@ -23,7 +23,7 @@
 	--corner-text: 'Midnight - Night Owl';
 
 	/* width of messages divider */
-	--divider-width: 1px;
+	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
