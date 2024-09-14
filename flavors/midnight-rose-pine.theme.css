@@ -23,7 +23,7 @@
 	--corner-text: 'Rose Pine';
 
 	/* width of messages divider */
-	--divider-width: 1px;
+	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: hsl(189, 43%, 73%); /* change to #23a55a for default green */

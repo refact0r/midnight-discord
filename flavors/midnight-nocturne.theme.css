@@ -32,7 +32,7 @@ blackxfiied • refact0r      customize here */
 	--corner-text: 'nocturne';
 
 	/* width of messages divider */
-	--divider-width: 1px;
+	--divider-thickness: 3px;
 
 	/*
 	color of status indicators and window controls

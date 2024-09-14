@@ -25,7 +25,7 @@
 	--corner-text: 'Amaryllis';
 
 	/* width of messages divider */
-	--divider-width: 1px;
+	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: #ccfca1; /* change to #23a55a for default green */
