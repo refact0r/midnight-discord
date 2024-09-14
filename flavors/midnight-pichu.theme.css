@@ -20,11 +20,11 @@
 :root {
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'Nunito';
-	
+
 	/* top left corner text */
 	--corner-text: 'LilyPichu';
 
-	/* width of messages divider */
+	/* thickness of messages divider */
 	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */

@@ -24,7 +24,7 @@
 	/* top left corner text */
 	--corner-text: 'Vencord';
 
-	/* width of messages divider */
+	/* thickness of messages divider */
 	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */

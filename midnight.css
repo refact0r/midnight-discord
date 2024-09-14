@@ -8,7 +8,7 @@
 	/* top left corner text */
 	--corner-text: 'Midnight';
 
-	/* width of messages divider */
+	/* thickness of messages divider */
 	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
@@ -179,7 +179,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 
 /* settings checkbuttons */
 .container_cebd1c {
-	transition: background-color ease .3s;
+	transition: background-color ease 0.3s;
 }
 .container_cebd1c path {
 	fill: var(--text-4);
@@ -191,7 +191,7 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 	fill: var(--accent-3) !important;
 }
 .container_cebd1c > .slider_cebd1c > rect {
-	transition: fill ease .3s;
+	transition: fill ease 0.3s;
 }
 
 .mention_c10249:active /* NEW unread pill when clicked */ {
