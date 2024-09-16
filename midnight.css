@@ -487,7 +487,6 @@ a[href="https://support.discord.com"] /* hide help */
 .container__93316 /* main chat */,
 .chatContent_a7d72e /* main chat inner */,
 .container_cbd271 /* members list */,
-.members_cbd271 /* members list inner */,
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
 .userPanelOuter_c69a7b /* profile panel inner */,
@@ -509,6 +508,7 @@ a[href="https://support.discord.com"] /* hide help */
 .uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */ {
 	border-radius: var(--roundness-l);
 }
+
 .roundedBanner_c3e427 /* user profile popout top */,
 .banner_ab876d /* user profile top when edit */ {
 	border-radius: calc(var(--roundness-l) - 4px) calc(var(--roundness-l) - 4px) 0 0;
@@ -528,7 +528,8 @@ a[href="https://support.discord.com"] /* hide help */
 .withTagAsButton_b2ca13:hover, .withTagless_b2ca13:hover /* user panel username */,
 .messageGroupWrapper_ac90a2 /* pinned messages */,
 .accountProfileCard_b69b77 /* my account settings profile background */,
-.userProfileInner_c69a7b /* user profile inner */ {
+.userProfileModalInner_c69a7b /* fully focused user profile inner */,
+.biteSizeInner_c69a7b /* bitesized user profile inner */ {
 	border-radius: var(--roundness-m);
 }
 .scrollableContainer_d0696b /* message bar */,
@@ -609,6 +610,12 @@ button.button_dd4f85 /* small buttons */,
 .base_a4d4d9 {
 	margin-left: var(--spacing);
 }
+
+/* fix member list rounded corners */
+.members_cbd271 {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl) !important;
+}
+
 .guilds_a4d4d9::after /* add bottom scroll shadow */,
 .membersWrap_cbd271::after {
 	content: '';
