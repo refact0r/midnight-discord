@@ -893,6 +893,12 @@ button.button_f67531 /* make user panel buttons round */ {
 	margin-bottom: -12px;
 }
 
+/* Decor Compat */
+.vc-decor-sectioned-grid-list-container {
+	border-radius: 0% !important;
+	overflow: scroll !important;
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
