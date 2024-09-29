@@ -1161,7 +1161,7 @@ html.theme-light,
 	--scrollbar-auto-scrollbar-color-track: var(--primary-630);
 	--scrollbar-auto-thumb: var(--bg-3);
 	--scrollbar-auto-track: transparent;
-	--scrollbar-thin-thumb: var(--bg-3);
+	--scrollbar-thin-thumb: var(--bg-2);
 	--scrollbar-thin-track: transparent;
 	--__spoiler-background-color--hidden: var(--bg-2);
 	--__spoiler-background-color--hidden--hover: var(--hover);
