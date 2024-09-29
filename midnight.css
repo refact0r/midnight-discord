@@ -135,7 +135,9 @@
 	background: var(--bg-2);
 }
 #app-mount .searchAnswer_b0fa94 /* search filter answer */,
-#app-mount .searchFilter_b0fa94 /* search filter */,
+#app-mount .searchFilter_b0fa94 /* search filter */ {
+	background: var(--bg-1);
+}
 .input_f4e139 /* big 'find conversation' search bar */ {
 	background: var(--bg-2);
 }
