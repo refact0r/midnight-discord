@@ -926,6 +926,14 @@ button.button_f67531 /* make user panel buttons round */ {
 	border-radius: var(--roundness-xl);
 }
 
+/* fix scrollbars so bg-2 is not default for thin */
+.content_b56bbc .thin_eed6a8::-webkit-scrollbar-thumb,
+.wrapper_de4721 .thin_c49869::-webkit-scrollbar-thumb,
+.listWrapper_a3bc57 .thin_c49869::-webkit-scrollbar-thumb
+{
+	background-color: var(--bg-2);
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
@@ -1176,7 +1184,7 @@ html.theme-light,
 	--scrollbar-auto-scrollbar-color-track: var(--primary-630);
 	--scrollbar-auto-thumb: var(--bg-3);
 	--scrollbar-auto-track: transparent;
-	--scrollbar-thin-thumb: var(--bg-2);
+	--scrollbar-thin-thumb: var(--bg-3);
 	--scrollbar-thin-track: transparent;
 	--__spoiler-background-color--hidden: var(--bg-2);
 	--__spoiler-background-color--hidden--hover: var(--hover);
