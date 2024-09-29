@@ -812,11 +812,6 @@ button.button_dd4f85 /* small buttons */,
 	margin-left: 4px;
 }
 
-/* horizontal server list fix */
-#app-mount .app_bd26cc .base_a4d4d9 {
-	top: calc(var(--server-container) + var(--spacing)) !important;
-}
-
 /* list hover animations */
 .wrapper_d8bfb3 .link_d8bfb3 /* channels */,
 .container_e9f61e /* members */,
