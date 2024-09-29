@@ -394,7 +394,7 @@ svg[fill='#593695'] {
 	background: var(--background-primary);
 	width: 100%;
 	height: 48px;
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+	border-radius: var(--roundness-xl);
 }
 .wrapper_d880dc.minimum_d880dc ~ .content_a7d72e .container__93316::before /* remove when in private call */ {
 	display: none;
@@ -492,9 +492,7 @@ a[href="https://support.discord.com"] /* hide help */
 .userPanelOuter_c69a7b /* profile panel inner */,
 .userPanelInner_c69a7b /* profile panel inner inner */,
 .userPanelInner_c69a7b::before /* profile panel inner inner filter */,
-.container_a6d69a /* forums */ {
-	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
-}
+.container_a6d69a /* forums */ {border-radius: var(--roundness-xl);}
 
 /* more rounded corners */
 .messagesPopoutWrap_ac90a2 /* inbox, pinned messages popout */,
@@ -613,7 +611,8 @@ button.button_dd4f85 /* small buttons */,
 
 /* fix member list rounded corners */
 .members_cbd271 {
-	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl) !important;
+	margin-top: var(--spacing);
+	border-radius: var(--roundness-xl);
 }
 
 .guilds_a4d4d9::after /* add bottom scroll shadow */,
@@ -899,18 +898,29 @@ button.button_f67531 /* make user panel buttons round */ {
 	overflow: scroll !important;
 }
 
-.wrapper_d880dc.normal_d880dc {
-	padding-bottom: var(--spacing);
-}
+/* New style */
 
+/* Call background fits theme */
 .callContainer_d880dc {
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
 	background: var(--bg-4);
 }
 
+/* Remove gradient from call containers */
 .gradientContainer_dd069c {
 	visibility: hidden;
+	
 }
+
+/* Margin the chat to fit the new theme*/
+.chatContent_a7d72e {
+	margin-top: var(--spacing)
+}
+
+/* Margin the chat header to stay in line with search */
+.chatContent_a7d72e::before {
+	margin-top: calc(-48px - var(--spacing));
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
