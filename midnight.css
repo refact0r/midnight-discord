@@ -921,6 +921,11 @@ button.button_f67531 /* make user panel buttons round */ {
 	margin-top: calc(-48px - var(--spacing));
 }
 
+/* change own profile hover to match border roundness */
+.avatarWrapper_b2ca13:hover {
+	border-radius: var(--roundness-xl);
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
