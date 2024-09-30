@@ -903,6 +903,11 @@ button.button_f67531 /* make user panel buttons round */ {
 	
 }
 
+/* Call padding */
+.wrapper_d880dc.normal_d880dc {
+	padding-bottom: var(--spacing);
+}
+
 /* change own profile hover to match border roundness */
 .avatarWrapper_b2ca13:hover {
 	border-radius: var(--roundness-xl);
