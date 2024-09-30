@@ -942,6 +942,14 @@ button.button_f67531 /* make user panel buttons round */ {
 	background-color: var(--bg-2);
 }
 
+/* fix discovery icon */
+.footer_aa1bff {
+	background: unset;
+}
+.fixedDiscoveryIcon_fea3ef {
+	color:var(--green-360)
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
