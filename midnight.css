@@ -394,7 +394,7 @@ svg[fill='#593695'] {
 	background: var(--background-primary);
 	width: 100%;
 	height: 48px;
-	border-radius: var(--roundness-xl);
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
 }
 .wrapper_d880dc.minimum_d880dc ~ .content_a7d72e .container__93316::before /* remove when in private call */ {
 	display: none;
@@ -492,7 +492,7 @@ a[href="https://support.discord.com"] /* hide help */
 .userPanelOuter_c69a7b /* profile panel inner */,
 .userPanelInner_c69a7b /* profile panel inner inner */,
 .userPanelInner_c69a7b::before /* profile panel inner inner filter */,
-.container_a6d69a /* forums */ {border-radius: var(--roundness-xl);}
+.container_a6d69a /* forums */ {border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);}
 
 /* more rounded corners */
 .messagesPopoutWrap_ac90a2 /* inbox, pinned messages popout */,
@@ -610,9 +610,8 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* fix member list rounded corners */
-.members_cbd271 {
-	margin-top: var(--spacing);
-	border-radius: var(--roundness-xl);
+.members_cbd271.thin_c49869 {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
 .guilds_a4d4d9::after /* add bottom scroll shadow */,
@@ -893,8 +892,6 @@ button.button_f67531 /* make user panel buttons round */ {
 	overflow: scroll !important;
 }
 
-/* New style */
-
 /* Call background fits theme */
 .callContainer_d880dc {
 	background: var(--bg-4);
@@ -904,29 +901,6 @@ button.button_f67531 /* make user panel buttons round */ {
 .gradientContainer_dd069c {
 	visibility: hidden;
 	
-}
-
-/* Margin the chat to fit the new theme*/
-.chatContent_a7d72e {
-	margin-top: var(--spacing)
-}
-
-/* Margin the chat header to stay in line with search */
-.chatContent_a7d72e::before {
-	margin-top: calc(-48px - var(--spacing));
-}
-
-/* Fix chat search placement */
-.searchResultsWrap_c2b47d {
-	margin-top: var(--spacing);
-}
-.searchResultsWrap_c2b47d::before {
-	margin-top: calc(-48px - var(--spacing));
-}
-
-/* Fix chat search roundness */
-.searchHeader_b7c924 {
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
 }
 
 /* change own profile hover to match border roundness */
