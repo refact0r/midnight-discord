@@ -894,6 +894,7 @@ button.button_f67531 /* make user panel buttons round */ {
 
 /* Call background fits theme */
 .callContainer_d880dc {
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
 	background: var(--bg-4);
 }
 
