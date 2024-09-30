@@ -916,6 +916,19 @@ button.button_f67531 /* make user panel buttons round */ {
 	margin-top: calc(-48px - var(--spacing));
 }
 
+/* Fix chat search placement */
+.searchResultsWrap_c2b47d {
+	margin-top: var(--spacing);
+}
+.searchResultsWrap_c2b47d::before {
+	margin-top: calc(-48px - var(--spacing));
+}
+
+/* Fix chat search roundness */
+.searchHeader_b7c924 {
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
+}
+
 /* change own profile hover to match border roundness */
 .avatarWrapper_b2ca13:hover {
 	border-radius: var(--roundness-xl);
