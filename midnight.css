@@ -492,9 +492,7 @@ a[href="https://support.discord.com"] /* hide help */
 .userPanelOuter_c69a7b /* profile panel inner */,
 .userPanelInner_c69a7b /* profile panel inner inner */,
 .userPanelInner_c69a7b::before /* profile panel inner inner filter */,
-.container_a6d69a /* forums */ {
-	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
-}
+.container_a6d69a /* forums */ {border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);}
 
 /* more rounded corners */
 .messagesPopoutWrap_ac90a2 /* inbox, pinned messages popout */,
@@ -612,8 +610,8 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* fix member list rounded corners */
-.members_cbd271 {
-	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl) !important;
+.members_cbd271.thin_c49869 {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
 .guilds_a4d4d9::after /* add bottom scroll shadow */,
@@ -813,11 +811,6 @@ button.button_dd4f85 /* small buttons */,
 	margin-left: 4px;
 }
 
-/* horizontal server list fix */
-#app-mount .app_bd26cc .base_a4d4d9 {
-	top: calc(var(--server-container) + var(--spacing)) !important;
-}
-
 /* list hover animations */
 .wrapper_d8bfb3 .link_d8bfb3 /* channels */,
 .container_e9f61e /* members */,
@@ -897,6 +890,44 @@ button.button_f67531 /* make user panel buttons round */ {
 .vc-decor-sectioned-grid-list-container {
 	border-radius: 0% !important;
 	overflow: scroll !important;
+}
+
+/* Call background fits theme */
+.callContainer_d880dc {
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
+	background: var(--bg-4);
+}
+
+/* Remove gradient from call containers */
+.gradientContainer_dd069c {
+	visibility: hidden;
+	
+}
+
+/* Call padding */
+.wrapper_d880dc.normal_d880dc {
+	padding-bottom: var(--spacing);
+}
+
+/* change own profile hover to match border roundness */
+.avatarWrapper_b2ca13:hover {
+	border-radius: var(--roundness-xl);
+}
+
+/* fix scrollbars in emotes menu */
+.content_b56bbc .thin_eed6a8::-webkit-scrollbar-thumb,
+.wrapper_de4721 .thin_c49869::-webkit-scrollbar-thumb,
+.listWrapper_a3bc57 .thin_c49869::-webkit-scrollbar-thumb
+{
+	background-color: var(--bg-2);
+}
+
+/* fix discovery icon */
+.footer_aa1bff {
+	background: var(--bg-overlay-app-frame,var(--bg-4));
+}
+.fixedDiscoveryIcon_fea3ef {
+	color:var(--green-360)
 }
 
 .theme-light {
