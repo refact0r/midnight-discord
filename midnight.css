@@ -124,7 +124,8 @@
 .mainCard_a6d69a /* forum post */,
 .navRow_be9398[data-theme=dark] /* add new account bottom */,
 .container_ddbb27 /* forum guidelines box */,
-.searchBar_e7c031 /* settings searchbar */ {
+.searchBar_e7c031 /* settings searchbar */,
+.circleIconButton_db6521 /* server list buttons */ {
 	background: var(--bg-3);
 }
 .folderIconWrapper_bc7085[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
