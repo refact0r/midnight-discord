@@ -81,6 +81,15 @@
 	--font-display: var(--font), 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Radial status compat */
+:root {
+	--rs-online-color: var(--online-indicator); /* Colour for online status */
+	--rs-idle-color: var(--idle-indicator); /* Colour for idle status */
+  	--rs-dnd-color: var(--dnd-indicator); /* Colour for dnd status */
+  	--rs-streaming-color: var(--streaming-indicator); /* Colour for streaming status */
+  	--rs-self-speaking-color: var(--online-indicator); /* Colour for speaking ring in the bottom left while in a voice chat/call */
+}
+
 /* reduced motion */
 :root.reduce-motion {
 	--list-item-transition: none;
@@ -611,6 +620,9 @@ button.button_dd4f85 /* small buttons */,
 
 /* fix member list rounded corners */
 .members_cbd271.thin_c49869 {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+.members_cbd271 {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
