@@ -904,7 +904,6 @@ button.button_f67531 /* make user panel buttons round */ {
 
 /* Call background fits theme */
 .callContainer_d880dc {
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
 	background: var(--bg-4);
 }
 
@@ -943,6 +942,15 @@ button.button_f67531 /* make user panel buttons round */ {
 .theme-light {
 	--text-link: var(--accent-5);
 }
+
+/* unround corners during call until solution found */
+.content_a7d72e {
+	border-radius: 0 0 0 0 !important;
+}
+.wrapper_d880dc.minimum_d880dc {
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
+}
+
 html.theme-light,
 .theme-dark {
 	--activity-card-background: var(--bg-3);
