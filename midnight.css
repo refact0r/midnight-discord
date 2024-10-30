@@ -75,8 +75,8 @@
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 
 	/* custom navigation buttons */
-	--custom-nav: none;
-	--windows-nav: block;
+	--custom-nav: block;
+	--windows-nav: none;
 }
 
 /* change fonts (edit the variables above, not this part) */
@@ -711,7 +711,7 @@ button.button_dd4f85 /* small buttons */,
 
 /* window controls */
 [class^='winButton'] > svg {
-	display: none;
+	display: var(--windows-nav);
 }
 [class^='winButton'] {
 	background: none !important;
@@ -724,6 +724,7 @@ button.button_dd4f85 /* small buttons */,
 	padding-right: calc(var(--spacing) - 5px);
 }
 [class^='winButton']::after {
+	display: var(--custom-nav);
 	content: '';
 	height: 12px;
 	width: 12px;
