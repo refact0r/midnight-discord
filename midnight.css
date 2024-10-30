@@ -706,7 +706,6 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* window controls */
-/*
 [class^='winButton'] > svg {
 	display: none;
 }
@@ -741,7 +740,6 @@ button.button_dd4f85 /* small buttons */,
 [class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: var(--idle-indicator) !important;
 }
-*/
 
 /* custom dm button moon icon */
 .childWrapper_f90abb > svg:not(.favoriteIcon_dcc7a4) {
