@@ -86,6 +86,6 @@
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 
 	/* nav buttons */
-	--windows-navigation: none;
-	--custom-navigation: block;
+	--windows-nav: none;
+	--custom-nav: block;
 }
