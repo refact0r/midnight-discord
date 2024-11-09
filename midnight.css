@@ -620,7 +620,8 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* fix member list rounded corners */
-.members_cbd271 {
+.members_cbd271.thin_c49869,
+.members_cbd271.thin_eed6a8 {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
@@ -904,7 +905,6 @@ button.button_f67531 /* make user panel buttons round */ {
 
 /* Call background fits theme */
 .callContainer_d880dc {
-	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0 !important;
 	background: var(--bg-4);
 }
 
@@ -941,6 +941,7 @@ button.button_f67531 /* make user panel buttons round */ {
 .theme-light {
 	--text-link: var(--accent-5);
 }
+
 html.theme-light,
 .theme-dark {
 	--activity-card-background: var(--bg-3);
