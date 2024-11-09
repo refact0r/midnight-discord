@@ -87,4 +87,9 @@
 	--login-bg-filter: none; /* login background artwork */
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
+
+	/* choose style for window control buttons (minimize-maximize-close) */
+	/* block to show, none to hide; choose only one to show!*/
+	--windows-nav: none; /* default windows-style buttons */
+	--custom-nav: block; /* custom mac-style buttons */
 }
