@@ -620,7 +620,7 @@ button.button_dd4f85 /* small buttons */,
 }
 
 /* fix member list rounded corners */
-.members_cbd271.thin_c49869 {
+.members_cbd271 {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
