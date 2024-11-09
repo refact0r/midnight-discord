@@ -118,7 +118,7 @@
 .sidebarContainer_a3a4ce, .container_a56260, .contentContainer_a56260 /* quests page */ {
 	background-color: var(--bg-4) !important;
 }
-.userPanelOuter_c69a7b {
+.outer_c69a7b {
 	--background-secondary-alt: var(--bg-4) !important;
 }
 .mainCard_a6d69a /* forum post */,
@@ -391,7 +391,7 @@ svg[fill='#593695'] {
 .chatContent_a7d72e::before /* main chat */,
 .membersWrap_cbd271::before /* member list */,
 .searchResultsWrap_c2b47d::before /* search results */,
-.userPanelOuter_c69a7b::before /* dm profile */,
+.outer_c69a7b::before /* dm profile */,
 .container_a6d69a::before /* forums */ {
 	content: '';
 	position: absolute;
@@ -421,7 +421,7 @@ a[href="https://support.discord.com"] /* hide help */
 	width: 394px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
-.chat_a7d72e:has(.userPanelOuter_c69a7b) .searchBar_a46bef {
+.chat_a7d72e:has(.outer_c69a7b) .searchBar_a46bef {
 	width: 316px !important;
 	margin-left: calc(var(--spacing) + 8px);
 }
@@ -494,10 +494,12 @@ a[href="https://support.discord.com"] /* hide help */
 .container_cbd271 /* members list */,
 .searchResultsWrap_c2b47d /* search results */,
 .profilePanel_b433b4 /* profile panel outer */,
-.userPanelOuter_c69a7b /* profile panel inner */,
+.outer_c69a7b /* profile panel inner */,
 .userPanelInner_c69a7b /* profile panel inner inner */,
 .userPanelInner_c69a7b::before /* profile panel inner inner filter */,
-.container_a6d69a /* forums */ {border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);}
+.container_a6d69a /* forums */ {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
 
 /* more rounded corners */
 .messagesPopoutWrap_ac90a2 /* inbox, pinned messages popout */,
@@ -911,7 +913,6 @@ button.button_f67531 /* make user panel buttons round */ {
 /* Remove gradient from call containers */
 .gradientContainer_dd069c {
 	visibility: hidden;
-	
 }
 
 /* Call padding */
@@ -927,17 +928,16 @@ button.button_f67531 /* make user panel buttons round */ {
 /* fix scrollbars in emotes menu */
 .content_b56bbc .thin_eed6a8::-webkit-scrollbar-thumb,
 .wrapper_de4721 .thin_c49869::-webkit-scrollbar-thumb,
-.listWrapper_a3bc57 .thin_c49869::-webkit-scrollbar-thumb
-{
+.listWrapper_a3bc57 .thin_c49869::-webkit-scrollbar-thumb {
 	background-color: var(--bg-2);
 }
 
 /* fix discovery icon */
 .footer_aa1bff {
-	background: var(--bg-overlay-app-frame,var(--bg-4));
+	background: var(--bg-overlay-app-frame, var(--bg-4));
 }
 .fixedDiscoveryIcon_fea3ef {
-	color:var(--green-360)
+	color: var(--green-360);
 }
 
 .theme-light {
