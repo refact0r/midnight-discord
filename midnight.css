@@ -938,6 +938,11 @@ button.button_f67531 /* make user panel buttons round */ {
 	color: var(--green-360);
 }
 
+/* fix bottom left user profile corner roundness */
+.panel_c69a7b.panel_c69a7b {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+
 .theme-light {
 	--text-link: var(--accent-5);
 }
