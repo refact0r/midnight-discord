@@ -391,7 +391,7 @@ svg[fill='#593695'] {
 .chatContent_a7d72e::before /* main chat */,
 .membersWrap_cbd271::before /* member list */,
 .searchResultsWrap_c2b47d::before /* search results */,
-.outer_c69a7b::before /* dm profile */,
+.outer_c69a7b.panel_c69a7b::before /* dm profile */,
 .container_a6d69a::before /* forums */ {
 	content: '';
 	position: absolute;
@@ -482,7 +482,8 @@ a[href="https://support.discord.com"] /* hide help */
 /* discover page sidebar & wrappers */
 .sidebarContainer_a3a4ce,
 .pageWrapper_a3a4ce,
-.thin_c49869.scrollerBase_c49869 {
+.thin_c49869.scrollerBase_c49869,
+.layerContainer_cd0de5 .outer_c69a7b /* profile popout */ {
 	border-radius: var(--roundness-xl);
 	overflow: hidden;
 }
@@ -493,11 +494,8 @@ a[href="https://support.discord.com"] /* hide help */
 .chatContent_a7d72e /* main chat inner */,
 .container_cbd271 /* members list */,
 .searchResultsWrap_c2b47d /* search results */,
-.profilePanel_b433b4 /* profile panel outer */,
-.outer_c69a7b /* profile panel inner */,
-.userPanelInner_c69a7b /* profile panel inner inner */,
-.userPanelInner_c69a7b::before /* profile panel inner inner filter */,
-.container_a6d69a /* forums */ {
+.container_a6d69a /* forums */,
+.outer_c69a7b.panel_c69a7b /* dm profile */ {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
@@ -510,7 +508,8 @@ a[href="https://support.discord.com"] /* hide help */
 .contentWrapper_af5dbb /* emoji, sticker, gif pickers */,
 .footer_f9a4c9 /* edit modal footer */,
 .layerContainer_cd0de5 .root_f9a4c9 /* upload modal */,
-.uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */ {
+.uploadModal_f82cc7 .footer_f82cc7 /* upload modal footer */,
+.layerContainer_cd0de5 .inner_c69a7b {
 	border-radius: var(--roundness-l);
 }
 
@@ -534,7 +533,6 @@ a[href="https://support.discord.com"] /* hide help */
 .messageGroupWrapper_ac90a2 /* pinned messages */,
 .accountProfileCard_b69b77 /* my account settings profile background */,
 .userProfileModalInner_c69a7b /* fully focused user profile inner */,
-.biteSizeInner_c69a7b /* bitesized user profile inner */,
 .mainCard_a6d69a /* form posts & search box */,
 .container_ddbb27 /* guidelines box */ {
 	border-radius: var(--roundness-m);
