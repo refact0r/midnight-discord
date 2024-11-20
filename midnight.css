@@ -749,7 +749,6 @@ button.button_dd4f85 /* small buttons */,
 	background-color: var(--idle-indicator) !important;
 }
 
-
 /* custom dm button moon icon */
 .childWrapper_f90abb > svg:not(.favoriteIcon_dcc7a4) {
 	display: var(--discord-icon);
@@ -939,11 +938,16 @@ button.button_f67531 /* make user panel buttons round */ {
 }
 
 /* fix discovery icon */
-.footer_aa1bff {
+.footer_f8ec41 {
 	background: var(--bg-overlay-app-frame, var(--bg-4));
 }
 .fixedDiscoveryIcon_fea3ef {
 	color: var(--green-360);
+}
+
+/* fix bottom left user profile corner roundness */
+.inner_c69a7b.panel_c69a7b {
+	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
 .theme-light {
