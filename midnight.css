@@ -73,6 +73,11 @@
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
 	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+	/* choose style for window control buttons (minimize-maximize-close) */
+	/* block to show, none to hide; choose only one to show!*/
+	--windows-nav: none; /* default windows-style buttons */
+	--custom-nav: block; /* custom mac-style buttons */
 }
 
 /* change fonts (edit the variables above, not this part) */
@@ -173,9 +178,10 @@ div.message_d5deea.replying_d5deea::before /* change reply message bar to neutra
 	color: var(--accent-3) !important;
 }
 .divider_d5deea /* unread divider */,
-.mention_c10249 /* NEW unread pill */,
+.mention_edf32f /* NEW unread pill */,
 .mentionsBar_eba0ba /* channel list new mention pill */ {
 	--status-danger: var(--accent-3);
+	color: var(--status-danger-text);
 }
 .message_d5deea.mentioned_d5deea:before /* mention message left edge */,
 .botTagOP_a9e77f /* OP tag */ {
@@ -263,7 +269,7 @@ path[fill='var(--white-500)'] {
 .container_cebd1c.checked_cebd1c > .slider_cebd1c > rect /* settings checkbutton circle */,
 .userMenuItem_e1268c path[fill="var(--white-500)"] /* account switcher account hover */,
 .colorDefault_d90b3d.focused_d90b3d path {
-	fill: var(--text-0);
+	fill: var(--text-0) !important;
 }
 .closeIcon__967e7 path /* alert banner close icon */ {
 	fill: currentColor;
@@ -708,7 +714,7 @@ button.button_dd4f85 /* small buttons */,
 
 /* window controls */
 [class^='winButton'] > svg {
-	display: none;
+	display: var(--windows-nav);
 }
 [class^='winButton'] {
 	background: none !important;
@@ -721,6 +727,7 @@ button.button_dd4f85 /* small buttons */,
 	padding-right: calc(var(--spacing) - 5px);
 }
 [class^='winButton']::after {
+	display: var(--custom-nav);
 	content: '';
 	height: 12px;
 	width: 12px;
@@ -741,6 +748,7 @@ button.button_dd4f85 /* small buttons */,
 [class^='winButtonMinMax']:nth-child(4)::after {
 	background-color: var(--idle-indicator) !important;
 }
+
 
 /* custom dm button moon icon */
 .childWrapper_f90abb > svg:not(.favoriteIcon_dcc7a4) {
