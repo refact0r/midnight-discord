@@ -941,6 +941,9 @@ button.button_f67531 /* make user panel buttons round */ {
 .footer_d71945 {
 	background: var(--bg-overlay-app-frame, var(--bg-4));
 }
+.fixedDiscoveryIcon_fea3ef {
+	color: var(--green-360);
+}
 
 /* fix bottom left user profile corner roundness */
 .inner_c69a7b.panel_c69a7b {
