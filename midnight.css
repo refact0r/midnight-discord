@@ -476,7 +476,6 @@ a[href="https://support.discord.com"] /* hide help */
 .applicationStore_cecc86 /* nitro page */,
 #app-mount .container_f3abf4 /* message requests */,
 .shop_e77fa3 /* discord shop */,
-.container_d576e9 /* family center */,
 .container_d1c246 /* message request */,
 #app-mount .callContainer_d880dc /* vc */, 
 .chat_a7d72e /* general chat container (for browse channels page */,
@@ -491,6 +490,9 @@ a[href="https://support.discord.com"] /* hide help */
 .thin_c49869.scrollerBase_c49869,
 .layerContainer_cd0de5 .outer_c69a7b /* profile popout */ {
 	border-radius: var(--roundness-xl);
+	overflow: hidden;
+}
+.container_d576e9 /* family center */ {
 	overflow: hidden;
 }
 .sidebar_a4d4d9 /* fix */ {
