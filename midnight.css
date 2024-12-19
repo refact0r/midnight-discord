@@ -602,7 +602,7 @@ button.button_dd4f85 /* small buttons */,
 	border-radius: var(--roundness-xxs);
 }
 #app-mount .centerButton_ef18ee /* fix vc buttons */ {
-	border-radius: 50%;
+	border-radius: 20%;
 }
 
 /* fix view server as role popup */
