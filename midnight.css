@@ -170,7 +170,7 @@ div.message__5126c.replying__5126c::before /* change reply message bar to neutra
 	color: var(--accent-2);
 }
 .container__37e49 /* user panel button strikethroughs */,
-.numberBadge_df8943  /* unread number badge */,
+.numberBadge__2b1f5  /* unread number badge */,
 .toolbar__9293f /* toolbar button strikethroughs */ {
 	--status-danger: var(--accent-2);
 }
@@ -178,13 +178,13 @@ div.message__5126c.replying__5126c::before /* change reply message bar to neutra
 	color: var(--accent-3) !important;
 }
 .divider__5126c /* unread divider */,
-.mention_edf32f /* NEW unread pill */,
+.mention__3b95d /* NEW unread pill */,
 .mentionsBar__7aaec /* channel list new mention pill */ {
 	--status-danger: var(--accent-3);
 	color: var(--status-danger-text);
 }
 .message__5126c.mentioned__5126c:before /* mention message left edge */,
-.botTagOP_a9e77f /* OP tag */ {
+.botTagOP__82f07 /* OP tag */ {
 	background: var(--accent-3);
 }
 
@@ -205,16 +205,16 @@ div.message__5126c.replying__5126c::before /* change reply message bar to neutra
 	transition: fill ease 0.3s;
 }
 
-.mention_edf32f:active /* NEW unread pill when clicked */ {
+.mention__3b95d:active /* NEW unread pill when clicked */ {
 	background: var(--accent-4);
 }
 path[fill='var(--white-500)'] {
 	fill: var(--text-0) !important;
 }
-.numberBadge_df8943 /* dms number badge */,
-.newMessagesBar_cf58b5 .barButtonBase_cf58b5 /* unread bar */,
-.botTagRegular_a9e77f /* bot tag */,
-.endCap_c2654d /* unread divider */,
+.numberBadge__2b1f5 /* dms number badge */,
+.newMessagesBar__0f481 .barButtonBase__0f481 /* unread bar */,
+.botTagRegular__82f07 /* bot tag */,
+.endCap__908e2 /* unread divider */,
 .lookFilled__201d5.colorBrand__201d5 /* accent buttons */,
 .lookFilled__201d5.colorBrand__201d5 .defaultColor__77578 /* accent buttons */,
 .lookFilled__201d5.colorBrandNew__8872c /* accent buttons */,
@@ -487,7 +487,7 @@ a[href="https://support.discord.com"] /* hide help */
 /* discover page sidebar & wrappers */
 .sidebarContainer_a3a4ce,
 .pageWrapper_a3a4ce,
-.thin_c49869.scrollerBase_c49869,
+.thin_d125d2.scrollerBase_d125d2,
 .layerContainer_da8173 .outer_c0bea0 /* profile popout */ {
 	border-radius: var(--roundness-xl);
 	overflow: hidden;
@@ -530,7 +530,7 @@ a[href="https://support.discord.com"] /* hide help */
 	border-radius: calc(var(--roundness-l) - 4px);
 }
 .menu_c1e9c4 /* general popouts */,
-.embed_b0068a/* embeds */,
+.embed__623de/* embeds */,
 .mediaAttachmentsContainer__242e2 /* image container */,
 .oneByOneGridSingle_f4758a /* image container single */,
 .imageContainer__0f481 .imageWrapper__178ee /* gif wrapper */,
@@ -601,7 +601,7 @@ button.button__201d5 /* small buttons */,
 .topPill_b3f026 .item_b3f026 /* friend online/categories */ {
 	border-radius: var(--roundness-xxs);
 }
-#app-mount .centerButton_ef18ee /* fix vc buttons */ {
+#app-mount .centerButton_f1ceac /* fix vc buttons */ {
 	border-radius: 50%;
 }
 
@@ -628,8 +628,8 @@ button.button__201d5 /* small buttons */,
 }
 
 /* fix member list rounded corners */
-.members_c8ffbb.thin_c49869,
-.members_c8ffbb.thin_eed6a8 {
+.members_c8ffbb.thin_d125d2,
+.members_c8ffbb.thin__99f8c {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
 
@@ -807,7 +807,7 @@ button.button__201d5 /* small buttons */,
 .divider__908e2 .content__908e2 {
 	margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
 }
-.endCap_c2654d {
+.endCap__908e2 {
 	margin-top: calc(var(--divider-thickness) / 2 - var(--divider-thickness));
 }
 /* improve highlight message left edge */
@@ -817,7 +817,7 @@ button.button__201d5 /* small buttons */,
 	border-radius: 4px;
 }
 /* modify embeds */
-.embedFull_b0068a {
+.embedFull__623de {
 	border: 4px solid var(--bg-2);
 	border-top-color: transparent !important;
 	border-bottom-color: transparent !important;
@@ -869,7 +869,7 @@ button.button__67645 /* make user panel buttons round */ {
 .messagesWrapper__36d07 {
 	overflow: hidden;
 }
-.newMessagesBar_cf58b5 {
+.newMessagesBar__0f481 {
 	top: -48px;
 	height: 72px;
 	transition: top var(--unread-bar-transition);
@@ -877,7 +877,7 @@ button.button__67645 /* make user panel buttons round */ {
 	box-shadow: none;
 	border-radius: 0;
 }
-.newMessagesBar_cf58b5::before {
+.newMessagesBar__0f481::before {
 	content: '';
 	background: var(--accent-3);
 	box-shadow: var(--elevation-low);
@@ -886,7 +886,7 @@ button.button__67645 /* make user panel buttons round */ {
 	height: 32px;
 	border-radius: var(--roundness-s);
 }
-.newMessagesBar_cf58b5:hover {
+.newMessagesBar__0f481:hover {
 	top: -12px;
 }
 .top__7aaec > .containerPadding__7aaec {
@@ -918,7 +918,7 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 /* Remove gradient from call containers */
-.gradientContainer_dd069c {
+.gradientContainer_bfe55a {
 	visibility: hidden;
 }
 
@@ -933,9 +933,9 @@ button.button__67645 /* make user panel buttons round */ {
 }
 
 /* fix scrollbars in emotes menu */
-.content_fed6d3 .thin_eed6a8::-webkit-scrollbar-thumb,
-.wrapper_e94b8c .thin_c49869::-webkit-scrollbar-thumb,
-.listWrapper_c656ac .thin_c49869::-webkit-scrollbar-thumb {
+.content_fed6d3 .thin__99f8c::-webkit-scrollbar-thumb,
+.wrapper_e94b8c .thin_d125d2::-webkit-scrollbar-thumb,
+.listWrapper_c656ac .thin_d125d2::-webkit-scrollbar-thumb {
 	background-color: var(--bg-2);
 }
 
