@@ -96,7 +96,7 @@
 	--custom-nav: block; /* custom mac-style buttons */
 }
 
-.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background-image: url('https://github.com/yuhkix/midnight-discord/blob/master/assets/amaryllis/amaryllis.png?raw=true');
 	background-color: transparent !important;
 	background-size: cover;
