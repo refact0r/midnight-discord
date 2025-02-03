@@ -1276,6 +1276,10 @@ html.theme-light,
 	--white-500: var(--text-1);
 }
 
+/* scroll optimizations */
 [class*='scroll'] {
 	will-change: scroll-position;
+}
+.burstGlow__23977 {
+	display: none;
 }
