@@ -95,7 +95,7 @@
 	--windows-nav: none; /* default windows-style buttons */
 	--custom-nav: block; /* custom mac-style buttons */
 }
-.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background-image: url('https://raw.githubusercontent.com/NYRI4/LilyPichu/main/assets/icon.png');
 	background-color: transparent !important;
 	background-size: cover;
