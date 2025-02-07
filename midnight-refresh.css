@@ -171,6 +171,14 @@
 		display: none;
 	}
 
+	.newMessagesBar__0f481 /* unread messages bar */ {
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		border-radius: var(--radius-sm);
+		padding: 0 8px;
+	}
+
 	.form_f75fb0 /* chat bar outer form */ {
 		padding-left: 16px;
 		padding-right: 16px;
@@ -184,4 +192,11 @@
 	.slateTextArea_ec4baf /* actual typing area */ {
 		margin-left: 2px;
 	}
+}
+
+[class*='scroll'] {
+	will-change: scroll-position;
+}
+.burstGlow__23977 {
+	display: none;
 }
