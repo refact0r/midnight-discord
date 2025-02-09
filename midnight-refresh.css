@@ -27,7 +27,8 @@
     .outer_c0bea0.panel_c0bea0 /* dm user panel */,
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
-    .chat_fb64c9 /* new thread panel */ {
+    .chat_fb64c9 /* new thread panel */,
+	.container_a592e1 /* server discovery */ {
 		background-color: var(--background-base-lower);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--border-subtle);
@@ -201,6 +202,13 @@
 		display: none;
 	}
 
+	.container_a592e1 /* server discovery */ {
+		overflow: hidden;
+	}
+	.backdrop__8a7fc /* server discovery top bar */ {
+		background-color: var(--background-base-lower);
+	}
+
 	.newMessagesBar__0f481 /* unread messages bar */ {
 		top: 12px;
 		left: 12px;
@@ -225,6 +233,10 @@
 	}
 	.slateTextArea_ec4baf /* actual typing area */ {
 		margin-left: 2px;
+	}
+
+	.item_b3f026 /* settings tab */ {
+		transition: none !important;
 	}
 }
 
