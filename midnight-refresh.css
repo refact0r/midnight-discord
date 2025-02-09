@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .visual-refresh {
-	--gap: 16px;
+	--font: 'figtree';
+	--gap: 12px;
 
 	--custom-guild-list-padding: 12px;
 
@@ -25,7 +28,7 @@
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
     .chat_fb64c9 /* new thread panel */ {
-		background-color: var(--bg-base-secondary);
+		background-color: var(--background-base-lower);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--border-subtle);
 	}
@@ -48,6 +51,7 @@
 		grid-area: userPanel;
 		margin: var(--gap) 0 0 0;
 		overflow: hidden;
+		max-width: calc(var(--custom-guild-sidebar-width) + var(--gap) + 4px);
 	}
 
 	.sidebar_c48ade /* server list + channel list + user panel group */ {
@@ -67,10 +71,14 @@
 	.header_f37cb1 /* server name */,
     .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */,
 	.container__2637a /* channel list inner */ {
-		background-color: var(--bg-base-secondary);
+		background-color: var(--background-base-lower);
 	}
 	.clickable_f37cb1 {
 		background: none;
+	}
+
+	.sidebar_c48ade:after /* server list + channel list bottom shadow */ {
+		display: none;
 	}
 
 	.chat_f75fb0 /* chat group outer */,
@@ -106,14 +114,14 @@
 	.container_c8ffbb /* member list */ {
 		margin-left: var(--gap);
 		overflow: hidden;
-        height: auto;
+		height: auto;
 		min-width: var(--custom-member-list-width);
 	}
-    .content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */ {
+	.content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */ {
 		margin-left: var(--gap);
-        overflow: hidden;
-        height: auto;
-    }
+		overflow: hidden;
+		height: auto;
+	}
 
 	.privateChannels__35e86 /* dm list */,
     .scroller__99e7c /* dm list inner */ {
@@ -127,10 +135,9 @@
 		background: none;
 	}
 
-	.peopleColumn__133bf /* online friends */ {
-		margin-right: var(--gap);
+	.nowPlayingColumn__133bf /* active now */ {
+		margin-left: var(--gap);
 	}
-
 	.container__7d20c /* active now inner */ {
 		background: none;
 	}
@@ -187,12 +194,12 @@
 		padding-left: calc((var(--gap) - var(--chat-resize-handle-width)));
 	}
 
-    .container_fb64c9 /* new thread panel */ {
-        background: none;
-    }
-    .chat_fb64c9::before /* new thread panel chat shadow */ {
-        display: none;
-    }
+	.container_fb64c9 /* new thread panel */ {
+		background: none;
+	}
+	.chat_fb64c9::before /* new thread panel chat shadow */ {
+		display: none;
+	}
 
 	.newMessagesBar__0f481 /* unread messages bar */ {
 		top: 12px;
@@ -200,6 +207,10 @@
 		right: 12px;
 		border-radius: var(--radius-sm);
 		padding: 0 8px;
+	}
+
+	.bottom__7aaec /* channel list new unreads pill */ {
+		bottom: 12px;
 	}
 
 	.form_f75fb0 /* chat bar outer form */ {
@@ -215,6 +226,11 @@
 	.slateTextArea_ec4baf /* actual typing area */ {
 		margin-left: 2px;
 	}
+}
+
+:root {
+	--font-primary: var(--font), 'gg sans';
+	--font-display: var(--font), 'gg sans';
 }
 
 [class*='scroll'] {
