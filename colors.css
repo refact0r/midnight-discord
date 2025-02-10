@@ -53,7 +53,7 @@
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
 	--activity-card-background: red;
-	--autocomplete-bg: red;
+	--autocomplete-bg: var(--bg-3);
 
 	--background-mentioned: var(--mention);
 	--background-mentioned-hover: var(--mention-hover);
@@ -97,7 +97,7 @@
 	--border-faint: var(--border-light);
 	--border-subtle: var(--border);
 	--border-normal: var(--border);
-	--border-strong: red;
+	--border-strong: var(--border);
 	--input-border: var(--border);
 
 	--button-danger-background: var(--red-2);
