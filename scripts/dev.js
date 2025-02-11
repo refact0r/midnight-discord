@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
-const axios = require('axios');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
