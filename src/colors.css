@@ -14,9 +14,7 @@
 	--accent-1: var(--blue-1); /* general unread/mention elements */
 	--accent-2: var(--blue-2); /* accent buttons */
 	--accent-3: var(--blue-3); /* accent buttons when hovered */
-	--accent-4: var(
-		--blue-4
-	); /* accent buttons when clicked */ /* mentions & mention messages when hovered */
+	--accent-4: var(--blue-4); /* accent buttons when clicked */
 
 	--unread-red: var(--red-1);
 	--mention-yellow: var(--yellow-1);
@@ -74,7 +72,7 @@
 	--autocomplete-bg: var(--bg-3);
 
 	--background-mentioned: var(--mention-message);
-	--background-mentioned-hover: var(--mention-hover);
+	--background-mentioned-hover: var(--mention-message-hover);
 	--background-message-highlight: var(--bg-2);
 	--background-message-highlight-hover: var(--bg-3);
 	--background-message-hover: var(--message-hover);
@@ -257,5 +255,10 @@
 
 	.mentioned__5126c:before /* mention message left edge */ {
 		background-color: var(--mention-yellow) !important;
+	}
+
+	.barButtonAlt__0f481 /* unread bar mark as read button */ {
+		--button-secondary-background: var(--accent-2);
+		--button-secondary-background-hover: var(--accent-3);
 	}
 }
