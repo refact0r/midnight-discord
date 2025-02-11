@@ -1,0 +1,15 @@
+/**
+ * @name midnight
+ * @description A dark, rounded discord theme.
+ * @author refact0r
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight/src/main.css'); /* main theme css. */
+@import url('https://refact0r.github.io/midnight/src/colors.css'); /* adds custom colors. */
