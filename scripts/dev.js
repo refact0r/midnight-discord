@@ -7,7 +7,7 @@ require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 const srcDir = path.join(__dirname, '..', 'src');
 const baseFile = path.join(__dirname, '..', 'midnight-refresh.theme.css');
 const outputFile = process.env.DEV_OUTPUT_PATH;
-const pathToIgnore = 'https://refact0r.github.io/midnight/';
+const pathToIgnore = 'https://refact0r.github.io/midnight-discord/';
 
 if (!outputFile) {
 	console.error('DEV_OUTPUT_PATH is not set in .env file');

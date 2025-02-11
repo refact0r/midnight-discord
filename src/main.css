@@ -11,7 +11,7 @@
 	.guilds_c48ade /* server list */, 
     .sidebarList_c48ade /* channel list (includes dm list) */,
     .panels_c48ade /* user panel */,
-    .subtitleContainer_f75fb0 /* chat titlebar */,
+    .chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
     .chatContent_f75fb0 /* chat */,
     .container_c8ffbb /* member list */,
     .content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */,
@@ -208,6 +208,10 @@
 	}
 	.backdrop__8a7fc /* server discovery top bar */ {
 		background-color: var(--background-base-lower);
+	}
+
+	.wrapper_cb9592 /* dm vc wrapper */ {
+		background: none;
 	}
 
 	.newMessagesBar__0f481 /* unread messages bar */ {
