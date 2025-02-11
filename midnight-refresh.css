@@ -3,6 +3,7 @@
 .visual-refresh {
 	--font: 'figtree';
 	--gap: 12px;
+	--divider-thickness: 3px;
 
 	--custom-guild-list-padding: 12px;
 
@@ -237,6 +238,21 @@
 
 	.item_b3f026 /* settings tab */ {
 		transition: none !important;
+	}
+
+	/* improve unread divider */
+	.divider__908e2 {
+		border-width: var(--divider-thickness);
+		border-radius: var(--divider-thickness);
+	}
+	.endCap__908e2 {
+		margin-top: calc(var(--divider-thickness) / -2);
+	}
+	/* improve highlight message left edge */
+	.message__5126c.mentioned__5126c::before,
+	.replying__5126c::before {
+		width: var(--divider-thickness);
+		border-radius: var(--divider-thickness);
 	}
 }
 
