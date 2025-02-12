@@ -10,24 +10,6 @@
 	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
 
-	/* accent colors */
-	--accent-1: var(--blue-1); /* links and other accent text */
-	--accent-2: var(--blue-2); /* small accent elements */
-	--accent-3: var(--blue-3); /* accent buttons */
-	--accent-4: var(--blue-4); /* accent buttons when hovered */
-	--accent-5: var(--blue-5); /* accent buttons when clicked */
-	--mention: linear-gradient(
-		to right,
-		color-mix(in hsl, var(--blue-2), transparent 90%),
-		transparent
-	); /* background of messages that mention you */
-	--mention-hover: linear-gradient(
-		to right,
-		color-mix(in hsl, var(--blue-2), transparent 95%),
-		transparent
-	); /* background of messages that mention you when hovered */
-	--accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
-
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
@@ -38,17 +20,37 @@
 	--active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
 	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
-	/* color of status indicators */
+	/* accent colors */
+	--accent-1: var(--blue-1); /* links and other accent text */
+	--accent-2: var(--blue-2); /* small accent elements */
+	--accent-3: var(--blue-3); /* accent buttons */
+	--accent-4: var(--blue-4); /* accent buttons when hovered */
+	--accent-5: var(--blue-5); /* accent buttons when clicked */
+	--mention: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--blue-2), transparent 90%) 60%,
+		transparent
+	); /* background of messages that mention you */
+	--mention-hover: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--blue-2), transparent 95%) 60%,
+		transparent
+	); /* background of messages that mention you when hovered */
+	--accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
+
+	/* status indicator colors */
 	--online: var(--green-2); /* change to #44a25b for default green */
 	--dnd: var(--red-2); /* change to #d83a42 for default red */
 	--idle: var(--yellow-2); /* change to #c99656 for default yellow */
 	--streaming: var(--purple-2); /* change to #593695 for default purple */
 	--offline: var(--text-4); /* change to #83838b for default offline color */
 
-	--border-light: hsl(230, 20%, 40%, 0.1);
-	--border: hsl(230, 20%, 40%, 0.2);
-	--button-border: hsl(0, 0%, 100%, 0.1);
+	/* border colors */
+	--border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
+	--border: hsl(230, 20%, 40%, 0.2); /* normal border color */
+	--button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
 
+	/* base colors */
 	--red-1: oklch(76% 0.12 0);
 	--red-2: oklch(70% 0.12 0);
 	--red-3: oklch(64% 0.12 0);
@@ -388,6 +390,19 @@
 		fill: var(--text-0);
 	}
 
+	.bannerColor_fb7f94 /* profile banner button */,
+    .categoryText_d02962 /* gif chooser category names */,
+    .controlIcon_cf09d8 /* video play button */,
+    .wrapper_cf09d8 /* video time */,
+    .downloadHoverButtonIcon__6c706 /* video download button */,
+	.iconWrapper__6eb54 /* video initial play button */ {
+		color: var(--text-1);
+	}
+
+	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
+		fill: var(--text-1);
+	}
+
 	.container__37e49 /* user panel button strikethroughs */,
     .numberBadge__2b1f5  /* unread number badge */,
     .toolbar__9293f /* toolbar button strikethroughs */ {
@@ -402,6 +417,14 @@
 		background-color: var(--accent-new);
 	}
 
+	.newMessagesBar__0f481 /* unread bar */ {
+		background-color: var(--accent-3);
+	}
+	.barButtonAlt__0f481 /* unread bar mark as read button */ {
+		--button-secondary-background: var(--accent-3);
+		--button-secondary-background-hover: var(--accent-4);
+	}
+
 	.updateIconForeground__49676 /* update button */ {
 		fill: var(--green-1);
 	}
@@ -412,20 +435,6 @@
 	.button_f7ecac.dangerous_f7ecac:hover /* image attachment delete button hover in chat bar */ {
 		color: var(--red-4);
 	}
-
-	.bannerColor_fb7f94 /* profile banner button */,
-    .categoryText_d02962 /* gif chooser category names */,
-    .controlIcon_cf09d8 /* video play button */,
-    .wrapper_cf09d8 /* video time */,
-    .downloadHoverButtonIcon__6c706 /* video download button */,
-	.iconWrapper__6eb54 /* video initial play button */ {
-		color: var(--text-1);
-	}
-
-	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
-		fill: var(--text-1);
-	}
-
 	.contentWrapper__08434 ::-webkit-scrollbar-thumb /* gif picker scrollbar */ {
 		background-color: var(--bg-1);
 	}
@@ -479,13 +488,5 @@
 	}
 	.radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
 		--radio-bar-accent-color: var(--red-2) !important;
-	}
-
-	.newMessagesBar__0f481 /* unread bar */ {
-		background-color: var(--accent-3);
-	}
-	.barButtonAlt__0f481 /* unread bar mark as read button */ {
-		--button-secondary-background: var(--accent-3);
-		--button-secondary-background-hover: var(--accent-4);
 	}
 }
