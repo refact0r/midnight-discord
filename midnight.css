@@ -113,7 +113,7 @@
 #app-mount .scrollerContainer_c6b11b /* channels and roles customize */,
 .shop__6db1d /* shop */,
 .wrapper_cb9592.minimum_cb9592 /* private call */,
-.container_fea832, .container__33507 /* emoji/sticker searchbars */,
+.container_a45028 /* emoji/sticker searchbars */,
 .searchBar_fed6d3 /* gif picker searchbar */ ,
 #app-mount .uploadModal_dbca3c /* upload modal */,
 .uploadModal_dbca3c .footer_dbca3c /* upload modal footer */,
@@ -133,14 +133,11 @@
 .navRow__86e92[data-theme=dark] /* add new account bottom */,
 .container_ca49a1 /* forum guidelines box */,
 .searchBar_c7e907 /* settings searchbar */,
-.circleIconButton__5bc7e /* server list buttons */ {
+.circleIconButton__5bc7e /* server list buttons */,
+.auditLog__43dab /* audit log container */ {
 	background: var(--bg-3);
 }
 .folderIconWrapper__48112[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
-	background: var(--bg-3) !important;
-}
-.header__43dab /* audit log item */ ,
-.changeDetails__43dab /* audit log dropdown */ {
 	background: var(--bg-3) !important;
 }
 .folder__48112.hover__48112 /* folder opened on hover */, 
@@ -161,7 +158,8 @@
 .stackedBars__74017 /* reply bar underneath */ {
 	background: none;
 }
-.contentContainer_a56260 /* quests page fix */ {
+.contentContainer_a56260 /* quests page fix */,
+.header__43dab, .changeDetails__43dab /* audit log header/dropdown */ {
 	background: none !important;
 }
 .selected_f37cb1 .header_f37cb1, .clickable_f37cb1 .header_f37cb1:hover /* server name hover */ {
@@ -566,7 +564,7 @@ a[href="https://support.discord.com"] /* hide help */
 .item__001a7 /* settings radiobutton bars */,
 .item__001a7 .radioBar__001a7 /* settings radiobutton bars */,
 .input_ac6cb0 /* big 'find conversation' search bar */,
-.header__43dab /* audit log item */ {
+.auditLog__43dab /* audit log container */ {
 	border-radius: var(--roundness-s);
 }
 .select__3f413.open__3f413 /* vencord plugin show all */,
@@ -574,12 +572,10 @@ a[href="https://support.discord.com"] /* hide help */
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
-.popout__3f413 /* vencord plugin show all */,
-.changeDetails__43dab /* audit log dropdown */ {
+.popout__3f413 /* vencord plugin show all */ {
 	border-radius: 0 0 var(--roundness-s) var(--roundness-s);
 }
-.banner__183e8 /* community server tutorial thing on message bar */,
-.header__43dab.headerExpanded__43dab /* audit log dropdown item */ {
+.banner__183e8 /* community server tutorial thing on message bar */ {
 	border-radius: var(--roundness-s) var(--roundness-s) 0 0;
 }
 .scrollableContainer__74017.hasStackedBar__74017 /* fix message bar with reply bar */ {
@@ -594,7 +590,7 @@ a[href="https://support.discord.com"] /* hide help */
 .side_b3f026 .item_b3f026 /* settings tabs */,
 button.button__201d5 /* small buttons */,
 .container__33507 /* friend searchbar */,
-.container_fea832 /* sticker/emoji picker searchbar */,
+.container_a45028 /* emoji/sticker searchbars */,
 .searchBar_fed6d3 /* gif picker searchbar */ ,
 .item_c1e9c4 /* general popout buttons */,
 .icon_a629d4 /* streaming icon */,
@@ -1286,6 +1282,7 @@ html.theme-light,
 	--primary-600: var(--bg-3); /* delete message preview */
 	--primary-630: var(--bg-3); /* billing transaction history */
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
+	--primary-700: var(--bg-3); /* audit log border */
 
 	--white-500: var(--text-1);
 }
