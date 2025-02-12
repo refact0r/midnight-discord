@@ -35,6 +35,7 @@
 	--bg-4: hsl(220, 15%, 10%); /* main background color */
 	--hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+	--active-2: hsla(220, 19%, 40%, 0.3); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* color of status indicators */
@@ -54,10 +55,10 @@
 	--red-4: oklch(58% 0.12 0);
 	--red-5: oklch(52% 0.12 0);
 
-	--green-1: oklch(76% 0.11 160);
-	--green-2: oklch(70% 0.11 160);
-	--green-3: oklch(64% 0.11 160);
-	--green-4: oklch(58% 0.11 160);
+	--green-1: oklch(76% 0.11 170);
+	--green-2: oklch(70% 0.11 170);
+	--green-3: oklch(64% 0.11 170);
+	--green-4: oklch(58% 0.11 170);
 	--green-5: oklch(52% 0.11 160);
 
 	--blue-1: oklch(76% 0.1 215);
@@ -140,14 +141,16 @@
 	--button-danger-background-disabled: var(--red-5);
 	--button-danger-border: var(--button-border);
 
+	--button-filled-brand-text: var(--text-0);
 	--button-filled-brand-background: var(--accent-3);
 	--button-filled-brand-background-active: var(--accent-5);
 	--button-filled-brand-background-hover: var(--accent-4);
 	--button-filled-brand-border: var(--button-border);
 
-	--button-filled-brand-inverted-background-active: red;
-	--button-filled-brand-inverted-background-hover: red;
-	--button-filled-brand-inverted-text: red;
+	--button-filled-brand-inverted-background: var(--text-1);
+	--button-filled-brand-inverted-background-active: var(--text-3);
+	--button-filled-brand-inverted-background-hover: var(--text-2);
+	--button-filled-brand-inverted-text: var(--bg-4);
 	--button-filled-white-background-active: red;
 	--button-filled-white-background-hover: red;
 	--button-filled-white-text: var(--bg-4);
@@ -174,10 +177,10 @@
 	--button-secondary-background-disabled: var(--bg-3);
 	--button-secondary-text: var(--text-3);
 
-	--button-transparent-background: red;
-	--button-transparent-background-active: red;
-	--button-transparent-background-hover: red;
-	--button-transparent-text: red;
+	--button-transparent-background: var(--hover);
+	--button-transparent-background-active: var(--active-2);
+	--button-transparent-background-hover: var(--active);
+	--button-transparent-text: var(--text-3);
 
 	--card-primary-bg: var(--bg-3);
 	--card-secondary-bg: red;
@@ -224,7 +227,7 @@
 	--text-tertiary: var(--text-4);
 
 	--status-danger: var(--red-2);
-	--status-danger-background: red;
+	--status-danger-background: var(--red-3);
 	--status-danger-text: var(--white);
 	--status-dnd: red;
 	--status-idle: red;
@@ -250,14 +253,18 @@
 
 	--channel-text-area-placeholder: var(--text-5);
 
+	--message-reacted-background: color-mix(in hsl, var(--accent-2), transparent 80%);
+
 	--scrollbar-auto-thumb: var(--bg-3);
 	--scrollbar-auto-track: transparent;
 	--scrollbar-thin-thumb: var(--bg-3);
 	--scrollbar-thin-track: transparent;
 
+	--white: var(--text-0);
+
 	--brand-360: var(--accent-2);
-	--brand-500: var(--accent-3);
-	--blurple-50: var(--accent-3);
+	--brand-500: var(--accent-2);
+	--blurple-50: var(--accent-2);
 }
 
 .visual-refresh {
@@ -291,11 +298,11 @@
 		background-color: var(--bg-2) !important;
 	}
 
-	.wrapper_cb9592 > .callContainer_cb9592 {
+	.wrapper_cb9592 > .callContainer_cb9592 /* dm vc */ {
 		background-color: var(--bg-4);
 	}
 
-	.quickSelectPopout_ebaca5 {
+	.quickSelectPopout_ebaca5 /* dm vc region select popout */ {
 		background-color: var(--bg-3);
 	}
 
@@ -317,6 +324,13 @@
 		background-color: var(--text-2) !important;
 	}
 
+	.ephemeral__5126c /* ephemeral messages */ {
+		background: var(--mention) !important;
+	}
+	.ephemeral__5126c:hover {
+		background: var(--mention-hover) !important;
+	}
+
 	.botTagRegular__82f07 /* bot tag */ {
 		background-color: var(--accent-2);
 	}
@@ -327,8 +341,17 @@
 	.container__87bf1.checked__87bf1 /* settings checkbutton background */ {
 		background-color: var(--accent-2) !important;
 	}
-	.container__87bf1 path[fill='rgba(88, 101, 242, 1)'] /* settings checkbutton check */ {
+	.container__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
+		fill: var(--bg-1) !important;
+	}
+	.container__87bf1.checked__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
 		fill: var(--accent-2) !important;
+	}
+	.container__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
+		fill: var(--text-3) !important;
+	}
+	.container__87bf1.checked__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
+		fill: var(--text-0) !important;
 	}
 
 	.container__37e49 /* user panel button strikethroughs */,
@@ -347,6 +370,10 @@
 
 	.updateIconForeground__49676 /* update button */ {
 		fill: var(--green-1);
+	}
+
+	.colorable_f1ceac.red_f1ceac:hover /* vc disconnect button hover */ {
+		background-color: var(--red-4);
 	}
 
 	/* status indicators */
