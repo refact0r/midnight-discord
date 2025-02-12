@@ -15,19 +15,21 @@ if (!outputFile) {
 }
 
 async function replaceImports(content) {
-	const importRegex = /@import url\('([^']+)'\);/g;
+	const regex = /@import url\(['"]([^'"]+)['"]\);/g;
 	let match;
-	while ((match = importRegex.exec(content)) !== null) {
-		const importUrl = match[1];
-		const filePath = importUrl.replace(pathToIgnore, '');
-		const localFilePath = path.join(__dirname, '..', filePath);
-		if (fs.existsSync(localFilePath)) {
-			const importedContent = fs.readFileSync(localFilePath, 'utf8');
-			content = content.replace(match[0], importedContent);
-		} else {
-			console.error(`File not found: ${localFilePath}`);
-		}
+	let results = [];
+
+	while ((match = regex.exec(content)) !== null) {
+		let importPath = match[1].replace(pathToIgnore, '');
+		let fullPath = path.join(__dirname, '..', importPath);
+		let importContent = fs.readFileSync(fullPath, 'utf8');
+		results.push(match[0], importContent);
 	}
+
+	for (let i = 0; i < results.length; i += 2) {
+		content = content.replace(results[i], results[i + 1]);
+	}
+
 	return content;
 }
 

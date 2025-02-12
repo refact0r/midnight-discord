@@ -11,15 +11,22 @@
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
 
 	/* accent colors */
-	--accent-1: var(--blue-1); /* general unread/mention elements */
-	--accent-2: var(--blue-2); /* accent buttons */
-	--accent-3: var(--blue-3); /* accent buttons when hovered */
-	--accent-4: var(--blue-4); /* accent buttons when clicked */
-
-	--unread-red: var(--red-1);
-	--mention-yellow: var(--yellow-1);
-	--mention-message: color-mix(in hsl, var(--yellow-1), transparent 90%);
-	--mention-message-hover: color-mix(in hsl, var(--yellow-1), transparent 95%);
+	--accent-1: var(--blue-1); /* links and other accent text */
+	--accent-2: var(--blue-2); /* small accent elements */
+	--accent-3: var(--blue-3); /* accent buttons */
+	--accent-4: var(--blue-4); /* accent buttons when hovered */
+	--accent-5: var(--blue-5); /* accent buttons when clicked */
+	--mention: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--blue-2), transparent 90%),
+		transparent
+	); /* background of messages that mention you */
+	--mention-hover: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--blue-2), transparent 95%),
+		transparent
+	); /* background of messages that mention you when hovered */
+	--accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
 
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
@@ -31,39 +38,45 @@
 	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* color of status indicators */
-	--online: var(--green-1); /* change to #23a55a for default green */
-	--dnd: var(--red-1); /* change to #f23f43 for default red */
-	--idle: var(--yellow-1); /* change to #f0b232 for default yellow */
-	--streaming: var(--purple-1); /* change to #593695 for default purple */
+	--online: var(--green-2); /* change to #44a25b for default green */
+	--dnd: var(--red-2); /* change to #d83a42 for default red */
+	--idle: var(--yellow-2); /* change to #c99656 for default yellow */
+	--streaming: var(--purple-2); /* change to #593695 for default purple */
+	--offline: var(--text-4); /* change to #83838b for default offline color */
 
 	--border-light: hsl(230, 20%, 40%, 0.1);
 	--border: hsl(230, 20%, 40%, 0.2);
 	--button-border: hsl(0, 0%, 100%, 0.1);
 
-	--red-1: oklch(66% 0.13 0);
-	--red-2: oklch(60% 0.13 0);
-	--red-3: oklch(54% 0.13 0);
-	--red-4: oklch(48% 0.13 0);
+	--red-1: oklch(76% 0.12 0);
+	--red-2: oklch(70% 0.12 0);
+	--red-3: oklch(64% 0.12 0);
+	--red-4: oklch(58% 0.12 0);
+	--red-5: oklch(52% 0.12 0);
 
-	--green-1: oklch(66% 0.12 160);
-	--green-2: oklch(60% 0.12 160);
-	--green-3: oklch(54% 0.12 160);
-	--green-4: oklch(48% 0.12 160);
+	--green-1: oklch(76% 0.11 160);
+	--green-2: oklch(70% 0.11 160);
+	--green-3: oklch(64% 0.11 160);
+	--green-4: oklch(58% 0.11 160);
+	--green-5: oklch(52% 0.11 160);
 
-	--blue-1: oklch(66% 0.12 215);
-	--blue-2: oklch(60% 0.12 215);
-	--blue-3: oklch(54% 0.12 215);
-	--blue-4: oklch(48% 0.12 215);
+	--blue-1: oklch(76% 0.1 215);
+	--blue-2: oklch(70% 0.1 215);
+	--blue-3: oklch(64% 0.1 215);
+	--blue-4: oklch(58% 0.1 215);
+	--blue-5: oklch(52% 0.1 215);
 
-	--yellow-1: oklch(76% 0.12 90);
-	--yellow-2: oklch(70% 0.12 90);
-	--yellow-3: oklch(64% 0.12 90);
-	--yellow-4: oklch(58% 0.12 90);
+	--yellow-1: oklch(80% 0.11 90);
+	--yellow-2: oklch(74% 0.11 90);
+	--yellow-3: oklch(68% 0.11 90);
+	--yellow-4: oklch(62% 0.11 90);
+	--yellow-5: oklch(56% 0.11 90);
 
-	--purple-1: oklch(66% 0.12 310);
-	--purple-2: oklch(60% 0.12 310);
-	--purple-3: oklch(54% 0.12 310);
-	--purple-4: oklch(48% 0.12 310);
+	--purple-1: oklch(76% 0.11 310);
+	--purple-2: oklch(70% 0.11 310);
+	--purple-3: oklch(64% 0.11 310);
+	--purple-4: oklch(58% 0.11 310);
+	--purple-5: oklch(52% 0.11 310);
 }
 
 .visual-refresh.theme-dark,
@@ -71,8 +84,8 @@
 	--activity-card-background: red;
 	--autocomplete-bg: var(--bg-3);
 
-	--background-mentioned: var(--mention-message);
-	--background-mentioned-hover: var(--mention-message-hover);
+	--background-mentioned: var(--mention);
+	--background-mentioned-hover: var(--mention-hover);
 	--background-message-highlight: var(--bg-2);
 	--background-message-highlight-hover: var(--bg-3);
 	--background-message-hover: var(--message-hover);
@@ -122,9 +135,9 @@
 	--button-danger-background-disabled: var(--red-5);
 	--button-danger-border: var(--button-border);
 
-	--button-filled-brand-background: var(--accent-2);
-	--button-filled-brand-background-active: var(--accent-4);
-	--button-filled-brand-background-hover: var(--accent-3);
+	--button-filled-brand-background: var(--accent-3);
+	--button-filled-brand-background-active: var(--accent-5);
+	--button-filled-brand-background-hover: var(--accent-4);
 	--button-filled-brand-border: var(--button-border);
 
 	--button-filled-brand-inverted-background-active: red;
@@ -177,7 +190,7 @@
 
 	--info-danger-background: red;
 	--info-danger-text: red;
-	--info-help-background: color-mix(in hsl, var(--blue-1), #00000000 80%);
+	--info-help-background: color-mix(in hsl, var(--blue-2), #00000000 80%);
 	--info-help-foreground: var(--blue-1);
 	--info-help-text: red;
 	--info-positive-background: green;
@@ -192,11 +205,16 @@
 	--text-tertiary: var(--text-4);
 	--text-muted: var(--text-5);
 	--text-link: var(--accent-1);
+	--text-brand: var(--accent-1);
+	--text-positive: var(--green-1);
 
 	--interactive-normal: var(--text-4);
 	--interactive-hover: var(--text-3);
 	--interactive-active: var(--text-3);
 	--interactive-muted: var(--text-5);
+
+	--mention-foreground: var(--accent-1);
+	--mention-background: color-mix(in hsl, var(--accent-2), #00000000 90%);
 
 	--channel-text-area-placeholder: var(--text-5);
 
@@ -205,9 +223,9 @@
 	--scrollbar-thin-thumb: var(--bg-3);
 	--scrollbar-thin-track: transparent;
 
-	--brand-360: var(--accent-1);
-	--brand-500: var(--accent-2);
-	--blurple-50: var(--accent-2);
+	--brand-360: var(--accent-2);
+	--brand-500: var(--accent-3);
+	--blurple-50: var(--accent-3);
 }
 
 .visual-refresh {
@@ -241,24 +259,90 @@
 		background-color: var(--bg-2) !important;
 	}
 
+	.wrapper_cb9592 > .callContainer_cb9592 {
+		background-color: var(--bg-4);
+	}
+
+	.quickSelectPopout_ebaca5 {
+		background-color: var(--bg-3);
+	}
+
+	.colorable_f1ceac.primaryDark_f1ceac {
+		background-color: var(--bg-2);
+	}
+
 	.expandedFolderIconWrapper__48112 > svg {
-		color: var(--accent-1) !important;
-	}
-
-	.divider__5126c /* unread divider */ {
-		--divider-color: var(--unread-red);
-	}
-
-	.numberBadge__2b1f5 /* unread number badge */ {
-		background-color: var(--unread-red) !important;
+		color: var(--accent-2) !important;
 	}
 
 	.mentioned__5126c:before /* mention message left edge */ {
-		background-color: var(--mention-yellow) !important;
+		background-color: var(--accent-2) !important;
+	}
+
+	.botTagRegular__82f07 {
+		background-color: var(--accent-2);
+	}
+
+	.replying__5126c:before {
+		background-color: var(--text-2);
+	}
+
+	.container__87bf1 /* settings checkbutton background */ {
+		background-color: var(--bg-1) !important;
+	}
+	.container__87bf1.checked__87bf1 /* settings checkbutton background */ {
+		background-color: var(--accent-2) !important;
+	}
+
+	.container__37e49 /* user panel button strikethroughs */,
+    .numberBadge__2b1f5  /* unread number badge */,
+    .toolbar__9293f /* toolbar button strikethroughs */ {
+		--status-danger: var(--accent-new);
+	}
+
+	.divider__5126c /* unread divider */ {
+		--divider-color: var(--accent-new);
+	}
+
+	.iconBadge__9293f {
+		background-color: var(--accent-new);
+	}
+
+	.updateIconForeground__49676 {
+		fill: var(--green-1);
+	}
+
+	/* status indicators */
+	rect[fill='#83838b'] {
+		fill: var(--offline);
+	}
+	.status_a423bd[style='background-color: rgb(131, 131, 139);'] {
+		background-color: var(--offline) !important;
+	}
+	rect[fill='#44a25b'] {
+		fill: var(--online);
+	}
+	.status_a423bd[style='background-color: rgb(68, 162, 91);'] {
+		background-color: var(--online) !important;
+	}
+	rect[fill='#c99656'] {
+		fill: var(--idle);
+	}
+	.status_a423bd[style='background-color: rgb(201, 150, 86);'] {
+		background-color: var(--idle) !important;
+	}
+	rect[fill='#d83a42'] {
+		fill: var(--dnd);
+	}
+	.status_a423bd[style='background-color: rgb(216, 58, 66);'] {
+		background-color: var(--dnd) !important;
+	}
+	rect[fill='#593695'] {
+		fill: var(--streaming);
 	}
 
 	.barButtonAlt__0f481 /* unread bar mark as read button */ {
-		--button-secondary-background: var(--accent-2);
-		--button-secondary-background-hover: var(--accent-3);
+		--button-secondary-background: var(--accent-3);
+		--button-secondary-background-hover: var(--accent-4);
 	}
 }
