@@ -501,4 +501,9 @@
 	.radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
 		--radio-bar-accent-color: var(--red-2) !important;
 	}
+
+	::selection {
+		background: var(--accent-4);
+		color: var(--text-0);
+	}
 }
