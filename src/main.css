@@ -235,6 +235,10 @@
 		bottom: 12px;
 	}
 
+	.unreadMentionsIndicatorBottom_ef3116 /* server list new pill */ {
+		width: 64px;
+	}
+
 	.form_f75fb0 /* chat bar outer form */ {
 		padding-left: 16px;
 		padding-right: 16px;

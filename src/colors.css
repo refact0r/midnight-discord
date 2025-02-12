@@ -395,8 +395,13 @@
     .controlIcon_cf09d8 /* video play button */,
     .wrapper_cf09d8 /* video time */,
     .downloadHoverButtonIcon__6c706 /* video download button */,
-	.iconWrapper__6eb54 /* video initial play button */ {
+	.iconWrapper__6eb54 /* video initial play button */,
+	.wrapper__926d7 /* youtube embed play button */ {
 		color: var(--text-1);
+	}
+	.wrapper__926d7 a:link,
+	.wrapper__926d7 a:visited {
+		color: var(--text-1) !important;
 	}
 
 	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
@@ -413,7 +418,9 @@
 		--divider-color: var(--accent-new);
 	}
 
-	.iconBadge__9293f /* icon badge */ {
+	.iconBadge__9293f /* icon badge */,
+	.mentionsBar__7aaec /* new mention pill */,
+	.mention__3b95d /* server list new mention pill */ {
 		background-color: var(--accent-new);
 	}
 
