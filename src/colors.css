@@ -213,7 +213,7 @@
 	--text-low-contrast: red;
 	--text-message-preview-low-sat: red;
 	--text-muted: var(--text-5);
-	--text-muted-on-default: red;
+	--text-muted-on-default: var(--text-4);
 	--text-normal: var(--text-3);
 	--text-positive: var(--green-1);
 	--text-primary: var(--text-3);
