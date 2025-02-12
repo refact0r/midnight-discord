@@ -167,6 +167,26 @@
 	--button-outline-danger-text-active: var(--red-1);
 	--button-outline-danger-text-hover: var(--red-1);
 
+	--button-outline-primary-background: red;
+	--button-outline-primary-background-active: var(--active);
+	--button-outline-primary-background-hover: var(--hover);
+	--button-outline-primary-border: var(--text-5);
+	--button-outline-primary-border-active: var(--text-5);
+	--button-outline-primary-border-hover: var(--text-5);
+	--button-outline-primary-text: var(--text-3);
+	--button-outline-primary-text-active: var(--text-3);
+	--button-outline-primary-text-hover: var(--text-3);
+
+	--button-outline-positive-background: red;
+	--button-outline-positive-background-active: var(--green-4);
+	--button-outline-positive-background-hover: var(--green-3);
+	--button-outline-positive-border: var(--green-2);
+	--button-outline-positive-border-active: var(--green-4);
+	--button-outline-positive-border-hover: var(--green-3);
+	--button-outline-positive-text: var(--text-3);
+	--button-outline-positive-text-active: var(--text-0);
+	--button-outline-positive-text-hover: var(--text-0);
+
 	--button-positive-background: var(--green-2);
 	--button-positive-background-active: var(--green-4);
 	--button-positive-background-hover: var(--green-3);
@@ -313,6 +333,10 @@
 		background-color: var(--bg-2);
 	}
 
+	.mainCard_f369db /* form posts */ {
+		background: var(--bg-3);
+	}
+
 	.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
 		color: var(--accent-2) !important;
 	}
@@ -385,12 +409,16 @@
 	.colorable_f1ceac.red_f1ceac:hover /* vc disconnect button hover */ {
 		background-color: var(--red-4);
 	}
+	.button_f7ecac.dangerous_f7ecac:hover /* image attachment delete button hover in chat bar */ {
+		color: var(--red-4);
+	}
 
 	.bannerColor_fb7f94 /* profile banner button */,
     .categoryText_d02962 /* gif chooser category names */,
     .controlIcon_cf09d8 /* video play button */,
     .wrapper_cf09d8 /* video time */,
-    .downloadHoverButtonIcon__6c706 /* video download button */ {
+    .downloadHoverButtonIcon__6c706 /* video download button */,
+	.iconWrapper__6eb54 /* video initial play button */ {
 		color: var(--text-1);
 	}
 
@@ -400,6 +428,17 @@
 
 	.contentWrapper__08434 ::-webkit-scrollbar-thumb /* gif picker scrollbar */ {
 		background-color: var(--bg-1);
+	}
+
+	.circleIconButton__5bc7e /* new server button */ {
+		color: var(--text-3);
+	}
+	.circleIconButton__5bc7e:hover {
+		color: var(--bg-4);
+	}
+
+	.textContentFooter__9a337 /* forum post image fade */ {
+		background: linear-gradient(0deg, var(--bg-4), transparent);
 	}
 
 	/* status indicators */
