@@ -235,7 +235,8 @@
 		bottom: 12px;
 	}
 
-	.unreadMentionsIndicatorBottom_ef3116 /* server list new pill */ {
+	.unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
+	.unreadMentionsIndicatorTop_ef3116 {
 		width: 64px;
 	}
 
