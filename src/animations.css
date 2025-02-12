@@ -1,0 +1,19 @@
+.visual-refresh {
+	--list-item-transition: 0.2s ease;
+
+	/* list hover animations */
+	.wrapper__2ea32 .link__2ea32 /* channels */,
+    .container__91a9d /* members */,
+    .channel__972a0 /* dms */,
+    .side_b3f026 .item_b3f026 /* settings */ {
+		transition: margin-left var(--list-item-transition);
+	}
+	.wrapper__2ea32:hover .link__2ea32,
+	.side_b3f026 .item_b3f026:hover {
+		margin-left: 10px;
+	}
+	.container__91a9d:hover,
+	.channel__972a0:hover {
+		margin-left: 18px;
+	}
+}

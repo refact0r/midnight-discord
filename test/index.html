@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Color Variables Display</title>
+		<style>
+			:root {
+				--red-1: oklch(76% 0.11 0);
+				--red-2: oklch(70% 0.11 0);
+				--red-3: oklch(64% 0.11 0);
+				--red-4: oklch(58% 0.11 0);
+				--red-5: oklch(52% 0.11 0);
+
+				--green-1: oklch(76% 0.11 160);
+				--green-2: oklch(70% 0.11 160);
+				--green-3: oklch(64% 0.11 160);
+				--green-4: oklch(58% 0.11 160);
+				--green-5: oklch(52% 0.11 160);
+
+				--blue-1: oklch(76% 0.1 215);
+				--blue-2: oklch(70% 0.1 215);
+				--blue-3: oklch(64% 0.1 215);
+				--blue-4: oklch(58% 0.1 215);
+				--blue-5: oklch(52% 0.1 215);
+
+				--yellow-1: oklch(80% 0.11 90);
+				--yellow-2: oklch(74% 0.11 90);
+				--yellow-3: oklch(68% 0.11 90);
+				--yellow-4: oklch(62% 0.11 90);
+				--yellow-5: oklch(56% 0.11 90);
+
+				--purple-1: oklch(76% 0.11 310);
+				--purple-2: oklch(70% 0.11 310);
+				--purple-3: oklch(64% 0.11 310);
+				--purple-4: oklch(58% 0.11 310);
+				--purple-5: oklch(52% 0.11 310);
+			}
+			body {
+				background-color: #16181d;
+				color: white;
+				font-family: Arial, sans-serif;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.color-column {
+				display: flex;
+				flex-direction: column;
+			}
+			.color-box {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-weight: bold;
+			}
+			.color-text {
+				margin: 20px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="color-column">
+			<div class="color-box" style="background-color: var(--red-1)">Red 1</div>
+			<div class="color-box" style="background-color: var(--red-2)">Red 2</div>
+			<div class="color-box" style="background-color: var(--red-3)">Red 3</div>
+			<div class="color-box" style="background-color: var(--red-4)">Red 4</div>
+			<div class="color-text" style="color: var(--red-1)">Red 1</div>
+		</div>
+		<div class="color-column">
+			<div class="color-box" style="background-color: var(--green-1)">Green 1</div>
+			<div class="color-box" style="background-color: var(--green-2)">Green 2</div>
+			<div class="color-box" style="background-color: var(--green-3)">Green 3</div>
+			<div class="color-box" style="background-color: var(--green-4)">Green 4</div>
+			<div class="color-text" style="color: var(--green-1)">Green 1</div>
+		</div>
+		<div class="color-column">
+			<div class="color-box" style="background-color: var(--blue-1)">Blue 1</div>
+			<div class="color-box" style="background-color: var(--blue-2)">Blue 2</div>
+			<div class="color-box" style="background-color: var(--blue-3)">Blue 3</div>
+			<div class="color-box" style="background-color: var(--blue-4)">Blue 4</div>
+			<div class="color-text" style="color: var(--blue-1)">Blue 1</div>
+		</div>
+		<div class="color-column">
+			<div class="color-box" style="background-color: var(--yellow-1)">Yellow 1</div>
+			<div class="color-box" style="background-color: var(--yellow-2)">Yellow 2</div>
+			<div class="color-box" style="background-color: var(--yellow-3)">Yellow 3</div>
+			<div class="color-box" style="background-color: var(--yellow-4)">Yellow 4</div>
+			<div class="color-text" style="color: var(--yellow-1)">Yellow 1</div>
+		</div>
+		<div class="color-column">
+			<div class="color-box" style="background-color: var(--purple-1)">Purple 1</div>
+			<div class="color-box" style="background-color: var(--purple-2)">Purple 2</div>
+			<div class="color-box" style="background-color: var(--purple-3)">Purple 3</div>
+			<div class="color-box" style="background-color: var(--purple-4)">Purple 4</div>
+			<div class="color-text" style="color: var(--purple-1)">Purple 1</div>
+		</div>
+	</body>
+</html>
