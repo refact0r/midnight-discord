@@ -288,7 +288,8 @@
 	/* roundness */
 	.embedFull__623de /* embeds */,
 	.hljs /* code block */,
-	.imageWrapper_af017a /* image */ {
+	.imageWrapper_af017a /* image */,
+	.container__9271d /* thread link */ {
 		border-radius: var(--radius-md);
 	}
 
