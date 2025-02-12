@@ -210,7 +210,7 @@
 	--text-danger: var(--red-1);
 	--text-link: var(--accent-1);
 	--text-link-low-saturation: red;
-	--text-low-contrast: var(--text-5);
+	--text-low-contrast: var(--text-4);
 	--text-message-preview-low-sat: red;
 	--text-muted: var(--text-5);
 	--text-muted-on-default: var(--text-4);
@@ -261,6 +261,7 @@
 	--scrollbar-thin-track: transparent;
 
 	--white: var(--text-0);
+	--white-500: var(--text-0);
 
 	--brand-360: var(--accent-2);
 	--brand-500: var(--accent-2);
@@ -416,6 +417,9 @@
 		--radio-bar-accent-color: var(--red-2) !important;
 	}
 
+	.newMessagesBar__0f481 /* unread bar */ {
+		background-color: var(--accent-3);
+	}
 	.barButtonAlt__0f481 /* unread bar mark as read button */ {
 		--button-secondary-background: var(--accent-3);
 		--button-secondary-background-hover: var(--accent-4);
