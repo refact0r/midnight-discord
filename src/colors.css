@@ -286,6 +286,7 @@
 
 	--white: var(--text-0);
 	--white-500: var(--text-0);
+	--redesign-button-overlay-alpha-text: var(--text-2);
 
 	--brand-360: var(--accent-2);
 	--brand-500: var(--accent-2);
@@ -327,7 +328,8 @@
 		background-color: var(--bg-4);
 	}
 
-	.quickSelectPopout_ebaca5 /* dm vc region select popout */ {
+	.quickSelectPopout_ebaca5 /* dm vc region select popout */,
+	.participantsButton__211d1 /* vc participants button */ {
 		background-color: var(--bg-3);
 	}
 
@@ -390,22 +392,34 @@
 		fill: var(--text-0);
 	}
 
-	.bannerColor_fb7f94 /* profile banner button */,
-    .categoryText_d02962 /* gif chooser category names */,
-    .controlIcon_cf09d8 /* video play button */,
-    .wrapper_cf09d8 /* video time */,
-    .downloadHoverButtonIcon__6c706 /* video download button */,
-	.iconWrapper__6eb54 /* video initial play button */,
-	.wrapper__926d7 /* youtube embed play button */ {
+	.categoryText_d02962 /* gif chooser category names */,
+	.bannerColor_fb7f94 /* profile banner button */ {
 		color: var(--text-1);
-	}
-	.wrapper__926d7 a:link,
-	.wrapper__926d7 a:visited {
-		color: var(--text-1) !important;
 	}
 
 	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
 		fill: var(--text-1);
+	}
+	.wrapper__926d7 a:link,
+	.wrapper__926d7 a:visited {
+		color: var(--text-2) !important;
+	}
+	.controlIcon_cf09d8 /* video play button */,
+    .wrapper_cf09d8 /* video time */,
+	.iconWrapper__6eb54 /* video initial play button */,
+	.wrapper__926d7 /* youtube embed play button */ {
+		color: var(--text-2);
+	}
+	.downloadHoverButtonIcon__6c706 /* video download button */,
+	.iconContainer__211d1>svg /* vc participants button icon */,
+	.selectedIcon__2f4f7 /* vc selected camera icon */,
+	.colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc icon button */,
+	.colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
+	.base__2b1f5 /* server vc icon */ {
+		color: var(--text-3);
+	}
+	.status__2f4f7 path[fill='var(--white)'] {
+		fill: var(--text-3);
 	}
 
 	.container__37e49 /* user panel button strikethroughs */,
