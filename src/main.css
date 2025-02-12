@@ -255,9 +255,14 @@
 	}
 	/* improve highlight message left edge */
 	.message__5126c.mentioned__5126c::before,
-	.replying__5126c::before {
+	.replying__5126c::before,
+	.ephemeral__5126c::before {
 		width: var(--divider-thickness);
 		border-radius: var(--divider-thickness);
+	}
+
+	.reaction__23977 /* message reactions */ {
+		border-width: 2px;
 	}
 }
 
