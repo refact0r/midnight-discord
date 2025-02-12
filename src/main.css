@@ -212,6 +212,7 @@
 
 	.wrapper_cb9592 /* dm vc wrapper */ {
 		background: none;
+		margin-bottom: var(--gap);
 	}
 
 	.newMessagesBar__0f481 /* unread messages bar */ {
