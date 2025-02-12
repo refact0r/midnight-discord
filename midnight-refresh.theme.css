@@ -1,0 +1,109 @@
+/**
+ * @name midnight
+ * @description A dark, rounded discord theme.
+ * @author refact0r
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/src/main.css'); /* main theme css. */
+@import url('https://refact0r.github.io/midnight-discord/src/colors.css'); /* adds custom colors. remove this line to get default colors. */
+@import url('https://refact0r.github.io/midnight-discord/src/animations.css'); /* adds animations. remove to disable animations. */
+
+:root {
+	/* font, change to '' for default discord font */
+	--font: 'figtree';
+
+	/* spacing between panels */
+	--gap: 12px;
+
+	/* thickness of unread messages divider and highlighted message borders */
+	--divider-thickness: 3px;
+
+	/* transitions */
+	--list-item-transition: 0.2s ease;
+
+	/* text colors */
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: hsl(220, 45%, 95%); /* other normally white text */
+	--text-2: hsl(220, 25%, 70%); /* headings and important text */
+	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
+	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
+	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+	--active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
+	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* accent colors */
+	--accent-1: var(--blue-1); /* links and other accent text */
+	--accent-2: var(--blue-2); /* small accent elements */
+	--accent-3: var(--blue-3); /* accent buttons */
+	--accent-4: var(--blue-4); /* accent buttons when hovered */
+	--accent-5: var(--blue-5); /* accent buttons when clicked */
+	--mention: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--accent-2), transparent 90%) 60%,
+		transparent
+	); /* background of messages that mention you */
+	--mention-hover: linear-gradient(
+		to right,
+		color-mix(in hsl, var(--accent-2), transparent 95%) 60%,
+		transparent
+	); /* background of messages that mention you when hovered */
+	--accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+
+	/* status indicator colors */
+	--online: var(--green-2); /* change to #44a25b for default */
+	--dnd: var(--red-2); /* change to #d83a42 for default */
+	--idle: var(--yellow-2); /* change to #c99656 for default */
+	--streaming: var(--purple-2); /* change to #593695 for default */
+	--offline: var(--text-4); /* change to #83838b for default offline color */
+
+	/* border colors */
+	--border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
+	--border: hsl(230, 20%, 40%, 0.2); /* normal border color */
+	--button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+	/* base colors */
+	--red-1: oklch(76% 0.12 0);
+	--red-2: oklch(70% 0.12 0);
+	--red-3: oklch(64% 0.12 0);
+	--red-4: oklch(58% 0.12 0);
+	--red-5: oklch(52% 0.12 0);
+
+	--green-1: oklch(76% 0.11 170);
+	--green-2: oklch(70% 0.11 170);
+	--green-3: oklch(64% 0.11 170);
+	--green-4: oklch(58% 0.11 170);
+	--green-5: oklch(52% 0.11 160);
+
+	--blue-1: oklch(76% 0.1 215);
+	--blue-2: oklch(70% 0.1 215);
+	--blue-3: oklch(64% 0.1 215);
+	--blue-4: oklch(58% 0.1 215);
+	--blue-5: oklch(52% 0.1 215);
+
+	--yellow-1: oklch(80% 0.11 90);
+	--yellow-2: oklch(74% 0.11 90);
+	--yellow-3: oklch(68% 0.11 90);
+	--yellow-4: oklch(62% 0.11 90);
+	--yellow-5: oklch(56% 0.11 90);
+
+	--purple-1: oklch(76% 0.11 310);
+	--purple-2: oklch(70% 0.11 310);
+	--purple-3: oklch(64% 0.11 310);
+	--purple-4: oklch(58% 0.11 310);
+	--purple-5: oklch(52% 0.11 310);
+}
