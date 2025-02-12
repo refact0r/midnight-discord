@@ -503,7 +503,7 @@
 	}
 
 	::selection {
-		background: var(--accent-4);
+		background: var(--accent-3);
 		color: var(--text-0);
 	}
 }
