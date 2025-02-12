@@ -82,10 +82,16 @@
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
 	--activity-card-background: red;
+	--alert-bg: red;
 	--autocomplete-bg: var(--bg-3);
 
+	--background-accent: var(--bg-3);
+	--background-floating: var(--bg-3);
+	--background-nested-floating: red;
 	--background-mentioned: var(--mention);
 	--background-mentioned-hover: var(--mention-hover);
+	--background-message-automod: red;
+	--background-message-automod-hover: red;
 	--background-message-highlight: var(--bg-2);
 	--background-message-highlight-hover: var(--bg-3);
 	--background-message-hover: var(--message-hover);
@@ -107,7 +113,6 @@
 	--background-surface-high: var(--bg-3);
 	--background-surface-higher: var(--bg-3);
 	--background-surface-highest: var(--bg-3);
-	--background-floating: var(--bg-3);
 	--chat-background-default: var(--bg-3);
 	--input-background: var(--bg-3);
 	--modal-background: var(--bg-4);
@@ -190,23 +195,50 @@
 
 	--info-danger-background: red;
 	--info-danger-text: red;
-	--info-help-background: color-mix(in hsl, var(--blue-2), #00000000 80%);
+	--info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
 	--info-help-foreground: var(--blue-1);
 	--info-help-text: red;
-	--info-positive-background: green;
-	--info-positive-text: green;
-	--info-warning-background: yellow;
-	--info-warning-text: yellow;
+	--info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
+	--info-positive-text: var(--green-1);
+	--info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
+	--info-warning-text: var(--yellow-1);
 
+	--text-brand: var(--accent-1);
+	--text-danger: var(--red-1);
+	--text-link: var(--accent-1);
+	--text-link-low-saturation: red;
+	--text-low-contrast: red;
+	--text-message-preview-low-sat: red;
+	--text-muted: var(--text-5);
+	--text-muted-on-default: red;
+	--text-normal: var(--text-3);
+	--text-positive: var(--green-1);
 	--text-primary: var(--text-3);
 	--text-secondary: var(--text-4);
-	--text-normal: var(--text-3);
+	--text-warning: var(--yellow-1);
 	--text-default: var(--text-3);
+	--text-feedback-critical: var(--red-1);
+	--text-feedback-positive: var(--green-1);
+	--text-feedback-info: red;
+	--text-feedback-warning: red;
 	--text-tertiary: var(--text-4);
-	--text-muted: var(--text-5);
-	--text-link: var(--accent-1);
-	--text-brand: var(--accent-1);
-	--text-positive: var(--green-1);
+
+	--status-danger: var(--red-2);
+	--status-danger-background: red;
+	--status-danger-text: var(--white);
+	--status-dnd: red;
+	--status-idle: red;
+	--status-offline: red;
+	--status-online: red;
+	--status-positive: var(--green-2);
+	--status-positive-background: red;
+	--status-positive-text: var(--white);
+	--status-speaking: var(--green-2);
+	--status-warning: var(--yellow-2);
+	--status-warning-background: red;
+	--status-warning-text: var(--black);
+
+	--background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
 
 	--interactive-normal: var(--text-4);
 	--interactive-hover: var(--text-3);
@@ -214,7 +246,7 @@
 	--interactive-muted: var(--text-5);
 
 	--mention-foreground: var(--accent-1);
-	--mention-background: color-mix(in hsl, var(--accent-2), #00000000 90%);
+	--mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
 
 	--channel-text-area-placeholder: var(--text-5);
 
@@ -271,20 +303,22 @@
 		background-color: var(--bg-2);
 	}
 
-	.expandedFolderIconWrapper__48112 > svg {
+	.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
 		color: var(--accent-2) !important;
+	}
+	.colorPickerSwatch__459fb[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */ {
+		background-color: var(--accent-2) !important;
 	}
 
 	.mentioned__5126c:before /* mention message left edge */ {
 		background-color: var(--accent-2) !important;
 	}
-
-	.botTagRegular__82f07 {
-		background-color: var(--accent-2);
+	.replying__5126c:before /* reply message left edge */ {
+		background-color: var(--text-2) !important;
 	}
 
-	.replying__5126c:before {
-		background-color: var(--text-2);
+	.botTagRegular__82f07 /* bot tag */ {
+		background-color: var(--accent-2);
 	}
 
 	.container__87bf1 /* settings checkbutton background */ {
@@ -292,6 +326,9 @@
 	}
 	.container__87bf1.checked__87bf1 /* settings checkbutton background */ {
 		background-color: var(--accent-2) !important;
+	}
+	.container__87bf1 path[fill='rgba(88, 101, 242, 1)'] /* settings checkbutton check */ {
+		fill: var(--accent-2) !important;
 	}
 
 	.container__37e49 /* user panel button strikethroughs */,
@@ -304,11 +341,11 @@
 		--divider-color: var(--accent-new);
 	}
 
-	.iconBadge__9293f {
+	.iconBadge__9293f /* icon badge */ {
 		background-color: var(--accent-new);
 	}
 
-	.updateIconForeground__49676 {
+	.updateIconForeground__49676 /* update button */ {
 		fill: var(--green-1);
 	}
 
@@ -339,6 +376,17 @@
 	}
 	rect[fill='#593695'] {
 		fill: var(--streaming);
+	}
+
+	/* fix radio bar button colors */
+	.radioBar__001a7[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+		--radio-bar-accent-color: var(--yellow-2) !important;
+	}
+	.radioBar__001a7[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+		--radio-bar-accent-color: var(--green-2) !important;
+	}
+	.radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+		--radio-bar-accent-color: var(--red-2) !important;
 	}
 
 	.barButtonAlt__0f481 /* unread bar mark as read button */ {
