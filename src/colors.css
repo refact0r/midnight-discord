@@ -266,6 +266,9 @@
 	--status-warning-text: var(--black);
 
 	--background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
+	--background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
+	--background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
+	--background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
 
 	--interactive-normal: var(--text-4);
 	--interactive-hover: var(--text-3);
@@ -329,7 +332,9 @@
 	}
 
 	.quickSelectPopout_ebaca5 /* dm vc region select popout */,
-	.participantsButton__211d1 /* vc participants button */ {
+	.participantsButton__211d1 /* vc participants button */,
+	.voiceBar__7aaec /* n in voice bar (channel list) */,
+	.mainCard_f369db /* form posts */ {
 		background-color: var(--bg-3);
 	}
 
@@ -337,17 +342,11 @@
 		background-color: var(--bg-2);
 	}
 
-	.mainCard_f369db /* form posts */ {
-		background: var(--bg-3);
-	}
-
 	.expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
 		color: var(--accent-2) !important;
 	}
-	.colorPickerSwatch__459fb[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */ {
-		background-color: var(--accent-2) !important;
-	}
-
+	.colorPickerSwatch__459fb[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
+	.newBadge__9a337 /* forum post new badge */,
 	.mentioned__5126c:before /* mention message left edge */ {
 		background-color: var(--accent-2) !important;
 	}
@@ -420,6 +419,12 @@
 	}
 	.status__2f4f7 path[fill='var(--white)'] {
 		fill: var(--text-3);
+	}
+	.grabber_a562c8 /* vc volume slider grabber */ {
+		background-color: var(--text-3);
+	}
+	.textBadge__2b1f5 /* new text badge (right click on person in vc) */ {
+		color: var(--text-0);
 	}
 
 	.container__37e49 /* user panel button strikethroughs */,
