@@ -1,0 +1,102 @@
+.visual-refresh {
+	--gap: 16px;
+
+	--titlebar-height: 56px;
+	--custom-guild-list-padding: 12px;
+
+	.guilds_c48ade {
+		background-color: var(--bg-base-secondary);
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--border-subtle);
+		padding-top: 8px;
+		margin-left: var(--gap);
+		margin-right: var(--gap);
+		margin-bottom: var(--gap);
+	}
+
+	.container__2637a {
+		padding-bottom: 0;
+	}
+	.sidebarList_c48ade {
+		background-color: var(--bg-base-secondary);
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--border-subtle);
+		margin-bottom: calc(58px + 2 * var(--gap));
+		margin-right: var(--gap);
+	}
+	.header_f37cb1,
+	.container__2637a {
+		background-color: var(--bg-base-secondary);
+	}
+
+	.panels_c48ade {
+		background-color: var(--bg-base-secondary);
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--border-subtle);
+		left: calc(var(--gap) + var(--gap) + 64px + 1px);
+		bottom: var(--gap);
+		width: calc(100% - 3 * var(--gap) - 64px - 1px);
+	}
+
+	.chat_f75fb0 {
+		margin-bottom: var(--gap);
+		margin-right: var(--gap);
+		border: none !important;
+	}
+
+	.title_f75fb0 {
+		border: none;
+		background: none;
+	}
+
+	.chatContent_f75fb0 {
+		background-color: var(--bg-base-secondary);
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border: 1px solid var(--border-subtle);
+	}
+
+	.container_c8ffbb {
+		background-color: var(--bg-base-secondary);
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border: 1px solid var(--border-subtle);
+		margin-left: var(--gap);
+		height: auto;
+	}
+	.members_c8ffbb {
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		overflow: hidden;
+	}
+
+	.container_c8ffbb::before,
+	.chatContent_f75fb0::before {
+		content: '';
+		position: absolute;
+		margin-top: -57px;
+		margin-left: -1px;
+		background-color: var(--bg-base-secondary);
+		width: 100%;
+		height: 55px;
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+		border: 1px solid var(--border-subtle);
+		border-bottom: none;
+	}
+	.container_c8ffbb::before {
+		width: 265px;
+	}
+
+	.title_f75fb0 {
+		padding-right: 0;
+	}
+	.search__49676 {
+		margin: 0 1px 0 17px;
+		padding: 0 12px;
+	}
+	.searchBar__97492 {
+		width: 241px;
+	}
+
+	.form_f75fb0 {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}

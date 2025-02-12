@@ -4,7 +4,7 @@
 
 	/* text colors */
 	--text-0: var(--bg-4); /* text on colored elements */
-	--text-1: var(--text-2); /* other normally white text */
+	--text-1: hsl(220, 45%, 95%); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
 	--text-3: hsl(220, 15%, 60%); /* normal text */
 	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
@@ -35,7 +35,7 @@
 	--bg-4: hsl(220, 15%, 10%); /* main background color */
 	--hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
-	--active-2: hsla(220, 19%, 40%, 0.3); /* channels and buttons when clicked or selected */
+	--active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
 	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
 	/* color of status indicators */
@@ -114,6 +114,8 @@
 	--background-surface-high: var(--bg-3);
 	--background-surface-higher: var(--bg-3);
 	--background-surface-highest: var(--bg-3);
+	--bg-surface-overlay: var(--bg-4);
+	--bg-surface-raised: var(--bg-3);
 	--chat-background-default: var(--bg-3);
 	--input-background: var(--bg-3);
 	--modal-background: var(--bg-4);
@@ -338,21 +340,28 @@
 
 	.container__87bf1 /* settings checkbutton background */ {
 		background-color: var(--bg-1) !important;
+		transition: background-color 0.2s ease;
 	}
 	.container__87bf1.checked__87bf1 /* settings checkbutton background */ {
 		background-color: var(--accent-2) !important;
 	}
 	.container__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
 		fill: var(--bg-1) !important;
+		transition: fill 0.2s ease;
 	}
 	.container__87bf1.checked__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
 		fill: var(--accent-2) !important;
 	}
 	.container__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
 		fill: var(--text-3) !important;
+		transition: fill 0.2s ease;
 	}
 	.container__87bf1.checked__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
 		fill: var(--text-0) !important;
+	}
+
+	.refreshIcon__001a7 /* settings radiobutton center */ {
+		fill: var(--text-0);
 	}
 
 	.container__37e49 /* user panel button strikethroughs */,
@@ -375,6 +384,22 @@
 
 	.colorable_f1ceac.red_f1ceac:hover /* vc disconnect button hover */ {
 		background-color: var(--red-4);
+	}
+
+	.bannerColor_fb7f94 /* profile banner button */,
+    .categoryText_d02962 /* gif chooser category names */,
+    .controlIcon_cf09d8 /* video play button */,
+    .wrapper_cf09d8 /* video time */,
+    .downloadHoverButtonIcon__6c706 /* video download button */ {
+		color: var(--text-1);
+	}
+
+	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
+		fill: var(--text-1);
+	}
+
+	.contentWrapper__08434 ::-webkit-scrollbar-thumb /* gif picker scrollbar */ {
+		background-color: var(--bg-1);
 	}
 
 	/* status indicators */
