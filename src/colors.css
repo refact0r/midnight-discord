@@ -90,7 +90,7 @@
 
 	--background-accent: var(--bg-3);
 	--background-floating: var(--bg-3);
-	--background-nested-floating: red;
+	--background-nested-floating: var(--bg-4);
 	--background-mentioned: var(--mention);
 	--background-mentioned-hover: var(--mention-hover);
 	--background-message-automod: red;
