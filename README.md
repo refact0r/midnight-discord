@@ -3,7 +3,7 @@
 > 1. join the [discord server](https://discord.gg/nz87hXyvcy) for instructions on how to revert the update
 > 2. use the experimental refresh version of midnight:
 >    - download this [theme file](https://github.com/refact0r/midnight-discord/blob/master/midnight-refresh.theme.css)
->    - or use this theme link: https://refact0r.github.io/midnight-discord/midnight-refresh.css
+>    - or use this theme link: https://refact0r.github.io/midnight-discord/midnight-refresh.theme.css
 
 <img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/b831a8a7-1e7f-4114-9420-cbbb8e8f184f">
 
