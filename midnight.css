@@ -113,11 +113,14 @@
 #app-mount .scrollerContainer_c6b11b /* channels and roles customize */,
 .shop__6db1d /* shop */,
 .wrapper_cb9592.minimum_cb9592 /* private call */,
-.container_fea832, .container__33507 /* emoji/sticker searchbars */,
+.container_a45028 /* emoji/sticker searchbars */,
 .searchBar_fed6d3 /* gif picker searchbar */ ,
 #app-mount .uploadModal_dbca3c /* upload modal */,
 .uploadModal_dbca3c .footer_dbca3c /* upload modal footer */,
-.container_f369db /* forums page */ {
+.container_f369db /* forums page */,
+.container__551b0 /* discover page sidebar */,
+.backdrop__8a7fc /* discover page headers */,
+.layerContainer_da8173 .scrollableContainer__74017 /* friend activity message bar */ {
 	background: var(--bg-4);
 }
 .sidebarContainer_a3a4ce, .container_a56260, .contentContainer_a56260 /* quests page */ {
@@ -130,7 +133,9 @@
 .navRow__86e92[data-theme=dark] /* add new account bottom */,
 .container_ca49a1 /* forum guidelines box */,
 .searchBar_c7e907 /* settings searchbar */,
-.circleIconButton__5bc7e /* server list buttons */ {
+.searchBar__5ec2f /* friends searchbar */,
+.circleIconButton__5bc7e /* server list buttons */,
+.auditLog__43dab /* audit log container */ {
 	background: var(--bg-3);
 }
 .folderIconWrapper__48112[style="background-color: rgba(88, 101, 242, 0.4);"] /* default color closed folders */ {
@@ -154,7 +159,8 @@
 .stackedBars__74017 /* reply bar underneath */ {
 	background: none;
 }
-.contentContainer_a56260 /* quests page fix */ {
+.contentContainer_a56260 /* quests page fix */,
+.header__43dab, .changeDetails__43dab /* audit log header/dropdown */ {
 	background: none !important;
 }
 .selected_f37cb1 .header_f37cb1, .clickable_f37cb1 .header_f37cb1:hover /* server name hover */ {
@@ -234,7 +240,6 @@ path[fill='var(--white-500)'] {
 .uploadIcon_edf440 /* profile upload image */,
 .focused_d40c56 .userMenuUsername_d40c56 .userMenuText_d40c56 /* account switcher account hover */,
 .dots__5ad89 /* typing dots */,
-.lookOutlined__201d5.colorWhite__201d5 /* server banner buttons */,
 .header_c5cd6a /* server preview mode banner */,
 .live_a7acae /* streaming live */,
 #app-mount .activeButton_c15210 /* member page pagination button */ ,
@@ -243,7 +248,8 @@ path[fill='var(--white-500)'] {
 .button_e131a9.buttonColor_e131a9.buttonActive_e131a9:hover /* active voice channel icons */,
 .vcd-screen-picker-radio[data-checked="true"] .defaultColor__4bd52 /* vencord stream resolution picker buttons when active */,
 .icon_a629d4 /* streaming activity type icon  */,
-.theme-dark .tooltipGreen__382e7, .theme-light .tooltipGreen__382e7 /* tooltip text like vc latency */ {
+.theme-dark .tooltipGreen__382e7, .theme-light .tooltipGreen__382e7 /* tooltip text like vc latency */,
+.currentTierIcon_c44edb /* current boost tier checkmark */ {
 	color: var(--text-0);
 }
 [class*="selectedCategoryItem_"] /* selected discover page */ {
@@ -255,8 +261,7 @@ path[fill='var(--white-500)'] {
 .botTagVerified__82f07 > path /* bot tag checkmark */ {
 	fill: var(--text-0);
 }
-#app-mount .button__33db6, .theme-light .button__33db6 /* notice banner button */,
-.lookOutlined__201d5.colorWhite__201d5 /* server banner buttons */ {
+#app-mount .button__33db6, .theme-light .button__33db6 /* notice banner button */ {
 	border-color: var(--text-0);
 }
 #app-mount .button__33db6:hover {
@@ -484,10 +489,8 @@ a[href="https://support.discord.com"] /* hide help */
 .wrapper_cb9592.minimum_cb9592, /* private call */
 .wrapper_cb9592.minimum_cb9592 ~ .content_f75fb0 /* chat under private call */,
 .main_c08b38 /* server onboarding */,
-/* discover page sidebar & wrappers */
-.sidebarContainer_a3a4ce,
-.pageWrapper_a3a4ce,
-.thin_d125d2.scrollerBase_d125d2,
+.container__551b0 /* discover page sidebar */,
+.scroller__23746 /* discover page container */,
 .layerContainer_da8173 .outer_c0bea0 /* profile popout */ {
 	border-radius: var(--roundness-xl);
 	overflow: hidden;
@@ -503,8 +506,15 @@ a[href="https://support.discord.com"] /* hide help */
 .container_c8ffbb /* members list */,
 .searchResultsWrap_a9e706 /* search results */,
 .container_f369db /* forums */,
-.outer_c0bea0.panel_c0bea0 /* dm profile */ {
+.outer_c0bea0.panel_c0bea0 /* dm profile */,
+/* discover search containers */
+.container__1eae0 .scroller__23746,
+.container_cbd375 {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
+}
+.headerBar__8a7fc /* discover search header */,
+.backdrop__8a7fc /* discover page headers */ {
+	border-radius: var(--roundness-xl) var(--roundness-xl) 0 0;
 }
 
 /* more rounded corners */
@@ -554,7 +564,8 @@ a[href="https://support.discord.com"] /* hide help */
 .input__0f084 /* settings inputs */,
 .item__001a7 /* settings radiobutton bars */,
 .item__001a7 .radioBar__001a7 /* settings radiobutton bars */,
-.input_ac6cb0 /* big 'find conversation' search bar */ {
+.input_ac6cb0 /* big 'find conversation' search bar */,
+.auditLog__43dab /* audit log container */ {
 	border-radius: var(--roundness-s);
 }
 .select__3f413.open__3f413 /* vencord plugin show all */,
@@ -580,7 +591,7 @@ a[href="https://support.discord.com"] /* hide help */
 .side_b3f026 .item_b3f026 /* settings tabs */,
 button.button__201d5 /* small buttons */,
 .container__33507 /* friend searchbar */,
-.container_fea832 /* sticker/emoji picker searchbar */,
+.container_a45028 /* emoji/sticker searchbars */,
 .searchBar_fed6d3 /* gif picker searchbar */ ,
 .item_c1e9c4 /* general popout buttons */,
 .icon_a629d4 /* streaming icon */,
@@ -989,7 +1000,7 @@ html.theme-light,
 	--bg-base-secondary: var(--primary-630);
 	--bg-base-tertiary: var(--primary-660);
 	--bg-mod-faint: var(--bg-4);
-	--bg-mod-strong: hsl(var(--primary-500-hsl) / 0.54);
+	--bg-mod-strong: var(--bg-2);
 	--bg-mod-subtle: var(--bg-2);
 	--bg-surface-overlay: var(--primary-800);
 	--bg-surface-overlay-tmp: var(--primary-800);
@@ -1272,6 +1283,7 @@ html.theme-light,
 	--primary-600: var(--bg-3); /* delete message preview */
 	--primary-630: var(--bg-3); /* billing transaction history */
 	--primary-660: var(--bg-3); /* search popout "enter" bar */
+	--primary-700: var(--bg-3); /* audit log border */
 
 	--white-500: var(--text-1);
 }
