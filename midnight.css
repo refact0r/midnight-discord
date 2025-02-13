@@ -133,6 +133,7 @@
 .navRow__86e92[data-theme=dark] /* add new account bottom */,
 .container_ca49a1 /* forum guidelines box */,
 .searchBar_c7e907 /* settings searchbar */,
+.searchBar__5ec2f /* friends searchbar */,
 .circleIconButton__5bc7e /* server list buttons */,
 .auditLog__43dab /* audit log container */ {
 	background: var(--bg-3);
