@@ -195,6 +195,9 @@
 	.chat_ee72fa::before /* vc chat shadow */ {
 		display: none;
 	}
+	.channelChatWrapper_cb9592 /* vc chat + titlebar group outer */ {
+		background: none;
+	}
 
 	.page_c48ade > .chatLayerWrapper__01ae2 /* forum/thread chat outer */ {
 		margin: 0 var(--gap) var(--gap) 0;

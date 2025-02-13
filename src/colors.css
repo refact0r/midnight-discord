@@ -414,7 +414,8 @@
 	.selectedIcon__2f4f7 /* vc selected camera icon */,
 	.colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc icon button */,
 	.colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
-	.iconBadge__650eb.base__2b1f5 /* server vc badge */ {
+	.iconBadge__650eb.base__2b1f5 /* server vc badge */,
+	#app-mount .akaBadge__488b1 /* aka badge */ {
 		color: var(--text-3);
 	}
 	.status__2f4f7 path[fill='var(--white)'] {
@@ -425,6 +426,11 @@
 	}
 	.textBadge__2b1f5 /* new text badge (right click on person in vc) */ {
 		color: var(--text-0);
+	}
+
+	.colorable_f1ceac.white_f1ceac /* vc icon button nub when white */ {
+		background-color: var(--primary-130);
+		color: var(--bg-4);
 	}
 
 	.iconBadge__650eb.isCurrentUserConnected__650eb /* green vc badge when connected */ {
