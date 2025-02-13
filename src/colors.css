@@ -294,6 +294,9 @@
 	--brand-360: var(--accent-2);
 	--brand-500: var(--accent-2);
 	--blurple-50: var(--accent-2);
+
+	--red-400: var(--red-2);
+	--red-500: var(--red-3);
 }
 
 .visual-refresh {
@@ -392,22 +395,37 @@
 	}
 
 	.categoryText_d02962 /* gif chooser category names */,
-	.bannerColor_fb7f94 /* profile banner button */ {
+	.bannerColor_fb7f94 /* profile banner button */,
+	.backButton_e4cb9a /* stream preview back button */,
+	.viewersIcon_d6b206 /* stream preview viewers icon */,
+	.bottomControls_e4cb9a /* stream preview viewer number */,
+	.pictureInPictureVideo_e4cb9a .controlIcon_f1ceac /* stream preview control icon */ {
 		color: var(--text-1);
 	}
-
+	.headerText_e4cb9a.base_eb1a4c /* stream preview header text */,
+	.participantName__2cdb8 /* stream preview participant name */ {
+		color: var(--text-1) !important;
+	}
 	.playPausePopIcon_cf09d8 > path /* video play/pause popup */ {
 		fill: var(--text-1);
 	}
-	.wrapper__926d7 a:link,
-	.wrapper__926d7 a:visited {
-		color: var(--text-2) !important;
+	.headerTitle_e4cb9a:hover /* stream preview header title hover underline */ {
+		border-color: var(--text-1) !important;
 	}
 	.controlIcon_cf09d8 /* video play button */,
     .wrapper_cf09d8 /* video time */,
 	.iconWrapper__6eb54 /* video initial play button */,
-	.wrapper__926d7 /* youtube embed play button */ {
+	.wrapper__926d7 /* youtube embed play button */,
+	.viewersIcon_d6b206:hover /* stream preview viewers icon */ ,
+	.headerTitle_e4cb9a:hover .backButton_e4cb9a /* stream preview back button hover */,
+	.viewersIcon_d6b206:hover /* stream preview viewers icon */,
+	.pictureInPictureVideo_e4cb9a .controlIcon_f1ceac:hover /* stream preview control icon */ {
 		color: var(--text-2);
+	}
+	.wrapper__926d7 a:link,
+	.wrapper__926d7 a:visited,
+	.headerTitle_e4cb9a:hover .headerText_e4cb9a.base_eb1a4c /* stream preview back button hover */ {
+		color: var(--text-2) !important;
 	}
 	.downloadHoverButtonIcon__6c706 /* video download button */,
 	.iconContainer__211d1>svg /* vc participants button icon */,
