@@ -193,6 +193,11 @@ div.message__5126c.replying__5126c::before /* change reply message bar to neutra
 .botTagOP__82f07 /* OP tag */ {
 	background: var(--accent-3);
 }
+.title_ac86f6 /* Plan headers */,
+.itemV2_ac86f6 /* Featured perks */,
+.rowLabelText__73a77 /* Plan feature differences list */ {
+  color: var(--text-2);
+}
 
 /* settings checkbuttons */
 .container__87bf1 {
