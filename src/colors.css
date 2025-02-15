@@ -372,11 +372,10 @@
 	.botTagRegular__82f07 /* bot tag */ {
 		background-color: var(--accent-2);
 	}
-
 	.title_ac86f6 /* Plan headers */,
 	.itemV2_ac86f6 /* Featured perks */,
 	.rowLabelText__73a77 /* Plan feature differences list */ {
-  		color: hsl(220, 25%, 70%);
+  		color: var(--text-2);
 	}
 
 	.container__87bf1 /* settings checkbutton background */ {
