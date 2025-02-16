@@ -10,7 +10,10 @@
  * @authorLink https://www.refact0r.dev
 */
 
-/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/src/main.css'); /* main theme css. */
+@import url('https://refact0r.github.io/midnight-discord/src/colors.css'); /* adds custom colors. remove this line to get default colors. */
+@import url('https://refact0r.github.io/midnight-discord/src/animations.css'); /* adds animations. remove to disable animations. */
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
