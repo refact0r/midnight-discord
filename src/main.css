@@ -240,7 +240,8 @@
 
 	.unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
 	.unreadMentionsIndicatorTop_ef3116 {
-		width: 64px;
+		width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
+		padding: calc(var(--custom-guild-list-padding) / 2);
 	}
 
 	.form_f75fb0 /* chat bar outer form */ {
