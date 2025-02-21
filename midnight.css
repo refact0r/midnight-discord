@@ -613,8 +613,11 @@ button.button__201d5 /* small buttons */,
 .topPill_b3f026 .item_b3f026 /* friend online/categories */ {
 	border-radius: var(--roundness-xxs);
 }
-#app-mount .centerButton_f1ceac /* fix vc buttons */ {
+button.centerButton_f1ceac /* fix vc buttons */ {
 	border-radius: 50%;
+}
+button.fullRegionButton_f1ceac /* fix vc button again */ {
+	border-radius: 12px;
 }
 
 /* fix view server as role popup */
