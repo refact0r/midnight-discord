@@ -155,8 +155,9 @@
 	--button-filled-brand-inverted-background-active: var(--text-3);
 	--button-filled-brand-inverted-background-hover: var(--text-2);
 	--button-filled-brand-inverted-text: var(--bg-4);
-	--button-filled-white-background-active: red;
-	--button-filled-white-background-hover: red;
+	--button-filled-white-background: var(--text-1);
+	--button-filled-white-background-active: var(--text-3);
+	--button-filled-white-background-hover: var(--text-2);
 	--button-filled-white-text: var(--bg-4);
 
 	--button-outline-danger-background: var(--bg-2);
