@@ -6,10 +6,10 @@ require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
 const srcDir = path.join(__dirname, '..', 'src');
 const baseFile = path.join(__dirname, '..', 'midnight-refresh.theme.css');
-const outputFile = process.env.DEV_OUTPUT_PATH;
+const outputPaths = process.env.DEV_OUTPUT_PATH ? process.env.DEV_OUTPUT_PATH.split(',') : [];
 const pathToIgnore = 'https://refact0r.github.io/midnight-discord/';
 
-if (!outputFile) {
+if (outputPaths.length === 0) {
 	console.error('DEV_OUTPUT_PATH is not set in .env file');
 	process.exit(1);
 }
@@ -36,8 +36,10 @@ async function replaceImports(content) {
 async function combineCSS() {
 	let combinedCSS = fs.readFileSync(baseFile, 'utf8');
 	combinedCSS = await replaceImports(combinedCSS);
-	fs.writeFileSync(outputFile, combinedCSS);
-	console.log('Updated development CSS file.');
+	outputPaths.forEach((outputFile) => {
+		fs.writeFileSync(outputFile, combinedCSS);
+		console.log(`Updated development CSS file at ${outputFile}.`);
+	});
 }
 
 combineCSS();
