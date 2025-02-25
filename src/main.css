@@ -3,7 +3,7 @@
 .visual-refresh {
 	--font: 'figtree';
 	--gap: 12px;
-	--divider-thickness: 3px;
+	--divider-thickness: 4px;
 
 	--custom-guild-list-padding: 12px;
 
@@ -275,11 +275,17 @@
 		border-radius: var(--divider-thickness);
 	}
 
-	.reaction__23977 /* message reactions */ {
-		border-width: 2px;
+	/* improve server selected marker */
+	.pill_e5445c.wrapper__58105 {
+		width: calc((var(--custom-guild-list-padding) - 4px) / 2 + 4px);
+	}
+	.item__58105 {
+		width: 4px;
+		border-radius: 4px;
+		margin-left: calc((var(--custom-guild-list-padding) - 4px) / 2);
 	}
 
-	/* modify embeds */
+	/* improve embeds */
 	.embedFull__623de {
 		border: 4px solid var(--border-normal);
 		border-top-color: var(--border-subtle) !important;
@@ -288,6 +294,11 @@
 		border-bottom-width: 1px;
 		border-right-color: var(--border-subtle) !important;
 		border-right-width: 1px;
+	}
+
+	/* improve borders */
+	.reaction__23977 /* message reactions */ {
+		border-width: 2px;
 	}
 
 	/* roundness */
