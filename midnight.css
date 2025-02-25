@@ -156,7 +156,8 @@
 .sidebar_c48ade /* channel sidebar */,
 .privateChannels__35e86 .scroller__99e7c /* dms list inner */,
 #app-mount .innerHeader__0b563:after /* channels and roles header shadow */,
-.stackedBars__74017 /* reply bar underneath */ {
+.stackedBars__74017 /* reply bar underneath */,
+#app-mount .content__37e49 /* user panel bottom */ {
 	background: none;
 }
 .contentContainer_a56260 /* quests page fix */,
@@ -612,8 +613,11 @@ button.button__201d5 /* small buttons */,
 .topPill_b3f026 .item_b3f026 /* friend online/categories */ {
 	border-radius: var(--roundness-xxs);
 }
-#app-mount .centerButton_f1ceac /* fix vc buttons */ {
+button.centerButton_f1ceac /* fix vc buttons */ {
 	border-radius: 50%;
+}
+button.fullRegionButton_f1ceac /* fix vc button again */ {
+	border-radius: 12px;
 }
 
 /* fix view server as role popup */

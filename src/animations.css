@@ -16,4 +16,19 @@
 	.channel__972a0:hover {
 		margin-left: 18px;
 	}
+	/* list hover channel dot */
+	.unread__2ea32 {
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		margin-left: -4px;
+		transition: var(--list-item-transition);
+	}
+	.wrapper__2ea32:hover .unread__2ea32 {
+		/* width: 6px;
+		height: 6px;
+		margin-top: -3px;
+		margin-left: 6px; */
+		margin-left: 4px;
+	}
 }
