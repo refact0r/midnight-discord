@@ -465,10 +465,17 @@
 		color: var(--text-0);
 	}
 
-	.container__37e49 /* user panel button strikethroughs */,
+	.container__37e49 /* user panel buttons */,
     .numberBadge__2b1f5  /* unread number badge */,
     .toolbar__9293f /* toolbar button strikethroughs */ {
 		--status-danger: var(--accent-new);
+	}
+
+	.container__37e49 .button__67645.redGlow__67645 /* user panel button backgrounds*/ {
+		background-color: color-mix(in hsl, var(--accent-new), transparent 90%);
+	}
+	.container__37e49 .button__67645.enabled__67645.redGlow__67645:hover /* user panel button backgrounds hover */ {
+		background-color: color-mix(in hsl, var(--accent-new), transparent 80%);
 	}
 
 	.divider__5126c /* unread divider */ {
