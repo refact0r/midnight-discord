@@ -128,7 +128,7 @@
 	--background-modifier-hover: var(--hover);
 	--background-modifier-selected: var(--active);
 
-	--bg-mod-faint: var(--bg-3);
+	--bg-mod-faint: var(--hover);
 	--bg-mod-subtle: var(--bg-2);
 	--bg-mod-strong: var(--bg-2);
 	--bg-brand: var(--accent-2);
@@ -207,12 +207,17 @@
 	--button-transparent-background-hover: var(--active);
 	--button-transparent-text: var(--text-3);
 
+	--redesign-button-secondary-text: var(--text-3);
+
+	--polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
+	--polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
+
 	--card-primary-bg: var(--bg-3);
 	--card-secondary-bg: red;
 	--channel-icon: var(--text-3);
 	--channels-default: var(--text-4);
 
-	--header-primary: var(--text-2);
+	--header-primary: var(--text-3);
 	--header-secondary: var(--text-4);
 	--header-muted: var(--text-4);
 
@@ -434,7 +439,8 @@
 	.colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc icon button */,
 	.colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
 	.iconBadge__650eb.base__2b1f5 /* server vc badge */,
-	#app-mount .akaBadge__488b1 /* aka badge */ {
+	#app-mount .akaBadge__488b1 /* aka badge */,
+	.message_fcf29c /* you have unsaved settings message */ {
 		color: var(--text-3);
 	}
 	.status__2f4f7 path[fill='var(--white)'] {
@@ -447,6 +453,10 @@
 		color: var(--text-0);
 	}
 
+	.unread__3b95d /* new unreads bar (channel list */ {
+		color: var(--text-4);
+	}
+
 	.colorable_f1ceac.white_f1ceac /* vc icon button nub when white */ {
 		background-color: var(--primary-130);
 		color: var(--bg-4);
@@ -456,10 +466,17 @@
 		color: var(--text-0);
 	}
 
-	.container__37e49 /* user panel button strikethroughs */,
+	.container__37e49 /* user panel buttons */,
     .numberBadge__2b1f5  /* unread number badge */,
     .toolbar__9293f /* toolbar button strikethroughs */ {
 		--status-danger: var(--accent-new);
+	}
+
+	.container__37e49 .button__67645.redGlow__67645 /* user panel button backgrounds*/ {
+		background-color: color-mix(in hsl, var(--accent-new), transparent 90%);
+	}
+	.container__37e49 .button__67645.enabled__67645.redGlow__67645:hover /* user panel button backgrounds hover */ {
+		background-color: color-mix(in hsl, var(--accent-new), transparent 80%);
 	}
 
 	.divider__5126c /* unread divider */ {
