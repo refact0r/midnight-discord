@@ -17,10 +17,7 @@
 		position: fixed;
 		width: 40px;
 		height: 40px;
-		top: calc(
-			var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) +
-				var(--guildbar-avatar-size) + 8px
-		);
+		top: 85px;
 		left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
 	}
 	.recentsIcon_c99c29 .button__85643 {
@@ -63,5 +60,13 @@
 		line-height: 90%;
 		color: var(--bg-1);
 		font-weight: 700;
+	}
+
+	.layer__960e4.baseLayer__960e4 {
+		transform: none !important;
+	}
+
+	.layers__960e4 > .layer__960e4.animating__960e4 {
+		will-change: opacity;
 	}
 }
