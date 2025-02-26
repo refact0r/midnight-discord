@@ -23,7 +23,7 @@
 	--gap: 12px;
 
 	/* thickness of unread messages divider and highlighted message borders */
-	--divider-thickness: 3px;
+	--divider-thickness: 4px;
 
 	/* transitions */
 	--list-item-transition: 0.2s ease;
