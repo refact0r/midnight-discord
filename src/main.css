@@ -244,10 +244,20 @@
 		padding: calc(var(--custom-guild-list-padding) / 2);
 	}
 
+	/* jank ass solution to only apply padding to treatment 3 */
 	.form_f75fb0 /* chat bar outer form */ {
-		padding-left: 16px;
-		padding-right: 16px;
+		--space-8: 16px;
 	}
+	.channelBottomBarArea_f75fb0 /* chat bar inner */ {
+		--space-8: 8px;
+	}
+
+	/* get rid of extra space in treatment 2 */
+	.accessoryBar__74017 {
+		padding-top: 0;
+	}
+
+	/* general chat bar improvements */
 	.channelTextArea_f75fb0 /* chat bar */ {
 		border-radius: var(--radius-md);
 	}
