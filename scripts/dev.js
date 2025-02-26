@@ -4,7 +4,6 @@ const chokidar = require('chokidar');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
-const srcDir = path.join(__dirname, '..', 'src');
 const baseFile = path.join(__dirname, '..', 'midnight-refresh.theme.css');
 const outputPaths = process.env.DEV_OUTPUT_PATH ? process.env.DEV_OUTPUT_PATH.split(',') : [];
 const pathToIgnore = 'https://refact0r.github.io/midnight-discord/';
@@ -14,37 +13,68 @@ if (outputPaths.length === 0) {
 	process.exit(1);
 }
 
-async function replaceImports(content) {
+function getImportPaths(content) {
 	const regex = /@import url\(['"]([^'"]+)['"]\);/g;
-	let match;
-	let results = [];
+	const importPaths = [];
 
+	let match;
 	while ((match = regex.exec(content)) !== null) {
-		let importPath = match[1].replace(pathToIgnore, '');
-		let fullPath = path.join(__dirname, '..', importPath);
-		let importContent = fs.readFileSync(fullPath, 'utf8');
-		results.push(match[0], importContent);
+		const importPath = match[1].replace(pathToIgnore, '');
+		const fullPath = path.join(__dirname, '..', importPath);
+		importPaths.push(fullPath);
 	}
 
-	for (let i = 0; i < results.length; i += 2) {
-		content = content.replace(results[i], results[i + 1]);
+	return importPaths;
+}
+
+function replaceImports(content) {
+	const regex = /@import url\(['"]([^'"]+)['"]\);/g;
+	const replacements = [];
+
+	let match;
+	while ((match = regex.exec(content)) !== null) {
+		const importPath = match[1].replace(pathToIgnore, '');
+		const fullPath = path.join(__dirname, '..', importPath);
+		const importContent = fs.readFileSync(fullPath, 'utf8');
+		replacements.push({ original: match[0], replace: importContent });
+	}
+
+	for (const { original, replace } of replacements) {
+		content = content.replace(original, replace);
 	}
 
 	return content;
 }
 
-async function combineCSS() {
+function combineCSS() {
 	let combinedCSS = fs.readFileSync(baseFile, 'utf8');
-	combinedCSS = await replaceImports(combinedCSS);
-	outputPaths.forEach((outputFile) => {
+	combinedCSS = replaceImports(combinedCSS);
+
+	for (const outputFile of outputPaths) {
 		fs.writeFileSync(outputFile, combinedCSS);
-		console.log(`Updated development CSS file at ${outputFile}.`);
+		console.log(`Updated ${outputFile}.`);
+	}
+
+	return combinedCSS;
+}
+
+let watcher;
+
+function setupWatcher() {
+	if (watcher) watcher.close();
+
+	const baseContent = fs.readFileSync(baseFile, 'utf8');
+	const importPaths = getImportPaths(baseContent);
+	const filesToWatch = [baseFile, ...importPaths];
+
+	watcher = chokidar.watch(filesToWatch);
+
+	watcher.on('change', (filePath) => {
+		console.log(`Changes detected in ${filePath}. Rebuilding...`);
+		combineCSS();
+		setupWatcher();
 	});
 }
 
 combineCSS();
-
-chokidar.watch(srcDir).on('change', (event, path) => {
-	console.log('Changes detected. Rebuilding...');
-	combineCSS();
-});
+setupWatcher();
