@@ -88,7 +88,7 @@
 	--alert-bg: red;
 	--autocomplete-bg: var(--bg-3);
 
-	--background-accent: var(--bg-3);
+	--background-accent: var(--text-4);
 	--background-floating: var(--bg-3);
 	--background-nested-floating: var(--bg-4);
 	--background-mentioned: var(--mention);
