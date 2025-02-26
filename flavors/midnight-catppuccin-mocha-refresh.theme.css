@@ -15,8 +15,6 @@
 @import url('https://refact0r.github.io/midnight-discord/src/colors.css'); /* adds custom colors. remove this line to get default colors. */
 @import url('https://refact0r.github.io/midnight-discord/src/animations.css'); /* adds animations. remove to disable animations. */
 
-@import url('https://refact0r.github.io/midnight-discord/midnight.css');
-
 /* customize things here */
 :root {
 	/* font, change to '' for default discord font */
@@ -26,7 +24,7 @@
 	--gap: 12px;
 
 	/* thickness of unread messages divider and highlighted message borders */
-	--divider-thickness: 3px;
+	--divider-thickness: 4px;
 
 	/* transitions */
 	--list-item-transition: 0.2s ease;
@@ -42,7 +40,7 @@
 	/* background and dark colors */
 	--bg-1: hsl(234, 13%, 31%); /* dark buttons when clicked */
 	--bg-2: hsl(237, 16%, 23%); /* dark buttons */
-	--bg-3: hsl(240, 21%, 12%); /* spacing, secondary elements */
+	--bg-3: hsl(240, 21%, 10%); /* spacing, secondary elements */
 	--bg-4: hsl(240, 21%, 15%); /* main background color */
 	--hover: hsla(233, 12%, 39%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(233, 12%, 39%, 0.2); /* channels and buttons when clicked or selected */
