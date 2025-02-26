@@ -27,8 +27,8 @@
 		width: 24px;
 		height: 24px;
 	}
-	.layerContainer_da8173 .layer_da8173:has(.recentMentionsPopout__95796) {
-		transform: translateX(90%);
+	.recentMentionsPopout__95796 {
+		transform: translateX(100%);
 	}
 
 	.title_c38106 {
@@ -45,7 +45,7 @@
 	}
 	.title__85643 .text-sm\/medium_cf4812 {
 		line-height: 90%;
-		color: var(--text-5);
+		color: var(--bg-1);
 		font-weight: 700;
 	}
 }
