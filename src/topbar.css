@@ -1,0 +1,51 @@
+.visual-refresh {
+	--custom-app-top-bar-height: 24px;
+
+	.trailing_c38106 > a[href="https://support.discord.com"]
+	{
+		display: none;
+	}
+
+	.tutorialContainer__1f388 {
+		margin-bottom: 48px;
+	}
+	.recentsIcon_c99c29 {
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		top: calc(
+			var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) +
+				var(--guildbar-avatar-size) + 8px
+		);
+		left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
+	}
+	.recentsIcon_c99c29 .button__85643 {
+		width: 100%;
+		height: 100%;
+	}
+	.recentsIcon_c99c29 .icon__9293f {
+		width: 24px;
+		height: 24px;
+	}
+	.layerContainer_da8173 .layer_da8173:has(.recentMentionsPopout__95796) {
+		transform: translateX(90%);
+	}
+
+	.title_c38106 {
+		padding-left: var(--gap);
+		justify-content: flex-start;
+	}
+	.title__85643 {
+		gap: 4px;
+	}
+	.title__85643 .icon_f34534 {
+		width: 16px;
+		height: 16px;
+		display: none;
+	}
+	.title__85643 .text-sm\/medium_cf4812 {
+		line-height: 90%;
+		color: var(--text-5);
+		font-weight: 700;
+	}
+}
