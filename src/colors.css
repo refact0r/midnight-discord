@@ -264,7 +264,7 @@
 	--status-offline: red;
 	--status-online: red;
 	--status-positive: var(--green-2);
-	--status-positive-background: red;
+	--status-positive-background: var(--green-2);
 	--status-positive-text: var(--white);
 	--status-speaking: var(--green-2);
 	--status-warning: var(--yellow-2);
