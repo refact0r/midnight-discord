@@ -1,0 +1,80 @@
+@property --move-top-bar-buttons {
+	syntax: 'on | off';
+	inherits: false;
+	initial-value: off;
+}
+
+@container root style(--move-top-bar-buttons: on) {
+	.visual-refresh {
+		.trailing_c38106 > a[href="https://support.discord.com"]
+		{
+			display: none;
+		}
+
+		.stack_dbd263 {
+			overflow: hidden scroll;
+			scrollbar-width: none;
+		}
+		.tutorialContainer__1f388 {
+			margin-bottom: 48px;
+		}
+		.recentsIcon_c99c29 {
+			position: fixed;
+			width: 40px;
+			height: 40px;
+			top: calc(
+				var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px
+			);
+			left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
+		}
+		.recentsIcon_c99c29 .button__85643 {
+			width: 100%;
+			height: 100%;
+			background-color: var(--background-surface-higher);
+			border-radius: var(--radius-md);
+			transition: background-color 0.15s ease-out;
+
+			&:hover {
+				background-color: var(--bg-brand);
+
+				.icon__9293f {
+					color: var(--white);
+				}
+			}
+		}
+		.recentsIcon_c99c29 .icon__9293f {
+			transition: color 0.15s ease-out;
+			width: 24px;
+			height: 24px;
+		}
+		.recentMentionsPopout__95796 {
+			transform: translateX(100%);
+		}
+
+		.title_c38106 {
+			padding-left: var(--gap);
+			justify-content: flex-start;
+		}
+		.title__85643 {
+			gap: 4px;
+		}
+		.title__85643 .icon_f34534 {
+			width: 16px;
+			height: 16px;
+			display: none;
+		}
+		.title__85643 .text-sm\/medium_cf4812 {
+			line-height: 90%;
+			color: var(--text-muted);
+			font-weight: 700;
+		}
+
+		.layer__960e4.baseLayer__960e4 {
+			transform: none !important;
+		}
+
+		.layers__960e4 > .layer__960e4.animating__960e4 {
+			will-change: opacity;
+		}
+	}
+}
