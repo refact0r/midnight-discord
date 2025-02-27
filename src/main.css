@@ -171,6 +171,7 @@
 		margin-left: var(--gap);
 		overflow: hidden;
 		height: auto;
+		min-width: 340px;
 	}
 
 	.searchResultsWrap_a9e706 /* search results */ {

@@ -17,7 +17,7 @@
 		position: fixed;
 		width: 40px;
 		height: 40px;
-		top: 85px;
+		top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
 		left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
 	}
 	.recentsIcon_c99c29 .button__85643 {
