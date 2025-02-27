@@ -20,16 +20,18 @@
 	/* sizes */
 	--gap: 12px; /* spacing between panels */
 	--divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-	--custom-app-top-bar-height: 32px; /* height of the top bar */
 
-	/* transitions */
-	--animations: on; /* turn off to disable midnight's animations/transitions */
+	/* animation/transition options */
+	--animations: on; /* turn off to disable all midnight animations/transitions */
 	--list-item-transition: 0.2s ease; /* transition for list items */
 
-	/* options */
+	/* top bar options */
 	--move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
-	--small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+	--custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
+
+	/* more options */
 	--colors: on; /* turn off to use discord default colors */
+	--small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
 
 	/* text colors */
 	--text-0: var(--bg-4); /* text on colored elements */
