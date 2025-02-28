@@ -537,6 +537,13 @@
             background: linear-gradient(0deg, var(--bg-4), transparent);
         }
 
+        .result__2dc39:after /* remove gif hover overlay */ {
+            display: none;
+        }
+        .result__2dc39:hover /* gif hover */ {
+            outline: 2px solid var(--accent-2);
+        }
+
         /* status indicators */
         rect[fill='#83838b'] {
             fill: var(--offline);
