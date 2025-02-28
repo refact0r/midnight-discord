@@ -78,10 +78,6 @@
 		margin: 0 0 var(--gap) var(--gap);
 	}
 
-	.outer_c0bea0.panel_c0bea0 /* dm profile pannel */ {
-		min-width: 340px;
-	}
-
 	.guilds_c48ade /* server list */ {
 		margin-bottom: 0;
 	}

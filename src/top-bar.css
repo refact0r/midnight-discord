@@ -6,18 +6,22 @@
 
 @container root style(--move-top-bar-buttons: on) {
 	.visual-refresh {
+		/* remove help button */
 		.trailing_c38106 > a[href="https://support.discord.com"]
 		{
 			display: none;
 		}
 
+		/* make server list inner scroll */
 		.stack_dbd263 {
 			overflow: hidden scroll;
 			scrollbar-width: none;
 		}
+		/* create space for inbox button */
 		.tutorialContainer__1f388 {
 			margin-bottom: 48px;
 		}
+		/* move inbox button */
 		.recentsIcon_c99c29 {
 			position: fixed;
 			width: 40px;
@@ -27,6 +31,7 @@
 			);
 			left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
 		}
+		/* style inbox button */
 		.recentsIcon_c99c29 .button__85643 {
 			width: 100%;
 			height: 100%;
@@ -47,10 +52,11 @@
 			width: 24px;
 			height: 24px;
 		}
+		/* shift inbox popup panel into view */
 		.recentMentionsPopout__95796 {
 			transform: translateX(100%);
 		}
-
+		/* move top bar title */
 		.title_c38106 {
 			padding-left: var(--gap);
 			justify-content: flex-start;
@@ -58,6 +64,7 @@
 		.title__85643 {
 			gap: 4px;
 		}
+		/* style top bar title */
 		.title__85643 .icon_f34534 {
 			width: 16px;
 			height: 16px;
@@ -69,10 +76,10 @@
 			font-weight: 700;
 		}
 
+		/* fix settings animation transform */
 		.layer__960e4.baseLayer__960e4 {
 			transform: none !important;
 		}
-
 		.layers__960e4 > .layer__960e4.animating__960e4 {
 			will-change: opacity;
 		}
