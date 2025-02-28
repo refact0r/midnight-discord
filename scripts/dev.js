@@ -45,8 +45,6 @@ function processBaseFile(compiledCSS) {
 		fs.writeFileSync(outputPath, processedContent);
 		console.log(`Updated ${outputPath}`);
 	});
-
-	return watcher;
 }
 
 // Main function to process files
