@@ -92,7 +92,7 @@
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
 
-        --background-accent: var(--text-4);
+        --background-accent: var(--bg-2);
         --background-floating: var(--bg-3);
         --background-nested-floating: var(--bg-4);
         --background-mentioned: var(--mention);
@@ -448,7 +448,9 @@
         .colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
         .iconBadge__650eb.base__2b1f5 /* server vc badge */,
         #app-mount .akaBadge__488b1 /* aka badge */,
-        .message_fcf29c /* you have unsaved settings message */ {
+        .message_fcf29c /* you have unsaved settings message */,
+        .friendRequestsButton__523aa .base__2b1f5 /* inbox friend request number */,
+        .textBadge__2b1f5[style='background-color: var(--background-accent);'] {
             color: var(--text-3);
         }
         .status__2f4f7 path[fill='var(--white)'] {
