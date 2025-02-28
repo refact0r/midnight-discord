@@ -1,12 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.visual-refresh {
-	--font: 'figtree';
-	--gap: 12px;
-	--divider-thickness: 4px;
-
+:root {
+	container-name: root;
 	--custom-guild-list-padding: 12px;
 
+	/* font, change to '' for default discord font */
+	--font: 'figtree';
+
+	/* sizes */
+	--gap: 12px; /* spacing between panels */
+	--divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+
+	/* animation/transition options */
+	--animations: on; /* turn off to disable all midnight animations/transitions */
+	--list-item-transition: 0.2s ease; /* transition for list items */
+
+	/* top bar options */
+	--move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
+	--custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
+
+	/* more options */
+	--colors: on; /* turn off to use discord default colors */
+	--small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+}
+
+.visual-refresh {
 	/* panel separation */
 	.guilds_c48ade /* server list */, 
     .sidebarList_c48ade /* channel list (includes dm list) */,
@@ -175,6 +193,7 @@
 		margin-left: var(--gap);
 		overflow: hidden;
 		height: auto;
+		min-width: 340px;
 	}
 
 	.searchResultsWrap_a9e706 /* search results */ {
