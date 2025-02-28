@@ -9,7 +9,7 @@
 	--text-0: var(--bg-4); /* text on colored elements */
 	--text-1: hsl(220, 45%, 95%); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
-	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-3: hsl(220, 20%, 60%); /* normal text */
 	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
 
