@@ -50,7 +50,7 @@
 	--text-0: var(--bg-4); /* text on colored elements */
 	--text-1: hsl(220, 45%, 95%); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
-	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-3: hsl(220, 20%, 60%); /* normal text */
 	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
 
@@ -628,10 +628,26 @@
 
 :root {
 	container-name: root;
-	--font: 'figtree';
-	--gap: 12px;
-	--divider-thickness: 4px;
 	--custom-guild-list-padding: 12px;
+
+	/* font, change to '' for default discord font */
+	--font: 'figtree';
+
+	/* sizes */
+	--gap: 12px; /* spacing between panels */
+	--divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+
+	/* animation/transition options */
+	--animations: on; /* turn off to disable all midnight animations/transitions */
+	--list-item-transition: 0.2s ease; /* transition for list items */
+
+	/* top bar options */
+	--move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
+	--custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
+
+	/* more options */
+	--colors: on; /* turn off to use discord default colors */
+	--small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
 }
 
 .visual-refresh {
