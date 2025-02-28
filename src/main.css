@@ -352,14 +352,6 @@
 	.root__24502 {
 		background: none;
 	}
-
-	.base_c48ade /* base grid */ {
-		grid-template-areas:
-			'titleBar titleBar titleBar'
-			'guildsList notice notice'
-			'guildsList channelsList page'
-			'guildsList userPanel page';
-	}
 }
 
 :root {
