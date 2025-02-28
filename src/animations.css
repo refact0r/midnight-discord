@@ -1,10 +1,10 @@
-@property --transitions {
+@property --animations {
 	syntax: 'on | off';
 	inherits: false;
 	initial-value: on;
 }
 
-@container style(--transitions: on) {
+@container root style(--animations: on) {
 	.visual-refresh {
 		/* list hover animations */
 		.wrapper__2ea32 .link__2ea32 /* channels */,
@@ -28,7 +28,7 @@
 			width: 8px;
 			height: 8px;
 			margin-left: -4px;
-			transition: margin-left var(--list-item-transition);
+			transition: var(--list-item-transition);
 			will-change: margin-left;
 		}
 		.wrapper__2ea32:hover .unread__2ea32 {

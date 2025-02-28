@@ -1,31 +1,23 @@
-@property --shrink-topbar {
+@property --move-top-bar-buttons {
 	syntax: 'on | off';
 	inherits: false;
-	initial-value: on;
+	initial-value: off;
 }
 
-@container style(--shrink-topbar: on) {
+@container root style(--move-top-bar-buttons: on) {
 	.visual-refresh {
-		body {
-			--custom-app-top-bar-height: 24px;
-		}
-
-		.trailing_c38106 > a[href="https://support.discord.com"] /* help button */
+		.trailing_c38106 > a[href="https://support.discord.com"]
 		{
 			display: none;
 		}
 
-		/* make server list servers scroll*/
 		.stack_dbd263 {
 			overflow: hidden scroll;
 			scrollbar-width: none;
-			will-change: scroll-position;
 		}
-		/* create space for inbox button*/
 		.tutorialContainer__1f388 {
 			margin-bottom: 48px;
 		}
-		/* move inbox button */
 		.recentsIcon_c99c29 {
 			position: fixed;
 			width: 40px;
@@ -35,19 +27,18 @@
 			);
 			left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
 		}
-		/* style inbox button */
 		.recentsIcon_c99c29 .button__85643 {
 			width: 100%;
 			height: 100%;
-			background-color: var(--bg-3);
+			background-color: var(--background-surface-higher);
 			border-radius: var(--radius-md);
 			transition: background-color 0.15s ease-out;
 
 			&:hover {
-				background-color: var(--accent-3);
+				background-color: var(--bg-brand);
 
 				.icon__9293f {
-					color: var(--text-0);
+					color: var(--white);
 				}
 			}
 		}
@@ -56,16 +47,14 @@
 			width: 24px;
 			height: 24px;
 		}
-		/* shift inbox popup panel into view */
 		.recentMentionsPopout__95796 {
 			transform: translateX(100%);
 		}
-		/* move top bar title*/
+
 		.title_c38106 {
 			padding-left: var(--gap);
 			justify-content: flex-start;
 		}
-		/* style top bar title */
 		.title__85643 {
 			gap: 4px;
 		}
@@ -76,13 +65,14 @@
 		}
 		.title__85643 .text-sm\/medium_cf4812 {
 			line-height: 90%;
-			color: var(--text-5);
+			color: var(--text-muted);
 			font-weight: 700;
 		}
-		/* prevent inbox button from moving due to settings animation transform */
+
 		.layer__960e4.baseLayer__960e4 {
 			transform: none !important;
 		}
+
 		.layers__960e4 > .layer__960e4.animating__960e4 {
 			will-change: opacity;
 		}
