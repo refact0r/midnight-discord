@@ -33,6 +33,15 @@
     --custom-window-controls: on; /* turn off to use discord default window controls */
     --window-control-size: 14px; /* size of custom window controls */
 
+    /* background image options */
+    --background-image: off; /* turn on to use a background image */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
+    --panel-blur: off; /* turn on to blur the background of panels */
+    --blur-amount: 16px; /* amount of blur */
+
     /* more options */
     --colors: on; /* turn off to use discord default colors */
     --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */

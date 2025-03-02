@@ -3,6 +3,7 @@
 :root {
     container-name: root;
     --custom-guild-list-padding: 12px;
+    --panel-backdrop-filter: none;
 
     /* font, change to '' for default discord font */
     --font: 'figtree';
@@ -51,6 +52,7 @@
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: 1px solid var(--border-subtle);
+        backdrop-filter: var(--panel-backdrop-filter);
     }
 
     .base_c48ade /* base grid */ {
@@ -88,12 +90,12 @@
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
     }
-    .header_f37cb1 /* server name */,
-    .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */,
-    .container__2637a /* channel list inner */ {
+    .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */ {
         background-color: var(--background-base-lower);
     }
-    .clickable_f37cb1 {
+    .clickable_f37cb1,
+    .container__2637a /* channel list inner */,
+    .header_f37cb1 /* server name */ {
         background: none;
     }
 
@@ -141,6 +143,10 @@
         margin-left: var(--gap);
         overflow: hidden;
         height: auto;
+    }
+    .members_c8ffbb /* member list inner */,
+    .member_c8ffbb /* member list item */ {
+        background: none;
     }
 
     .resizeHandle__01ae2 /* resize handle */ {
@@ -243,6 +249,23 @@
     .wrapper_cb9592 /* dm vc wrapper */ {
         background: none;
         margin-bottom: var(--gap);
+    }
+
+    /* remove excess background from settings  */
+    .standardSidebarView__23e6b,
+    .contentRegion__23e6b,
+    .sidebarRegionScroller__23e6b,
+    .contentRegionScroller__23e6b {
+        background: none;
+    }
+    .standardSidebarView__23e6b {
+        backdrop-filter: var(--panel-backdrop-filter);
+    }
+
+    /* remove background from message loading placeholders */
+    .wrapper_d852db,
+    .wrapper_d852db > .wrapper_fc8177 {
+        background: none;
     }
 
     .newMessagesBar__0f481 /* unread messages bar */ {
