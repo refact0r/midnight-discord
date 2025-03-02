@@ -1,0 +1,39 @@
+@property --panel-blur {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container root style(--panel-blur: on) {
+    .visual-refresh {
+        body {
+            --panel-backdrop-filter: blur(var(--blur-amount));
+        }
+
+        .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+        .tooltip__382e7 /* tooltips */ {
+            backdrop-filter: blur(calc(var(--blur-amount) / 2));
+        }
+        .menu_c1e9c4 /* context menus */,
+        .contentWrapper__08434 /* emoji/gif panel */,
+        .root__49fc1 /* modals like invite */,
+        .outer_c0bea0 /* small profile popup */ {
+            backdrop-filter: blur(var(--blur-amount));
+        }
+    }
+}
+
+@property --transparency-tweaks {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container root style(--transparency-tweaks: on) {
+    .visual-refresh {
+        .formWithLoadedChatInput_f75fb0:before,
+        .children__9293f:after {
+            display: none;
+        }
+    }
+}

@@ -333,7 +333,7 @@
 
         .panel__5dec7 /* game activity panel */,
         #vc-spotify-player /* vencord spotify plugin */ {
-            background-color: var(--bg-4);
+            background: none;
         }
 
         .side_b3f026 .item_b3f026:hover /* settings tab */ {
@@ -453,7 +453,8 @@
         .textBadge__2b1f5[style='background-color: var(--background-accent);'] {
             color: var(--text-3);
         }
-        .status__2f4f7 path[fill='var(--white)'] {
+        .status__2f4f7 path[fill='var(--white)'],
+        .emptyChannelIcon__00de6 path[fill='var(--white)'] /* channel start icon */ {
             fill: var(--text-3);
         }
         .grabber_a562c8 /* vc volume slider grabber */ {
