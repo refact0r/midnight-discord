@@ -38,6 +38,8 @@
     --background-image-url: url(''); /* url of the background image */
 
     /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS */
+    /* FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
     --panel-blur: off; /* turn on to blur the background of panels */
     --blur-amount: 16px; /* amount of blur */
