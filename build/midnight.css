@@ -38,6 +38,21 @@
     }
 }
 
+/* background-image.css */
+@property --background-image {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container root style(--background-image: on) {
+    .visual-refresh .bg__960e4 {
+        background: var(--background-image-url);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 /* colors.css */
 @property --colors {
     syntax: 'on | off';
@@ -374,7 +389,7 @@
 
         .panel__5dec7 /* game activity panel */,
         #vc-spotify-player /* vencord spotify plugin */ {
-            background-color: var(--bg-4);
+            background: none;
         }
 
         .side_b3f026 .item_b3f026:hover /* settings tab */ {
@@ -494,7 +509,8 @@
         .textBadge__2b1f5[style='background-color: var(--background-accent);'] {
             color: var(--text-3);
         }
-        .status__2f4f7 path[fill='var(--white)'] {
+        .status__2f4f7 path[fill='var(--white)'],
+        .emptyChannelIcon__00de6 path[fill='var(--white)'] /* channel start icon */ {
             fill: var(--text-3);
         }
         .grabber_a562c8 /* vc volume slider grabber */ {
@@ -638,6 +654,7 @@
 :root {
     container-name: root;
     --custom-guild-list-padding: 12px;
+    --panel-backdrop-filter: none;
 
     /* font, change to '' for default discord font */
     --font: 'figtree';
@@ -686,6 +703,7 @@
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: 1px solid var(--border-subtle);
+        backdrop-filter: var(--panel-backdrop-filter);
     }
 
     .base_c48ade /* base grid */ {
@@ -723,12 +741,12 @@
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
     }
-    .header_f37cb1 /* server name */,
-    .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */,
-    .container__2637a /* channel list inner */ {
+    .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */ {
         background-color: var(--background-base-lower);
     }
-    .clickable_f37cb1 {
+    .clickable_f37cb1,
+    .container__2637a /* channel list inner */,
+    .header_f37cb1 /* server name */ {
         background: none;
     }
 
@@ -776,6 +794,10 @@
         margin-left: var(--gap);
         overflow: hidden;
         height: auto;
+    }
+    .members_c8ffbb /* member list inner */,
+    .member_c8ffbb /* member list item */ {
+        background: none;
     }
 
     .resizeHandle__01ae2 /* resize handle */ {
@@ -878,6 +900,23 @@
     .wrapper_cb9592 /* dm vc wrapper */ {
         background: none;
         margin-bottom: var(--gap);
+    }
+
+    /* remove excess background from settings  */
+    .standardSidebarView__23e6b,
+    .contentRegion__23e6b,
+    .sidebarRegionScroller__23e6b,
+    .contentRegionScroller__23e6b {
+        background: none;
+    }
+    .standardSidebarView__23e6b {
+        backdrop-filter: var(--panel-backdrop-filter);
+    }
+
+    /* remove excess backgrounds */
+    .wrapper_d852db /* message loading placeholders */,
+    .wrapper_d852db > .wrapper_fc8177 {
+        background: none;
     }
 
     .newMessagesBar__0f481 /* unread messages bar */ {
@@ -1086,6 +1125,51 @@
         }
         .layers__960e4 > .layer__960e4.animating__960e4 {
             will-change: opacity;
+        }
+    }
+}
+
+/* transparency-blur.css */
+@property --panel-blur {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container root style(--panel-blur: on) {
+    .visual-refresh {
+        body {
+            --panel-backdrop-filter: blur(var(--blur-amount));
+        }
+
+        .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+        .tooltip__382e7 /* tooltips */ {
+            background: var(--bg-floating);
+        }
+        .menu_c1e9c4 /* context menus */,
+        .contentWrapper__08434 /* emoji/gif panel */,
+        .root__49fc1 /* modals like invite */,
+        .outer_c0bea0 /* small profile popup */,
+        .autocomplete__6b0e0 /* autocomplete */,
+        .container__55c99 /* search suggestions */,
+        .messagesPopoutWrap__45690 /* inbox */,
+        .popout__76f04 /* channel hover popout */ {
+            background: var(--bg-floating);
+        }
+    }
+}
+
+@property --transparency-tweaks {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container root style(--transparency-tweaks: on) {
+    .visual-refresh {
+        .formWithLoadedChatInput_f75fb0:before,
+        .children__9293f:after {
+            display: none;
         }
     }
 }
