@@ -19,7 +19,8 @@
         .root__49fc1 /* modals like invite */,
         .outer_c0bea0 /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
-        .container__55c99 /* search suggestions */ {
+        .container__55c99 /* search suggestions */,
+        .messagesPopoutWrap__45690 /* inbox */ {
             backdrop-filter: blur(var(--blur-amount));
         }
     }
