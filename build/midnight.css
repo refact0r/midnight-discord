@@ -1144,7 +1144,7 @@
 
         .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
         .tooltip__382e7 /* tooltips */ {
-            backdrop-filter: blur(calc(var(--blur-amount) / 2));
+            background: var(--bg-floating);
         }
         .menu_c1e9c4 /* context menus */,
         .contentWrapper__08434 /* emoji/gif panel */,
@@ -1152,8 +1152,9 @@
         .outer_c0bea0 /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
-        .messagesPopoutWrap__45690 /* inbox */ {
-            backdrop-filter: blur(var(--blur-amount));
+        .messagesPopoutWrap__45690 /* inbox */,
+        .popout__76f04 /* channel hover popout */ {
+            background: var(--bg-floating);
         }
     }
 }
