@@ -149,7 +149,8 @@
 #app-mount .searchFilter_bd8186 /* search filter */ {
     background: var(--bg-1);
 }
-.input_ac6cb0 /* big 'find conversation' search bar */ {
+.input_ac6cb0 /* big 'find conversation' search bar */,
+.soundButtonRefresh__6d4ed /* soundboard buttons */ {
     background: var(--bg-2);
 }
 .chat_f75fb0 /* chat + member list */,
