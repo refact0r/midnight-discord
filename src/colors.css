@@ -29,11 +29,7 @@
     --accent-3: var(--blue-3); /* accent buttons */
     --accent-4: var(--blue-4); /* accent buttons when hovered */
     --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --mention: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--blue-2), transparent 90%) 60%,
-        transparent
-    ); /* background of messages that mention you */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 60%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(
         to right,
         color-mix(in hsl, var(--blue-2), transparent 95%) 60%,

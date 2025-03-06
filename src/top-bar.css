@@ -4,7 +4,7 @@
     initial-value: off;
 }
 
-@container root style(--move-top-bar-buttons: on) {
+@container body style(--move-top-bar-buttons: on) {
     .visual-refresh {
         /* remove help button */
         .trailing_c38106 > a[href="https://support.discord.com"]
@@ -26,9 +26,7 @@
             position: fixed;
             width: 40px;
             height: 40px;
-            top: calc(
-                var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px
-            );
+            top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
             left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
         }
         /* style inbox button */
@@ -47,7 +45,7 @@
                 }
             }
         }
-        .recentsIcon_c99c29 .icon__9293f {
+        .recentsIcon_c99c29 .svg__2338f {
             transition: color 0.15s ease-out;
             width: 24px;
             height: 24px;
@@ -82,6 +80,18 @@
         }
         .layers__960e4 > .layer__960e4.animating__960e4 {
             will-change: opacity;
+        }
+
+        /* unread icon */
+        .recentsIcon_c99c29 .iconBadge__9293f {
+            --custom-icon-offset: 8px;
+            width: 10px;
+            height: 10px;
+            transition: background 0.15s ease-out;
+        }
+
+        .recentsIcon_c99c29:hover .iconBadge__9293f {
+            background: var(--white);
         }
     }
 }

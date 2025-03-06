@@ -4,11 +4,11 @@
     initial-value: off;
 }
 
-:root {
+body {
     --window-control-size: 14px;
 }
 
-@container root style(--custom-window-controls: on) {
+@container body style(--custom-window-controls: on) {
     .winButtons_c38106 {
         gap: 0;
         padding-right: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);

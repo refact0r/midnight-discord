@@ -4,9 +4,9 @@
     initial-value: off;
 }
 
-@container root style(--panel-blur: on) {
+@container body style(--panel-blur: on) {
     .visual-refresh {
-        body {
+        #app-mount {
             --panel-backdrop-filter: blur(var(--blur-amount));
         }
 
@@ -33,7 +33,7 @@
     initial-value: off;
 }
 
-@container root style(--transparency-tweaks: on) {
+@container body style(--transparency-tweaks: on) {
     .visual-refresh {
         .formWithLoadedChatInput_f75fb0:before,
         .children__9293f:after {
