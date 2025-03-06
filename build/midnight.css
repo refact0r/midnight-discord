@@ -9,6 +9,13 @@
 
 body {
     container-name: body;
+
+    /* font, change to '' for default discord font */
+    --font: 'figtree';
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
 }
 
 .visual-refresh {
@@ -303,6 +310,9 @@ body {
     }
     .endCap__908e2 {
         margin-top: calc(var(--divider-thickness) / -2);
+    }
+    .divider__908e2 .content__908e2 {
+        margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
     }
 
     /* improve highlight message left edge */
