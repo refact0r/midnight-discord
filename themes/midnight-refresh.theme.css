@@ -13,7 +13,7 @@
 /* import theme modules */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
-:root {
+body {
     /* font, change to '' for default discord font */
     --font: 'figtree';
 
@@ -24,6 +24,7 @@
     /* animation/transition options */
     --animations: on; /* turn off to disable all midnight animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
 
     /* top bar options */
     --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
@@ -33,21 +34,37 @@
     --custom-window-controls: on; /* turn off to use discord default window controls */
     --window-control-size: 14px; /* size of custom window controls */
 
+    /* dms button icon options */
+    --dms-icon: on; /* set to default to use discord icon, on to use custom icon, off to disable completely */
+    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+
+    /* dms button background options */
+    --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+
     /* background image options */
     --background-image: off; /* turn on to use a background image */
     --background-image-url: url(''); /* url of the background image */
 
     /* transparency/blur options */
-    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS */
-    /* FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
     --panel-blur: off; /* turn on to blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
 
-    /* more options */
-    --colors: on; /* turn off to use discord default colors */
+    /* other options */
     --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+}
+
+/* color options */
+:root {
+    --colors: on; /* turn off to use discord default colors */
 
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */

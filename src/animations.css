@@ -4,7 +4,12 @@
     initial-value: on;
 }
 
-@container root style(--animations: on) {
+body {
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+}
+
+@container body style(--animations: on) {
     .visual-refresh {
         /* list hover animations */
         .wrapper__2ea32 .link__2ea32 /* channels */,
