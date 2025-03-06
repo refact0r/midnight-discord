@@ -803,7 +803,8 @@ body {
             background-color: var(--bg-3);
         }
 
-        .colorable_f1ceac.primaryDark_f1ceac {
+        .colorable_f1ceac.primaryDark_f1ceac,
+        .reaction_f8896c /* forum post reaction */ {
             background-color: var(--bg-2);
         }
 
@@ -1000,7 +1001,7 @@ body {
         .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
             background-color: var(--offline) !important;
         }
-        rect[fill='#44a25b'] {
+        rect[fill='#43a25a'] {
             fill: var(--online);
         }
         .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
@@ -1033,7 +1034,8 @@ body {
             --radio-bar-accent-color: var(--red-2) !important;
         }
 
-        ::selection {
+        ::selection,
+        .highlight {
             background: var(--accent-3);
             color: var(--text-0);
         }
