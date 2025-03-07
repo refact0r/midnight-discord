@@ -1034,6 +1034,10 @@ body {
             --radio-bar-accent-color: var(--red-2) !important;
         }
 
+        #vc-spotify-player {
+            --vc-spotify-green: var(--accent-new);
+        }
+
         ::selection,
         .highlight {
             background: var(--accent-3);
