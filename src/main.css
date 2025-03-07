@@ -4,6 +4,10 @@
     container-name: root;
     --custom-guild-list-padding: 12px;
     --panel-backdrop-filter: none;
+}
+
+body {
+    container-name: body;
 
     /* font, change to '' for default discord font */
     --font: 'figtree';
@@ -11,18 +15,6 @@
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-
-    /* animation/transition options */
-    --animations: on; /* turn off to disable all midnight animations/transitions */
-    --list-item-transition: 0.2s ease; /* transition for list items */
-
-    /* top bar options */
-    --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
-    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
-
-    /* more options */
-    --colors: on; /* turn off to use discord default colors */
-    --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
 }
 
 .visual-refresh {
@@ -318,6 +310,9 @@
     .endCap__908e2 {
         margin-top: calc(var(--divider-thickness) / -2);
     }
+    .divider__908e2 .content__908e2 {
+        margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
+    }
 
     /* improve highlight message left edge */
     .message__5126c.mentioned__5126c::before,
@@ -377,7 +372,7 @@
     }
 }
 
-:root {
+body {
     --font-primary: var(--font), 'gg sans';
     --font-display: var(--font), 'gg sans';
 }
