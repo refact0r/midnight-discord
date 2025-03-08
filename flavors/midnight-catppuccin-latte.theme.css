@@ -1,0 +1,95 @@
+/**
+ * @name Midnight (latte)
+ * @description A light and simple theme based on Catppuccin's Latte and refact0rs Midnight
+ * @author refact0r, theh4lo
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly */
+
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* top left corner text */
+	--corner-text: 'Catppuccin';
+
+	/* color of status indicators and window controls */
+	--online-indicator: hsl(145, 65%, 39%); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(359, 86%, 60%); /* change to #f13f43 for default red */
+	--idle-indicator: hsl(40, 86%, 57%); /* change to #f0b232 for default yellow */
+	--streaming-indicator: hsl(262, 47%, 40%); /* change to #593695 for default purple */
+
+	/* accent colors */
+	--accent-1: hsl(316, 73%, 69%); /* links */
+	--accent-2: hsl(316, 73%, 69%); /* general unread/mention elements */
+	--accent-3: hsl(234, 11%, 35%); /* accent buttons */
+	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
+	--mention: hsla(316, 73%, 69%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(214, 17%, 92%, 0.1); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: white; /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
+	--text-2: hsl(234, 16%, 35%); /* headings and important text */
+	--text-3: hsl(234, 16%, 35%); /* normal text */
+	--text-4: hsl(234, 16%, 35%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(316deg, 73%, 69%); /* dark buttons */
+	--bg-3: hsl(224, 19%, 89%); /* spacing, secondary elements */
+	--bg-4: hsl(218, 19%, 92%); /* main background color */
+	--hover: hsla(316, 73%, 69%), 0.1); /* channels and buttons when hovered */
+	--active: hsla(316, 73%, 69%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(234, 11%, 35%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
+	--spacing: 15px;
+
+	/* animations */
+	/* Reduced motion affects these */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/5/52/Coffee_font_awesome.svg'); /* custom icon url */ 
+	--moon-icon-size: auto;
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: saturate(0.3) hue-rotate(-05deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+}
+/* catppuccin icon */
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+	background-color: transparent !important;
+	background-size: cover;
+}
+
