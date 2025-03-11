@@ -371,6 +371,13 @@ body {
     .root__24502 {
         background: none;
     }
+
+    /* remove unnecessary backgrounds */
+    .app__160d8,
+    #app-mount,
+    body {
+        background: transparent !important;
+    }
 }
 
 body {
@@ -1264,6 +1271,18 @@ body {
         .children__9293f:after {
             display: none;
         }
+    }
+}
+
+@property --remove-bg-layer {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--remove-bg-layer: on) {
+    .bg__960e4 {
+        background: transparent !important;
     }
 }
 

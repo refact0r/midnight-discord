@@ -41,3 +41,15 @@
         }
     }
 }
+
+@property --remove-bg-layer {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--remove-bg-layer: on) {
+    .bg__960e4 {
+        background: transparent !important;
+    }
+}
