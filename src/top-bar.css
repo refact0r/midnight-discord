@@ -1,0 +1,97 @@
+@property --move-top-bar-buttons {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--move-top-bar-buttons: on) {
+    .visual-refresh {
+        /* remove help button */
+        .trailing_c38106 > a[href="https://support.discord.com"]
+        {
+            display: none;
+        }
+
+        /* make server list inner scroll */
+        .stack_dbd263 {
+            overflow: hidden scroll;
+            scrollbar-width: none;
+        }
+        /* create space for inbox button */
+        .tutorialContainer__1f388 {
+            margin-bottom: 48px;
+        }
+        /* move inbox button */
+        .recentsIcon_c99c29 {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
+            left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
+        }
+        /* style inbox button */
+        .recentsIcon_c99c29 .button__85643 {
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-surface-higher);
+            border-radius: var(--radius-md);
+            transition: background-color 0.15s ease-out;
+
+            &:hover {
+                background-color: var(--bg-brand);
+
+                .icon__9293f {
+                    color: var(--white);
+                }
+            }
+        }
+        .recentsIcon_c99c29 .svg__2338f {
+            transition: color 0.15s ease-out;
+            width: 24px;
+            height: 24px;
+        }
+        /* shift inbox popup panel into view */
+        .recentMentionsPopout__95796 {
+            transform: translateX(100%);
+        }
+        /* move top bar title */
+        .title_c38106 {
+            padding-left: var(--gap);
+            justify-content: flex-start;
+        }
+        .title__85643 {
+            gap: 4px;
+        }
+        /* style top bar title */
+        .title__85643 .icon_f34534 {
+            width: 16px;
+            height: 16px;
+            display: none;
+        }
+        .title__85643 .text-sm\/medium_cf4812 {
+            line-height: 90%;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        /* fix settings animation transform */
+        .layer__960e4.baseLayer__960e4 {
+            transform: none !important;
+        }
+        .layers__960e4 > .layer__960e4.animating__960e4 {
+            will-change: opacity;
+        }
+
+        /* unread icon */
+        .recentsIcon_c99c29 .iconBadge__9293f {
+            --custom-icon-offset: 8px;
+            width: 10px;
+            height: 10px;
+            transition: background 0.15s ease-out;
+        }
+
+        .recentsIcon_c99c29:hover .iconBadge__9293f {
+            background: var(--white);
+        }
+    }
+}

@@ -89,8 +89,13 @@
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
 	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
 	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+
+	/* choose style for window control buttons (minimize-maximize-close) */
+	/* block to show, none to hide; choose only one to show!*/
+	--windows-nav: none; /* default windows-style buttons */
+	--custom-nav: block; /* custom mac-style buttons */
 }
-.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background-image: url('https://raw.githubusercontent.com/NYRI4/LilyPichu/main/assets/icon.png');
 	background-color: transparent !important;
 	background-size: cover;

@@ -1,3 +1,11 @@
+> [!WARNING]  
+> recently discord has been rolling out a new UI update ("desktop visual refresh") to some users, which breaks the theme. if you have this update, you have two options:
+>
+> 1. join the [discord server](https://discord.gg/nz87hXyvcy) and see the pinned message in #important for how to revert the update. then you can use the normal theme.
+> 2. use the experimental refresh version of midnight
+>    - download this [theme file](https://github.com/refact0r/midnight-discord/blob/master/themes/midnight-refresh.theme.css)
+>    - or use this theme link: <https://refact0r.github.io/midnight-discord/build/midnight.css>
+
 <img width=800 src="https://github.com/refact0r/midnight-discord/assets/34758569/b831a8a7-1e7f-4114-9420-cbbb8e8f184f">
 
 # midnight

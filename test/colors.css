@@ -1,0 +1,217 @@
+:root {
+	/* font, change to '' for default discord font */
+	--font: 'figtree';
+
+	/* text colors */
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
+	--text-2: hsl(220, 25%, 70%); /* headings and important text */
+	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
+	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
+	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+
+	--border-light: hsl(230, 20%, 40%, 0.1);
+	--border: hsl(230, 20%, 40%, 0.2);
+	--button-border: hsl(0, 0%, 100%, 0.1);
+
+	--red-1: hsl(340, 60%, 65%);
+	--red-2: color-mix(in hsl, var(--red-1), #000 10%);
+	--red-3: color-mix(in hsl, var(--red-1), #000 20%);
+	--red-4: color-mix(in hsl, var(--red-1), #000 30%);
+	--green-1: hsl(140, 60%, 55%);
+	--green-2: color-mix(in hsl, var(--green-1), #000 10%);
+	--green-3: color-mix(in hsl, var(--green-1), #000 20%);
+	--green-4: color-mix(in hsl, var(--green-1), #000 30%);
+	--yellow-1: hsl(50, 60%, 60%);
+	--purple-1: hsl(260, 60%, 60%);
+
+	/* color of status indicators */
+	--online: var(--green-1); /* change to #23a55a for default green */
+	--dnd: var(--red-1); /* change to #f23f43 for default red */
+	--idle: var(--yellow-1); /* change to #f0b232 for default yellow */
+	--streaming: var(--purple-1); /* change to #593695 for default purple */
+
+	/* accent colors */
+	--accent-1: hsl(190, 70%, 60%); /* links */
+	--accent-2: hsl(190, 70%, 48%); /* general unread/mention elements */
+	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
+	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
+	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
+}
+
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+	--activity-card-background: red;
+	--autocomplete-bg: var(--bg-3);
+
+	--background-mentioned: var(--mention);
+	--background-mentioned-hover: var(--mention-hover);
+	--background-message-highlight: var(--bg-2);
+	--background-message-highlight-hover: var(--bg-3);
+	--background-message-hover: var(--message-hover);
+
+	--background-primary: var(--bg-4);
+	--background-secondary: var(--bg-3);
+	--background-secondary-alt: var(--bg-3);
+	--background-tertiary: var(--bg-4);
+
+	--bg-base-primary: red;
+	--bg-base-secondary: var(--bg-4);
+	--bg-base-tertiary: var(--bg-3);
+	--background-mod-subtle: var(--bg-3);
+	--background-mod-normal: var(--bg-3);
+	--background-mod-strong: var(--bg-3);
+	--background-base-low: var(--bg-4);
+	--background-base-lower: var(--bg-4);
+	--background-base-lowest: var(--bg-4);
+	--background-surface-high: var(--bg-3);
+	--background-surface-higher: var(--bg-3);
+	--background-surface-highest: var(--bg-3);
+	--background-floating: var(--bg-3);
+	--chat-background-default: var(--bg-3);
+	--input-background: var(--bg-3);
+	--modal-background: var(--bg-4);
+	--modal-footer-background: var(--bg-4);
+
+	--background-modifier-accent: var(--hover);
+	--background-modifier-active: var(--active);
+	--background-modifier-hover: var(--hover);
+	--background-modifier-selected: var(--active);
+
+	--bg-mod-faint: var(--bg-3);
+	--bg-mod-subtle: var(--bg-2);
+	--bg-mod-strong: var(--bg-2);
+	--bg-brand: var(--accent-3);
+
+	--border-faint: var(--border-light);
+	--border-subtle: var(--border);
+	--border-normal: var(--border);
+	--border-strong: var(--border);
+	--input-border: var(--border);
+
+	--button-danger-background: var(--red-2);
+	--button-danger-background-active: var(--red-4);
+	--button-danger-background-hover: var(--red-3);
+	--button-danger-background-disabled: red;
+	--button-danger-border: var(--button-border);
+
+	--button-filled-brand-border: var(--button-border);
+	--button-filled-brand-inverted-background-active: red;
+	--button-filled-brand-inverted-background-hover: red;
+	--button-filled-brand-inverted-text: red;
+	--button-filled-white-background-active: red;
+	--button-filled-white-background-hover: red;
+	--button-filled-white-text: red;
+
+	--button-outline-danger-background: var(--bg-2);
+	--button-outline-danger-background-active: var(--text-5);
+	--button-outline-danger-background-hover: var(--bg-1);
+	--button-outline-danger-border: var(--border-light);
+	--button-outline-danger-border-active: var(--border-light);
+	--button-outline-danger-border-hover: var(--border-light);
+	--button-outline-danger-text: var(--red-1);
+	--button-outline-danger-text-active: var(--red-1);
+	--button-outline-danger-text-hover: var(--red-1);
+
+	--button-positive-background: var(--green-2);
+	--button-positive-background-active: var(--green-4);
+	--button-positive-background-hover: var(--green-3);
+	--button-positive-background-disabled: red;
+	--button-positive-border: var(--button-border);
+
+	--button-secondary-background: var(--bg-2);
+	--button-secondary-background-active: var(--text-5);
+	--button-secondary-background-hover: var(--bg-1);
+	--button-secondary-background-disabled: red;
+	--button-secondary-text: var(--text-3);
+
+	--button-transparent-background: red;
+	--button-transparent-background-active: red;
+	--button-transparent-background-hover: red;
+	--button-transparent-text: red;
+
+	--card-primary-bg: var(--bg-3);
+	--card-secondary-bg: red;
+	--channel-icon: var(--text-3);
+	--channels-default: var(--text-4);
+
+	--header-primary: var(--text-2);
+	--header-secondary: var(--text-4);
+	--header-muted: var(--text-4);
+
+	--icon-muted: var(--text-5);
+	--icon-primary: var(--text-3);
+	--icon-secondary: var(--text-4);
+	--icon-tertiary: var(--text-4);
+
+	--info-danger-background: red;
+	--info-danger-text: var(--red-new-12);
+	--info-help-background: var(--blue-new-77);
+	--info-help-text: var(--blue-new-16);
+	--info-positive-background: var(--green-new-76);
+	--info-positive-text: var(--green-new-17);
+	--info-warning-background: var(--yellow-new-76);
+	--info-warning-text: var(--yellow-new-15);
+
+	--text-primary: var(--text-3);
+	--text-secondary: var(--text-4);
+	--text-normal: var(--text-3);
+	--text-default: var(--text-3);
+	--text-tertiary: var(--text-4);
+	--text-muted: var(--text-5);
+
+	--interactive-normal: var(--text-4);
+	--interactive-hover: var(--text-3);
+	--interactive-active: var(--text-3);
+	--interactive-muted: var(--text-5);
+
+	--channel-text-area-placeholder: var(--text-5);
+
+	--scrollbar-auto-thumb: var(--bg-3);
+	--scrollbar-auto-track: transparent;
+	--scrollbar-thin-thumb: var(--bg-3);
+	--scrollbar-thin-track: transparent;
+}
+
+.visual-refresh {
+	::placeholder {
+		color: var(--text-5);
+	}
+
+	.modeUnreadImportant__2ea32 .icon__2ea32,
+	.wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
+		color: var(--text-3);
+	}
+
+	.text_b88801 > strong /* xxx is typing.. */ {
+		color: var(--text-3);
+	}
+
+	.folder__48112[aria-expanded="false"] > .folderIconWrapper__48112 /* collapsed folders */ {
+		--background-primary: var(--bg-3);
+	}
+
+	.panel__5dec7 /* game activity panel */,
+	#vc-spotify-player /* vencord spotify plugin */ {
+		background-color: var(--bg-4);
+	}
+
+	.side_b3f026 .item_b3f026:hover /* settings tab */ {
+		background-color: var(--bg-3) !important;
+	}
+	.side_b3f026 .item_b3f026:active,
+	.side_b3f026 .item_b3f026.selected_b3f026 {
+		background-color: var(--bg-2) !important;
+	}
+}

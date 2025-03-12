@@ -1,0 +1,17 @@
+@property --small-user-panel {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--small-user-panel: on) {
+    .visual-refresh {
+        .base_c48ade {
+            grid-template-areas:
+                'titleBar titleBar titleBar'
+                'guildsList notice notice'
+                'guildsList channelsList page'
+                'guildsList userPanel page';
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@property --dms-icon {
+    syntax: 'default | off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+body {
+    --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* color of the background image (css background) */
+}
+
+@container body style(--dms-icon: on) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
+        display: none;
+    }
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 65%;
+        height: 65%;
+        background: var(--dms-icon-color-before);
+        mask-image: var(--dms-icon-svg-url);
+        mask-size: var(--dms-icon-svg-size);
+        mask-position: center;
+        mask-repeat: no-repeat;
+        transition: background-color 0.15s ease-out;
+    }
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before {
+        transform: rotate(0deg) scale(1);
+    }
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before,
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8 > .childWrapper__6e9f8::before {
+        background: var(--dms-icon-color-after);
+        transform: rotate(-360deg) scale(0.8);
+    }
+
+    @container body style(--animations: on) {
+        .wrapper__6e9f8[data-list-item-id='guildsnav___home'] .childWrapper__6e9f8::before {
+            transition: background-color 0.15s ease-out, transform var(--dms-icon-svg-transition);
+        }
+    }
+}
+
+@container body style(--dms-icon: off) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
+        display: none;
+    }
+}
+
+@property --dms-background {
+    syntax: 'off | image | color';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--dms-background: image) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+        background-image: var(--dms-background-image-url);
+        background-color: transparent !important;
+        background-size: cover;
+        background-position: var(--dms-background-image-position);
+    }
+}
+
+@container body style(--dms-background: color) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+        background: var(--dms-background-color);
+    }
+}
