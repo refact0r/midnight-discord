@@ -320,6 +320,15 @@ body {
     .ephemeral__5126c::before {
         width: var(--divider-thickness);
         border-radius: var(--divider-thickness);
+        height: calc(100% - 2 * var(--radius-sm));
+        top: var(--radius-sm);
+        left: calc(var(--divider-thickness) / -2 + 1px);
+        left: calc(var(--radius-sm) / 2);
+    }
+
+    .message__5126c {
+        border-radius: var(--radius-md);
+        margin-left: 4px;
     }
 
     /* improve server selected marker */
