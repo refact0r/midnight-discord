@@ -872,47 +872,6 @@ button.button__67645 /* make user panel buttons round */ {
     transform: rotate(360deg);
 }
 
-/* hide unread bar on hover */
-.messagesWrapper__36d07 {
-    overflow: hidden;
-}
-.newMessagesBar__0f481 {
-    top: -48px;
-    height: 72px;
-    transition: top var(--unread-bar-transition);
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-}
-.newMessagesBar__0f481::before {
-    content: '';
-    background: var(--accent-3);
-    box-shadow: var(--elevation-low);
-    width: 100%;
-    position: absolute;
-    height: 32px;
-    border-radius: var(--roundness-s);
-}
-.newMessagesBar__0f481:hover {
-    top: -12px;
-}
-.top__7aaec > .containerPadding__7aaec {
-    padding: 16px;
-    margin-top: -40px;
-    transition: margin-top var(--unread-bar-transition);
-}
-.top__7aaec:hover > .containerPadding__7aaec:hover {
-    margin-top: -12px;
-}
-.bottom__7aaec > .containerPadding__7aaec {
-    padding: 16px;
-    margin-bottom: -40px;
-    transition: margin-bottom var(--unread-bar-transition);
-}
-.bottom__7aaec > .containerPadding__7aaec:hover {
-    margin-bottom: -12px;
-}
-
 /* Decor Compat */
 .vc-decor-sectioned-grid-list-container {
     border-radius: 0% !important;
