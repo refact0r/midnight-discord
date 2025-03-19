@@ -29,13 +29,11 @@
     --accent-3: var(--blue-3); /* accent buttons */
     --accent-4: var(--blue-4); /* accent buttons when hovered */
     --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 60%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--blue-2), transparent 95%) 60%,
-        transparent
-    ); /* background of messages that mention you when hovered */
     --accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
     --online: var(--green-2); /* change to #44a25b for default green */
@@ -95,8 +93,8 @@
         --background-mentioned-hover: var(--mention-hover);
         --background-message-automod: red;
         --background-message-automod-hover: red;
-        --background-message-highlight: var(--bg-2);
-        --background-message-highlight-hover: var(--bg-3);
+        --background-message-highlight: var(--reply);
+        --background-message-highlight-hover: var(--reply-hover);
         --background-message-hover: var(--message-hover);
 
         --background-primary: var(--bg-4);
@@ -259,10 +257,10 @@
         --status-danger: var(--red-2);
         --status-danger-background: var(--red-3);
         --status-danger-text: var(--white);
-        --status-dnd: red;
-        --status-idle: red;
-        --status-offline: red;
-        --status-online: red;
+        --status-dnd: var(--dnd); /* server profiles */
+        --status-idle: var(--idle);
+        --status-offline: var(--offline);
+        --status-online: var(--online);
         --status-positive: var(--green-2);
         --status-positive-background: var(--green-2);
         --status-positive-text: var(--white);
@@ -366,6 +364,10 @@
         }
         .replying__5126c:before /* reply message left edge */ {
             background-color: var(--text-2) !important;
+        }
+
+        #app-mount .message__5126c.replying__5126c:hover /* override fix for message reply hover */ {
+            background: var(--reply-hover);
         }
 
         .ephemeral__5126c /* ephemeral messages */ {

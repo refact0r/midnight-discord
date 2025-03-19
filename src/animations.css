@@ -39,5 +39,8 @@ body {
         .wrapper__2ea32:hover .unread__2ea32 {
             margin-left: 4px;
         }
+        .typeThread__2ea32 .unread__2ea32 {
+            left: -31px;
+        }
     }
 }
