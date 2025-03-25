@@ -507,10 +507,10 @@ body {
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
-    --online: var(--green-2); /* change to #44a25b for default green */
-    --dnd: var(--red-2); /* change to #d83a42 for default red */
-    --idle: var(--yellow-2); /* change to #c99656 for default yellow */
-    --streaming: var(--purple-2); /* change to #593695 for default purple */
+    --online: var(--green-2); /* change to #43a25a for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #ca9654 for default */
+    --streaming: var(--purple-2); /* change to #593695 for default */
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
@@ -1028,7 +1028,7 @@ body {
         .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
             background-color: var(--online) !important;
         }
-        rect[fill='#c99656'] {
+        rect[fill='#ca9654'] {
             fill: var(--idle);
         }
         .status_a423bd[style='background-color: rgb(201, 150, 86);'] {
