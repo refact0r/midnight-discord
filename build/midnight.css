@@ -354,7 +354,8 @@ body {
     }
 
     /* improve borders */
-    .reaction__23977 /* message reactions */ {
+    .reaction__23977 /* message reactions */,
+    .reactionBtn__23977.forceShow__23977 /* add reaction button */ {
         border-width: 2px;
     }
 
@@ -1015,6 +1016,10 @@ body {
             outline: 2px solid var(--accent-2);
         }
 
+        .reactionBtn__23977.forceShow__23977:hover /* fix add reaction button border hover */ {
+            border-color: var(--bg-2);
+        }
+
         /* status indicators */
         rect[fill='#83838b'] {
             fill: var(--offline);
@@ -1022,7 +1027,8 @@ body {
         .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
             background-color: var(--offline) !important;
         }
-        rect[fill='#43a25a'] {
+        rect[fill='#43a25a'],
+        path[fill='#43a25a'] /* status activity icon */ {
             fill: var(--online);
         }
         .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
@@ -1042,6 +1048,9 @@ body {
         }
         rect[fill='#593695'] {
             fill: var(--streaming);
+        }
+        div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
+            background-color: var(--online) !important;
         }
 
         /* fix radio bar button colors */
