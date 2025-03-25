@@ -28,7 +28,7 @@ body {
 
     /* top bar options */
     --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
-    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
+    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar (default is 36px)*/
 
     /* window controls */
     --custom-window-controls: on; /* turn off to use discord default window controls */
