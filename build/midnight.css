@@ -790,6 +790,8 @@ body {
 
         --red-400: var(--red-2);
         --red-500: var(--red-3);
+
+        --green-360: var(--green-2);
     }
 
     .visual-refresh {
