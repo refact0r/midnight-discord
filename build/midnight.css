@@ -50,7 +50,7 @@ body {
 
     .base_c48ade /* base grid */ {
         display: grid;
-        grid-template-columns: [start] min-content [guildsEnd] min-content [channelsEnd] min-content [end];
+        grid-template-columns: [start] min-content [guildsEnd] min-content [channelsEnd] 1fr [end];
         grid-template-rows: [top] var(--custom-app-top-bar-height) [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
         grid-template-areas:
             'titleBar titleBar titleBar'
@@ -1343,6 +1343,9 @@ body {
                 'guildsList notice notice'
                 'guildsList channelsList page'
                 'guildsList userPanel page';
+        }
+        .panels_c48ade {
+            max-width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         }
     }
 }
