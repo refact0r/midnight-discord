@@ -228,7 +228,7 @@
         --info-danger-text: red;
         --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
         --info-help-foreground: var(--blue-1);
-        --info-help-text: red;
+        --info-help-text: var(--blue-1);
         --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
         --info-positive-text: var(--green-1);
         --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
@@ -306,7 +306,8 @@
         --red-400: var(--red-2);
         --red-500: var(--red-3);
 
-        --green-360: var(--green-2);
+        --green-360: var(--green-2); /* seems to be mostly used by vencord plugins */
+        --primary-400: var(--text-4);
     }
 
     .visual-refresh {
