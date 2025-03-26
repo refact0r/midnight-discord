@@ -82,13 +82,26 @@ body {
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
     }
-    .hasBanner_f37cb1 .header_f37cb1 /* server name + banner */ {
-        background-color: var(--background-base-lower);
-    }
     .clickable_f37cb1,
     .container__2637a /* channel list inner */,
     .header_f37cb1 /* server name */ {
         background: none;
+    }
+
+    /* fix discord's idiotic server banners */
+    .bannerImage_f37cb1,
+    .bannerImg_f37cb1 {
+        width: 100%;
+    }
+    .bannerVisible_f37cb1 .headerEllipseBackdrop_f37cb1 {
+        display: none;
+    }
+    .headerGlass_f37cb1 {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
 
     .sidebar_c48ade:after /* server list + channel list bottom shadow */ {
