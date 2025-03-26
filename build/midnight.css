@@ -61,12 +61,12 @@ body {
     }
 
     .panels_c48ade /* user panel */ {
-        width: 100%;
+        width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         position: static;
         grid-area: userPanel;
         margin: var(--gap) 0 0 0;
         overflow: hidden;
-        max-width: 250px;
+        max-width: calc(var(--custom-guild-sidebar-width) + var(--gap) + 4px);
     }
 
     .sidebar_c48ade /* server list + channel list + user panel group */ {
