@@ -29,6 +29,20 @@ add `https://refact0r.github.io/midnight-discord/build/midnight.css` to your the
 
 need help? want to give feedback? want to be notified about upcoming changes? join <https://discord.gg/nz87hXyvcy>
 
+## contributing
+
+this theme uses a dev script to check for changes in the source css files and combine them into a build file. to run locally:
+
+1. clone the repository.
+2. run `npm i`.
+3. create a `.env` file in the project root with the paths of any local theme files you want to update (comma separated)
+```
+DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\midnight-dev.theme.css
+```
+4. run `npm run dev`.
+5. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
+6. make a pull request with your changes!
+
 ## credits
 
 original design inspired by <https://github.com/schnensch0/zelk>
