@@ -1050,7 +1050,7 @@ body {
         path[fill='#43a25a'] /* status activity icon */ {
             fill: var(--online);
         }
-        .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
+        .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
             background-color: var(--online) !important;
         }
         rect[fill='#ca9654'] {
@@ -1291,7 +1291,7 @@ body {
         .menu_c1e9c4 /* context menus */,
         .contentWrapper__08434 /* emoji/gif panel */,
         .root__49fc1 /* modals like invite */,
-        .outer_c0bea0 /* small profile popup */,
+        .outer_c0bea0.biteSize_c0bea0:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
         .messagesPopoutWrap__45690 /* inbox */,

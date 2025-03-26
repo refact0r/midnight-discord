@@ -17,7 +17,7 @@
         .menu_c1e9c4 /* context menus */,
         .contentWrapper__08434 /* emoji/gif panel */,
         .root__49fc1 /* modals like invite */,
-        .outer_c0bea0 /* small profile popup */,
+        .outer_c0bea0.biteSize_c0bea0:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
         .messagesPopoutWrap__45690 /* inbox */,
