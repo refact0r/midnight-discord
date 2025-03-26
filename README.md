@@ -1,20 +1,14 @@
-<img width=800 src="./assets/preview.png">
+<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/preview.png">
 
 # midnight
 
 a dark, customizable discord theme.
 
-<img width=800 src="./assets/screenshot1.png">
+<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot1.png">
 
-*default midnight*
+<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot2.png">
 
-<img width=800 src="./assets/screenshot2.png">
-
-*midnight with colors disabled and options enabled*
-
-<img width=800 src="./assets/screenshot3.png">
-
-*midnight with transparency and background enabled*
+<img width=800 src="https://github.com/refact0r/midnight-discord/raw/master/assets/screenshot3.png">
 
 ## install
 
