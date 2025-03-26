@@ -4,7 +4,6 @@
     initial-value: off;
 }
 
-
 @container body style(--small-user-panel: on) {
     .visual-refresh {
         .base_c48ade {
