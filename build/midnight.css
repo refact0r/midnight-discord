@@ -1344,6 +1344,9 @@ body {
                 'guildsList channelsList page'
                 'guildsList userPanel page';
         }
+        .panels_c48ade {
+            max-width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
+        }
     }
 }
 
