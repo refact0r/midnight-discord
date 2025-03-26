@@ -565,7 +565,7 @@
         path[fill='#43a25a'] /* status activity icon */ {
             fill: var(--online);
         }
-        .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
+        .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
             background-color: var(--online) !important;
         }
         rect[fill='#ca9654'] {
