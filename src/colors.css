@@ -383,6 +383,9 @@
         .botTagRegular__82f07 /* bot tag */ {
             background-color: var(--accent-2);
         }
+        .botTagOP__82f07 /* forum post op tag */ {
+            color: var(--text-0);
+        }
 
         .container__87bf1 /* settings checkbutton background */ {
             background-color: var(--bg-1) !important;
