@@ -5,7 +5,7 @@
  * @version 2.0.1
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/midnight-discord
- * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight-catppuccin-macchiato.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -43,7 +43,7 @@ body {
 
     /* dms button background options */
     --dms-background: image; /* off to disable, image to use a background image, color to use a custom color/gradient */
-    --dms-background-image-url: url('https://i.imgur.com/9AVeVI2.png'); /* url of the background image */
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png'); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
 
@@ -73,29 +73,29 @@ body {
     --colors: on; /* turn off to use discord default colors */
 
     /* text colors */
-	--text-0: var(--bg-4); /* text on colored elements */
-	--text-1: hsl(221, 44%, 95%); /* bright text on colored elements */
-	--text-2: hsl(227, 68%, 88%); /* headings and important text */
-	--text-3: hsl(227, 27%, 72%); /* normal text */
-	--text-4: hsl(228, 15%, 57%); /* icon buttons and channels */
-	--text-5: hsl(230, 14%, 41%); /* muted channels/chats and timestamps */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: hsl(227, 68%, 95%); /* bright text on colored elements */
+    --text-2: #cad3f5; /* headings and important text */
+    --text-3: #b8c0e0; /* normal text */
+    --text-4: #8087a2; /* icon buttons and channels */
+    --text-5: #5b6078; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-	--bg-1: hsl(231, 16%, 34%); /* dark buttons when clicked */
-	--bg-2: hsl(230, 19%, 26%); /* dark buttons */
-	--bg-3: hsl(233, 23%, 15%); /* spacing, secondary elements */
-	--bg-4: hsl(232, 23%, 18%); /* main background color */
-	--hover: hsla(229, 15%, 53%, 0.1); /* channels and buttons when hovered */
-	--active: hsla(235, 15%, 53%, 0.2); /* channels and buttons when clicked or selected */
-	--active-2: hsla(235, 15%, 53%, 0.3); /* extra state for transparent buttons */
-	--message-hover: hsla(232, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: #494d64; /* dark buttons when clicked */
+    --bg-2: #363a4f; /* dark buttons */
+    --bg-3: #1e2030; /* spacing, secondary elements */
+    --bg-4: #24273a; /* main background color */
+    --hover: hsla(230, 15%, 53%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(230, 15%, 53%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(230, 15%, 53%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: var(--blue-1); /* links and other accent text */
-    --accent-2: var(--blue-2); /* small accent elements */
-    --accent-3: var(--blue-3); /* accent buttons */
-    --accent-4: var(--blue-4); /* accent buttons when hovered */
-    --accent-5: var(--blue-5); /* accent buttons when clicked */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
     --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -110,38 +110,38 @@ body {
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
-    --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
-    --border: hsl(230, 20%, 40%, 0.2); /* normal border color */
-    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: var(--hover); /* light border color */
+    --border: var(--active); /* normal border color */
+    --button-border: hsl(230, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
-    --red-1: oklch(76% 0.12 0);
-    --red-2: oklch(70% 0.12 0);
-    --red-3: oklch(64% 0.12 0);
-    --red-4: oklch(58% 0.12 0);
-    --red-5: oklch(52% 0.12 0);
+    --red-1: hsl(351deg, 74%, 78%);
+    --red-2: hsl(351deg, 74%, 73%);
+    --red-3: hsl(351deg, 74%, 73%);
+    --red-4: hsl(351deg, 74%, 68%);
+    --red-5: hsl(351deg, 74%, 63%);
 
-    --green-1: oklch(76% 0.11 170);
-    --green-2: oklch(70% 0.11 170);
-    --green-3: oklch(64% 0.11 170);
-    --green-4: oklch(58% 0.11 170);
-    --green-5: oklch(52% 0.11 160);
+    --green-1: hsl(105deg, 48%, 77%);
+    --green-2: hsl(105deg, 48%, 72%);
+    --green-3: hsl(105deg, 48%, 72%);
+    --green-4: hsl(105deg, 48%, 67%);
+    --green-5: hsl(105deg, 48%, 62%);
 
-    --blue-1: oklch(81.2% 0.0779 278.86);
-    --blue-2: oklch(75.2% 0.0779 278.86);
-    --blue-3: oklch(69.2% 0.0779 278.86);
-    --blue-4: oklch(63.2% 0.0779 278.86);
-    --blue-5: oklch(57.2% 0.0779 278.86);
+    --blue-1: hsl(199deg, 66%, 74%);
+    --blue-2: hsl(199deg, 66%, 69%);
+    --blue-3: hsl(199deg, 66%, 69%);
+    --blue-4: hsl(199deg, 66%, 64%);
+    --blue-5: hsl(199deg, 66%, 59%);
 
-    --yellow-1: oklch(80% 0.11 90);
-    --yellow-2: oklch(74% 0.11 90);
-    --yellow-3: oklch(68% 0.11 90);
-    --yellow-4: oklch(62% 0.11 90);
-    --yellow-5: oklch(56% 0.11 90);
+    --yellow-1: hsl(40deg, 70%, 83%);
+    --yellow-2: hsl(40deg, 70%, 78%);
+    --yellow-3: hsl(40deg, 70%, 78%);
+    --yellow-4: hsl(40deg, 70%, 73%);
+    --yellow-5: hsl(40deg, 70%, 68%);
 
-    --purple-1: oklch(76% 0.11 310);
-    --purple-2: oklch(70% 0.11 310);
-    --purple-3: oklch(64% 0.11 310);
-    --purple-4: oklch(58% 0.11 310);
-    --purple-5: oklch(52% 0.11 310);
+    --purple-1: hsl(267deg, 83%, 85%);
+    --purple-2: hsl(267deg, 83%, 80%);
+    --purple-3: hsl(267deg, 83%, 80%);
+    --purple-4: hsl(267deg, 83%, 75%);
+    --purple-5: hsl(267deg, 83%, 70%);
 }
