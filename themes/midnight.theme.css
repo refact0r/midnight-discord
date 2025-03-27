@@ -70,7 +70,7 @@ body {
 
 /* color options */
 :root {
-    --colors: off; /* turn off to use discord default colors */
+    --colors: on; /* turn off to use discord default colors */
 
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */
