@@ -109,6 +109,7 @@ body {
     }
 
     .chat_f75fb0 /* chat group outer */ {
+        border: none !important;
         background: none;
     }
     .container__133bf /* friends page group outer */,
