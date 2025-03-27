@@ -563,25 +563,28 @@
             background-color: var(--offline) !important;
         }
         rect[fill='#43a25a'],
-        path[fill='#43a25a'] /* status activity icon */ {
+        path[fill='#43a25a'] /* status activity icon */,
+        .vc-platform-indicator > svg[fill="#43a25a"] {
             fill: var(--online);
         }
         .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
             background-color: var(--online) !important;
         }
-        rect[fill='#ca9654'] {
+        rect[fill='#ca9654'],
+        .vc-platform-indicator > svg[fill='#ca9654'] {
             fill: var(--idle);
         }
         .status_a423bd[style='background-color: rgb(201, 150, 86);'] {
             background-color: var(--idle) !important;
         }
-        rect[fill='#d83a42'] {
+        rect[fill='#d83a42'],
+        .vc-platform-indicator > svg[fill='#d83a42'] {
             fill: var(--dnd);
         }
         .status_a423bd[style='background-color: rgb(216, 58, 66);'] {
             background-color: var(--dnd) !important;
         }
-        rect[fill='#593695'] {
+        rect[fill='#9147ff'] {
             fill: var(--streaming);
         }
         div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
