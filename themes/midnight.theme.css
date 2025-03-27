@@ -59,13 +59,18 @@ body {
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
 
+    /* chatbar options */
+    --flipped-chatbar: on; /* turn on to make the chatbar look nicer */
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
+    --chatbar-padding: 8px; /* padding of the chatbar */
+
     /* other options */
     --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
 }
 
 /* color options */
 :root {
-    --colors: on; /* turn off to use discord default colors */
+    --colors: off; /* turn off to use discord default colors */
 
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */

@@ -555,6 +555,10 @@
             border-color: var(--bg-2);
         }
 
+        .flash__03436[data-flash=true] /* reply message flash */ {
+            background: var(--background-message-highlight);
+        }
+
         /* status indicators */
         rect[fill='#83838b'] {
             fill: var(--offline);
