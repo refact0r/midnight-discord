@@ -699,7 +699,7 @@ body {
         --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
 
         --card-primary-bg: var(--bg-3);
-        --card-secondary-bg: red;
+        --card-secondary-bg: var(--bg-2);
         --channel-icon: var(--text-4);
         --channels-default: var(--text-4);
 
