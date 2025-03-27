@@ -109,7 +109,9 @@ body {
         display: none;
     }
 
-    .chat_f75fb0 /* chat group outer */,
+    .chat_f75fb0 /* chat group outer */ {
+        background: none;
+    }
     .container__133bf /* friends page group outer */,
     .page_c48ade {
         padding-bottom: var(--gap);
