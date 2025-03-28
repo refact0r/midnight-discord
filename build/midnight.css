@@ -233,6 +233,11 @@ body {
         background: none;
     }
 
+    .root_bfe55a > div:first-child {
+        align-items: center;
+        justify-content: center;
+    }
+
     .page_c48ade > div > .chatLayerWrapper__01ae2 /* forum/thread chat outer */ {
         margin: 0 var(--gap) var(--gap) 0;
         height: calc(100% - var(--gap));
