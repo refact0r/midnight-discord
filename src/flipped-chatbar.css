@@ -13,50 +13,47 @@ body {
 @container body style(--flipped-chatbar: on) {
     .visual-refresh {
         .form_f75fb0 {
-            display: flex;
-            flex-direction: column;
-            padding: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
-            margin-top: 0;
+            margin: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
+            padding: 0;
+            --chatbar-border-color: var(--border-faint);
         }
         .channelTextArea_f75fb0 {
-            margin-bottom: 0;
+            margin: 0;
+            border-color: var(--chatbar-border-color);
+            overflow: hidden;
+            transition: none;
         }
         .base_b88801 {
-            position: static;
-            order: -1;
-            padding: 0 8px;
+            top: -25px;
+            left: 0;
+            right: 0;
             background-color: var(--chat-background-default);
-            transition: border-color 0.2s ease;
-            border: 1px solid var(--border-faint);
-            border-bottom: none;
+            padding: 0 8px;
             border-radius: var(--radius-md) var(--radius-md) 0 0;
+            border: 1px solid var(--chatbar-border-color);
+            border-bottom: none;
+            transition: none;
         }
-        .stackedBars__74017 {
-            transition: border-color 0.2s ease;
-            border-color: var(--border-faint) !important;
+        .stackedBars__74017,
+        .threadSuggestionBar__841c8 {
+            border-color: var(--chatbar-border-color) !important;
         }
         .form_f75fb0:has(.base_b88801) {
-            margin-top: -25px;
             .channelTextArea_f75fb0 {
                 border-radius: 0 0 var(--radius-md) var(--radius-md);
             }
-            .stackedBars__74017 {
-                border-radius: 0;
-            }
         }
         .form_f75fb0:has(.channelTextArea__74017:focus-within) {
-            .base_b88801 {
-                border-color: var(--border-subtle);
-            }
-            .stackedBars__74017 {
-                border-color: var(--border-subtle) !important;
-            }
+            --chatbar-border-color: var(--border-subtle);
         }
         .scrollerSpacer__36d07 {
             height: calc(25px + var(--chatbar-padding));
         }
         .scroller__36d07::-webkit-scrollbar-track {
             margin-bottom: calc(21px + var(--chatbar-padding));
+        }
+        .bottomBar__0f481 {
+            margin-bottom: 25px;
         }
     }
 }
