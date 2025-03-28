@@ -60,7 +60,7 @@ body {
     --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
 
     /* chatbar options */
-    --flipped-chatbar: on; /* turn on to make the chatbar look nicer */
+    --flipped-chatbar: on; /* turn on to move the typing indicator above the chatbar */
     --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
     --chatbar-padding: 8px; /* padding of the chatbar */
 
