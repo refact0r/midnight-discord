@@ -20,7 +20,6 @@ body {
         .channelTextArea_f75fb0 {
             margin: 0;
             border-color: var(--chatbar-border-color);
-            overflow: hidden;
             transition: none;
         }
         .base_b88801 {
@@ -37,6 +36,9 @@ body {
         .stackedBars__74017,
         .threadSuggestionBar__841c8 {
             border-color: var(--chatbar-border-color) !important;
+        }
+        .stackedBars__74017 {
+            background: none !important;
         }
         .form_f75fb0:has(.base_b88801) {
             .channelTextArea_f75fb0 {
