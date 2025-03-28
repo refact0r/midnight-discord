@@ -63,8 +63,9 @@ body {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
         background-image: var(--dms-background-image-url);
         background-color: transparent !important;
-        background-size: cover;
-        background-position: var(--dms-background-image-position);
+        background-size: var(--dms-background-image-size);
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
