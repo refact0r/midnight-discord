@@ -81,7 +81,8 @@
 
 @container root style(--colors: on) {
     .visual-refresh body,
-    .visual-refresh .theme-dark {
+    .visual-refresh .theme-dark,
+    .visual-refresh .theme-light {
         --activity-card-background: red;
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
