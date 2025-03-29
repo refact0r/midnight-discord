@@ -1234,7 +1234,8 @@ body {
             background: none !important;
         }
         .form_f75fb0:has(.base_b88801) {
-            .channelTextArea_f75fb0 {
+            .channelTextArea_f75fb0,
+            .wrapper__44df5 {
                 border-radius: 0 0 var(--radius-md) var(--radius-md);
             }
         }
@@ -1249,6 +1250,10 @@ body {
         }
         .bottomBar__0f481 {
             margin-bottom: 25px;
+        }
+        .wrapper__44df5 /* phone verification bar */ {
+            margin: 0;
+            border-radius: var(--radius-md);
         }
     }
 }
