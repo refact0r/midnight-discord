@@ -704,6 +704,8 @@ body {
         --channel-icon: var(--text-4);
         --channels-default: var(--text-4);
 
+        --embed-title: var(--text-2);
+
         --header-primary: var(--text-2);
         --header-secondary: var(--text-4);
         --header-muted: var(--text-4);
@@ -850,7 +852,7 @@ body {
             color: var(--accent-2) !important;
         }
         .colorPickerSwatch__459fb[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
-        .newBadge__9a337 /* forum post new badge */,
+        .newBadge_faa96b /* forum post new badge */,
         .mentioned__5126c:before /* mention message left edge */ {
             background-color: var(--accent-2) !important;
         }
