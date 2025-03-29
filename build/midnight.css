@@ -41,7 +41,9 @@ body {
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
     .chat_fb64c9 /* new thread panel */,
-    .container_a592e1 /* server discovery */ {
+    .container_a592e1 /* server discovery */,
+    .callContainer_cb9592 /* vc container */,
+    .callContainer__722ff /* stage */ {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: 1px solid var(--border-subtle);
@@ -214,12 +216,6 @@ body {
     .notice__6e2b9 /* notice banner */ {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
-    }
-
-    .callContainer_cb9592 /* vc container */ {
-        border-radius: var(--radius-lg) !important;
-        border: 1px solid var(--border-subtle);
-        overflow: hidden;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
@@ -820,7 +816,8 @@ body {
         }
 
         .panel__5dec7 /* game activity panel */,
-        #vc-spotify-player /* vencord spotify plugin */ {
+        #vc-spotify-player /* vencord spotify plugin */,
+        .container__722ff /* background between vc and vc chat */ {
             background: none;
         }
 
@@ -830,10 +827,6 @@ body {
         .side_b3f026 .item_b3f026:active,
         .side_b3f026 .item_b3f026.selected_b3f026 {
             background-color: var(--bg-2) !important;
-        }
-
-        .wrapper_cb9592 > .callContainer_cb9592 /* dm vc */ {
-            background-color: var(--bg-4);
         }
 
         .quickSelectPopout_ebaca5 /* dm vc region select popout */,
