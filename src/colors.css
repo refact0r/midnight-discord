@@ -332,7 +332,8 @@
         }
 
         .panel__5dec7 /* game activity panel */,
-        #vc-spotify-player /* vencord spotify plugin */ {
+        #vc-spotify-player /* vencord spotify plugin */,
+        .container__722ff /* background between vc and vc chat */ {
             background: none;
         }
 
@@ -342,10 +343,6 @@
         .side_b3f026 .item_b3f026:active,
         .side_b3f026 .item_b3f026.selected_b3f026 {
             background-color: var(--bg-2) !important;
-        }
-
-        .wrapper_cb9592 > .callContainer_cb9592 /* dm vc */ {
-            background-color: var(--bg-4);
         }
 
         .quickSelectPopout_ebaca5 /* dm vc region select popout */,

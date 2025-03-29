@@ -40,7 +40,9 @@ body {
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
     .chat_fb64c9 /* new thread panel */,
-    .container_a592e1 /* server discovery */ {
+    .container_a592e1 /* server discovery */,
+    .callContainer_cb9592 /* vc container */,
+    .callContainer__722ff /* stage */ {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: 1px solid var(--border-subtle);
@@ -213,12 +215,6 @@ body {
     .notice__6e2b9 /* notice banner */ {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
-    }
-
-    .callContainer_cb9592 /* vc container */ {
-        border-radius: var(--radius-lg) !important;
-        border: 1px solid var(--border-subtle);
-        overflow: hidden;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
