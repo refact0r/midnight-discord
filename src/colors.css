@@ -287,6 +287,7 @@
 
         --channel-text-area-placeholder: var(--text-5);
 
+        --message-reacted-text: var(--text-2);
         --message-reacted-background: color-mix(in hsl, var(--accent-2), transparent 80%);
 
         --custom-channel-members-bg: var(--bg-4);
