@@ -1095,7 +1095,7 @@ body {
         }
 
         #vc-spotify-player {
-            --vc-spotify-green: var(--accent-new);
+            --vc-spotify-green: var(--accent-2);
         }
 
         ::selection,
@@ -1210,7 +1210,7 @@ body {
             transition: none;
         }
         .base_b88801 {
-            top: -25px;
+            top: -24px;
             left: 0;
             right: 0;
             background-color: var(--chat-background-default);
@@ -1219,6 +1219,7 @@ body {
             border: 1px solid var(--chatbar-border-color);
             border-bottom: none;
             transition: none;
+            box-sizing: border-box;
         }
         .stackedBars__74017,
         .threadSuggestionBar__841c8 {

@@ -611,7 +611,7 @@
         }
 
         #vc-spotify-player {
-            --vc-spotify-green: var(--accent-new);
+            --vc-spotify-green: var(--accent-2);
         }
 
         ::selection,
