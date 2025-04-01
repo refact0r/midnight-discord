@@ -91,7 +91,7 @@ body {
     --message-hover: hsla(245, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: hsl(2, 55%, 88%); /* links and other accent text */
+    --accent-1: hsl(2, 65%, 88%); /* links and other accent text */
     --accent-2: #ebbcba; /* small accent elements */
     --accent-3: #ebbcba; /* accent buttons */
     --accent-4: hsl(2, 55%, 78%); /* accent buttons when hovered */
@@ -127,7 +127,7 @@ body {
     --green-4: hsl(197, 49%, 34%);
     --green-5: hsl(197, 49%, 30%);
 
-    --blue-1: hsl(189, 43%, 78%);
+    --blue-1: hsl(189, 48%, 78%);
     --blue-2: #9ccfd8;
     --blue-3: #9ccfd8;
     --blue-4: hsl(189, 43%, 68%);
