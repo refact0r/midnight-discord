@@ -27,7 +27,7 @@ add `https://refact0r.github.io/midnight-discord/build/midnight.css` to your the
 
 ## flavors
 
-flavors are customized presets of midnight. screenshots coming soon!
+flavors are preset customizations for midnight. screenshots coming soon!
 
 to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `midnight.theme.css`.
 
