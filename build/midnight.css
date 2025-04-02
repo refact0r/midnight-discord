@@ -1238,13 +1238,13 @@ body {
             --chatbar-border-color: var(--border-subtle);
         }
         .scrollerSpacer__36d07 {
-            height: calc(25px + var(--chatbar-padding));
+            height: calc(24px + var(--chatbar-padding));
         }
         .scroller__36d07::-webkit-scrollbar-track {
-            margin-bottom: calc(21px + var(--chatbar-padding));
+            margin-bottom: calc(20px + var(--chatbar-padding));
         }
         .bottomBar__0f481 {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
         .wrapper__44df5 /* phone verification bar */ {
             margin: 0;
