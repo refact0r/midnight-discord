@@ -15,7 +15,7 @@ a dark, customizable discord theme.
 > [!NOTE]  
 > the latest version of this theme only works on the new visual refresh discord UI. if you want to use this theme on the old UI, download the old theme file [here](https://github.com/refact0r/midnight-discord/blob/master/archive/midnight.theme.css).
 
-### vencord/betterdiscord (or client that supports theme files)
+### vencord/betterdiscord (or any client that supports theme files)
 
 1. download the theme file, [`midnight.theme.css`](https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css). (there should be a download button at the top right of the page)
 2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
@@ -24,6 +24,19 @@ a dark, customizable discord theme.
 ### install through link
 
 add `https://refact0r.github.io/midnight-discord/build/midnight.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
+
+## flavors
+
+flavors are customized presets of midnight. screenshots coming soon!
+
+to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `midnight.theme.css`.
+
+- [catppuccin mocha](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css)
+- [catppuccin macchiato](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-macchiato.theme.css)
+- [nord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-nord.theme.css)
+- [rose pine](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine.theme.css)
+- [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
+- [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
 
 ## discord server
 
