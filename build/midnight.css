@@ -858,6 +858,10 @@ body {
             background: var(--reply-hover);
         }
 
+        .visual-refresh .voiceBar__7aaec .barText__7aaec, .visual-refresh .voiceChannelsIcon__7aaec /* x in voice bar text */ {
+            color: var(--accent-2);
+        }
+
         .ephemeral__5126c /* ephemeral messages */ {
             background: var(--mention) !important;
         }
