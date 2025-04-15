@@ -1058,26 +1058,26 @@ body {
         .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
             background-color: var(--offline) !important;
         }
-        rect[fill='#43a25a'],
-        path[fill='#43a25a'] /* status activity icon */,
+        rect[fill='#40a258'],
+        path[fill='#40a258'] /* status activity icon */,
         .vc-platform-indicator > svg[fill="#43a25a"] {
             fill: var(--online);
         }
-        .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
+        .status_a423bd[style='background-color: rgb(64, 162, 88);'] {
             background-color: var(--online) !important;
         }
-        rect[fill='#ca9654'],
-        .vc-platform-indicator > svg[fill='#ca9654'] {
+        rect[fill='#cc954c'],
+        .vc-platform-indicator > svg[fill='#cc954c'] {
             fill: var(--idle);
         }
-        .status_a423bd[style='background-color: rgb(201, 150, 86);'] {
+        .status_a423bd[style='background-color: rgb(204, 149, 76);'] {
             background-color: var(--idle) !important;
         }
-        rect[fill='#d83a42'],
-        .vc-platform-indicator > svg[fill='#d83a42'] {
+        rect[fill='#d83a41'],
+        .vc-platform-indicator > svg[fill='#d83a41'] {
             fill: var(--dnd);
         }
-        .status_a423bd[style='background-color: rgb(216, 58, 66);'] {
+        .status_a423bd[style='background-color: rgb(216, 58, 65);'] {
             background-color: var(--dnd) !important;
         }
         rect[fill='#9147ff'] {
