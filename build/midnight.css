@@ -1102,12 +1102,12 @@ body {
         #vc-spotify-player {
             --vc-spotify-green: var(--accent-2);
         }
+    }
 
-        ::selection,
-        .highlight {
-            background: var(--accent-3);
-            color: var(--text-0);
-        }
+    ::selection,
+    .highlight {
+        background: var(--accent-3);
+        color: var(--text-0);
     }
 }
 
