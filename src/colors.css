@@ -577,6 +577,7 @@
         }
         rect[fill='#40a258'],
         path[fill='#40a258'] /* status activity icon */,
+        path[fill='var(--status-positive)'] /* status activity icon */,
         .vc-platform-indicator > svg[fill="#43a25a"] {
             fill: var(--online);
         }
