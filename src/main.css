@@ -18,6 +18,8 @@ body {
 }
 
 .visual-refresh {
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + 2px);
+
     /* panel separation */
     .guilds_c48ade /* server list */, 
     .sidebarList_c48ade /* channel list (includes dm list) */,
@@ -47,27 +49,17 @@ body {
         border-radius: var(--radius-lg);
         border: 1px solid var(--border-subtle);
         backdrop-filter: var(--panel-backdrop-filter);
+        box-sizing: border-box;
     }
 
     .base_c48ade /* base grid */ {
-        display: grid;
-        grid-template-columns: [start] min-content [guildsEnd] min-content [channelsEnd] 1fr [end];
-        grid-template-rows: [top] var(--custom-app-top-bar-height) [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
-        grid-template-areas:
-            'titleBar titleBar titleBar'
-            'guildsList notice notice'
-            'guildsList channelsList page'
-            'userPanel userPanel page';
         gap: 0 var(--gap);
     }
 
     .panels_c48ade /* user panel */ {
+        bottom: 0;
+        left: 0;
         width: 100%;
-        position: static;
-        grid-area: userPanel;
-        margin: var(--gap) 0 0 0;
-        overflow: hidden;
-        max-width: calc(var(--custom-guild-sidebar-width) + var(--gap) + 4px);
     }
 
     .sidebar_c48ade /* server list + channel list + user panel group */ {
@@ -75,12 +67,28 @@ body {
     }
 
     .guilds_c48ade /* server list */ {
-        margin-bottom: 0;
+        margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+    }
+    .guilds_c48ade + div:not(.sidebarList_c48ade) /* betterfolders */ {
+        width: 100% !important;
     }
     .scroller_ef3116 /* server list inner scroller */ {
         padding-top: var(--custom-guild-list-padding);
+        align-items: center;
+    }
+    .tree_ef3116 {
+        align-items: center;
+    }
+    .stack_dbd263[data-align=stretch] /* server list inner inner */ {
+        align-items: center;
+    }
+    .expandedFolderBackground__48112 {
+        left: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + 1px);
     }
 
+    .sidebarList_c48ade /* channel list */ {
+        margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+    }
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
     }
@@ -88,6 +96,9 @@ body {
     .container__2637a /* channel list inner */,
     .header_f37cb1 /* server name */ {
         background: none;
+    }
+    .scroller__629e4 /* channel list inner scroller */ {
+        margin-bottom: 0;
     }
 
     /* fix discord's idiotic server banners */
