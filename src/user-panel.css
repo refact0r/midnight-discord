@@ -6,15 +6,13 @@
 
 @container body style(--small-user-panel: on) {
     .visual-refresh {
-        .base_c48ade {
-            grid-template-areas:
-                'titleBar titleBar titleBar'
-                'guildsList notice notice'
-                'guildsList channelsList page'
-                'guildsList userPanel page';
+        .panels_c48ade /* user panel */ {
+            right: 0;
+            left: unset;
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         }
-        .panels_c48ade {
-            max-width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
+        .guilds_c48ade /* server list */ {
+            margin-bottom: 0;
         }
     }
 }
