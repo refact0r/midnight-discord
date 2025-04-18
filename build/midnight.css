@@ -53,10 +53,6 @@ body {
         box-sizing: border-box;
     }
 
-    .base_c48ade /* base grid */ {
-        gap: 0 var(--gap);
-    }
-
     .panels_c48ade /* user panel */ {
         bottom: 0;
         left: 0;
@@ -64,11 +60,12 @@ body {
     }
 
     .sidebar_c48ade /* server list + channel list + user panel group */ {
-        margin: 0 0 var(--gap) var(--gap);
+        margin: 0 var(--gap) var(--gap) var(--gap);
     }
 
     .guilds_c48ade /* server list */ {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+        margin-right: var(--gap);
     }
     .guilds_c48ade + div:not(.sidebarList_c48ade) /* betterfolders */ {
         width: 100% !important;
