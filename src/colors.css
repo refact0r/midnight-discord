@@ -622,6 +622,10 @@
         #vc-spotify-player {
             --vc-spotify-green: var(--accent-2);
         }
+
+        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
+            color: var(--text-0);
+        }
     }
 
     ::selection,
