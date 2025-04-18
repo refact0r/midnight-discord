@@ -750,6 +750,9 @@ body {
         --text-feedback-warning: red;
         --text-tertiary: var(--text-4);
 
+        --user-profile-overlay-background: var(--bg-4);
+        --user-profile-overlay-background-hover: var(--bg-2);
+
         --status-danger: var(--red-2);
         --status-danger-background: var(--red-3);
         --status-danger-text: var(--white);
