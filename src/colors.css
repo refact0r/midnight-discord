@@ -81,8 +81,8 @@
 
 @container root style(--colors: on) {
     .visual-refresh body,
-    .visual-refresh .theme-dark,
-    .visual-refresh .theme-light:not(.custom-profile-theme) {
+    .visual-refresh .theme-dark:not(.custom-user-profile-theme),
+    .visual-refresh .theme-light:not(.custom-user-profile-theme) {
         --activity-card-background: red;
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
