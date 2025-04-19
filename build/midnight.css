@@ -307,11 +307,6 @@ body {
         --space-8: 8px;
     }
 
-    /* get rid of extra space in treatment 2 */
-    .accessoryBar__74017 {
-        padding-top: 0;
-    }
-
     /* general chat bar improvements */
     .channelTextArea_f75fb0 /* chat bar */ {
         border-radius: var(--radius-md);
@@ -463,9 +458,6 @@ body {
         }
         .wrapper__2ea32:hover .unread__2ea32 {
             margin-left: 4px;
-        }
-        .typeThread__2ea32 .unread__2ea32 {
-            left: -31px;
         }
     }
 }

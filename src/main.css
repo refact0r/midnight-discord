@@ -306,11 +306,6 @@ body {
         --space-8: 8px;
     }
 
-    /* get rid of extra space in treatment 2 */
-    .accessoryBar__74017 {
-        padding-top: 0;
-    }
-
     /* general chat bar improvements */
     .channelTextArea_f75fb0 /* chat bar */ {
         border-radius: var(--radius-md);
