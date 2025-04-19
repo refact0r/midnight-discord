@@ -85,10 +85,10 @@ body {
     --bg-2: hsl(248deg, 25%, 18%); /* dark buttons */
     --bg-3: hsl(247deg, 23%, 15%); /* spacing, secondary elements */
     --bg-4: hsl(249deg, 22%, 12%); /* main background color */
-    --hover: hsla(245, 22%, 40%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(245, 22%, 40%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(245, 22%, 40%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(245, 0%, 0%, 0.1); /* messages when hovered */
+    --hover: hsla(250, 20%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(250, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(250, 20%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(250, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
     --accent-1: hsl(2, 65%, 88%); /* links and other accent text */
@@ -112,7 +112,7 @@ body {
     /* border colors */
     --border-light: var(--hover); /* light border color */
     --border: var(--active); /* normal border color */
-    --button-border: hsl(245, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --button-border: hsl(250, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
     --red-1: hsl(343, 76%, 73%);

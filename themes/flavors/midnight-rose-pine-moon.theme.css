@@ -5,7 +5,7 @@
  * @version 2.0.1
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/midnight-discord
- * @source https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine.theme.css
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -15,11 +15,11 @@
 
 body {
     /* font, change to '' for default discord font */
-    --font: '';
+    --font: 'figtree';
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
-    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
 
     /* animation/transition options */
     --animations: on; /* turn off to disable all midnight animations/transitions */
@@ -76,22 +76,22 @@ body {
     --text-0: var(--bg-2); /* text on colored elements */
     --text-1: hsl(245deg, 50%, 95%); /* other normally white text */
     --text-2: hsl(245deg, 50%, 91%); /* headings and important text */
-    --text-3: hsl(245deg, 40%, 80%); /* normal text */
+    --text-3: hsl(246deg, 30%, 80%); /* normal text */
     --text-4: hsl(248deg, 15%, 61%); /* icon buttons and channels */
     --text-5: hsl(249deg, 12%, 47%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(249deg, 15%, 38%); /* dark buttons when clicked */
+    --bg-1: hsl(248deg, 21%, 32%); /* dark buttons when clicked */
     --bg-2: hsl(248deg, 21%, 26%); /* dark buttons */
     --bg-3: hsl(248deg, 24%, 20%); /* spacing, secondary elements */
     --bg-4: hsl(246deg, 24%, 17%); /* main background color */
-    --hover: hsla(247deg, 16%, 30%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(247deg, 16%, 30%, 0.3); /* channels and buttons when clicked or selected */
-    --active-2: hsla(249deg, 15%, 38%, 0.4); /* extra state for transparent buttons */
-    --message-hover: hsla(245deg, 0%, 0%, 0.1); /* messages when hovered */
+    --hover: hsla(250deg, 20%, 45%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(250deg, 20%, 45%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(250deg, 20%, 45%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(250deg, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: hsl(2deg, 66%, 85%); /* links and other accent text */
+    --accent-1: hsl(2deg, 66%, 80%); /* links and other accent text */
     --accent-2: hsl(2deg, 66%, 75%); /* small accent elements */
     --accent-3: hsl(2deg, 66%, 75%); /* accent buttons */
     --accent-4: hsl(2deg, 66%, 70%); /* accent buttons when hovered */
@@ -112,35 +112,35 @@ body {
     /* border colors */
     --border-light: var(--hover); /* light border color */
     --border: var(--active); /* normal border color */
-    --button-border: var(--message-hover); /* neutral border color of buttons */
+    --button-border: hsl(250, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
     /* 2nd and 3rd colors are the default rose pine moon palette */
-    --red-1: hsl(343deg, 76%, 78%);
+    --red-1: hsl(343deg, 76%, 73%);
     --red-2: hsl(343deg, 76%, 68%);
     --red-3: hsl(343deg, 76%, 68%);
     --red-4: hsl(343deg, 76%, 63%);
     --red-5: hsl(343deg, 76%, 58%);
 
-    --green-1: hsl(197deg, 48%, 57%);
+    --green-1: hsl(197deg, 48%, 52%);
     --green-2: hsl(197deg, 48%, 47%);
     --green-3: hsl(197deg, 48%, 47%);
     --green-4: hsl(197deg, 48%, 42%);
     --green-5: hsl(197deg, 48%, 37%);
 
-    --blue-1: hsl(189deg, 43%, 83%);
+    --blue-1: hsl(189deg, 43%, 78%);
     --blue-2: hsl(189deg, 43%, 73%);
     --blue-3: hsl(189deg, 43%, 73%);
     --blue-4: hsl(189deg, 43%, 68%);
     --blue-5: hsl(189deg, 43%, 63%);
 
-    --yellow-1: hsl(35deg, 88%, 82%);
+    --yellow-1: hsl(35deg, 88%, 77%);
     --yellow-2: hsl(35deg, 88%, 72%);
     --yellow-3: hsl(35deg, 88%, 72%);
     --yellow-4: hsl(35deg, 88%, 67%);
     --yellow-5: hsl(35deg, 88%, 62%);
 
-    --purple-1: hsl(267deg, 57%, 88%);
+    --purple-1: hsl(267deg, 57%, 83%);
     --purple-2: hsl(267deg, 57%, 78%);
     --purple-3: hsl(267deg, 57%, 78%);
     --purple-4: hsl(267deg, 57%, 73%);
