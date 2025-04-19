@@ -106,9 +106,9 @@
         --bg-base-primary: var(--bg-4); /* screenshare window? */
         --bg-base-secondary: var(--bg-4);
         --bg-base-tertiary: var(--bg-3);
-        --background-mod-subtle: var(--bg-3);
-        --background-mod-normal: var(--bg-3);
-        --background-mod-strong: var(--bg-3);
+        --background-mod-subtle: var(--hover);
+        --background-mod-normal: var(--active);
+        --background-mod-strong: var(--active-2);
         --background-base-low: var(--bg-4);
         --background-base-lower: var(--bg-4);
         --background-base-lowest: var(--bg-4);
