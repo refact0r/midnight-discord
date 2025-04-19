@@ -74,17 +74,17 @@ body {
 
     /* text colors */
     --text-0: var(--bg-3); /* text on colored elements */
-    --text-1: hsl(245, 50%, 95%); /* other normally white text */
-    --text-2: #e0def4; /* headings and important text */
-    --text-3: hsl(245, 40%, 80%); /* normal text */
-    --text-4: #908caa; /* icon buttons and channels */
-    --text-5: #6e6a86; /* muted channels/chats and timestamps */
+    --text-1: hsl(245deg, 50%, 95%); /* other normally white text */
+    --text-2: hsl(245deg, 50%, 91%); /* headings and important text */
+    --text-3: hsl(246deg, 30%, 80%); /* normal text */
+    --text-4: hsl(248deg, 15%, 61%); /* icon buttons and channels */
+    --text-5: hsl(249deg, 12%, 47%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: #45475a; /* dark buttons when clicked */
-    --bg-2: #26233a; /* dark buttons */
-    --bg-3: #1f1d2e; /* spacing, secondary elements */
-    --bg-4: #191724; /* main background color */
+    --bg-1: hsl(248deg, 25%, 24%); /* dark buttons when clicked */
+    --bg-2: hsl(248deg, 25%, 18%); /* dark buttons */
+    --bg-3: hsl(247deg, 23%, 15%); /* spacing, secondary elements */
+    --bg-4: hsl(249deg, 22%, 12%); /* main background color */
     --hover: hsla(245, 22%, 40%, 0.1); /* channels and buttons when hovered */
     --active: hsla(245, 22%, 40%, 0.2); /* channels and buttons when clicked or selected */
     --active-2: hsla(245, 22%, 40%, 0.3); /* extra state for transparent buttons */
