@@ -39,7 +39,7 @@
     --online: var(--green-2); /* change to #43a25a for default */
     --dnd: var(--red-2); /* change to #d83a42 for default */
     --idle: var(--yellow-2); /* change to #ca9654 for default */
-    --streaming: var(--purple-2); /* change to #593695 for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
@@ -572,7 +572,7 @@
         }
 
         /* status indicators */
-        rect[fill='#83838b'] {
+        rect[fill='#82838b'] {
             fill: var(--offline);
         }
         .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
