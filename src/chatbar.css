@@ -1,16 +1,17 @@
-@property --flipped-chatbar {
-    syntax: 'on | off';
+@property --custom-chatbar {
+    syntax: 'off | aligned | separated';
     inherits: false;
     initial-value: on;
 }
 
 body {
-    --chatbar-height: 47px; /* height of the chatbar */
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
     --chatbar-padding: 8px; /* padding of the chatbar */
+
     --custom-channel-textarea-text-area-height: var(--chatbar-height);
 }
 
-@container body style(--flipped-chatbar: on) {
+@container body style(--custom-chatbar: aligned) {
     .visual-refresh {
         .form_f75fb0 {
             margin: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
@@ -62,6 +63,56 @@ body {
         .wrapper__44df5 /* phone verification bar */ {
             margin: 0;
             border-radius: var(--radius-md);
+        }
+    }
+}
+
+@container body style(--custom-chatbar: separated) {
+    .visual-refresh {
+        .chatContent_f75fb0 {
+            background: none;
+            border-radius: 0;
+            border: none;
+            backdrop-filter: none;
+        }
+        .messagesWrapper__36d07 {
+            background-color: var(--background-base-lower);
+            border-radius: var(--radius-lg);
+            border: var(--border-thickness) solid var(--border-subtle);
+            backdrop-filter: var(--panel-backdrop-filter);
+        }
+        .chatContent_f75fb0:has(.typing_b88801) .scroller__36d07 {
+            bottom: 26px;
+        }
+        .form_f75fb0 {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            width: 100%;
+            margin-top: 0;
+        }
+        .typing_b88801 {
+            position: absolute;
+            order: -1;
+            top: calc(-26px + var(--border-thickness) * -1);
+            left: calc(var(--border-thickness));
+            border-radius: 0 0 0 var(--radius-lg);
+            padding: 0 0 0 var(--space-sm);
+            height: 26px;
+        }
+        .channelBottomBarArea_f75fb0 {
+            margin-top: var(--gap);
+        }
+        .channelTextArea_f75fb0 {
+            margin: 0;
+            background-color: var(--background-base-lower);
+            border-radius: var(--radius-lg);
+            border: var(--border-thickness) solid var(--border-subtle);
+            backdrop-filter: var(--panel-backdrop-filter);
+            overflow: hidden;
+        }
+        .stackedBars__74017 {
+            background: none !important;
         }
     }
 }

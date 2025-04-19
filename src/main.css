@@ -15,11 +15,11 @@ body {
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 }
 
 .visual-refresh {
-    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + 2px);
-
     /* panel separation */
     .guilds_c48ade /* server list */, 
     .sidebarList_c48ade /* channel list (includes dm list) */,
@@ -47,7 +47,7 @@ body {
     .callContainer__722ff /* stage */ {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
-        border: 1px solid var(--border-subtle);
+        border: var(--border-thickness) solid var(--border-subtle);
         backdrop-filter: var(--panel-backdrop-filter);
         box-sizing: border-box;
     }
@@ -80,7 +80,7 @@ body {
         align-items: center;
     }
     .expandedFolderBackground__48112 {
-        left: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + 1px);
+        left: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + var(--border-thickness));
     }
 
     .sidebarList_c48ade /* channel list */ {
