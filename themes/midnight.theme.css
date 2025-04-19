@@ -16,6 +16,7 @@
 body {
     /* font, change to '' for default discord font */
     --font: 'figtree';
+    font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
