@@ -3,8 +3,9 @@ body {
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-    --dms-background: url(''); /* url of the background image or custom color/gradient (css background property) */
-    --dms-background-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 }
 
 @property --custom-dms-icon {
@@ -46,23 +47,30 @@ body {
     }
 }
 
-@container body style(--dms-icon: hide) {
+@container body style(--custom-dms-icon: hide) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
         display: none;
     }
 }
 
 @property --custom-dms-background {
-    syntax: 'off | on';
+    syntax: 'off | image | color';
     inherits: false;
     initial-value: off;
 }
 
-@container body style(--custom-dms-background: on) {
+@container body style(--custom-dms-background: image) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
-        background: var(--dms-background) !important;
-        background-size: var(--dms-background-size);
+        background-image: var(--dms-background-image-url);
+        background-color: transparent !important;
+        background-size: var(--dms-background-image-size);
         background-position: center;
         background-repeat: no-repeat;
+    }
+}
+
+@container body style(--custom-dms-background: color) {
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+        background: var(--dms-background-color);
     }
 }
