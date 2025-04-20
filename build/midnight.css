@@ -1458,6 +1458,9 @@ body {
         .toolbar__9293f {
             padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
         }
+        .searchBar__1ac1c {
+            margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+        }
         .inviteToolbar__133bf {
             padding-right: 0;
         }
