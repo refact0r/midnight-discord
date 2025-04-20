@@ -30,7 +30,7 @@ body {
 
     /* top bar options */
     --top-bar-height: 32px; /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
-    --top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
     --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
     --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
@@ -66,7 +66,7 @@ body {
     --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
     /* other options */
-    --small-user-panel: off; /* off: default user panel, on: smaller user panel like in old discord */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 }
 
 /* color options */
