@@ -152,9 +152,6 @@ body {
         margin-bottom: 0;
     }
 
-    .chatContent_f75fb0 /* chat */ {
-        overflow: hidden;
-    }
     .content_f75fb0 /* chat outer */,
     .tabBody__133bf /* friends page */ {
         border: none !important;
