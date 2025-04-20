@@ -1,20 +1,19 @@
-@property --dms-icon {
-    syntax: 'default | off | on';
-    inherits: false;
-    initial-value: on;
-}
-
 body {
     --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
-    --dms-icon-color-before: var(--icon-secondary);
-    --dms-icon-color-after: var(--white);
-    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
-    --dms-background-image-size: cover; /* size of the background image (css background-size) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* color of the background image (css background) */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --dms-background: url(''); /* url of the background image or custom color/gradient (css background property) */
+    --dms-background-size: cover; /* size of the background image (css background-size property) */
 }
 
-@container body style(--dms-icon: on) {
+@property --custom-dms-icon {
+    syntax: 'off | hide | custom';
+    inherits: false;
+    initial-value: custom;
+}
+
+@container body style(--custom-dms-icon: custom) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
         display: none;
     }
@@ -47,30 +46,23 @@ body {
     }
 }
 
-@container body style(--dms-icon: off) {
+@container body style(--dms-icon: hide) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
         display: none;
     }
 }
 
-@property --dms-background {
-    syntax: 'off | image | color';
+@property --custom-dms-background {
+    syntax: 'off | on';
     inherits: false;
     initial-value: off;
 }
 
-@container body style(--dms-background: image) {
+@container body style(--custom-dms-background: on) {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
-        background-image: var(--dms-background-image-url);
-        background-color: transparent !important;
-        background-size: var(--dms-background-image-size);
+        background: var(--dms-background) !important;
+        background-size: var(--dms-background-size);
         background-position: center;
         background-repeat: no-repeat;
-    }
-}
-
-@container body style(--dms-background: color) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
-        background: var(--dms-background-color);
     }
 }

@@ -44,7 +44,12 @@ body {
     .chat_fb64c9 /* new thread panel */,
     .container_a592e1 /* server discovery */,
     .callContainer_cb9592 /* vc container */,
-    .callContainer__722ff /* stage */ {
+    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592 /* vc container when chat open */,
+    .callContainer__722ff /* stage */,
+    .chat_f75fb0 > .header_c791b2 /* server members header */,
+    .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
+    .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
+    .chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
@@ -70,7 +75,7 @@ body {
         width: 100% !important;
     }
     .scroller_ef3116 /* server list inner scroller */ {
-        padding-top: var(--custom-guild-list-padding);
+        padding: var(--custom-guild-list-padding) 0;
         align-items: center;
     }
     .tree_ef3116 {
@@ -223,6 +228,7 @@ body {
     .notice__6e2b9 /* notice banner */ {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
+        box-sizing: border-box;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
@@ -262,6 +268,12 @@ body {
         background: none;
         margin-bottom: var(--gap);
     }
+    .wrapper_cb9592.fullScreen_cb9592 {
+        margin-top: var(--gap);
+        margin-left: var(--gap);
+        width: calc(100% - var(--gap));
+        height: calc(100% - var(--gap));
+    }
 
     /* remove excess background from settings  */
     .standardSidebarView__23e6b,
@@ -278,6 +290,9 @@ body {
     .wrapper_d852db /* message loading placeholders */,
     .wrapper_d852db > .wrapper_fc8177 {
         background: none;
+    }
+    .page_c48ade > .chat_f75fb0 /* friend page, server members page */ {
+        background: none !important;
     }
 
     .newMessagesBar__0f481 /* unread messages bar */ {

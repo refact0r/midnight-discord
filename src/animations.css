@@ -1,12 +1,12 @@
-@property --animations {
-    syntax: 'on | off';
-    inherits: false;
-    initial-value: on;
-}
-
 body {
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+}
+
+@property --animations {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
 }
 
 @container body style(--animations: on) {

@@ -1,11 +1,11 @@
-@property --custom-window-controls {
-    syntax: 'on | off';
-    inherits: false;
-    initial-value: off;
-}
-
 body {
     --window-control-size: 14px;
+}
+
+@property --custom-window-controls {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
 }
 
 @container body style(--custom-window-controls: on) {
