@@ -319,12 +319,8 @@ body {
         padding: calc(var(--custom-guild-list-padding) / 2);
     }
 
-    /* jank ass solution to only apply padding to treatment 3 */
-    .form_f75fb0 /* chat bar outer form */ {
-        --space-8: 16px;
-    }
-    .channelBottomBarArea_f75fb0 /* chat bar inner */ {
-        --space-8: 8px;
+    #vc-spotify-player /* vencord spotify plugin */ {
+        background: none;
     }
 
     /* general chat bar improvements */
