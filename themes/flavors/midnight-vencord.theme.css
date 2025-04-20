@@ -2,7 +2,7 @@
  * @name midnight (vencord)
  * @description a dark, customizable discord theme. based on https://github.com/nanoqoi/vencord-theme.
  * @author refact0r
- * @version 2.0.1
+ * @version 2.1.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/midnight-discord
  * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight-vencord.theme.css
@@ -17,62 +17,63 @@
 
 body {
     /* font, change to '' for default discord font */
-    --font: 'Inter';
+    --font: 'figtree';
+    font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
     /* animation/transition options */
-    --animations: on; /* turn off to disable all midnight animations/transitions */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
 
     /* top bar options */
-    --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
-    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar (default is 36px)*/
+    --top-bar-height: 32px; /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
     /* window controls */
-    --custom-window-controls: on; /* turn off to use discord default window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
     --window-control-size: 14px; /* size of custom window controls */
 
-    /* dms button icon options */
-    --dms-icon: on; /* set to default to use discord icon, on to use custom icon, off to disable completely */
+    /* dms button options */
+    --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='24' height='24'%3E%3Cpath fill='currentColor' d='M0 0h7v1H6v1H5v1H4v1H3v1H2v1h5v1H0V6h1V5h1V4h1V3h1V2h1V1H0m13 2h5v1h-1v1h-1v1h-1v1h3v1h-5V7h1V6h1V5h1V4h-3m8 5h1v5h1v-1h1v1h-1v1h1v-1h1v1h-1v3h-1v1h-2v1h-1v1h1v-1h2v-1h1v2h-1v1h-2v1h-1v-1h-1v1h-6v-1h-1v-1h-1v-2h1v1h2v1h3v1h1v-1h-1v-1h-3v-1h-4v-4h1v-2h1v-1h1v-1h1v2h1v1h1v-1h1v1h-1v1h2v-2h1v-2h1v-1h1M8 14h2v1H9v4h1v2h1v1h1v1h1v1h4v1h-6v-1H5v-1H4v-5h1v-1h1v-2h2m17 3h1v3h-1v1h-1v1h-1v2h-2v-2h2v-1h1v-1h1m1 0h1v3h-1v1h-2v-1h1v-1h1'%3E%3C/path%3E%3C/svg%3E"); /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
-    --dms-icon-color-before: var(--icon-primary); /* normal icon color */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-
-    /* dms button background options */
-    --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
-    --dms-background-image-url: url(''); /* url of the background image */
-    --dms-background-image-size: cover; /* size of the background image (css background-size) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+    --custom-dms-background: off; /* off: no background, on: use custom background image or custom color/gradient */
+    --dms-background: url(''); /* url of the background image or custom color/gradient (css background property) */
+    --dms-background-size: cover; /* size of the background image (css background-size property) */
 
     /* background image options */
-    --background-image: off; /* turn on to use a background image */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
     --background-image-url: url(''); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-    --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
-    --remove-bg-layer: off; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-    --panel-blur: off; /* turn on to blur the background of panels */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
-    --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
-    --flipped-chatbar: on; /* turn on to move the typing indicator above the chatbar */
-    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
-    --chatbar-padding: 8px; /* padding of the chatbar */
+    --custom-chatbar: aligned; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+    --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
     /* other options */
-    --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 }
 
 /* color options */
 :root {
-    --colors: on; /* turn off to use discord default colors */
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */
