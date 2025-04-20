@@ -51,11 +51,11 @@ body {
 @container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
     .visual-refresh {
         .winButton_c38106 {
-            width: 28px;
-            height: 28px;
+            width: calc(var(--window-control-size) * 2);
+            height: calc(var(--window-control-size) * 2);
         }
-        .toolbar__9293f {
-            padding-right: calc(32px + 3 * var(--space-xs) + 3 * 32px);
+        .winButtons_c38106 {
+            gap: 0;
         }
     }
 }
