@@ -1464,7 +1464,10 @@ body {
         .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
             top: calc(var(--gap) + 8px + 40px + var(--gap) + var(--border-thickness));
         }
-        .layerContainer_da8173 {
+        .layerContainer_da8173 /* image preview */ {
+            z-index: 10001;
+        }
+        .container_a2f514 /* loading screen */ {
             z-index: 10001;
         }
     }
