@@ -1241,6 +1241,9 @@ body {
         #vc-spotify-player {
             --vc-spotify-green: var(--accent-2);
         }
+        .barFill_a562c8 {
+            background-color: var(--vc-spotify-green) !important;
+        }
 
         .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
             color: var(--text-0);
