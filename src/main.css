@@ -61,6 +61,7 @@ body {
         bottom: 0;
         left: 0;
         width: 100%;
+        overflow: hidden;
     }
 
     .sidebar_c48ade /* server list + channel list + user panel group */ {
@@ -155,6 +156,10 @@ body {
     .content_f75fb0 /* chat outer */,
     .tabBody__133bf /* friends page */ {
         border: none !important;
+    }
+
+    .listeningAlong_e0cf27 /* user panel listening along */ {
+        border-top: none !important;
     }
 
     .container_c8ffbb /* member list */ {
