@@ -614,7 +614,6 @@ body {
             border-radius: var(--radius-lg);
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
-            overflow: hidden;
         }
         .stackedBars__74017 {
             background: none !important;
