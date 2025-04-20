@@ -1,11 +1,11 @@
-@property --background-image {
-    syntax: 'on | off';
-    inherits: false;
-    initial-value: off;
-}
-
 body {
     --background-image-url: url('');
+}
+
+@property --background-image {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
 }
 
 @container body style(--background-image: on) {

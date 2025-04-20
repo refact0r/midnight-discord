@@ -1,5 +1,5 @@
 @property --small-user-panel {
-    syntax: 'on | off';
+    syntax: 'off | on';
     inherits: false;
     initial-value: off;
 }

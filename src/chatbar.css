@@ -1,14 +1,14 @@
-@property --custom-chatbar {
-    syntax: 'off | aligned | separated';
-    inherits: false;
-    initial-value: on;
-}
-
 body {
     --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
     --chatbar-padding: 8px; /* padding of the chatbar */
 
     --custom-channel-textarea-text-area-height: var(--chatbar-height);
+}
+
+@property --custom-chatbar {
+    syntax: 'off | aligned | separated';
+    inherits: false;
+    initial-value: aligned;
 }
 
 @container body style(--custom-chatbar: aligned) {

@@ -1,14 +1,29 @@
-@property --move-top-bar-buttons {
-    syntax: 'on | off';
+body {
+    --top-bar-height: 32px;
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
+
+@property --modify-top-bar-buttons {
+    syntax: 'off | hide | serverlist | titlebar';
     inherits: false;
     initial-value: off;
 }
 
-@container body style(--move-top-bar-buttons: on) {
+@container body style(--top-bar-button-position: hide) {
+    .visual-refresh {
+        .trailing_c38106 > a[href="https://support.discord.com"],
+        .recentsIcon_c99c29,
+        .winButtons_c38106::before {
+            display: none;
+        }
+    }
+}
+
+@container body style(--top-bar-button-position: serverlist) {
     .visual-refresh {
         /* remove help button */
-        .trailing_c38106 > a[href="https://support.discord.com"]
-        {
+        .trailing_c38106 > a[href="https://support.discord.com"],
+        .winButtons_c38106::before {
             display: none;
         }
 
@@ -54,26 +69,6 @@
         .recentMentionsPopout__95796 {
             transform: translateX(100%);
         }
-        /* move top bar title */
-        .title_c38106 {
-            padding-left: var(--gap);
-            justify-content: flex-start;
-        }
-        .title__85643 {
-            gap: 4px;
-        }
-        /* style top bar title */
-        .title__85643 .icon_f34534 {
-            width: 16px;
-            height: 16px;
-            display: none;
-        }
-        .title__85643 .text-sm\/medium_cf4812 {
-            line-height: 90%;
-            color: var(--text-muted);
-            font-weight: 700;
-        }
-
         /* fix settings animation transform */
         .layer__960e4.baseLayer__960e4 {
             transform: none !important;
@@ -92,6 +87,89 @@
 
         .recentsIcon_c99c29:hover .iconBadge__9293f {
             background: var(--white);
+        }
+    }
+}
+
+@container body style(--top-bar-button-position: titlebar) {
+    .visual-refresh {
+        #app-mount {
+            --custom-app-top-bar-height: var(--gap);
+        }
+        .title_c38106, 
+        .trailing_c38106 > a[href="https://support.discord.com"]
+        {
+            display: none;
+        }
+        .trailing_c38106 {
+            position: absolute;
+            top: calc(var(--gap) + 8px + var(--border-thickness));
+            right: var(--gap);
+            z-index: 10000;
+            gap: var(--space-xs);
+        }
+        .winButtons_c38106 {
+            padding-right: var(--space-xs);
+        }
+        .winButtons_c38106::before {
+            height: 16px;
+            width: var(--space-xs);
+            margin: 0;
+        }
+        .toolbar__9293f {
+            padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+        }
+        .inviteToolbar__133bf {
+            padding-right: 0;
+        }
+        .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+            top: calc(var(--gap) + 8px + 40px + var(--gap) + var(--border-thickness));
+        }
+    }
+}
+
+@property --top-bar-title-position {
+    syntax: 'off | hide | left';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--top-bar-title-position: hide) {
+    .visual-refresh {
+        .title__85643 {
+            display: none;
+        }
+    }
+}
+
+@container body style(--top-bar-title-position: left) {
+    .visual-refresh {
+        .title_c38106 {
+            padding-left: var(--gap);
+            justify-content: flex-start;
+        }
+        .title__85643 {
+            gap: 4px;
+        }
+    }
+}
+
+@property --subtle-top-bar-title {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@container body style(--subtle-top-bar-title: on) {
+    .visual-refresh {
+        .title__85643 .icon_f34534,
+        .title__85643 > svg {
+            display: none;
+        }
+        .title__85643 .text-sm\/medium_cf4812 {
+            line-height: 90%;
+            font-weight: 700;
+            color: var(--text-muted);
         }
     }
 }
