@@ -1452,6 +1452,7 @@ body {
         .winButtons_c38106::before {
             height: 16px;
             width: var(--space-xs);
+            box-sizing: border-box;
             margin: 0;
         }
         .toolbar__9293f {
@@ -1640,6 +1641,18 @@ body {
     }
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
+    }
+}
+
+@container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
+    .visual-refresh {
+        .winButton_c38106 {
+            width: 28px;
+            height: 28px;
+        }
+        .toolbar__9293f {
+            padding-right: calc(32px + 3 * var(--space-xs) + 3 * 32px);
+        }
     }
 }
 

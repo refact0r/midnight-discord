@@ -117,6 +117,7 @@ body {
         .winButtons_c38106::before {
             height: 16px;
             width: var(--space-xs);
+            box-sizing: border-box;
             margin: 0;
         }
         .toolbar__9293f {
