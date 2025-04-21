@@ -127,14 +127,8 @@ body {
         .toolbar__9293f {
             padding-right: calc(32px + 2 * var(--space-xs));
         }
-        .base_c48ade:has(.winButtons_c38106) .toolbar__9293f {
-            padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
-        }
         .searchBar__1ac1c {
             margin-right: calc(32px + 2 * var(--space-xs));
-        }
-        .base_c48ade:has(.winButtons_c38106) .searchBar__1ac1c {
-            margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
         }
         .inviteToolbar__133bf {
             padding-right: 0;
@@ -145,6 +139,12 @@ body {
         .chat_f75fb0 > .layerContainer_da8173 {
             z-index: 999;
         }
+    }
+    .base_c48ade:has(.winButtons_c38106) .toolbar__9293f {
+        padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base_c48ade:has(.winButtons_c38106) .searchBar__1ac1c {
+        margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
     }
 }
 
