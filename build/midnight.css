@@ -588,7 +588,7 @@ body {
         .scroller__36d07::-webkit-scrollbar-track {
             margin-bottom: calc(26px);
         }
-        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::after {
+        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::before {
             content: '';
             position: absolute;
             bottom: 0;
