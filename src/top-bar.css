@@ -93,9 +93,6 @@ body {
 
 @container body style(--top-bar-button-position: titlebar) {
     .visual-refresh {
-        #app-mount {
-            --custom-app-top-bar-height: var(--gap);
-        }
         .title_c38106, 
         .trailing_c38106 > a[href="https://support.discord.com"]
         {
@@ -106,14 +103,14 @@ body {
         }
         .trailing_c38106 {
             position: absolute;
-            top: calc(var(--gap) + 8px + var(--border-thickness));
+            top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
             right: var(--gap);
             gap: 0;
             z-index: 1000;
             padding-right: var(--space-xs);
         }
         .systemBar_c38106 .trailing_c38106 {
-            top: var(--gap);
+            top: var(--space-xs);
         }
         .winButtons_c38106 {
             padding: 0;
@@ -134,7 +131,7 @@ body {
             padding-right: 0;
         }
         .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
-            top: calc(var(--gap) + 8px + 40px + var(--gap) + var(--border-thickness));
+            top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
         }
         .chat_f75fb0 > .layerContainer_da8173 {
             z-index: 999;

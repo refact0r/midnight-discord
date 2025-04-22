@@ -11,6 +11,7 @@ body {
 
     /* font, change to '' for default discord font */
     --font: 'figtree';
+    --code-font: '';
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -235,6 +236,7 @@ body {
         margin: 0 var(--gap) var(--gap) 0;
         border-radius: var(--radius-md);
         box-sizing: border-box;
+        height: 40px;
     }
 
     .container__01ae2 /* vc chat + titlebar group */ {
@@ -424,6 +426,7 @@ body {
 body {
     --font-primary: var(--font), 'gg sans';
     --font-display: var(--font), 'gg sans';
+    --font-code: var(--code-font), 'gg sans';
 }
 
 [class*='scroll'] {
