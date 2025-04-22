@@ -1236,7 +1236,7 @@ body {
         rect[fill='#40a258'],
         path[fill='#40a258'] /* status activity icon */,
         path[fill='var(--status-positive)'] /* status activity icon */,
-        .vc-platform-indicator > svg[fill="#43a25a"] {
+        .vc-platform-indicator > svg[fill="#40a258"] {
             fill: var(--online);
         }
         .status_a423bd[style='background-color: rgb(64, 162, 88);'] {
