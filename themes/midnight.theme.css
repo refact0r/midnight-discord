@@ -17,7 +17,7 @@ body {
     /* font options */
     --font: 'figtree'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
-    font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
+    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -28,6 +28,7 @@ body {
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
 
     /* top bar options */
     --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
@@ -113,8 +114,9 @@ body {
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: var(--hover); /* light border color */
-    --border: var(--active); /* normal border color */
+    --border-light: var(--hover); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--active); /* border color of panels when hovered */
     --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
