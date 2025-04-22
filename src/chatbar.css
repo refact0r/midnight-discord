@@ -137,5 +137,18 @@ body {
         .stackedBars__74017 {
             background: none !important;
         }
+        .wrapper__44df5 {
+            margin: var(--gap) 0 0 0;
+            height: var(--chatbar-height);
+            padding: 0;
+            border-radius: var(--radius-lg);
+            border: var(--border-thickness) solid var(--border-subtle);
+            backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
+        }
     }
 }
