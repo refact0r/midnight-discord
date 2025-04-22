@@ -80,6 +80,11 @@ body {
             border-radius: var(--radius-lg);
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
         }
         .scrollerSpacer__36d07 {
             height: calc(26px + var(--space-xs));
@@ -123,6 +128,11 @@ body {
             border-radius: var(--radius-lg);
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
+            transition: border-color var(--border-hover-transition);
+
+            &:hover {
+                border-color: var(--border-hover);
+            }
         }
         .stackedBars__74017 {
             background: none !important;
