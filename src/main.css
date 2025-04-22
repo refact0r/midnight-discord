@@ -426,7 +426,7 @@ body {
 body {
     --font-primary: var(--font), 'gg sans';
     --font-display: var(--font), 'gg sans';
-    --font-code: var(--code-font), 'gg sans';
+    --font-code: var(--code-font), 'gg mono';
 }
 
 [class*='scroll'] {
