@@ -28,6 +28,7 @@ body {
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
 
     /* top bar options */
     --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
@@ -113,8 +114,9 @@ body {
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
-    --border-light: hsla(220, 20%, 50%, 0.05); /* light border color */
-    --border: hsla(220, 20%, 50%, 0.1); /* normal border color */
+    --border-light: hsla(220, 20%, 50%, 0.05); /* general light border color */
+    --border: hsla(220, 20%, 50%, 0.1); /* general normal border color */
+    --border-hover: hsla(220, 20%, 50%, 0.1); /* border color of panels when hovered */
     --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
