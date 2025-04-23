@@ -40,15 +40,6 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
 - [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
 
-## options
-
-### colors
-
-- `--colors`: off | on
-
-  off: discord default colors  
-  on: midnight custom colors
-
 ## discord server
 
 need help? want to give feedback? want to be notified about upcoming changes? join <https://discord.gg/nz87hXyvcy>
