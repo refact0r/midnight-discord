@@ -31,6 +31,7 @@ flavors are preset customizations for midnight. screenshots coming soon!
 
 to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `midnight.theme.css`.
 
+- [background](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-background.theme.css) (background image + transparent blurred panels)
 - [catppuccin mocha](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-macchiato.theme.css)
 - [nord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-nord.theme.css)
@@ -38,6 +39,15 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [rose pine moon](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css)
 - [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
 - [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
+
+## options
+
+### colors
+
+- `--colors`: off | on
+
+  off: discord default colors  
+  on: midnight custom colors
 
 ## discord server
 
