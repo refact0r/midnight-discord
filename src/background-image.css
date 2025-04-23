@@ -9,7 +9,7 @@ body {
 }
 
 @container body style(--background-image: on) {
-    .visual-refresh .bg__960e4 {
+    .visual-refresh #app-mount .bg__960e4 {
         background: var(--background-image-url);
         background-size: cover;
         background-position: center;
