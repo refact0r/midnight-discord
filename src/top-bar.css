@@ -92,6 +92,10 @@ body {
 }
 
 @container body style(--top-bar-button-position: titlebar) {
+    #app-mount {
+        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
+    }
+
     .visual-refresh {
         .title_c38106, 
         .trailing_c38106 > a[href="https://support.discord.com"]
@@ -104,7 +108,7 @@ body {
         .trailing_c38106 {
             position: absolute;
             top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
-            right: var(--gap);
+            right: calc(var(--space-xs) + var(--border-thickness));
             gap: 0;
             z-index: 1000;
             padding-right: var(--space-xs);
@@ -130,12 +134,19 @@ body {
         .inviteToolbar__133bf {
             padding-right: 0;
         }
-        .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
-            top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
-        }
         .chat_f75fb0 > .layerContainer_da8173 {
             z-index: 999;
         }
+        .subtitleContainer_f75fb0 {
+            height: var(--custom-channel-header-height);
+        }
+        .title_f75fb0.container__9293f {
+            height: auto;
+            min-height: 0;
+        }
+    }
+    .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
     .base_c48ade:has(.winButtons_c38106) .toolbar__9293f {
         padding-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
