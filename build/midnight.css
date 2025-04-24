@@ -1501,14 +1501,11 @@ body {
         {
             display: none;
         }
-        .recentsIcon_c99c29 {
-            margin-right: var(--space-xs);
-        }
         .trailing_c38106 {
             position: absolute;
             top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
-            right: calc(var(--space-xs) + var(--border-thickness));
-            gap: 0;
+            right: calc(var(--gap) + var(--border-thickness));
+            gap: var(--space-xs);
             z-index: 1000;
             padding-right: var(--space-xs);
         }
@@ -1518,6 +1515,9 @@ body {
         .winButtons_c38106 {
             padding: 0;
         }
+        .winButton_c38106 {
+            height: calc(var(--window-control-size) * 2);
+        }
         .winButtons_c38106::before {
             height: 16px;
             width: var(--space-xs);
@@ -1525,7 +1525,7 @@ body {
             margin: 0;
         }
         .toolbar__9293f {
-            padding-right: calc(32px + 2 * var(--space-xs));
+            padding-right: calc(32px + var(--space-xs));
         }
         .searchBar__1ac1c {
             margin-right: calc(32px + 2 * var(--space-xs));
@@ -1552,6 +1552,12 @@ body {
     }
     .base_c48ade:has(.winButtons_c38106) .searchBar__1ac1c {
         margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base_c48ade:has(.trailing_c38106 > .button__85643) .toolbar__9293f {
+        padding-right: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base_c48ade:has(.trailing_c38106 > .button__85643) .searchBar__1ac1c {
+        margin-right: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
     }
 }
 
