@@ -155,9 +155,15 @@ body {
         margin-right: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
     }
     .base_c48ade:has(.trailing_c38106 > .button__85643) .toolbar__9293f {
-        padding-right: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
+        padding-right: calc(32px * 2 + 2 * var(--space-xs));
     }
     .base_c48ade:has(.trailing_c38106 > .button__85643) .searchBar__1ac1c {
+        margin-right: calc(32px * 2 + 2 * var(--space-xs));
+    }
+    .base_c48ade:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) .toolbar__9293f {
+        padding-right: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
+    }
+    .base_c48ade:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) .searchBar__1ac1c {
         margin-right: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
     }
 }
