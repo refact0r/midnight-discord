@@ -35,6 +35,7 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [rose pine](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine.theme.css)
 - [rose pine moon](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css)
 - [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
+- [lilypichu](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-lilypichu.theme.css)
 - [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
 
 ## discord server
