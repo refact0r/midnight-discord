@@ -754,7 +754,7 @@ body {
     .visual-refresh body,
     .visual-refresh .theme-dark:not(.custom-user-profile-theme),
     .visual-refresh .theme-light:not(.custom-user-profile-theme) {
-        --activity-card-background: red;
+        --activity-card-background: var(--bg-3);
         --alert-bg: red;
         --autocomplete-bg: var(--bg-3);
 
