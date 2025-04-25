@@ -1637,7 +1637,8 @@ body {
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
         .messagesPopoutWrap__45690 /* inbox */,
-        .popout__76f04 /* channel hover popout */ {
+        .popout__76f04 /* channel hover popout */,
+        .bar__7aaec /* channel list new unreads bar */ {
             background: var(--bg-floating);
         }
     }
