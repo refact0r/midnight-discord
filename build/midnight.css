@@ -180,6 +180,7 @@ body {
         overflow: hidden;
         height: auto;
         min-width: var(--custom-member-list-width);
+        max-width: var(--custom-member-list-width);
     }
     .content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */ {
         margin-left: var(--gap);
