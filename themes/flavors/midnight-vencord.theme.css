@@ -10,14 +10,13 @@
  * @authorLink https://www.refact0r.dev
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 /* import theme modules */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
     /* font, change to '' for default discord font */
-    --font: 'figtree'; /* change to '' for default discord font */
+    --font: 'Inter'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
     font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
