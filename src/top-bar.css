@@ -3,10 +3,14 @@ body {
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 
-@property --modify-top-bar-buttons {
+@property --top-bar-button-position {
     syntax: 'off | hide | serverlist | titlebar';
     inherits: false;
-    initial-value: off;
+    initial-value: titlebar;
+}
+
+.platform-osx.visual-refresh .wrapper_ef3116 {
+    margin-top: max(0px, calc(36px - var(--top-bar-height)));
 }
 
 @container body style(--top-bar-button-position: hide) {
