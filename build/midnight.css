@@ -526,7 +526,7 @@ body {
     .visual-refresh {
         .form_f75fb0 {
             margin: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
-            padding: 0;
+            padding: 0 !important;
             --chatbar-border-color: var(--border-faint);
         }
         .channelTextArea_f75fb0 {
