@@ -987,6 +987,8 @@ body {
 
         --deprecated-text-input-bg: var(--bg-3);
         --deprecated-text-input-border: var(--border-light);
+
+        --background-code: var(--bg-3);
     }
 
     .visual-refresh {
