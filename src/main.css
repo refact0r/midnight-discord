@@ -318,8 +318,9 @@ body {
         padding: 0 8px;
     }
 
-    .bottom__7aaec /* channel list new unreads pill */ {
-        bottom: 0px;
+    .bottom__7aaec /* channel list new unreads pill */,
+    .unreadBottom__629e4 /* channel list non-community unread pill */ {
+        bottom: 0;
     }
 
     .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
