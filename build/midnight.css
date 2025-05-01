@@ -984,6 +984,9 @@ body {
 
         --green-360: var(--green-2); /* seems to be mostly used by vencord plugins */
         --primary-400: var(--text-4);
+
+        --deprecated-text-input-bg: var(--bg-3);
+        --deprecated-text-input-border: var(--border-light);
     }
 
     .visual-refresh {
