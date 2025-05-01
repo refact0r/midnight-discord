@@ -87,16 +87,12 @@ body {
     }
     .scroller_ef3116 /* server list inner scroller */ {
         padding: var(--custom-guild-list-padding) 0;
-        align-items: center;
     }
-    .tree_ef3116 {
-        align-items: center;
+    .folderGroup__48112 {
+        width: 100%;
     }
-    .stack_dbd263[data-align=stretch] /* server list inner inner */ {
-        align-items: center;
-    }
-    .expandedFolderBackground__48112 {
-        left: calc(var(--custom-guild-list-padding) - (var(--guildbar-folder-size) - var(--guildbar-avatar-size)) / 2 + var(--border-thickness));
+    .listItem__650eb {
+        width: 100%;
     }
 
     .sidebarList_c48ade /* channel list */ {
