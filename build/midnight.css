@@ -1166,6 +1166,11 @@ body {
             color: var(--text-0);
         }
 
+        .lookOutlined__201d5.colorWhite__201d5 /* outline buttons */ {
+            border-color: var(--text-5);
+            color: var(--text-3);
+        }
+
         .container__37e49 /* user panel buttons */,
         .numberBadge__2b1f5  /* unread number badge */,
         .toolbar__9293f /* toolbar button strikethroughs */ {
