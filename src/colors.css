@@ -579,30 +579,30 @@
         rect[fill='#82838b'] {
             fill: var(--offline);
         }
-        .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
+        .status_a423bd[style='background-color: rgb(130, 131, 139);'] {
             background-color: var(--offline) !important;
         }
-        rect[fill='#40a258'],
-        path[fill='#40a258'] /* status activity icon */,
+        rect[fill='#43a25a'],
+        path[fill='#43a25a'] /* status activity icon */,
         path[fill='var(--status-positive)'] /* status activity icon */,
-        .vc-platform-indicator > svg[fill="#40a258"] {
+        .vc-platform-indicator > svg[fill="#43a25a"] {
             fill: var(--online);
         }
-        .status_a423bd[style='background-color: rgb(64, 162, 88);'] {
+        .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
             background-color: var(--online) !important;
         }
-        rect[fill='#cc954c'],
-        .vc-platform-indicator > svg[fill='#cc954c'] {
+        rect[fill='#ca9654'],
+        .vc-platform-indicator > svg[fill='#ca9654'] {
             fill: var(--idle);
         }
-        .status_a423bd[style='background-color: rgb(204, 149, 76);'] {
+        .status_a423bd[style='background-color: rgb(202, 150, 84);'] {
             background-color: var(--idle) !important;
         }
-        rect[fill='#d83a41'],
-        .vc-platform-indicator > svg[fill='#d83a41'] {
+        rect[fill='#d83a42'],
+        .vc-platform-indicator > svg[fill='#d83a42'] {
             fill: var(--dnd);
         }
-        .status_a423bd[style='background-color: rgb(216, 58, 65);'] {
+        .status_a423bd[style='background-color: rgb(216, 58, 66);'] {
             background-color: var(--dnd) !important;
         }
         rect[fill='#9147ff'] {
