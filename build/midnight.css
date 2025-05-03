@@ -180,6 +180,7 @@ body {
         margin-left: var(--gap);
         overflow: hidden;
         height: auto;
+        min-width: fit-content;
     }
     .members_c8ffbb /* member list inner */,
     .member_c8ffbb /* member list item */ {
