@@ -180,6 +180,7 @@ body {
         margin-left: var(--gap);
         overflow: hidden;
         height: auto;
+        min-width: fit-content;
     }
     .members_c8ffbb /* member list inner */,
     .member_c8ffbb /* member list item */ {
@@ -1164,6 +1165,11 @@ body {
 
         .iconBadge__650eb.isCurrentUserConnected__650eb /* green vc badge when connected */ {
             color: var(--text-0);
+        }
+
+        .lookOutlined__201d5.colorWhite__201d5 /* outline buttons */ {
+            border-color: var(--text-5);
+            color: var(--text-3);
         }
 
         .container__37e49 /* user panel buttons */,
