@@ -1,14 +1,15 @@
 {
-	"name": "systemtheme",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "node scripts/dev.js",
-		"build": "node scripts/build.js"
-	},
-	"author": "refact0r",
-	"license": "MIT",
-	"devDependencies": {
-		"chokidar": "^3.6.0",
-		"dotenv": "^16.4.5"
-	}
+    "name": "midnight-theme",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "node scripts/dev.js",
+        "format": "prettier --write ."
+    },
+    "author": "refact0r",
+    "license": "MIT",
+    "devDependencies": {
+        "chokidar": "^3.6.0",
+        "dotenv": "^16.5.0",
+        "prettier": "^3.5.3"
+    }
 }
