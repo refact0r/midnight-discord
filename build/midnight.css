@@ -1370,7 +1370,9 @@ body {
 
     @container body style(--animations: on) {
         .wrapper__6e9f8[data-list-item-id='guildsnav___home'] .childWrapper__6e9f8::before {
-            transition: background-color 0.15s ease-out, transform var(--dms-icon-svg-transition);
+            transition:
+                background-color 0.15s ease-out,
+                transform var(--dms-icon-svg-transition);
         }
     }
 }
@@ -1764,4 +1766,3 @@ body {
         }
     }
 }
-
