@@ -417,9 +417,14 @@ body {
         border-radius: calc(var(--radius-lg) - 4px);
     }
 
-    .outer_c0bea0 /* profile outer */ {
+    .custom-user-profile-theme {
+        border:unset !important;
+    }
+
+    .outer_c0bea0 {
         border: 1px solid var(--border-subtle);
     }
+
     .root__24502 {
         background: none;
     }
