@@ -328,6 +328,10 @@
             color: var(--text-5);
         }
 
+        .bg__960e4 {
+            background: var(--bg-3);
+        }
+
         .modeUnreadImportant__2ea32 .icon__2ea32,
         .wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
             color: var(--text-3);
@@ -637,6 +641,10 @@
 
         .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
             color: var(--text-0);
+        }
+
+        .memberRowContainer__71c22.memberSelected__71c22 td {
+            background: var(--bg-3);
         }
     }
 
