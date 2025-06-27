@@ -996,7 +996,7 @@ body {
             color: var(--text-5);
         }
 
-        .bg__960e4 {
+        .bg__960e4 /* main background */ {
             background: var(--bg-3);
         }
 
@@ -1029,7 +1029,8 @@ body {
         .quickSelectPopout_ebaca5 /* dm vc region select popout */,
         .participantsButton__211d1 /* vc participants button */,
         .voiceBar__7aaec /* n in voice bar (channel list) */,
-        .mainCard_f369db /* form posts */ {
+        .mainCard_f369db /* form posts */,
+        .accountProfileCard__1fed1 /* account settings profile background */ {
             background-color: var(--bg-3);
         }
 
