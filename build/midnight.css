@@ -1106,7 +1106,8 @@ body {
         .bottomControls_e4cb9a /* stream preview viewer number */,
         .pictureInPictureVideo_e4cb9a .controlIcon_f1ceac /* stream preview control icon */,
         .bannerVisible_f37cb1 .name_f37cb1 /* server name over banner image */,
-        .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */ {
+        .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
+        .mediaMosaicAltText__0f481 /* image alt text label */ {
             color: var(--text-1);
         }
         .headerText_e4cb9a.base_eb1a4c /* stream preview header text */,
