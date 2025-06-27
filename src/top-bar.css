@@ -32,7 +32,7 @@ body {
         }
 
         /* make server list inner scroll */
-        .stack_dbd263 {
+        .stack_dbd263:not([id='guild-list-unread-dms']) {
             overflow: hidden scroll;
             scrollbar-width: none;
         }
