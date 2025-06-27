@@ -150,3 +150,7 @@ body {
     --purple-4: hsl(261, 65%, 67%);
     --purple-5: hsl(261, 55%, 61%);
 }
+
+.divider__908e2 {
+    border-color: var(--bg-2);
+}
