@@ -233,6 +233,8 @@ body {
         overflow: hidden;
         height: auto;
         min-width: 340px;
+        background-position: center calc(-1 * var(--border-thickness));
+        background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
 
     .searchResultsWrap_a9e706 /* search results */ {
@@ -411,6 +413,8 @@ body {
     .outer_c0bea0 /* profile outer */, 
     .contentWrapper__08434  /* gif panel */ {
         border-radius: var(--radius-lg);
+        background-position: center calc(-1 * var(--border-thickness));
+        background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
     .inner_c0bea0 /* profile inner */ {
         border-radius: calc(var(--radius-lg) - 4px);
