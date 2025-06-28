@@ -133,6 +133,9 @@ body {
         border: none !important;
         background: none;
     }
+    .chatContent_f75fb0 {
+        overflow: hidden;
+    }
     .container__133bf /* friends page group outer */,
     .page_c48ade {
         padding-bottom: var(--gap);
