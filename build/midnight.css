@@ -105,6 +105,8 @@ body {
     .container__2637a /* channel list inner */,
     .header_f37cb1 /* server name */ {
         background: none;
+        border-top-left-radius: var(--radius-lg);
+        border-top-right-radius: var(--radius-lg);
     }
     .scroller__629e4 /* channel list inner scroller */ {
         margin-bottom: 0;
@@ -117,6 +119,9 @@ body {
     }
     .bannerVisible_f37cb1 .headerEllipseBackdrop_f37cb1 {
         display: none;
+    }
+    .bannerVisible_f37cb1 .headerEllipseForeground_f37cb1 {
+        mix-blend-mode: normal;
     }
     .headerGlass_f37cb1 {
         top: 0;
