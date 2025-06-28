@@ -927,7 +927,7 @@ body {
         --text-feedback-critical: var(--red-1);
         --text-feedback-positive: var(--green-1);
         --text-feedback-info: red;
-        --text-feedback-warning: red;
+        --text-feedback-warning: var(--yellow-1);;
         --text-tertiary: var(--text-4);
 
         --user-profile-overlay-background: var(--bg-4);
