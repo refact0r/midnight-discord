@@ -993,6 +993,11 @@ body {
         --deprecated-text-input-border: var(--border-light);
 
         --background-code: var(--bg-3);
+
+        --control-background-primary-default: var(--accent-3); /* newly added settings variables for buttons */
+        --control-background-primary-hover: var(--accent-4);
+        --control-border-primary-default: var(--button-border);
+        --control-text-primary-default: var(--text-1);
     }
 
     .visual-refresh {
