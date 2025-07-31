@@ -53,7 +53,7 @@ body {
 
     /* background image options */
     --background-image: on; /* off: no background image, on: enable background image (must set url variable below) */
-    --background-image-url: url('https://unsplash.com/photos/c9MFM8rSMsQ/download?ixid=M3wxMjA3fDB8MXxhbGx8MTR8fHx8fHx8fDE3NDUzNzU4NTd8&force=true'); /* url of the background image */
+    --background-image-url: url('https://refact0r.github.io/midnight-discord/assets/iceland.jpg'); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
