@@ -431,11 +431,11 @@
         --control-text-active-active: var(--white);
         --control-text-active-default: var(--white);
         --control-text-active-hover: var(--white);
-        --control-text-active-loading: var(--white);
-        --control-text-critical-primary-active: var(--white);
-        --control-text-critical-primary-default: var(--white);
-        --control-text-critical-primary-hover: var(--white);
-        --control-text-critical-primary-loading: var(--white); */
+        --control-text-active-loading: var(--white);*/
+        --control-text-critical-primary-active: var(--text-0);
+        --control-text-critical-primary-default: var(--text-0);
+        --control-text-critical-primary-hover: var(--text-0);
+        --control-text-critical-primary-loading: var(--text-0);
         --control-text-critical-secondary-active: var(--red-2);
         --control-text-critical-secondary-default: var(--red-2);
         --control-text-critical-secondary-hover: var(--red-2);
