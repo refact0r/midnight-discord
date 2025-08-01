@@ -522,6 +522,10 @@
             background-color: var(--text-2) !important;
         }
 
+        .badge_c3d04b /* shop "orbs exclusive" badge */ {
+            background-color: var(--text-1);
+        }
+
         #app-mount .message__5126c.replying__5126c:hover /* override fix for message reply hover */ {
             background: var(--reply-hover);
         }
