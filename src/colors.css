@@ -480,7 +480,7 @@
             color: var(--text-3);
         }
 
-        .folder__48112[aria-expanded="false"] > .folderIconWrapper__48112 /* collapsed folders */ {
+        .hiddenVisually__27f77[aria-expanded="false"] > .folderPreviewWrapper__48112 /* collapsed folders */ {
             --background-primary: var(--bg-3);
         }
 
@@ -548,25 +548,25 @@
             color: var(--text-0);
         }
 
-        .container__87bf1 /* settings checkbutton background */ {
+        .container__6f89e /* settings checkbutton background */ {
             background-color: var(--bg-1) !important;
             transition: background-color 0.2s ease;
         }
-        .container__87bf1.checked__87bf1 /* settings checkbutton background */ {
+        .container__6f89e.checked__6f89e /* settings checkbutton background */ {
             background-color: var(--accent-2) !important;
         }
-        .container__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
+        .container__6f89e .slider__6f89e > svg > path /* settings checkbutton check */ {
             fill: var(--bg-1) !important;
             transition: fill 0.2s ease;
         }
-        .container__87bf1.checked__87bf1 .slider__87bf1 > svg > path /* settings checkbutton check */ {
+        .container__6f89e.checked__6f89e .slider__6f89e > svg > path /* settings checkbutton check */ {
             fill: var(--accent-2) !important;
         }
-        .container__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
+        .container__6f89e rect[fill='white'] /* settings checkbutton slider */ {
             fill: var(--text-3) !important;
             transition: fill 0.2s ease;
         }
-        .container__87bf1.checked__87bf1 rect[fill='white'] /* settings checkbutton slider */ {
+        .container__6f89e.checked__6f89e rect[fill='white'] /* settings checkbutton slider */ {
             fill: var(--text-0) !important;
         }
 
@@ -621,7 +621,7 @@
         .friendRequestsButton__523aa .base__2b1f5 /* inbox friend request number */,
         .textBadge__2b1f5[style='background-color: var(--background-accent);'],
         .tooltipBlack__382e7 /* server boost tooltip */,
-        .colorable_f1ceac.experimentDark_f1ceac, .colorable_f1ceac.experimentDark_f1ceac .centerIcon_f1ceac /* vc buttons */ {
+        .colorable_f1ceac.primaryDark_f1ceac, .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc buttons */ {
             color: var(--text-3);
         }
         .status__2f4f7 path[fill='var(--white)'],
@@ -784,7 +784,7 @@
             background-color: var(--accent-2) !important;
         }
 
-        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
+        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor_b717a1 {
             color: var(--text-0);
         }
 
