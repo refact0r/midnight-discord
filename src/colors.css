@@ -548,29 +548,29 @@
             color: var(--text-0);
         }
 
-        .container__6f89e /* settings checkbutton background */ {
+        .container__3f21e /* settings checkbutton background */ {
             background-color: var(--bg-1) !important;
             transition: background-color 0.2s ease;
         }
-        .container__6f89e.checked__6f89e /* settings checkbutton background */ {
+        .container__3f21e.checked__3f21e /* settings checkbutton background */ {
             background-color: var(--accent-2) !important;
         }
-        .container__6f89e .slider__6f89e > svg > path /* settings checkbutton check */ {
+        .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */ {
             fill: var(--bg-1) !important;
             transition: fill 0.2s ease;
         }
-        .container__6f89e.checked__6f89e .slider__6f89e > svg > path /* settings checkbutton check */ {
+        .container__3f21e.checked__3f21e .slider__3f21e > svg > path /* settings checkbutton check */ {
             fill: var(--accent-2) !important;
         }
-        .container__6f89e rect[fill='white'] /* settings checkbutton slider */ {
+        .container__3f21e rect[fill='white'] /* settings checkbutton slider */ {
             fill: var(--text-3) !important;
             transition: fill 0.2s ease;
         }
-        .container__6f89e.checked__6f89e rect[fill='white'] /* settings checkbutton slider */ {
+        .container__3f21e.checked__3f21e rect[fill='white'] /* settings checkbutton slider */ {
             fill: var(--text-0) !important;
         }
 
-        .refreshIcon__001a7 /* settings radiobutton center */ {
+        .refreshIcon__1bda4 /* settings radiobutton center */ {
             fill: var(--text-0);
         }
 
@@ -767,13 +767,13 @@
         }
 
         /* fix radio bar button colors */
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+        .radioBar__1bda4[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--yellow-2) !important;
         }
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+        .radioBar__1bda4[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--green-2) !important;
         }
-        .radioBar__001a7[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+        .radioBar__1bda4[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
             --radio-bar-accent-color: var(--red-2) !important;
         }
 
@@ -784,7 +784,7 @@
             background-color: var(--accent-2) !important;
         }
 
-        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor_b717a1 {
+        .vcd-screen-picker-option-radio[data-checked='true'] .defaultColor__4bd52 {
             color: var(--text-0);
         }
 

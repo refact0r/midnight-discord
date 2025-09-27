@@ -255,7 +255,7 @@ body {
         border: none;
         background: none;
     }
-    .chat_ee72fa::before /* vc chat shadow */ {
+    .chat_a44415::before /* vc chat shadow */ {
         display: none;
     }
     .channelChatWrapper_cb9592 /* vc chat + titlebar group outer */ {
@@ -307,8 +307,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper__6c798 /* message loading placeholders */,
-    .wrapper__6c798 > .wrapper_fc8177 {
+    .wrapper_da5890 /* message loading placeholders */,
+    .wrapper_da5890 > .wrapper_fc8177 {
         background: none;
     }
     .page_c48ade > .chat_f75fb0 /* friend page, server members page */ {
