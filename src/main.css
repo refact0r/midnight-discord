@@ -315,7 +315,9 @@ body {
         background: none !important;
     }
 
-    .newMessagesBar__0f481 /* unread messages bar */ {
+    .newMessagesBar__0f481, /* unread messages bar */
+    .newTopicsBarContainer__0f481, /* unread messages bar with summaries (experimental feature) */
+    .topicsPillContainer__0f481 /* summaries bar (read messages bar) */ {
         top: 12px;
         left: 12px;
         right: 12px;
