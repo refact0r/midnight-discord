@@ -13,14 +13,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - id: update
+      - id: update-src
         uses: metro420yt/class-update@v1-rc3
         with:
           folder: src
           ext: css
           diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
+      - id: update-build
+        uses: metro420yt/class-update@v1-rc3
+        with:
+          folder: build
+          ext: css
+          diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
       - uses: EndBug/add-and-commit@v9
-        if: ${{steps.update.outputs.totalChanges > 0}}
+        if: ${{steps.update-src.outputs.totalChanges > 0 || steps.update-build.outputs.totalChanges > 0}}
         with:
           default_author: github_actions
           message: "chore: update classes >_<"
