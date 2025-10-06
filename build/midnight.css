@@ -130,6 +130,10 @@ body {
         display: none;
     }
 
+    .wrapper_ef3116 /* remove server list shadow */ {
+        mask: none;
+    }
+
     .chat_f75fb0 /* chat group outer */ {
         border: none !important;
         background: none;
