@@ -312,8 +312,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper__6c798 /* message loading placeholders */,
-    .wrapper__6c798 > .wrapper_fc8177 {
+    .wrapper_d852db /* message loading placeholders */,
+    .wrapper_d852db > .wrapper_fc8177 {
         background: none;
     }
     .page_c48ade > .chat_f75fb0 /* friend page, server members page */ {
@@ -1159,7 +1159,7 @@ body {
             color: var(--text-3);
         }
 
-        .hiddenVisually__27f77[aria-expanded="false"] > .folderPreviewWrapper__48112 /* collapsed folders */ {
+        .hiddenVisually_b18fe2[aria-expanded="false"] > .folderPreviewWrapper__48112 /* collapsed folders */ {
             --background-primary: var(--bg-3);
         }
 

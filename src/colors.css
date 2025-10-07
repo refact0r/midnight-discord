@@ -480,7 +480,7 @@
             color: var(--text-3);
         }
 
-        .hiddenVisually__27f77[aria-expanded="false"] > .folderPreviewWrapper__48112 /* collapsed folders */ {
+        .hiddenVisually_b18fe2[aria-expanded="false"] > .folderPreviewWrapper__48112 /* collapsed folders */ {
             --background-primary: var(--bg-3);
         }
 
