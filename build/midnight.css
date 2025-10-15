@@ -312,8 +312,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper__6c798 /* message loading placeholders */,
-    .wrapper__6c798 > .wrapper_fc8177 {
+    .wrapper_d852db /* message loading placeholders */,
+    .wrapper_d852db > .wrapper_fc8177 {
         background: none;
     }
     .page_c48ade > .chat_f75fb0 /* friend page, server members page */ {
@@ -474,12 +474,12 @@ body {
         .wrapper__2ea32 .link__2ea32 /* channels */,
         .container__91a9d /* members */,
         .channel__972a0 /* dms */,
-        .side_b3f026 .item_b3f026 /* settings */ {
+        .side_aa8da2 .item_aa8da2 /* settings */ {
             transition: margin-left var(--list-item-transition);
             will-change: margin-left;
         }
         .wrapper__2ea32:hover .link__2ea32,
-        .side_b3f026 .item_b3f026:hover {
+        .side_aa8da2 .item_aa8da2:hover {
             margin-left: 10px;
         }
         .container__91a9d:hover,
@@ -1168,11 +1168,11 @@ body {
             background: none;
         }
 
-        .side_b3f026 .item_b3f026:hover /* settings tab */ {
+        .side_aa8da2 .item_aa8da2:hover /* settings tab */ {
             background-color: var(--bg-3) !important;
         }
-        .side_b3f026 .item_b3f026:active,
-        .side_b3f026 .item_b3f026.selected_b3f026 {
+        .side_aa8da2 .item_aa8da2:active,
+        .side_aa8da2 .item_aa8da2.selected_aa8da2 {
             background-color: var(--bg-2) !important;
         }
 
@@ -1384,7 +1384,7 @@ body {
             color: var(--bg-4);
         }
 
-        .tooltipGrey__382e7 /* spotify plugin time tooltip */ {
+        .tooltipGrey_c36707 /* spotify plugin time tooltip */ {
             color: var(--text-3);
             background-color: var(--bg-3);
         }
@@ -1800,7 +1800,7 @@ body {
         }
 
         .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
-        .tooltip__382e7 /* tooltips */ {
+        .tooltip_c36707 /* tooltips */ {
             background: var(--bg-floating);
         }
         .menu_c1e9c4 /* context menus */,
