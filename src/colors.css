@@ -489,11 +489,11 @@
             background: none;
         }
 
-        .side_b3f026 .item_b3f026:hover /* settings tab */ {
+        .side_aa8da2 .item_aa8da2:hover /* settings tab */ {
             background-color: var(--bg-3) !important;
         }
-        .side_b3f026 .item_b3f026:active,
-        .side_b3f026 .item_b3f026.selected_b3f026 {
+        .side_aa8da2 .item_aa8da2:active,
+        .side_aa8da2 .item_aa8da2.selected_aa8da2 {
             background-color: var(--bg-2) !important;
         }
 
@@ -705,7 +705,7 @@
             color: var(--bg-4);
         }
 
-        .tooltipGrey__382e7 /* spotify plugin time tooltip */ {
+        .tooltipGrey_c36707 /* spotify plugin time tooltip */ {
             color: var(--text-3);
             background-color: var(--bg-3);
         }

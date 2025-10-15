@@ -15,12 +15,12 @@ body {
         .wrapper__2ea32 .link__2ea32 /* channels */,
         .container__91a9d /* members */,
         .channel__972a0 /* dms */,
-        .side_b3f026 .item_b3f026 /* settings */ {
+        .side_aa8da2 .item_aa8da2 /* settings */ {
             transition: margin-left var(--list-item-transition);
             will-change: margin-left;
         }
         .wrapper__2ea32:hover .link__2ea32,
-        .side_b3f026 .item_b3f026:hover {
+        .side_aa8da2 .item_aa8da2:hover {
             margin-left: 10px;
         }
         .container__91a9d:hover,
