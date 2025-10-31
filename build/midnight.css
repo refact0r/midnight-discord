@@ -1726,16 +1726,16 @@ body {
             min-height: 0;
         }
     }
-    .base_c48ade:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+    .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
-    .base_c48ade:has(.winButtons_c38106) {
+    .base__5e434:has(.winButtons_c38106) {
         --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
     }
-    .base_c48ade:has(.trailing_c38106 > .button__85643) {
+    .base__5e434:has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
     }
-    .base_c48ade:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
+    .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
     }
 }
@@ -1809,7 +1809,7 @@ body {
         .outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
-        .messagesPopoutWrap__45690 /* inbox */,
+        .messagesPopoutWrap_e8b59c /* inbox */,
         .popout__76f04 /* channel hover popout */,
         .bar__7aaec /* channel list new unreads bar */ {
             background: var(--bg-floating);
@@ -1853,12 +1853,12 @@ body {
 
 @container body style(--small-user-panel: on) {
     .visual-refresh {
-        .panels_c48ade /* user panel */ {
+        .panels__5e434 /* user panel */ {
             right: 0;
             left: unset;
             width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         }
-        .guilds_c48ade /* server list */ {
+        .guilds__5e434 /* server list */ {
             margin-bottom: 0;
         }
     }
