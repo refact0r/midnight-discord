@@ -6,12 +6,12 @@
 
 @container body style(--small-user-panel: on) {
     .visual-refresh {
-        .panels_c48ade /* user panel */ {
+        .panels__5e434 /* user panel */ {
             right: 0;
             left: unset;
             width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         }
-        .guilds_c48ade /* server list */ {
+        .guilds__5e434 /* server list */ {
             margin-bottom: 0;
         }
     }
