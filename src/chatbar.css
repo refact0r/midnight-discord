@@ -34,6 +34,7 @@ body {
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
             transition: border-color var(--border-hover-transition);
+            overflow: hidden;
 
             &:hover {
                 border-color: var(--border-hover);
