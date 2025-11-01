@@ -64,7 +64,7 @@ body {
     --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
-    --custom-chatbar: aligned; /* off: default chatbar, separated: chatbar separated from chat */
+    --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
     --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
     --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
