@@ -570,7 +570,7 @@
             fill: var(--text-0) !important;
         }
 
-        .refreshIcon__1bda4 /* settings radiobutton center */ {
+        .refreshIcon__88a69 /* settings radiobutton center */ {
             fill: var(--text-0);
         }
 
@@ -767,13 +767,13 @@
         }
 
         /* fix radio bar button colors */
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--yellow-2) !important;
         }
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--green-2) !important;
         }
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
             --radio-bar-accent-color: var(--red-2) !important;
         }
 
