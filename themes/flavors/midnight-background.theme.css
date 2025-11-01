@@ -65,7 +65,7 @@ body {
 
     /* chatbar options */
     --custom-chatbar: separated; /* off: default chatbar, separated: chatbar separated from chat */
-    --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
+    --chatbar-height: 56px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
     --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
     /* other options */
