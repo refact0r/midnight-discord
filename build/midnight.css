@@ -1638,6 +1638,7 @@ body {
             gap: var(--space-xs);
             z-index: 1000;
             padding-right: var(--space-xs);
+            height: 32px;
         }
         .systemBar_c38106 .trailing_c38106 {
             top: var(--space-xs);
