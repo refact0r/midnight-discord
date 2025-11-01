@@ -312,8 +312,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper__4106a /* message loading placeholders */,
-    .wrapper__4106a > .wrapper_fc8177 {
+    .wrapper__0d1ef /* message loading placeholders */,
+    .wrapper__0d1ef > .wrapper_fc8177 {
         background: none;
     }
     .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
@@ -1203,7 +1203,7 @@ body {
             fill: var(--text-0) !important;
         }
 
-        .refreshIcon__1bda4 /* settings radiobutton center */ {
+        .refreshIcon__88a69 /* settings radiobutton center */ {
             fill: var(--text-0);
         }
 
@@ -1400,13 +1400,13 @@ body {
         }
 
         /* fix radio bar button colors */
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--yellow-2) !important;
         }
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
             --radio-bar-accent-color: var(--green-2) !important;
         }
-        .radioBar__1bda4[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+        .radioBar__88a69[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
             --radio-bar-accent-color: var(--red-2) !important;
         }
 
