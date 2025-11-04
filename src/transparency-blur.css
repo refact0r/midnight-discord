@@ -36,9 +36,14 @@
 
 @container body style(--transparency-tweaks: on) {
     .visual-refresh {
-        .formWithLoadedChatInput_f75fb0:before,
         .children__9293f:after {
             display: none;
+        }
+        .chatGradient__36d07 {
+            display: none;
+        }
+        .form_f75fb0 {
+            margin-top: 0;
         }
     }
 }
