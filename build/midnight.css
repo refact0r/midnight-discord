@@ -312,8 +312,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper__6c798 /* message loading placeholders */,
-    .wrapper__6c798 > .wrapper_fc8177 {
+    .wrapper__4106a /* message loading placeholders */,
+    .wrapper__4106a > .wrapper_fc8177 {
         background: none;
     }
     .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
@@ -1250,7 +1250,7 @@ body {
         .colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
         .iconBadge__650eb.base__2b1f5 /* server vc badge */,
         #app-mount .akaBadge__488b1 /* aka badge */,
-        .message_fcf29c /* you have unsaved settings message */,
+        .message__9a9f9 /* you have unsaved settings message */,
         .friendRequestsButton__523aa .base__2b1f5 /* inbox friend request number */,
         .textBadge__2b1f5[style='background-color: var(--background-accent);'],
         .tooltipBlack__382e7 /* server boost tooltip */,
