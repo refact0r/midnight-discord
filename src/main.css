@@ -311,8 +311,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper_cdf8a9 /* message loading placeholders */,
-    .wrapper_cdf8a9 > .wrapper_fc8177 {
+    .wrapper__4106a /* message loading placeholders */,
+    .wrapper__4106a > .wrapper_fc8177 {
         background: none;
     }
     .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
