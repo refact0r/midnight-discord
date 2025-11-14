@@ -44,7 +44,7 @@ body {
     .scroller_c880e8 /* nitro page */,
     .container_f391e3 > .content_f75fb0 /* message requests */,
     .shop__6db1d /* shop */,
-    .content_f75fb0 > .outer_c0bea0 /* dm user panel */,
+    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */,
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
     .chat_fb64c9 /* new thread panel */,
@@ -236,11 +236,10 @@ body {
         margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
     }
 
-    .content_f75fb0 > .outer_c0bea0 /* dm user panel */ {
+    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
         margin-left: var(--gap);
         overflow: hidden;
-        height: auto;
-        min-width: 340px;
+        /* min-width: 340px; */
         background-position: center calc(-1 * var(--border-thickness));
         background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
