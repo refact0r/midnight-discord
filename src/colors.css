@@ -304,7 +304,7 @@
         --scrollbar-thin-track: transparent;
 
         --white: var(--text-0);
-        --white-500: var(--text-0);
+        --white-500: var(--text-3);
         --redesign-button-overlay-alpha-text: var(--text-2);
 
         --brand-360: var(--accent-2);
