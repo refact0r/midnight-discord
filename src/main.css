@@ -15,56 +15,72 @@ body {
     --font: 'figtree';
     --code-font: '';
 
-    /* sizes */
-    --gap: 12px; /* spacing between panels */
-    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    /* sizes - refined proportions */
+    --gap: 10px;
+    --divider-thickness: 3px;
+    --border-thickness: 1px;
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
-    --border-hover-transition: 0.2s ease;
+    --border-hover-transition: 0.15s ease;
 }
 
 .visual-refresh {
     /* panel separation */
-    .guilds__5e434 /* server list */, 
-    .sidebarList__5e434 /* channel list (includes dm list) */,
-    .panels__5e434 /* user panel */,
-    .chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
-    .chatContent_f75fb0 /* chat */,
-    .container_c8ffbb /* member list */,
-    .content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */,
-    .container__133bf > .container__9293f /* friends titlebar */,
-    .container_f391e3 > .container__9293f /* message requests titlebar */,
-    .homeWrapper__0920e > .container__9293f /* nitro page titlebar */,
-    .container__01ae2 > .container__9293f /* vc chat titlebar */,
-    .container_fb64c9 > .container__9293f /* new thread panel */,
-    .peopleColumn__133bf /* online friends */,
-    .nowPlayingColumn__133bf /* active now */,
-    .scroller_c880e8 /* nitro page */,
-    .container_f391e3 > .content_f75fb0 /* message requests */,
-    .shop__6db1d /* shop */,
-    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */,
-    .searchResultsWrap_a9e706 /* search results */,
-    .container_f369db /* forum */,
-    .chat_fb64c9 /* new thread panel */,
-    .container_a592e1 /* server discovery */,
-    .callContainer_cb9592 /* vc container */,
-    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592 /* vc container when chat open */,
-    .callContainer__722ff /* stage */,
-    .chat_f75fb0 > .header_c791b2 /* server members header */,
-    .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
-    .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
-    .chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
+    .guilds__5e434, 
+    .sidebarList__5e434,
+    .panels__5e434,
+    .chat_f75fb0 > .subtitleContainer_f75fb0,
+    .chatContent_f75fb0,
+    .container_c8ffbb,
+    .content_f75fb0 > .membersWrap_c8ffbb,
+    .container__133bf > .container__9293f,
+    .container_f391e3 > .container__9293f,
+    .homeWrapper__0920e > .container__9293f,
+    .container__01ae2 > .container__9293f,
+    .container_fb64c9 > .container__9293f,
+    .peopleColumn__133bf,
+    .nowPlayingColumn__133bf,
+    .scroller_c880e8,
+    .container_f391e3 > .content_f75fb0,
+    .shop__6db1d,
+    .content_f75fb0 > aside > .outer_c0bea0,
+    .searchResultsWrap_a9e706,
+    .container_f369db,
+    .chat_fb64c9,
+    .container_a592e1,
+    .callContainer_cb9592,
+    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592,
+    .callContainer__722ff,
+    .chat_f75fb0 > .header_c791b2,
+    .chat_f75fb0 > .scrollerBase_d125d2,
+    .chat_f75fb0 > .header__0b563,
+    .chat_f75fb0 > .container__0b563 {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
-        backdrop-filter: var(--panel-backdrop-filter);
         box-sizing: border-box;
         transition: border-color var(--border-hover-transition);
-
-        &:hover {
-            border-color: var(--border-hover);
-        }
+    }
+    
+    /* Server list special styling - cooler look */
+    .guilds__5e434 {
+        background: linear-gradient(180deg, 
+            var(--background-base-lower) 0%,
+            hsla(280, 10%, 8%, 1) 100%) !important;
+        border-color: hsla(280, 20%, 30%, 0.15) !important;
+    }
+    .guilds__5e434:hover {
+        border-color: hsla(280, 30%, 50%, 0.25) !important;
+    }
+    
+    .guilds__5e434:hover, 
+    .sidebarList__5e434:hover,
+    .panels__5e434:hover,
+    .chatContent_f75fb0:hover,
+    .container_c8ffbb:hover,
+    .peopleColumn__133bf:hover,
+    .nowPlayingColumn__133bf:hover {
+        border-color: var(--border-hover);
     }
 
     .panels__5e434 /* user panel */ {
@@ -80,13 +96,31 @@ body {
     .guilds__5e434 /* server list */ {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
         margin-right: var(--gap);
+        position: relative;
     }
     .guilds__5e434 + div:not(.sidebarList__5e434) /* betterfolders */ {
         width: 100% !important;
     }
+    
+    /* Server list wrapper - position for external scrollbar */
+    .wrapper_ef3116 {
+        position: relative;
+        overflow: visible;
+    }
+    
     .scroller_ef3116 /* server list inner scroller */ {
         padding: var(--custom-guild-list-padding) 0;
+        /* Hide scrollbar completely inside */
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
     }
+    
+    /* Hide webkit scrollbar inside */
+    .scroller_ef3116::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+    }
+    
     .folderGroup__48112 {
         width: 100%;
     }
@@ -96,6 +130,9 @@ body {
 
     .sidebarList__5e434 /* channel list */ {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+        background: linear-gradient(180deg,
+            var(--background-base-lower) 0%,
+            hsla(280, 10%, 9%, 1) 100%) !important;
     }
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
@@ -107,6 +144,34 @@ body {
     }
     .scroller__629e4 /* channel list inner scroller */ {
         margin-bottom: 0;
+        /* Hide channel list scrollbar too */
+        scrollbar-width: none !important;
+    }
+    .scroller__629e4::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    /* Server name header - enhanced */
+    .header_f37cb1 {
+        padding: 12px 12px 8px 16px;
+        transition: background-color 0.15s ease;
+    }
+    .header_f37cb1:hover {
+        background-color: hsla(280, 25%, 50%, 0.08) !important;
+    }
+    
+    /* Category headers - sleek styling */
+    .containerDefault__3187b {
+        padding: 16px 8px 4px 16px;
+    }
+    .containerDefault__3187b .name__3187b {
+        color: var(--text-4);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: color 0.15s ease;
+    }
+    .containerDefault__3187b:hover .name__3187b {
+        color: var(--purple-2);
     }
 
     /* fix discord's idiotic server banners */
@@ -219,20 +284,272 @@ body {
         border: none;
     }
 
-    .homeWrapper__0920e /* nitro page group inner */ {
+    .homeWrapper__0920e /* nitro page group inner */,
+    [class*="homeWrapper_"] {
         border: none;
         background: none;
     }
-    .applicationStore_f07d62 /* nitro page group outer */ {
+    .applicationStore_f07d62 /* nitro page group outer */,
+    [class*="applicationStore_"] {
         background: none;
     }
 
-    .shop__6db1d /* shop */ {
+    /* ═══════════════════════════════════════════════════════════════
+       NITRO PAGE - Lillac themed styling
+       Uses attribute selectors [class*="name"] to match dynamic Discord classes
+       ═══════════════════════════════════════════════════════════════ */
+    /* Nitro page container */
+    [class*="applicationStore_"],
+    [class*="premiumTab_"],
+    [class*="contentWrapper_"][class*="nitro"] {
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
+    }
+    
+    /* Nitro hero/marketing sections */
+    [class*="heroContainer_"],
+    [class*="hero_"][class*="nitro"],
+    [class*="marketingHeader_"],
+    [class*="nitroHeader_"],
+    [class*="ctaBackground_"] {
+        background: linear-gradient(135deg,
+            hsla(280, 40%, 25%, 0.4) 0%,
+            hsla(280, 50%, 15%, 0.3) 50%,
+            hsla(280, 30%, 10%, 0.2) 100%) !important;
+        border-radius: var(--radius-lg);
+        border: 1px solid hsla(280, 40%, 50%, 0.15);
+    }
+    
+    /* Nitro tier cards */
+    [class*="tierCard_"],
+    [class*="tierBody_"],
+    [class*="subscriptionCard_"],
+    [class*="planCard_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    [class*="tierCard_"]:hover,
+    [class*="subscriptionCard_"]:hover,
+    [class*="planCard_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px hsla(280, 50%, 30%, 0.2);
+    }
+    
+    /* Nitro perks */
+    [class*="perkCard_"],
+    [class*="perkRow_"],
+    [class*="featureCard_"],
+    [class*="perk_"]:not([class*="perkIcon"]) {
+        background: hsla(280, 20%, 15%, 0.3) !important;
+        border-radius: var(--radius-md);
+        margin: 4px 0;
+        transition: background-color 0.15s ease;
+    }
+    [class*="perkCard_"]:hover,
+    [class*="perkRow_"]:hover,
+    [class*="featureCard_"]:hover {
+        background: hsla(280, 25%, 20%, 0.4) !important;
+    }
+    
+    /* Nitro buttons */
+    [class*="subscribeButton_"],
+    [class*="purchaseButton_"],
+    [class*="tierBody_"] button,
+    [class*="upsellButton_"] {
+        background: linear-gradient(135deg, var(--purple-3), var(--purple-4)) !important;
+        border: none !important;
+        border-radius: var(--radius-md) !important;
+        transition: filter 0.15s ease, transform 0.1s ease;
+    }
+    [class*="subscribeButton_"]:hover,
+    [class*="purchaseButton_"]:hover,
+    [class*="upsellButton_"]:hover {
+        filter: brightness(1.1);
+        transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SHOP PAGE - Lillac themed styling  
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="shop_"]:not([class*="shopIcon"]),
+    [class*="collectiblesShop_"],
+    [class*="storePage_"] {
         overflow: hidden;
         height: auto;
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
     }
-    .shop__08415 /* shop inner scroller */ {
-        margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
+    
+    /* Shop categories/tabs */
+    [class*="categoryItem_"],
+    [class*="tabItem_"],
+    [class*="shopTab_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-md) !important;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    [class*="categoryItem_"]:hover,
+    [class*="tabItem_"]:hover,
+    [class*="shopTab_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        background: var(--bg-2) !important;
+    }
+    [class*="categoryItem_"][class*="selected"],
+    [class*="tabItem_"][class*="selected"],
+    [class*="shopTab_"][class*="active"] {
+        border-color: var(--purple-3) !important;
+        background: hsla(280, 30%, 20%, 0.4) !important;
+    }
+    
+    /* Shop product cards */
+    [class*="collectibleCard_"],
+    [class*="productCard_"],
+    [class*="itemCard_"],
+    [class*="giftCard_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+    }
+    [class*="collectibleCard_"]:hover,
+    [class*="productCard_"]:hover,
+    [class*="itemCard_"]:hover,
+    [class*="giftCard_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.35) !important;
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px hsla(280, 50%, 20%, 0.25);
+    }
+    
+    /* Shop item previews */
+    [class*="previewContainer_"],
+    [class*="itemPreview_"],
+    [class*="collectiblePreview_"] {
+        background: hsla(280, 15%, 12%, 0.5) !important;
+        border-radius: var(--radius-md);
+    }
+    
+    /* Shop price tags */
+    [class*="priceTag_"],
+    [class*="price_"]:not([class*="priceD"]),
+    [class*="itemPrice_"] {
+        background: linear-gradient(135deg, var(--purple-4), var(--purple-5)) !important;
+        border-radius: var(--radius-sm);
+        padding: 4px 10px;
+    }
+    
+    /* Shop bundles */
+    [class*="bundleCard_"],
+    [class*="bundle_"]:not([class*="bundleIcon"]) {
+        background: linear-gradient(135deg,
+            hsla(280, 35%, 18%, 0.6) 0%,
+            hsla(280, 25%, 12%, 0.4) 100%) !important;
+        border: 1px solid hsla(280, 40%, 45%, 0.25) !important;
+        border-radius: var(--radius-lg) !important;
+    }
+    [class*="bundleCard_"]:hover,
+    [class*="bundle_"]:not([class*="bundleIcon"]):hover {
+        border-color: hsla(280, 50%, 55%, 0.4) !important;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       QUESTS/MISSIONS PAGE - Lillac themed styling
+       ═══════════════════════════════════════════════════════════════ */
+    /* Quests container */
+    [class*="questsContainer_"],
+    [class*="questsPage_"],
+    [class*="questsScroller_"] {
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
+    }
+    
+    /* Quest cards */
+    [class*="questCard_"],
+    [class*="quest_"]:not([class*="questIcon"]):not([class*="questsC"]):not([class*="questsP"]):not([class*="questsS"]) {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+    }
+    [class*="questCard_"]:hover,
+    [class*="quest_"]:not([class*="questIcon"]):not([class*="questsC"]):not([class*="questsP"]):not([class*="questsS"]):hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px hsla(280, 50%, 20%, 0.2);
+    }
+    
+    /* Quest progress bar */
+    [class*="progressBar_"],
+    [class*="questProgress_"] {
+        background: var(--bg-2) !important;
+        border-radius: 8px !important;
+        overflow: hidden;
+    }
+    [class*="progressBarFill_"],
+    [class*="progressFill_"],
+    [class*="barFill_"] {
+        background: linear-gradient(90deg, var(--purple-3), var(--purple-2)) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Quest rewards */
+    [class*="reward_"]:not([class*="rewardIcon"]),
+    [class*="rewardItem_"],
+    [class*="questReward_"] {
+        background: hsla(280, 25%, 18%, 0.4) !important;
+        border: 1px solid hsla(280, 35%, 45%, 0.2) !important;
+        border-radius: var(--radius-md) !important;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    [class*="reward_"]:not([class*="rewardIcon"]):hover,
+    [class*="rewardItem_"]:hover,
+    [class*="questReward_"]:hover {
+        border-color: hsla(280, 45%, 55%, 0.35) !important;
+        background: hsla(280, 30%, 22%, 0.5) !important;
+    }
+    
+    /* Quest claim/action buttons */
+    [class*="claimButton_"],
+    [class*="questButton_"],
+    [class*="acceptButton_"] {
+        background: linear-gradient(135deg, var(--purple-3), var(--purple-4)) !important;
+        border: none !important;
+        border-radius: var(--radius-md) !important;
+        transition: filter 0.15s ease, transform 0.1s ease;
+    }
+    [class*="claimButton_"]:hover,
+    [class*="questButton_"]:hover,
+    [class*="acceptButton_"]:hover {
+        filter: brightness(1.15);
+        transform: translateY(-1px);
+    }
+    
+    /* Quest game icon */
+    [class*="gameIcon_"],
+    [class*="questIcon_"] {
+        border-radius: var(--radius-md);
+        border: 2px solid hsla(280, 40%, 50%, 0.2);
+        transition: border-color 0.15s ease;
+    }
+    [class*="questCard_"]:hover [class*="gameIcon_"],
+    [class*="questCard_"]:hover [class*="questIcon_"] {
+        border-color: hsla(280, 50%, 60%, 0.4);
+    }
+    
+    /* Quest timer/expiry */
+    [class*="timer_"],
+    [class*="expiresAt_"],
+    [class*="questExpiry_"] {
+        color: var(--purple-2) !important;
+        font-weight: 500;
     }
 
     .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
@@ -305,9 +622,6 @@ body {
     .contentRegionScroller__23e6b {
         background: none;
     }
-    .standardSidebarView__23e6b {
-        backdrop-filter: var(--panel-backdrop-filter);
-    }
 
     /* remove excess backgrounds */
     .wrapper__4106a /* message loading placeholders */,
@@ -372,7 +686,6 @@ body {
         border-radius: var(--divider-thickness);
         height: calc(100% - 2 * var(--radius-sm));
         top: var(--radius-sm);
-        left: calc(var(--divider-thickness) / -2 + 1px);
         left: calc(var(--radius-sm) / 2);
     }
 
@@ -391,46 +704,79 @@ body {
         margin-left: calc((var(--custom-guild-list-padding) - 4px) / 2);
     }
 
-    /* improve embeds */
+    /* improve embeds - clean and modern */
     .embedFull__623de {
-        border: 4px solid var(--border-normal);
-        border-top-color: var(--border-subtle) !important;
-        border-top-width: 1px;
-        border-bottom-color: var(--border-subtle) !important;
-        border-bottom-width: 1px;
-        border-right-color: var(--border-subtle) !important;
-        border-right-width: 1px;
-    }
-
-    /* improve borders */
-    .reaction__23977 /* message reactions */,
-    .reactionBtn__23977.forceShow__23977 /* add reaction button */ {
-        border-width: 2px;
-    }
-
-    /* roundness */
-    .embedFull__623de /* embeds */,
-    .hljs /* code block */,
-    .imageWrapper_af017a /* image */,
-    .container__9271d /* thread link */ {
+        border: 1px solid var(--border-subtle);
+        border-left-width: 3px;
         border-radius: var(--radius-md);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .embedFull__623de:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+        border-color: var(--border-hover);
     }
 
-    .outer_c0bea0 /* profile outer */, 
-    .contentWrapper__08434  /* gif panel */ {
-        border-radius: var(--radius-lg);
+    /* improve reactions - subtle and clean */
+    .reaction__23977,
+    .reactionBtn__23977.forceShow__23977 {
+        border-width: 1px;
+        border-radius: var(--radius-sm);
+        transition: background-color 0.15s ease, border-color 0.15s ease;
     }
-    .inner_c0bea0 /* profile inner */ {
+    .reaction__23977:hover {
+        background-color: hsla(280, 20%, 50%, 0.15);
+    }
+    .reaction__23977:active {
+        background-color: hsla(280, 20%, 50%, 0.25);
+    }
+
+    /* roundness - refined and consistent */
+    .embedFull__623de,
+    .hljs,
+    .imageWrapper_af017a,
+    .container__9271d {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+
+    /* profile popup - elegant shadow */
+    .outer_c0bea0,
+    .contentWrapper__08434 {
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                    0 0 0 1px var(--border-subtle);
+    }
+    .inner_c0bea0 {
         border-radius: calc(var(--radius-lg) - 4px);
     }
 
-    .outer_c0bea0 /* profile outer */ {
+    .outer_c0bea0 {
         border: 1px solid var(--border-subtle);
         background-position: center calc(-1 * var(--border-thickness));
         background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
     .root__24502 {
         background: none;
+    }
+
+    /* scrollbar enhancement */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: hsla(280, 20%, 50%, 0.25);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsla(280, 25%, 55%, 0.4);
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
     }
 
     /* remove unnecessary backgrounds */

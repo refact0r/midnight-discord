@@ -5,78 +5,79 @@
 }
 
 :root {
-    /* text colors */
+    /* text colors - enhanced contrast and readability */
     --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: hsl(280, 30%, 95%); /* other normally white text */
-    --text-2: hsl(280, 20%, 75%); /* headings and important text */
-    --text-3: hsl(280, 15%, 65%); /* normal text */
-    --text-4: hsl(280, 10%, 45%); /* icon buttons and channels */
-    --text-5: hsl(280, 10%, 30%); /* muted channels/chats and timestamps */
+    --text-1: hsl(280, 20%, 98%); /* bright white with subtle lillac */
+    --text-2: hsl(280, 15%, 85%); /* headings - softer */
+    --text-3: hsl(280, 10%, 75%); /* normal text - high readability */
+    --text-4: hsl(280, 8%, 55%); /* icon buttons and channels */
+    --text-5: hsl(280, 6%, 42%); /* muted elements and timestamps */
 
-    /* background and dark colors */
-    --bg-1: hsl(260, 5%, 22%); /* dark buttons when clicked */
-    --bg-2: hsl(260, 5%, 17%); /* dark buttons */
-    --bg-3: hsl(260, 5%, 13%); /* spacing, secondary elements */
-    --bg-4: hsl(260, 5%, 9%); /* main background color */
-    --hover: hsla(280, 20%, 50%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(280, 20%, 50%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(280, 20%, 50%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(260, 10%, 0%, 0.15); /* messages when hovered */
+    /* background colors - clean grey with hint of purple */
+    --bg-1: hsl(260, 8%, 22%); /* dark buttons when clicked */
+    --bg-2: hsl(260, 7%, 17%); /* dark buttons */
+    --bg-3: hsl(260, 6%, 13%); /* spacing, secondary elements */
+    --bg-4: hsl(260, 5%, 9%); /* main background - deeper */
+    --hover: hsla(280, 30%, 65%, 0.1); /* hover state */
+    --active: hsla(280, 30%, 65%, 0.18); /* active/selected state */
+    --active-2: hsla(280, 30%, 65%, 0.25); /* extra active state */
+    --message-hover: hsla(260, 20%, 55%, 0.06); /* message hover - subtle */
 
     /* accent colors */
-    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-1: var(--purple-1); /* links and accent text */
     --accent-2: var(--purple-2); /* small accent elements */
     --accent-3: var(--purple-3); /* accent buttons */
-    --accent-4: var(--purple-4); /* accent buttons when hovered */
-    --accent-5: var(--purple-5); /* accent buttons when clicked */
-    --accent-new: var(--purple-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    --accent-4: var(--purple-4); /* accent buttons hovered */
+    --accent-5: var(--purple-5); /* accent buttons clicked */
+    --accent-new: var(--purple-2); /* replaces red for mute/deafen */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 88%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 92%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 92%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
 
     /* status indicator colors */
-    --online: var(--green-2); /* change to #43a25a for default */
-    --dnd: var(--red-2); /* change to #d83a42 for default */
-    --idle: var(--yellow-2); /* change to #ca9654 for default */
-    --streaming: var(--purple-2); /* change to ##9147ff for default */
-    --offline: var(--text-4); /* change to #83838b for default offline color */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
 
-    /* border colors */
-    --border-light: hsla(280, 15%, 50%, 0.1); /* light border color */
-    --border: hsla(280, 15%, 50%, 0.2); /* normal border color */
-    --button-border: hsla(280, 20%, 80%, 0.15); /* neutral border color of buttons */
+    /* border colors - refined */
+    --border-light: hsla(280, 25%, 65%, 0.06);
+    --border: hsla(280, 25%, 65%, 0.12);
+    --button-border: hsla(280, 30%, 80%, 0.1);
 
-    /* base colors */
-    --red-1: oklch(76% 0.12 0);
-    --red-2: oklch(70% 0.12 0);
-    --red-3: oklch(64% 0.12 0);
-    --red-4: oklch(58% 0.12 0);
-    --red-5: oklch(52% 0.12 0);
+    /* base colors - harmonized palette */
+    --red-1: oklch(78% 0.13 12);
+    --red-2: oklch(68% 0.15 12);
+    --red-3: oklch(60% 0.15 12);
+    --red-4: oklch(52% 0.13 12);
+    --red-5: oklch(44% 0.11 12);
 
-    --green-1: oklch(76% 0.11 170);
-    --green-2: oklch(70% 0.11 170);
-    --green-3: oklch(64% 0.11 170);
-    --green-4: oklch(58% 0.11 170);
-    --green-5: oklch(52% 0.11 160);
+    --green-1: oklch(78% 0.12 155);
+    --green-2: oklch(68% 0.14 155);
+    --green-3: oklch(60% 0.14 155);
+    --green-4: oklch(52% 0.12 155);
+    --green-5: oklch(44% 0.10 155);
 
-    --blue-1: oklch(76% 0.12 300);
-    --blue-2: oklch(70% 0.12 300);
-    --blue-3: oklch(64% 0.12 300);
-    --blue-4: oklch(58% 0.12 300);
-    --blue-5: oklch(52% 0.12 300);
+    --blue-1: oklch(80% 0.13 295);
+    --blue-2: oklch(70% 0.15 295);
+    --blue-3: oklch(62% 0.15 295);
+    --blue-4: oklch(54% 0.13 295);
+    --blue-5: oklch(46% 0.11 295);
 
-    --yellow-1: oklch(80% 0.11 90);
-    --yellow-2: oklch(74% 0.11 90);
-    --yellow-3: oklch(68% 0.11 90);
-    --yellow-4: oklch(62% 0.11 90);
-    --yellow-5: oklch(56% 0.11 90);
+    --yellow-1: oklch(88% 0.11 85);
+    --yellow-2: oklch(78% 0.13 85);
+    --yellow-3: oklch(70% 0.13 85);
+    --yellow-4: oklch(62% 0.11 85);
+    --yellow-5: oklch(54% 0.09 85);
 
-    --purple-1: oklch(78% 0.14 300);
-    --purple-2: oklch(72% 0.14 300);
-    --purple-3: oklch(65% 0.14 300);
-    --purple-4: oklch(58% 0.14 300);
-    --purple-5: oklch(50% 0.14 300);
+    /* purple/lillac - refined and elegant */
+    --purple-1: oklch(84% 0.11 290);
+    --purple-2: oklch(72% 0.14 290);
+    --purple-3: oklch(62% 0.16 290);
+    --purple-4: oklch(54% 0.14 290);
+    --purple-5: oklch(46% 0.12 290);
 }
 
 @container root style(--colors: on) {

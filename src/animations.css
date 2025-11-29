@@ -1,6 +1,17 @@
 body {
-    --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --list-item-transition: 0.15s ease;
+    --dms-icon-svg-transition: 0.25s ease;
+    
+    /* Animation timing functions - sophisticated easing */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Animation durations */
+    --anim-fast: 0.15s;
+    --anim-normal: 0.25s;
+    --anim-slow: 0.4s;
 }
 
 @property --animations {
@@ -9,259 +20,482 @@ body {
     initial-value: on;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   OVERRIDE DISCORD ANIMATIONS - Sophisticated yet Lightweight
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 @container body style(--animations: on) {
+    
+    /* ═══════════════════════════════════════════════════════════════
+       MODALS - Elegant Scale + Fade with Backdrop
+       ═══════════════════════════════════════════════════════════════ */
+    .layerContainer__960e4 {
+        animation: backdrop-fade var(--anim-normal) var(--ease-out-expo) forwards;
+    }
+    
+    [class*="modal_"], 
+    [class*="root_"]:not(.visual-refresh),
+    .modal__9ec04,
+    .root__9ec04,
+    .container__9ec04 {
+        animation: modal-enter var(--anim-normal) var(--ease-out-back) forwards !important;
+        transform-origin: center center;
+    }
+    
+    @keyframes modal-enter {
+        0% {
+            opacity: 0;
+            transform: scale(0.9) translateY(10px);
+            filter: blur(4px);
+        }
+        60% {
+            opacity: 1;
+            filter: blur(0);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            filter: blur(0);
+        }
+    }
+    
+    @keyframes backdrop-fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       CONTEXT MENUS - Smooth Origin-based Appear
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="menu_"],
+    .menu__088f7 {
+        animation: menu-pop var(--anim-fast) var(--ease-out-back) forwards !important;
+        transform-origin: top left;
+    }
+    
+    @keyframes menu-pop {
+        0% {
+            opacity: 0;
+            transform: scale(0.92) translateY(-8px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+    
+    /* Menu items stagger effect */
+    [class*="menu_"] [class*="item_"],
+    .item__088f7 {
+        animation: menu-item-slide var(--anim-fast) var(--ease-out-expo) forwards;
+        animation-delay: calc(var(--index, 0) * 0.02s);
+    }
+    
+    @keyframes menu-item-slide {
+        from {
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       POPOUTS & LAYERS - Directional Slide
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="layer_"],
+    [class*="popout_"],
+    .popout_c83a44 {
+        animation: popout-enter var(--anim-normal) var(--ease-out-expo) forwards !important;
+    }
+    
+    @keyframes popout-enter {
+        0% {
+            opacity: 0;
+            transform: translateY(-12px) scale(0.96);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    /* User popout special animation */
+    .outer_c0bea0 {
+        animation: user-popout var(--anim-normal) var(--ease-out-back) forwards !important;
+    }
+    
+    @keyframes user-popout {
+        0% {
+            opacity: 0;
+            transform: scale(0.9) translateX(-10px);
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+            filter: blur(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TOOLTIPS - Snappy with subtle bounce
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="tooltip_"],
+    .tooltip__5c816 {
+        animation: tooltip-pop 0.12s var(--ease-out-back) forwards !important;
+    }
+    
+    @keyframes tooltip-pop {
+        0% {
+            opacity: 0;
+            transform: scale(0.8) translateY(4px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       MESSAGES - Smooth Appear with Subtle Slide
+       ═══════════════════════════════════════════════════════════════ */
+    .message__5126c {
+        animation: message-appear var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes message-appear {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Message hover - smooth background */
+    [class*="message_"]:not([class*="mentioned"]) {
+        transition: background-color var(--anim-fast) ease;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       REACTIONS - Bouncy Pop
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="reaction_"] {
+        transition: background-color var(--anim-fast) ease, 
+                    border-color var(--anim-fast) ease,
+                    transform 0.1s var(--ease-spring);
+    }
+    [class*="reaction_"]:hover {
+        background-color: hsla(280, 20%, 50%, 0.15);
+    }
+    [class*="reaction_"]:active {
+        background-color: hsla(280, 20%, 50%, 0.25);
+        transform: scale(0.92);
+    }
+    
+    /* New reaction animation */
+    .reaction__23977.reactionMe__23977 {
+        animation: reaction-add 0.3s var(--ease-out-back) forwards;
+    }
+    
+    @keyframes reaction-add {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TYPING INDICATOR - Smooth Pulse
+       ═══════════════════════════════════════════════════════════════ */
+    .typing_b88801 {
+        animation: typing-appear var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes typing-appear {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       UNREAD PILL & NOTIFICATIONS - Attention-grabbing
+       ═══════════════════════════════════════════════════════════════ */
+    .newMessagesBar__0f481 {
+        animation: unread-slide var(--anim-normal) var(--ease-out-back) forwards;
+    }
+    
+    @keyframes unread-slide {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px) scale(0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    /* Notification badge pulse */
+    [class*="numberBadge_"] {
+        animation: badge-pulse 0.3s var(--ease-out-back) forwards;
+    }
+    
+    @keyframes badge-pulse {
+        0% {
+            transform: scale(0);
+        }
+        70% {
+            transform: scale(1.15);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
     .visual-refresh {
         /* ═══════════════════════════════════════════════════════════════
-           LIST HOVER ANIMATIONS
+           LIST HOVER - Smooth Slide
            ═══════════════════════════════════════════════════════════════ */
-        .wrapper__2ea32 .link__2ea32 /* channels */,
-        .container__91a9d /* members */,
-        .channel__972a0 /* dms */,
-        .side_aa8da2 .item_aa8da2 /* settings */ {
-            transition: margin-left var(--list-item-transition), background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-            will-change: margin-left, transform;
+        .wrapper__2ea32 .link__2ea32,
+        .container__91a9d,
+        .channel__972a0,
+        .side_aa8da2 .item_aa8da2 {
+            transition: margin-left var(--list-item-transition) var(--ease-out-expo), 
+                        background-color var(--anim-fast) ease,
+                        color var(--anim-fast) ease;
         }
         .wrapper__2ea32:hover .link__2ea32,
         .side_aa8da2 .item_aa8da2:hover {
-            margin-left: 10px;
+            margin-left: 6px;
         }
         .container__91a9d:hover,
         .channel__972a0:hover {
-            margin-left: 18px;
+            margin-left: 10px;
         }
-        /* list hover channel dot */
+        
         .unread__2ea32 {
             border-radius: 50%;
             width: 8px;
             height: 8px;
             margin-left: -4px;
-            transition: var(--list-item-transition), transform 0.2s ease;
-            will-change: margin-left, transform;
+            transition: margin-left var(--list-item-transition) var(--ease-out-expo),
+                        box-shadow var(--anim-fast) ease;
         }
         .wrapper__2ea32:hover .unread__2ea32 {
             margin-left: 4px;
-            transform: scale(1.2);
+            box-shadow: 0 0 8px currentColor;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           BUTTON ANIMATIONS - Scale, Glow & Press Effects
+           BUTTONS - Responsive Press
            ═══════════════════════════════════════════════════════════════ */
-        button, 
+        button:not(.channelTextArea_f75fb0 button), 
         [type="button"],
-        [class*="button_"], 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]), 
         [class*="lookFilled_"], 
         [class*="lookOutlined_"],
         .circleIconButton__5bc7e {
-            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
-                        background-color 0.2s ease, 
-                        border-color 0.2s ease, 
-                        color 0.2s ease, 
-                        box-shadow 0.2s ease,
-                        filter 0.15s ease;
+            transition: transform 0.1s var(--ease-out-back), 
+                        background-color var(--anim-fast) ease, 
+                        border-color var(--anim-fast) ease,
+                        box-shadow var(--anim-fast) ease;
         }
-        button:hover, 
+        button:not(.channelTextArea_f75fb0 button):hover, 
         [type="button"]:hover,
-        [class*="button_"]:hover, 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]):hover, 
         [class*="lookFilled_"]:hover, 
         [class*="lookOutlined_"]:hover,
         .circleIconButton__5bc7e:hover {
-            transform: scale(1.05) translateY(-1px);
-            filter: brightness(1.1);
-            box-shadow: 0 4px 15px rgba(180, 130, 220, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        button:active, 
+        button:not(.channelTextArea_f75fb0 button):active, 
         [type="button"]:active,
-        [class*="button_"]:active, 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]):active, 
         [class*="lookFilled_"]:active, 
         [class*="lookOutlined_"]:active,
         .circleIconButton__5bc7e:active {
-            transform: scale(0.95);
-            filter: brightness(0.9);
-            box-shadow: 0 2px 8px rgba(180, 130, 220, 0.2);
+            transform: translateY(0) scale(0.97);
+            box-shadow: none;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           MODAL ANIMATIONS - Elegant Pop-in
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="modal_"], [class*="root_"] {
-            animation: modal-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
-
-        @keyframes modal-pop {
-            0% {
-                opacity: 0;
-                transform: scale(0.85) translateY(30px);
-                filter: blur(4px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-                filter: blur(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           MENU/POPOUT ANIMATIONS - Slide & Fade
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="menu_"], [class*="layer_"], [class*="popout_"] {
-            animation: menu-slide 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-            transform-origin: top center;
-        }
-
-        @keyframes menu-slide {
-            0% {
-                opacity: 0;
-                transform: translateY(-15px) scale(0.95);
-                filter: blur(2px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           TOOLTIP ANIMATIONS - Smooth Fade
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="tooltip_"] {
-            animation: tooltip-fade 0.2s ease-out forwards;
-        }
-
-        @keyframes tooltip-fade {
-            0% {
-                opacity: 0;
-                transform: scale(0.9) translateY(5px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           INPUT ANIMATIONS - Focus Glow
+           INPUTS - Elegant Focus
            ═══════════════════════════════════════════════════════════════ */
         input, textarea, [class*="input_"], [class*="textArea_"] {
-            transition: border-color 0.25s ease, 
-                        box-shadow 0.25s ease, 
-                        background-color 0.25s ease,
-                        transform 0.2s ease;
+            transition: border-color var(--anim-fast) ease, 
+                        box-shadow var(--anim-normal) var(--ease-out-expo);
         }
         input:focus, textarea:focus, [class*="input_"]:focus, [class*="textArea_"]:focus {
-            box-shadow: 0 0 0 2px rgba(180, 130, 220, 0.3), 0 4px 12px rgba(180, 130, 220, 0.15);
+            box-shadow: 0 0 0 3px hsla(280, 50%, 60%, 0.15),
+                        0 0 20px hsla(280, 50%, 60%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           AVATAR ANIMATIONS - Playful Hover
+           AVATARS - Subtle Glow
            ═══════════════════════════════════════════════════════════════ */
         [class*="avatar_"] {
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+            transition: filter var(--anim-fast) ease,
+                        box-shadow var(--anim-fast) ease;
         }
         [class*="avatar_"]:hover {
-            transform: scale(1.15) rotate(3deg);
-            box-shadow: 0 4px 20px rgba(180, 130, 220, 0.4);
+            filter: brightness(1.1);
+            box-shadow: 0 0 12px hsla(280, 50%, 60%, 0.25);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           SERVER ICONS - Bounce on Hover
+           SERVER ICONS - Glow effect on hover
            ═══════════════════════════════════════════════════════════════ */
         .wrapper__6e9f8 {
-            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: filter var(--anim-fast) ease, 
+                        box-shadow var(--anim-normal) var(--ease-out-expo);
+            border-radius: 50%;
         }
         .wrapper__6e9f8:hover {
-            transform: scale(1.1);
+            filter: brightness(1.1);
+            box-shadow: 0 0 20px hsla(280, 50%, 55%, 0.4);
         }
         .wrapper__6e9f8:active {
-            transform: scale(0.95);
+            filter: brightness(0.95);
+            box-shadow: 0 0 8px hsla(280, 50%, 55%, 0.25);
+        }
+        /* Selected server glow */
+        .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+            box-shadow: 0 0 24px hsla(280, 60%, 60%, 0.5);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           MESSAGE ANIMATIONS - Subtle Entrance
+           CHANNEL LIST - Smooth interactions
            ═══════════════════════════════════════════════════════════════ */
-        [class*="message_"]:not([class*="mentioned"]) {
-            transition: background-color 0.2s ease, transform 0.15s ease;
+        .containerDefault__2637a,
+        .containerDragAfter__2637a,
+        .containerDragBefore__2637a {
+            transition: background-color var(--anim-fast) ease,
+                        transform var(--anim-fast) var(--ease-out-expo);
+            border-radius: var(--radius-sm);
+            margin: 1px 8px;
         }
-        [class*="message_"]:hover {
-            transform: translateX(2px);
+        
+        /* Voice channel users */
+        .voiceUser__2637a {
+            transition: background-color var(--anim-fast) ease,
+                        transform var(--anim-fast) ease;
+            border-radius: var(--radius-sm);
+        }
+        .voiceUser__2637a:hover {
+            background-color: hsla(280, 25%, 50%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           REACTION ANIMATIONS - Pop Effect
+           EMBEDS & CARDS - Lift Effect
            ═══════════════════════════════════════════════════════════════ */
-        [class*="reaction_"] {
-            transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                        background-color 0.2s ease,
-                        border-color 0.2s ease;
+        [class*="embed_"], [class*="card_"], [class*="attachment_"] {
+            transition: transform var(--anim-fast) var(--ease-out-expo), 
+                        box-shadow var(--anim-normal) ease;
         }
-        [class*="reaction_"]:hover {
-            transform: scale(1.15);
-        }
-        [class*="reaction_"]:active {
-            transform: scale(0.9);
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           SCROLLBAR ANIMATIONS
-           ═══════════════════════════════════════════════════════════════ */
-        ::-webkit-scrollbar-thumb {
-            transition: background-color 0.2s ease;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: var(--purple-3) !important;
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           EMBED ANIMATIONS - Card Hover
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="embed_"], [class*="card_"] {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        [class*="embed_"]:hover, [class*="card_"]:hover {
+        [class*="embed_"]:hover, [class*="card_"]:hover, [class*="attachment_"]:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+                        0 0 0 1px hsla(280, 30%, 50%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           ICON ANIMATIONS - Smooth Color Transitions
+           ICONS - Color Transition
            ═══════════════════════════════════════════════════════════════ */
         [class*="icon_"], svg {
-            transition: color 0.2s ease, fill 0.2s ease, transform 0.2s ease;
-        }
-        [class*="icon_"]:hover, [class*="actionIcon_"]:hover {
-            transform: scale(1.1);
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           LOADING SPINNER - Lilac Glow
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="spinner_"] {
-            animation: spinner-glow 1.5s ease-in-out infinite;
-        }
-
-        @keyframes spinner-glow {
-            0%, 100% {
-                filter: drop-shadow(0 0 5px rgba(180, 130, 220, 0.5));
-            }
-            50% {
-                filter: drop-shadow(0 0 15px rgba(180, 130, 220, 0.8));
-            }
+            transition: color 0.1s ease, 
+                        fill 0.1s ease,
+                        filter 0.1s ease;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           TYPING INDICATOR - Pulse Animation
+           LINKS - Underline Animation
            ═══════════════════════════════════════════════════════════════ */
-        [class*="typing_"] {
-            animation: typing-pulse 2s ease-in-out infinite;
+        a, [class*="anchor_"] {
+            transition: color var(--anim-fast) ease;
         }
 
-        @keyframes typing-pulse {
-            0%, 100% {
-                opacity: 0.7;
-            }
-            50% {
-                opacity: 1;
-            }
+        /* ═══════════════════════════════════════════════════════════════
+           BADGES - Pop In
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="badge_"], [class*="numberBadge_"] {
+            transition: filter 0.1s ease,
+                        transform 0.1s var(--ease-out-back);
+        }
+        [class*="badge_"]:hover, [class*="numberBadge_"]:hover {
+            filter: brightness(1.15);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       SETTINGS PAGE TRANSITIONS
+       ═══════════════════════════════════════════════════════════════ */
+    .contentRegion__23e6b {
+        animation: settings-slide var(--anim-normal) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes settings-slide {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       CHANNEL/SERVER SWITCH - Smooth Content Transition
+       ═══════════════════════════════════════════════════════════════ */
+    .messagesWrapper__36d07 {
+        animation: chat-fade var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes chat-fade {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       IMAGE VIEWER - Cinematic Open
+       ═══════════════════════════════════════════════════════════════ */
+    .modal__4fdd4 {
+        animation: image-modal var(--anim-slow) var(--ease-out-expo) forwards !important;
+    }
+    
+    @keyframes image-modal {
+        0% {
+            opacity: 0;
+            transform: scale(0.85);
+            filter: blur(8px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
         }
     }
 }

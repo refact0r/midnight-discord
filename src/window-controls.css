@@ -1,5 +1,5 @@
 body {
-    --window-control-size: 14px;
+    --window-control-size: 13px;
 }
 
 @property --custom-window-controls {
@@ -30,22 +30,32 @@ body {
         height: var(--window-control-size);
         width: var(--window-control-size);
         border-radius: 50%;
-        transition: transform 0.1s ease, filter 0.1s ease;
+        transition: filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 0.15s ease;
     }
     .winButton_c38106:hover::after {
-        filter: brightness(0.7);
+        filter: brightness(1.15);
     }
     .winButton_c38106:active::after {
-        transform: scale(0.9);
+        filter: brightness(0.8);
     }
     .winButtonClose_c38106::after {
         background-color: var(--dnd) !important;
     }
+    .winButtonClose_c38106:hover::after {
+        box-shadow: 0 0 8px rgba(237, 66, 69, 0.4);
+    }
     .winButtonMinMax_c38106:nth-child(1)::after {
         background-color: var(--idle) !important;
     }
+    .winButtonMinMax_c38106:nth-child(1):hover::after {
+        box-shadow: 0 0 8px rgba(250, 166, 26, 0.4);
+    }
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(2):hover::after {
+        box-shadow: 0 0 8px rgba(59, 165, 93, 0.4);
     }
 }
 

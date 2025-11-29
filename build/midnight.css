@@ -1,3 +1,15 @@
+/**
+ * @name Midnight Lillac
+ * @description A sleek dark theme with lillac/purple accents, sophisticated animations, and styled Nitro/Shop/Quests pages.
+ * @author refact0r (Base) + Cerbi (Animations, lillac refinement)
+ * @version 3.0.7
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight-lillac/build/midnight.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
 /* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -16,56 +28,72 @@ body {
     --font: 'figtree';
     --code-font: '';
 
-    /* sizes */
-    --gap: 12px; /* spacing between panels */
-    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    /* sizes - refined proportions */
+    --gap: 10px;
+    --divider-thickness: 3px;
+    --border-thickness: 1px;
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
-    --border-hover-transition: 0.2s ease;
+    --border-hover-transition: 0.15s ease;
 }
 
 .visual-refresh {
     /* panel separation */
-    .guilds__5e434 /* server list */, 
-    .sidebarList__5e434 /* channel list (includes dm list) */,
-    .panels__5e434 /* user panel */,
-    .chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
-    .chatContent_f75fb0 /* chat */,
-    .container_c8ffbb /* member list */,
-    .content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */,
-    .container__133bf > .container__9293f /* friends titlebar */,
-    .container_f391e3 > .container__9293f /* message requests titlebar */,
-    .homeWrapper__0920e > .container__9293f /* nitro page titlebar */,
-    .container__01ae2 > .container__9293f /* vc chat titlebar */,
-    .container_fb64c9 > .container__9293f /* new thread panel */,
-    .peopleColumn__133bf /* online friends */,
-    .nowPlayingColumn__133bf /* active now */,
-    .scroller_c880e8 /* nitro page */,
-    .container_f391e3 > .content_f75fb0 /* message requests */,
-    .shop__6db1d /* shop */,
-    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */,
-    .searchResultsWrap_a9e706 /* search results */,
-    .container_f369db /* forum */,
-    .chat_fb64c9 /* new thread panel */,
-    .container_a592e1 /* server discovery */,
-    .callContainer_cb9592 /* vc container */,
-    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592 /* vc container when chat open */,
-    .callContainer__722ff /* stage */,
-    .chat_f75fb0 > .header_c791b2 /* server members header */,
-    .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
-    .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
-    .chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
+    .guilds__5e434, 
+    .sidebarList__5e434,
+    .panels__5e434,
+    .chat_f75fb0 > .subtitleContainer_f75fb0,
+    .chatContent_f75fb0,
+    .container_c8ffbb,
+    .content_f75fb0 > .membersWrap_c8ffbb,
+    .container__133bf > .container__9293f,
+    .container_f391e3 > .container__9293f,
+    .homeWrapper__0920e > .container__9293f,
+    .container__01ae2 > .container__9293f,
+    .container_fb64c9 > .container__9293f,
+    .peopleColumn__133bf,
+    .nowPlayingColumn__133bf,
+    .scroller_c880e8,
+    .container_f391e3 > .content_f75fb0,
+    .shop__6db1d,
+    .content_f75fb0 > aside > .outer_c0bea0,
+    .searchResultsWrap_a9e706,
+    .container_f369db,
+    .chat_fb64c9,
+    .container_a592e1,
+    .callContainer_cb9592,
+    .wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592,
+    .callContainer__722ff,
+    .chat_f75fb0 > .header_c791b2,
+    .chat_f75fb0 > .scrollerBase_d125d2,
+    .chat_f75fb0 > .header__0b563,
+    .chat_f75fb0 > .container__0b563 {
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
-        backdrop-filter: var(--panel-backdrop-filter);
         box-sizing: border-box;
         transition: border-color var(--border-hover-transition);
-
-        &:hover {
-            border-color: var(--border-hover);
-        }
+    }
+    
+    /* Server list special styling - cooler look */
+    .guilds__5e434 {
+        background: linear-gradient(180deg, 
+            var(--background-base-lower) 0%,
+            hsla(280, 10%, 8%, 1) 100%) !important;
+        border-color: hsla(280, 20%, 30%, 0.15) !important;
+    }
+    .guilds__5e434:hover {
+        border-color: hsla(280, 30%, 50%, 0.25) !important;
+    }
+    
+    .guilds__5e434:hover, 
+    .sidebarList__5e434:hover,
+    .panels__5e434:hover,
+    .chatContent_f75fb0:hover,
+    .container_c8ffbb:hover,
+    .peopleColumn__133bf:hover,
+    .nowPlayingColumn__133bf:hover {
+        border-color: var(--border-hover);
     }
 
     .panels__5e434 /* user panel */ {
@@ -81,13 +109,31 @@ body {
     .guilds__5e434 /* server list */ {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
         margin-right: var(--gap);
+        position: relative;
     }
     .guilds__5e434 + div:not(.sidebarList__5e434) /* betterfolders */ {
         width: 100% !important;
     }
+    
+    /* Server list wrapper - position for external scrollbar */
+    .wrapper_ef3116 {
+        position: relative;
+        overflow: visible;
+    }
+    
     .scroller_ef3116 /* server list inner scroller */ {
         padding: var(--custom-guild-list-padding) 0;
+        /* Hide scrollbar completely inside */
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
     }
+    
+    /* Hide webkit scrollbar inside */
+    .scroller_ef3116::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+    }
+    
     .folderGroup__48112 {
         width: 100%;
     }
@@ -97,6 +143,9 @@ body {
 
     .sidebarList__5e434 /* channel list */ {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+        background: linear-gradient(180deg,
+            var(--background-base-lower) 0%,
+            hsla(280, 10%, 9%, 1) 100%) !important;
     }
     .container__2637a /* channel list inner */ {
         padding-bottom: 0;
@@ -108,6 +157,34 @@ body {
     }
     .scroller__629e4 /* channel list inner scroller */ {
         margin-bottom: 0;
+        /* Hide channel list scrollbar too */
+        scrollbar-width: none !important;
+    }
+    .scroller__629e4::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    /* Server name header - enhanced */
+    .header_f37cb1 {
+        padding: 12px 12px 8px 16px;
+        transition: background-color 0.15s ease;
+    }
+    .header_f37cb1:hover {
+        background-color: hsla(280, 25%, 50%, 0.08) !important;
+    }
+    
+    /* Category headers - sleek styling */
+    .containerDefault__3187b {
+        padding: 16px 8px 4px 16px;
+    }
+    .containerDefault__3187b .name__3187b {
+        color: var(--text-4);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: color 0.15s ease;
+    }
+    .containerDefault__3187b:hover .name__3187b {
+        color: var(--purple-2);
     }
 
     /* fix discord's idiotic server banners */
@@ -220,20 +297,272 @@ body {
         border: none;
     }
 
-    .homeWrapper__0920e /* nitro page group inner */ {
+    .homeWrapper__0920e /* nitro page group inner */,
+    [class*="homeWrapper_"] {
         border: none;
         background: none;
     }
-    .applicationStore_f07d62 /* nitro page group outer */ {
+    .applicationStore_f07d62 /* nitro page group outer */,
+    [class*="applicationStore_"] {
         background: none;
     }
 
-    .shop__6db1d /* shop */ {
+    /* ═══════════════════════════════════════════════════════════════
+       NITRO PAGE - Lillac themed styling
+       Uses attribute selectors [class*="name"] to match dynamic Discord classes
+       ═══════════════════════════════════════════════════════════════ */
+    /* Nitro page container */
+    [class*="applicationStore_"],
+    [class*="premiumTab_"],
+    [class*="contentWrapper_"][class*="nitro"] {
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
+    }
+    
+    /* Nitro hero/marketing sections */
+    [class*="heroContainer_"],
+    [class*="hero_"][class*="nitro"],
+    [class*="marketingHeader_"],
+    [class*="nitroHeader_"],
+    [class*="ctaBackground_"] {
+        background: linear-gradient(135deg,
+            hsla(280, 40%, 25%, 0.4) 0%,
+            hsla(280, 50%, 15%, 0.3) 50%,
+            hsla(280, 30%, 10%, 0.2) 100%) !important;
+        border-radius: var(--radius-lg);
+        border: 1px solid hsla(280, 40%, 50%, 0.15);
+    }
+    
+    /* Nitro tier cards */
+    [class*="tierCard_"],
+    [class*="tierBody_"],
+    [class*="subscriptionCard_"],
+    [class*="planCard_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    [class*="tierCard_"]:hover,
+    [class*="subscriptionCard_"]:hover,
+    [class*="planCard_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px hsla(280, 50%, 30%, 0.2);
+    }
+    
+    /* Nitro perks */
+    [class*="perkCard_"],
+    [class*="perkRow_"],
+    [class*="featureCard_"],
+    [class*="perk_"]:not([class*="perkIcon"]) {
+        background: hsla(280, 20%, 15%, 0.3) !important;
+        border-radius: var(--radius-md);
+        margin: 4px 0;
+        transition: background-color 0.15s ease;
+    }
+    [class*="perkCard_"]:hover,
+    [class*="perkRow_"]:hover,
+    [class*="featureCard_"]:hover {
+        background: hsla(280, 25%, 20%, 0.4) !important;
+    }
+    
+    /* Nitro buttons */
+    [class*="subscribeButton_"],
+    [class*="purchaseButton_"],
+    [class*="tierBody_"] button,
+    [class*="upsellButton_"] {
+        background: linear-gradient(135deg, var(--purple-3), var(--purple-4)) !important;
+        border: none !important;
+        border-radius: var(--radius-md) !important;
+        transition: filter 0.15s ease, transform 0.1s ease;
+    }
+    [class*="subscribeButton_"]:hover,
+    [class*="purchaseButton_"]:hover,
+    [class*="upsellButton_"]:hover {
+        filter: brightness(1.1);
+        transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SHOP PAGE - Lillac themed styling  
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="shop_"]:not([class*="shopIcon"]),
+    [class*="collectiblesShop_"],
+    [class*="storePage_"] {
         overflow: hidden;
         height: auto;
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
     }
-    .shop__08415 /* shop inner scroller */ {
-        margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
+    
+    /* Shop categories/tabs */
+    [class*="categoryItem_"],
+    [class*="tabItem_"],
+    [class*="shopTab_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-md) !important;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    [class*="categoryItem_"]:hover,
+    [class*="tabItem_"]:hover,
+    [class*="shopTab_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        background: var(--bg-2) !important;
+    }
+    [class*="categoryItem_"][class*="selected"],
+    [class*="tabItem_"][class*="selected"],
+    [class*="shopTab_"][class*="active"] {
+        border-color: var(--purple-3) !important;
+        background: hsla(280, 30%, 20%, 0.4) !important;
+    }
+    
+    /* Shop product cards */
+    [class*="collectibleCard_"],
+    [class*="productCard_"],
+    [class*="itemCard_"],
+    [class*="giftCard_"] {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+    }
+    [class*="collectibleCard_"]:hover,
+    [class*="productCard_"]:hover,
+    [class*="itemCard_"]:hover,
+    [class*="giftCard_"]:hover {
+        border-color: hsla(280, 40%, 55%, 0.35) !important;
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px hsla(280, 50%, 20%, 0.25);
+    }
+    
+    /* Shop item previews */
+    [class*="previewContainer_"],
+    [class*="itemPreview_"],
+    [class*="collectiblePreview_"] {
+        background: hsla(280, 15%, 12%, 0.5) !important;
+        border-radius: var(--radius-md);
+    }
+    
+    /* Shop price tags */
+    [class*="priceTag_"],
+    [class*="price_"]:not([class*="priceD"]),
+    [class*="itemPrice_"] {
+        background: linear-gradient(135deg, var(--purple-4), var(--purple-5)) !important;
+        border-radius: var(--radius-sm);
+        padding: 4px 10px;
+    }
+    
+    /* Shop bundles */
+    [class*="bundleCard_"],
+    [class*="bundle_"]:not([class*="bundleIcon"]) {
+        background: linear-gradient(135deg,
+            hsla(280, 35%, 18%, 0.6) 0%,
+            hsla(280, 25%, 12%, 0.4) 100%) !important;
+        border: 1px solid hsla(280, 40%, 45%, 0.25) !important;
+        border-radius: var(--radius-lg) !important;
+    }
+    [class*="bundleCard_"]:hover,
+    [class*="bundle_"]:not([class*="bundleIcon"]):hover {
+        border-color: hsla(280, 50%, 55%, 0.4) !important;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       QUESTS/MISSIONS PAGE - Lillac themed styling
+       ═══════════════════════════════════════════════════════════════ */
+    /* Quests container */
+    [class*="questsContainer_"],
+    [class*="questsPage_"],
+    [class*="questsScroller_"] {
+        background: linear-gradient(180deg,
+            var(--bg-4) 0%,
+            hsla(280, 12%, 6%, 1) 100%) !important;
+    }
+    
+    /* Quest cards */
+    [class*="questCard_"],
+    [class*="quest_"]:not([class*="questIcon"]):not([class*="questsC"]):not([class*="questsP"]):not([class*="questsS"]) {
+        background: var(--bg-3) !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-lg) !important;
+        transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+    }
+    [class*="questCard_"]:hover,
+    [class*="quest_"]:not([class*="questIcon"]):not([class*="questsC"]):not([class*="questsP"]):not([class*="questsS"]):hover {
+        border-color: hsla(280, 40%, 55%, 0.3) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px hsla(280, 50%, 20%, 0.2);
+    }
+    
+    /* Quest progress bar */
+    [class*="progressBar_"],
+    [class*="questProgress_"] {
+        background: var(--bg-2) !important;
+        border-radius: 8px !important;
+        overflow: hidden;
+    }
+    [class*="progressBarFill_"],
+    [class*="progressFill_"],
+    [class*="barFill_"] {
+        background: linear-gradient(90deg, var(--purple-3), var(--purple-2)) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Quest rewards */
+    [class*="reward_"]:not([class*="rewardIcon"]),
+    [class*="rewardItem_"],
+    [class*="questReward_"] {
+        background: hsla(280, 25%, 18%, 0.4) !important;
+        border: 1px solid hsla(280, 35%, 45%, 0.2) !important;
+        border-radius: var(--radius-md) !important;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    [class*="reward_"]:not([class*="rewardIcon"]):hover,
+    [class*="rewardItem_"]:hover,
+    [class*="questReward_"]:hover {
+        border-color: hsla(280, 45%, 55%, 0.35) !important;
+        background: hsla(280, 30%, 22%, 0.5) !important;
+    }
+    
+    /* Quest claim/action buttons */
+    [class*="claimButton_"],
+    [class*="questButton_"],
+    [class*="acceptButton_"] {
+        background: linear-gradient(135deg, var(--purple-3), var(--purple-4)) !important;
+        border: none !important;
+        border-radius: var(--radius-md) !important;
+        transition: filter 0.15s ease, transform 0.1s ease;
+    }
+    [class*="claimButton_"]:hover,
+    [class*="questButton_"]:hover,
+    [class*="acceptButton_"]:hover {
+        filter: brightness(1.15);
+        transform: translateY(-1px);
+    }
+    
+    /* Quest game icon */
+    [class*="gameIcon_"],
+    [class*="questIcon_"] {
+        border-radius: var(--radius-md);
+        border: 2px solid hsla(280, 40%, 50%, 0.2);
+        transition: border-color 0.15s ease;
+    }
+    [class*="questCard_"]:hover [class*="gameIcon_"],
+    [class*="questCard_"]:hover [class*="questIcon_"] {
+        border-color: hsla(280, 50%, 60%, 0.4);
+    }
+    
+    /* Quest timer/expiry */
+    [class*="timer_"],
+    [class*="expiresAt_"],
+    [class*="questExpiry_"] {
+        color: var(--purple-2) !important;
+        font-weight: 500;
     }
 
     .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
@@ -306,9 +635,6 @@ body {
     .contentRegionScroller__23e6b {
         background: none;
     }
-    .standardSidebarView__23e6b {
-        backdrop-filter: var(--panel-backdrop-filter);
-    }
 
     /* remove excess backgrounds */
     .wrapper__4106a /* message loading placeholders */,
@@ -373,7 +699,6 @@ body {
         border-radius: var(--divider-thickness);
         height: calc(100% - 2 * var(--radius-sm));
         top: var(--radius-sm);
-        left: calc(var(--divider-thickness) / -2 + 1px);
         left: calc(var(--radius-sm) / 2);
     }
 
@@ -392,46 +717,79 @@ body {
         margin-left: calc((var(--custom-guild-list-padding) - 4px) / 2);
     }
 
-    /* improve embeds */
+    /* improve embeds - clean and modern */
     .embedFull__623de {
-        border: 4px solid var(--border-normal);
-        border-top-color: var(--border-subtle) !important;
-        border-top-width: 1px;
-        border-bottom-color: var(--border-subtle) !important;
-        border-bottom-width: 1px;
-        border-right-color: var(--border-subtle) !important;
-        border-right-width: 1px;
-    }
-
-    /* improve borders */
-    .reaction__23977 /* message reactions */,
-    .reactionBtn__23977.forceShow__23977 /* add reaction button */ {
-        border-width: 2px;
-    }
-
-    /* roundness */
-    .embedFull__623de /* embeds */,
-    .hljs /* code block */,
-    .imageWrapper_af017a /* image */,
-    .container__9271d /* thread link */ {
+        border: 1px solid var(--border-subtle);
+        border-left-width: 3px;
         border-radius: var(--radius-md);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .embedFull__623de:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+        border-color: var(--border-hover);
     }
 
-    .outer_c0bea0 /* profile outer */, 
-    .contentWrapper__08434  /* gif panel */ {
-        border-radius: var(--radius-lg);
+    /* improve reactions - subtle and clean */
+    .reaction__23977,
+    .reactionBtn__23977.forceShow__23977 {
+        border-width: 1px;
+        border-radius: var(--radius-sm);
+        transition: background-color 0.15s ease, border-color 0.15s ease;
     }
-    .inner_c0bea0 /* profile inner */ {
+    .reaction__23977:hover {
+        background-color: hsla(280, 20%, 50%, 0.15);
+    }
+    .reaction__23977:active {
+        background-color: hsla(280, 20%, 50%, 0.25);
+    }
+
+    /* roundness - refined and consistent */
+    .embedFull__623de,
+    .hljs,
+    .imageWrapper_af017a,
+    .container__9271d {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+
+    /* profile popup - elegant shadow */
+    .outer_c0bea0,
+    .contentWrapper__08434 {
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                    0 0 0 1px var(--border-subtle);
+    }
+    .inner_c0bea0 {
         border-radius: calc(var(--radius-lg) - 4px);
     }
 
-    .outer_c0bea0 /* profile outer */ {
+    .outer_c0bea0 {
         border: 1px solid var(--border-subtle);
         background-position: center calc(-1 * var(--border-thickness));
         background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
     .root__24502 {
         background: none;
+    }
+
+    /* scrollbar enhancement */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: hsla(280, 20%, 50%, 0.25);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsla(280, 25%, 55%, 0.4);
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
     }
 
     /* remove unnecessary backgrounds */
@@ -457,8 +815,19 @@ body {
 
 /* animations.css */
 body {
-    --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --list-item-transition: 0.15s ease;
+    --dms-icon-svg-transition: 0.25s ease;
+    
+    /* Animation timing functions - sophisticated easing */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Animation durations */
+    --anim-fast: 0.15s;
+    --anim-normal: 0.25s;
+    --anim-slow: 0.4s;
 }
 
 @property --animations {
@@ -467,259 +836,482 @@ body {
     initial-value: on;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   OVERRIDE DISCORD ANIMATIONS - Sophisticated yet Lightweight
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 @container body style(--animations: on) {
+    
+    /* ═══════════════════════════════════════════════════════════════
+       MODALS - Elegant Scale + Fade with Backdrop
+       ═══════════════════════════════════════════════════════════════ */
+    .layerContainer__960e4 {
+        animation: backdrop-fade var(--anim-normal) var(--ease-out-expo) forwards;
+    }
+    
+    [class*="modal_"], 
+    [class*="root_"]:not(.visual-refresh),
+    .modal__9ec04,
+    .root__9ec04,
+    .container__9ec04 {
+        animation: modal-enter var(--anim-normal) var(--ease-out-back) forwards !important;
+        transform-origin: center center;
+    }
+    
+    @keyframes modal-enter {
+        0% {
+            opacity: 0;
+            transform: scale(0.9) translateY(10px);
+            filter: blur(4px);
+        }
+        60% {
+            opacity: 1;
+            filter: blur(0);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            filter: blur(0);
+        }
+    }
+    
+    @keyframes backdrop-fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       CONTEXT MENUS - Smooth Origin-based Appear
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="menu_"],
+    .menu__088f7 {
+        animation: menu-pop var(--anim-fast) var(--ease-out-back) forwards !important;
+        transform-origin: top left;
+    }
+    
+    @keyframes menu-pop {
+        0% {
+            opacity: 0;
+            transform: scale(0.92) translateY(-8px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+    
+    /* Menu items stagger effect */
+    [class*="menu_"] [class*="item_"],
+    .item__088f7 {
+        animation: menu-item-slide var(--anim-fast) var(--ease-out-expo) forwards;
+        animation-delay: calc(var(--index, 0) * 0.02s);
+    }
+    
+    @keyframes menu-item-slide {
+        from {
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       POPOUTS & LAYERS - Directional Slide
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="layer_"],
+    [class*="popout_"],
+    .popout_c83a44 {
+        animation: popout-enter var(--anim-normal) var(--ease-out-expo) forwards !important;
+    }
+    
+    @keyframes popout-enter {
+        0% {
+            opacity: 0;
+            transform: translateY(-12px) scale(0.96);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    /* User popout special animation */
+    .outer_c0bea0 {
+        animation: user-popout var(--anim-normal) var(--ease-out-back) forwards !important;
+    }
+    
+    @keyframes user-popout {
+        0% {
+            opacity: 0;
+            transform: scale(0.9) translateX(-10px);
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+            filter: blur(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TOOLTIPS - Snappy with subtle bounce
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="tooltip_"],
+    .tooltip__5c816 {
+        animation: tooltip-pop 0.12s var(--ease-out-back) forwards !important;
+    }
+    
+    @keyframes tooltip-pop {
+        0% {
+            opacity: 0;
+            transform: scale(0.8) translateY(4px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       MESSAGES - Smooth Appear with Subtle Slide
+       ═══════════════════════════════════════════════════════════════ */
+    .message__5126c {
+        animation: message-appear var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes message-appear {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Message hover - smooth background */
+    [class*="message_"]:not([class*="mentioned"]) {
+        transition: background-color var(--anim-fast) ease;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       REACTIONS - Bouncy Pop
+       ═══════════════════════════════════════════════════════════════ */
+    [class*="reaction_"] {
+        transition: background-color var(--anim-fast) ease, 
+                    border-color var(--anim-fast) ease,
+                    transform 0.1s var(--ease-spring);
+    }
+    [class*="reaction_"]:hover {
+        background-color: hsla(280, 20%, 50%, 0.15);
+    }
+    [class*="reaction_"]:active {
+        background-color: hsla(280, 20%, 50%, 0.25);
+        transform: scale(0.92);
+    }
+    
+    /* New reaction animation */
+    .reaction__23977.reactionMe__23977 {
+        animation: reaction-add 0.3s var(--ease-out-back) forwards;
+    }
+    
+    @keyframes reaction-add {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TYPING INDICATOR - Smooth Pulse
+       ═══════════════════════════════════════════════════════════════ */
+    .typing_b88801 {
+        animation: typing-appear var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes typing-appear {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       UNREAD PILL & NOTIFICATIONS - Attention-grabbing
+       ═══════════════════════════════════════════════════════════════ */
+    .newMessagesBar__0f481 {
+        animation: unread-slide var(--anim-normal) var(--ease-out-back) forwards;
+    }
+    
+    @keyframes unread-slide {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px) scale(0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    /* Notification badge pulse */
+    [class*="numberBadge_"] {
+        animation: badge-pulse 0.3s var(--ease-out-back) forwards;
+    }
+    
+    @keyframes badge-pulse {
+        0% {
+            transform: scale(0);
+        }
+        70% {
+            transform: scale(1.15);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
     .visual-refresh {
         /* ═══════════════════════════════════════════════════════════════
-           LIST HOVER ANIMATIONS
+           LIST HOVER - Smooth Slide
            ═══════════════════════════════════════════════════════════════ */
-        .wrapper__2ea32 .link__2ea32 /* channels */,
-        .container__91a9d /* members */,
-        .channel__972a0 /* dms */,
-        .side_aa8da2 .item_aa8da2 /* settings */ {
-            transition: margin-left var(--list-item-transition), background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-            will-change: margin-left, transform;
+        .wrapper__2ea32 .link__2ea32,
+        .container__91a9d,
+        .channel__972a0,
+        .side_aa8da2 .item_aa8da2 {
+            transition: margin-left var(--list-item-transition) var(--ease-out-expo), 
+                        background-color var(--anim-fast) ease,
+                        color var(--anim-fast) ease;
         }
         .wrapper__2ea32:hover .link__2ea32,
         .side_aa8da2 .item_aa8da2:hover {
-            margin-left: 10px;
+            margin-left: 6px;
         }
         .container__91a9d:hover,
         .channel__972a0:hover {
-            margin-left: 18px;
+            margin-left: 10px;
         }
-        /* list hover channel dot */
+        
         .unread__2ea32 {
             border-radius: 50%;
             width: 8px;
             height: 8px;
             margin-left: -4px;
-            transition: var(--list-item-transition), transform 0.2s ease;
-            will-change: margin-left, transform;
+            transition: margin-left var(--list-item-transition) var(--ease-out-expo),
+                        box-shadow var(--anim-fast) ease;
         }
         .wrapper__2ea32:hover .unread__2ea32 {
             margin-left: 4px;
-            transform: scale(1.2);
+            box-shadow: 0 0 8px currentColor;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           BUTTON ANIMATIONS - Scale, Glow & Press Effects
+           BUTTONS - Responsive Press
            ═══════════════════════════════════════════════════════════════ */
-        button, 
+        button:not(.channelTextArea_f75fb0 button), 
         [type="button"],
-        [class*="button_"], 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]), 
         [class*="lookFilled_"], 
         [class*="lookOutlined_"],
         .circleIconButton__5bc7e {
-            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
-                        background-color 0.2s ease, 
-                        border-color 0.2s ease, 
-                        color 0.2s ease, 
-                        box-shadow 0.2s ease,
-                        filter 0.15s ease;
+            transition: transform 0.1s var(--ease-out-back), 
+                        background-color var(--anim-fast) ease, 
+                        border-color var(--anim-fast) ease,
+                        box-shadow var(--anim-fast) ease;
         }
-        button:hover, 
+        button:not(.channelTextArea_f75fb0 button):hover, 
         [type="button"]:hover,
-        [class*="button_"]:hover, 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]):hover, 
         [class*="lookFilled_"]:hover, 
         [class*="lookOutlined_"]:hover,
         .circleIconButton__5bc7e:hover {
-            transform: scale(1.05) translateY(-1px);
-            filter: brightness(1.1);
-            box-shadow: 0 4px 15px rgba(180, 130, 220, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        button:active, 
+        button:not(.channelTextArea_f75fb0 button):active, 
         [type="button"]:active,
-        [class*="button_"]:active, 
+        [class*="button_"]:not(.channelTextArea_f75fb0 [class*="button"]):active, 
         [class*="lookFilled_"]:active, 
         [class*="lookOutlined_"]:active,
         .circleIconButton__5bc7e:active {
-            transform: scale(0.95);
-            filter: brightness(0.9);
-            box-shadow: 0 2px 8px rgba(180, 130, 220, 0.2);
+            transform: translateY(0) scale(0.97);
+            box-shadow: none;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           MODAL ANIMATIONS - Elegant Pop-in
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="modal_"], [class*="root_"] {
-            animation: modal-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
-
-        @keyframes modal-pop {
-            0% {
-                opacity: 0;
-                transform: scale(0.85) translateY(30px);
-                filter: blur(4px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-                filter: blur(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           MENU/POPOUT ANIMATIONS - Slide & Fade
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="menu_"], [class*="layer_"], [class*="popout_"] {
-            animation: menu-slide 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-            transform-origin: top center;
-        }
-
-        @keyframes menu-slide {
-            0% {
-                opacity: 0;
-                transform: translateY(-15px) scale(0.95);
-                filter: blur(2px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           TOOLTIP ANIMATIONS - Smooth Fade
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="tooltip_"] {
-            animation: tooltip-fade 0.2s ease-out forwards;
-        }
-
-        @keyframes tooltip-fade {
-            0% {
-                opacity: 0;
-                transform: scale(0.9) translateY(5px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           INPUT ANIMATIONS - Focus Glow
+           INPUTS - Elegant Focus
            ═══════════════════════════════════════════════════════════════ */
         input, textarea, [class*="input_"], [class*="textArea_"] {
-            transition: border-color 0.25s ease, 
-                        box-shadow 0.25s ease, 
-                        background-color 0.25s ease,
-                        transform 0.2s ease;
+            transition: border-color var(--anim-fast) ease, 
+                        box-shadow var(--anim-normal) var(--ease-out-expo);
         }
         input:focus, textarea:focus, [class*="input_"]:focus, [class*="textArea_"]:focus {
-            box-shadow: 0 0 0 2px rgba(180, 130, 220, 0.3), 0 4px 12px rgba(180, 130, 220, 0.15);
+            box-shadow: 0 0 0 3px hsla(280, 50%, 60%, 0.15),
+                        0 0 20px hsla(280, 50%, 60%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           AVATAR ANIMATIONS - Playful Hover
+           AVATARS - Subtle Glow
            ═══════════════════════════════════════════════════════════════ */
         [class*="avatar_"] {
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+            transition: filter var(--anim-fast) ease,
+                        box-shadow var(--anim-fast) ease;
         }
         [class*="avatar_"]:hover {
-            transform: scale(1.15) rotate(3deg);
-            box-shadow: 0 4px 20px rgba(180, 130, 220, 0.4);
+            filter: brightness(1.1);
+            box-shadow: 0 0 12px hsla(280, 50%, 60%, 0.25);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           SERVER ICONS - Bounce on Hover
+           SERVER ICONS - Glow effect on hover
            ═══════════════════════════════════════════════════════════════ */
         .wrapper__6e9f8 {
-            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: filter var(--anim-fast) ease, 
+                        box-shadow var(--anim-normal) var(--ease-out-expo);
+            border-radius: 50%;
         }
         .wrapper__6e9f8:hover {
-            transform: scale(1.1);
+            filter: brightness(1.1);
+            box-shadow: 0 0 20px hsla(280, 50%, 55%, 0.4);
         }
         .wrapper__6e9f8:active {
-            transform: scale(0.95);
+            filter: brightness(0.95);
+            box-shadow: 0 0 8px hsla(280, 50%, 55%, 0.25);
+        }
+        /* Selected server glow */
+        .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+            box-shadow: 0 0 24px hsla(280, 60%, 60%, 0.5);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           MESSAGE ANIMATIONS - Subtle Entrance
+           CHANNEL LIST - Smooth interactions
            ═══════════════════════════════════════════════════════════════ */
-        [class*="message_"]:not([class*="mentioned"]) {
-            transition: background-color 0.2s ease, transform 0.15s ease;
+        .containerDefault__2637a,
+        .containerDragAfter__2637a,
+        .containerDragBefore__2637a {
+            transition: background-color var(--anim-fast) ease,
+                        transform var(--anim-fast) var(--ease-out-expo);
+            border-radius: var(--radius-sm);
+            margin: 1px 8px;
         }
-        [class*="message_"]:hover {
-            transform: translateX(2px);
+        
+        /* Voice channel users */
+        .voiceUser__2637a {
+            transition: background-color var(--anim-fast) ease,
+                        transform var(--anim-fast) ease;
+            border-radius: var(--radius-sm);
+        }
+        .voiceUser__2637a:hover {
+            background-color: hsla(280, 25%, 50%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           REACTION ANIMATIONS - Pop Effect
+           EMBEDS & CARDS - Lift Effect
            ═══════════════════════════════════════════════════════════════ */
-        [class*="reaction_"] {
-            transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                        background-color 0.2s ease,
-                        border-color 0.2s ease;
+        [class*="embed_"], [class*="card_"], [class*="attachment_"] {
+            transition: transform var(--anim-fast) var(--ease-out-expo), 
+                        box-shadow var(--anim-normal) ease;
         }
-        [class*="reaction_"]:hover {
-            transform: scale(1.15);
-        }
-        [class*="reaction_"]:active {
-            transform: scale(0.9);
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           SCROLLBAR ANIMATIONS
-           ═══════════════════════════════════════════════════════════════ */
-        ::-webkit-scrollbar-thumb {
-            transition: background-color 0.2s ease;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: var(--purple-3) !important;
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           EMBED ANIMATIONS - Card Hover
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="embed_"], [class*="card_"] {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        [class*="embed_"]:hover, [class*="card_"]:hover {
+        [class*="embed_"]:hover, [class*="card_"]:hover, [class*="attachment_"]:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+                        0 0 0 1px hsla(280, 30%, 50%, 0.1);
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           ICON ANIMATIONS - Smooth Color Transitions
+           ICONS - Color Transition
            ═══════════════════════════════════════════════════════════════ */
         [class*="icon_"], svg {
-            transition: color 0.2s ease, fill 0.2s ease, transform 0.2s ease;
-        }
-        [class*="icon_"]:hover, [class*="actionIcon_"]:hover {
-            transform: scale(1.1);
-        }
-
-        /* ═══════════════════════════════════════════════════════════════
-           LOADING SPINNER - Lilac Glow
-           ═══════════════════════════════════════════════════════════════ */
-        [class*="spinner_"] {
-            animation: spinner-glow 1.5s ease-in-out infinite;
-        }
-
-        @keyframes spinner-glow {
-            0%, 100% {
-                filter: drop-shadow(0 0 5px rgba(180, 130, 220, 0.5));
-            }
-            50% {
-                filter: drop-shadow(0 0 15px rgba(180, 130, 220, 0.8));
-            }
+            transition: color 0.1s ease, 
+                        fill 0.1s ease,
+                        filter 0.1s ease;
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           TYPING INDICATOR - Pulse Animation
+           LINKS - Underline Animation
            ═══════════════════════════════════════════════════════════════ */
-        [class*="typing_"] {
-            animation: typing-pulse 2s ease-in-out infinite;
+        a, [class*="anchor_"] {
+            transition: color var(--anim-fast) ease;
         }
 
-        @keyframes typing-pulse {
-            0%, 100% {
-                opacity: 0.7;
-            }
-            50% {
-                opacity: 1;
-            }
+        /* ═══════════════════════════════════════════════════════════════
+           BADGES - Pop In
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="badge_"], [class*="numberBadge_"] {
+            transition: filter 0.1s ease,
+                        transform 0.1s var(--ease-out-back);
+        }
+        [class*="badge_"]:hover, [class*="numberBadge_"]:hover {
+            filter: brightness(1.15);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       SETTINGS PAGE TRANSITIONS
+       ═══════════════════════════════════════════════════════════════ */
+    .contentRegion__23e6b {
+        animation: settings-slide var(--anim-normal) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes settings-slide {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       CHANNEL/SERVER SWITCH - Smooth Content Transition
+       ═══════════════════════════════════════════════════════════════ */
+    .messagesWrapper__36d07 {
+        animation: chat-fade var(--anim-fast) var(--ease-out-expo) forwards;
+    }
+    
+    @keyframes chat-fade {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       IMAGE VIEWER - Cinematic Open
+       ═══════════════════════════════════════════════════════════════ */
+    .modal__4fdd4 {
+        animation: image-modal var(--anim-slow) var(--ease-out-expo) forwards !important;
+    }
+    
+    @keyframes image-modal {
+        0% {
+            opacity: 0;
+            transform: scale(0.85);
+            filter: blur(8px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
         }
     }
 }
@@ -745,111 +1337,139 @@ body {
 
 /* chatbar.css */
 body {
-    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
-
+    --chatbar-height: 48px;
     --custom-channel-textarea-text-area-height: var(--chatbar-height);
 }
 
-@property --custom-chatbar {
-    syntax: 'off | separated';
-    inherits: false;
-    initial-value: aligned;
-}
-
+/* ═══════════════════════════════════════════════════════════════
+   SEPARATED CHATBAR - Enhanced UX
+   ═══════════════════════════════════════════════════════════════ */
 .visual-refresh {
+    /* Attach button (plus) - balanced spacing */
     .attachWrapper__0923f {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 4px 0 8px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-}
 
-@container body style(--custom-chatbar: separated) {
-    .visual-refresh {
-        .chatContent_f75fb0 {
-            background: none;
-            border-radius: 0;
-            border: none;
-            backdrop-filter: none;
-        }
-        .messagesWrapper__36d07 {
-            background-color: var(--background-base-lower);
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
-            overflow: hidden;
-
-            &:hover {
-                border-color: var(--border-hover);
-            }
-        }
-        .scrollerSpacer__36d07 {
-            height: calc(26px + var(--space-xs));
-        }
-        .scroller__36d07::-webkit-scrollbar-track {
-            margin-bottom: calc(26px);
-        }
-        .chatContent_f75fb0:has(.typing_b88801) .messagesWrapper__36d07::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--background-base-lower);
-            height: 26px;
-            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-            z-index: 2;
-        }
-        .form_f75fb0 {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            width: 100%;
-            margin-top: 0;
-        }
-        .typing_b88801 {
-            position: absolute;
-            order: -1;
-            top: calc(-26px + var(--border-thickness) * -1);
-            left: calc(var(--border-thickness));
-            border-radius: 0 0 0 var(--radius-lg);
-            padding: 0 0 0 var(--space-sm);
-            height: 26px;
-        }
-        .channelBottomBarArea_f75fb0 {
-            margin-top: var(--gap);
-        }
-        .channelTextArea_f75fb0 {
-            margin: 0;
-            background-color: var(--background-base-lower);
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
-
-            &:hover {
-                border-color: var(--border-hover);
-            }
-        }
-        .stackedBars__74017 {
-            background: none !important;
-        }
-        .wrapper__44df5 {
-            margin: var(--gap) 0 0 0;
-            height: var(--chatbar-height);
-            padding: 0;
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
-
-            &:hover {
-                border-color: var(--border-hover);
-            }
-        }
+    /* Remove default chat content styling */
+    .chatContent_f75fb0 {
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+    
+    /* Messages container - clean panel */
+    .messagesWrapper__36d07 {
+        background-color: var(--background-base-lower) !important;
+        border-radius: var(--radius-lg) !important;
+        border: 1px solid var(--border-subtle) !important;
+        overflow: hidden;
+        transition: border-color 0.15s ease;
+    }
+    .messagesWrapper__36d07:hover {
+        border-color: var(--border-hover) !important;
+    }
+    
+    .scrollerSpacer__36d07 {
+        height: calc(26px + var(--space-xs)) !important;
+    }
+    
+    /* Form layout */
+    .form_f75fb0 {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Typing indicator - positioned nicely */
+    .typing_b88801 {
+        position: absolute;
+        order: -1;
+        top: calc(-26px - 1px);
+        left: 1px;
+        border-radius: 0 0 0 var(--radius-lg);
+        padding: 0 0 0 var(--space-sm);
+        height: 26px;
+    }
+    
+    /* Gap between messages and chatbar */
+    .channelBottomBarArea_f75fb0 {
+        margin-top: var(--gap) !important;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TEXT INPUT - Polished interactions
+       ═══════════════════════════════════════════════════════════════ */
+    .channelTextArea_f75fb0 {
+        margin: 0 !important;
+        background-color: var(--background-base-lower) !important;
+        border-radius: var(--radius-lg) !important;
+        border: 1px solid var(--border-subtle) !important;
+        transition: border-color 0.15s ease,
+                    box-shadow 0.15s ease;
+    }
+    .channelTextArea_f75fb0:hover {
+        border-color: hsla(280, 30%, 60%, 0.35) !important;
+    }
+    .channelTextArea_f75fb0:focus-within {
+        border-color: hsla(280, 35%, 65%, 0.5) !important;
+        box-shadow: 0 0 0 2px hsla(280, 30%, 60%, 0.1),
+                    0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stackedBars__74017 {
+        background: none !important;
+    }
+    
+    /* Inner wrapper styling */
+    .wrapper__44df5 {
+        margin: var(--gap) 0 0 0 !important;
+        height: var(--chatbar-height);
+        padding: 0 !important;
+        border-radius: var(--radius-lg) !important;
+        border: 1px solid var(--border-subtle) !important;
+        transition: border-color 0.15s ease,
+                    box-shadow 0.15s ease;
+    }
+    .wrapper__44df5:hover {
+        border-color: hsla(280, 30%, 60%, 0.35) !important;
+    }
+    .wrapper__44df5:focus-within {
+        border-color: hsla(280, 35%, 65%, 0.5) !important;
+        box-shadow: 0 0 0 2px hsla(280, 30%, 60%, 0.1),
+                    0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Chatbar buttons - color transitions only (no scale to prevent overflow) */
+    .channelTextArea_f75fb0 button,
+    .channelTextArea_f75fb0 [class*="button"] {
+        transition: color 0.1s ease,
+                    background-color 0.1s ease,
+                    opacity 0.1s ease;
+    }
+    .channelTextArea_f75fb0 button:hover,
+    .channelTextArea_f75fb0 [class*="button"]:hover {
+        color: var(--purple-2);
+        opacity: 1;
+    }
+    .channelTextArea_f75fb0 button:active,
+    .channelTextArea_f75fb0 [class*="button"]:active {
+        opacity: 0.7;
+    }
+    
+    /* Send button special styling - color only */
+    .sendButton__7ec1b {
+        transition: background-color 0.15s ease,
+                    opacity 0.1s ease !important;
+    }
+    .sendButton__7ec1b:hover {
+        filter: brightness(1.15) !important;
+    }
+    .sendButton__7ec1b:active {
+        filter: brightness(0.9) !important;
     }
 }
 
@@ -861,78 +1481,79 @@ body {
 }
 
 :root {
-    /* text colors */
+    /* text colors - enhanced contrast and readability */
     --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: hsl(280, 30%, 95%); /* other normally white text */
-    --text-2: hsl(280, 20%, 75%); /* headings and important text */
-    --text-3: hsl(280, 15%, 65%); /* normal text */
-    --text-4: hsl(280, 10%, 45%); /* icon buttons and channels */
-    --text-5: hsl(280, 10%, 30%); /* muted channels/chats and timestamps */
+    --text-1: hsl(280, 20%, 98%); /* bright white with subtle lillac */
+    --text-2: hsl(280, 15%, 85%); /* headings - softer */
+    --text-3: hsl(280, 10%, 75%); /* normal text - high readability */
+    --text-4: hsl(280, 8%, 55%); /* icon buttons and channels */
+    --text-5: hsl(280, 6%, 42%); /* muted elements and timestamps */
 
-    /* background and dark colors */
-    --bg-1: hsl(260, 5%, 22%); /* dark buttons when clicked */
-    --bg-2: hsl(260, 5%, 17%); /* dark buttons */
-    --bg-3: hsl(260, 5%, 13%); /* spacing, secondary elements */
-    --bg-4: hsl(260, 5%, 9%); /* main background color */
-    --hover: hsla(280, 20%, 50%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(280, 20%, 50%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(280, 20%, 50%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(260, 10%, 0%, 0.15); /* messages when hovered */
+    /* background colors - clean grey with hint of purple */
+    --bg-1: hsl(260, 8%, 22%); /* dark buttons when clicked */
+    --bg-2: hsl(260, 7%, 17%); /* dark buttons */
+    --bg-3: hsl(260, 6%, 13%); /* spacing, secondary elements */
+    --bg-4: hsl(260, 5%, 9%); /* main background - deeper */
+    --hover: hsla(280, 30%, 65%, 0.1); /* hover state */
+    --active: hsla(280, 30%, 65%, 0.18); /* active/selected state */
+    --active-2: hsla(280, 30%, 65%, 0.25); /* extra active state */
+    --message-hover: hsla(260, 20%, 55%, 0.06); /* message hover - subtle */
 
     /* accent colors */
-    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-1: var(--purple-1); /* links and accent text */
     --accent-2: var(--purple-2); /* small accent elements */
     --accent-3: var(--purple-3); /* accent buttons */
-    --accent-4: var(--purple-4); /* accent buttons when hovered */
-    --accent-5: var(--purple-5); /* accent buttons when clicked */
-    --accent-new: var(--purple-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    --accent-4: var(--purple-4); /* accent buttons hovered */
+    --accent-5: var(--purple-5); /* accent buttons clicked */
+    --accent-new: var(--purple-2); /* replaces red for mute/deafen */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 88%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 92%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 92%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
 
     /* status indicator colors */
-    --online: var(--green-2); /* change to #43a25a for default */
-    --dnd: var(--red-2); /* change to #d83a42 for default */
-    --idle: var(--yellow-2); /* change to #ca9654 for default */
-    --streaming: var(--purple-2); /* change to ##9147ff for default */
-    --offline: var(--text-4); /* change to #83838b for default offline color */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
 
-    /* border colors */
-    --border-light: hsla(280, 15%, 50%, 0.1); /* light border color */
-    --border: hsla(280, 15%, 50%, 0.2); /* normal border color */
-    --button-border: hsla(280, 20%, 80%, 0.15); /* neutral border color of buttons */
+    /* border colors - refined */
+    --border-light: hsla(280, 25%, 65%, 0.06);
+    --border: hsla(280, 25%, 65%, 0.12);
+    --button-border: hsla(280, 30%, 80%, 0.1);
 
-    /* base colors */
-    --red-1: oklch(76% 0.12 0);
-    --red-2: oklch(70% 0.12 0);
-    --red-3: oklch(64% 0.12 0);
-    --red-4: oklch(58% 0.12 0);
-    --red-5: oklch(52% 0.12 0);
+    /* base colors - harmonized palette */
+    --red-1: oklch(78% 0.13 12);
+    --red-2: oklch(68% 0.15 12);
+    --red-3: oklch(60% 0.15 12);
+    --red-4: oklch(52% 0.13 12);
+    --red-5: oklch(44% 0.11 12);
 
-    --green-1: oklch(76% 0.11 170);
-    --green-2: oklch(70% 0.11 170);
-    --green-3: oklch(64% 0.11 170);
-    --green-4: oklch(58% 0.11 170);
-    --green-5: oklch(52% 0.11 160);
+    --green-1: oklch(78% 0.12 155);
+    --green-2: oklch(68% 0.14 155);
+    --green-3: oklch(60% 0.14 155);
+    --green-4: oklch(52% 0.12 155);
+    --green-5: oklch(44% 0.10 155);
 
-    --blue-1: oklch(76% 0.12 300);
-    --blue-2: oklch(70% 0.12 300);
-    --blue-3: oklch(64% 0.12 300);
-    --blue-4: oklch(58% 0.12 300);
-    --blue-5: oklch(52% 0.12 300);
+    --blue-1: oklch(80% 0.13 295);
+    --blue-2: oklch(70% 0.15 295);
+    --blue-3: oklch(62% 0.15 295);
+    --blue-4: oklch(54% 0.13 295);
+    --blue-5: oklch(46% 0.11 295);
 
-    --yellow-1: oklch(80% 0.11 90);
-    --yellow-2: oklch(74% 0.11 90);
-    --yellow-3: oklch(68% 0.11 90);
-    --yellow-4: oklch(62% 0.11 90);
-    --yellow-5: oklch(56% 0.11 90);
+    --yellow-1: oklch(88% 0.11 85);
+    --yellow-2: oklch(78% 0.13 85);
+    --yellow-3: oklch(70% 0.13 85);
+    --yellow-4: oklch(62% 0.11 85);
+    --yellow-5: oklch(54% 0.09 85);
 
-    --purple-1: oklch(78% 0.14 300);
-    --purple-2: oklch(72% 0.14 300);
-    --purple-3: oklch(65% 0.14 300);
-    --purple-4: oklch(58% 0.14 300);
-    --purple-5: oklch(50% 0.14 300);
+    /* purple/lillac - refined and elegant */
+    --purple-1: oklch(84% 0.11 290);
+    --purple-2: oklch(72% 0.14 290);
+    --purple-3: oklch(62% 0.16 290);
+    --purple-4: oklch(54% 0.14 290);
+    --purple-5: oklch(46% 0.12 290);
 }
 
 @container root style(--colors: on) {
@@ -1664,7 +2285,7 @@ body {
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--purple-3), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(135deg, var(--purple-3), var(--purple-2)); /* fixed color/gradient (css background property) */
 }
 
 @property --custom-dms-icon {
@@ -1687,6 +2308,9 @@ body {
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
         display: none;
     }
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+        overflow: visible;
+    }
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8::before {
         content: '';
         display: block;
@@ -1698,20 +2322,110 @@ body {
         mask-size: var(--dms-icon-svg-size);
         mask-position: center;
         mask-repeat: no-repeat;
-        transition: background-color 0.15s ease-out;
+        transition: background-color 0.2s ease-out,
+                    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                    filter 0.3s ease;
     }
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before {
-        transform: rotate(0deg) scale(1);
-    }
+    
+    /* Hover - subtle glow and tilt */
     .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before,
     .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8 > .childWrapper__6e9f8::before {
         background: var(--dms-icon-color-after);
-        transform: rotate(-360deg) scale(0.8);
+        transform: rotate(-12deg);
+        filter: drop-shadow(0 0 6px hsla(280, 60%, 70%, 0.5));
     }
-
-    @container body style(--animations: on) {
-        .wrapper__6e9f8[data-list-item-id='guildsnav___home'] .childWrapper__6e9f8::before {
-            transition: background-color 0.15s ease-out, transform var(--dms-icon-svg-transition);
+    
+    /* ═══════════════════════════════════════════════════════════════
+       SECRET LONG-PRESS ANIMATION - Moon Eclipse Effect
+       Hold for 0.8s to trigger the secret animation!
+       ═══════════════════════════════════════════════════════════════ */
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:active > .childWrapper__6e9f8::before {
+        animation: moon-eclipse 2s ease-in-out forwards;
+        animation-delay: 0.8s; /* Secret triggers after holding 0.8s */
+    }
+    
+    /* Eclipse ring effect */
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:active > .childWrapper__6e9f8::after {
+        animation: eclipse-ring 2s ease-in-out forwards;
+        animation-delay: 0.8s;
+    }
+    
+    @keyframes moon-eclipse {
+        0% {
+            transform: rotate(-12deg);
+            filter: drop-shadow(0 0 6px hsla(280, 60%, 70%, 0.5));
+        }
+        15% {
+            transform: rotate(0deg) scale(0.85);
+            filter: drop-shadow(0 0 2px hsla(280, 60%, 70%, 0.3));
+        }
+        30% {
+            transform: rotate(0deg) scale(0.7);
+            filter: drop-shadow(0 0 0px transparent);
+            background: hsla(280, 20%, 30%, 1);
+        }
+        50% {
+            transform: rotate(0deg) scale(0.7);
+            filter: drop-shadow(0 0 15px hsla(280, 80%, 70%, 0.8))
+                    drop-shadow(0 0 30px hsla(280, 70%, 60%, 0.5));
+            background: var(--purple-2);
+        }
+        70% {
+            transform: rotate(360deg) scale(1.1);
+            filter: drop-shadow(0 0 20px hsla(280, 80%, 70%, 1))
+                    drop-shadow(0 0 40px hsla(280, 70%, 60%, 0.6));
+            background: var(--white);
+        }
+        85% {
+            transform: rotate(360deg) scale(1.05);
+            filter: drop-shadow(0 0 10px hsla(280, 60%, 70%, 0.6));
+        }
+        100% {
+            transform: rotate(360deg) scale(1);
+            filter: drop-shadow(0 0 6px hsla(280, 60%, 70%, 0.5));
+            background: var(--dms-icon-color-after);
+        }
+    }
+    
+    @keyframes eclipse-ring {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+            border-color: transparent;
+        }
+        30% {
+            opacity: 1;
+            transform: scale(1);
+            border-color: hsla(280, 60%, 60%, 0.8);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.3);
+            border-color: hsla(280, 70%, 70%, 1);
+            box-shadow: 0 0 15px hsla(280, 70%, 60%, 0.5),
+                        inset 0 0 10px hsla(280, 70%, 60%, 0.3);
+        }
+        70% {
+            opacity: 0.8;
+            transform: scale(1.5);
+            border-color: hsla(280, 60%, 70%, 0.6);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(2);
+            border-color: transparent;
         }
     }
 }
@@ -2047,9 +2761,66 @@ body {
     }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   USER PANEL ENHANCEMENTS - Polished and modern
+   ═══════════════════════════════════════════════════════════════ */
+.visual-refresh {
+    /* User panel container - subtle gradient */
+    .panels__5e434 {
+        background: linear-gradient(180deg,
+            var(--background-base-lower) 0%,
+            hsla(280, 12%, 10%, 1) 100%) !important;
+    }
+    
+    /* User area - the avatar and name section */
+    .container_f14944 {
+        border-radius: var(--radius-md);
+        margin: 2px 8px;
+        padding: 4px 8px !important;
+        transition: background-color 0.15s ease;
+    }
+    .container_f14944:hover {
+        background-color: hsla(280, 25%, 50%, 0.1);
+    }
+    
+    /* Avatar in user panel - subtle glow on hover */
+    .panels__5e434 .avatar__8fca5 {
+        transition: filter 0.2s ease, box-shadow 0.2s ease;
+    }
+    .panels__5e434 .avatar__8fca5:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 0 12px hsla(280, 50%, 60%, 0.3);
+    }
+    
+    /* Username styling */
+    .panels__5e434 .nameTag__8fca5 {
+        transition: color 0.15s ease;
+    }
+    .container_f14944:hover .nameTag__8fca5 {
+        color: var(--text-1);
+    }
+    
+    /* Control buttons (mute, deafen, settings) */
+    .panels__5e434 .button_f14944 {
+        border-radius: var(--radius-sm);
+        transition: background-color 0.15s ease, 
+                    color 0.15s ease;
+    }
+    .panels__5e434 .button_f14944:hover {
+        background-color: hsla(280, 30%, 55%, 0.2);
+        color: var(--purple-2);
+    }
+    
+    /* Active/enabled state for mute/deafen */
+    .panels__5e434 .button_f14944.enabled_f14944 {
+        background-color: hsla(280, 40%, 50%, 0.25);
+        color: var(--purple-1);
+    }
+}
+
 /* window-controls.css */
 body {
-    --window-control-size: 14px;
+    --window-control-size: 13px;
 }
 
 @property --custom-window-controls {
@@ -2080,22 +2851,32 @@ body {
         height: var(--window-control-size);
         width: var(--window-control-size);
         border-radius: 50%;
-        transition: transform 0.1s ease, filter 0.1s ease;
+        transition: filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 0.15s ease;
     }
     .winButton_c38106:hover::after {
-        filter: brightness(0.7);
+        filter: brightness(1.15);
     }
     .winButton_c38106:active::after {
-        transform: scale(0.9);
+        filter: brightness(0.8);
     }
     .winButtonClose_c38106::after {
         background-color: var(--dnd) !important;
     }
+    .winButtonClose_c38106:hover::after {
+        box-shadow: 0 0 8px rgba(237, 66, 69, 0.4);
+    }
     .winButtonMinMax_c38106:nth-child(1)::after {
         background-color: var(--idle) !important;
     }
+    .winButtonMinMax_c38106:nth-child(1):hover::after {
+        box-shadow: 0 0 8px rgba(250, 166, 26, 0.4);
+    }
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(2):hover::after {
+        box-shadow: 0 0 8px rgba(59, 165, 93, 0.4);
     }
 }
 

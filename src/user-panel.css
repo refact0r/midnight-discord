@@ -16,3 +16,60 @@
         }
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   USER PANEL ENHANCEMENTS - Polished and modern
+   ═══════════════════════════════════════════════════════════════ */
+.visual-refresh {
+    /* User panel container - subtle gradient */
+    .panels__5e434 {
+        background: linear-gradient(180deg,
+            var(--background-base-lower) 0%,
+            hsla(280, 12%, 10%, 1) 100%) !important;
+    }
+    
+    /* User area - the avatar and name section */
+    .container_f14944 {
+        border-radius: var(--radius-md);
+        margin: 2px 8px;
+        padding: 4px 8px !important;
+        transition: background-color 0.15s ease;
+    }
+    .container_f14944:hover {
+        background-color: hsla(280, 25%, 50%, 0.1);
+    }
+    
+    /* Avatar in user panel - subtle glow on hover */
+    .panels__5e434 .avatar__8fca5 {
+        transition: filter 0.2s ease, box-shadow 0.2s ease;
+    }
+    .panels__5e434 .avatar__8fca5:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 0 12px hsla(280, 50%, 60%, 0.3);
+    }
+    
+    /* Username styling */
+    .panels__5e434 .nameTag__8fca5 {
+        transition: color 0.15s ease;
+    }
+    .container_f14944:hover .nameTag__8fca5 {
+        color: var(--text-1);
+    }
+    
+    /* Control buttons (mute, deafen, settings) */
+    .panels__5e434 .button_f14944 {
+        border-radius: var(--radius-sm);
+        transition: background-color 0.15s ease, 
+                    color 0.15s ease;
+    }
+    .panels__5e434 .button_f14944:hover {
+        background-color: hsla(280, 30%, 55%, 0.2);
+        color: var(--purple-2);
+    }
+    
+    /* Active/enabled state for mute/deafen */
+    .panels__5e434 .button_f14944.enabled_f14944 {
+        background-color: hsla(280, 40%, 50%, 0.25);
+        color: var(--purple-1);
+    }
+}
