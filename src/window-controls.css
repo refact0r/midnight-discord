@@ -30,6 +30,7 @@ body {
         height: var(--window-control-size);
         width: var(--window-control-size);
         border-radius: 50%;
+        transition: transform 0.1s ease, filter 0.1s ease;
     }
     .winButton_c38106:hover::after {
         filter: brightness(0.7);

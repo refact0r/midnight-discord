@@ -469,13 +469,15 @@ body {
 
 @container body style(--animations: on) {
     .visual-refresh {
-        /* list hover animations */
+        /* ═══════════════════════════════════════════════════════════════
+           LIST HOVER ANIMATIONS
+           ═══════════════════════════════════════════════════════════════ */
         .wrapper__2ea32 .link__2ea32 /* channels */,
         .container__91a9d /* members */,
         .channel__972a0 /* dms */,
         .side_aa8da2 .item_aa8da2 /* settings */ {
-            transition: margin-left var(--list-item-transition);
-            will-change: margin-left;
+            transition: margin-left var(--list-item-transition), background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+            will-change: margin-left, transform;
         }
         .wrapper__2ea32:hover .link__2ea32,
         .side_aa8da2 .item_aa8da2:hover {
@@ -491,11 +493,233 @@ body {
             width: 8px;
             height: 8px;
             margin-left: -4px;
-            transition: var(--list-item-transition);
-            will-change: margin-left;
+            transition: var(--list-item-transition), transform 0.2s ease;
+            will-change: margin-left, transform;
         }
         .wrapper__2ea32:hover .unread__2ea32 {
             margin-left: 4px;
+            transform: scale(1.2);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           BUTTON ANIMATIONS - Scale, Glow & Press Effects
+           ═══════════════════════════════════════════════════════════════ */
+        button, 
+        [type="button"],
+        [class*="button_"], 
+        [class*="lookFilled_"], 
+        [class*="lookOutlined_"],
+        .circleIconButton__5bc7e {
+            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+                        background-color 0.2s ease, 
+                        border-color 0.2s ease, 
+                        color 0.2s ease, 
+                        box-shadow 0.2s ease,
+                        filter 0.15s ease;
+        }
+        button:hover, 
+        [type="button"]:hover,
+        [class*="button_"]:hover, 
+        [class*="lookFilled_"]:hover, 
+        [class*="lookOutlined_"]:hover,
+        .circleIconButton__5bc7e:hover {
+            transform: scale(1.05) translateY(-1px);
+            filter: brightness(1.1);
+            box-shadow: 0 4px 15px rgba(180, 130, 220, 0.3);
+        }
+        button:active, 
+        [type="button"]:active,
+        [class*="button_"]:active, 
+        [class*="lookFilled_"]:active, 
+        [class*="lookOutlined_"]:active,
+        .circleIconButton__5bc7e:active {
+            transform: scale(0.95);
+            filter: brightness(0.9);
+            box-shadow: 0 2px 8px rgba(180, 130, 220, 0.2);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           MODAL ANIMATIONS - Elegant Pop-in
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="modal_"], [class*="root_"] {
+            animation: modal-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes modal-pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.85) translateY(30px);
+                filter: blur(4px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           MENU/POPOUT ANIMATIONS - Slide & Fade
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="menu_"], [class*="layer_"], [class*="popout_"] {
+            animation: menu-slide 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            transform-origin: top center;
+        }
+
+        @keyframes menu-slide {
+            0% {
+                opacity: 0;
+                transform: translateY(-15px) scale(0.95);
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           TOOLTIP ANIMATIONS - Smooth Fade
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="tooltip_"] {
+            animation: tooltip-fade 0.2s ease-out forwards;
+        }
+
+        @keyframes tooltip-fade {
+            0% {
+                opacity: 0;
+                transform: scale(0.9) translateY(5px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           INPUT ANIMATIONS - Focus Glow
+           ═══════════════════════════════════════════════════════════════ */
+        input, textarea, [class*="input_"], [class*="textArea_"] {
+            transition: border-color 0.25s ease, 
+                        box-shadow 0.25s ease, 
+                        background-color 0.25s ease,
+                        transform 0.2s ease;
+        }
+        input:focus, textarea:focus, [class*="input_"]:focus, [class*="textArea_"]:focus {
+            box-shadow: 0 0 0 2px rgba(180, 130, 220, 0.3), 0 4px 12px rgba(180, 130, 220, 0.15);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           AVATAR ANIMATIONS - Playful Hover
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="avatar_"] {
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+        }
+        [class*="avatar_"]:hover {
+            transform: scale(1.15) rotate(3deg);
+            box-shadow: 0 4px 20px rgba(180, 130, 220, 0.4);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SERVER ICONS - Bounce on Hover
+           ═══════════════════════════════════════════════════════════════ */
+        .wrapper__6e9f8 {
+            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .wrapper__6e9f8:hover {
+            transform: scale(1.1);
+        }
+        .wrapper__6e9f8:active {
+            transform: scale(0.95);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           MESSAGE ANIMATIONS - Subtle Entrance
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="message_"]:not([class*="mentioned"]) {
+            transition: background-color 0.2s ease, transform 0.15s ease;
+        }
+        [class*="message_"]:hover {
+            transform: translateX(2px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           REACTION ANIMATIONS - Pop Effect
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="reaction_"] {
+            transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                        background-color 0.2s ease,
+                        border-color 0.2s ease;
+        }
+        [class*="reaction_"]:hover {
+            transform: scale(1.15);
+        }
+        [class*="reaction_"]:active {
+            transform: scale(0.9);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SCROLLBAR ANIMATIONS
+           ═══════════════════════════════════════════════════════════════ */
+        ::-webkit-scrollbar-thumb {
+            transition: background-color 0.2s ease;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--purple-3) !important;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           EMBED ANIMATIONS - Card Hover
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="embed_"], [class*="card_"] {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        [class*="embed_"]:hover, [class*="card_"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           ICON ANIMATIONS - Smooth Color Transitions
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="icon_"], svg {
+            transition: color 0.2s ease, fill 0.2s ease, transform 0.2s ease;
+        }
+        [class*="icon_"]:hover, [class*="actionIcon_"]:hover {
+            transform: scale(1.1);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           LOADING SPINNER - Lilac Glow
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="spinner_"] {
+            animation: spinner-glow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes spinner-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(180, 130, 220, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 15px rgba(180, 130, 220, 0.8));
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           TYPING INDICATOR - Pulse Animation
+           ═══════════════════════════════════════════════════════════════ */
+        [class*="typing_"] {
+            animation: typing-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes typing-pulse {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
         }
     }
 }
@@ -639,31 +863,31 @@ body {
 :root {
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: hsl(220, 45%, 95%); /* other normally white text */
-    --text-2: hsl(220, 25%, 70%); /* headings and important text */
-    --text-3: hsl(220, 20%, 60%); /* normal text */
-    --text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
-    --text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+    --text-1: hsl(280, 30%, 95%); /* other normally white text */
+    --text-2: hsl(280, 20%, 75%); /* headings and important text */
+    --text-3: hsl(280, 15%, 65%); /* normal text */
+    --text-4: hsl(280, 10%, 45%); /* icon buttons and channels */
+    --text-5: hsl(280, 10%, 30%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
-    --bg-2: hsl(220, 15%, 16%); /* dark buttons */
-    --bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
-    --bg-4: hsl(220, 15%, 10%); /* main background color */
-    --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: hsl(260, 5%, 22%); /* dark buttons when clicked */
+    --bg-2: hsl(260, 5%, 17%); /* dark buttons */
+    --bg-3: hsl(260, 5%, 13%); /* spacing, secondary elements */
+    --bg-4: hsl(260, 5%, 9%); /* main background color */
+    --hover: hsla(280, 20%, 50%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(280, 20%, 50%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(280, 20%, 50%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(260, 10%, 0%, 0.15); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: var(--blue-1); /* links and other accent text */
-    --accent-2: var(--blue-2); /* small accent elements */
-    --accent-3: var(--blue-3); /* accent buttons */
-    --accent-4: var(--blue-4); /* accent buttons when hovered */
-    --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-new: var(--purple-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
@@ -675,9 +899,9 @@ body {
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
-    --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
-    --border: hsl(230, 20%, 40%, 0.2); /* normal border color */
-    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: hsla(280, 15%, 50%, 0.1); /* light border color */
+    --border: hsla(280, 15%, 50%, 0.2); /* normal border color */
+    --button-border: hsla(280, 20%, 80%, 0.15); /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(76% 0.12 0);
@@ -692,11 +916,11 @@ body {
     --green-4: oklch(58% 0.11 170);
     --green-5: oklch(52% 0.11 160);
 
-    --blue-1: oklch(76% 0.1 215);
-    --blue-2: oklch(70% 0.1 215);
-    --blue-3: oklch(64% 0.1 215);
-    --blue-4: oklch(58% 0.1 215);
-    --blue-5: oklch(52% 0.1 215);
+    --blue-1: oklch(76% 0.12 300);
+    --blue-2: oklch(70% 0.12 300);
+    --blue-3: oklch(64% 0.12 300);
+    --blue-4: oklch(58% 0.12 300);
+    --blue-5: oklch(52% 0.12 300);
 
     --yellow-1: oklch(80% 0.11 90);
     --yellow-2: oklch(74% 0.11 90);
@@ -704,11 +928,11 @@ body {
     --yellow-4: oklch(62% 0.11 90);
     --yellow-5: oklch(56% 0.11 90);
 
-    --purple-1: oklch(76% 0.11 310);
-    --purple-2: oklch(70% 0.11 310);
-    --purple-3: oklch(64% 0.11 310);
-    --purple-4: oklch(58% 0.11 310);
-    --purple-5: oklch(52% 0.11 310);
+    --purple-1: oklch(78% 0.14 300);
+    --purple-2: oklch(72% 0.14 300);
+    --purple-3: oklch(65% 0.14 300);
+    --purple-4: oklch(58% 0.14 300);
+    --purple-5: oklch(50% 0.14 300);
 }
 
 @container root style(--colors: on) {
@@ -862,9 +1086,9 @@ body {
 
         --info-danger-background: red;
         --info-danger-text: red;
-        --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
-        --info-help-foreground: var(--blue-1);
-        --info-help-text: var(--blue-1);
+        --info-help-background: color-mix(in hsl, var(--purple-2), transparent 80%);
+        --info-help-foreground: var(--purple-1);
+        --info-help-text: var(--purple-1);
         --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
         --info-positive-text: var(--green-1);
         --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
@@ -909,7 +1133,7 @@ body {
         --status-warning-text: var(--black);
 
         --background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
-        --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
+        --background-feedback-info: color-mix(in hsl, var(--purple-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
         --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
 
@@ -1440,7 +1664,7 @@ body {
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(70deg, var(--purple-3), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 }
 
 @property --custom-dms-icon {
@@ -1856,6 +2080,7 @@ body {
         height: var(--window-control-size);
         width: var(--window-control-size);
         border-radius: 50%;
+        transition: transform 0.1s ease, filter 0.1s ease;
     }
     .winButton_c38106:hover::after {
         filter: brightness(0.7);
