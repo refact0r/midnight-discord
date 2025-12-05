@@ -1308,7 +1308,7 @@ body {
             background-color: var(--accent-new);
         }
 
-        .newMessagesBar__0f481, /* unread bar */ {
+        .newMessagesBar__0f481 /* unread bar */ {
             background-color: var(--accent-3);
         }
         .barButtonAlt__0f481 /* unread bar mark as read button */ {
