@@ -791,6 +791,26 @@
         .memberRowContainer__71c22.memberSelected__71c22 td {
             background: var(--bg-3);
         }
+
+        /* fix active channel text color */
+        .modeSelected__2ea32 .name__2ea32 {
+            color: var(--interactive-active) !important;
+        }
+
+        /* fix dms list channel text color */
+        .interactive_bf202d {
+            color: var(--interactive-normal) !important;
+        }
+
+        /* fix small -# things text color */
+        .markup__75297 small:not(.inlineFormat__75297) {
+            color: var(--text-secondary) !important;
+        }
+
+        /* fix user panel title (name) color */
+        .title_b6c092 {
+            color: var(--text-2) !important;
+        }
     }
 
     ::selection,
