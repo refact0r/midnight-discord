@@ -9,52 +9,52 @@ body {
 }
 
 @container body style(--custom-window-controls: on) {
-    .winButtons_c38106 {
+    .c38106a3f0c3ca76-winButtons {
         gap: 0;
         padding-right: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
     }
-    .winButtons_c38106::before {
+    .c38106a3f0c3ca76-winButtons::before {
         margin-right: calc(var(--custom-app-top-bar-height) / 4);
     }
-    .winButton_c38106 > svg {
+    .c38106a3f0c3ca76-winButton > svg {
         display: none;
     }
-    .winButton_c38106 {
+    .c38106a3f0c3ca76-winButton {
         background: none !important;
         width: calc(var(--window-control-size) * 2);
         height: var(--custom-app-top-bar-height);
     }
-    .winButton_c38106::after {
+    .c38106a3f0c3ca76-winButton::after {
         display: block;
         content: '';
         height: var(--window-control-size);
         width: var(--window-control-size);
         border-radius: 50%;
     }
-    .winButton_c38106:hover::after {
+    .c38106a3f0c3ca76-winButton:hover::after {
         filter: brightness(0.7);
     }
-    .winButton_c38106:active::after {
+    .c38106a3f0c3ca76-winButton:active::after {
         transform: scale(0.9);
     }
-    .winButtonClose_c38106::after {
+    .c38106a3f0c3ca76-winButtonClose::after {
         background-color: var(--dnd) !important;
     }
-    .winButtonMinMax_c38106:nth-child(1)::after {
+    .c38106a3f0c3ca76-winButtonMinMax:nth-child(1)::after {
         background-color: var(--idle) !important;
     }
-    .winButtonMinMax_c38106:nth-child(2)::after {
+    .c38106a3f0c3ca76-winButtonMinMax:nth-child(2)::after {
         background-color: var(--online) !important;
     }
 }
 
 @container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
     .visual-refresh {
-        .winButton_c38106 {
+        .c38106a3f0c3ca76-winButton {
             width: calc(var(--window-control-size) * 2);
             height: calc(var(--window-control-size) * 2);
         }
-        .winButtons_c38106 {
+        .c38106a3f0c3ca76-winButtons {
             gap: 0;
         }
     }
