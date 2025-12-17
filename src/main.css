@@ -26,6 +26,8 @@ body {
 
 .visual-refresh {
     /* panel separation */
+    ._8946359d8adb1488-container > ._8946359d8adb1488-toolbar /* server boosts titlebar */,
+    ._8946359d8adb1488-container > ._8946359d8adb1488-contentContainer /* server boosts tab */,
     ._5e434347c823b592-guilds /* server list */, 
     ._5e434347c823b592-sidebarList /* channel list (includes dm list) */,
     ._5e434347c823b592-panels /* user panel */,
@@ -314,6 +316,7 @@ body {
     .cdf8a9a2bbd98bd3-wrapper > .fc817765600a960a-wrapper {
         background: none;
     }
+    ._5e434347c823b592-page > ._8946359d8adb1488-container /* server boosts page */,
     ._5e434347c823b592-page > .f75fb00fb7356cbe-chat /* friend page, server members page */ {
         background: none !important;
     }
