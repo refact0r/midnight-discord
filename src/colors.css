@@ -98,10 +98,10 @@
         --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
         --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
-        --background-mod-muted: var(--bg-3);
+        --background-mod-muted: var(--hover);
         --background-mod-normal: var(--bg-2);
         --background-mod-strong: var(--bg-1);
-        --background-mod-subtle: var(--bg-3);
+        --background-mod-subtle: var(--hover);
         --background-scrim: hsl(0, 0%, 0%, 0.7);
         --background-scrim-lightbox: hsl(0, 0%, 0%, 0.9);
         --background-secondary-alt: var(--bg-3);
