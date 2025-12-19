@@ -344,7 +344,7 @@
         --expressive-gradient-tenure-badge-silver-end: blue;
         --expressive-gradient-tenure-badge-silver-start: magenta; */
         --gradient-progress-pill-background: var(--text-5);
-        --home-background: yellow;
+        --home-background: var(--bg-4);
         --icon-default: lime;
         --icon-feedback-critical: var(--red-1);
         --icon-feedback-info: var(--blue-1);
