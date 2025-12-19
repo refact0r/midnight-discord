@@ -943,7 +943,7 @@ body {
         --embed-background: magenta;
         --embed-background-alternate: red;
         --experimental-avatar-embed-bg: yellow;
-        --expressive-gradient-blue-end: lime;
+        /* --expressive-gradient-blue-end: lime;
         --expressive-gradient-blue-start: blue;
         --expressive-gradient-green-end: magenta;
         --expressive-gradient-green-start: red;
@@ -970,7 +970,7 @@ body {
         --expressive-gradient-tenure-badge-ruby-end: yellow;
         --expressive-gradient-tenure-badge-ruby-start: lime;
         --expressive-gradient-tenure-badge-silver-end: blue;
-        --expressive-gradient-tenure-badge-silver-start: magenta;
+        --expressive-gradient-tenure-badge-silver-start: magenta; */
         --gradient-progress-pill-background: var(--text-5);
         --home-background: yellow;
         --icon-default: lime;
