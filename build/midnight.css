@@ -821,9 +821,9 @@ body {
         --chip-yellow-light-text: magenta;
         --chip-yellow-medium-background: red;
         --chip-yellow-medium-text: yellow;
-        --content-inventory-media-seekbar-container: lime;
-        --content-inventory-overlay-text-primary: blue;
-        --content-inventory-overlay-text-secondary: magenta;
+        --content-inventory-media-seekbar-container: var(--bg-1);
+        --content-inventory-overlay-text-primary: var(--text-2);
+        --content-inventory-overlay-text-secondary: var(--text-3);
         --context-menu-backdrop-background: red;
         --control-brand-foreground: yellow;
         --control-brand-foreground-new: lime;
