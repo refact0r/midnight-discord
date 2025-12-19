@@ -161,7 +161,7 @@ body {
 }
 .f75fb00fb7356cbe-title /* chat titlebar inner */ {
     border: none;
-    background: none;
+    background: none !important;
     margin-bottom: 0;
 }
 
