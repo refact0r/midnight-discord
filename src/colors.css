@@ -83,7 +83,7 @@
     body,
     .theme-dark:not(.custom-user-profile-theme),
     .theme-light:not(.custom-user-profile-theme) {
-        --app-frame-background: red;
+        --app-frame-background: var(--bg-3);
         --app-frame-border: var(--border);
         --app-message-embed-secondary-text: yellow;
         --background-accent: var(--bg-2);
@@ -706,7 +706,8 @@
         ._2cdb89539fd956c8-participantName /* stream preview participant name */ {
         color: var(--text-1) !important;
     }
-    .cf09d85aafe7e124-playPausePopIcon > path /* video play/pause popup */ {
+    .cf09d85aafe7e124-playPausePopIcon > path /* video play/pause popup */,
+    ._979b184ce6e2670e-normalIconColor /* shop favorite button icon */ {
         fill: var(--text-1);
     }
     .e4cb9af80253a521-headerTitle:hover /* stream preview header title hover underline */ {
