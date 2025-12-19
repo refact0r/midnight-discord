@@ -757,18 +757,18 @@ body {
         --channel-icon: var(--text-4);
         --channel-text-area-placeholder: var(--text-5);
         --channels-default: var(--text-4);
-        --channeltextarea-background: red;
+        --channeltextarea-background: var(--border);
         --chat-background: yellow;
         --chat-background-default: var(--bg-3);
         --chat-border: lime;
         --chat-text-muted: var(--text-5);
         --checkbox-background-active: blue;
-        --checkbox-background-default: magenta;
+        --checkbox-background-default: var(--bg-2);
         --checkbox-background-hover: red;
-        --checkbox-background-selected-default: yellow;
+        --checkbox-background-selected-default: var(--accent-2);
         --checkbox-background-selected-hover: lime;
         --checkbox-border-active: blue;
-        --checkbox-border-default: var(--text-4);
+        --checkbox-border-default: var(--border);
         --checkbox-border-hover: red;
         --checkbox-border-selected-default: yellow;
         --checkbox-border-selected-hover: lime;
@@ -845,12 +845,12 @@ body {
         --control-critical-primary-border-active: var(--button-border);
         --control-critical-primary-border-default: var(--button-border);
         --control-critical-primary-border-hover: var(--button-border);
-        --control-critical-primary-icon-active: var(--white);
-        --control-critical-primary-icon-default: var(--white);
-        --control-critical-primary-icon-hover: var(--white);
-        --control-critical-primary-text-active: var(--white);
-        --control-critical-primary-text-default: var(--white);
-        --control-critical-primary-text-hover: var(--white);
+        --control-critical-primary-icon-active: var(--text-0);
+        --control-critical-primary-icon-default: var(--text-0);
+        --control-critical-primary-icon-hover: var(--text-0);
+        --control-critical-primary-text-active: var(--text-0);
+        --control-critical-primary-text-default: var(--text-0);
+        --control-critical-primary-text-hover: var(--text-0);
         --control-critical-secondary-background-active: var(--text-5);
         --control-critical-secondary-background-default: var(--bg-2);
         --control-critical-secondary-background-hover: var(--bg-1);
@@ -863,18 +863,18 @@ body {
         --control-critical-secondary-text-active: var(--red-2);
         --control-critical-secondary-text-default: var(--red-2);
         --control-critical-secondary-text-hover: var(--red-2);
-        --control-expressive-background-active: red;
-        --control-expressive-background-default: yellow;
-        --control-expressive-background-hover: lime;
-        --control-expressive-border-active: blue;
-        --control-expressive-border-default: magenta;
-        --control-expressive-border-hover: red;
-        --control-expressive-icon-active: yellow;
-        --control-expressive-icon-default: lime;
-        --control-expressive-icon-hover: blue;
-        --control-expressive-text-active: magenta;
-        --control-expressive-text-default: red;
-        --control-expressive-text-hover: yellow;
+        --control-expressive-background-active: var(--text-3);
+        --control-expressive-background-default: var(--text-1);
+        --control-expressive-background-hover: var(--text-2);
+        --control-expressive-border-active: var(--button-border);
+        --control-expressive-border-default: var(--button-border);
+        --control-expressive-border-hover: var(--button-border);
+        --control-expressive-icon-active: var(--bg-4);
+        --control-expressive-icon-default: var(--bg-4);
+        --control-expressive-icon-hover: var(--bg-4);
+        --control-expressive-text-active: var(--bg-4);
+        --control-expressive-text-default: var(--bg-4);
+        --control-expressive-text-hover: var(--bg-4);
         --control-icon-only-background-active: var(--active);
         --control-icon-only-background-hover: var(--hover);
         --control-icon-only-border-active: var(--border-light);
@@ -1185,6 +1185,7 @@ body {
 
     .custom-user-profile-theme {
         --white: var(--text-1);
+        --white-500: var(--text-1);
     }
 
     ::placeholder {
