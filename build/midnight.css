@@ -1035,7 +1035,7 @@ body {
         --notice-background-warning: yellow;
         --notice-text-critical: lime;
         --notice-text-info: blue;
-        --notice-text-positive: magenta;
+        --notice-text-positive: var(--green-new-14);
         --notice-text-warning: red;
         --overlay-backdrop-lightbox: yellow;
         --panel-bg: lime;
