@@ -1487,6 +1487,10 @@ body {
         background: var(--background-message-highlight);
     }
 
+    ._8a031a135bfcb9ba-container /* modal background */ {
+        background-color: var(--bg-4);
+    }
+
     /* status indicators */
     rect[fill='#82838b'] {
         fill: var(--offline);
