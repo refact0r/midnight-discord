@@ -1367,7 +1367,8 @@ body {
         }
 
         ._3b95d7d910416e54-unread /* new unreads bar (channel list */,
-        .caf372efc4d47562-item /* settings items */ {
+        .caf372efc4d47562-item /* settings items */,
+        ._972a0d22c8afa7f0-interactive /* dms list items */ {
             color: var(--text-4);
         }
 
@@ -1404,7 +1405,8 @@ body {
 
         ._9293f6b2fc12398a-iconBadge /* icon badge */,
         ._7aaec78b97ff00f7-mentionsBar /* new mention pill */,
-        ._3b95d7d910416e54-mention /* server list new mention pill */ {
+        ._3b95d7d910416e54-mention /* server list new mention pill */,
+        .c99c29809d200a61-badge /* inbox badge */ {
             background-color: var(--accent-new);
         }
 
