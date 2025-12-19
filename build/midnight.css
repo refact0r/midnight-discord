@@ -43,6 +43,8 @@ body {
 ._133bf5eea8e33a34-peopleColumn /* online friends */,
 ._133bf5eea8e33a34-nowPlayingColumn /* active now */,
 .ca1a02dcad190ff8-mainPageScroller /* nitro page */,
+._1a9cebfbd0c9d0f6-headerBar /* quests page titlebar */,
+._23746ba3de9452d8-scroller /* quests page */,
 .f391e3680aff100a-container > .f75fb00fb7356cbe-content /* message requests */,
 ._6db1d32c47b6ad72-shop /* shop */,
 .f75fb00fb7356cbe-content > aside > .c0bea05627c5dc35-outer /* dm user panel */,
@@ -236,6 +238,10 @@ body {
 }
 ._084152b107f71237-shop /* shop inner scroller */ {
     margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
+}
+
+._955a392354a35c6e-container /* quests outer */ {
+    border: none;
 }
 
 .f75fb00fb7356cbe-content > aside > .c0bea05627c5dc35-outer /* dm user panel */ {
@@ -435,6 +441,10 @@ body {
 }
 ._24502a4069848acb-root {
     background: none;
+}
+._4bbc6dc06e75ad52-container /* nameplate */ {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    width: 100%;
 }
 
 /* remove unnecessary backgrounds */
@@ -1367,7 +1377,7 @@ body {
     .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark /* vc icon button nub */,
     ._650eb104245d257b-iconBadge._2b1f52e43a8f1c02-base /* server vc badge */,
     #app-mount ._488b1a4248d1b790-akaBadge /* aka badge */,
-    ._9a9f981d3524e20f-message /* you have unsaved settings message */,
+    #app-mount ._9a9f981d3524e20f-message /* you have unsaved settings message */,
     ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
     .tooltipBlack__382e7 /* server boost tooltip */,
     .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */,
