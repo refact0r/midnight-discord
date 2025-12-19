@@ -1031,7 +1031,7 @@ body {
         --navigator-header-tint: lime;
         --notice-background-critical: blue;
         --notice-background-info: magenta;
-        --notice-background-positive: red;
+        --notice-background-positive: var(--green-new-87);
         --notice-background-warning: yellow;
         --notice-text-critical: lime;
         --notice-text-info: blue;
