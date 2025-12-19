@@ -985,10 +985,10 @@ body {
         --icon-invert: magenta;
         --icon-link: red;
         --icon-muted: var(--text-5);
-        --icon-status-dnd: yellow;
-        --icon-status-idle: lime;
-        --icon-status-offline: blue;
-        --icon-status-online: magenta;
+        --icon-status-dnd: var(--dnd);
+        --icon-status-idle: var(--idle);
+        --icon-status-offline: var(--offline);
+        --icon-status-online: var(--online);
         --icon-strong: var(--text-3);
         --icon-subtle: var(--text-4);
         --icon-transparent: lime;
@@ -1074,8 +1074,8 @@ body {
         --redesign-button-destructive-background: magenta;
         --redesign-button-destructive-pressed-background: red;
         --redesign-button-destructive-text: yellow;
-        --redesign-button-overlay-alpha-background: lime;
-        --redesign-button-overlay-alpha-pressed-background: blue;
+        --redesign-button-overlay-alpha-background: hsl(0, 0%, 0%, 0.5);
+        --redesign-button-overlay-alpha-pressed-background: hsl(0, 0%, 0%, 0.7);
         --redesign-button-overlay-alpha-text: magenta;
         --redesign-button-positive-background: red;
         --redesign-button-premium-primary-pink-for-gradient: yellow;
@@ -1089,12 +1089,12 @@ body {
         --redesign-button-primary-overlay-text: magenta;
         --redesign-button-primary-pressed-background: red;
         --redesign-button-primary-text: yellow;
-        --redesign-button-secondary-background: lime;
+        --redesign-button-secondary-background: var(--bg-2);
         --redesign-button-secondary-border: blue;
         --redesign-button-secondary-overlay-background: magenta;
         --redesign-button-secondary-overlay-pressed-background: red;
         --redesign-button-secondary-overlay-text: yellow;
-        --redesign-button-secondary-pressed-background: lime;
+        --redesign-button-secondary-pressed-background: var(--bg-1);
         --redesign-button-secondary-pressed-border: blue;
         --redesign-button-secondary-text: var(--text-3);
         --redesign-button-selected-background: magenta;
@@ -1169,7 +1169,7 @@ body {
         --thread-channel-spine: blue;
         --user-profile-activity-toolbar-background: magenta;
         --user-profile-background-hover: red;
-        --user-profile-border: yellow;
+        --user-profile-border: var(--border);
         --user-profile-note-background-focus: lime;
         --user-profile-overlay-background: var(--bg-4);
         --user-profile-overlay-background-hover: var(--bg-2);
@@ -1311,7 +1311,8 @@ body {
         .e4cb9af80253a521-pictureInPictureVideo .f1ceaca61b18918e-controlIcon /* stream preview control icon */,
         .f37cb1984c371ee5-bannerVisible .f37cb1984c371ee5-name /* server name over banner image */,
         .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
-        ._0f481cbbd7530492-mediaMosaicAltText /* image alt text label */ {
+        ._0f481cbbd7530492-mediaMosaicAltText /* image alt text label */,
+        .fb7f9476ada049c8-bannerButton /* profile banner corner buttons */ {
             color: var(--text-1);
         }
         .e4cb9af80253a521-headerText.base_eb1a4c /* stream preview header text */,
