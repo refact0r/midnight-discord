@@ -1169,8 +1169,8 @@ body {
         --user-profile-note-background-focus: lime;
         --user-profile-overlay-background: var(--bg-4);
         --user-profile-overlay-background-hover: var(--bg-2);
-        --user-profile-toolbar-background: blue;
-        --user-profile-toolbar-border: magenta;
+        --user-profile-toolbar-background: var(--bg-3);
+        --user-profile-toolbar-border: var(--border);
 
         --white: var(--text-0);
         --white-500: var(--text-0);
