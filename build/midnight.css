@@ -1781,6 +1781,11 @@ body {
     }
     .f75fb00fb7356cbe-title._9293f6b2fc12398a-container {
         min-height: 0;
+        height: auto;
+    }
+    .f75fb00fb7356cbe-followButton {
+        padding-top: 0;
+        padding-bottom: 0;
     }
     ._5e434347c823b592-base:has(._6e2b9359c6f84cfd-notice) > .c38106a3f0c3ca76-bar > .c38106a3f0c3ca76-trailing {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
