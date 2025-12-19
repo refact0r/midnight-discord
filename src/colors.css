@@ -83,229 +83,469 @@
     .visual-refresh body,
     .visual-refresh .theme-dark:not(.custom-user-profile-theme),
     .visual-refresh .theme-light:not(.custom-user-profile-theme) {
-        --activity-card-background: var(--bg-3);
-        --alert-bg: red;
-        --autocomplete-bg: var(--bg-3);
-
+        --app-frame-background: red;
+        --app-frame-border: var(--border);
+        --app-message-embed-secondary-text: yellow;
         --background-accent: var(--bg-2);
-        --background-floating: var(--bg-3);
-        --background-nested-floating: var(--bg-4);
-        --background-mentioned: var(--mention);
-        --background-mentioned-hover: var(--mention-hover);
-        --background-message-automod: red;
-        --background-message-automod-hover: red;
-        --background-message-highlight: var(--reply);
-        --background-message-highlight-hover: var(--reply-hover);
-        --background-message-hover: var(--message-hover);
-
-        --background-primary: var(--bg-4);
-        --background-secondary: var(--bg-3);
-        --background-secondary-alt: var(--bg-3);
-        --background-tertiary: var(--bg-4);
-
-        --bg-base-primary: var(--bg-4); /* screenshare window? */
-        --bg-base-secondary: var(--bg-4);
-        --bg-base-tertiary: var(--bg-3);
-        --background-mod-subtle: var(--hover);
-        --background-mod-normal: var(--active);
-        --background-mod-strong: var(--active-2);
         --background-base-low: var(--bg-4);
         --background-base-lower: var(--bg-4);
         --background-base-lowest: var(--bg-4);
-        --background-surface-high: var(--bg-3);
-        --background-surface-higher: var(--bg-3);
-        --background-surface-highest: var(--bg-3);
-        --bg-surface-overlay: var(--bg-4);
-        --bg-surface-raised: var(--bg-3);
-        --chat-background-default: var(--bg-3);
-        --chat-text-muted: var(--text-5);
-        --input-background: var(--bg-3);
-        --modal-background: var(--bg-4);
-        --modal-footer-background: var(--bg-4);
-
-        --background-modifier-accent: var(--hover);
-        --background-modifier-active: var(--active);
-        --background-modifier-hover: var(--hover);
-        --background-modifier-selected: var(--active);
-
-        --bg-mod-faint: var(--hover);
-        --bg-mod-subtle: var(--bg-2);
-        --bg-mod-strong: var(--bg-2);
-        --bg-brand: var(--accent-2);
-
-        --border-faint: var(--border-light);
-        --border-subtle: var(--border);
-        --border-normal: var(--border);
-        --border-strong: var(--border);
-        --input-border: var(--border);
-
-        --button-danger-background: var(--red-3);
-        --button-danger-background-active: var(--red-5);
-        --button-danger-background-hover: var(--red-4);
-        --button-danger-background-disabled: var(--red-5);
-        --button-danger-border: var(--button-border);
-
-        --button-filled-brand-text: var(--text-0);
-        --button-filled-brand-background: var(--accent-3);
-        --button-filled-brand-background-active: var(--accent-5);
-        --button-filled-brand-background-hover: var(--accent-4);
-        --button-filled-brand-border: var(--button-border);
-
-        --button-filled-brand-inverted-background: var(--text-1);
-        --button-filled-brand-inverted-background-active: var(--text-3);
-        --button-filled-brand-inverted-background-hover: var(--text-2);
-        --button-filled-brand-inverted-text: var(--bg-4);
-        --button-filled-white-background: var(--text-1);
-        --button-filled-white-background-active: var(--text-3);
-        --button-filled-white-background-hover: var(--text-2);
-        --button-filled-white-text: var(--bg-4);
-
-        --button-outline-danger-background: var(--bg-2);
-        --button-outline-danger-background-active: var(--text-5);
-        --button-outline-danger-background-hover: var(--bg-1);
-        --button-outline-danger-border: var(--border-light);
-        --button-outline-danger-border-active: var(--border-light);
-        --button-outline-danger-border-hover: var(--border-light);
-        --button-outline-danger-text: var(--red-1);
-        --button-outline-danger-text-active: var(--red-1);
-        --button-outline-danger-text-hover: var(--red-1);
-
-        --button-outline-primary-background: red;
-        --button-outline-primary-background-active: var(--active);
-        --button-outline-primary-background-hover: var(--hover);
-        --button-outline-primary-border: var(--text-5);
-        --button-outline-primary-border-active: var(--text-5);
-        --button-outline-primary-border-hover: var(--text-5);
-        --button-outline-primary-text: var(--text-3);
-        --button-outline-primary-text-active: var(--text-3);
-        --button-outline-primary-text-hover: var(--text-3);
-
-        --button-outline-positive-background: red;
-        --button-outline-positive-background-active: var(--green-4);
-        --button-outline-positive-background-hover: var(--green-3);
-        --button-outline-positive-border: var(--green-2);
-        --button-outline-positive-border-active: var(--green-4);
-        --button-outline-positive-border-hover: var(--green-3);
-        --button-outline-positive-text: var(--text-3);
-        --button-outline-positive-text-active: var(--text-0);
-        --button-outline-positive-text-hover: var(--text-0);
-
-        --button-positive-background: var(--green-2);
-        --button-positive-background-active: var(--green-4);
-        --button-positive-background-hover: var(--green-3);
-        --button-positive-background-disabled: var(--green-4);
-        --button-positive-border: var(--button-border);
-
-        --button-secondary-background: var(--bg-2);
-        --button-secondary-background-active: var(--text-5);
-        --button-secondary-background-hover: var(--bg-1);
-        --button-secondary-background-disabled: var(--bg-3);
-        --button-secondary-text: var(--text-3);
-
-        --button-transparent-background: var(--hover);
-        --button-transparent-background-active: var(--active-2);
-        --button-transparent-background-hover: var(--active);
-        --button-transparent-text: var(--text-3);
-
-        --redesign-button-secondary-text: var(--text-3);
-
-        --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
-        --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
-
-        --card-primary-bg: var(--bg-3);
-        --card-secondary-bg: var(--bg-2);
-        --channel-icon: var(--text-4);
-        --channels-default: var(--text-4);
-
-        --embed-title: var(--text-2);
-
-        --header-primary: var(--text-2);
-        --header-secondary: var(--text-4);
-        --header-muted: var(--text-4);
-
-        --icon-muted: var(--text-5);
-        --icon-primary: var(--text-3);
-        --icon-secondary: var(--text-4);
-        --icon-tertiary: var(--text-4);
-
-        --info-danger-background: red;
-        --info-danger-text: red;
-        --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
-        --info-help-foreground: var(--blue-1);
-        --info-help-text: var(--blue-1);
-        --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
-        --info-positive-text: var(--green-1);
-        --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
-        --info-warning-text: var(--yellow-1);
-
-        --text-brand: var(--accent-1);
-        --text-danger: var(--red-1);
-        --text-link: var(--accent-1);
-        --text-link-low-saturation: red;
-        --text-low-contrast: var(--text-4);
-        --text-message-preview-low-sat: red;
-        --text-muted: var(--text-5);
-        --text-muted-on-default: var(--text-4);
-        --text-normal: var(--text-3);
-        --text-positive: var(--green-1);
-        --text-primary: var(--text-3);
-        --text-secondary: var(--text-4);
-        --text-warning: var(--yellow-1);
-        --text-default: var(--text-3);
-        --text-feedback-critical: var(--red-1);
-        --text-feedback-positive: var(--green-1);
-        --text-feedback-info: red;
-        --text-feedback-warning: var(--yellow-1);
-        --text-tertiary: var(--text-4);
-
-        --user-profile-overlay-background: var(--bg-4);
-        --user-profile-overlay-background-hover: var(--bg-2);
-
-        --status-danger: var(--red-2);
-        --status-danger-background: var(--red-3);
-        --status-danger-text: var(--white);
-        --status-dnd: var(--dnd); /* server profiles */
-        --status-idle: var(--idle);
-        --status-offline: var(--offline);
-        --status-online: var(--online);
-        --status-positive: var(--green-2);
-        --status-positive-background: var(--green-2);
-        --status-positive-text: var(--white);
-        --status-speaking: var(--green-2);
-        --status-warning: var(--yellow-2);
-        --status-warning-background: red;
-        --status-warning-text: var(--black);
-
+        --background-brand: var(--accent-2);
+        --background-code: var(--bg-3);
+        --background-code-addition: lime;
+        --background-code-deletion: blue;
         --background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
         --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
         --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
-
-        --interactive-normal: var(--text-4);
-        --interactive-hover: var(--text-3);
-        --interactive-active: var(--text-3);
-        --interactive-muted: var(--text-5);
-
-        --mention-foreground: var(--accent-1);
-        --mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
-
+        --background-mod-muted: var(--bg-3);
+        --background-mod-normal: var(--bg-2);
+        --background-mod-strong: var(--bg-1);
+        --background-mod-subtle: var(--bg-3);
+        --background-scrim: hsl(0, 0%, 0%, 0.7);
+        --background-scrim-lightbox: hsl(0, 0%, 0%, 0.9);
+        --background-secondary-alt: var(--bg-3);
+        --background-surface-high: var(--bg-3);
+        --background-surface-higher: var(--bg-3);
+        --background-surface-highest: var(--bg-3);
+        --background-tile-gradient-pink-end: yellow;
+        --background-tile-gradient-pink-start: lime;
+        --badge-background-default: blue;
+        --badge-expressive-background-default: magenta;
+        --badge-expressive-text-default: red;
+        --badge-text-default: yellow;
+        --bg-surface-overlay-tmp: lime;
+        --bg-surface-raised: blue;
+        --border-feedback-critical: magenta;
+        --border-focus: red;
+        --border-muted: var(--border-light);
+        --border-normal: var(--border);
+        --border-strong: var(--border);
+        --border-subtle: var(--border);
+        --button-danger-background-disabled: lime;
+        --button-outline-brand-background-hover: blue;
+        --button-outline-brand-border-active: magenta;
+        --button-outline-primary-text: red;
+        --card-background-default: var(--bg-3);
+        --card-primary-pressed-bg: lime;
+        --card-secondary-bg: blue;
+        --card-secondary-pressed-bg: magenta;
+        --channel-icon: var(--text-4);
         --channel-text-area-placeholder: var(--text-5);
-
-        --message-reacted-text: var(--text-2);
-        --message-reacted-background: color-mix(in hsl, var(--accent-2), transparent 80%);
-
-        --custom-channel-members-bg: var(--bg-4);
-
-        --redesign-input-control-selected: var(--accent-2);
-
+        --channels-default: var(--text-4);
+        --channeltextarea-background: red;
+        --chat-background: yellow;
+        --chat-background-default: var(--bg-3);
+        --chat-border: lime;
+        --chat-text-muted: var(--text-5);
+        --checkbox-background-active: blue;
+        --checkbox-background-default: magenta;
+        --checkbox-background-hover: red;
+        --checkbox-background-selected-default: yellow;
+        --checkbox-background-selected-hover: lime;
+        --checkbox-border-active: blue;
+        --checkbox-border-default: var(--text-4);
+        --checkbox-border-hover: red;
+        --checkbox-border-selected-default: yellow;
+        --checkbox-border-selected-hover: lime;
+        --checkbox-icon-active: blue;
+        --chip-blurple-dark-background: magenta;
+        --chip-blurple-dark-text: red;
+        --chip-blurple-light-background: yellow;
+        --chip-blurple-light-text: lime;
+        --chip-blurple-medium-background: blue;
+        --chip-blurple-medium-text: magenta;
+        --chip-gray-dark-background: red;
+        --chip-gray-dark-text: yellow;
+        --chip-gray-light-background: lime;
+        --chip-gray-light-text: blue;
+        --chip-gray-medium-background: magenta;
+        --chip-gray-medium-text: red;
+        --chip-green-dark-background: yellow;
+        --chip-green-dark-text: lime;
+        --chip-green-light-background: blue;
+        --chip-green-light-text: magenta;
+        --chip-green-medium-background: red;
+        --chip-green-medium-text: yellow;
+        --chip-orange-dark-background: lime;
+        --chip-orange-dark-text: blue;
+        --chip-orange-light-background: magenta;
+        --chip-orange-light-text: red;
+        --chip-orange-medium-background: yellow;
+        --chip-orange-medium-text: lime;
+        --chip-pink-dark-background: blue;
+        --chip-pink-dark-text: magenta;
+        --chip-pink-light-background: red;
+        --chip-pink-light-text: yellow;
+        --chip-pink-medium-background: lime;
+        --chip-pink-medium-text: blue;
+        --chip-purple-dark-background: magenta;
+        --chip-purple-dark-text: red;
+        --chip-purple-light-background: yellow;
+        --chip-purple-light-text: lime;
+        --chip-purple-medium-background: blue;
+        --chip-purple-medium-text: magenta;
+        --chip-red-dark-background: red;
+        --chip-red-dark-text: yellow;
+        --chip-red-light-background: lime;
+        --chip-red-light-text: blue;
+        --chip-red-medium-background: magenta;
+        --chip-red-medium-text: red;
+        --chip-yellow-dark-background: yellow;
+        --chip-yellow-dark-text: lime;
+        --chip-yellow-light-background: blue;
+        --chip-yellow-light-text: magenta;
+        --chip-yellow-medium-background: red;
+        --chip-yellow-medium-text: yellow;
+        --content-inventory-media-seekbar-container: lime;
+        --content-inventory-overlay-text-primary: blue;
+        --content-inventory-overlay-text-secondary: magenta;
+        --context-menu-backdrop-background: red;
+        --control-brand-foreground: yellow;
+        --control-brand-foreground-new: lime;
+        --control-connect-background-active: blue;
+        --control-connect-background-default: magenta;
+        --control-connect-background-hover: red;
+        --control-connect-border-active: yellow;
+        --control-connect-border-default: lime;
+        --control-connect-border-hover: blue;
+        --control-connect-icon-active: magenta;
+        --control-connect-icon-default: red;
+        --control-connect-icon-hover: yellow;
+        --control-connect-text-active: lime;
+        --control-connect-text-default: blue;
+        --control-connect-text-hover: magenta;
+        --control-critical-primary-background-active: var(--red-5);
+        --control-critical-primary-background-default: var(--red-3);
+        --control-critical-primary-background-hover: var(--red-4);
+        --control-critical-primary-border-active: var(--button-border);
+        --control-critical-primary-border-default: var(--button-border);
+        --control-critical-primary-border-hover: var(--button-border);
+        --control-critical-primary-icon-active: var(--white);
+        --control-critical-primary-icon-default: var(--white);
+        --control-critical-primary-icon-hover: var(--white);
+        --control-critical-primary-text-active: var(--white);
+        --control-critical-primary-text-default: var(--white);
+        --control-critical-primary-text-hover: var(--white);
+        --control-critical-secondary-background-active: var(--text-5);
+        --control-critical-secondary-background-default: var(--bg-2);
+        --control-critical-secondary-background-hover: var(--bg-1);
+        --control-critical-secondary-border-active: var(--border-light);
+        --control-critical-secondary-border-default: var(--border-light);
+        --control-critical-secondary-border-hover: var(--border-light);
+        --control-critical-secondary-icon-active: var(--red-2);
+        --control-critical-secondary-icon-default: var(--red-2);
+        --control-critical-secondary-icon-hover: var(--red-2);
+        --control-critical-secondary-text-active: var(--red-2);
+        --control-critical-secondary-text-default: var(--red-2);
+        --control-critical-secondary-text-hover: var(--red-2);
+        --control-expressive-background-active: red;
+        --control-expressive-background-default: yellow;
+        --control-expressive-background-hover: lime;
+        --control-expressive-border-active: blue;
+        --control-expressive-border-default: magenta;
+        --control-expressive-border-hover: red;
+        --control-expressive-icon-active: yellow;
+        --control-expressive-icon-default: lime;
+        --control-expressive-icon-hover: blue;
+        --control-expressive-text-active: magenta;
+        --control-expressive-text-default: red;
+        --control-expressive-text-hover: yellow;
+        --control-icon-only-background-active: var(--active);
+        --control-icon-only-background-hover: var(--hover);
+        --control-icon-only-border-active: var(--border-light);
+        --control-icon-only-border-hover: var(--border-light);
+        --control-icon-only-icon-active: var(--text-3);
+        --control-icon-only-icon-default: var(--text-4);
+        --control-icon-only-icon-hover: var(--text-3);
+        --control-overlay-primary-background-active: magenta;
+        --control-overlay-primary-background-default: red;
+        --control-overlay-primary-background-hover: yellow;
+        --control-overlay-primary-border-active: lime;
+        --control-overlay-primary-border-default: blue;
+        --control-overlay-primary-border-hover: magenta;
+        --control-overlay-primary-icon-active: red;
+        --control-overlay-primary-icon-default: yellow;
+        --control-overlay-primary-icon-hover: lime;
+        --control-overlay-primary-text-active: blue;
+        --control-overlay-primary-text-default: magenta;
+        --control-overlay-primary-text-hover: red;
+        --control-overlay-secondary-background-active: yellow;
+        --control-overlay-secondary-background-default: lime;
+        --control-overlay-secondary-background-hover: blue;
+        --control-overlay-secondary-border-active: magenta;
+        --control-overlay-secondary-border-default: red;
+        --control-overlay-secondary-border-hover: yellow;
+        --control-overlay-secondary-icon-active: lime;
+        --control-overlay-secondary-icon-default: blue;
+        --control-overlay-secondary-icon-hover: magenta;
+        --control-overlay-secondary-text-active: red;
+        --control-overlay-secondary-text-default: yellow;
+        --control-overlay-secondary-text-hover: lime;
+        --control-primary-background-active: var(--accent-5);
+        --control-primary-background-default: var(--accent-3);
+        --control-primary-background-hover: var(--accent-4);
+        --control-primary-border-active: var(--button-border);
+        --control-primary-border-default: var(--button-border);
+        --control-primary-border-hover: var(--button-border);
+        --control-primary-icon-active: var(--text-0);
+        --control-primary-icon-default: var(--text-0);
+        --control-primary-icon-hover: var(--text-0);
+        --control-primary-text-active: var(--text-0);
+        --control-primary-text-default: var(--text-0);
+        --control-primary-text-hover: var(--text-0);
+        --control-secondary-background-active: var(--text-5);
+        --control-secondary-background-default: var(--bg-2);
+        --control-secondary-background-hover: var(--bg-1);
+        --control-secondary-border-active: var(--border-light);
+        --control-secondary-border-default: var(--border-light);
+        --control-secondary-border-hover: var(--border-light);
+        --control-secondary-icon-active: var(--text-3);
+        --control-secondary-icon-default: var(--text-3);
+        --control-secondary-icon-hover: var(--text-3);
+        --control-secondary-text-active: var(--text-3);
+        --control-secondary-text-default: var(--text-3);
+        --control-secondary-text-hover: var(--text-3);
+        --creator-revenue-icon-gradient-end: blue;
+        --creator-revenue-icon-gradient-start: magenta;
+        --creator-revenue-info-box-background: red;
+        --creator-revenue-info-box-border: yellow;
+        --creator-revenue-locked-channel-icon: lime;
+        --creator-revenue-progress-bar: blue;
+        --embed-background: magenta;
+        --embed-background-alternate: red;
+        --experimental-avatar-embed-bg: yellow;
+        --expressive-gradient-blue-end: lime;
+        --expressive-gradient-blue-start: blue;
+        --expressive-gradient-green-end: magenta;
+        --expressive-gradient-green-start: red;
+        --expressive-gradient-nitro-green-end: yellow;
+        --expressive-gradient-nitro-green-start: lime;
+        --expressive-gradient-nitro-pink-end: blue;
+        --expressive-gradient-nitro-pink-start: magenta;
+        --expressive-gradient-pink-end: red;
+        --expressive-gradient-pink-start: yellow;
+        --expressive-gradient-purple-end: lime;
+        --expressive-gradient-purple-start: blue;
+        --expressive-gradient-tenure-badge-bronze-end: magenta;
+        --expressive-gradient-tenure-badge-bronze-start: red;
+        --expressive-gradient-tenure-badge-diamond-end: yellow;
+        --expressive-gradient-tenure-badge-diamond-start: lime;
+        --expressive-gradient-tenure-badge-emerald-end: blue;
+        --expressive-gradient-tenure-badge-emerald-start: magenta;
+        --expressive-gradient-tenure-badge-gold-end: red;
+        --expressive-gradient-tenure-badge-gold-start: yellow;
+        --expressive-gradient-tenure-badge-opal-end: lime;
+        --expressive-gradient-tenure-badge-opal-start: blue;
+        --expressive-gradient-tenure-badge-platinum-end: magenta;
+        --expressive-gradient-tenure-badge-platinum-start: red;
+        --expressive-gradient-tenure-badge-ruby-end: yellow;
+        --expressive-gradient-tenure-badge-ruby-start: lime;
+        --expressive-gradient-tenure-badge-silver-end: blue;
+        --expressive-gradient-tenure-badge-silver-start: magenta;
+        --gradient-progress-pill-background: var(--text-5);
+        --home-background: yellow;
+        --icon-default: lime;
+        --icon-feedback-critical: var(--red-1);
+        --icon-feedback-info: var(--blue-1);
+        --icon-feedback-positive: var(--green-1);
+        --icon-feedback-warning: var(--yellow-1);
+        --icon-invert: magenta;
+        --icon-link: red;
+        --icon-muted: var(--text-5);
+        --icon-status-dnd: yellow;
+        --icon-status-idle: lime;
+        --icon-status-offline: blue;
+        --icon-status-online: magenta;
+        --icon-strong: var(--text-3);
+        --icon-subtle: var(--text-4);
+        --icon-transparent: lime;
+        --input-background-default: var(--bg-3);
+        --input-background-error-default: magenta;
+        --input-border-active: var(--accent-2);
+        --input-border-default: var(--border-light);
+        --input-border-error-default: lime;
+        --input-border-error-hover: blue;
+        --input-border-hover: var(--border);
+        --input-border-readonly: red;
+        --input-foreground-placeholder: yellow;
+        --input-icon-default: lime;
+        --input-placeholder-text-default: var(--text-5);
+        --input-text-default: magenta;
+        --input-text-error-default: red;
+        --interactive-background-active: var(--active);
+        --interactive-background-hover: var(--hover);
+        --interactive-background-selected: var(--active);
+        --interactive-icon-active: var(--text-3);
+        --interactive-icon-default: var(--text-4);
+        --interactive-icon-hover: var(--text-3);
+        --interactive-muted: var(--text-5);
+        --interactive-text-active: var(--text-3);
+        --interactive-text-default: var(--text-4);
+        --interactive-text-hover: var(--text-3);
+        --logo-primary: yellow;
+        --mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
+        --mention-foreground: var(--accent-1);
+        --message-automod-background-default: lime;
+        --message-automod-background-hover: blue;
+        --message-background-hover: var(--message-hover);
+        --message-highlight-background-default: var(--reply);
+        --message-highlight-background-hover: var(--reply-hover);
+        --message-mentioned-background-default: var(--mention);
+        --message-mentioned-background-hover: var(--mention-hover);
+        --message-reacted-background-default: color-mix(in hsl, var(--accent-2), transparent 80%);
+        --message-reacted-text-default: var(--text-2);
+        --mobile-background-scrim-opaque: magenta;
+        --mobile-expression-picker-background-default: red;
+        --mobile-text-heading-primary: yellow;
+        --modal-background: var(--bg-4);
+        --modal-footer-background: var(--bg-4);
+        --navigator-header-tint: lime;
+        --notice-background-critical: blue;
+        --notice-background-info: magenta;
+        --notice-background-positive: red;
+        --notice-background-warning: yellow;
+        --notice-text-critical: lime;
+        --notice-text-info: blue;
+        --notice-text-positive: magenta;
+        --notice-text-warning: red;
+        --overlay-backdrop-lightbox: yellow;
+        --panel-bg: lime;
+        --polls-normal-image-background: blue;
+        --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
+        --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
+        --premium-nitro-pink-text: magenta;
+        --profile-gradient-note-background: red;
+        --profile-gradient-overlay: yellow;
+        --profile-gradient-overlay-synced-with-user-theme: lime;
+        --profile-gradient-role-pill-background: blue;
+        --profile-gradient-role-pill-border: magenta;
+        --profile-gradient-section-box: red;
+        --radio-background-active: yellow;
+        --radio-background-default: lime;
+        --radio-background-hover: blue;
+        --radio-background-selected-default: magenta;
+        --radio-background-selected-hover: red;
+        --radio-border-active: yellow;
+        --radio-border-default: lime;
+        --radio-border-hover: blue;
+        --radio-border-selected-default: magenta;
+        --radio-border-selected-hover: red;
+        --radio-foreground-active: yellow;
+        --radio-foreground-default: lime;
+        --radio-foreground-hover: blue;
+        --radio-thumb-background-active: magenta;
+        --redesign-button-active-background: red;
+        --redesign-button-active-pressed-background: yellow;
+        --redesign-button-active-text: lime;
+        --redesign-button-danger-background: blue;
+        --redesign-button-destructive-background: magenta;
+        --redesign-button-destructive-pressed-background: red;
+        --redesign-button-destructive-text: yellow;
+        --redesign-button-overlay-alpha-background: lime;
+        --redesign-button-overlay-alpha-pressed-background: blue;
+        --redesign-button-overlay-alpha-text: magenta;
+        --redesign-button-positive-background: red;
+        --redesign-button-premium-primary-pink-for-gradient: yellow;
+        --redesign-button-premium-primary-pressed-background: lime;
+        --redesign-button-premium-primary-purple-for-gradient: blue;
+        --redesign-button-premium-primary-purple-for-gradient-2: magenta;
+        --redesign-button-primary-alt-border: red;
+        --redesign-button-primary-background: yellow;
+        --redesign-button-primary-overlay-background: lime;
+        --redesign-button-primary-overlay-pressed-background: blue;
+        --redesign-button-primary-overlay-text: magenta;
+        --redesign-button-primary-pressed-background: red;
+        --redesign-button-primary-text: yellow;
+        --redesign-button-secondary-background: lime;
+        --redesign-button-secondary-border: blue;
+        --redesign-button-secondary-overlay-background: magenta;
+        --redesign-button-secondary-overlay-pressed-background: red;
+        --redesign-button-secondary-overlay-text: yellow;
+        --redesign-button-secondary-pressed-background: lime;
+        --redesign-button-secondary-pressed-border: blue;
+        --redesign-button-secondary-text: var(--text-3);
+        --redesign-button-selected-background: magenta;
+        --redesign-button-selected-pressed-background: red;
+        --redesign-button-selected-text: yellow;
+        --redesign-button-tertiary-background: lime;
+        --redesign-button-tertiary-pressed-background: blue;
+        --redesign-button-tertiary-pressed-text: magenta;
+        --redesign-button-tertiary-text: red;
+        --scrollbar-auto-scrollbar-color-thumb: yellow;
+        --scrollbar-auto-scrollbar-color-track: lime;
         --scrollbar-auto-thumb: var(--bg-3);
         --scrollbar-auto-track: transparent;
         --scrollbar-thin-thumb: var(--bg-3);
         --scrollbar-thin-track: transparent;
+        --spine-default: var(--text-5);
+        --spoiler-hidden-background: yellow;
+        --spoiler-hidden-background-hover: lime;
+        --spoiler-revealed-background: blue;
+        --status-danger: var(--red-2);
+        --status-online: var(--green-2);
+        --status-positive: var(--green-2);
+        --status-positive-background: var(--green-2);
+        --status-positive-text: magenta;
+        --status-speaking: var(--green-2);
+        --status-warning: var(--yellow-2);
+        --status-warning-background: red;
+        --status-warning-text: yellow;
+        --switch-background-active: lime;
+        --switch-background-default: blue;
+        --switch-background-hover: magenta;
+        --switch-background-selected-default: red;
+        --switch-background-selected-hover: yellow;
+        --switch-border-default: lime;
+        --switch-border-hover: blue;
+        --switch-border-selected-default: magenta;
+        --switch-border-selected-hover: red;
+        --switch-thumb-background-default: yellow;
+        --switch-thumb-background-selected-default: lime;
+        --switch-thumb-icon-active: blue;
+        --switch-thumb-icon-default: magenta;
+        --text-brand: var(--accent-1);
+        --text-code: red;
+        --text-code-addition: yellow;
+        --text-code-builtin: lime;
+        --text-code-bullet: blue;
+        --text-code-comment: magenta;
+        --text-code-deletion: red;
+        --text-code-keyword: yellow;
+        --text-code-section: lime;
+        --text-code-string: blue;
+        --text-code-tag: magenta;
+        --text-code-title: red;
+        --text-code-variable: yellow;
+        --text-default: var(--text-3);
+        --text-feedback-critical: var(--red-1);
+        --text-feedback-info: var(--accent-1);
+        --text-feedback-positive: var(--green-1);
+        --text-feedback-warning: var(--yellow-1);
+        --text-invert: blue;
+        --text-link: var(--accent-1);
+        --text-muted: var(--text-5);
+        --text-overlay-dark: magenta;
+        --text-overlay-light: red;
+        --text-status-dnd: yellow;
+        --text-status-idle: lime;
+        --text-status-offline: blue;
+        --text-status-online: magenta;
+        --text-strong: var(--text-2);
+        --text-subtle: var(--text-4);
+        --textbox-markdown-syntax: lime;
+        --thread-channel-spine: blue;
+        --user-profile-activity-toolbar-background: magenta;
+        --user-profile-background-hover: red;
+        --user-profile-border: yellow;
+        --user-profile-note-background-focus: lime;
+        --user-profile-overlay-background: var(--bg-4);
+        --user-profile-overlay-background-hover: var(--bg-2);
+        --user-profile-toolbar-background: blue;
+        --user-profile-toolbar-border: magenta;
 
         --white: var(--text-0);
-        --white-500: var(--text-1);
-        --redesign-button-overlay-alpha-text: var(--text-2);
+        --white-500: var(--text-0);
 
         --brand-360: var(--accent-2);
         --brand-500: var(--accent-2);
@@ -315,151 +555,8 @@
         --red-500: var(--red-3);
 
         --green-360: var(--green-2); /* seems to be mostly used by vencord plugins */
+        --yellow-300: var(--yellow-2); /* voice settings sensitivity bar */
         --primary-400: var(--text-4);
-
-        --deprecated-text-input-bg: var(--bg-3);
-        --deprecated-text-input-border: var(--border-light);
-
-        --background-code: var(--bg-3);
-
-        /* --control-background-active-active: var(--green-new-62);
-        --control-background-active-default: var(--green-new-50);
-        --control-background-active-hover: var(--green-new-55);
-        --control-background-active-loading: var(--green-new-50); */
-        --control-background-critical-primary-active: var(--red-5);
-        --control-background-critical-primary-default: var(--red-3);
-        --control-background-critical-primary-hover: var(--red-4);
-        --control-background-critical-primary-loading: var(--red-3);
-        --control-background-critical-secondary-active: var(--text-5);
-        --control-background-critical-secondary-default: var(--bg-2);
-        --control-background-critical-secondary-hover: var(--bg-1);
-        --control-background-critical-secondary-loading: var(--bg-2);
-        /* --control-background-expressive-active: var(--neutral-10);
-        --control-background-expressive-default: var(--neutral-1);
-        --control-background-expressive-hover: var(--neutral-1);
-        --control-background-expressive-loading: var(--neutral-1);
-        --control-background-icon-only-active: hsl(var(--opacity-20-hsl) / 0.2);
-        --control-background-icon-only-hover: hsl(var(--opacity-16-hsl) / 0.1607843137254902);
-        --control-background-overlay-primary-active: var(--neutral-17);
-        --control-background-overlay-primary-default: var(--neutral-1);
-        --control-background-overlay-primary-hover: var(--neutral-9);
-        --control-background-overlay-primary-loading: var(--neutral-1);
-        --control-background-overlay-secondary-active: hsl(var(--opacity-black-48-hsl) / 0.47843137254901963);
-        --control-background-overlay-secondary-default: hsl(var(--opacity-black-52-hsl) / 0.5215686274509804);
-        --control-background-overlay-secondary-hover: hsl(var(--opacity-black-64-hsl) / 0.6392156862745098);
-        --control-background-overlay-secondary-loading: hsl(var(--opacity-black-52-hsl) / 0.5215686274509804); */
-        --control-background-primary-active: var(--accent-5);
-        --control-background-primary-default: var(--accent-3);
-        --control-background-primary-hover: var(--accent-4);
-        --control-background-primary-loading: var(--accent-3);
-        --control-background-secondary-active: var(--text-5);
-        --control-background-secondary-default: var(--bg-2);
-        --control-background-secondary-hover: var(--bg-1);
-        --control-background-secondary-loading: var(--bg-2);
-        /* --control-border-active-active: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
-        --control-border-active-default: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
-        --control-border-active-hover: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
-        --control-border-active-loading: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196); */
-        --control-border-critical-primary-active: var(--button-border);
-        --control-border-critical-primary-default: var(--button-border);
-        --control-border-critical-primary-hover: var(--button-border);
-        --control-border-critical-primary-loading: var(--button-border);
-        --control-border-critical-secondary-active: var(--border-light);
-        --control-border-critical-secondary-default: var(--border-light);
-        --control-border-critical-secondary-hover: var(--border-light);
-        --control-border-critical-secondary-loading: var(--border-light);
-        /* --control-border-expressive-active: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-expressive-default: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-expressive-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-expressive-loading: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-icon-only-active: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
-        --control-border-icon-only-hover: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
-        --control-border-overlay-primary-active: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-overlay-primary-default: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-overlay-primary-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-overlay-primary-loading: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-        --control-border-overlay-secondary-active: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
-        --control-border-overlay-secondary-default: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
-        --control-border-overlay-secondary-hover: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
-        --control-border-overlay-secondary-loading: hsl(var(--opacity-4-hsl) / 0.0392156862745098); */
-        --control-border-primary-active: var(--button-border);
-        --control-border-primary-default: var(--button-border);
-        --control-border-primary-hover: var(--button-border);
-        --control-border-primary-loading: var(--button-border);
-        --control-border-secondary-active: var(--border-light);
-        --control-border-secondary-default: var(--border-light);
-        --control-border-secondary-hover: var(--border-light);
-        --control-border-secondary-loading: var(--border-light);
-        /*--control-brand-foreground: var(--brand-360);
-        --control-brand-foreground-new: var(--brand-360);
-         --control-icon-active-active: var(--white);
-        --control-icon-active-default: var(--white);
-        --control-icon-active-hover: var(--white);
-        --control-icon-active-loading: var(--white);
-        --control-icon-critical-primary-active: var(--white);
-        --control-icon-critical-primary-default: var(--white);
-        --control-icon-critical-primary-hover: var(--white);
-        --control-icon-critical-primary-loading: var(--white);
-        --control-icon-critical-secondary-active: var(--red-new-22);
-        --control-icon-critical-secondary-default: var(--red-new-22);
-        --control-icon-critical-secondary-hover: var(--red-new-22);
-        --control-icon-critical-secondary-loading: var(--red-new-22);
-        --control-icon-expressive-active: var(--black);
-        --control-icon-expressive-default: var(--black);
-        --control-icon-expressive-hover: var(--black);
-        --control-icon-expressive-loading: var(--black);
-        --control-icon-icon-only-active: var(--neutral-1);
-        --control-icon-icon-only-default: var(--neutral-16);
-        --control-icon-icon-only-hover: var(--neutral-1);
-        --control-icon-icon-only-loading: var(--neutral-1);
-        --control-icon-overlay-primary-active: var(--black);
-        --control-icon-overlay-primary-default: var(--black);
-        --control-icon-overlay-primary-hover: var(--black);
-        --control-icon-overlay-primary-loading: var(--black);
-        --control-icon-overlay-secondary-active: var(--white);
-        --control-icon-overlay-secondary-default: var(--white);
-        --control-icon-overlay-secondary-hover: var(--white);
-        --control-icon-overlay-secondary-loading: var(--white);
-        --control-icon-primary-active: var(--white);
-        --control-icon-primary-default: var(--white);
-        --control-icon-primary-hover: var(--white);
-        --control-icon-primary-loading: var(--white);
-        --control-icon-secondary-active: var(--neutral-1);
-        --control-icon-secondary-default: var(--neutral-1);
-        --control-icon-secondary-hover: var(--neutral-1);
-        --control-icon-secondary-loading: var(--neutral-1);
-        --control-text-active-active: var(--white);
-        --control-text-active-default: var(--white);
-        --control-text-active-hover: var(--white);
-        --control-text-active-loading: var(--white);*/
-        --control-text-critical-primary-active: var(--text-0);
-        --control-text-critical-primary-default: var(--text-0);
-        --control-text-critical-primary-hover: var(--text-0);
-        --control-text-critical-primary-loading: var(--text-0);
-        --control-text-critical-secondary-active: var(--red-2);
-        --control-text-critical-secondary-default: var(--red-2);
-        --control-text-critical-secondary-hover: var(--red-2);
-        --control-text-critical-secondary-loading: var(--red-2);
-        /* --control-text-expressive-active: var(--black);
-        --control-text-expressive-default: var(--black);
-        --control-text-expressive-hover: var(--black);
-        --control-text-expressive-loading: var(--black);
-        --control-text-overlay-primary-active: var(--black);
-        --control-text-overlay-primary-default: var(--black);
-        --control-text-overlay-primary-hover: var(--black);
-        --control-text-overlay-primary-loading: var(--black);
-        --control-text-overlay-secondary-active: var(--white);
-        --control-text-overlay-secondary-default: var(--white);
-        --control-text-overlay-secondary-hover: var(--white);
-        --control-text-overlay-secondary-loading: var(--white); */
-        --control-text-primary-active: var(--text-0);
-        --control-text-primary-default: var(--text-0);
-        --control-text-primary-hover: var(--text-0);
-        --control-text-primary-loading: var(--text-0);
-        --control-text-secondary-active: var(--text-3);
-        --control-text-secondary-default: var(--text-3);
-        --control-text-secondary-hover: var(--text-3);
-        --control-text-secondary-loading: var(--text-3);
     }
 
     .visual-refresh {
@@ -621,7 +718,8 @@
         ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
         ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--background-accent);'],
         .tooltipBlack__382e7 /* server boost tooltip */,
-        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */ {
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */,
+        .caf372efc4d47562-item.caf372efc4d47562-active /* settings items active */ {
             color: var(--text-3);
         }
         ._2f4f7eb58b61c328-status path[fill='var(--white)'],
@@ -635,7 +733,8 @@
             color: var(--text-0);
         }
 
-        ._3b95d7d910416e54-unread /* new unreads bar (channel list */ {
+        ._3b95d7d910416e54-unread /* new unreads bar (channel list */,
+        .caf372efc4d47562-item /* settings items */ {
             color: var(--text-4);
         }
 
@@ -680,8 +779,8 @@
             background-color: var(--accent-3);
         }
         ._0f481cbbd7530492-barButtonAlt /* unread bar mark as read button */ {
-            --button-secondary-background: var(--accent-3);
-            --button-secondary-background-hover: var(--accent-4);
+            --control-secondary-background-default: var(--accent-3);
+            --control-secondary-background-hover: var(--accent-4);
         }
 
         ._496769951eb140fe-updateIconForeground /* update button */ {
@@ -779,9 +878,6 @@
 
         #vc-spotify-player {
             --vc-spotify-green: var(--accent-2);
-        }
-        .a562c840daab72a7-barFill {
-            background-color: var(--accent-2) !important;
         }
 
         .vcd-screen-picker-option-radio[data-checked='true'] ._4bd5201c86a2042b-defaultColor {
