@@ -1274,25 +1274,31 @@ body {
         color: var(--text-0);
     }
 
-    ._3f21e80f8677ec40-container /* settings checkbutton background */ {
+    ._3f21e80f8677ec40-container /* settings checkbutton background */,
+    .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
-    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked /* settings checkbutton background */ {
+    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked /* settings checkbutton background */,
+    .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
     }
-    ._3f21e80f8677ec40-container ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */ {
+    ._3f21e80f8677ec40-container ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */,
+    .vc-switch-container .vc-switch-slider > svg > path {
         fill: var(--bg-1) !important;
         transition: fill 0.2s ease;
     }
-    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */ {
+    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */,
+    .vc-switch-container.vc-switch-checked .vc-switch-slider > svg > path {
         fill: var(--accent-2) !important;
     }
-    ._3f21e80f8677ec40-container rect[fill='white'] /* settings checkbutton slider */ {
+    ._3f21e80f8677ec40-container rect[fill='white'] /* settings checkbutton slider */,
+    .vc-switch-container .vc-switch-slider rect[fill='white'] {
         fill: var(--text-3) !important;
         transition: fill 0.2s ease;
     }
-    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked rect[fill='white'] /* settings checkbutton slider */ {
+    ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked rect[fill='white'] /* settings checkbutton slider */,
+    .vc-switch-container.vc-switch-checked .vc-switch-slider rect[fill='white'] {
         fill: var(--text-0) !important;
     }
 
