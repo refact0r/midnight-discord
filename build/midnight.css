@@ -85,7 +85,8 @@ body {
     width: 100% !important;
 }
 .ef3116c2da186559-scroller /* server list inner scroller */ {
-    padding: var(--custom-guild-list-padding) 0;
+    padding-top: var(--custom-guild-list-padding) !important;
+    padding-bottom: var(--custom-guild-list-padding);
 }
 ._48112cbe77dc5022-folderGroup {
     width: 100%;
@@ -827,18 +828,18 @@ body {
         --context-menu-backdrop-background: red;
         --control-brand-foreground: yellow;
         --control-brand-foreground-new: lime;
-        --control-connect-background-active: blue;
-        --control-connect-background-default: magenta;
-        --control-connect-background-hover: red;
-        --control-connect-border-active: yellow;
-        --control-connect-border-default: lime;
-        --control-connect-border-hover: blue;
-        --control-connect-icon-active: magenta;
-        --control-connect-icon-default: red;
-        --control-connect-icon-hover: yellow;
-        --control-connect-text-active: lime;
-        --control-connect-text-default: blue;
-        --control-connect-text-hover: magenta;
+        --control-connect-background-active: var(--accent-5);
+        --control-connect-background-default: var(--accent-4);
+        --control-connect-background-hover: var(--accent-3);
+        --control-connect-border-active: var(--button-border);
+        --control-connect-border-default: var(--button-border);
+        --control-connect-border-hover: var(--button-border);
+        --control-connect-icon-active: var(--text-0);
+        --control-connect-icon-default: var(--text-0);
+        --control-connect-icon-hover: var(--text-0);
+        --control-connect-text-active: var(--text-0);
+        --control-connect-text-default: var(--text-0);
+        --control-connect-text-hover: var(--text-0);
         --control-critical-primary-background-active: var(--red-5);
         --control-critical-primary-background-default: var(--red-3);
         --control-critical-primary-background-hover: var(--red-4);
@@ -1337,18 +1338,19 @@ body {
         color: var(--text-2) !important;
     }
     ._6c706db0523bd9a7-downloadHoverButtonIcon /* video download button */,
-        ._211d1cc3f7e37d69-iconContainer>svg /* vc participants button icon */,
-        ._2f4f7eb58b61c328-selectedIcon /* vc selected camera icon */,
-        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc icon button */,
-        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark /* vc icon button nub */,
-        ._650eb104245d257b-iconBadge._2b1f52e43a8f1c02-base /* server vc badge */,
-        #app-mount ._488b1a4248d1b790-akaBadge /* aka badge */,
-        ._9a9f981d3524e20f-message /* you have unsaved settings message */,
-        ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
-        ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--background-accent);'],
-        .tooltipBlack__382e7 /* server boost tooltip */,
-        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */,
-        .caf372efc4d47562-item.caf372efc4d47562-active /* settings items active */ {
+    ._211d1cc3f7e37d69-iconContainer>svg /* vc participants button icon */,
+    ._2f4f7eb58b61c328-selectedIcon /* vc selected camera icon */,
+    .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc icon button */,
+    .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark /* vc icon button nub */,
+    ._650eb104245d257b-iconBadge._2b1f52e43a8f1c02-base /* server vc badge */,
+    #app-mount ._488b1a4248d1b790-akaBadge /* aka badge */,
+    ._9a9f981d3524e20f-message /* you have unsaved settings message */,
+    ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
+    ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--background-accent);'],
+    .tooltipBlack__382e7 /* server boost tooltip */,
+    .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */,
+    .caf372efc4d47562-item.caf372efc4d47562-active /* settings items active */,
+    ._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected /* dms list items active */ {
         color: var(--text-3);
     }
     ._2f4f7eb58b61c328-status path[fill='var(--white)'],
@@ -1397,6 +1399,10 @@ body {
 
     ._5126c0cd07f243a0-divider /* unread divider */ {
         --divider-color: var(--accent-new);
+    }
+
+    .c1e9c47c23f12ca3-icon > circle[fill="#C12A35"] /* server settings icon badge */ {
+        fill: var(--accent-new) !important;
     }
 
     ._9293f6b2fc12398a-iconBadge /* icon badge */,
