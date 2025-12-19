@@ -9,89 +9,85 @@ body {
     initial-value: titlebar;
 }
 
-.platform-osx.visual-refresh .ef3116c2da186559-wrapper {
+.platform-osx .ef3116c2da186559-wrapper {
     margin-top: max(0px, calc(36px - var(--top-bar-height)));
 }
 
 @container body style(--top-bar-button-position: hide) {
-    .visual-refresh {
-        .c38106a3f0c3ca76-trailing > a[href="https://support.discord.com"],
+    .c38106a3f0c3ca76-trailing > a[href="https://support.discord.com"],
         .recentsIcon_c99c29,
         .c38106a3f0c3ca76-winButtons::before {
-            display: none;
-        }
+        display: none;
     }
 }
 
 @container body style(--top-bar-button-position: serverlist) {
-    .visual-refresh {
-        /* remove help button */
-        .c38106a3f0c3ca76-trailing > a[href="https://support.discord.com"],
+    /* remove help button */
+    .c38106a3f0c3ca76-trailing > a[href="https://support.discord.com"],
         .c38106a3f0c3ca76-winButtons::before {
-            display: none;
-        }
+        display: none;
+    }
 
-        /* make server list inner scroll */
-        .dbd2630aec71879b-stack:not([id='guild-list-unread-dms']) {
-            overflow: hidden scroll;
-            scrollbar-width: none;
-        }
-        /* create space for inbox button */
-        ._1f388bcaa446c0c8-tutorialContainer {
-            margin-bottom: 48px;
-        }
-        /* move inbox button */
-        .recentsIcon_c99c29 {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
-            left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
-        }
-        /* style inbox button */
-        .recentsIcon_c99c29 ._85643a485899904b-button {
-            width: 100%;
-            height: 100%;
-            background-color: var(--background-surface-higher);
-            border-radius: var(--radius-md);
-            transition: background-color 0.15s ease-out;
+    /* make server list inner scroll */
+    .dbd2630aec71879b-stack:not([id='guild-list-unread-dms']) {
+        overflow: hidden scroll;
+        scrollbar-width: none;
+    }
+    /* create space for inbox button */
+    ._1f388bcaa446c0c8-tutorialContainer {
+        margin-bottom: 48px;
+    }
+    /* move inbox button */
+    .recentsIcon_c99c29 {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
+        left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
+    }
+    /* style inbox button */
+    .recentsIcon_c99c29 ._85643a485899904b-button {
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-surface-higher);
+        border-radius: var(--radius-md);
+        transition: background-color 0.15s ease-out;
 
-            &:hover {
-                background-color: var(--bg-brand);
+        &:hover {
+            background-color: var(--bg-brand);
 
-                ._9293f6b2fc12398a-icon {
-                    color: var(--white);
-                }
+            ._9293f6b2fc12398a-icon {
+                color: var(--white);
             }
         }
-        .recentsIcon_c99c29 ._2338f50c3988e5ec-svg {
-            transition: color 0.15s ease-out;
-            width: 24px;
-            height: 24px;
-        }
-        /* shift inbox popup panel into view */
-        ._957962c2bd49881b-recentMentionsPopout {
-            transform: translateX(100%);
-        }
-        /* fix settings animation transform */
-        ._960e4207cea8323e-layer._960e4207cea8323e-baseLayer {
-            transform: none !important;
-        }
-        ._960e4207cea8323e-layers > ._960e4207cea8323e-layer._960e4207cea8323e-animating {
-            will-change: opacity;
-        }
+    }
+    .recentsIcon_c99c29 ._2338f50c3988e5ec-svg {
+        transition: color 0.15s ease-out;
+        width: 24px;
+        height: 24px;
+    }
+    /* shift inbox popup panel into view */
+    ._957962c2bd49881b-recentMentionsPopout {
+        transform: translateX(100%);
+    }
+    /* fix settings animation transform */
+    ._960e4207cea8323e-layer._960e4207cea8323e-baseLayer {
+        transform: none !important;
+    }
+    ._960e4207cea8323e-layers > ._960e4207cea8323e-layer._960e4207cea8323e-animating {
+        will-change: opacity;
+    }
 
-        /* unread icon */
-        .recentsIcon_c99c29 ._9293f6b2fc12398a-iconBadge {
-            --custom-icon-offset: 8px;
-            width: 10px;
-            height: 10px;
-            transition: background 0.15s ease-out;
-        }
+    /* unread icon */
+    .recentsIcon_c99c29 ._9293f6b2fc12398a-iconBadge {
+        --custom-icon-offset: 8px;
+        width: 10px;
+        height: 10px;
+        transition: background 0.15s ease-out;
+    }
 
-        .recentsIcon_c99c29:hover ._9293f6b2fc12398a-iconBadge {
-            background: var(--white);
-        }
+    .recentsIcon_c99c29:hover ._9293f6b2fc12398a-iconBadge {
+        background: var(--white);
     }
 }
 
@@ -101,61 +97,59 @@ body {
         --top-bar-right-margin: calc(32px + var(--space-xs));
     }
 
-    .visual-refresh {
-        .c38106a3f0c3ca76-title, 
+    .c38106a3f0c3ca76-title, 
         .c38106a3f0c3ca76-trailing > a[href="https://support.discord.com"]
-        {
-            display: none;
-        }
-        .c38106a3f0c3ca76-trailing {
-            position: absolute;
-            top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
-            right: calc(var(--gap) + var(--border-thickness));
-            gap: var(--space-xs);
-            z-index: 1000;
-            padding-right: var(--space-xs);
-            height: 32px;
-        }
-        .c38106a3f0c3ca76-systemBar .c38106a3f0c3ca76-trailing {
-            top: var(--space-xs);
-        }
-        .c38106a3f0c3ca76-winButtons {
-            padding: 0;
-        }
-        .c38106a3f0c3ca76-winButton {
-            height: calc(var(--window-control-size) * 2);
-        }
-        .c38106a3f0c3ca76-winButtons::before {
-            height: 16px;
-            width: var(--space-xs);
-            box-sizing: border-box;
-            margin: 0;
-        }
-        ._9293f6b2fc12398a-toolbar {
-            padding-right: var(--top-bar-right-margin);
-        }
-        ._8a7fc664acf53af6-headerBar {
-            padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
-        }
-        ._1ac1c54c56e5807c-searchFloating {
-            right: calc(var(--top-bar-right-margin) + var(--space-sm));
-        }
-        ._8067953d83f4b8a8-balanceWidgetMenu {
-            margin-right: var(--top-bar-right-margin);
-        }
-        ._133bf5eea8e33a34-inviteToolbar {
-            padding-right: 0;
-        }
-        .f75fb00fb7356cbe-chat > ._59d0d7075b521375-layerContainer {
-            z-index: 999;
-        }
-        .f75fb00fb7356cbe-subtitleContainer {
-            height: var(--custom-channel-header-height);
-        }
-        .f75fb00fb7356cbe-title._9293f6b2fc12398a-container {
-            height: auto;
-            min-height: 0;
-        }
+    {
+        display: none;
+    }
+    .c38106a3f0c3ca76-trailing {
+        position: absolute;
+        top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
+        right: calc(var(--gap) + var(--border-thickness));
+        gap: var(--space-xs);
+        z-index: 1000;
+        padding-right: var(--space-xs);
+        height: 32px;
+    }
+    .c38106a3f0c3ca76-systemBar .c38106a3f0c3ca76-trailing {
+        top: var(--space-xs);
+    }
+    .c38106a3f0c3ca76-winButtons {
+        padding: 0;
+    }
+    .c38106a3f0c3ca76-winButton {
+        height: calc(var(--window-control-size) * 2);
+    }
+    .c38106a3f0c3ca76-winButtons::before {
+        height: 16px;
+        width: var(--space-xs);
+        box-sizing: border-box;
+        margin: 0;
+    }
+    ._9293f6b2fc12398a-toolbar {
+        padding-right: var(--top-bar-right-margin);
+    }
+    ._8a7fc664acf53af6-headerBar {
+        padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
+    }
+    ._1ac1c54c56e5807c-searchFloating {
+        right: calc(var(--top-bar-right-margin) + var(--space-sm));
+    }
+    ._8067953d83f4b8a8-balanceWidgetMenu {
+        margin-right: var(--top-bar-right-margin);
+    }
+    ._133bf5eea8e33a34-inviteToolbar {
+        padding-right: 0;
+    }
+    .f75fb00fb7356cbe-chat > ._59d0d7075b521375-layerContainer {
+        z-index: 999;
+    }
+    .f75fb00fb7356cbe-subtitleContainer {
+        height: var(--custom-channel-header-height);
+    }
+    .f75fb00fb7356cbe-title._9293f6b2fc12398a-container {
+        height: auto;
+        min-height: 0;
     }
     ._5e434347c823b592-base:has(._6e2b9359c6f84cfd-notice) > .c38106a3f0c3ca76-bar > .c38106a3f0c3ca76-trailing {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
@@ -178,22 +172,18 @@ body {
 }
 
 @container body style(--top-bar-title-position: hide) {
-    .visual-refresh {
-        .title__85643 {
-            display: none;
-        }
+    .title__85643 {
+        display: none;
     }
 }
 
 @container body style(--top-bar-title-position: left) {
-    .visual-refresh {
-        .c38106a3f0c3ca76-title {
-            padding-left: var(--gap);
-            justify-content: flex-start;
-        }
-        .title__85643 {
-            gap: 4px;
-        }
+    .c38106a3f0c3ca76-title {
+        padding-left: var(--gap);
+        justify-content: flex-start;
+    }
+    .title__85643 {
+        gap: 4px;
     }
 }
 
@@ -204,15 +194,13 @@ body {
 }
 
 @container body style(--subtle-top-bar-title: on) {
-    .visual-refresh {
-        .title__85643 .f34534e8a5d3ca64-icon,
-        .title__85643 > svg {
-            display: none;
-        }
-        .title__85643 .text-sm\/medium_cf4812 {
-            line-height: 90%;
-            font-weight: 700;
-            color: var(--text-muted);
-        }
+    .title__85643 .f34534e8a5d3ca64-icon,
+    .title__85643 > svg {
+        display: none;
+    }
+    .title__85643 .text-sm\/medium_cf4812 {
+        line-height: 90%;
+        font-weight: 700;
+        color: var(--text-muted);
     }
 }
