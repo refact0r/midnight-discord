@@ -1,0 +1,801 @@
+@property --colors {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+:root {
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: hsl(220, 45%, 95%); /* other normally white text */
+    --text-2: hsl(220, 25%, 70%); /* headings and important text */
+    --text-3: hsl(220, 20%, 60%); /* normal text */
+    --text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+    --text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+    --bg-2: hsl(220, 15%, 16%); /* dark buttons */
+    --bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
+    --bg-4: hsl(220, 15%, 10%); /* main background color */
+    --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--blue-1); /* links and other accent text */
+    --accent-2: var(--blue-2); /* small accent elements */
+    --accent-3: var(--blue-3); /* accent buttons */
+    --accent-4: var(--blue-4); /* accent buttons when hovered */
+    --accent-5: var(--blue-5); /* accent buttons when clicked */
+    --accent-new: var(--blue-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #43a25a for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #ca9654 for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
+
+    /* border colors */
+    --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
+    --border: hsl(230, 20%, 40%, 0.2); /* normal border color */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: oklch(76% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(64% 0.12 0);
+    --red-4: oklch(58% 0.12 0);
+    --red-5: oklch(52% 0.12 0);
+
+    --green-1: oklch(76% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(64% 0.11 170);
+    --green-4: oklch(58% 0.11 170);
+    --green-5: oklch(52% 0.11 160);
+
+    --blue-1: oklch(76% 0.1 215);
+    --blue-2: oklch(70% 0.1 215);
+    --blue-3: oklch(64% 0.1 215);
+    --blue-4: oklch(58% 0.1 215);
+    --blue-5: oklch(52% 0.1 215);
+
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(74% 0.11 90);
+    --yellow-3: oklch(68% 0.11 90);
+    --yellow-4: oklch(62% 0.11 90);
+    --yellow-5: oklch(56% 0.11 90);
+
+    --purple-1: oklch(76% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(64% 0.11 310);
+    --purple-4: oklch(58% 0.11 310);
+    --purple-5: oklch(52% 0.11 310);
+}
+
+@container root style(--colors: on) {
+    .visual-refresh body,
+    .visual-refresh .theme-dark:not(.custom-user-profile-theme),
+    .visual-refresh .theme-light:not(.custom-user-profile-theme) {
+        --activity-card-background: var(--bg-3);
+        --alert-bg: red;
+        --autocomplete-bg: var(--bg-3);
+
+        --background-accent: var(--bg-2);
+        --background-floating: var(--bg-3);
+        --background-nested-floating: var(--bg-4);
+        --background-mentioned: var(--mention);
+        --background-mentioned-hover: var(--mention-hover);
+        --background-message-automod: red;
+        --background-message-automod-hover: red;
+        --background-message-highlight: var(--reply);
+        --background-message-highlight-hover: var(--reply-hover);
+        --background-message-hover: var(--message-hover);
+
+        --background-primary: var(--bg-4);
+        --background-secondary: var(--bg-3);
+        --background-secondary-alt: var(--bg-3);
+        --background-tertiary: var(--bg-4);
+
+        --bg-base-primary: var(--bg-4); /* screenshare window? */
+        --bg-base-secondary: var(--bg-4);
+        --bg-base-tertiary: var(--bg-3);
+        --background-mod-subtle: var(--hover);
+        --background-mod-normal: var(--active);
+        --background-mod-strong: var(--active-2);
+        --background-base-low: var(--bg-4);
+        --background-base-lower: var(--bg-4);
+        --background-base-lowest: var(--bg-4);
+        --background-surface-high: var(--bg-3);
+        --background-surface-higher: var(--bg-3);
+        --background-surface-highest: var(--bg-3);
+        --bg-surface-overlay: var(--bg-4);
+        --bg-surface-raised: var(--bg-3);
+        --chat-background-default: var(--bg-3);
+        --chat-text-muted: var(--text-5);
+        --input-background: var(--bg-3);
+        --modal-background: var(--bg-4);
+        --modal-footer-background: var(--bg-4);
+
+        --background-modifier-accent: var(--hover);
+        --background-modifier-active: var(--active);
+        --background-modifier-hover: var(--hover);
+        --background-modifier-selected: var(--active);
+
+        --bg-mod-faint: var(--hover);
+        --bg-mod-subtle: var(--bg-2);
+        --bg-mod-strong: var(--bg-2);
+        --bg-brand: var(--accent-2);
+
+        --border-faint: var(--border-light);
+        --border-subtle: var(--border);
+        --border-normal: var(--border);
+        --border-strong: var(--border);
+        --input-border: var(--border);
+
+        --button-danger-background: var(--red-3);
+        --button-danger-background-active: var(--red-5);
+        --button-danger-background-hover: var(--red-4);
+        --button-danger-background-disabled: var(--red-5);
+        --button-danger-border: var(--button-border);
+
+        --button-filled-brand-text: var(--text-0);
+        --button-filled-brand-background: var(--accent-3);
+        --button-filled-brand-background-active: var(--accent-5);
+        --button-filled-brand-background-hover: var(--accent-4);
+        --button-filled-brand-border: var(--button-border);
+
+        --button-filled-brand-inverted-background: var(--text-1);
+        --button-filled-brand-inverted-background-active: var(--text-3);
+        --button-filled-brand-inverted-background-hover: var(--text-2);
+        --button-filled-brand-inverted-text: var(--bg-4);
+        --button-filled-white-background: var(--text-1);
+        --button-filled-white-background-active: var(--text-3);
+        --button-filled-white-background-hover: var(--text-2);
+        --button-filled-white-text: var(--bg-4);
+
+        --button-outline-danger-background: var(--bg-2);
+        --button-outline-danger-background-active: var(--text-5);
+        --button-outline-danger-background-hover: var(--bg-1);
+        --button-outline-danger-border: var(--border-light);
+        --button-outline-danger-border-active: var(--border-light);
+        --button-outline-danger-border-hover: var(--border-light);
+        --button-outline-danger-text: var(--red-1);
+        --button-outline-danger-text-active: var(--red-1);
+        --button-outline-danger-text-hover: var(--red-1);
+
+        --button-outline-primary-background: red;
+        --button-outline-primary-background-active: var(--active);
+        --button-outline-primary-background-hover: var(--hover);
+        --button-outline-primary-border: var(--text-5);
+        --button-outline-primary-border-active: var(--text-5);
+        --button-outline-primary-border-hover: var(--text-5);
+        --button-outline-primary-text: var(--text-3);
+        --button-outline-primary-text-active: var(--text-3);
+        --button-outline-primary-text-hover: var(--text-3);
+
+        --button-outline-positive-background: red;
+        --button-outline-positive-background-active: var(--green-4);
+        --button-outline-positive-background-hover: var(--green-3);
+        --button-outline-positive-border: var(--green-2);
+        --button-outline-positive-border-active: var(--green-4);
+        --button-outline-positive-border-hover: var(--green-3);
+        --button-outline-positive-text: var(--text-3);
+        --button-outline-positive-text-active: var(--text-0);
+        --button-outline-positive-text-hover: var(--text-0);
+
+        --button-positive-background: var(--green-2);
+        --button-positive-background-active: var(--green-4);
+        --button-positive-background-hover: var(--green-3);
+        --button-positive-background-disabled: var(--green-4);
+        --button-positive-border: var(--button-border);
+
+        --button-secondary-background: var(--bg-2);
+        --button-secondary-background-active: var(--text-5);
+        --button-secondary-background-hover: var(--bg-1);
+        --button-secondary-background-disabled: var(--bg-3);
+        --button-secondary-text: var(--text-3);
+
+        --button-transparent-background: var(--hover);
+        --button-transparent-background-active: var(--active-2);
+        --button-transparent-background-hover: var(--active);
+        --button-transparent-text: var(--text-3);
+
+        --redesign-button-secondary-text: var(--text-3);
+
+        --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
+        --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
+
+        --card-primary-bg: var(--bg-3);
+        --card-secondary-bg: var(--bg-2);
+        --channel-icon: var(--text-4);
+        --channels-default: var(--text-4);
+
+        --embed-title: var(--text-2);
+
+        --header-primary: var(--text-2);
+        --header-secondary: var(--text-4);
+        --header-muted: var(--text-4);
+
+        --icon-muted: var(--text-5);
+        --icon-primary: var(--text-3);
+        --icon-secondary: var(--text-4);
+        --icon-tertiary: var(--text-4);
+
+        --info-danger-background: red;
+        --info-danger-text: red;
+        --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
+        --info-help-foreground: var(--blue-1);
+        --info-help-text: var(--blue-1);
+        --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
+        --info-positive-text: var(--green-1);
+        --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
+        --info-warning-text: var(--yellow-1);
+
+        --text-brand: var(--accent-1);
+        --text-danger: var(--red-1);
+        --text-link: var(--accent-1);
+        --text-link-low-saturation: red;
+        --text-low-contrast: var(--text-4);
+        --text-message-preview-low-sat: red;
+        --text-muted: var(--text-5);
+        --text-muted-on-default: var(--text-4);
+        --text-normal: var(--text-3);
+        --text-positive: var(--green-1);
+        --text-primary: var(--text-3);
+        --text-secondary: var(--text-4);
+        --text-warning: var(--yellow-1);
+        --text-default: var(--text-3);
+        --text-feedback-critical: var(--red-1);
+        --text-feedback-positive: var(--green-1);
+        --text-feedback-info: red;
+        --text-feedback-warning: var(--yellow-1);
+        --text-tertiary: var(--text-4);
+
+        --user-profile-overlay-background: var(--bg-4);
+        --user-profile-overlay-background-hover: var(--bg-2);
+
+        --status-danger: var(--red-2);
+        --status-danger-background: var(--red-3);
+        --status-danger-text: var(--white);
+        --status-dnd: var(--dnd); /* server profiles */
+        --status-idle: var(--idle);
+        --status-offline: var(--offline);
+        --status-online: var(--online);
+        --status-positive: var(--green-2);
+        --status-positive-background: var(--green-2);
+        --status-positive-text: var(--white);
+        --status-speaking: var(--green-2);
+        --status-warning: var(--yellow-2);
+        --status-warning-background: red;
+        --status-warning-text: var(--black);
+
+        --background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
+        --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
+        --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
+        --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
+
+        --interactive-normal: var(--text-4);
+        --interactive-hover: var(--text-3);
+        --interactive-active: var(--text-3);
+        --interactive-muted: var(--text-5);
+
+        --mention-foreground: var(--accent-1);
+        --mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
+
+        --channel-text-area-placeholder: var(--text-5);
+
+        --message-reacted-text: var(--text-2);
+        --message-reacted-background: color-mix(in hsl, var(--accent-2), transparent 80%);
+
+        --custom-channel-members-bg: var(--bg-4);
+
+        --redesign-input-control-selected: var(--accent-2);
+
+        --scrollbar-auto-thumb: var(--bg-3);
+        --scrollbar-auto-track: transparent;
+        --scrollbar-thin-thumb: var(--bg-3);
+        --scrollbar-thin-track: transparent;
+
+        --white: var(--text-0);
+        --white-500: var(--text-1);
+        --redesign-button-overlay-alpha-text: var(--text-2);
+
+        --brand-360: var(--accent-2);
+        --brand-500: var(--accent-2);
+        --blurple-50: var(--accent-2);
+
+        --red-400: var(--red-2);
+        --red-500: var(--red-3);
+
+        --green-360: var(--green-2); /* seems to be mostly used by vencord plugins */
+        --primary-400: var(--text-4);
+
+        --deprecated-text-input-bg: var(--bg-3);
+        --deprecated-text-input-border: var(--border-light);
+
+        --background-code: var(--bg-3);
+
+        /* --control-background-active-active: var(--green-new-62);
+        --control-background-active-default: var(--green-new-50);
+        --control-background-active-hover: var(--green-new-55);
+        --control-background-active-loading: var(--green-new-50); */
+        --control-background-critical-primary-active: var(--red-5);
+        --control-background-critical-primary-default: var(--red-3);
+        --control-background-critical-primary-hover: var(--red-4);
+        --control-background-critical-primary-loading: var(--red-3);
+        --control-background-critical-secondary-active: var(--text-5);
+        --control-background-critical-secondary-default: var(--bg-2);
+        --control-background-critical-secondary-hover: var(--bg-1);
+        --control-background-critical-secondary-loading: var(--bg-2);
+        /* --control-background-expressive-active: var(--neutral-10);
+        --control-background-expressive-default: var(--neutral-1);
+        --control-background-expressive-hover: var(--neutral-1);
+        --control-background-expressive-loading: var(--neutral-1);
+        --control-background-icon-only-active: hsl(var(--opacity-20-hsl) / 0.2);
+        --control-background-icon-only-hover: hsl(var(--opacity-16-hsl) / 0.1607843137254902);
+        --control-background-overlay-primary-active: var(--neutral-17);
+        --control-background-overlay-primary-default: var(--neutral-1);
+        --control-background-overlay-primary-hover: var(--neutral-9);
+        --control-background-overlay-primary-loading: var(--neutral-1);
+        --control-background-overlay-secondary-active: hsl(var(--opacity-black-48-hsl) / 0.47843137254901963);
+        --control-background-overlay-secondary-default: hsl(var(--opacity-black-52-hsl) / 0.5215686274509804);
+        --control-background-overlay-secondary-hover: hsl(var(--opacity-black-64-hsl) / 0.6392156862745098);
+        --control-background-overlay-secondary-loading: hsl(var(--opacity-black-52-hsl) / 0.5215686274509804); */
+        --control-background-primary-active: var(--accent-5);
+        --control-background-primary-default: var(--accent-3);
+        --control-background-primary-hover: var(--accent-4);
+        --control-background-primary-loading: var(--accent-3);
+        --control-background-secondary-active: var(--text-5);
+        --control-background-secondary-default: var(--bg-2);
+        --control-background-secondary-hover: var(--bg-1);
+        --control-background-secondary-loading: var(--bg-2);
+        /* --control-border-active-active: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
+        --control-border-active-default: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
+        --control-border-active-hover: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196);
+        --control-border-active-loading: hsl(var(--opacity-white-8-hsl) / 0.0784313725490196); */
+        --control-border-critical-primary-active: var(--button-border);
+        --control-border-critical-primary-default: var(--button-border);
+        --control-border-critical-primary-hover: var(--button-border);
+        --control-border-critical-primary-loading: var(--button-border);
+        --control-border-critical-secondary-active: var(--border-light);
+        --control-border-critical-secondary-default: var(--border-light);
+        --control-border-critical-secondary-hover: var(--border-light);
+        --control-border-critical-secondary-loading: var(--border-light);
+        /* --control-border-expressive-active: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-expressive-default: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-expressive-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-expressive-loading: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-icon-only-active: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
+        --control-border-icon-only-hover: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
+        --control-border-overlay-primary-active: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-overlay-primary-default: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-overlay-primary-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-overlay-primary-loading: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
+        --control-border-overlay-secondary-active: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
+        --control-border-overlay-secondary-default: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
+        --control-border-overlay-secondary-hover: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
+        --control-border-overlay-secondary-loading: hsl(var(--opacity-4-hsl) / 0.0392156862745098); */
+        --control-border-primary-active: var(--button-border);
+        --control-border-primary-default: var(--button-border);
+        --control-border-primary-hover: var(--button-border);
+        --control-border-primary-loading: var(--button-border);
+        --control-border-secondary-active: var(--border-light);
+        --control-border-secondary-default: var(--border-light);
+        --control-border-secondary-hover: var(--border-light);
+        --control-border-secondary-loading: var(--border-light);
+        /*--control-brand-foreground: var(--brand-360);
+        --control-brand-foreground-new: var(--brand-360);
+         --control-icon-active-active: var(--white);
+        --control-icon-active-default: var(--white);
+        --control-icon-active-hover: var(--white);
+        --control-icon-active-loading: var(--white);
+        --control-icon-critical-primary-active: var(--white);
+        --control-icon-critical-primary-default: var(--white);
+        --control-icon-critical-primary-hover: var(--white);
+        --control-icon-critical-primary-loading: var(--white);
+        --control-icon-critical-secondary-active: var(--red-new-22);
+        --control-icon-critical-secondary-default: var(--red-new-22);
+        --control-icon-critical-secondary-hover: var(--red-new-22);
+        --control-icon-critical-secondary-loading: var(--red-new-22);
+        --control-icon-expressive-active: var(--black);
+        --control-icon-expressive-default: var(--black);
+        --control-icon-expressive-hover: var(--black);
+        --control-icon-expressive-loading: var(--black);
+        --control-icon-icon-only-active: var(--neutral-1);
+        --control-icon-icon-only-default: var(--neutral-16);
+        --control-icon-icon-only-hover: var(--neutral-1);
+        --control-icon-icon-only-loading: var(--neutral-1);
+        --control-icon-overlay-primary-active: var(--black);
+        --control-icon-overlay-primary-default: var(--black);
+        --control-icon-overlay-primary-hover: var(--black);
+        --control-icon-overlay-primary-loading: var(--black);
+        --control-icon-overlay-secondary-active: var(--white);
+        --control-icon-overlay-secondary-default: var(--white);
+        --control-icon-overlay-secondary-hover: var(--white);
+        --control-icon-overlay-secondary-loading: var(--white);
+        --control-icon-primary-active: var(--white);
+        --control-icon-primary-default: var(--white);
+        --control-icon-primary-hover: var(--white);
+        --control-icon-primary-loading: var(--white);
+        --control-icon-secondary-active: var(--neutral-1);
+        --control-icon-secondary-default: var(--neutral-1);
+        --control-icon-secondary-hover: var(--neutral-1);
+        --control-icon-secondary-loading: var(--neutral-1);
+        --control-text-active-active: var(--white);
+        --control-text-active-default: var(--white);
+        --control-text-active-hover: var(--white);
+        --control-text-active-loading: var(--white);*/
+        --control-text-critical-primary-active: var(--text-0);
+        --control-text-critical-primary-default: var(--text-0);
+        --control-text-critical-primary-hover: var(--text-0);
+        --control-text-critical-primary-loading: var(--text-0);
+        --control-text-critical-secondary-active: var(--red-2);
+        --control-text-critical-secondary-default: var(--red-2);
+        --control-text-critical-secondary-hover: var(--red-2);
+        --control-text-critical-secondary-loading: var(--red-2);
+        /* --control-text-expressive-active: var(--black);
+        --control-text-expressive-default: var(--black);
+        --control-text-expressive-hover: var(--black);
+        --control-text-expressive-loading: var(--black);
+        --control-text-overlay-primary-active: var(--black);
+        --control-text-overlay-primary-default: var(--black);
+        --control-text-overlay-primary-hover: var(--black);
+        --control-text-overlay-primary-loading: var(--black);
+        --control-text-overlay-secondary-active: var(--white);
+        --control-text-overlay-secondary-default: var(--white);
+        --control-text-overlay-secondary-hover: var(--white);
+        --control-text-overlay-secondary-loading: var(--white); */
+        --control-text-primary-active: var(--text-0);
+        --control-text-primary-default: var(--text-0);
+        --control-text-primary-hover: var(--text-0);
+        --control-text-primary-loading: var(--text-0);
+        --control-text-secondary-active: var(--text-3);
+        --control-text-secondary-default: var(--text-3);
+        --control-text-secondary-hover: var(--text-3);
+        --control-text-secondary-loading: var(--text-3);
+    }
+
+    .visual-refresh {
+        ::placeholder {
+            color: var(--text-5);
+        }
+
+        ._960e4207cea8323e-bg /* main background */ {
+            background: var(--bg-3);
+        }
+
+        ._2ea32c412048f708-modeUnreadImportant ._2ea32c412048f708-icon,
+        ._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-icon /* correct channel icon color */ {
+            color: var(--text-3);
+        }
+
+        .b8880176888cc928-text > strong /* xxx is typing.. */ {
+            color: var(--text-3);
+        }
+
+        .b18fe29d6fe8dd82-hiddenVisually[aria-expanded="false"] > ._48112cbe77dc5022-folderPreviewWrapper /* collapsed folders */ {
+            --background-primary: var(--bg-3);
+        }
+
+        ._5dec784a68542d60-panel /* game activity panel */,
+        ._722ffae0e1be2672-container /* background between vc and vc chat */ {
+            background: none;
+        }
+
+        .aa8da23faa27393c-side .aa8da23faa27393c-item:hover /* settings tab */ {
+            background-color: var(--bg-3) !important;
+        }
+        .aa8da23faa27393c-side .aa8da23faa27393c-item:active,
+        .aa8da23faa27393c-side .aa8da23faa27393c-item.aa8da23faa27393c-selected {
+            background-color: var(--bg-2) !important;
+        }
+
+        .ebaca56eb4bb23eb-quickSelectPopout /* dm vc region select popout */,
+        ._211d1cc3f7e37d69-participantsButton /* vc participants button */,
+        ._7aaec78b97ff00f7-voiceBar /* n in voice bar (channel list) */,
+        .f369dba7416c67f0-mainCard /* form posts */,
+        ._1fed1dd06c7aabf7-accountProfileCard /* account settings profile background */ {
+            background-color: var(--bg-3);
+        }
+
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark,
+        .f8896c4f6be18f59-reaction /* forum post reaction */ {
+            background-color: var(--bg-2);
+        }
+
+        .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
+            color: var(--accent-2) !important;
+        }
+        ._459fb7bcd881f8d6-colorPickerSwatch[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
+        .faa96b2163f6a142-newBadge /* forum post new badge */,
+        ._5126c0cd07f243a0-mentioned:before /* mention message left edge */ {
+            background-color: var(--accent-2) !important;
+        }
+        ._5126c0cd07f243a0-replying:before /* reply message left edge */ {
+            background-color: var(--text-2) !important;
+        }
+
+        .badge_c3d04b /* shop "orbs exclusive" badge */ {
+            background-color: var(--text-1);
+        }
+
+        #app-mount ._5126c0cd07f243a0-message._5126c0cd07f243a0-replying:hover /* override fix for message reply hover */ {
+            background: var(--reply-hover);
+        }
+
+        .visual-refresh ._7aaec78b97ff00f7-voiceBar ._7aaec78b97ff00f7-barText, .visual-refresh ._7aaec78b97ff00f7-voiceChannelsIcon /* x in voice bar text */ {
+            color: var(--accent-2);
+        }
+
+        ._5126c0cd07f243a0-ephemeral /* ephemeral messages */ {
+            background: var(--mention) !important;
+        }
+        ._5126c0cd07f243a0-ephemeral:hover {
+            background: var(--mention-hover) !important;
+        }
+
+        ._82f0793afa59e5dc-botTagRegular /* bot tag */ {
+            background-color: var(--accent-2);
+        }
+        ._82f0793afa59e5dc-botTagOP /* forum post op tag */ {
+            color: var(--text-0);
+        }
+
+        ._3f21e80f8677ec40-container /* settings checkbutton background */ {
+            background-color: var(--bg-1) !important;
+            transition: background-color 0.2s ease;
+        }
+        ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked /* settings checkbutton background */ {
+            background-color: var(--accent-2) !important;
+        }
+        ._3f21e80f8677ec40-container ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */ {
+            fill: var(--bg-1) !important;
+            transition: fill 0.2s ease;
+        }
+        ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked ._3f21e80f8677ec40-slider > svg > path /* settings checkbutton check */ {
+            fill: var(--accent-2) !important;
+        }
+        ._3f21e80f8677ec40-container rect[fill='white'] /* settings checkbutton slider */ {
+            fill: var(--text-3) !important;
+            transition: fill 0.2s ease;
+        }
+        ._3f21e80f8677ec40-container._3f21e80f8677ec40-checked rect[fill='white'] /* settings checkbutton slider */ {
+            fill: var(--text-0) !important;
+        }
+
+        ._88a69141dd70013a-refreshIcon /* settings radiobutton center */ {
+            fill: var(--text-0);
+        }
+
+        .d02962a38047ac3c-categoryText /* gif chooser category names */,
+        .bannerColor_fb7f94 /* profile banner button */,
+        .e4cb9af80253a521-backButton /* stream preview back button */,
+        .d6b206a637c8e59a-viewersIcon /* stream preview viewers icon */,
+        .e4cb9af80253a521-bottomControls /* stream preview viewer number */,
+        .e4cb9af80253a521-pictureInPictureVideo .f1ceaca61b18918e-controlIcon /* stream preview control icon */,
+        .f37cb1984c371ee5-bannerVisible .f37cb1984c371ee5-name /* server name over banner image */,
+        .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
+        ._0f481cbbd7530492-mediaMosaicAltText /* image alt text label */ {
+            color: var(--text-1);
+        }
+        .e4cb9af80253a521-headerText.base_eb1a4c /* stream preview header text */,
+        ._2cdb89539fd956c8-participantName /* stream preview participant name */ {
+            color: var(--text-1) !important;
+        }
+        .cf09d85aafe7e124-playPausePopIcon > path /* video play/pause popup */ {
+            fill: var(--text-1);
+        }
+        .e4cb9af80253a521-headerTitle:hover /* stream preview header title hover underline */ {
+            border-color: var(--text-1) !important;
+        }
+        .cf09d85aafe7e124-controlIcon /* video play button */,
+        .cf09d85aafe7e124-wrapper /* video time */,
+        ._6eb54599f66932b1-iconWrapper /* video initial play button */,
+        ._926d764ff4a9f4d6-wrapper /* youtube embed play button */,
+        .d6b206a637c8e59a-viewersIcon:hover /* stream preview viewers icon */ ,
+        .e4cb9af80253a521-headerTitle:hover .e4cb9af80253a521-backButton /* stream preview back button hover */,
+        .d6b206a637c8e59a-viewersIcon:hover /* stream preview viewers icon */,
+        .e4cb9af80253a521-pictureInPictureVideo .f1ceaca61b18918e-controlIcon:hover /* stream preview control icon */ {
+            color: var(--text-2);
+        }
+        ._926d764ff4a9f4d6-wrapper a:link,
+        ._926d764ff4a9f4d6-wrapper a:visited,
+        .e4cb9af80253a521-headerTitle:hover .e4cb9af80253a521-headerText.base_eb1a4c /* stream preview back button hover */ {
+            color: var(--text-2) !important;
+        }
+        ._6c706db0523bd9a7-downloadHoverButtonIcon /* video download button */,
+        ._211d1cc3f7e37d69-iconContainer>svg /* vc participants button icon */,
+        ._2f4f7eb58b61c328-selectedIcon /* vc selected camera icon */,
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc icon button */,
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark /* vc icon button nub */,
+        ._650eb104245d257b-iconBadge._2b1f52e43a8f1c02-base /* server vc badge */,
+        #app-mount ._488b1a4248d1b790-akaBadge /* aka badge */,
+        ._9a9f981d3524e20f-message /* you have unsaved settings message */,
+        ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
+        ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--background-accent);'],
+        .tooltipBlack__382e7 /* server boost tooltip */,
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */ {
+            color: var(--text-3);
+        }
+        ._2f4f7eb58b61c328-status path[fill='var(--white)'],
+        ._00de6f6c14b53606-emptyChannelIcon path[fill='var(--white)'] /* channel start icon */ {
+            fill: var(--text-3);
+        }
+        .a562c840daab72a7-grabber /* vc volume slider grabber */ {
+            background-color: var(--text-3);
+        }
+        ._2b1f52e43a8f1c02-textBadge /* new text badge (right click on person in vc) */ {
+            color: var(--text-0);
+        }
+
+        ._3b95d7d910416e54-unread /* new unreads bar (channel list */ {
+            color: var(--text-4);
+        }
+
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-white /* vc icon button nub when white */ {
+            background-color: var(--primary-130);
+            color: var(--bg-4);
+        }
+
+        ._650eb104245d257b-iconBadge._650eb104245d257b-isCurrentUserConnected /* green vc badge when connected */ {
+            color: var(--text-0);
+        }
+
+        ._201d5e8a3c09670a-lookOutlined._201d5e8a3c09670a-colorWhite /* outline buttons */ {
+            border-color: var(--text-5);
+            color: var(--text-3);
+        }
+
+        ._37e49614b9f110a9-container /* user panel buttons */,
+        ._2b1f52e43a8f1c02-numberBadge  /* unread number badge */,
+        ._9293f6b2fc12398a-toolbar /* toolbar button strikethroughs */ {
+            --status-danger: var(--accent-new);
+        }
+
+        ._37e49614b9f110a9-container ._67645e1530f1195d-button._67645e1530f1195d-redGlow /* user panel button backgrounds*/ {
+            background-color: color-mix(in hsl, var(--accent-new), transparent 90%);
+        }
+        ._37e49614b9f110a9-container ._67645e1530f1195d-button._67645e1530f1195d-enabled._67645e1530f1195d-redGlow:hover /* user panel button backgrounds hover */ {
+            background-color: color-mix(in hsl, var(--accent-new), transparent 80%);
+        }
+
+        ._5126c0cd07f243a0-divider /* unread divider */ {
+            --divider-color: var(--accent-new);
+        }
+
+        ._9293f6b2fc12398a-iconBadge /* icon badge */,
+        ._7aaec78b97ff00f7-mentionsBar /* new mention pill */,
+        ._3b95d7d910416e54-mention /* server list new mention pill */ {
+            background-color: var(--accent-new);
+        }
+
+        ._0f481cbbd7530492-newMessagesBar /* unread bar */ {
+            background-color: var(--accent-3);
+        }
+        ._0f481cbbd7530492-barButtonAlt /* unread bar mark as read button */ {
+            --button-secondary-background: var(--accent-3);
+            --button-secondary-background-hover: var(--accent-4);
+        }
+
+        ._496769951eb140fe-updateIconForeground /* update button */ {
+            fill: var(--green-1);
+        }
+
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-red:hover /* vc disconnect button hover */ {
+            background-color: var(--red-4);
+        }
+        .f7ecaca5c80dbf3a-button.f7ecaca5c80dbf3a-dangerous:hover /* image attachment delete button hover in chat bar */ {
+            color: var(--red-4);
+        }
+        ._084343c4f11eaaab-contentWrapper ::-webkit-scrollbar-thumb /* gif picker scrollbar */ {
+            background-color: var(--bg-1);
+        }
+
+        ._5bc7ed9d4097f6b5-circleIconButton /* new server button */ {
+            color: var(--text-3);
+        }
+        ._5bc7ed9d4097f6b5-circleIconButton:hover {
+            color: var(--bg-4);
+        }
+
+        .c36707910f687430-tooltipGrey /* spotify plugin time tooltip */ {
+            color: var(--text-3);
+            background-color: var(--bg-3);
+        }
+
+        ._9a337c84ff86a914-textContentFooter /* forum post image fade */ {
+            background: linear-gradient(0deg, var(--bg-4), transparent);
+        }
+
+        ._2dc39186a9b98da4-result:after /* remove gif hover overlay */ {
+            display: none;
+        }
+        ._2dc39186a9b98da4-result:hover /* gif hover */ {
+            outline: 2px solid var(--accent-2);
+        }
+
+        ._23977d5b7cef7361-reactionBtn._23977d5b7cef7361-forceShow:hover /* fix add reaction button border hover */ {
+            border-color: var(--bg-2);
+        }
+
+        ._034365f2217df5de-flash[data-flash=true] /* reply message flash */ {
+            background: var(--background-message-highlight);
+        }
+
+        /* status indicators */
+        rect[fill='#82838b'] {
+            fill: var(--offline);
+        }
+        .a423bdd721ddcc83-status[style='background-color: rgb(130, 131, 139);'] {
+            background-color: var(--offline) !important;
+        }
+        rect[fill='#43a25a'],
+        path[fill='#43a25a'] /* status activity icon */,
+        path[fill='var(--status-positive)'] /* status activity icon */,
+        .vc-platform-indicator > svg[fill="#43a25a"] {
+            fill: var(--online);
+        }
+        .a423bdd721ddcc83-status[style='background-color: rgb(67, 162, 90);'] {
+            background-color: var(--online) !important;
+        }
+        rect[fill='#ca9654'],
+        .vc-platform-indicator > svg[fill='#ca9654'] {
+            fill: var(--idle);
+        }
+        .a423bdd721ddcc83-status[style='background-color: rgb(202, 150, 84);'] {
+            background-color: var(--idle) !important;
+        }
+        rect[fill='#d83a42'],
+        .vc-platform-indicator > svg[fill='#d83a42'] {
+            fill: var(--dnd);
+        }
+        .a423bdd721ddcc83-status[style='background-color: rgb(216, 58, 66);'] {
+            background-color: var(--dnd) !important;
+        }
+        rect[fill='#9147ff'] {
+            fill: var(--streaming);
+        }
+        div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
+            background-color: var(--online) !important;
+        }
+
+        /* fix radio bar button colors */
+        ._88a69141dd70013a-radioBar[style='--radio-bar-accent-color: var(--yellow-360); padding: 10px;'] {
+            --radio-bar-accent-color: var(--yellow-2) !important;
+        }
+        ._88a69141dd70013a-radioBar[style='--radio-bar-accent-color: var(--green-360); padding: 10px;'] {
+            --radio-bar-accent-color: var(--green-2) !important;
+        }
+        ._88a69141dd70013a-radioBar[style='--radio-bar-accent-color: var(--red-400); padding: 10px;'] {
+            --radio-bar-accent-color: var(--red-2) !important;
+        }
+
+        #vc-spotify-player {
+            --vc-spotify-green: var(--accent-2);
+        }
+        .a562c840daab72a7-barFill {
+            background-color: var(--accent-2) !important;
+        }
+
+        .vcd-screen-picker-option-radio[data-checked='true'] ._4bd5201c86a2042b-defaultColor {
+            color: var(--text-0);
+        }
+
+        ._71c22426f1aad6f4-memberRowContainer._71c22426f1aad6f4-memberSelected td {
+            background: var(--bg-3);
+        }
+    }
+
+    ::selection,
+    .highlight {
+        background: var(--accent-3);
+        color: var(--text-0);
+    }
+}
