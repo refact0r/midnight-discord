@@ -84,7 +84,8 @@ body {
     width: 100% !important;
 }
 .ef3116c2da186559-scroller /* server list inner scroller */ {
-    padding: var(--custom-guild-list-padding) 0;
+    padding-top: var(--custom-guild-list-padding) !important;
+    padding-bottom: var(--custom-guild-list-padding);
 }
 ._48112cbe77dc5022-folderGroup {
     width: 100%;
