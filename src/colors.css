@@ -654,8 +654,12 @@
         color: var(--text-3) !important;
     }
 
-    ._133bf5eea8e33a34-addFriend:hover /* add friend button hover */ {
-        color: var(--text-0) !important;
+    #app-mount ._133bf5eea8e33a34-addFriend:hover /* add friend button hover */ {
+        color: var(--text-0);
+    }
+    #app-mount ._133bf5eea8e33a34-addFriend[aria-selected=true] /* add friend button selected */ {
+        background-color: var(--accent-5) !important;
+        color: var(--text-0);
     }
 
     ._3f21e80f8677ec40-container /* settings checkbutton background */,
