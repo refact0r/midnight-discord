@@ -10,99 +10,95 @@ body {
     initial-value: aligned;
 }
 
-.visual-refresh {
-    ._0923f156a0410684-attachWrapper {
-        padding-top: 0;
-        padding-bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+._0923f156a0410684-attachWrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @container body style(--custom-chatbar: separated) {
-    .visual-refresh {
-        .f75fb00fb7356cbe-chatContent {
-            background: none;
-            border-radius: 0;
-            border: none;
-            backdrop-filter: none;
-        }
-        ._36d072eab2b2e737-messagesWrapper {
-            background-color: var(--background-base-lower);
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
-            overflow: hidden;
+    .f75fb00fb7356cbe-chatContent {
+        background: none;
+        border-radius: 0;
+        border: none;
+        backdrop-filter: none;
+    }
+    ._36d072eab2b2e737-messagesWrapper {
+        background-color: var(--background-base-lower);
+        border-radius: var(--radius-lg);
+        border: var(--border-thickness) solid var(--border-subtle);
+        backdrop-filter: var(--panel-backdrop-filter);
+        transition: border-color var(--border-hover-transition);
+        overflow: hidden;
 
-            &:hover {
-                border-color: var(--border-hover);
-            }
+        &:hover {
+            border-color: var(--border-hover);
         }
-        ._36d072eab2b2e737-scrollerSpacer {
-            height: calc(26px + var(--space-xs));
-        }
-        ._36d072eab2b2e737-scroller::-webkit-scrollbar-track {
-            margin-bottom: calc(26px);
-        }
-        .f75fb00fb7356cbe-chatContent:has(.b8880176888cc928-typing) ._36d072eab2b2e737-messagesWrapper::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--background-base-lower);
-            height: 26px;
-            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-            z-index: 2;
-        }
-        .f75fb00fb7356cbe-form {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            width: 100%;
-            margin-top: 0;
-        }
-        .b8880176888cc928-typing {
-            position: absolute;
-            order: -1;
-            top: calc(-26px + var(--border-thickness) * -1);
-            left: calc(var(--border-thickness));
-            border-radius: 0 0 0 var(--radius-lg);
-            padding: 0 0 0 var(--space-sm);
-            height: 26px;
-        }
-        .f75fb00fb7356cbe-channelBottomBarArea {
-            margin-top: var(--gap);
-        }
-        .f75fb00fb7356cbe-channelTextArea {
-            margin: 0;
-            background-color: var(--background-base-lower);
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
+    }
+    ._36d072eab2b2e737-scrollerSpacer {
+        height: calc(26px + var(--space-xs));
+    }
+    ._36d072eab2b2e737-scroller::-webkit-scrollbar-track {
+        margin-bottom: calc(26px);
+    }
+    .f75fb00fb7356cbe-chatContent:has(.b8880176888cc928-typing) ._36d072eab2b2e737-messagesWrapper::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--background-base-lower);
+        height: 26px;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        z-index: 2;
+    }
+    .f75fb00fb7356cbe-form {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+    .b8880176888cc928-typing {
+        position: absolute;
+        order: -1;
+        top: calc(-26px + var(--border-thickness) * -1);
+        left: calc(var(--border-thickness));
+        border-radius: 0 0 0 var(--radius-lg);
+        padding: 0 0 0 var(--space-sm);
+        height: 26px;
+    }
+    .f75fb00fb7356cbe-channelBottomBarArea {
+        margin-top: var(--gap);
+    }
+    .f75fb00fb7356cbe-channelTextArea {
+        margin: 0;
+        background-color: var(--background-base-lower);
+        border-radius: var(--radius-lg);
+        border: var(--border-thickness) solid var(--border-subtle);
+        backdrop-filter: var(--panel-backdrop-filter);
+        transition: border-color var(--border-hover-transition);
 
-            &:hover {
-                border-color: var(--border-hover);
-            }
+        &:hover {
+            border-color: var(--border-hover);
         }
-        ._740174f3d6a2c8fe-stackedBars {
-            background: none !important;
-        }
-        ._44df51b030bd5ece-wrapper {
-            margin: var(--gap) 0 0 0;
-            height: var(--chatbar-height);
-            padding: 0;
-            border-radius: var(--radius-lg);
-            border: var(--border-thickness) solid var(--border-subtle);
-            backdrop-filter: var(--panel-backdrop-filter);
-            transition: border-color var(--border-hover-transition);
+    }
+    ._740174f3d6a2c8fe-stackedBars {
+        background: none !important;
+    }
+    ._44df51b030bd5ece-wrapper {
+        margin: var(--gap) 0 0 0;
+        height: var(--chatbar-height);
+        padding: 0;
+        border-radius: var(--radius-lg);
+        border: var(--border-thickness) solid var(--border-subtle);
+        backdrop-filter: var(--panel-backdrop-filter);
+        transition: border-color var(--border-hover-transition);
 
-            &:hover {
-                border-color: var(--border-hover);
-            }
+        &:hover {
+            border-color: var(--border-hover);
         }
     }
 }

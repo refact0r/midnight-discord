@@ -5,14 +5,12 @@
 }
 
 @container body style(--small-user-panel: on) {
-    .visual-refresh {
-        ._5e434347c823b592-panels /* user panel */ {
-            right: 0;
-            left: unset;
-            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
-        }
-        ._5e434347c823b592-guilds /* server list */ {
-            margin-bottom: 0;
-        }
+    ._5e434347c823b592-panels /* user panel */ {
+        right: 0;
+        left: unset;
+        width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
+    }
+    ._5e434347c823b592-guilds /* server list */ {
+        margin-bottom: 0;
     }
 }
