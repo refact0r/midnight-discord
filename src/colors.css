@@ -533,7 +533,7 @@
         --text-status-online: magenta;
         --text-strong: var(--text-2);
         --text-subtle: var(--text-4);
-        --textbox-markdown-syntax: lime;
+        --textbox-markdown-syntax: var(--text-4);
         --thread-channel-spine: blue;
         --user-profile-activity-toolbar-background: magenta;
         --user-profile-background-hover: red;
