@@ -49,13 +49,11 @@ body {
 }
 
 @container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
-    .visual-refresh {
-        .c38106a3f0c3ca76-winButton {
-            width: calc(var(--window-control-size) * 2);
-            height: calc(var(--window-control-size) * 2);
-        }
-        .c38106a3f0c3ca76-winButtons {
-            gap: 0;
-        }
+    .c38106a3f0c3ca76-winButton {
+        width: calc(var(--window-control-size) * 2);
+        height: calc(var(--window-control-size) * 2);
+    }
+    .c38106a3f0c3ca76-winButtons {
+        gap: 0;
     }
 }
