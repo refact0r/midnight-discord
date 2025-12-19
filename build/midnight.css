@@ -42,7 +42,7 @@ body {
 .fb64c9a451c49797-container > ._9293f6b2fc12398a-container /* new thread panel */,
 ._133bf5eea8e33a34-peopleColumn /* online friends */,
 ._133bf5eea8e33a34-nowPlayingColumn /* active now */,
-.c880e89226639033-scroller /* nitro page */,
+.ca1a02dcad190ff8-mainPageScroller /* nitro page */,
 .f391e3680aff100a-container > .f75fb00fb7356cbe-content /* message requests */,
 ._6db1d32c47b6ad72-shop /* shop */,
 .f75fb00fb7356cbe-content > aside > .c0bea05627c5dc35-outer /* dm user panel */,
@@ -736,8 +736,8 @@ body {
         --background-surface-high: var(--bg-3);
         --background-surface-higher: var(--bg-3);
         --background-surface-highest: var(--bg-3);
-        --background-tile-gradient-pink-end: yellow;
-        --background-tile-gradient-pink-start: lime;
+        /* --background-tile-gradient-pink-end: yellow;
+        --background-tile-gradient-pink-start: lime; */
         --badge-background-default: blue;
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
@@ -898,18 +898,18 @@ body {
         --control-overlay-primary-text-active: var(--bg-4);
         --control-overlay-primary-text-default: var(--bg-4);
         --control-overlay-primary-text-hover: var(--bg-4);
-        --control-overlay-secondary-background-active: yellow;
-        --control-overlay-secondary-background-default: lime;
-        --control-overlay-secondary-background-hover: blue;
-        --control-overlay-secondary-border-active: magenta;
-        --control-overlay-secondary-border-default: red;
-        --control-overlay-secondary-border-hover: yellow;
-        --control-overlay-secondary-icon-active: lime;
-        --control-overlay-secondary-icon-default: blue;
-        --control-overlay-secondary-icon-hover: magenta;
-        --control-overlay-secondary-text-active: red;
-        --control-overlay-secondary-text-default: yellow;
-        --control-overlay-secondary-text-hover: lime;
+        --control-overlay-secondary-background-active: hsl(0, 0%, 0%, 0.4);
+        --control-overlay-secondary-background-default: hsl(0, 0%, 0%, 0.5);
+        --control-overlay-secondary-background-hover: hsl(0, 0%, 0%, 0.6);
+        --control-overlay-secondary-border-active: var(--border-light);
+        --control-overlay-secondary-border-default: var(--border-light);
+        --control-overlay-secondary-border-hover: var(--border-light);
+        --control-overlay-secondary-icon-active: var(--text-3);
+        --control-overlay-secondary-icon-default: var(--text-3);
+        --control-overlay-secondary-icon-hover: var(--text-3);
+        --control-overlay-secondary-text-active: var(--text-3);
+        --control-overlay-secondary-text-default: var(--text-3);
+        --control-overlay-secondary-text-hover: var(--text-3);
         --control-primary-background-active: var(--accent-5);
         --control-primary-background-default: var(--accent-3);
         --control-primary-background-hover: var(--accent-4);
@@ -999,7 +999,7 @@ body {
         --input-foreground-placeholder: yellow;
         --input-icon-default: lime;
         --input-placeholder-text-default: var(--text-5);
-        --input-text-default: magenta;
+        --input-text-default: var(--text-3);
         --input-text-error-default: red;
         --interactive-background-active: var(--active);
         --interactive-background-hover: var(--hover);
@@ -1029,20 +1029,20 @@ body {
         --modal-background: var(--bg-4);
         --modal-footer-background: var(--bg-4);
         --navigator-header-tint: lime;
-        --notice-background-critical: blue;
-        --notice-background-info: magenta;
-        --notice-background-positive: red;
-        --notice-background-warning: yellow;
-        --notice-text-critical: lime;
-        --notice-text-info: blue;
-        --notice-text-positive: magenta;
-        --notice-text-warning: red;
+        --notice-background-critical: var(--red-3);
+        --notice-background-info: var(--blue-3);
+        --notice-background-positive: var(--green-3);
+        --notice-background-warning: var(--yellow-3);
+        --notice-text-critical: var(--text-0);
+        --notice-text-info: var(--text-0);
+        --notice-text-positive: var(--text-0);
+        --notice-text-warning: var(--text-0);
         --overlay-backdrop-lightbox: yellow;
         --panel-bg: lime;
         --polls-normal-image-background: blue;
         --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
         --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
-        --premium-nitro-pink-text: magenta;
+        /* --premium-nitro-pink-text: magenta; */
         --profile-gradient-note-background: red;
         --profile-gradient-overlay: yellow;
         --profile-gradient-overlay-synced-with-user-theme: lime;
@@ -1072,7 +1072,7 @@ body {
         --redesign-button-destructive-text: yellow;
         --redesign-button-overlay-alpha-background: hsl(0, 0%, 0%, 0.5);
         --redesign-button-overlay-alpha-pressed-background: hsl(0, 0%, 0%, 0.7);
-        --redesign-button-overlay-alpha-text: magenta;
+        --redesign-button-overlay-alpha-text: var(--text-3);
         --redesign-button-positive-background: red;
         --redesign-button-premium-primary-pink-for-gradient: yellow;
         --redesign-button-premium-primary-pressed-background: lime;
@@ -1277,6 +1277,15 @@ body {
         color: var(--text-0);
     }
 
+    .b8a6bd65012c75d2-productCardBadge {
+        background-color: var(--bg-2) !important;
+        color: var(--text-3) !important;
+    }
+
+    ._133bf5eea8e33a34-addFriend:hover /* add friend button hover */ {
+        color: var(--text-0) !important;
+    }
+
     ._3f21e80f8677ec40-container /* settings checkbutton background */,
     .vc-switch-container {
         background-color: var(--bg-1) !important;
@@ -1355,7 +1364,6 @@ body {
     #app-mount ._488b1a4248d1b790-akaBadge /* aka badge */,
     ._9a9f981d3524e20f-message /* you have unsaved settings message */,
     ._523aa09e59621644-friendRequestsButton ._2b1f52e43a8f1c02-base /* inbox friend request number */,
-    ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--background-accent);'],
     .tooltipBlack__382e7 /* server boost tooltip */,
     .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark .f1ceaca61b18918e-centerIcon /* vc buttons */,
     .caf372efc4d47562-item.caf372efc4d47562-active /* settings items active */,
@@ -1371,6 +1379,10 @@ body {
     }
     ._2b1f52e43a8f1c02-textBadge /* new text badge (right click on person in vc) */ {
         color: var(--text-0);
+    }
+    ._2b1f52e43a8f1c02-textBadge[style='background-color: var(--primary-500);'] /* vc stream quality badge */ {
+        background-color: var(--bg-2) !important;
+        --white-500: var(--text-3);
     }
 
     ._3b95d7d910416e54-unread /* new unreads bar (channel list */,
