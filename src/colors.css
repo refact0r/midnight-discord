@@ -867,6 +867,10 @@
         background-color: var(--bg-4);
     }
 
+    ._034365f2217df5de-flash[data-flash='true'] /* reply message flash */ {
+        background: var(--reply);
+    }
+
     /* status indicators */
     rect[fill='#82838b'] {
         fill: var(--offline);
