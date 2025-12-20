@@ -361,10 +361,10 @@
         --icon-subtle: var(--text-4);
         --icon-transparent: lime;
         --input-background-default: var(--bg-3);
-        --input-background-error-default: magenta;
+        --input-background-error-default: color-mix(in hsl, var(--red-2), transparent 90%);
         --input-border-active: var(--accent-2);
         --input-border-default: var(--border-light);
-        --input-border-error-default: lime;
+        --input-border-error-default: var(--red-2);
         --input-border-error-hover: blue;
         --input-border-hover: var(--border);
         --input-border-readonly: red;
@@ -372,7 +372,7 @@
         --input-icon-default: lime;
         --input-placeholder-text-default: var(--text-5);
         --input-text-default: var(--text-3);
-        --input-text-error-default: red;
+        --input-text-error-default: var(--text-3);
         --interactive-background-active: var(--active);
         --interactive-background-hover: var(--hover);
         --interactive-background-selected: var(--active);
