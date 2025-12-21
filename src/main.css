@@ -22,6 +22,8 @@ body {
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
+
+    --top-bar-button-count: 2;
 }
 
 /* panel separation */
