@@ -1814,6 +1814,10 @@ body {
     ._9293f6b2fc12398a-toolbar {
         padding-right: var(--top-bar-right-margin);
     }
+    ._88ef12dca13ecf84-navBarContent,
+    ._1a9cebfbd0c9d0f6-headerBarContent {
+        padding-right: var(--top-bar-right-margin);
+    }
     ._8a7fc664acf53af6-headerBar {
         padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
     }
