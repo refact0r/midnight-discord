@@ -161,12 +161,6 @@ body {
     ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons) {
         --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
     }
-    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button) {
-        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
-    }
-    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons):has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button) {
-        --top-bar-right-margin: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
-    }
     ._5e434347c823b592-base:has(
             .c38106a3f0c3ca76-trailing > ._85643a485899904b-button
         ) {
