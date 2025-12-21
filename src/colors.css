@@ -113,7 +113,7 @@
         --badge-background-default: var(--accent-2);
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
-        --badge-text-default: yellow;
+        --badge-text-default: var(--text-0);
         --bg-surface-overlay-tmp: lime;
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
