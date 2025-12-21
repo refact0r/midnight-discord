@@ -1182,11 +1182,11 @@ body {
         --textbox-markdown-syntax: var(--text-4);
         --thread-channel-spine: blue;
         --user-profile-activity-toolbar-background: magenta;
-        --user-profile-background-hover: red;
+        --user-profile-background-hover: var(--hover);
         --user-profile-border: var(--border);
         --user-profile-note-background-focus: lime;
         --user-profile-overlay-background: var(--bg-4);
-        --user-profile-overlay-background-hover: var(--bg-2);
+        --user-profile-overlay-background-hover: var(--hover);
         --user-profile-toolbar-background: var(--bg-3);
         --user-profile-toolbar-border: var(--border);
 
