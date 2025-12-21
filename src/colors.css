@@ -85,7 +85,7 @@
     .theme-light:not(.custom-user-profile-theme) {
         --app-frame-background: var(--bg-3);
         --app-frame-border: var(--border);
-        --app-message-embed-secondary-text: yellow;
+        --app-message-embed-secondary-text: var(--text-2);
         --background-accent: var(--bg-2);
         --background-base-low: var(--bg-4);
         --background-base-lower: var(--bg-4);
@@ -110,7 +110,7 @@
         --background-surface-highest: var(--bg-3);
         /* --background-tile-gradient-pink-end: yellow;
         --background-tile-gradient-pink-start: lime; */
-        --badge-background-default: blue;
+        --badge-background-default: var(--accent-2);
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
         --badge-text-default: yellow;
@@ -527,10 +527,10 @@
         --text-muted: var(--text-5);
         --text-overlay-dark: magenta;
         --text-overlay-light: red;
-        --text-status-dnd: yellow;
-        --text-status-idle: lime;
-        --text-status-offline: blue;
-        --text-status-online: magenta;
+        --text-status-dnd: var(--dnd);
+        --text-status-idle: var(--idle);
+        --text-status-offline: var(--offline);
+        --text-status-online: var(--online);
         --text-strong: var(--text-2);
         --text-subtle: var(--text-4);
         --textbox-markdown-syntax: var(--text-4);
@@ -703,7 +703,8 @@
         .f37cb1984c371ee5-bannerVisible .f37cb1984c371ee5-name /* server name over banner image */,
         .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
         ._0f481cbbd7530492-mediaMosaicAltText /* image alt text label */,
-        .fb7f9476ada049c8-bannerButton /* profile banner corner buttons */ {
+        .fb7f9476ada049c8-bannerButton /* profile banner corner buttons */,
+        ._98ba899df138d534-embed /* embed primary text */ {
         color: var(--text-1);
     }
     .e4cb9af80253a521-headerText.base_eb1a4c /* stream preview header text */,

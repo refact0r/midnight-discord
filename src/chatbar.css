@@ -17,6 +17,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+._4d3a93bb8f6e0dd9-icon {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+._740174f3d6a2c8fe-attachButton {
+    display: flex;
+    align-items: center;
+}
 
 @container body style(--custom-chatbar: separated) {
     .f75fb00fb7356cbe-chatContent {
