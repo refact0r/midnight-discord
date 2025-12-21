@@ -441,9 +441,17 @@ body {
 ._24502a4069848acb-root {
     background: none;
 }
+
+._37e49614b9f110a9-container {
+    margin-inline-start: 0;
+    -webkit-margin-start: 0;
+}
 ._37e49614b9f110a9-container ._4bbc6dc06e75ad52-container /* nameplate */ {
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border-radius: var(--radius-lg);
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* remove unnecessary backgrounds */
