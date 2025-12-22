@@ -38,4 +38,10 @@ body {
     ._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-unread {
         margin-left: 4px;
     }
+    ._2ea32c412048f708-typeThread ._2ea32c412048f708-unread {
+        margin-left: -8px;
+    }
+    ._2ea32c412048f708-wrapper._2ea32c412048f708-typeThread:hover ._2ea32c412048f708-unread {
+        margin-left: 0px;
+    }
 }
