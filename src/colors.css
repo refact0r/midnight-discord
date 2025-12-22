@@ -114,7 +114,7 @@
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
         --badge-text-default: var(--text-0);
-        --bg-surface-overlay-tmp: lime;
+        --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
         --border-focus: red;
