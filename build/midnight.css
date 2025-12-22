@@ -768,7 +768,7 @@ body {
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
         --badge-text-default: var(--text-0);
-        --bg-surface-overlay-tmp: lime;
+        --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
         --border-focus: red;
@@ -779,7 +779,7 @@ body {
         --button-danger-background-disabled: lime;
         --button-outline-brand-background-hover: blue;
         --button-outline-brand-border-active: magenta;
-        --button-outline-primary-text: red;
+        --button-outline-primary-text: var(--text-1);
         --card-background-default: var(--bg-3);
         --card-primary-pressed-bg: lime;
         --card-secondary-bg: blue;
@@ -855,7 +855,7 @@ body {
         --content-inventory-overlay-text-primary: var(--text-2);
         --content-inventory-overlay-text-secondary: var(--text-3);
         --context-menu-backdrop-background: red;
-        --control-brand-foreground: yellow;
+        --control-brand-foreground: var(--accent-2);
         --control-brand-foreground-new: lime;
         --control-connect-background-active: var(--accent-5);
         --control-connect-background-default: var(--accent-4);
