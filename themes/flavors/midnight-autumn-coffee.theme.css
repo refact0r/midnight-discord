@@ -21,8 +21,8 @@ body {
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
-    --divider-thickness: 1px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
@@ -84,7 +84,7 @@ body {
     --text-5: rgb(132, 69, 86); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsla(220, 15%, 20%, 1); /* dark buttons when clicked */
+    --bg-1: rgb(34, 27, 19);/* dark buttons when clicked */
     --bg-2: rgb(41, 34, 37); /* dark buttons */
     --bg-3: rgb(45, 38, 40); /* spacing, secondary elements */
     --bg-4: rgb(50, 42, 45); /* main background color */
@@ -113,9 +113,9 @@ body {
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: var(--hover); /* general light border color */
-    --border: var(--active); /* general normal border color */
-    --border-hover: var(--active); /* border color of panels when hovered */
+    --border-light: rgba(213, 170, 113, 0.197); /* general light border color */
+    --border: rgba(213, 170, 113, 0.197); /* general normal border color */
+    --border-hover: rgba(213, 170, 113, 0.197); /* border color of panels when hovered */
     --button-border: rgb(31, 26, 28); /* neutral border color of buttons */
 
     /* base colors */
@@ -126,7 +126,7 @@ body {
     --red-5: oklch(55% 0.12 0);
 
     --green-1: oklch(75% 0.11 170);
-    --green-2: oklch(68.502% 0.15849 157.129);
+    --green-2: rgb(52, 152, 152);
     --green-3: oklch(65% 0.11 170);
     --green-4: oklch(60% 0.11 170);
     --green-5: oklch(55% 0.11 160);
