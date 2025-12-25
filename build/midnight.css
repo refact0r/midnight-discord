@@ -48,7 +48,7 @@ body {
 .f391e3680aff100a-container > .f75fb00fb7356cbe-content /* message requests */,
 ._6db1d32c47b6ad72-shop /* shop */,
 .f75fb00fb7356cbe-content > aside > .c0bea05627c5dc35-outer /* dm user panel */,
-.a9e7064fdee8e9b0-searchResultsWrap /* search results */,
+.a98f3b020416ad54-searchResultsWrap /* search results */,
 .f369dba7416c67f0-container /* forum */,
 .fb64c9a451c49797-chat /* new thread panel */,
 .a592e1970a0ce22c-container /* server discovery */,
@@ -252,7 +252,7 @@ body {
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
 
-.a9e7064fdee8e9b0-searchResultsWrap /* search results */ {
+.a98f3b020416ad54-searchResultsWrap /* search results */ {
     margin-left: var(--gap);
 }
 
@@ -442,9 +442,17 @@ body {
 ._24502a4069848acb-root {
     background: none;
 }
+
+._37e49614b9f110a9-container {
+    margin-inline-start: 0;
+    -webkit-margin-start: 0;
+}
 ._37e49614b9f110a9-container ._4bbc6dc06e75ad52-container /* nameplate */ {
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border-radius: var(--radius-lg);
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* remove unnecessary backgrounds */
@@ -508,6 +516,12 @@ body {
     ._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-unread {
         margin-left: 4px;
     }
+    ._2ea32c412048f708-typeThread ._2ea32c412048f708-unread {
+        margin-left: -8px;
+    }
+    ._2ea32c412048f708-wrapper._2ea32c412048f708-typeThread:hover ._2ea32c412048f708-unread {
+        margin-left: 0px;
+    }
 }
 
 /* background-image.css */
@@ -548,6 +562,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+._4d3a93bb8f6e0dd9-icon {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+._740174f3d6a2c8fe-attachButton {
+    display: flex;
+    align-items: center;
 }
 
 @container body style(--custom-chatbar: separated) {
@@ -723,7 +745,7 @@ body {
     .theme-light:not(.custom-user-profile-theme) {
         --app-frame-background: var(--bg-3);
         --app-frame-border: var(--border);
-        --app-message-embed-secondary-text: yellow;
+        --app-message-embed-secondary-text: var(--text-2);
         --background-accent: var(--bg-2);
         --background-base-low: var(--bg-4);
         --background-base-lower: var(--bg-4);
@@ -748,11 +770,11 @@ body {
         --background-surface-highest: var(--bg-3);
         /* --background-tile-gradient-pink-end: yellow;
         --background-tile-gradient-pink-start: lime; */
-        --badge-background-default: blue;
+        --badge-background-default: var(--accent-2);
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
-        --badge-text-default: yellow;
-        --bg-surface-overlay-tmp: lime;
+        --badge-text-default: var(--text-0);
+        --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
         --border-focus: red;
@@ -763,7 +785,7 @@ body {
         --button-danger-background-disabled: lime;
         --button-outline-brand-background-hover: blue;
         --button-outline-brand-border-active: magenta;
-        --button-outline-primary-text: red;
+        --button-outline-primary-text: var(--text-1);
         --card-background-default: var(--bg-3);
         --card-primary-pressed-bg: lime;
         --card-secondary-bg: blue;
@@ -839,7 +861,7 @@ body {
         --content-inventory-overlay-text-primary: var(--text-2);
         --content-inventory-overlay-text-secondary: var(--text-3);
         --context-menu-backdrop-background: red;
-        --control-brand-foreground: yellow;
+        --control-brand-foreground: var(--accent-2);
         --control-brand-foreground-new: lime;
         --control-connect-background-active: var(--accent-5);
         --control-connect-background-default: var(--accent-4);
@@ -1165,20 +1187,20 @@ body {
         --text-muted: var(--text-5);
         --text-overlay-dark: magenta;
         --text-overlay-light: red;
-        --text-status-dnd: yellow;
-        --text-status-idle: lime;
-        --text-status-offline: blue;
-        --text-status-online: magenta;
+        --text-status-dnd: var(--dnd);
+        --text-status-idle: var(--idle);
+        --text-status-offline: var(--offline);
+        --text-status-online: var(--online);
         --text-strong: var(--text-2);
         --text-subtle: var(--text-4);
         --textbox-markdown-syntax: var(--text-4);
         --thread-channel-spine: blue;
         --user-profile-activity-toolbar-background: magenta;
-        --user-profile-background-hover: red;
+        --user-profile-background-hover: var(--hover);
         --user-profile-border: var(--border);
         --user-profile-note-background-focus: lime;
         --user-profile-overlay-background: var(--bg-4);
-        --user-profile-overlay-background-hover: var(--bg-2);
+        --user-profile-overlay-background-hover: var(--hover);
         --user-profile-toolbar-background: var(--bg-3);
         --user-profile-toolbar-border: var(--border);
 
@@ -1341,7 +1363,8 @@ body {
         .f37cb1984c371ee5-bannerVisible .f37cb1984c371ee5-name /* server name over banner image */,
         .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
         ._0f481cbbd7530492-mediaMosaicAltText /* image alt text label */,
-        .fb7f9476ada049c8-bannerButton /* profile banner corner buttons */ {
+        .fb7f9476ada049c8-bannerButton /* profile banner corner buttons */,
+        ._98ba899df138d534-embed /* embed primary text */ {
         color: var(--text-1);
     }
     .e4cb9af80253a521-headerText.base_eb1a4c /* stream preview header text */,
@@ -1761,7 +1784,8 @@ body {
 @container body style(--top-bar-button-position: titlebar) {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-        --top-bar-right-margin: calc(32px + var(--space-xs));
+        /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
+        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
     }
 
     .c38106a3f0c3ca76-title, 
@@ -1796,6 +1820,10 @@ body {
     ._9293f6b2fc12398a-toolbar {
         padding-right: var(--top-bar-right-margin);
     }
+    ._88ef12dca13ecf84-navBarContent,
+    ._1a9cebfbd0c9d0f6-headerBarContent {
+        padding-right: var(--top-bar-right-margin);
+    }
     ._8a7fc664acf53af6-headerBar {
         padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
     }
@@ -1825,14 +1853,23 @@ body {
     ._5e434347c823b592-base:has(._6e2b9359c6f84cfd-notice) > .c38106a3f0c3ca76-bar > .c38106a3f0c3ca76-trailing {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
-    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons) {
-        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size));
+    /* ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons) {
+        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
     }
     ._5e434347c823b592-base:has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button) {
         --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
     }
     ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons):has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button) {
-        --top-bar-right-margin: calc(32px * 2 + 4 * var(--space-xs) + 6 * var(--window-control-size));
+        --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
+    } */
+    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button:nth-of-type(3)) {
+        --top-bar-right-margin: calc(32px * 3 + 3 * var(--space-xs));
+    }
+    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons) {
+        --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
+    }
+    ._5e434347c823b592-base:has(.c38106a3f0c3ca76-winButtons):has(.c38106a3f0c3ca76-trailing > ._85643a485899904b-button:nth-of-type(3)) {
+        --top-bar-right-margin: calc(32px * 3 + 6 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
     }
 }
 
