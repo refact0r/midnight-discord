@@ -47,7 +47,7 @@ body {
 .f391e3680aff100a-container > .f75fb00fb7356cbe-content /* message requests */,
 ._6db1d32c47b6ad72-shop /* shop */,
 .f75fb00fb7356cbe-content > aside > .c0bea05627c5dc35-outer /* dm user panel */,
-.a9e7064fdee8e9b0-searchResultsWrap /* search results */,
+.a98f3b020416ad54-searchResultsWrap /* search results */,
 .f369dba7416c67f0-container /* forum */,
 .fb64c9a451c49797-chat /* new thread panel */,
 .a592e1970a0ce22c-container /* server discovery */,
@@ -251,7 +251,7 @@ body {
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
 
-.a9e7064fdee8e9b0-searchResultsWrap /* search results */ {
+.a98f3b020416ad54-searchResultsWrap /* search results */ {
     margin-left: var(--gap);
 }
 
