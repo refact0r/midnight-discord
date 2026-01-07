@@ -1533,39 +1533,39 @@ body {
     }
 
     /* status indicators */
-    rect[fill='#82838b'] {
+    rect[fill='#84858d'] {
         fill: var(--offline);
     }
-    .a423bdd721ddcc83-status[style='background-color: rgb(130, 131, 139);'] {
+    .a423bdd721ddcc83-status[style='background-color: rgb(132, 133, 141);'] {
         background-color: var(--offline) !important;
     }
-    rect[fill='#43a25a'],
-        path[fill='#43a25a'] /* status activity icon */,
+    rect[fill='#45a366'],
+        path[fill='#45a366'] /* status activity icon */,
         path[fill='var(--status-positive)'] /* status activity icon */,
-        .vc-platform-indicator > svg[fill="#43a25a"] {
+        .vc-platform-indicator > svg[fill="#45a366"] {
         fill: var(--online);
     }
-    .a423bdd721ddcc83-status[style='background-color: rgb(67, 162, 90);'] {
+    .a423bdd721ddcc83-status[style='background-color: rgb(69, 163, 102);'] {
         background-color: var(--online) !important;
     }
-    rect[fill='#ca9654'],
-    .vc-platform-indicator > svg[fill='#ca9654'] {
+    rect[fill='#ffc04e'],
+    .vc-platform-indicator > svg[fill='#ffc04e'] {
         fill: var(--idle);
     }
-    .a423bdd721ddcc83-status[style='background-color: rgb(202, 150, 84);'] {
+    .a423bdd721ddcc83-status[style='background-color: rgb(255, 192, 78);'] {
         background-color: var(--idle) !important;
     }
-    rect[fill='#d83a42'],
-    .vc-platform-indicator > svg[fill='#d83a42'] {
+    rect[fill='#da3e44'],
+    .vc-platform-indicator > svg[fill='#da3e44'] {
         fill: var(--dnd);
     }
-    .a423bdd721ddcc83-status[style='background-color: rgb(216, 58, 66);'] {
+    .a423bdd721ddcc83-status[style='background-color: rgb(218, 62, 68);'] {
         background-color: var(--dnd) !important;
     }
     rect[fill='#9147ff'] {
         fill: var(--streaming);
     }
-    div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(67, 162, 90); height: 10px; width: 25px;'] {
+    div[style='display: flex; justify-content: center; align-items: center; border-radius: 5px; background-color: rgb(69, 163, 102); height: 10px; width: 25px;'] {
         background-color: var(--online) !important;
     }
 
