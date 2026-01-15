@@ -758,6 +758,7 @@ body {
         --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
         --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
+        --background-feedback-notification: var(--accent-new);
         --background-mod-muted: var(--hover);
         --background-mod-normal: var(--bg-2);
         --background-mod-strong: var(--bg-1);
@@ -773,6 +774,7 @@ body {
         --badge-background-default: var(--accent-2);
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
+        --badge-notification-background: var(--accent-new);
         --badge-text-default: var(--text-0);
         --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
