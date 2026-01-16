@@ -150,6 +150,6 @@ body {
     --purple-5: hsl(261, 55%, 61%);
 }
 
-.divider__908e2:not(.isUnread__908e2) {
+._5126c0cd07f243a0-divider:not(._908e20001ad67812-isUnread) {
     border-color: var(--bg-2);
 }
