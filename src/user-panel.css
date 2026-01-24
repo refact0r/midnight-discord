@@ -8,8 +8,15 @@
     ._5e434347c823b592-panels /* user panel */ {
         right: 0;
         left: unset;
+        padding-top: 10px !important;
         width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
     }
+
+    .e131a99484292a19-actionButtons {
+        padding-top: 15px !important;
+        padding-bottom: 5px !important;
+    }
+
     ._5e434347c823b592-guilds /* server list */ {
         margin-bottom: 0;
     }
