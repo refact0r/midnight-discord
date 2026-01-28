@@ -353,7 +353,7 @@
         --icon-feedback-positive: var(--green-1);
         --icon-feedback-warning: var(--yellow-1);
         --icon-invert: magenta;
-        --icon-link: red;
+        --icon-link: var(--text-4);
         --icon-muted: var(--text-5);
         --icon-status-dnd: var(--dnd);
         --icon-status-idle: var(--idle);
