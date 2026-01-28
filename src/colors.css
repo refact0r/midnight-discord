@@ -427,11 +427,11 @@
         --radio-background-default: var(--bg-4);
         --radio-background-hover: var(--hover);
         --radio-background-selected-default: var(--background-brand);
-        --radio-background-selected-hover: var(--control-primary-background-hover);
+        --radio-background-selected-hover: var(--accent-4);
         --radio-border-active: yellow;
         --radio-border-default: var(--border);
         --radio-border-hover: var(--border-subtle);
-        --radio-border-selected-default: var(--control-secondary-background-default);
+        --radio-border-selected-default: var(--bg-2);
         --radio-border-selected-hover: var(--border-subtle);
         --radio-foreground-active: yellow;
         --radio-foreground-default: lime;
@@ -940,11 +940,10 @@
         color: var(--text-0);
     }
 
-    .switchIndicator_a28278[style*="background-color: rgb(88, 101, 242)"] {
-        background-color: var(--control-primary-background-default) !important;
+    .switchIndicator_a28278[style*='background-color: rgb(88, 101, 242)'] {
+        background-color: var(--accent-3) !important;
     }
-    .switchIndicator_a28278[style*="background-color: rgb(68, 82, 187)"] {
-        background-color: var(--control-primary-background-hover) !important;
+    .switchIndicator_a28278[style*='background-color: rgb(68, 82, 187)'] {
+        background-color: var(--accent-4) !important;
     }
 }
-
