@@ -95,7 +95,7 @@ body {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
         /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
-        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
+        --top-bar-right-margin: calc(32px + var(--space-xs));
     }
 
     .title_c38106,
@@ -162,7 +162,7 @@ body {
     .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
-    /* .base__5e434:has(.winButtons_c38106) {
+    .base__5e434:has(.winButtons_c38106) {
         --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
     }
     .base__5e434:has(.trailing_c38106 > .button__85643) {
@@ -170,8 +170,8 @@ body {
     }
     .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    } */
-    .base__5e434:has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
+    }
+    /* .base__5e434:has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
         --top-bar-right-margin: calc(32px * 3 + 3 * var(--space-xs));
     }
     .base__5e434:has(.winButtons_c38106) {
@@ -179,7 +179,7 @@ body {
     }
     .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
         --top-bar-right-margin: calc(32px * 3 + 6 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    }
+    } */
 }
 
 @property --top-bar-title-position {
