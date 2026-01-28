@@ -424,19 +424,19 @@
         --profile-gradient-role-pill-border: magenta;
         --profile-gradient-section-box: red;
         --radio-background-active: yellow;
-        --radio-background-default: lime;
-        --radio-background-hover: blue;
-        --radio-background-selected-default: magenta;
-        --radio-background-selected-hover: red;
+        --radio-background-default: var(--bg-4);
+        --radio-background-hover: var(--hover);
+        --radio-background-selected-default: var(--control-primary-background-default);
+        --radio-background-selected-hover: var(--control-primary-background-hover);
         --radio-border-active: yellow;
-        --radio-border-default: lime;
-        --radio-border-hover: blue;
-        --radio-border-selected-default: magenta;
-        --radio-border-selected-hover: red;
+        --radio-border-default: var(--border-normal);
+        --radio-border-hover: var(--border-subtle);
+        --radio-border-selected-default: var(--control-secondary-background-default);
+        --radio-border-selected-hover: var(--border-subtle);
         --radio-foreground-active: yellow;
         --radio-foreground-default: lime;
         --radio-foreground-hover: blue;
-        --radio-thumb-background-active: magenta;
+        --radio-thumb-background-active: var(--control-secondary-background-default);
         --redesign-button-active-background: red;
         --redesign-button-active-pressed-background: yellow;
         --redesign-button-active-text: lime;
@@ -939,4 +939,12 @@
         background: var(--accent-3);
         color: var(--text-0);
     }
+
+    .switchIndicator_a28278[style*="background-color: rgb(88, 101, 242)"] {
+        background-color: var(--control-primary-background-default) !important;
+    }
+    .switchIndicator_a28278[style*="background-color: rgb(68, 82, 187)"] {
+        background-color: var(--control-primary-background-hover) !important;
+    }
 }
+
