@@ -1200,7 +1200,7 @@ body {
         --user-profile-activity-toolbar-background: magenta;
         --user-profile-background-hover: var(--hover);
         --user-profile-border: var(--border);
-        --user-profile-note-background-focus: lime;
+        --user-profile-note-background-focus: var(--bg-4);
         --user-profile-overlay-background: var(--bg-4);
         --user-profile-overlay-background-hover: var(--hover);
         --user-profile-toolbar-background: var(--bg-3);
