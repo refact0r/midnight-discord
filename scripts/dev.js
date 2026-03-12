@@ -47,23 +47,24 @@ function combineSourceFiles() {
 }
 
 // Process the base file and replace imports with actual content
-function processBaseFile(compiledCSS) {
-    const baseContent = fs.readFileSync(baseFile, 'utf8');
-    const importRegex = /@import\s+url\(['"]?[^'"]+['"]?\);/g;
+// function processBaseFile(compiledCSS) {
+//     const baseContent = fs.readFileSync(baseFile, 'utf8');
+//     const importRegex = /@import\s+url\(['"]?[^'"]+['"]?\);/g;
 
-    const processedContent = baseContent.replace(importRegex, compiledCSS);
+//     const processedContent = baseContent.replace(importRegex, compiledCSS);
 
-    outputPaths.forEach((outputPath) => {
-        fs.writeFileSync(outputPath, processedContent);
-        console.log(`Updated ${outputPath}`);
-    });
-}
+//     outputPaths.forEach((outputPath) => {
+//         fs.writeFileSync(outputPath, processedContent);
+//         console.log(`Updated ${outputPath}`);
+//     });
+// }
 
 // Main function to process files
 function processFiles() {
     try {
-        const compiledCSS = combineSourceFiles();
-        processBaseFile(compiledCSS);
+        // const compiledCSS = combineSourceFiles();
+        // processBaseFile(compiledCSS);
+        combineSourceFiles();
     } catch (error) {
         console.error('Error processing files:', error);
     }
