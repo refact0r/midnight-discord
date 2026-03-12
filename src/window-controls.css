@@ -1,5 +1,10 @@
 body {
     --window-control-size: 14px;
+    --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
+}
+
+.winButtons_c38106 {
+    padding-right: var(--window-controls-padding);
 }
 
 @property --custom-window-controls {
@@ -11,7 +16,6 @@ body {
 @container body style(--custom-window-controls: on) {
     .winButtons_c38106 {
         gap: 0;
-        padding-right: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
     }
     .winButtons_c38106::before {
         margin-right: calc(var(--custom-app-top-bar-height) / 4);
@@ -45,9 +49,6 @@ body {
     }
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
-    }
-    .base__5e434 {
-        --gap-multiplier: 2.6 !important;
     }
 }
 

@@ -172,8 +172,7 @@ body {
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
         
         &:has(.winButtons_c38106) {
-            --gap-multiplier: 1.8;
-            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + var(--gap-multiplier)) * var(--space-xs) + 6 * var(--window-control-size) + 1px) !important;   
+            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + 1px + var(--window-controls-padding)) !important;
         }
     }
     /* .base__5e434:has(.trailing_c38106 > .button__85643) {
