@@ -494,16 +494,16 @@
         --status-warning-background: red;
         --status-warning-text: yellow;
         --switch-background-active: lime;
-        --switch-background-default: blue;
-        --switch-background-hover: magenta;
-        --switch-background-selected-default: red;
-        --switch-background-selected-hover: yellow;
-        --switch-border-default: lime;
-        --switch-border-hover: blue;
-        --switch-border-selected-default: magenta;
-        --switch-border-selected-hover: red;
-        --switch-thumb-background-default: yellow;
-        --switch-thumb-background-selected-default: lime;
+        --switch-background-default: var(--bg-3);
+        --switch-background-hover: var(--accent-4);
+        --switch-background-selected-default: var(--accent-3);
+        --switch-background-selected-hover: var(--accent-4);
+        --switch-border-default: rgba(151, 151, 159, 0.2);
+        --switch-border-hover: rgba(151, 151, 159, 0.4);
+        --switch-border-selected-default: rgba(151, 151, 159, 0.12);
+        --switch-border-selected-hover: rgba(151, 151, 159, 0.4);
+        --switch-thumb-background-default: rgb(255, 255, 255);
+        --switch-thumb-background-selected-default: rgb(255, 255, 255);
         --switch-thumb-icon-active: blue;
         --switch-thumb-icon-default: magenta;
         --text-brand: var(--accent-1);
@@ -940,10 +940,22 @@
         color: var(--text-0);
     }
 
-    .switchIndicator_a28278[style*='background-color: rgb(88, 101, 242)'] {
-        background-color: var(--accent-3) !important;
-    }
-    .switchIndicator_a28278[style*='background-color: rgb(68, 82, 187)'] {
-        background-color: var(--accent-4) !important;
+    .switchIndicator_a28278 {
+        transition: 0.2s ease;
+
+        /* Default state */
+        &[style*='background-color: rgb(88, 101, 242)'] {
+            background-color: var(--accent-3) !important;
+        }
+
+        /* Hovered state */
+        &[style*='background-color: rgb(68, 82, 187)'] {
+            background-color: var(--accent-4) !important;
+        }
+
+        /* Clicked state */
+        &:has(svg:not([style="left: 1px;"])):has(rect:not([height="16"])) {
+            background-color: var(--accent-5) !important;
+        }
     }
 }
