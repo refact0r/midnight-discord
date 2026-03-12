@@ -46,6 +46,9 @@ body {
     .winButtonMinMax_c38106:nth-child(2)::after {
         background-color: var(--online) !important;
     }
+    .base__5e434 {
+        --gap-multiplier: 2.6 !important;
+    }
 }
 
 @container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
