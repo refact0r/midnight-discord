@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
 
-require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+require('dotenv').config({ path: path.join(__dirname, '.', '.env') });
 
 // File and directory paths
 const baseFile = path.join(__dirname, '..', '/themes/midnight.theme.css');
