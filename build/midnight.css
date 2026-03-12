@@ -1593,12 +1593,12 @@ body {
         transition: 0.2s ease;
 
         /* Default state */
-        &[style*='background-color: rgb(88, 101, 242)'] {
+        &[style^='opacity: 1; background-color: rgb(88, 101, 242)'] {
             background-color: var(--accent-3) !important;
         }
 
         /* Hovered state */
-        &[style*='background-color: rgb(68, 82, 187)'] {
+        &[style^='opacity: 1; background-color: rgb(68, 82, 187)'] {
             background-color: var(--accent-4) !important;
         }
 
