@@ -1143,10 +1143,10 @@ body {
         --status-warning-background: red;
         --status-warning-text: yellow;
         --switch-background-active: lime;
-        --switch-background-default: var(--bg-3);
-        --switch-background-hover: var(--accent-4);
-        --switch-background-selected-default: var(--accent-3);
-        --switch-background-selected-hover: var(--accent-4);
+        --switch-background-default: var(--bg-2);
+        --switch-background-hover: var(--bg-2);
+        --switch-background-selected-default: var(--accent-2);
+        --switch-background-selected-hover: var(--accent-2);
         --switch-border-default: rgba(151, 151, 159, 0.2);
         --switch-border-hover: rgba(151, 151, 159, 0.4);
         --switch-border-selected-default: rgba(151, 151, 159, 0.12);
@@ -1314,12 +1314,12 @@ body {
     }
 
     .container__3f21e /* settings checkbutton background */,
-    .vc-switch-container {
+    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
     .container__3f21e.checked__3f21e /* settings checkbutton background */,
-    .vc-switch-container.vc-switch-checked {
+    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
     }
     .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
