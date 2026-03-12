@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
 
-require('dotenv').config({ path: path.join(__dirname, '', '.env') });
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
 // File and directory paths
 const baseFile = path.join(__dirname, '..', '/themes/midnight.theme.css');
@@ -47,24 +47,23 @@ function combineSourceFiles() {
 }
 
 // Process the base file and replace imports with actual content
-// function processBaseFile(compiledCSS) {
-//     const baseContent = fs.readFileSync(baseFile, 'utf8');
-//     const importRegex = /@import\s+url\(['"]?[^'"]+['"]?\);/g;
+function processBaseFile(compiledCSS) {
+    const baseContent = fs.readFileSync(baseFile, 'utf8');
+    const importRegex = /@import\s+url\(['"]?[^'"]+['"]?\);/g;
 
-//     const processedContent = baseContent.replace(importRegex, compiledCSS);
+    const processedContent = baseContent.replace(importRegex, compiledCSS);
 
-//     outputPaths.forEach((outputPath) => {
-//         fs.writeFileSync(outputPath, processedContent);
-//         console.log(`Updated ${outputPath}`);
-//     });
-// }
+    outputPaths.forEach((outputPath) => {
+        fs.writeFileSync(outputPath, processedContent);
+        console.log(`Updated ${outputPath}`);
+    });
+}
 
 // Main function to process files
 function processFiles() {
     try {
-        // const compiledCSS = combineSourceFiles();
-        // processBaseFile(compiledCSS);
-        combineSourceFiles();
+        const compiledCSS = combineSourceFiles();
+        processBaseFile(compiledCSS);
     } catch (error) {
         console.error('Error processing files:', error);
     }
