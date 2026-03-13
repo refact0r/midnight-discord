@@ -3,26 +3,15 @@
 
 :root {
     container-name: root;
+    
     --custom-guild-list-padding: 12px;
     --panel-backdrop-filter: none;
-
-    --border-hover: var(--border-subtle);
 }
 
 body {
     container-name: body;
 
-    /* font, change to '' for default discord font */
-    --font: 'figtree';
-    --code-font: '';
-
-    /* sizes */
-    --gap: 12px; /* spacing between panels */
-    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
-
-    --border-hover-transition: 0.2s ease;
 }
 
 /* panel separation */
@@ -42,7 +31,7 @@ body {
 .container_fb64c9 > .container__9293f /* new thread panel */,
 .peopleColumn__133bf /* online friends */,
 .nowPlayingColumn__133bf /* active now */,
-.mainPageScroller_ca1a02 /* nitro page */,
+.mainPageScroller__80907 /* nitro page */,
 .headerBar__1a9ce /* quests page titlebar */,
 .scroller__23746 /* quests page */,
 .container_f391e3 > .content_f75fb0 /* message requests */,
@@ -1022,6 +1011,7 @@ body {
         --icon-strong: var(--text-3);
         --icon-subtle: var(--text-4);
         --icon-transparent: lime;
+        --icon-voice-muted: var(--accent-2);
         --input-background-default: var(--bg-3);
         --input-background-error-default: color-mix(in hsl, var(--red-2), transparent 90%);
         --input-border-active: var(--accent-2);
@@ -1154,16 +1144,16 @@ body {
         --status-warning-background: red;
         --status-warning-text: yellow;
         --switch-background-active: lime;
-        --switch-background-default: blue;
-        --switch-background-hover: magenta;
-        --switch-background-selected-default: red;
-        --switch-background-selected-hover: yellow;
-        --switch-border-default: lime;
-        --switch-border-hover: blue;
-        --switch-border-selected-default: magenta;
-        --switch-border-selected-hover: red;
-        --switch-thumb-background-default: yellow;
-        --switch-thumb-background-selected-default: lime;
+        --switch-background-default: var(--bg-2);
+        --switch-background-hover: var(--bg-2);
+        --switch-background-selected-default: var(--accent-2);
+        --switch-background-selected-hover: var(--accent-2);
+        --switch-border-default: var(--border);
+        --switch-border-hover: var(--border-hover);
+        --switch-border-selected-default: var(--border-light);
+        --switch-border-selected-hover: var(--border-hover);
+        --switch-thumb-background-default: rgb(255, 255, 255);
+        --switch-thumb-background-selected-default: rgb(255, 255, 255);
         --switch-thumb-icon-active: blue;
         --switch-thumb-icon-default: magenta;
         --text-brand: var(--accent-1);
@@ -1325,12 +1315,12 @@ body {
     }
 
     .container__3f21e /* settings checkbutton background */,
-    .vc-switch-container {
+    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
     .container__3f21e.checked__3f21e /* settings checkbutton background */,
-    .vc-switch-container.vc-switch-checked {
+    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
     }
     .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
@@ -1600,11 +1590,29 @@ body {
         color: var(--text-0);
     }
 
-    .switchIndicator_a28278[style*='background-color: rgb(88, 101, 242)'] {
-        background-color: var(--accent-3) !important;
-    }
-    .switchIndicator_a28278[style*='background-color: rgb(68, 82, 187)'] {
-        background-color: var(--accent-4) !important;
+    .switchIndicator_a28278 {
+        transition: 0.2s ease;
+
+        /* Default state */
+        &[style^='opacity: 1; background-color: rgb(88, 101, 242)'] {
+            background-color: var(--accent-3) !important;
+        }
+
+        /* Hovered state */
+        &[style^='opacity: 1; background-color: rgb(68, 82, 187)'] {
+            background-color: var(--accent-4) !important;
+        }
+
+        /* Clicked state */
+        &:has(> svg:not([style="left: 1px;"])) {
+            &:has(rect:not([height="16"])) {
+                background-color: var(--accent-5) !important;
+            }
+
+            .thumb_a28278 > svg path {
+                fill: var(--accent-2);
+            }
+        }
     }
 }
 
@@ -1795,10 +1803,8 @@ body {
 @container body style(--top-bar-button-position: titlebar) {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-        /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
         --top-bar-right-margin: calc(32px + var(--space-xs));
     }
-
     .title_c38106,
     .trailing_c38106 > a[href='https://support.discord.com'] {
         display: none;
@@ -1830,7 +1836,7 @@ body {
     .toolbar__9293f {
         padding-right: var(--top-bar-right-margin);
     }
-    .navBarContent__88ef1,
+    .navBarContent__131a1,
     .headerBarContent__1a9ce {
         padding-right: var(--top-bar-right-margin);
     }
@@ -1863,15 +1869,47 @@ body {
     .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
-    .base__5e434:has(.winButtons_c38106) {
-        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
+    /* Fix header icon overlap */
+    .base__5e434,
+    .toolbar__9293f {
+        /* Supports up to 6 buttons */
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) { --button-count: 1; }
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) { --button-count: 2; }
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(3)) { --button-count: 3; }
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(4)) { --button-count: 4; }
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(5)) { --button-count: 5; }
+        &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
+        
+        &:has(.winButtons_c38106) {
+            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + 1px + var(--window-controls-padding)) !important;
+        }
+
+        /* Revert icon sizing changes */
+        .trailing_c38106 {
+            > div:not(.winButtons_c38106),
+            div.clickable__81391 {
+                width: 32px !important;
+                height: 32px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
-    .base__5e434:has(.trailing_c38106 > .button__85643) {
+    /* .base__5e434:has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
-    }
-    .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
+    } */
+    /* .base__5e434:has(.winButtons_c38106) {
+        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
+    } */
+    /* .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    }
+    } */
     /* .base__5e434:has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
         --top-bar-right-margin: calc(32px * 3 + 3 * var(--space-xs));
     }
@@ -2003,6 +2041,11 @@ body {
 /* window-controls.css */
 body {
     --window-control-size: 14px;
+    --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
+}
+
+.winButtons_c38106 {
+    padding-right: var(--window-controls-padding);
 }
 
 @property --custom-window-controls {
@@ -2014,7 +2057,6 @@ body {
 @container body style(--custom-window-controls: on) {
     .winButtons_c38106 {
         gap: 0;
-        padding-right: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
     }
     .winButtons_c38106::before {
         margin-right: calc(var(--custom-app-top-bar-height) / 4);
