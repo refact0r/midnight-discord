@@ -362,6 +362,7 @@
         --icon-strong: var(--text-3);
         --icon-subtle: var(--text-4);
         --icon-transparent: lime;
+        --icon-voice-muted: var(--accent-2);
         --input-background-default: var(--bg-3);
         --input-background-error-default: color-mix(in hsl, var(--red-2), transparent 90%);
         --input-border-active: var(--accent-2);
@@ -954,8 +955,14 @@
         }
 
         /* Clicked state */
-        &:has(svg:not([style="left: 1px;"])):has(rect:not([height="16"])) {
-            background-color: var(--accent-5) !important;
+        &:has(> svg:not([style="left: 1px;"])) {
+            &:has(rect:not([height="16"])) {
+                background-color: var(--accent-5) !important;
+            }
+
+            .thumb_a28278 > svg path {
+                fill: var(--accent-2);
+            }
         }
     }
 }
