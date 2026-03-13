@@ -3,7 +3,7 @@
 
 :root {
     container-name: root;
-    
+
     --custom-guild-list-padding: 12px;
     --panel-backdrop-filter: none;
 }
@@ -11,7 +11,17 @@
 body {
     container-name: body;
 
+    /* font, change to '' for default discord font */
+    --font: 'figtree';
+    --code-font: '';
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
+
+    --border-hover-transition: 0.2s ease;
 }
 
 /* panel separation */
