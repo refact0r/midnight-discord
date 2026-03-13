@@ -499,10 +499,10 @@
         --switch-background-hover: var(--bg-2);
         --switch-background-selected-default: var(--accent-2);
         --switch-background-selected-hover: var(--accent-2);
-        --switch-border-default: rgba(151, 151, 159, 0.2);
-        --switch-border-hover: rgba(151, 151, 159, 0.4);
-        --switch-border-selected-default: rgba(151, 151, 159, 0.12);
-        --switch-border-selected-hover: rgba(151, 151, 159, 0.4);
+        --switch-border-default: var(--border);
+        --switch-border-hover: var(--border-hover);
+        --switch-border-selected-default: var(--border-light);
+        --switch-border-selected-hover: var(--border-hover);
         --switch-thumb-background-default: rgb(255, 255, 255);
         --switch-thumb-background-selected-default: rgb(255, 255, 255);
         --switch-thumb-icon-active: blue;
