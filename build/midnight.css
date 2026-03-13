@@ -31,7 +31,7 @@ body {
 .container_fb64c9 > .container__9293f /* new thread panel */,
 .peopleColumn__133bf /* online friends */,
 .nowPlayingColumn__133bf /* active now */,
-.mainPageScroller_ca1a02 /* nitro page */,
+.mainPageScroller__80907 /* nitro page */,
 .headerBar__1a9ce /* quests page titlebar */,
 .scroller__23746 /* quests page */,
 .container_f391e3 > .content_f75fb0 /* message requests */,
@@ -1829,7 +1829,7 @@ body {
     .toolbar__9293f {
         padding-right: var(--top-bar-right-margin);
     }
-    .navBarContent__88ef1,
+    .navBarContent__131a1,
     .headerBarContent__1a9ce {
         padding-right: var(--top-bar-right-margin);
     }
