@@ -1883,6 +1883,23 @@ body {
         &:has(.winButtons_c38106) {
             --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + 1px + var(--window-controls-padding)) !important;
         }
+
+        /* Revert icon sizing changes */
+        .trailing_c38106 {
+            > div:not(.winButtons_c38106),
+            div.clickable__81391 {
+                width: 32px !important;
+                height: 32px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
     /* .base__5e434:has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
