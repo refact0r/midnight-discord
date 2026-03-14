@@ -593,6 +593,10 @@
         background: none;
     }
 
+    .sidebar__409aa, /* user settings sidebar */
+    .sidebarRegionScroller__23e6b /* server and channel settings sidebar */ {
+        background-color: var(--bg-3);
+    }
     .side_aa8da2 .item_aa8da2:hover /* settings tab */ {
         background-color: var(--bg-3) !important;
     }

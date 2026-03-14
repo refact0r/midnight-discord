@@ -417,20 +417,20 @@ body {
 
 /* improve borders */
 .reaction__23977 /* message reactions */,
-    .reactionBtn__23977.forceShow__23977 /* add reaction button */ {
+.reactionBtn__23977.forceShow__23977 /* add reaction button */ {
     border-width: 2px;
 }
 
 /* roundness */
 .embedFull__623de /* embeds */,
-    .hljs /* code block */,
-    .imageWrapper_af017a /* image */,
-    .container__9271d /* thread link */ {
+.hljs /* code block */,
+.imageWrapper_af017a /* image */,
+.container__9271d /* thread link */ {
     border-radius: var(--radius-md);
 }
 
 .outer_c0bea0 /* profile outer */, 
-    .contentWrapper__08434  /* gif panel */ {
+.contentWrapper__08434  /* gif panel */ {
     border-radius: var(--radius-lg) !important;
 }
 .inner_c0bea0 /* profile inner */ {
