@@ -200,6 +200,9 @@ body {
             }
         }
     }
+    .bar_c38106 .backForwardButtons__63abb {
+        display: none;
+    }
     /* .base__5e434:has(.trailing_c38106 > .button__85643) {
         --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
     } */
