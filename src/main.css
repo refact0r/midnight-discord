@@ -305,6 +305,11 @@ body {
     height: calc(100% - var(--gap));
 }
 
+/* Apply gap to mod view container */
+.sidebarContainer__656be {
+    margin-inline-start: var(--gap);
+}
+
 /* remove excess background from settings  */
 .standardSidebarView__23e6b,
 .contentRegion__23e6b,
@@ -426,7 +431,7 @@ body {
 
 .outer_c0bea0 /* profile outer */, 
     .contentWrapper__08434  /* gif panel */ {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-lg) !important;
 }
 .inner_c0bea0 /* profile inner */ {
     border-radius: calc(var(--radius-lg) - 4px);

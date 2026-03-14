@@ -347,7 +347,7 @@
         --expressive-gradient-tenure-badge-silver-start: magenta; */
         --gradient-progress-pill-background: var(--text-5);
         --home-background: var(--bg-4);
-        --icon-default: lime;
+        --icon-default: var(--text-4);
         --icon-feedback-critical: var(--red-1);
         --icon-feedback-info: var(--blue-1);
         --icon-feedback-positive: var(--green-1);
@@ -964,5 +964,9 @@
                 fill: var(--accent-2);
             }
         }
+    }
+
+    .selectedPill__1464f {
+        border-color: var(--accent-2) !important;
     }
 }
