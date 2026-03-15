@@ -314,7 +314,6 @@ body {
 /* remove excess background from settings  */
 .standardSidebarView__23e6b,
 .contentRegion__23e6b,
-.sidebarRegionScroller__23e6b,
 .contentRegionScroller__23e6b {
     background: none;
 }
@@ -1864,7 +1863,7 @@ body {
         padding-right: var(--top-bar-right-margin);
     }
     /* Remove unused space when thread is open */
-    :has(.chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f {
+    .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f {
         padding-right: 0;
     }
     .navBarContent__131a1,
@@ -1932,6 +1931,7 @@ body {
             }
         }
     }
+    /* Hide page seek arrows */
     .bar_c38106 .backForwardButtons__63abb {
         display: none;
     }
