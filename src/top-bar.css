@@ -165,7 +165,7 @@ body {
         padding-top: 0;
         padding-bottom: 0;
     }
-    .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+    .base__5e434:has(.notice__29487, .notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
     /* Fix header icon overlap */

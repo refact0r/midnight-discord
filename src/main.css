@@ -254,6 +254,7 @@ body {
     margin-left: var(--gap);
 }
 
+.notice__29487 /* free nitro banner */,
 .notice__6e2b9 /* notice banner */ {
     margin: 0 var(--gap) var(--gap) 0;
     border-radius: var(--radius-md);
