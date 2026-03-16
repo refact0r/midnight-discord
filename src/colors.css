@@ -347,7 +347,7 @@
         --expressive-gradient-tenure-badge-silver-start: magenta; */
         --gradient-progress-pill-background: var(--text-5);
         --home-background: var(--bg-4);
-        --icon-default: lime;
+        --icon-default: var(--text-4);
         --icon-feedback-critical: var(--red-1);
         --icon-feedback-info: var(--blue-1);
         --icon-feedback-positive: var(--green-1);
@@ -593,6 +593,10 @@
         background: none;
     }
 
+    .sidebar__409aa, /* user settings sidebar */
+    .sidebarRegionScroller__23e6b /* server and channel settings sidebar */ {
+        background-color: var(--bg-3);
+    }
     .side_aa8da2 .item_aa8da2:hover /* settings tab */ {
         background-color: var(--bg-3) !important;
     }
@@ -964,5 +968,9 @@
                 fill: var(--accent-2);
             }
         }
+    }
+
+    .selectedPill__1464f {
+        border-color: var(--accent-2) !important;
     }
 }
