@@ -361,7 +361,7 @@ body {
 .channelTextArea_f75fb0 /* chat bar */ {
     border-radius: var(--radius-md);
 }
-.themedBackground__74017:has(.uploadInput__0923f) /* chat bar inner */ {
+.form_f75fb0 .themedBackground__74017 /* chat bar inner */ {
     background: none;
 }
 .slateTextArea_ec4baf /* actual typing area */ {
@@ -462,7 +462,7 @@ body {
 }
 
 /* Fix screen share modal coloring and spacing */
-.container__8a031 {
+.container__8a031:has(.footer_a55fdc) {
     padding-bottom: 0;
 
     .sourceOverlayCTA__2f580 {
