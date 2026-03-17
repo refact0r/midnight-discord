@@ -57,7 +57,7 @@ body {
 .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
 .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
 .chat_f75fb0 > .container__0b563 /* server channels and roles page */,
-.container__8a031 /* screen share modal */ {
+.container__8a031 /* popout modals */ {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-lg);
     border: var(--border-thickness) solid var(--border-subtle);
