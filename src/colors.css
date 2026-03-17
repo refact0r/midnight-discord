@@ -606,11 +606,22 @@
     }
 
     .quickSelectPopout_ebaca5 /* dm vc region select popout */,
-        .participantsButton__211d1 /* vc participants button */,
-        .voiceBar__7aaec /* n in voice bar (channel list) */,
-        .mainCard_f369db /* form posts */,
-        .accountProfileCard__1fed1 /* account settings profile background */ {
+    .participantsButton__211d1 /* vc participants button */,
+    .voiceBar__7aaec /* n in voice bar (channel list) */,
+    .mainCard_f369db /* form posts */,
+    .accountProfileCard__1fed1 /* account settings profile background */ {
         background-color: var(--bg-3);
+    }
+
+    /* User settings search bar coloring */
+    .fixedContent__409aa {
+        &::after {
+            display: none;
+        }
+
+        .searchBarContainer_cf016e .wrapper__72c38 {
+            background-color: var(--bg-4);
+        }
     }
 
     .colorable_f1ceac.primaryDark_f1ceac,
