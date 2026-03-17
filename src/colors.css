@@ -616,7 +616,7 @@
     /* User settings search bar coloring */
     .fixedContent__409aa {
         &::after {
-            display: none;
+            background: linear-gradient(to bottom, var(--bg-3), transparent);
         }
 
         .searchBarContainer_cf016e .wrapper__72c38 {
