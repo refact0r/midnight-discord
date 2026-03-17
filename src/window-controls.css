@@ -17,9 +17,6 @@ body {
     .winButtons_c38106 {
         gap: 0;
     }
-    .winButtons_c38106::before {
-        margin-right: calc(var(--custom-app-top-bar-height) / 4);
-    }
     .winButton_c38106 > svg {
         display: none;
     }
