@@ -57,7 +57,8 @@ body {
 .chat_f75fb0 > .header_c791b2 /* server members header */,
 .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
 .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
-.chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
+.chat_f75fb0 > .container__0b563 /* server channels and roles page */,
+.container__8a031 /* screen share modal */ {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-lg);
     border: var(--border-thickness) solid var(--border-subtle);
@@ -331,6 +332,7 @@ body {
     background: none !important;
 }
 
+/* channel messages bar */
 .barBase__0f481:not(.bottomBar__0f481) {
     top: 12px;
     left: 12px;
@@ -359,7 +361,7 @@ body {
 .channelTextArea_f75fb0 /* chat bar */ {
     border-radius: var(--radius-md);
 }
-.themedBackground__74017 /* chat bar inner */ {
+.themedBackground__74017:has(.uploadInput__0923f) /* chat bar inner */ {
     background: none;
 }
 .slateTextArea_ec4baf /* actual typing area */ {
@@ -457,6 +459,28 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+/* Fix screen share modal coloring and spacing */
+.container__8a031 {
+    padding-bottom: 0;
+
+    .sourceOverlayCTA__2f580 {
+        color: var(--text-3);
+    }
+
+    .footer_a55fdc {
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+
+        .footerContent_a55fdc {
+            padding: var(--space-16) var(--space-24);
+        }
+    }
+}
+
+/* Activity popout message field */
+.replyInput__5ba62 {
+    background-color: var(--bg-4);
 }
 
 /* remove unnecessary backgrounds */
@@ -1533,10 +1557,6 @@ body {
 
     .flash__03436[data-flash=true] /* reply message flash */ {
         background: var(--background-message-highlight);
-    }
-
-    .container__8a031 /* modal background */ {
-        background-color: var(--bg-4);
     }
 
     .flash__03436[data-flash='true'] /* reply message flash */ {

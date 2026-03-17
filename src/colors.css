@@ -871,10 +871,6 @@
         background: var(--background-message-highlight);
     }
 
-    .container__8a031 /* modal background */ {
-        background-color: var(--bg-4);
-    }
-
     .flash__03436[data-flash='true'] /* reply message flash */ {
         background: var(--reply);
     }
