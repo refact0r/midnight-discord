@@ -17,5 +17,5 @@
 
 /* Extra spacing for CallTimer plugin */
 .connection_e131a9:has(.lineClamp1__4bd52 p) {
-    padding: var(--custom-guild-list-padding) 0;
+    padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) 0;
 }
