@@ -1901,6 +1901,7 @@ body {
     .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
+    
     /* Fix header icon overlap */
     .base__5e434,
     .toolbar__9293f {
@@ -1933,6 +1934,11 @@ body {
             }
         }
     }
+    /* Fix for Mac devices */
+    .base__5e434 {
+        --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
+    }
+
     /* Hide page seek arrows */
     .bar_c38106 .backForwardButtons__63abb {
         display: none;
