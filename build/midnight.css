@@ -2104,6 +2104,7 @@ body {
 .connection_e131a9:has(.lineClamp1__4bd52 p) {
     padding: var(--custom-guild-list-padding) 0;
 }
+
 /* window-controls.css */
 body {
     --window-control-size: 14px;
