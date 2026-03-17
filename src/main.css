@@ -330,12 +330,13 @@ body {
     background: none !important;
 }
 
-.newMessagesBar__0f481 /* unread messages bar */ {
+.barBase__0f481:not(.bottomBar__0f481) {
     top: 12px;
     left: 12px;
     right: 12px;
     border-radius: var(--radius-sm);
     padding: 0 8px;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .bottom__7aaec /* channel list new unreads pill */,
