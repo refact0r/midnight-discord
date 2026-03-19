@@ -339,13 +339,27 @@ body {
     padding: 0 8px;
 }
 
+/* "This channel is not in your channel list" header */
+.chatHeaderBar_dc83f5 {
+    margin: 12px;
+    margin-bottom: 0;
+    padding-left: 16px;
+    background-color: var(--bg-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+
+    &::after {
+        display: none;
+    }
+}
+
 .bottom__7aaec /* channel list new unreads pill */,
-    .unreadBottom__629e4 /* channel list non-community unread pill */ {
+.unreadBottom__629e4 /* channel list non-community unread pill */ {
     bottom: 0;
 }
 
 .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
-    .unreadMentionsIndicatorTop_ef3116 {
+.unreadMentionsIndicatorTop_ef3116 {
     width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
     padding: calc(var(--custom-guild-list-padding) / 2);
 }
@@ -651,12 +665,22 @@ body {
         padding: 0;
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
+        background-color: var(--bg-4);
         backdrop-filter: var(--panel-backdrop-filter);
         transition: border-color var(--border-hover-transition);
 
         &:hover {
             border-color: var(--border-hover);
         }
+    }
+    /* "This channel is not in your channel list" header */
+    .chatHeaderBar_dc83f5 {
+        margin: 0px;
+        margin-bottom: var(--gap);
+        padding-left: 28px;
+        border-width: var(--border-thickness);
+        border-radius: var(--radius-lg);
+        background-color: var(--bg-4);
     }
 }
 
@@ -780,8 +804,8 @@ body {
         --badge-notification-background: var(--accent-new);
         --badge-text-default: var(--text-0);
         --bg-surface-overlay-tmp: var(--bg-3);
-        --bg-surface-raised: blue;
-        --border-feedback-critical: magenta;
+        --bg-surface-raised: var(--bg-3);
+        --border-feedback-critical: var(--border);
         --border-focus: red;
         --border-muted: var(--border-light);
         --border-normal: var(--border);
@@ -1067,7 +1091,7 @@ body {
         --modal-background: var(--bg-4);
         --modal-footer-background: var(--bg-4);
         --navigator-header-tint: lime;
-        --notice-background-critical: var(--red-3);
+        --notice-background-critical: var(--bg-3);
         --notice-background-info: var(--blue-3);
         --notice-background-positive: var(--green-3);
         --notice-background-warning: var(--yellow-3);
@@ -1636,6 +1660,12 @@ body {
     .selectedPill__1464f {
         border-color: var(--accent-2) !important;
     }
+    
+    /* Follow channel footer */
+    .wrapper__44df5 {
+        background-color: var(--bg-3);
+    }
+
 }
 
 /* dms-button.css */
@@ -1962,7 +1992,7 @@ body {
 }
 
 @container body style(--top-bar-title-position: hide) {
-    .title__85643 {
+    .title_edbb22 {
         display: none;
     }
 }
@@ -1972,8 +2002,12 @@ body {
         padding-left: var(--gap);
         justify-content: flex-start;
     }
-    .title__85643 {
+    .title_edbb22 {
         gap: 4px;
+    }
+    /* Hide page seek arrows */
+    .bar_c38106 .backForwardButtons__63abb {
+        display: none;
     }
 }
 
@@ -1984,11 +2018,11 @@ body {
 }
 
 @container body style(--subtle-top-bar-title: on) {
-    .title__85643 .icon_f34534,
-    .title__85643 > svg {
+    .title_edbb22 .icon_f34534,
+    .title_edbb22 > svg {
         display: none;
     }
-    .title__85643 .text-sm\/medium_cf4812 {
+    .title_edbb22 .text-sm\/medium_cf4812 {
         line-height: 90%;
         font-weight: 700;
         color: var(--text-muted);
