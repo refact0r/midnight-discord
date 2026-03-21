@@ -477,6 +477,9 @@ body {
         }
     }
 }
+.vcd-screen-picker-option-radio[data-checked="true"] span {
+    color: var(--text-0);
+}
 
 /* Activity popout message field */
 .replyInput__5ba62 {
@@ -807,7 +810,7 @@ body {
         --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
-        --border-focus: red;
+        --border-focus: var(--border);
         --border-muted: var(--border-light);
         --border-normal: var(--border);
         --border-strong: var(--border);

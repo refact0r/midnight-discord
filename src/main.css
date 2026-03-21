@@ -476,6 +476,9 @@ body {
         }
     }
 }
+.vcd-screen-picker-option-radio[data-checked="true"] span {
+    color: var(--text-0);
+}
 
 /* Activity popout message field */
 .replyInput__5ba62 {
