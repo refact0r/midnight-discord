@@ -57,7 +57,8 @@ body {
 .chat_f75fb0 > .header_c791b2 /* server members header */,
 .chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
 .chat_f75fb0 > .header__0b563  /* server channels and roles header */,
-.chat_f75fb0 > .container__0b563 /* server channels and roles page */ {
+.chat_f75fb0 > .container__0b563 /* server channels and roles page */,
+.container__8a031 /* popout modals */ {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-lg);
     border: var(--border-thickness) solid var(--border-subtle);
@@ -331,12 +332,14 @@ body {
     background: none !important;
 }
 
-.newMessagesBar__0f481 /* unread messages bar */ {
+/* channel messages bar */
+.barBase__0f481:not(.bottomBar__0f481) {
     top: 12px;
     left: 12px;
     right: 12px;
     border-radius: var(--radius-sm);
     padding: 0 8px;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .bottom__7aaec /* channel list new unreads pill */,
@@ -358,7 +361,7 @@ body {
 .channelTextArea_f75fb0 /* chat bar */ {
     border-radius: var(--radius-md);
 }
-.themedBackground__74017 /* chat bar inner */ {
+.form_f75fb0 .themedBackground__74017 /* chat bar inner */ {
     background: none;
 }
 .slateTextArea_ec4baf /* actual typing area */ {
@@ -456,6 +459,31 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+/* Fix screen share modal coloring and spacing */
+.container__8a031:has(.footer_a55fdc) {
+    padding-bottom: 0;
+
+    .sourceOverlayCTA__2f580 {
+        color: var(--text-3);
+    }
+
+    .footer_a55fdc {
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+
+        .footerContent_a55fdc {
+            padding: var(--space-16) var(--space-24);
+        }
+    }
+}
+.vcd-screen-picker-option-radio[data-checked="true"] span {
+    color: var(--text-0);
+}
+
+/* Activity popout message field */
+.replyInput__5ba62 {
+    background-color: var(--bg-4);
 }
 
 /* remove unnecessary backgrounds */
@@ -782,7 +810,7 @@ body {
         --bg-surface-overlay-tmp: var(--bg-3);
         --bg-surface-raised: blue;
         --border-feedback-critical: magenta;
-        --border-focus: red;
+        --border-focus: var(--border);
         --border-muted: var(--border-light);
         --border-normal: var(--border);
         --border-strong: var(--border);
@@ -1269,11 +1297,22 @@ body {
     }
 
     .quickSelectPopout_ebaca5 /* dm vc region select popout */,
-        .participantsButton__211d1 /* vc participants button */,
-        .voiceBar__7aaec /* n in voice bar (channel list) */,
-        .mainCard_f369db /* form posts */,
-        .accountProfileCard__1fed1 /* account settings profile background */ {
+    .participantsButton__211d1 /* vc participants button */,
+    .voiceBar__7aaec /* n in voice bar (channel list) */,
+    .mainCard_f369db /* form posts */,
+    .accountProfileCard_a27e58 /* account settings profile background */ {
         background-color: var(--bg-3);
+    }
+
+    /* User settings search bar coloring */
+    .fixedContent__409aa {
+        &::after {
+            background: linear-gradient(to bottom, var(--bg-3), transparent);
+        }
+
+        .searchBarContainer_cf016e .wrapper__72c38 {
+            background-color: var(--bg-4);
+        }
     }
 
     .colorable_f1ceac.primaryDark_f1ceac,
@@ -1532,10 +1571,6 @@ body {
 
     .flash__03436[data-flash=true] /* reply message flash */ {
         background: var(--background-message-highlight);
-    }
-
-    .container__8a031 /* modal background */ {
-        background-color: var(--bg-4);
     }
 
     .flash__03436[data-flash='true'] /* reply message flash */ {
@@ -1840,8 +1875,9 @@ body {
         padding-right: var(--space-xs);
         height: 32px;
     }
-    .systemBar_c38106 .trailing_c38106 {
-        top: var(--space-xs);
+    /* Fix window controls overlapping the settings menu */
+    .modal_e44912 {
+        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
     }
     /* Move window controls when mod view is open */
     :has(.guildSidebar_f75fb0) .trailing_c38106 {
@@ -1899,6 +1935,7 @@ body {
     .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
+    
     /* Fix header icon overlap */
     .base__5e434,
     .toolbar__9293f {
@@ -1931,6 +1968,11 @@ body {
             }
         }
     }
+    /* Fix for Mac and Vesktop users */
+    .base__5e434 {
+        --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
+    }
+
     /* Hide page seek arrows */
     .bar_c38106 .backForwardButtons__63abb {
         display: none;
@@ -2072,6 +2114,11 @@ body {
     }
 }
 
+/* Extra spacing for CallTimer plugin */
+.connection_e131a9:has(.lineClamp1__4bd52 p) {
+    padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) 0;
+}
+
 /* window-controls.css */
 body {
     --window-control-size: 14px;
@@ -2091,9 +2138,6 @@ body {
 @container body style(--custom-window-controls: on) {
     .winButtons_c38106 {
         gap: 0;
-    }
-    .winButtons_c38106::before {
-        margin-right: calc(var(--custom-app-top-bar-height) / 4);
     }
     .winButton_c38106 > svg {
         display: none;
