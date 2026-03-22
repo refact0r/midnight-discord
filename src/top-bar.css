@@ -202,7 +202,7 @@ body {
             }
         }
     }
-    /* Fix for Mac devices */
+    /* Fix for Mac and Vesktop users */
     .base__5e434 {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
     }
