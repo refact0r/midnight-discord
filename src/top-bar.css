@@ -109,8 +109,9 @@ body {
         padding-right: var(--space-xs);
         height: 32px;
     }
-    .systemBar_c38106 .trailing_c38106 {
-        top: var(--space-xs);
+    /* Fix window controls overlapping the settings menu */
+    .modal_e44912 {
+        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
     }
     /* Move window controls when mod view is open */
     :has(.guildSidebar_f75fb0) .trailing_c38106 {
@@ -168,6 +169,7 @@ body {
     .base__5e434:has(.notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
+    
     /* Fix header icon overlap */
     .base__5e434,
     .toolbar__9293f {
@@ -200,6 +202,11 @@ body {
             }
         }
     }
+    /* Fix for Mac and Vesktop users */
+    .base__5e434 {
+        --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
+    }
+
     /* Hide page seek arrows */
     .bar_c38106 .backForwardButtons__63abb {
         display: none;
