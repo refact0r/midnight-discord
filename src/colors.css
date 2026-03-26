@@ -117,8 +117,8 @@
         --badge-notification-background: var(--accent-new);
         --badge-text-default: var(--text-0);
         --bg-surface-overlay-tmp: var(--bg-3);
-        --bg-surface-raised: blue;
-        --border-feedback-critical: magenta;
+        --bg-surface-raised: var(--bg-3);
+        --border-feedback-critical: var(--border);
         --border-focus: var(--border);
         --border-muted: var(--border-light);
         --border-normal: var(--border);
@@ -404,7 +404,7 @@
         --modal-background: var(--bg-4);
         --modal-footer-background: var(--bg-4);
         --navigator-header-tint: lime;
-        --notice-background-critical: var(--red-3);
+        --notice-background-critical: var(--bg-3);
         --notice-background-info: var(--blue-3);
         --notice-background-positive: var(--green-3);
         --notice-background-warning: var(--yellow-3);
@@ -980,4 +980,10 @@
     .selectedPill__1464f {
         border-color: var(--accent-2) !important;
     }
+    
+    /* Follow channel footer */
+    .wrapper__44df5 {
+        background-color: var(--bg-3);
+    }
+
 }

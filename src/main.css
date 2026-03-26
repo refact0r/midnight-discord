@@ -341,13 +341,27 @@ body {
     border-top: 1px solid var(--border-subtle);
 }
 
+/* "This channel is not in your channel list" header */
+.chatHeaderBar_dc83f5 {
+    margin: 12px;
+    margin-bottom: 0;
+    padding-left: 16px;
+    background-color: var(--bg-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+
+    &::after {
+        display: none;
+    }
+}
+
 .bottom__7aaec /* channel list new unreads pill */,
-    .unreadBottom__629e4 /* channel list non-community unread pill */ {
+.unreadBottom__629e4 /* channel list non-community unread pill */ {
     bottom: 0;
 }
 
 .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
-    .unreadMentionsIndicatorTop_ef3116 {
+.unreadMentionsIndicatorTop_ef3116 {
     width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
     padding: calc(var(--custom-guild-list-padding) / 2);
 }

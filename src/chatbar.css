@@ -102,11 +102,21 @@ body {
         padding: 0;
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
+        background-color: var(--bg-4);
         backdrop-filter: var(--panel-backdrop-filter);
         transition: border-color var(--border-hover-transition);
 
         &:hover {
             border-color: var(--border-hover);
         }
+    }
+    /* "This channel is not in your channel list" header */
+    .chatHeaderBar_dc83f5 {
+        margin: 0px;
+        margin-bottom: var(--gap);
+        padding-left: 28px;
+        border-width: var(--border-thickness);
+        border-radius: var(--radius-lg);
+        background-color: var(--bg-4);
     }
 }
