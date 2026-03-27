@@ -576,7 +576,7 @@
     }
 
     .modeUnreadImportant__2ea32 .icon__2ea32,
-        .wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
+    .wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
         color: var(--text-3);
     }
 
@@ -986,4 +986,8 @@
         background-color: var(--bg-3);
     }
 
+    /* VC popout background */
+    #app-mount .popout__0bd4a {
+        background-color: var(--bg-3);
+    }
 }

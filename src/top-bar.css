@@ -3,6 +3,10 @@ body {
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 
+.refresh-title-bar-small {
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
+
 @property --top-bar-button-position {
     syntax: 'off | hide | serverlist | titlebar';
     inherits: false;
@@ -94,7 +98,7 @@ body {
 @container body style(--top-bar-button-position: titlebar) {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-        --top-bar-right-margin: calc(32px + var(--space-xs));
+        /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
     }
     .title_c38106,
     .trailing_c38106 > a[href='https://support.discord.com'] {
@@ -105,7 +109,7 @@ body {
         top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
         right: calc(var(--gap) + var(--border-thickness));
         gap: var(--space-xs);
-        z-index: 1000;
+        z-index: 1100;
         padding-right: var(--space-xs);
         height: 32px;
     }
@@ -171,8 +175,7 @@ body {
     }
     
     /* Fix header icon overlap */
-    .base__5e434,
-    .toolbar__9293f {
+    .base__5e434 {
         /* Supports up to 6 buttons */
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) { --button-count: 1; }
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) { --button-count: 2; }
@@ -202,9 +205,13 @@ body {
             }
         }
     }
-    /* Fix for Mac and Vesktop users */
+    /* Mac / Vesktop users */
     .base__5e434 {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
+    }
+    /* VC popout */
+    .popout__0bd4a:not(:has(.fullScreen_cb9592)) {
+        --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
 
     /* Hide page seek arrows */
