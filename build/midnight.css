@@ -467,7 +467,7 @@ body {
     margin-inline-start: 0;
     -webkit-margin-start: 0;
 }
-.container__37e49 .container__4bbc6 /* nameplate */ {
+.container__37e49 .container_df39b2 /* nameplate */ {
     border-radius: var(--radius-lg);
     width: 100%;
     height: 100%;
@@ -1077,7 +1077,7 @@ body {
         --icon-strong: var(--text-3);
         --icon-subtle: var(--text-4);
         --icon-transparent: lime;
-        --icon-voice-muted: var(--accent-2);
+        --icon-voice-muted: var(--accent-new);
         --input-background-default: var(--bg-3);
         --input-background-error-default: color-mix(in hsl, var(--red-2), transparent 90%);
         --input-border-active: var(--accent-2);
