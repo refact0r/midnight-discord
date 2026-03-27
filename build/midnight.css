@@ -1820,7 +1820,6 @@ body {
     --top-bar-height: 32px;
     --custom-app-top-bar-height: var(--top-bar-height);
 }
-
 .refresh-title-bar-small {
     --custom-app-top-bar-height: var(--top-bar-height);
 }
@@ -1918,6 +1917,10 @@ body {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
         /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
     }
+    #app-mount,
+    .modal_e44912 {
+        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
+    }
     .title_c38106,
     .trailing_c38106 > a[href='https://support.discord.com'] {
         display: none;
@@ -1931,10 +1934,15 @@ body {
         padding-right: var(--space-xs);
         height: 32px;
     }
-    /* Fix window controls overlapping the settings menu */
-    .modal_e44912 {
-        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
+    /* Fix window controls overlapping certain modals */
+    .layerContainer__59d0d {
+        z-index: 1102;
+
+        .carouselModal_d3a6f0 {
+            margin-top: var(--custom-viewport-padding);
+        }
     }
+    
     /* Move window controls when mod view is open */
     :has(.guildSidebar_f75fb0) .trailing_c38106 {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
