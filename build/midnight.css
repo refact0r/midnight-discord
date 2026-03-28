@@ -270,7 +270,7 @@ body {
 }
 /* vc chat shadow */
 .chat_a44415,
-.chat_ee72fa {
+.chat_a44415 {
     &::before {
         display: none;
     }
