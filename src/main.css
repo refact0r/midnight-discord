@@ -267,9 +267,8 @@ body {
     border: none;
     background: none;
 }
-/* vc chat shadow */
-.chat_a44415,
-.chat_a44415 {
+/* VC / thread chat shadow */
+.chat_ee72fa {
     &::before {
         display: none;
     }
