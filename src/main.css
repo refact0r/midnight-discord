@@ -267,11 +267,8 @@ body {
     border: none;
     background: none;
 }
-/* VC / thread chat shadow */
-.chat_ee72fa {
-    &::before {
-        display: none;
-    }
+.chat_ee72fa::before /* VC / thread chat shadow */ {
+    display: none;
 }
 .channelChatWrapper_cb9592 /* vc chat + titlebar group outer */ {
     background: none;
