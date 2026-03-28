@@ -191,7 +191,7 @@ body {
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
         
         &:has(.winButtons_c38106) {
-            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + 1px + var(--window-controls-padding)) !important;
+            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
 
         /* Revert icon sizing changes */
@@ -216,7 +216,7 @@ body {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
     }
     /* VC popout */
-    .popout__0bd4a:not(:has(.fullScreen_cb9592)) {
+    .popout__0bd4a:has(.winButtons_c38106) {
         --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
 
