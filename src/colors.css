@@ -424,9 +424,9 @@
         --profile-gradient-role-pill-background: blue;
         --profile-gradient-role-pill-border: magenta;
         --profile-gradient-section-box: red;
-        --radio-background-active: var(--bg-2);
-        --radio-background-default: var(--bg-3);
-        --radio-background-hover: var(--bg-2);
+        --radio-background-active: var(--bg-1);
+        --radio-background-default: var(--bg-2);
+        --radio-background-hover: var(--bg-1);
         --radio-background-selected-default: var(--accent-2);
         --radio-background-selected-hover: var(--accent-3);
         --radio-border-active: var(--border);
@@ -477,9 +477,9 @@
         --redesign-button-tertiary-text: red;
         --scrollbar-auto-scrollbar-color-thumb: yellow;
         --scrollbar-auto-scrollbar-color-track: lime;
-        --scrollbar-auto-thumb: var(--bg-3);
+        --scrollbar-auto-thumb: var(--bg-1);
         --scrollbar-auto-track: transparent;
-        --scrollbar-thin-thumb: var(--bg-3);
+        --scrollbar-thin-thumb: var(--bg-1);
         --scrollbar-thin-track: transparent;
         --spine-default: var(--text-5);
         --spoiler-hidden-background: yellow;
@@ -550,6 +550,7 @@
         --white: var(--text-0);
         --white-500: var(--text-0);
 
+        --brand-260: var(--accent-2);
         --brand-360: var(--accent-2);
         --brand-500: var(--accent-2);
         --blurple-50: var(--accent-2);
