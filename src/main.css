@@ -76,7 +76,8 @@ body {
     width: 100%;
 }
 
-.sidebar__5e434 /* server list + channel list + user panel group */ {
+.sidebar__5e434 /* server list + channel list + user panel group */,
+.popout__0bd4a .content__0bd4a /* VC popout spacing */ {
     margin: 0 var(--gap) var(--gap) var(--gap);
 }
 
@@ -266,7 +267,7 @@ body {
     border: none;
     background: none;
 }
-.chat_a44415::before /* vc chat shadow */ {
+.chat_ee72fa::before /* VC / thread chat shadow */ {
     display: none;
 }
 .channelChatWrapper_cb9592 /* vc chat + titlebar group outer */ {
@@ -295,7 +296,8 @@ body {
     background-color: var(--background-base-lower);
 }
 
-.wrapper_cb9592 /* dm vc wrapper */ {
+/* DM / server VC containers */
+.wrapper_cb9592 {
     background: none;
     margin-bottom: var(--gap);
 }
@@ -304,6 +306,17 @@ body {
     margin-left: var(--gap);
     width: calc(100% - var(--gap));
     height: calc(100% - var(--gap));
+
+    + div + div .container__01ae2 {
+        margin-top: var(--gap);
+    }
+}
+.popout__0bd4a .content__0bd4a:has(.wrapper_cb9592.fullScreen_cb9592) {
+    margin-left: 0;
+}
+/* Fullscreen VC popout backdrop */
+#app-mount::backdrop {
+    display: none;
 }
 
 /* Apply gap to mod view container */
@@ -329,6 +342,9 @@ body {
 .page__5e434 > .container__89463 /* server boosts page */,
 .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
     background: none !important;
+}
+.titleBar__0bd4a /* VC popout titlebar */ {
+    background: none;
 }
 
 /* channel messages bar */

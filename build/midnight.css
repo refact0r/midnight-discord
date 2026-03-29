@@ -77,7 +77,8 @@ body {
     width: 100%;
 }
 
-.sidebar__5e434 /* server list + channel list + user panel group */ {
+.sidebar__5e434 /* server list + channel list + user panel group */,
+.popout__0bd4a .content__0bd4a /* VC popout spacing */ {
     margin: 0 var(--gap) var(--gap) var(--gap);
 }
 
@@ -267,7 +268,7 @@ body {
     border: none;
     background: none;
 }
-.chat_a44415::before /* vc chat shadow */ {
+.chat_ee72fa::before /* VC / thread chat shadow */ {
     display: none;
 }
 .channelChatWrapper_cb9592 /* vc chat + titlebar group outer */ {
@@ -296,7 +297,8 @@ body {
     background-color: var(--background-base-lower);
 }
 
-.wrapper_cb9592 /* dm vc wrapper */ {
+/* DM / server VC containers */
+.wrapper_cb9592 {
     background: none;
     margin-bottom: var(--gap);
 }
@@ -305,6 +307,17 @@ body {
     margin-left: var(--gap);
     width: calc(100% - var(--gap));
     height: calc(100% - var(--gap));
+
+    + div + div .container__01ae2 {
+        margin-top: var(--gap);
+    }
+}
+.popout__0bd4a .content__0bd4a:has(.wrapper_cb9592.fullScreen_cb9592) {
+    margin-left: 0;
+}
+/* Fullscreen VC popout backdrop */
+#app-mount::backdrop {
+    display: none;
 }
 
 /* Apply gap to mod view container */
@@ -330,6 +343,9 @@ body {
 .page__5e434 > .container__89463 /* server boosts page */,
 .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
     background: none !important;
+}
+.titleBar__0bd4a /* VC popout titlebar */ {
+    background: none;
 }
 
 /* channel messages bar */
@@ -1291,7 +1307,7 @@ body {
     }
 
     .modeUnreadImportant__2ea32 .icon__2ea32,
-        .wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
+    .wrapper__2ea32:hover .icon__2ea32 /* correct channel icon color */ {
         color: var(--text-3);
     }
 
@@ -1701,6 +1717,10 @@ body {
         background-color: var(--bg-3);
     }
 
+    /* VC popout background */
+    #app-mount .popout__0bd4a {
+        background-color: var(--bg-3);
+    }
 }
 
 /* dms-button.css */
@@ -1798,6 +1818,9 @@ body {
     --top-bar-height: 32px;
     --custom-app-top-bar-height: var(--top-bar-height);
 }
+.refresh-title-bar-small {
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
 
 @property --top-bar-button-position {
     syntax: 'off | hide | serverlist | titlebar';
@@ -1890,7 +1913,7 @@ body {
 @container body style(--top-bar-button-position: titlebar) {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-        --top-bar-right-margin: calc(32px + var(--space-xs));
+        /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
     }
     .title_c38106,
     .trailing_c38106 > a[href='https://support.discord.com'] {
@@ -1905,9 +1928,16 @@ body {
         padding-right: var(--space-xs);
         height: 32px;
     }
-    /* Fix window controls overlapping the settings menu */
+    .popout__0bd4a .trailing_c38106 {
+        z-index: 1100;
+    }
+    /* Fix window controls overlapping certain modals */
+    #app-mount,
     .modal_e44912 {
         --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
+    }
+    .layerContainer__59d0d .carouselModal_d3a6f0 {
+        margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
     :has(.guildSidebar_f75fb0) .trailing_c38106 {
@@ -1967,8 +1997,7 @@ body {
     }
     
     /* Fix header icon overlap */
-    .base__5e434,
-    .toolbar__9293f {
+    .base__5e434 {
         /* Supports up to 6 buttons */
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) { --button-count: 1; }
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) { --button-count: 2; }
@@ -1978,7 +2007,7 @@ body {
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
         
         &:has(.winButtons_c38106) {
-            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + 1px + var(--window-controls-padding)) !important;
+            --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
 
         /* Revert icon sizing changes */
@@ -1998,9 +2027,13 @@ body {
             }
         }
     }
-    /* Fix for Mac and Vesktop users */
+    /* Mac / Vesktop users */
     .base__5e434 {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
+    }
+    /* VC popout */
+    .popout__0bd4a:has(.winButtons_c38106) {
+        --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
 
     /* Hide page seek arrows */
