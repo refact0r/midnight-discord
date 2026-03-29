@@ -24,6 +24,24 @@
         .bar__7aaec /* channel list new unreads bar */ {
         background: var(--bg-floating);
     }
+
+    .menu_c1e9c4::before {
+        position: absolute;
+        backdrop-filter: var(--panel-backdrop-filter);
+        border-radius: 8px;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        content: " ";
+    }
+
+    .submenuPaddingContainer_c1e9c4 > .menu_c1e9c4::before {
+        width: calc(100% - 16px);
+    }
+
+    .submenuPaddingContainer_ce8328 > .menu_c1e9c4::before {
+        width: calc(100% - 24px);
+    }
 }
 
 @property --transparency-tweaks {
