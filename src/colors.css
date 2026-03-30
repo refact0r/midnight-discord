@@ -953,7 +953,7 @@
         background: var(--bg-3);
     }
 
-    ::selection,
+    :is(div, span, code, a)::selection,
     .highlight {
         background: var(--accent-3);
         color: var(--text-0);
