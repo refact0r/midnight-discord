@@ -1946,7 +1946,7 @@ body {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    .base__5e434:has(> .content__5e434 > .page__5e434 div > :nth-child(2) .sidebarContainer__656be) .trailing_c38106 {
+    .base__5e434:has(> .content__5e434 > .page__5e434 div:nth-child(2) .sidebarContainer__656be) .trailing_c38106 {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
     }
     .winButtons_c38106 {
