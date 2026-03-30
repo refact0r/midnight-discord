@@ -124,8 +124,12 @@ body {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    :has(.guildSidebar_f75fb0) .trailing_c38106 {
+    .base__5e434:has(.page__5e434 div:nth-child(2) .sidebarContainer__656be) .trailing_c38106 {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
+    }
+    /* Remove unused space when thread is open */
+    .page__5e434:has(.chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f {
+        padding-right: 0;
     }
     .winButtons_c38106 {
         padding: 0;
@@ -141,10 +145,6 @@ body {
     }
     .toolbar__9293f {
         padding-right: var(--top-bar-right-margin);
-    }
-    /* Remove unused space when thread is open */
-    :has(.chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f {
-        padding-right: 0;
     }
     .navBarContent__131a1,
     .headerBarContent__1a9ce {
@@ -190,7 +190,7 @@ body {
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(5)) { --button-count: 5; }
         &:has(.trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
         
-        &:has(.winButtons_c38106) {
+        &:has(.trailing_c38106 .winButtons_c38106) {
             --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
 
@@ -216,12 +216,12 @@ body {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
     }
     /* VC popout */
-    .popout__0bd4a:has(.winButtons_c38106) {
+    .popout__0bd4a:has(.titleBar__0bd4a) {
         --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
     /* Settings modal in portrait mode */
     @media screen and (max-width: 1080px) {
-        #app-mount:has(.modal_e44912) {
+        #app-mount:has(.layerContainer__59d0d .modal_e44912) {
             .modal_e44912 {
                 padding-top: 0;
             }
