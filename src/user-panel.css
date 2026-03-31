@@ -16,6 +16,6 @@
 }
 
 /* Extra spacing for CallTimer plugin */
-.connection_e131a9:has(> .inner_e131a9 .labelWrapper__06d62 .lineClamp1__4bd52 p) {
+.connection_e131a9:has(> .inner_e131a9 .labelWrapper__06d62 > a .lineClamp1__4bd52 p) {
     padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) 0;
 }
