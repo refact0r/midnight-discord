@@ -568,6 +568,12 @@
         --white-500: var(--text-1);
     }
 
+    /* User profile sidebar */
+    .user-profile-sidebar .inner_c0bea0 {
+        --user-profile-overlay-background: var(--bg-3);
+        --profile-gradient-secondary-color: var(--bg-4);
+    }
+
     ::placeholder {
         color: var(--text-5);
     }
@@ -947,7 +953,7 @@
         background: var(--bg-3);
     }
 
-    ::selection,
+    :is(div, span, code, a)::selection,
     .highlight {
         background: var(--accent-3);
         color: var(--text-0);

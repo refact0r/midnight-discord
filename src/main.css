@@ -311,7 +311,7 @@ body {
         margin-top: var(--gap);
     }
 }
-.popout__0bd4a .content__0bd4a:has(.wrapper_cb9592.fullScreen_cb9592) {
+.popout__0bd4a .content__0bd4a:has(> div > .wrapper_cb9592.fullScreen_cb9592) {
     margin-left: 0;
 }
 /* Fullscreen VC popout backdrop */
@@ -491,7 +491,7 @@ body {
 }
 
 /* Fix screen share modal coloring and spacing */
-.container__8a031:has(.footer_a55fdc) {
+.container__8a031:has(> div > .footer_a55fdc) {
     padding-bottom: 0;
 
     .sourceOverlayCTA__2f580 {
