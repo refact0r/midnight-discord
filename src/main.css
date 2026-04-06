@@ -299,7 +299,6 @@ body {
 /* DM / server VC containers */
 .wrapper_cb9592 {
     background: none;
-    margin-bottom: var(--gap);
 }
 .wrapper_cb9592.fullScreen_cb9592 {
     margin-top: var(--gap);
