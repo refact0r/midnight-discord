@@ -110,6 +110,7 @@ body {
         z-index: 1000;
         padding-right: var(--space-xs);
         height: 32px;
+        transition: transform .2s ease-in-out, opacity .2s ease-in-out;
     }
     .popout__0bd4a .trailing_c38106 {
         z-index: 1100;
@@ -144,8 +145,9 @@ body {
     .toolbar__9293f {
         padding-right: var(--top-bar-right-margin);
     }
-    /* Remove unused space when thread is open */
-    .page__5e434:has(> div > .chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f {
+    /* Remove unused space when thread or VC chat is open */
+    .page__5e434:has(> div > .chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f,
+    .video_cb9592.sidebarOpen_cb9592 .toolbar__9293f {
         padding-right: 0;
     }
     .navBarContent__131a1,
@@ -242,6 +244,20 @@ body {
     /* Hide page seek arrows */
     .bar_c38106 .backForwardButtons__63abb {
         display: none;
+    }
+
+    /* Hide trailing in VC wrapper */
+    .base__5e434,
+    .popout__0bd4a {
+        &:has(:is(& > .content__5e434 > .page__5e434 .chat_f75fb0, & > .content__0bd4a .root) > .video_cb9592:not(.sidebarOpen_cb9592) .callContainer_cb9592 > .root_bfe55a.idle_bfe55a) .trailing_c38106 {
+            transform: translateY(-8px);
+            opacity: 0;
+
+            &:hover {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     }
 }
 
