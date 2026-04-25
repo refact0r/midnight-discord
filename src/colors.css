@@ -508,7 +508,7 @@
         --switch-thumb-icon-active: blue;
         --switch-thumb-icon-default: magenta;
         --text-brand: var(--accent-1);
-        --text-code: red;
+        /* --text-code: red;
         --text-code-addition: yellow;
         --text-code-builtin: lime;
         --text-code-bullet: blue;
@@ -519,7 +519,7 @@
         --text-code-string: blue;
         --text-code-tag: magenta;
         --text-code-title: red;
-        --text-code-variable: yellow;
+        --text-code-variable: yellow; */
         --text-default: var(--text-3);
         --text-feedback-critical: var(--red-1);
         --text-feedback-info: var(--accent-1);
@@ -973,8 +973,8 @@
         }
 
         /* Clicked state */
-        &:has(> svg:not([style="left: 1px;"])) {
-            &:has(rect:not([height="16"])) {
+        &:has(> svg:not([style='left: 1px;'])) {
+            &:has(rect:not([height='16'])) {
                 background-color: var(--accent-5) !important;
             }
 
@@ -987,7 +987,7 @@
     .selectedPill__1464f {
         border-color: var(--accent-2) !important;
     }
-    
+
     /* Follow channel footer */
     .wrapper__44df5 {
         background-color: var(--bg-3);
