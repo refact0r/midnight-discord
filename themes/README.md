@@ -31,6 +31,7 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [background](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-background.theme.css) (background image + transparent blurred panels)
 - [catppuccin mocha](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-macchiato.theme.css)
+- [monokai](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-monokai.theme.css)
 - [nord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-nord.theme.css)
 - [rose pine](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine.theme.css)
 - [rose pine moon](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css)
