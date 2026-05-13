@@ -505,7 +505,7 @@ body {
         }
     }
 }
-.vcd-screen-picker-option-radio[data-checked="true"] span {
+.vcd-screen-picker-option-radio[data-checked='true'] span {
     color: var(--text-0);
 }
 
@@ -522,9 +522,9 @@ body {
 }
 
 body {
-    --font-primary: var(--font), 'gg sans';
-    --font-display: var(--font), 'gg sans';
-    --font-code: var(--code-font), 'gg mono';
+    --font-primary: var(--font), 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-display: var(--font), 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-code: var(--code-font), 'gg mono', 'Source Code Pro', Consolas, Monaco, monospace;
 }
 
 [class*='scroll'] {
