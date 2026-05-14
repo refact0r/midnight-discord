@@ -92,8 +92,6 @@
         --background-base-lowest: var(--bg-4);
         --background-brand: var(--accent-2);
         --background-code: var(--bg-3);
-        --background-code-addition: lime;
-        --background-code-deletion: blue;
         --background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
         --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
@@ -616,7 +614,7 @@
     .participantsButton__211d1 /* vc participants button */,
     .voiceBar__7aaec /* n in voice bar (channel list) */,
     .mainCard_f369db /* form posts */,
-    .accountProfileCard_a9178b /* account settings profile background */ {
+    .accountProfileCard_a27e58 /* account settings profile background */ {
         background-color: var(--bg-3);
     }
 
