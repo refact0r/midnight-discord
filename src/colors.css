@@ -424,6 +424,8 @@
         --profile-gradient-role-pill-background: blue;
         --profile-gradient-role-pill-border: magenta;
         --profile-gradient-section-box: red;
+        --progressbar-indicator-background: var(--accent-2);
+        --progressbar-track-background: var(--bg-2);
         --radio-background-active: var(--bg-1);
         --radio-background-default: var(--bg-2);
         --radio-background-hover: var(--bg-1);
