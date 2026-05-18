@@ -822,8 +822,8 @@ body {
         --background-base-lowest: var(--bg-4);
         --background-brand: var(--accent-2);
         --background-code: var(--bg-3);
-        --background-code-addition: lime;
-        --background-code-deletion: blue;
+        --background-code-addition: color-mix(in hsl, var(--green-2), transparent 80%);
+        --background-code-deletion: color-mix(in hsl, var(--red-2), transparent 80%);
         --background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
         --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
         --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
