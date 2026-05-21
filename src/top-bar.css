@@ -110,7 +110,9 @@ body {
         z-index: 1000;
         padding-right: var(--space-xs);
         height: 32px;
-        transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+        transition:
+            transform 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
     }
     .popout__0bd4a .trailing_c38106 {
         z-index: 1100;
@@ -124,10 +126,10 @@ body {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    .base__5e434:has(> .content__5e434 > .page__5e434 > [style^="width"] > :is(.guildSidebar_f75fb0, .sidebarContainer__656be)) .trailing_c38106 {
+    .base__5e434:has(> .content__5e434 > .page__5e434 > [style^='width'] > :is(.guildSidebar_f75fb0, .sidebarContainer__656be)) .trailing_c38106 {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
     }
-    .page__5e434 div[style="width: 480px;"] {
+    .page__5e434 div[style='width: 480px;'] {
         min-width: 480px;
     }
     .winButtons_c38106 {
@@ -183,17 +185,33 @@ body {
     .base__5e434:has(> .notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
-    
+
+    .base__5e434:has(> .notice__29487) > .bar_c38106 > .trailing_c38106 {
+        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+    }
+
     /* Fix header icons and window controls overlap */
     .base__5e434 {
         /* Supports up to 6 buttons */
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) { --button-count: 1; }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) { --button-count: 2; }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(3)) { --button-count: 3; }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(4)) { --button-count: 4; }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(5)) { --button-count: 5; }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) { --button-count: 6; }
-        
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) {
+            --button-count: 1;
+        }
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) {
+            --button-count: 2;
+        }
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(3)) {
+            --button-count: 3;
+        }
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(4)) {
+            --button-count: 4;
+        }
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(5)) {
+            --button-count: 5;
+        }
+        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) {
+            --button-count: 6;
+        }
+
         &:has(> .bar_c38106 > .trailing_c38106 > .winButtons_c38106) {
             --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
@@ -249,7 +267,8 @@ body {
     /* Hide trailing in VC wrapper */
     .base__5e434,
     .popout__0bd4a {
-        &:has(:is(& > .content__5e434 > .page__5e434 .chat_f75fb0, & > .content__0bd4a .root) > .video_cb9592:not(.sidebarOpen_cb9592) .callContainer_cb9592 > .root_bfe55a.idle_bfe55a) .trailing_c38106 {
+        &:has(:is(& > .content__5e434 > .page__5e434 .chat_f75fb0, & > .content__0bd4a .root) > .video_cb9592:not(.sidebarOpen_cb9592) .callContainer_cb9592 > .root_bfe55a.idle_bfe55a)
+            .trailing_c38106 {
             transform: translateY(-8px);
             opacity: 0;
 

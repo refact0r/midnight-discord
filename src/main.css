@@ -26,7 +26,7 @@ body {
 /* panel separation */
 .container__89463 > .toolbar__89463 /* server boosts titlebar */,
 .container__89463 > .contentContainer__89463 /* server boosts tab */,
-.guilds__5e434 /* server list */, 
+.guilds__5e434 /* server list */,
 .sidebarList__5e434 /* channel list (includes dm list) */,
 .panels__5e434 /* user panel */,
 .chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
@@ -256,7 +256,8 @@ body {
     margin-left: var(--gap);
 }
 
-.notice__6e2b9 /* notice banner */ {
+.notice__6e2b9 /* notice banner */,
+.notice__29487 /* nitro notice? */ {
     margin: 0 var(--gap) var(--gap) 0;
     border-radius: var(--radius-md);
     box-sizing: border-box;
@@ -460,7 +461,7 @@ body {
     border-radius: var(--radius-md);
 }
 
-.outer_c0bea0 /* profile outer */, 
+.outer_c0bea0 /* profile outer */,
 .contentWrapper__08434  /* gif panel */ {
     border-radius: var(--radius-lg) !important;
 }
