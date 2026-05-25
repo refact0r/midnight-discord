@@ -1569,6 +1569,10 @@ body {
         background-color: var(--accent-new);
     }
 
+    .mention__3b95d:active {
+        background-color: color-mix(in hsl, var(--accent-new), black 10%);
+    }
+
     .newMessagesBar__0f481 /* unread bar */ {
         background-color: var(--accent-3);
     }
