@@ -44,7 +44,9 @@ need help? want to give feedback? want to be notified about upcoming changes? jo
 
 ## contributing
 
-this theme uses a dev script to check for changes in the source css files and combine them into a build file. to run locally:
+this theme uses a dev script to check for changes in the /src .css files and combine them into a build file in /build. note that both the /src files and the /build file are tracked in git, so any changes you contribute should exist in both places!!
+
+to run locally:
 
 1. clone the repository.
 2. run `npm i`.
