@@ -1496,10 +1496,10 @@ body {
     .selectedIcon__2f4f7 /* vc selected camera icon */,
     .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc icon button */,
     .colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
-    .iconBadge__650eb.base__2b1f5 /* server vc badge */,
+    .iconBadge__650eb.base__463b7 /* server vc badge */,
     #app-mount .akaBadge__488b1 /* aka badge */,
     #app-mount .message__9a9f9 /* you have unsaved settings message */,
-    .friendRequestsButton__523aa .base__2b1f5 /* inbox friend request number */,
+    .friendRequestsButton__523aa .base__463b7 /* inbox friend request number */,
     .tooltipBlack__382e7 /* server boost tooltip */,
     .colorable_f1ceac.primaryDark_f1ceac, .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc buttons */,
     .item_caf372.active_caf372 /* settings items active */,
@@ -1513,10 +1513,10 @@ body {
     .grabber_a562c8 /* vc volume slider grabber */ {
         background-color: var(--text-3);
     }
-    .textBadge__2b1f5 /* new text badge (right click on person in vc) */ {
+    .textBadge__463b7 /* new text badge (right click on person in vc) */ {
         color: var(--text-0);
     }
-    .textBadge__2b1f5[style='background-color: var(--primary-500);'] /* vc stream quality badge */ {
+    .textBadge__463b7[style='background-color: var(--primary-500);'] /* vc stream quality badge */ {
         background-color: var(--bg-2) !important;
         --white-500: var(--text-3);
     }
@@ -1542,7 +1542,7 @@ body {
     }
 
     .container__37e49 /* user panel buttons */,
-        .numberBadge__2b1f5  /* unread number badge */,
+        .numberBadge__463b7  /* unread number badge */,
         .toolbar__9293f /* toolbar button strikethroughs */ {
         --status-danger: var(--accent-new);
     }
