@@ -521,6 +521,12 @@ body {
     background-color: var(--bg-4);
 }
 
+/* keep the divider below the tags row within the bounds of the new forum post input box */
+.tagsDivider_d9be46 {
+    inset-inline-start: 0px;
+    width: 100%;
+}
+
 /* remove unnecessary backgrounds */
 .app__160d8,
 #app-mount,
