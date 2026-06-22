@@ -315,6 +315,11 @@ body {
 .popout__0bd4a .content__0bd4a:has(> div > .wrapper_cb9592.fullScreen_cb9592) {
     margin-left: 0;
 }
+/* padding between dm vc and chat*/
+.wrapper_cb9592 ~ .content_f75fb0 {
+    padding-top: var(--gap);
+}
+
 /* Fullscreen VC popout backdrop */
 #app-mount::backdrop {
     display: none;
