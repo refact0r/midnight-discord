@@ -1,52 +1,89 @@
-/*
- * Loader for midnight-discord browser dev. Served by scripts/serve.js at /inject.js.
- * Eval in the Discord DevTools console once per session — it injects the current
- * theme CSS, starts auto-reload polling, and exposes debug helpers on window.__midnight.
- */
+/* Generic Discord theme browser loader. Runtime values are injected by serve.js. */
+
+window.__themeDev?.off?.();
 
 (() => {
-    const BASE = (document.currentScript && document.currentScript.src)
-        ? new URL('.', document.currentScript.src).origin
-        : 'http://127.0.0.1:8765';
-    const STYLE_ID = 'midnight-theme-injected';
+    const runtime = __THEME_DEV_RUNTIME__;
+    const BASE = runtime.base;
+    const DISPLAY_NAME = runtime.displayName;
+    const STYLE_ID = 'theme-dev-injected';
     const POLL_MS = 800;
 
+    async function checkedFetch(url) {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText} — ${url}`);
+        return response;
+    }
+
     async function fetchCSS() {
-        const r = await fetch(`${BASE}/midnight.css?t=${Date.now()}`);
-        return r.text();
+        return (await checkedFetch(`${BASE}/theme.css?t=${Date.now()}`)).text();
+    }
+
+    async function fetchVersion() {
+        return (await (await checkedFetch(`${BASE}/version`)).json()).version;
+    }
+
+    async function head() {
+        if (!document.head) {
+            await new Promise((resolve) => document.addEventListener('DOMContentLoaded', resolve, { once: true }));
+        }
+        if (!document.head) throw new Error('document.head is unavailable');
+        return document.head;
     }
 
     async function apply() {
         const css = await fetchCSS();
-        let s = document.getElementById(STYLE_ID);
-        if (!s) {
-            s = document.createElement('style');
-            s.id = STYLE_ID;
-            document.head.appendChild(s);
+        let style = document.getElementById(STYLE_ID);
+        if (!style) {
+            style = document.createElement('style');
+            style.id = STYLE_ID;
+            (await head()).appendChild(style);
         }
-        s.textContent = css;
+        style.textContent = css;
         return css.length;
     }
 
-    let lastVer = null;
+    let lastVersion = null;
     let poller = null;
+    let generation = 0;
+    let inFlight = null;
+
+    function sync() {
+        if (inFlight) return inFlight;
+        const request = (async () => {
+            const currentVersion = await fetchVersion();
+            if (currentVersion === lastVersion) return null;
+            const length = await apply();
+            const changed = lastVersion !== null;
+            lastVersion = currentVersion;
+            return { changed, length };
+        })();
+        inFlight = request;
+        request.then(
+            () => { if (inFlight === request) inFlight = null; },
+            () => { if (inFlight === request) inFlight = null; },
+        );
+        return inFlight;
+    }
 
     function start() {
         stop();
-        poller = setInterval(async () => {
+        const activeGeneration = ++generation;
+        const tick = async () => {
             try {
-                const v = (await (await fetch(`${BASE}/version`)).json()).version;
-                if (v !== lastVer) {
-                    lastVer = v;
-                    const n = await apply();
-                    console.log(`[midnight] reloaded ${n}b @ ${new Date().toLocaleTimeString()}`);
+                const result = await sync();
+                if (result?.changed) {
+                    console.log(`[${DISPLAY_NAME}] reloaded ${result.length}b @ ${new Date().toLocaleTimeString()}`);
                 }
             } catch (_) { /* server probably down; keep polling */ }
-        }, POLL_MS);
+            if (generation === activeGeneration) poller = setTimeout(tick, POLL_MS);
+        };
+        tick();
     }
 
     function stop() {
-        if (poller) clearInterval(poller);
+        generation += 1;
+        if (poller) clearTimeout(poller);
         poller = null;
     }
 
@@ -55,11 +92,10 @@
         document.getElementById(STYLE_ID)?.remove();
     }
 
-    // Return computed values for a curated set of theme-relevant CSS properties.
     function computed(selector) {
-        const el = typeof selector === 'string' ? document.querySelector(selector) : selector;
-        if (!el) return null;
-        const s = getComputedStyle(el);
+        const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
+        if (!element) return null;
+        const styles = getComputedStyle(element);
         const props = [
             'color', 'background-color', 'background-image', 'opacity',
             'border', 'border-color', 'border-radius', 'box-shadow',
@@ -67,129 +103,158 @@
             'font-family', 'font-size', 'font-weight', 'line-height',
             'transition', 'transform', 'filter', 'backdrop-filter', 'z-index',
         ];
-        const out = {};
-        for (const p of props) out[p] = s.getPropertyValue(p).trim();
-        out._selector = typeof selector === 'string' ? selector : '<element>';
-        out._tag = el.tagName.toLowerCase();
-        out._classes = el.className && typeof el.className === 'string' ? el.className : '';
-        return out;
+        const output = {};
+        for (const prop of props) output[prop] = styles.getPropertyValue(prop).trim();
+        output._selector = typeof selector === 'string' ? selector : '<element>';
+        output._tag = element.tagName.toLowerCase();
+        output._classes = element.className && typeof element.className === 'string' ? element.className : '';
+        return output;
     }
 
-    // Find elements by visible text content (case-insensitive substring match).
     function find(text) {
         const needle = String(text).toLowerCase();
-        const out = [];
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+        const output = [];
+        const seen = new Set();
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
         let node;
         while ((node = walker.nextNode())) {
-            const t = node.textContent;
-            if (t && t.toLowerCase().includes(needle) && [...node.children].every(c => !c.textContent.toLowerCase().includes(needle))) {
-                out.push(node);
+            if (node.nodeValue?.toLowerCase().includes(needle) && node.parentElement && !seen.has(node.parentElement)) {
+                seen.add(node.parentElement);
+                output.push(node.parentElement);
             }
         }
-        return out;
+        return output;
     }
 
-    // Return the resolved value of a midnight CSS variable from :root or body.
     function cssVar(name) {
-        const n = name.startsWith('--') ? name : `--${name}`;
-        return getComputedStyle(document.body).getPropertyValue(n).trim()
-            || getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+        const normalized = name.startsWith('--') ? name : `--${name}`;
+        return getComputedStyle(document.body).getPropertyValue(normalized).trim()
+            || getComputedStyle(document.documentElement).getPropertyValue(normalized).trim();
     }
 
-    // Walk stylesheets and return CSS rules that match `el` and declare `prop`,
-    // in source order. Tolerates cross-origin sheets and nested at-rules.
-    function rulesFor(el, prop) {
+    function rulesFor(element, prop) {
         const hits = [];
-        function visit(rs) {
-            for (const r of rs) {
-                if (r.cssRules) visit(r.cssRules);
-                if (!r.selectorText || !r.style) continue;
-                const v = r.style.getPropertyValue(prop);
-                if (!v) continue;
-                // selectorText may be a comma list — only the matching parts count.
-                // Split on commas at depth 0 so :is(a, b) survives.
+        function visit(rules, source) {
+            for (const rule of rules) {
+                if (typeof CSSMediaRule !== 'undefined' && rule instanceof CSSMediaRule
+                    && !matchMedia(rule.conditionText).matches) continue;
+                if (typeof CSSSupportsRule !== 'undefined' && rule instanceof CSSSupportsRule
+                    && !CSS.supports(rule.conditionText)) continue;
+                if (rule.cssRules) visit(rule.cssRules, source);
+                if (!rule.selectorText || !rule.style) continue;
+                const value = rule.style.getPropertyValue(prop);
+                if (!value) continue;
+
                 const parts = [];
-                let buf = '', depth = 0;
-                for (const ch of r.selectorText) {
-                    if (ch === '(' || ch === '[') depth++;
-                    else if (ch === ')' || ch === ']') depth--;
-                    if (ch === ',' && depth === 0) { parts.push(buf); buf = ''; }
-                    else buf += ch;
+                let buffer = '';
+                let depth = 0;
+                for (const character of rule.selectorText) {
+                    if (character === '(' || character === '[') depth++;
+                    else if (character === ')' || character === ']') depth--;
+                    if (character === ',' && depth === 0) {
+                        parts.push(buffer);
+                        buffer = '';
+                    } else {
+                        buffer += character;
+                    }
                 }
-                if (buf) parts.push(buf);
-                const matched = parts.map(s => s.trim()).filter(s => {
-                    try { return el.matches(s); } catch { return false; }
+                if (buffer) parts.push(buffer);
+                const matched = parts.map((selector) => selector.trim()).filter((selector) => {
+                    try {
+                        return element.matches(selector);
+                    } catch {
+                        return false;
+                    }
                 });
-                if (matched.length) hits.push({ selector: matched.join(', '), value: v.trim() });
+                if (matched.length) {
+                    hits.push({
+                        selector: matched.join(', '),
+                        value: value.trim(),
+                        important: rule.style.getPropertyPriority(prop) === 'important',
+                        source,
+                    });
+                }
             }
         }
+
         for (const sheet of document.styleSheets) {
             let rules;
-            try { rules = sheet.cssRules; } catch { continue; }
-            if (rules) visit(rules);
+            try {
+                rules = sheet.cssRules;
+            } catch {
+                continue;
+            }
+            if (rules) visit(rules, sheet.href || `#${sheet.ownerNode?.id || 'inline-style'}`);
         }
         return hits;
     }
 
-    // Trace the CSS variable chain behind a property. Returns an array like:
-    //   [
-    //     { from: '.fill_xxx',   prop: 'background-color', raw: 'var(--a)' },
-    //     { from: '.track_xxx',  prop: '--a',              raw: 'var(--b)' },
-    //     { from: 'body',        prop: '--b',              raw: 'oklch(...)', resolved: 'oklch(...)' },
-    //   ]
-    // Stops at the first non-var value or when nothing further can be resolved.
     function trace(selector, prop = 'background-color') {
-        const start = typeof selector === 'string' ? document.querySelector(selector) : selector;
-        if (!start) return null;
+        const startElement = typeof selector === 'string' ? document.querySelector(selector) : selector;
+        if (!startElement) return null;
         const chain = [];
         const seen = new Set();
-        // First step: prop on the element itself.
-        let cursor = { el: start, prop, walkAncestors: false };
+        let cursor = { element: startElement, prop, walkAncestors: false };
+
         while (cursor) {
-            const key = `${cursor.el === document.body ? 'body' : cursor.el.tagName + ':' + cursor.el.className}|${cursor.prop}`;
+            const key = `${cursor.element === document.body ? 'body' : `${cursor.element.tagName}:${cursor.element.className}`}|${cursor.prop}`;
             if (seen.has(key)) break;
             seen.add(key);
-            // Find the rule for this prop. Custom props can be set on ancestors;
-            // standard props live on the element itself.
+
             let found = null;
             if (cursor.walkAncestors) {
-                let anc = cursor.el;
-                while (anc) {
-                    const hits = rulesFor(anc, cursor.prop);
-                    if (hits.length) { found = { el: anc, ...hits[hits.length - 1] }; break; }
-                    anc = anc.parentElement;
+                let ancestor = cursor.element;
+                while (ancestor) {
+                    const hits = rulesFor(ancestor, cursor.prop);
+                    if (hits.length) {
+                        found = { element: ancestor, ...hits[hits.length - 1] };
+                        break;
+                    }
+                    ancestor = ancestor.parentElement;
                 }
             } else {
-                const hits = rulesFor(cursor.el, cursor.prop);
-                if (hits.length) found = { el: cursor.el, ...hits[hits.length - 1] };
+                const hits = rulesFor(cursor.element, cursor.prop);
+                if (hits.length) found = { element: cursor.element, ...hits[hits.length - 1] };
             }
+
             if (!found) {
                 chain.push({ from: '(unresolved)', prop: cursor.prop });
                 break;
             }
-            const fromLabel = found.el === document.body ? 'body'
-                : found.el === document.documentElement ? ':root'
-                : found.selector;
-            const entry = { from: fromLabel, prop: cursor.prop, raw: found.value };
-            // Resolved value (post-cascade) — useful as a terminal sanity check
-            const cs = getComputedStyle(found.el);
-            const resolved = cs.getPropertyValue(cursor.prop).trim();
+
+            const from = found.element === document.body ? 'body'
+                : found.element === document.documentElement ? ':root'
+                    : found.selector;
+            const entry = {
+                from,
+                prop: cursor.prop,
+                raw: found.value,
+                important: found.important,
+                source: found.source,
+            };
+            const resolved = getComputedStyle(found.element).getPropertyValue(cursor.prop).trim();
             if (resolved && resolved !== found.value) entry.resolved = resolved;
             chain.push(entry);
-            // Recurse on the first var() reference in the value
-            const m = found.value.match(/var\(\s*(--[\w-]+)/);
-            if (!m) break;
-            cursor = { el: start, prop: m[1], walkAncestors: true };
+
+            const match = found.value.match(/var\(\s*(--[\w-]+)/);
+            if (!match) break;
+            cursor = { element: startElement, prop: match[1], walkAncestors: true };
         }
         return chain;
     }
 
-    window.__midnight = { reload: apply, off, start, stop, computed, find, cssVar, trace, BASE };
+    async function reload() {
+        if (inFlight) await inFlight;
+        const currentVersion = await fetchVersion();
+        const length = await apply();
+        lastVersion = currentVersion;
+        return length;
+    }
 
-    apply().then((n) => {
-        lastVer = Date.now();
+    window.__themeDev = { reload, off, start, stop, computed, find, cssVar, trace, BASE, DISPLAY_NAME };
+
+    reload().then((length) => {
         start();
-        console.log(`[midnight] injected ${n}b — auto-reload on. helpers: window.__midnight`);
-    }).catch((e) => console.error('[midnight] inject failed:', e));
+        console.log(`[${DISPLAY_NAME}] injected ${length}b — auto-reload on. helpers: window.__themeDev`);
+    }).catch((error) => console.error(`[${DISPLAY_NAME}] inject failed:`, error));
 })();

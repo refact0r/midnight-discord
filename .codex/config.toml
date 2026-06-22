@@ -2,5 +2,5 @@
 command = "npx"
 args = [
     "-y",
-    "chrome-devtools-mcp@latest",
+    "chrome-devtools-mcp@1.3.0",
 ]

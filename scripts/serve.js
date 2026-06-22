@@ -1,91 +1,81 @@
-/*
- * Browser dev server for midnight-discord.
- *
- * Combines themes/midnight.theme.css with build/midnight.css (built from src/*.css)
- * and serves the result over HTTP with CORS so that Discord running in a normal
- * browser tab can fetch + inject it from DevTools.
- *
- * Endpoints:
- *   GET /midnight.css  — combined theme CSS
- *   GET /version       — { version } stamp, bumps on every rebuild
- *   GET /inject.js     — bootstrap script to eval in Discord DevTools
- *
- * See BROWSER_DEV.md for the workflow and CLAUDE.md for agent automation notes.
- */
+/* Browser dev server. See docs/BROWSER_DEV.md. */
 
 const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const chokidar = require('chokidar');
 
+const { baseFile, buildCombinedTheme, config, root, srcDir } = require('./build');
+
 const PORT = Number(process.env.PORT) || 8765;
 const HOST = process.env.HOST || '127.0.0.1';
-
-const root = path.join(__dirname, '..');
-const baseFile = path.join(root, 'themes', 'midnight.theme.css');
-const buildFile = path.join(root, 'build', 'midnight.css');
-const srcDir = path.join(root, 'src');
 const injectFile = path.join(__dirname, 'inject.js');
 
-function buildSrc() {
-    const files = fs
-        .readdirSync(srcDir)
-        .filter((f) => f.endsWith('.css'))
-        .map((f) => path.join(srcDir, f));
-    const main = files.find((f) => path.basename(f) === 'main.css');
-    const rest = files.filter((f) => f !== main);
-    const ordered = main ? [main, ...rest] : rest;
-    const combined = ordered
-        .map((f) => `/* ${path.basename(f)} */\n${fs.readFileSync(f, 'utf8')}\n`)
-        .join('');
-    fs.mkdirSync(path.dirname(buildFile), { recursive: true });
-    fs.writeFileSync(buildFile, combined);
-    return combined;
-}
-
-function buildCombined() {
-    const compiled = buildSrc();
-    const base = fs.readFileSync(baseFile, 'utf8');
-    return base.replace(/@import\s+url\(['"]?[^'"]+['"]?\);/g, compiled);
-}
-
-let cached = buildCombined();
-let version = Date.now();
+let cached = buildCombinedTheme();
+let version = 1;
 
 function rebuild(reason) {
     try {
-        cached = buildCombined();
-        version = Date.now();
+        cached = buildCombinedTheme();
+        version += 1;
         console.log(`[${new Date().toLocaleTimeString()}] rebuilt (${cached.length} bytes) — ${reason}`);
-    } catch (e) {
-        console.error('build failed:', e.message);
+    } catch (error) {
+        console.error('build failed:', error.message);
     }
 }
 
-const server = http.createServer((req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Cache-Control', 'no-store');
-    const url = req.url.split('?')[0];
-    if (url === '/version') {
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ version }));
+function send(request, response, status, contentType, body) {
+    response.statusCode = status;
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Cache-Control', 'no-store');
+    response.setHeader('Content-Type', contentType);
+    response.setHeader('Content-Length', Buffer.byteLength(body));
+    response.end(request.method === 'HEAD' ? undefined : body);
+}
+
+const server = http.createServer((request, response) => {
+    if (request.method === 'OPTIONS') {
+        response.statusCode = 204;
+        response.setHeader('Access-Control-Allow-Origin', '*');
+        response.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+        response.end();
         return;
     }
-    if (url === '/inject.js') {
-        res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-        res.end(fs.readFileSync(injectFile, 'utf8'));
+    if (request.method !== 'GET' && request.method !== 'HEAD') {
+        send(request, response, 405, 'text/plain; charset=utf-8', 'Method not allowed\n');
         return;
     }
-    res.setHeader('Content-Type', 'text/css; charset=utf-8');
-    res.end(cached);
+
+    const pathname = new URL(request.url, `http://${request.headers.host || 'localhost'}`).pathname;
+    if (pathname === '/version') {
+        send(request, response, 200, 'application/json; charset=utf-8', JSON.stringify({ version }));
+        return;
+    }
+    if (pathname === '/inject.js') {
+        const runtime = {
+            base: `http://${request.headers.host || `${HOST}:${PORT}`}`,
+            displayName: config.displayName,
+        };
+        const loader = fs.readFileSync(injectFile, 'utf8')
+            .replace('__THEME_DEV_RUNTIME__', JSON.stringify(runtime));
+        send(request, response, 200, 'application/javascript; charset=utf-8', loader);
+        return;
+    }
+    if (pathname === '/theme.css') {
+        send(request, response, 200, 'text/css; charset=utf-8', cached);
+        return;
+    }
+    send(request, response, 404, 'text/plain; charset=utf-8', 'Not found\n');
 });
 
 server.listen(PORT, HOST, () => {
-    console.log(`midnight-discord dev server @ http://${HOST}:${PORT}`);
-    console.log(`  CSS:    /midnight.css`);
-    console.log(`  loader: /inject.js  (eval in Discord DevTools to install)`);
+    console.log(`${config.displayName} dev server @ http://${HOST}:${PORT}`);
+    console.log('  CSS:    /theme.css');
+    console.log('  loader: /inject.js  (eval in Discord DevTools to install)');
     console.log(`one-liner: fetch('http://${HOST}:${PORT}/inject.js').then(r=>r.text()).then(eval)`);
 });
 
 const watcher = chokidar.watch([baseFile, `${srcDir}/**/*.css`], { ignoreInitial: true });
-watcher.on('all', (event, file) => rebuild(`${event} ${path.relative(root, file)}`));
+watcher
+    .on('all', (event, file) => rebuild(`${event} ${path.relative(root, file)}`))
+    .on('error', (error) => console.error(`Watcher error: ${error}`));
