@@ -1553,6 +1553,10 @@ body {
         background-color: var(--bg-2) !important;
         --white-500: var(--text-3);
     }
+    .akaPopoverBadge_f75fb0 /* dm vc user hover AKA badge */,
+    .qualityIndicatorFullQuality__30845 {
+        color: var(--text-3);
+    }
 
     .unread__3b95d /* new unreads bar (channel list */,
         .item_caf372 /* settings items */,
