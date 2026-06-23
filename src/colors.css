@@ -1034,4 +1034,9 @@
     #app-mount .popout__0bd4a {
         background-color: var(--bg-3);
     }
+
+    .colorable_f1ceac.primaryDark_f1ceac.active_f1ceac:not(.disabled_f1ceac),
+    .colorable_f1ceac.primaryDark_f1ceac:hover:not(.disabled_f1ceac) {
+        background-color: var(--bg-1);
+    }
 }
