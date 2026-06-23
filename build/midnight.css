@@ -1534,7 +1534,8 @@ body {
     .tooltipBlack__382e7 /* server boost tooltip */,
     .colorable_f1ceac.primaryDark_f1ceac, .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc buttons */,
     .item_caf372.active_caf372 /* settings items active */,
-    .interactive__972a0.interactiveSelected__972a0 /* dms list items active */ {
+    .interactive__972a0.interactiveSelected__972a0 /* dms list items active */,
+    .controlIcon_cf09d8:hover /* video play button hover */ {
         color: var(--text-3);
     }
     .status__2f4f7 path[fill='var(--white)'],
