@@ -629,7 +629,6 @@
         background-color: transparent !important;
     }
 
-    .sidebar__409aa, /* user settings sidebar */
     .sidebarRegionScroller__23e6b /* server and channel settings sidebar */ {
         background-color: var(--bg-3);
     }
@@ -647,17 +646,6 @@
     .mainCard_f369db /* form posts */,
     .accountProfileCard_a9178b /* account settings profile background */ {
         background-color: var(--bg-3);
-    }
-
-    /* User settings search bar coloring */
-    .fixedContent__409aa {
-        &::after {
-            background: linear-gradient(to bottom, var(--bg-3), transparent);
-        }
-
-        .searchBarContainer_cf016e .wrapper__72c38 {
-            background-color: var(--bg-4);
-        }
     }
 
     .colorable_f1ceac.primaryDark_f1ceac,
@@ -998,15 +986,31 @@
 
     .switchIndicator_a28278 {
         transition: 0.2s ease;
+        border: 1px solid var(--border-light) !important;
+
+        /* Off state */
+        &[style^='opacity: 1; background-color: rgba(0, 0, 0, 0.12)'] {
+            background-color: var(--bg-3) !important;
+
+            .thumb_a28278 > rect {
+                fill: var(--text-3) !important;
+            }
+        }
 
         /* Default state */
         &[style^='opacity: 1; background-color: rgb(88, 101, 242)'] {
             background-color: var(--accent-3) !important;
+            border: 1px solid var(--button-border) !important;
         }
 
         /* Hovered state */
         &[style^='opacity: 1; background-color: rgb(68, 82, 187)'] {
             background-color: var(--accent-4) !important;
+        }
+
+        /* Disabled state */
+        &[style^='opacity: 0.5; background-color: rgb(88, 101, 242)'] {
+            background-color: var(--accent-3) !important;
         }
 
         /* Clicked state */
@@ -1018,6 +1022,11 @@
             .thumb_a28278 > svg path {
                 fill: var(--accent-2);
             }
+        }
+
+        .thumb_a28278 > rect {
+            transition: 0.2s ease;
+            fill: var(--bg-4) !important;
         }
     }
 
