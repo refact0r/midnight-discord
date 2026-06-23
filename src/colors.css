@@ -690,12 +690,12 @@
     }
 
     .container__3f21e /* settings checkbutton background */,
-    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container {
+    .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
     .container__3f21e.checked__3f21e /* settings checkbutton background */,
-    [data-nav-anchor-key="vencord_plugins_category"] .vc-switch-container.vc-switch-checked {
+    .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
     }
     .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
