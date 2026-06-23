@@ -1347,6 +1347,12 @@ body {
         background: none;
     }
 
+    /* dm profile panel custom background footer */
+    .footerButton__272c7,
+    .footerButton__272c7::before {
+        background-color: transparent !important;
+    }
+
     .sidebar__409aa, /* user settings sidebar */
     .sidebarRegionScroller__23e6b /* server and channel settings sidebar */ {
         background-color: var(--bg-3);
