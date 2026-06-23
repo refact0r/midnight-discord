@@ -702,7 +702,7 @@ body {
     .channelBottomBarArea_f75fb0 {
         margin-top: var(--gap);
     }
-    .channelTextArea_f75fb0 {
+    #app-mount .channelTextArea_f75fb0 {
         margin: 0;
         background-color: var(--background-base-lower);
         border-radius: var(--radius-lg);
