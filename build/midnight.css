@@ -1418,7 +1418,9 @@ body {
         background: var(--reply-hover);
     }
 
-    .voiceBar__7aaec .barText__7aaec, .voiceChannelsIcon__7aaec /* x in voice bar text */ {
+    .voiceBar__7aaec .barText__7aaec, .voiceChannelsIcon__7aaec /* x in voice bar text */,
+    .activeButtonChild_aa63ab /* message bar send button icon */,
+    #app-mount .button_aa63ab:hover .activeButtonChild_aa63ab {
         color: var(--accent-2);
     }
 
