@@ -22,9 +22,6 @@ a dark, customizable discord theme.
 
 add `https://refact0r.github.io/midnight-discord/build/midnight.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
 
-> [!NOTE]
-> for best results, set discord's theme to **dark** in **user settings -> appearance**, regardless of which midnight flavor or customizations you use.
-
 ## flavors
 
 flavors are preset customizations for midnight.
