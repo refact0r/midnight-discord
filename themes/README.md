@@ -22,9 +22,12 @@ a dark, customizable discord theme.
 
 add `https://refact0r.github.io/midnight-discord/build/midnight.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
 
+> [!NOTE]
+> for best results, set discord's theme to **dark** in **user settings -> appearance**, regardless of which midnight flavor or customizations you use.
+
 ## flavors
 
-flavors are preset customizations for midnight. screenshots coming soon!
+flavors are preset customizations for midnight.
 
 to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `midnight.theme.css`.
 
@@ -36,6 +39,8 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [rose pine moon](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css)
 - [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
 - [lilypichu](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-lilypichu.theme.css)
+- [light](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-light.theme.css)
+- [auto](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-auto.theme.css)
 - [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
 
 ## discord server
@@ -54,9 +59,9 @@ this theme uses a dev script to check for changes in the source css files and co
 DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\midnight-dev.theme.css
 ```
 
-4. run `npm run dev`.
-5. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
-6. make a pull request with your changes!
+1. run `npm run dev`.
+2. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
+3. make a pull request with your changes!
 
 ## credits
 
