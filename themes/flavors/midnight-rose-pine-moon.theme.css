@@ -82,6 +82,7 @@ body {
     --text-3: hsl(246deg, 30%, 80%); /* normal text */
     --text-4: hsl(248deg, 15%, 61%); /* icon buttons and channels */
     --text-5: hsl(249deg, 12%, 47%); /* muted channels/chats and timestamps */
+    --text-code: hsl(246deg, 30%, 75%); /* text inside code blocks */
 
     /* background and dark colors */
     --bg-1: hsl(248deg, 21%, 32%); /* dark buttons when clicked */

@@ -82,6 +82,7 @@ body {
     --text-3: #d8dee9; /* normal text */
     --text-4: hsl(220, 20%, 67%); /* icon buttons and channels */
     --text-5: #4c566a; /* muted channels/chats and timestamps */
+    --text-code: #c8d0e0; /* text inside code blocks */
 
     /* background and dark colors */
     --bg-1: #434c5e; /* dark buttons when clicked */
