@@ -28,6 +28,8 @@ flavors are preset customizations for midnight.
 
 to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `midnight.theme.css`.
 
+- [light](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-light.theme.css)
+- [auto (system theme)](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-auto.theme.css)
 - [background](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-background.theme.css) (background image + transparent blurred panels)
 - [catppuccin mocha](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-macchiato.theme.css)
@@ -36,8 +38,6 @@ to use a flavor, follow the install instructions above but download the flavor t
 - [rose pine moon](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-rose-pine-moon.theme.css)
 - [tokyo night](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-tokyo-night.theme.css)
 - [lilypichu](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-lilypichu.theme.css)
-- [light](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-light.theme.css)
-- [auto](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-auto.theme.css)
 - [vencord](https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-vencord.theme.css)
 
 ## discord server
