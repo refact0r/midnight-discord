@@ -1,0 +1,171 @@
+/**
+ * @name midnight (monokai)
+ * @description a dark, customizable discord theme. based on monokai pro (classic filter).
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-monokai.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+body {
+    /* font, change to '' for default discord font */
+    --font: "figtree";
+    --code-font: "";
+    font-weight: 400;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    /* animation/transition options */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    /* top bar options */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button options */
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.1201 25.95C15.1201 24.921 15.9661 24.075 16.9951 24.075C18.0241 24.075 18.8701 24.921 18.8701 25.95V28.2C18.8701 28.6972 18.6726 29.1741 18.3209 29.5258C17.9693 29.8774 17.4924 30.075 16.9951 30.075C16.4978 30.075 16.0209 29.8774 15.6693 29.5258C15.3177 29.1741 15.1201 28.6972 15.1201 28.2V25.95ZM27.7501 25.95C27.7501 24.921 28.5961 24.075 29.6251 24.075C30.6541 24.075 31.5001 24.921 31.5001 25.95V28.2C31.5001 28.6972 31.3026 29.1741 30.9509 29.5258C30.5993 29.8774 30.1224 30.075 29.6251 30.075C29.1278 30.075 28.6509 29.8774 28.2993 29.5258C27.9477 29.1741 27.7501 28.6972 27.7501 28.2V25.95Z' fill='currentColor'/%3E%3Cpath d='M29.5078 2.26648C28.5232 3.08352 27.644 4.01968 26.8903 5.05348C25.9483 6.31048 25.1803 7.69348 24.6073 9.16348L24.0073 10.5H24.1498H22.5583C21.5994 7.26738 19.7142 4.38666 17.1358 2.21398C16.6129 1.80931 15.9806 1.57102 15.3208 1.52998C14.8922 1.46855 14.4557 1.49527 14.0378 1.6085C13.62 1.72173 13.2297 1.91909 12.8908 2.18848L12.8863 2.19298C11.7313 3.12748 10.8583 4.24348 10.1443 5.42548C8.01276 8.40098 6.86757 11.9698 6.86977 15.63V27H3.94477C3.57041 26.9983 3.20085 27.0843 2.86565 27.251C2.53044 27.4177 2.23888 27.6605 2.01427 27.96C1.78344 28.2611 1.62587 28.6118 1.55401 28.9844C1.48216 29.3569 1.49799 29.7411 1.60027 30.1065C2.94451 34.8191 5.7848 38.9669 9.69271 41.924C13.6006 44.8811 18.3642 46.4872 23.2648 46.5H23.4748C28.3766 46.487 33.1412 44.88 37.0496 41.9214C40.9579 38.9628 43.7978 34.8133 45.1408 30.099C45.2407 29.7355 45.2554 29.3538 45.1837 28.9836C45.112 28.6135 44.9559 28.2649 44.7274 27.965C44.4989 27.6651 44.2043 27.422 43.8665 27.2546C43.5287 27.0873 43.1568 27.0001 42.7798 27H39.8548V15.63C39.859 11.1771 38.1618 6.89085 35.1103 3.64798C34.6428 3.1172 34.1293 2.6288 33.5758 2.18848C33.0109 1.7405 32.3107 1.49773 31.5898 1.49998C30.8673 1.4967 30.1653 1.73953 29.5993 2.18848L29.5078 2.26648ZM9.87577 15.6315C9.86943 13.8789 10.1831 12.1399 10.8013 10.5H11.8723C11.0329 12.4636 10.6017 14.5775 10.6048 16.713V20.625C11.0498 19.823 11.5498 19.071 12.1048 18.369C13.9798 15.993 16.4428 14.226 19.2448 13.335C19.0337 12.3629 18.7293 11.4135 18.3358 10.5H19.4068C19.6338 11.104 19.8213 11.723 19.9693 12.357L20.2498 13.5H26.4673L26.7478 12.3555C26.8946 11.7255 27.082 11.1057 27.3088 10.5H28.3588C27.9656 11.4162 27.6612 12.3681 27.4498 13.3425C30.2608 14.2335 32.7328 16.0005 34.6048 18.3675C35.1608 19.0705 35.6608 19.823 36.1048 20.625V16.758C36.1048 14.553 35.6563 12.423 34.8268 10.5H35.9293C36.5473 12.1394 36.8609 13.8779 36.8548 15.63V27.285C36.8548 28.005 37.1408 28.6956 37.65 29.2048C38.1591 29.7139 38.8497 30 39.5698 30H42.0358C41.9558 30.247 41.8708 30.492 41.7808 30.735H33.4048C31.0135 30.7372 28.6668 31.3816 26.6098 32.601C26.9128 31.7145 26.2798 30.675 25.2223 30.675H21.4123C21.1869 30.6733 20.9641 30.7236 20.7613 30.8219C20.5585 30.9203 20.3811 31.0641 20.2428 31.2421C20.1046 31.4201 20.0092 31.6276 19.9641 31.8484C19.919 32.0692 19.9254 32.2975 19.9828 32.5155C17.9605 31.3512 15.6683 30.7373 13.3348 30.735H4.95877C4.86877 30.492 4.78327 30.247 4.70227 30H7.15477C7.51168 30.0008 7.86525 29.9312 8.19525 29.7952C8.52524 29.6592 8.82518 29.4595 9.07791 29.2074C9.33064 28.9554 9.53119 28.656 9.6681 28.3264C9.805 27.9968 9.87557 27.6434 9.87577 27.2865V15.6315ZM15.0403 8.08348C15.5063 8.60948 15.9188 9.17198 16.2778 9.77098L16.5358 10.2015C16.8988 10.9015 17.2023 11.635 17.4463 12.402C15.4429 13.2606 13.6314 14.5111 12.1183 16.08C12.2488 13.0755 13.3048 10.2675 15.0403 8.08348ZM41.1508 32.235C39.5753 35.5951 37.0772 38.4382 33.9476 40.4327C30.818 42.4272 27.1859 43.491 23.4748 43.5H23.2648C19.5538 43.4894 15.9221 42.4251 12.7926 40.4307C9.66301 38.4364 7.16428 35.5942 5.58727 32.235H13.3348C15.8039 32.2351 18.2108 33.0094 20.2168 34.449L20.2198 34.4505L22.5973 36.1455C22.5452 36.9196 22.2009 37.645 21.6342 38.175C21.0675 38.7049 20.3207 38.9998 19.5448 39C19.1248 39 18.7948 39.33 18.7948 39.75C18.7948 40.17 19.1248 40.5 19.5448 40.5C21.1348 40.5 22.5448 39.675 23.3698 38.445C24.1798 39.675 25.5898 40.5 27.1798 40.5C27.5848 40.5 27.9148 40.17 27.9148 39.75C27.9148 39.33 27.5848 39 27.1648 39C25.5598 39 24.2293 37.755 24.1138 36.165L26.5198 34.4505H26.5228C28.5286 33.0104 30.9355 32.2355 33.4048 32.235H41.1508ZM29.2483 12.408C29.7458 10.8109 30.5391 9.32154 31.5868 8.01748C33.3658 10.1955 34.4488 13.032 34.5898 16.08C33.0722 14.5118 31.256 13.2632 29.2483 12.408Z' fill='currentColor'/%3E%3C/svg%3E");
+    --dms-icon-svg-size: 100%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url("");
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(
+        70deg,
+        var(--blue-2),
+        var(--purple-2),
+        var(--red-2)
+    );
+
+    /* background image options */
+    --background-image: off;
+    --background-image-url: url("");
+
+    /* transparency/blur options */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* chatbar options */
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+
+    /* other options */
+    --small-user-panel: on;
+}
+
+/* color options */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: var(--bg-3); /* text on colored elements */
+    --text-1: #f8f8f2; /* other normally white text */
+    --text-2: #f8f8f2; /* headings and important text */
+    --text-3: #cccccc; /* normal text */
+    --text-4: #90908a; /* icon buttons and channels */
+    --text-5: #75715e; /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: #414339; /* dark buttons when clicked */
+    --bg-2: #3e3d32; /* dark buttons */
+    --bg-3: #1e1f1c; /* spacing, secondary elements */
+    --bg-4: #272822; /* main background color */
+    --hover: hsla(60, 8%, 50%, 0.1);
+    --active: hsla(60, 8%, 50%, 0.2);
+    --active-2: hsla(60, 8%, 50%, 0.3);
+    --message-hover: hsla(0, 0%, 0%, 0.1);
+
+    /* accent colors */
+    --accent-1: var(--green-1);
+    --accent-2: var(--green-2);
+    --accent-3: var(--green-2);
+    --accent-4: var(--green-4);
+    --accent-5: var(--green-5);
+    --accent-new: var(--accent-2);
+    --mention: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--accent-2), transparent 90%) 40%,
+        transparent
+    );
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--accent-2), transparent 95%) 40%,
+        transparent
+    );
+    --reply: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--text-3), transparent 90%) 40%,
+        transparent
+    );
+    --reply-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--text-3), transparent 95%) 40%,
+        transparent
+    );
+
+    /* status indicator colors */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+
+    /* border colors */
+    --border-light: hsla(60, 8%, 50%, 0.05);
+    --border: hsla(60, 8%, 50%, 0.1);
+    --border-hover: hsla(60, 8%, 50%, 0.15);
+    --button-border: hsla(0, 0%, 100%, 0.1);
+
+    /* base colors */
+    --red-1: hsl(337, 94%, 66%);
+    --red-2: #f92672;
+    --red-3: #f92672;
+    --red-4: hsl(337, 94%, 46%);
+    --red-5: hsl(337, 94%, 41%);
+
+    --green-1: hsl(91, 38%, 54%);
+    --green-2: #86b42b;
+    --green-3: #86b42b;
+    --green-4: hsl(91, 38%, 44%);
+    --green-5: hsl(91, 38%, 39%);
+
+    --blue-1: hsl(190, 81%, 77%);
+    --blue-2: #66d9ef;
+    --blue-3: #66d9ef;
+    --blue-4: hsl(190, 81%, 57%);
+    --blue-5: hsl(190, 81%, 52%);
+
+    --yellow-1: hsl(60, 76%, 63%);
+    --yellow-2: #e2e22e;
+    --yellow-3: #e2e22e;
+    --yellow-4: hsl(60, 76%, 43%);
+    --yellow-5: hsl(60, 76%, 38%);
+
+    --purple-1: hsl(262, 100%, 82%);
+    --purple-2: #ae81ff;
+    --purple-3: #ae81ff;
+    --purple-4: hsl(262, 100%, 65%);
+    --purple-5: hsl(262, 100%, 60%);
+}
