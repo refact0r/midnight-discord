@@ -19,7 +19,7 @@
         .outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
-        .messagesPopoutWrap_e8b59c /* inbox */,
+        .messagesPopoutWrap__432f4 /* inbox */,
         .popout__76f04 /* channel hover popout */,
         .bar__7aaec /* channel list new unreads bar */ {
         background: var(--bg-floating);
