@@ -53,14 +53,14 @@ body {
 
     /* background image options */
     --background-image: on; /* off: no background image, on: enable background image (must set url variable below) */
-    --background-image-url: url('https://refact0r.github.io/midnight-discord/assets/iceland.jpg'); /* url of the background image */
+    --background-image-url: url('https://github.com/Fri3ndlyDemon/NotAnotherAnimeTheme/blob/master/1208837.png'); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: on; /* off: no changes, on: blur the background of panels */
-    --blur-amount: 12px; /* amount of blur */
+    --blur-amount: 6px; /* amount of blur */
     --bg-floating: hsla(220, 15%, 13%, 0.9); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
