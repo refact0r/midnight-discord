@@ -247,6 +247,11 @@ body {
     border: none;
 }
 
+.aside_f58343 /* dm user panel wrapper */ {
+    padding: 0;
+    background: none;
+}
+
 .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
     margin-left: var(--gap);
     overflow: hidden;
