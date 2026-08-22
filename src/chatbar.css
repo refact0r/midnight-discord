@@ -7,7 +7,7 @@ body {
 @property --custom-chatbar {
     syntax: 'off | separated';
     inherits: false;
-    initial-value: aligned;
+    initial-value: off;
 }
 
 .attachWrapper__0923f {

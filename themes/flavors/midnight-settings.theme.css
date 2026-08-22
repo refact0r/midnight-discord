@@ -1,0 +1,922 @@
+/**
+ * @name midnight (settings)
+ * @description a dark, customizable discord theme. this flavor exposes midnight's options as theme settings (the @property based format shared with BetterDiscord).
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-settings.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+/*
+ * theme settings
+ *
+ * every option below is declared as a namespaced --midnight-* custom property using an
+ * @property block. clients that support theme settings read the name/note/options/min/max
+ * descriptors to build a settings UI and write the chosen value to :root. the blocks at the
+ * bottom of this file map each --midnight-* property onto midnight's regular variables, so
+ * the build does not need to know about them. the fallback in each var() is the default.
+ *
+ * if your client does not support theme settings, you can still edit the fallback values at
+ * the bottom of this file, exactly like in midnight.theme.css.
+ */
+
+/* font */
+@property --midnight-font {
+    syntax: "*";
+    inherits: true;
+    initial-value: 'figtree';
+    name: "Font";
+    note: "Font family for normal text. Set to '' for the default Discord font.";
+}
+
+@property --midnight-code-font {
+    syntax: "*";
+    inherits: true;
+    initial-value: '';
+    name: "Code font";
+    note: "Font family for code blocks. Set to '' for the default Discord font.";
+}
+
+@property --midnight-font-weight {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 400;
+    min: 100;
+    max: 900;
+    step: 100;
+    name: "Font weight";
+    note: "Weight of normal text. Does not affect bold text.";
+}
+
+/* sizes */
+@property --midnight-gap {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 12px;
+    min: 0;
+    max: 32;
+    step: 1;
+    name: "Gap";
+    note: "Spacing between panels.";
+}
+
+@property --midnight-divider-thickness {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 4px;
+    min: 0;
+    max: 12;
+    step: 1;
+    name: "Divider thickness";
+    note: "Thickness of the unread messages divider and highlighted message borders.";
+}
+
+@property --midnight-border-thickness {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 1px;
+    min: 0;
+    max: 6;
+    step: 1;
+    name: "Border thickness";
+    note: "Thickness of borders around main panels. Does not affect other borders.";
+}
+
+/* animations */
+@property --midnight-animations {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: on;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Animations";
+    note: "Enable animations and transitions.";
+}
+
+@property --midnight-list-item-transition {
+    syntax: "*";
+    inherits: true;
+    initial-value: 0.2s ease;
+    name: "List item transition";
+    note: "Transition for list items.";
+}
+
+@property --midnight-dms-icon-svg-transition {
+    syntax: "*";
+    inherits: true;
+    initial-value: 0.4s ease;
+    name: "DMs icon transition";
+    note: "Transition for the DMs icon.";
+}
+
+@property --midnight-border-hover-transition {
+    syntax: "*";
+    inherits: true;
+    initial-value: 0.2s ease;
+    name: "Border hover transition";
+    note: "Transition for borders when hovered.";
+}
+
+/* top bar */
+@property --midnight-top-bar-height {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 12px;
+    name: "Top bar height";
+    note: "Height of the top bar. Discord default is 36px, old Discord style is 24px. var(--gap) is recommended when the button position is set to the channel titlebar.";
+}
+
+@property --midnight-top-bar-button-position {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: titlebar;
+    options: "off=Default | hide=Hidden | serverlist=Server list | titlebar=Channel titlebar";
+    name: "Top bar button position";
+    note: "Where to put the inbox and help buttons. Channel titlebar hides the title.";
+}
+
+@property --midnight-top-bar-title-position {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "off=Centered | hide=Hidden | left=Left (like old Discord)";
+    name: "Top bar title position";
+    note: "Position of the title in the top bar.";
+}
+
+@property --midnight-subtle-top-bar-title {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Subtle top bar title";
+    note: "Hide the icon and use a subtle text color, like old Discord.";
+}
+
+/* window controls */
+@property --midnight-custom-window-controls {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: on;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Custom window controls";
+    note: "Use midnight's window controls instead of the default ones.";
+}
+
+@property --midnight-window-control-size {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 14px;
+    min: 8;
+    max: 24;
+    step: 1;
+    name: "Window control size";
+    note: "Size of the custom window controls.";
+}
+
+/* dms button */
+@property --midnight-custom-dms-icon {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: custom;
+    options: "off=Default Discord icon | hide=Hidden | custom=Custom icon";
+    name: "DMs icon";
+    note: "Icon shown on the DMs button.";
+}
+
+@property --midnight-dms-icon-svg-url {
+    syntax: "<url>";
+    inherits: true;
+    initial-value: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    name: "DMs icon SVG";
+    note: "URL of the custom DMs icon. Must be an SVG.";
+}
+
+@property --midnight-dms-icon-svg-size {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 90%;
+    min: 0;
+    max: 100;
+    step: 5;
+    name: "DMs icon size";
+    note: "Size of the SVG (CSS mask-size).";
+}
+
+@property --midnight-dms-icon-color-before {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 15%, 40%);
+    name: "DMs icon color";
+    note: "Normal icon color.";
+}
+
+@property --midnight-dms-icon-color-after {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 10%, 1);
+    name: "DMs icon hover color";
+    note: "Icon color when the button is hovered or selected.";
+}
+
+@property --midnight-custom-dms-background {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "off=Off | image=Image | color=Color or gradient";
+    name: "DMs button background";
+    note: "Background of the DMs button.";
+}
+
+@property --midnight-dms-background-image-url {
+    syntax: "<url>";
+    inherits: true;
+    initial-value: url('');
+    file: true;
+    name: "DMs background image";
+    note: "Background image for the DMs button. Requires the DMs button background to be set to Image.";
+}
+
+@property --midnight-dms-background-image-size {
+    syntax: "*";
+    inherits: true;
+    initial-value: cover;
+    name: "DMs background image size";
+    note: "Size of the background image (CSS background-size).";
+}
+
+@property --midnight-dms-background-color-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.1 215);
+    name: "DMs background color 1";
+    note: "First color of the DMs button background gradient. Set all three colors to the same value for a solid color. Requires the DMs button background to be set to Color.";
+}
+
+@property --midnight-dms-background-color-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 310);
+    name: "DMs background color 2";
+    note: "Second color of the DMs button background gradient.";
+}
+
+@property --midnight-dms-background-color-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.12 0);
+    name: "DMs background color 3";
+    note: "Third color of the DMs button background gradient.";
+}
+
+/* background image */
+@property --midnight-background-image {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Background image";
+    note: "Show a background image behind the app. Set the image below.";
+}
+
+@property --midnight-background-image-url {
+    syntax: "<url>";
+    inherits: true;
+    initial-value: url('');
+    file: true;
+    name: "Background image file";
+    note: "URL of the background image.";
+}
+
+/* transparency and blur */
+@property --midnight-transparency-tweaks {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Transparency tweaks";
+    note: "Remove some elements for better transparency. Requires transparent background colors, e.g. hsla(220, 15%, 10%, 0.7) for Background 4.";
+}
+
+@property --midnight-remove-bg-layer {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Remove background layer";
+    note: "Remove the base Background 3 layer for use with window transparency. Overrides the background image.";
+}
+
+@property --midnight-panel-blur {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Panel blur";
+    note: "Blur the background of panels.";
+}
+
+@property --midnight-blur-amount {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 12px;
+    min: 0;
+    max: 40;
+    step: 1;
+    name: "Blur amount";
+    note: "Amount of blur applied to panels.";
+}
+
+@property --midnight-bg-floating {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 13%, 1);
+    name: "Floating panel background";
+    note: "Set this to a more opaque color if floating panels look too transparent. Only applies if panel blur is on.";
+}
+
+/* chatbar */
+@property --midnight-custom-chatbar {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: off;
+    options: "off=Default | separated=Separated";
+    name: "Chatbar style";
+    note: "Separated detaches the chatbar from the chat.";
+}
+
+@property --midnight-chatbar-height {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 47px;
+    min: 40;
+    max: 80;
+    step: 1;
+    name: "Chatbar height";
+    note: "56px is the Discord default, 47px aligns with the user panel, 56px is recommended for the separated chatbar.";
+}
+
+/* other */
+@property --midnight-small-user-panel {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: on;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Small user panel";
+    note: "Smaller user panel like in old Discord.";
+}
+
+/* colors */
+@property --midnight-colors {
+    syntax: "<custom-ident>";
+    inherits: true;
+    initial-value: on;
+    options: "on=On | off=Off";
+    checkbox: true;
+    name: "Midnight colors";
+    note: "Use midnight's custom colors. Off uses Discord's default colors.";
+}
+
+@property --midnight-text-0 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 10%, 1);
+    name: "Text 0";
+    note: "Text on colored elements.";
+}
+
+@property --midnight-text-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 45%, 95%);
+    name: "Text 1";
+    note: "Other normally white text.";
+}
+
+@property --midnight-text-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 25%, 70%);
+    name: "Text 2";
+    note: "Headings and important text.";
+}
+
+@property --midnight-text-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 20%, 60%);
+    name: "Text 3";
+    note: "Normal text.";
+}
+
+@property --midnight-text-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 15%, 40%);
+    name: "Text 4";
+    note: "Icon buttons and channels.";
+}
+
+@property --midnight-text-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 15%, 25%);
+    name: "Text 5";
+    note: "Muted channels, chats and timestamps.";
+}
+
+@property --midnight-bg-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 20%, 1);
+    name: "Background 1";
+    note: "Dark buttons when clicked.";
+}
+
+@property --midnight-bg-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 16%, 1);
+    name: "Background 2";
+    note: "Dark buttons.";
+}
+
+@property --midnight-bg-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 13%, 1);
+    name: "Background 3";
+    note: "Spacing and secondary elements.";
+}
+
+@property --midnight-bg-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 15%, 10%, 1);
+    name: "Background 4";
+    note: "Main background color.";
+}
+
+@property --midnight-hover {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(221, 19%, 40%, 0.1);
+    name: "Hover";
+    note: "Channels and buttons when hovered.";
+}
+
+@property --midnight-active {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 19%, 40%, 0.2);
+    name: "Active";
+    note: "Channels and buttons when clicked or selected.";
+}
+
+@property --midnight-active-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 19%, 40%, 0.3);
+    name: "Active 2";
+    note: "Extra state for transparent buttons.";
+}
+
+@property --midnight-message-hover {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 0%, 0%, 0.1);
+    name: "Message hover";
+    note: "Messages when hovered.";
+}
+
+@property --midnight-accent-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.1 215);
+    name: "Accent 1";
+    note: "Links and other accent text.";
+}
+
+@property --midnight-accent-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.1 215);
+    name: "Accent 2";
+    note: "Small accent elements.";
+}
+
+@property --midnight-accent-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.1 215);
+    name: "Accent 3";
+    note: "Accent buttons.";
+}
+
+@property --midnight-accent-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.1 215);
+    name: "Accent 4";
+    note: "Accent buttons when hovered.";
+}
+
+@property --midnight-accent-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(55% 0.1 215);
+    name: "Accent 5";
+    note: "Accent buttons when clicked.";
+}
+
+@property --midnight-accent-new {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.1 215);
+    name: "Accent (new)";
+    note: "Things that are normally red, like the mute and deafen buttons.";
+}
+
+@property --midnight-mention-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.1 215);
+    name: "Mention color";
+    note: "Highlight color of messages that mention you.";
+}
+
+@property --midnight-reply-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 20%, 60%);
+    name: "Reply color";
+    note: "Highlight color of messages that reply to you.";
+}
+
+@property --midnight-online {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 170);
+    name: "Online";
+    note: "Online status color. #40a258 for the Discord default.";
+}
+
+@property --midnight-dnd {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.12 0);
+    name: "Do not disturb";
+    note: "Do not disturb status color. #d83a41 for the Discord default.";
+}
+
+@property --midnight-idle {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.11 90);
+    name: "Idle";
+    note: "Idle status color. #cc954c for the Discord default.";
+}
+
+@property --midnight-streaming {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 310);
+    name: "Streaming";
+    note: "Streaming status color. #9147ff for the Discord default.";
+}
+
+@property --midnight-offline {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 15%, 40%);
+    name: "Offline";
+    note: "Offline status color. #82838b for the Discord default.";
+}
+
+@property --midnight-border-light {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(221, 19%, 40%, 0.1);
+    name: "Light border";
+    note: "General light border color.";
+}
+
+@property --midnight-border {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 19%, 40%, 0.2);
+    name: "Border";
+    note: "General normal border color.";
+}
+
+@property --midnight-border-hover {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsla(220, 19%, 40%, 0.2);
+    name: "Border hover";
+    note: "Border color of panels when hovered.";
+}
+
+@property --midnight-button-border {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(220, 0%, 100%, 0.1);
+    name: "Button border";
+    note: "Neutral border color of buttons.";
+}
+
+/* base colors */
+@property --midnight-red-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.12 0);
+    name: "Red 1";
+    note: "Base palette, 1 is the lightest and 5 the darkest.";
+}
+
+@property --midnight-red-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.12 0);
+    name: "Red 2";
+}
+
+@property --midnight-red-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.12 0);
+    name: "Red 3";
+}
+
+@property --midnight-red-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.12 0);
+    name: "Red 4";
+}
+
+@property --midnight-red-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(55% 0.12 0);
+    name: "Red 5";
+}
+
+@property --midnight-green-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.11 170);
+    name: "Green 1";
+    note: "Base palette, 1 is the lightest and 5 the darkest.";
+}
+
+@property --midnight-green-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 170);
+    name: "Green 2";
+}
+
+@property --midnight-green-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.11 170);
+    name: "Green 3";
+}
+
+@property --midnight-green-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.11 170);
+    name: "Green 4";
+}
+
+@property --midnight-green-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(55% 0.11 160);
+    name: "Green 5";
+}
+
+@property --midnight-blue-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.1 215);
+    name: "Blue 1";
+    note: "Base palette, 1 is the lightest and 5 the darkest.";
+}
+
+@property --midnight-blue-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.1 215);
+    name: "Blue 2";
+}
+
+@property --midnight-blue-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.1 215);
+    name: "Blue 3";
+}
+
+@property --midnight-blue-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.1 215);
+    name: "Blue 4";
+}
+
+@property --midnight-blue-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(55% 0.1 215);
+    name: "Blue 5";
+}
+
+@property --midnight-yellow-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(80% 0.11 90);
+    name: "Yellow 1";
+    note: "Base palette, 1 is the lightest and 5 the darkest.";
+}
+
+@property --midnight-yellow-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.11 90);
+    name: "Yellow 2";
+}
+
+@property --midnight-yellow-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 90);
+    name: "Yellow 3";
+}
+
+@property --midnight-yellow-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.11 90);
+    name: "Yellow 4";
+}
+
+@property --midnight-yellow-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.11 90);
+    name: "Yellow 5";
+}
+
+@property --midnight-purple-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(75% 0.11 310);
+    name: "Purple 1";
+    note: "Base palette, 1 is the lightest and 5 the darkest.";
+}
+
+@property --midnight-purple-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(70% 0.11 310);
+    name: "Purple 2";
+}
+
+@property --midnight-purple-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(65% 0.11 310);
+    name: "Purple 3";
+}
+
+@property --midnight-purple-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(60% 0.11 310);
+    name: "Purple 4";
+}
+
+@property --midnight-purple-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: oklch(55% 0.11 310);
+    name: "Purple 5";
+}
+
+/* map the settings onto midnight's variables. the fallbacks are the defaults. */
+body {
+    --font: var(--midnight-font, 'figtree');
+    --code-font: var(--midnight-code-font, '');
+    font-weight: var(--midnight-font-weight, 400); /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+    --gap: var(--midnight-gap, 12px);
+    --divider-thickness: var(--midnight-divider-thickness, 4px);
+    --border-thickness: var(--midnight-border-thickness, 1px);
+    --animations: var(--midnight-animations, on);
+    --list-item-transition: var(--midnight-list-item-transition, 0.2s ease);
+    --dms-icon-svg-transition: var(--midnight-dms-icon-svg-transition, 0.4s ease);
+    --border-hover-transition: var(--midnight-border-hover-transition, 0.2s ease);
+    --top-bar-height: var(--midnight-top-bar-height, 12px);
+    --top-bar-button-position: var(--midnight-top-bar-button-position, titlebar);
+    --top-bar-title-position: var(--midnight-top-bar-title-position, off);
+    --subtle-top-bar-title: var(--midnight-subtle-top-bar-title, off);
+    --custom-window-controls: var(--midnight-custom-window-controls, on);
+    --window-control-size: var(--midnight-window-control-size, 14px);
+    --custom-dms-icon: var(--midnight-custom-dms-icon, custom);
+    --dms-icon-svg-url: var(--midnight-dms-icon-svg-url, url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'));
+    --dms-icon-svg-size: var(--midnight-dms-icon-svg-size, 90%);
+    --dms-icon-color-before: var(--midnight-dms-icon-color-before, hsl(220, 15%, 40%));
+    --dms-icon-color-after: var(--midnight-dms-icon-color-after, hsla(220, 15%, 10%, 1));
+    --custom-dms-background: var(--midnight-custom-dms-background, off);
+    --dms-background-image-url: var(--midnight-dms-background-image-url, url(''));
+    --dms-background-image-size: var(--midnight-dms-background-image-size, cover);
+    --background-image: var(--midnight-background-image, off);
+    --background-image-url: var(--midnight-background-image-url, url(''));
+    --transparency-tweaks: var(--midnight-transparency-tweaks, off);
+    --remove-bg-layer: var(--midnight-remove-bg-layer, off);
+    --panel-blur: var(--midnight-panel-blur, off);
+    --blur-amount: var(--midnight-blur-amount, 12px);
+    --bg-floating: var(--midnight-bg-floating, hsla(220, 15%, 13%, 1));
+    --custom-chatbar: var(--midnight-custom-chatbar, off);
+    --chatbar-height: var(--midnight-chatbar-height, 47px);
+    --small-user-panel: var(--midnight-small-user-panel, on);
+    --dms-background-color: linear-gradient(70deg, var(--midnight-dms-background-color-1, var(--blue-2)), var(--midnight-dms-background-color-2, var(--purple-2)), var(--midnight-dms-background-color-3, var(--red-2)));
+}
+
+/* color options */
+:root {
+    --colors: var(--midnight-colors, on);
+    --text-0: var(--midnight-text-0, hsla(220, 15%, 10%, 1));
+    --text-1: var(--midnight-text-1, hsl(220, 45%, 95%));
+    --text-2: var(--midnight-text-2, hsl(220, 25%, 70%));
+    --text-3: var(--midnight-text-3, hsl(220, 20%, 60%));
+    --text-4: var(--midnight-text-4, hsl(220, 15%, 40%));
+    --text-5: var(--midnight-text-5, hsl(220, 15%, 25%));
+    --bg-1: var(--midnight-bg-1, hsla(220, 15%, 20%, 1));
+    --bg-2: var(--midnight-bg-2, hsla(220, 15%, 16%, 1));
+    --bg-3: var(--midnight-bg-3, hsla(220, 15%, 13%, 1));
+    --bg-4: var(--midnight-bg-4, hsla(220, 15%, 10%, 1));
+    --hover: var(--midnight-hover, hsla(221, 19%, 40%, 0.1));
+    --active: var(--midnight-active, hsla(220, 19%, 40%, 0.2));
+    --active-2: var(--midnight-active-2, hsla(220, 19%, 40%, 0.3));
+    --message-hover: var(--midnight-message-hover, hsla(220, 0%, 0%, 0.1));
+    --accent-1: var(--midnight-accent-1, oklch(75% 0.1 215));
+    --accent-2: var(--midnight-accent-2, oklch(70% 0.1 215));
+    --accent-3: var(--midnight-accent-3, oklch(65% 0.1 215));
+    --accent-4: var(--midnight-accent-4, oklch(60% 0.1 215));
+    --accent-5: var(--midnight-accent-5, oklch(55% 0.1 215));
+    --accent-new: var(--midnight-accent-new, oklch(70% 0.1 215));
+    --online: var(--midnight-online, oklch(70% 0.11 170));
+    --dnd: var(--midnight-dnd, oklch(70% 0.12 0));
+    --idle: var(--midnight-idle, oklch(75% 0.11 90));
+    --streaming: var(--midnight-streaming, oklch(70% 0.11 310));
+    --offline: var(--midnight-offline, hsl(220, 15%, 40%));
+    --border-light: var(--midnight-border-light, hsla(221, 19%, 40%, 0.1));
+    --border: var(--midnight-border, hsla(220, 19%, 40%, 0.2));
+    --border-hover: var(--midnight-border-hover, hsla(220, 19%, 40%, 0.2));
+    --button-border: var(--midnight-button-border, hsl(220, 0%, 100%, 0.1));
+    --red-1: var(--midnight-red-1, oklch(75% 0.12 0));
+    --red-2: var(--midnight-red-2, oklch(70% 0.12 0));
+    --red-3: var(--midnight-red-3, oklch(65% 0.12 0));
+    --red-4: var(--midnight-red-4, oklch(60% 0.12 0));
+    --red-5: var(--midnight-red-5, oklch(55% 0.12 0));
+    --green-1: var(--midnight-green-1, oklch(75% 0.11 170));
+    --green-2: var(--midnight-green-2, oklch(70% 0.11 170));
+    --green-3: var(--midnight-green-3, oklch(65% 0.11 170));
+    --green-4: var(--midnight-green-4, oklch(60% 0.11 170));
+    --green-5: var(--midnight-green-5, oklch(55% 0.11 160));
+    --blue-1: var(--midnight-blue-1, oklch(75% 0.1 215));
+    --blue-2: var(--midnight-blue-2, oklch(70% 0.1 215));
+    --blue-3: var(--midnight-blue-3, oklch(65% 0.1 215));
+    --blue-4: var(--midnight-blue-4, oklch(60% 0.1 215));
+    --blue-5: var(--midnight-blue-5, oklch(55% 0.1 215));
+    --yellow-1: var(--midnight-yellow-1, oklch(80% 0.11 90));
+    --yellow-2: var(--midnight-yellow-2, oklch(75% 0.11 90));
+    --yellow-3: var(--midnight-yellow-3, oklch(70% 0.11 90));
+    --yellow-4: var(--midnight-yellow-4, oklch(65% 0.11 90));
+    --yellow-5: var(--midnight-yellow-5, oklch(60% 0.11 90));
+    --purple-1: var(--midnight-purple-1, oklch(75% 0.11 310));
+    --purple-2: var(--midnight-purple-2, oklch(70% 0.11 310));
+    --purple-3: var(--midnight-purple-3, oklch(65% 0.11 310));
+    --purple-4: var(--midnight-purple-4, oklch(60% 0.11 310));
+    --purple-5: var(--midnight-purple-5, oklch(55% 0.11 310));
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--midnight-mention-color, var(--accent-2)), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--midnight-mention-color, var(--accent-2)), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--midnight-reply-color, var(--text-3)), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--midnight-reply-color, var(--text-3)), transparent 95%) 40%, transparent);
+}
