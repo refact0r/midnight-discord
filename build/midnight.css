@@ -248,12 +248,22 @@ body {
     border: none;
 }
 
+.aside_f58343 /* dm user panel wrapper */ {
+    padding: 0;
+    background: none;
+}
+
 .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
     margin-left: var(--gap);
     overflow: hidden;
     /* min-width: 340px; */
     background-position: center calc(-1 * var(--border-thickness));
     background-size: 100% calc(100% + 2 * var(--border-thickness));
+}
+
+.content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
+    overflow: visible;
+    margin-right: 0;
 }
 
 .searchResultsWrap_a98f3b /* search results */ {
@@ -2252,6 +2262,14 @@ body {
         background: transparent;
         width: 100%;
         height: 100%;
+    }
+
+    .submenuPaddingContainer_c1e9c4>.menu_c1e9c4::before {
+        width: calc(100% - 16px);
+    }
+
+    .submenuPaddingContainer_ce8328>.menu_c1e9c4::before {
+        width: calc(100% - 24px);
     }
 }
 

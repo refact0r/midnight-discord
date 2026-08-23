@@ -260,6 +260,11 @@ body {
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
 
+.content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
+    overflow: visible;
+    margin-right: 0;
+}
+
 .searchResultsWrap_a98f3b /* search results */ {
     margin-left: var(--gap);
 }
