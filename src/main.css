@@ -160,8 +160,9 @@ body {
     padding: 0;
 }
 
-.container__9293f /* friends, message requests, + other stuff titlebar */ {
+#app-mount .container__9293f /* friends, message requests, + other stuff titlebar */ {
     margin-bottom: var(--gap);
+    border-bottom: none;
 }
 
 .subtitleContainer_f75fb0 /* chat titlebar  */ {
