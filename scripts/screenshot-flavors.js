@@ -3,7 +3,8 @@
 //
 // Usage: npm run screenshot [-- <filter>...]
 //   <filter>  only shoot themes whose output name contains a filter substring
-//             (e.g. `npm run screenshot -- nord mocha`; the base theme is `midnight`)
+//             (e.g. `npm run screenshot -- nord mocha`; the base theme's name
+//             is derived from `baseFile` in theme.config.js)
 //
 // Env (all optional):
 //   SCREENSHOT_THEME_PATH  theme file to overwrite (default: first DEV_OUTPUT_PATH entry in .env)
@@ -28,7 +29,8 @@ const delayMs = parseInt(process.env.SCREENSHOT_DELAY_MS || '2500', 10);
 const outputDir = process.env.SCREENSHOT_OUTPUT_DIR || path.join(root, 'assets', 'flavors');
 const thumbsDir = path.join(outputDir, 'thumbs');
 const thumbWidth = 1512;
-const flavorsDir = path.join(root, 'themes', 'flavors');
+const baseName = path.basename(config.baseFile).replace(/\.theme\.css$/, '');
+const flavorsDir = path.join(root, path.dirname(config.baseFile), 'flavors');
 
 const themePath =
     process.env.SCREENSHOT_THEME_PATH ||
@@ -98,14 +100,14 @@ function compileFlavor(flavorPath, compiledSource) {
 async function main() {
     const filters = process.argv.slice(2).map((f) => f.toLowerCase());
     const themes = [
-        { name: 'midnight', file: path.join(root, config.baseFile) },
+        { name: baseName, file: path.join(root, config.baseFile) },
         ...fs
             .readdirSync(flavorsDir)
             .filter((file) => file.endsWith('.theme.css'))
-            // the settings addon isn't a palette; skip it unless explicitly filtered for
-            .filter((file) => filters.length > 0 || file !== 'midnight-settings.theme.css')
+            // non-palette files (config.screenshotSkip) are skipped unless explicitly filtered for
+            .filter((file) => filters.length > 0 || !(config.screenshotSkip || []).includes(file))
             .map((file) => ({
-                name: file.replace(/^midnight-/, '').replace(/\.theme\.css$/, ''),
+                name: file.replace(new RegExp(`^${baseName}-`), '').replace(/\.theme\.css$/, ''),
                 file: path.join(flavorsDir, file),
             })),
     ]

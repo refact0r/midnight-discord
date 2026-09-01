@@ -19,13 +19,14 @@ A CSS theme for Discord. The maintainer may be running it through desktop Vencor
 - `scripts/build.js` — deterministic compiler (`npm run build`); `dev.js` and `serve.js` both use it.
 - `scripts/dev.js` — watcher for desktop Vencord (`npm run dev`).
 - `scripts/serve.js` + `scripts/inject.js` + `scripts/theme-dev.user.js` — browser dev flow. See `docs/BROWSER_DEV.md`.
+- `scripts/screenshot-flavors.js` — captures flavor screenshots into `assets/flavors/` (plus README thumbnails in `assets/flavors/thumbs/`) by cycling each flavor through the live Vesktop theme file (`npm run screenshot`, macOS only, requires `DEV_OUTPUT_PATH`).
 
 ## Hard rules
 
 - Edit `src/*.css`, never `build/midnight.css`.
 - When adding or removing a source file, update the ordered `sourceFiles` list in `scripts/theme.config.js`; builds fail on an unlisted or missing CSS file.
 - User-facing CSS variables (colors, sizes, toggles) are defined in `themes/midnight.theme.css`. The flavor files are standalone copies: keep their public variable interface in sync when adding or renaming variables, while preserving flavor-specific values. Structural rules live in `src/*.css`.
-- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to System24's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
+- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `screenshot-flavors.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to System24's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
 - Don't reach for `!important` to fight specificity — tighten the selector first.
 
 ## Experimental agentic development
