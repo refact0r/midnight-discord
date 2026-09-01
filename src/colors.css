@@ -497,6 +497,7 @@
         --scrollbar-auto-track: transparent;
         --scrollbar-thin-thumb: var(--bg-1);
         --scrollbar-thin-track: transparent;
+        --slider-track-background: var(--bg-2);
         --spine-default: var(--text-5);
         --spoiler-hidden-background: yellow;
         --spoiler-hidden-background-hover: lime;
