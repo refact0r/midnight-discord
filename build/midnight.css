@@ -491,6 +491,7 @@ body {
 
 .outer_c0bea0 /* profile outer */ {
     border: 1px solid var(--border-subtle);
+    backdrop-filter: var(--panel-backdrop-filter);
     background-position: center calc(-1 * var(--border-thickness));
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
@@ -885,7 +886,7 @@ body {
         --button-outline-brand-background-hover: blue;
         --button-outline-brand-border-active: magenta;
         --button-outline-primary-text: var(--text-1);
-        --card-background-default: var(--bg-3);
+        --card-background-default: var(--bg-4);
         --card-primary-pressed-bg: lime;
         --card-secondary-bg: blue;
         --card-secondary-pressed-bg: magenta;
@@ -1464,31 +1465,25 @@ body {
         color: var(--text-0);
     }
 
-    .container__3f21e /* settings checkbutton background */,
-    .vc-switch-container {
+    .container__3f21e /* settings checkbutton background */ {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
-    .container__3f21e.checked__3f21e /* settings checkbutton background */,
-    .vc-switch-container.vc-switch-checked {
+    .container__3f21e.checked__3f21e /* settings checkbutton background */ {
         background-color: var(--accent-2) !important;
     }
-    .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
-    .vc-switch-container .vc-switch-slider > svg > path {
+    .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */ {
         fill: var(--bg-1) !important;
         transition: fill 0.2s ease;
     }
-    .container__3f21e.checked__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
-    .vc-switch-container.vc-switch-checked .vc-switch-slider > svg > path {
+    .container__3f21e.checked__3f21e .slider__3f21e > svg > path /* settings checkbutton check */ {
         fill: var(--accent-2) !important;
     }
-    .container__3f21e rect[fill='white'] /* settings checkbutton slider */,
-    .vc-switch-container .vc-switch-slider rect[fill='white'] {
+    .container__3f21e rect[fill='white'] /* settings checkbutton slider */ {
         fill: var(--text-3) !important;
         transition: fill 0.2s ease;
     }
-    .container__3f21e.checked__3f21e rect[fill='white'] /* settings checkbutton slider */,
-    .vc-switch-container.vc-switch-checked .vc-switch-slider rect[fill='white'] {
+    .container__3f21e.checked__3f21e rect[fill='white'] /* settings checkbutton slider */ {
         fill: var(--text-0) !important;
     }
 
@@ -1649,6 +1644,15 @@ body {
     }
     .circleIconButton__5bc7e:hover {
         color: var(--bg-4);
+    }
+
+    .tooltip_c36707,
+    [data-mana-component='tooltip'] {
+        --white: var(--text-3);
+        --white-500: var(--text-3);
+        --text-default: var(--text-3);
+
+        color: var(--text-3);
     }
 
     .tooltipGrey_c36707 /* spotify plugin time tooltip */ {
@@ -2241,9 +2245,31 @@ body {
     }
 
     .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
-        .tooltip_c36707 /* tooltips */ {
+        .tooltip_c36707 /* tooltips */,
+        [data-mana-component='tooltip'] {
         background: var(--bg-floating);
     }
+
+    .tooltip_c36707,
+    div[style*='opacity']:has(> [data-mana-component='tooltip']) {
+        /* Blur on the fading element can sample outside its opacity boundary. */
+        backdrop-filter: var(--panel-backdrop-filter);
+
+        /* Override the inline scale transform, leaving the exit fade intact. */
+        transform: none !important;
+        animation: midnight-tooltip-fade 160ms ease-out;
+    }
+
+    .tooltip_c36707 .tooltipPointer_c36707,
+    .tooltip_c36707 .tooltipPointer_c36707.tooltipPointerBg_c36707,
+    [data-mana-component='tooltip'] .caret__0b5f9 {
+        display: none;
+    }
+
+    div[style*='opacity']:has(> [data-mana-component='tooltip']) {
+        border-radius: var(--radius-sm);
+    }
+
     .menu_c1e9c4 /* context menus */,
         .contentWrapper__08434 /* emoji/gif panel */,
         .root__49fc1 /* modals like invite */,
@@ -2272,6 +2298,15 @@ body {
 
     .submenuPaddingContainer_ce8328>.menu_c1e9c4::before {
         width: calc(100% - 24px);
+    }
+}
+
+@keyframes midnight-tooltip-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
