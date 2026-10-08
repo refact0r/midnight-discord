@@ -490,6 +490,7 @@ body {
 
 .outer_c0bea0 /* profile outer */ {
     border: 1px solid var(--border-subtle);
+    backdrop-filter: var(--panel-backdrop-filter);
     background-position: center calc(-1 * var(--border-thickness));
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
