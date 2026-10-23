@@ -137,7 +137,7 @@
     syntax: "<custom-ident>";
     inherits: true;
     initial-value: titlebar;
-    options: "off=Default | hide=Hidden | serverlist=Server list | titlebar=Channel titlebar";
+    options: "off=Default | hide=Hidden | titlebar=Channel titlebar";
     name: "Top bar button position";
     note: "Where to put the inbox and help buttons. Channel titlebar hides the title.";
 }

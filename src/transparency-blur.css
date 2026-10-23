@@ -9,7 +9,7 @@
         --panel-backdrop-filter: blur(var(--blur-amount));
     }
 
-    .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+    .popover_f84418.popover_f84418 /* message hover quick action bar */,
         .tooltip_c36707 /* tooltips */ {
         background: var(--bg-floating);
     }
@@ -18,7 +18,7 @@
         .root__49fc1 /* modals like invite */,
         .outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
-        .container__55c99 /* search suggestions */,
+        .container__16eb0 /* search suggestions */,
         .messagesPopoutWrap__432f4 /* inbox */,
         .popout__76f04 /* channel hover popout */,
         .bar__7aaec /* channel list new unreads bar */ {
@@ -35,11 +35,11 @@
         height: 100%;
     }
 
-    .submenuPaddingContainer_c1e9c4>.menu_c1e9c4::before {
+    .submenuPaddingContainer_c1e9c4 > .menu_c1e9c4::before {
         width: calc(100% - 16px);
     }
 
-    .submenuPaddingContainer_ce8328>.menu_c1e9c4::before {
+    .submenuPaddingContainer_ce8328 > .menu_c1e9c4::before {
         width: calc(100% - 24px);
     }
 }

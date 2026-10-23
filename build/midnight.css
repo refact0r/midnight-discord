@@ -108,8 +108,7 @@ body {
 .container__2637a /* channel list inner */ {
     padding-bottom: 0;
 }
-.clickable_f37cb1,
-    .container__2637a /* channel list inner */,
+.container__2637a /* channel list inner */,
     .header_f37cb1 /* server name */ {
     background: none;
 }
@@ -446,9 +445,6 @@ body {
 }
 
 /* improve server selected marker */
-.pill_e5445c.wrapper__58105 {
-    width: calc((var(--custom-guild-list-padding) - 4px) / 2 + 4px);
-}
 .item__58105 {
     width: 4px;
     border-radius: 4px;
@@ -1397,11 +1393,9 @@ body {
         background-color: var(--bg-2) !important;
     }
 
-    .quickSelectPopout_ebaca5 /* dm vc region select popout */,
     .participantsButton__211d1 /* vc participants button */,
     .voiceBar__7aaec /* n in voice bar (channel list) */,
-    .mainCard_f369db /* form posts */,
-    .accountProfileCard_a9178b /* account settings profile background */ {
+    .mainCard_f369db /* form posts */ {
         background-color: var(--bg-3);
     }
 
@@ -1410,9 +1404,6 @@ body {
         background-color: var(--bg-2);
     }
 
-    .expandedFolderIconWrapper__48112 > svg[style="color: rgb(88, 101, 242);"] /* folder icon */ {
-        color: var(--accent-2) !important;
-    }
     .colorPickerSwatch__459fb[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
         .newBadge_faa96b /* forum post new badge */,
         .mentioned__5126c:before /* mention message left edge */ {
@@ -1420,10 +1411,6 @@ body {
     }
     .replying__5126c:before /* reply message left edge */ {
         background-color: var(--text-2) !important;
-    }
-
-    .badge_c3d04b /* shop "orbs exclusive" badge */ {
-        background-color: var(--text-1);
     }
 
     #app-mount .message__5126c.replying__5126c:hover /* override fix for message reply hover */ {
@@ -1463,30 +1450,24 @@ body {
         color: var(--text-0);
     }
 
-    .container__3f21e /* settings checkbutton background */,
     .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
     }
-    .container__3f21e.checked__3f21e /* settings checkbutton background */,
     .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
     }
-    .container__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
     .vc-switch-container .vc-switch-slider > svg > path {
         fill: var(--bg-1) !important;
         transition: fill 0.2s ease;
     }
-    .container__3f21e.checked__3f21e .slider__3f21e > svg > path /* settings checkbutton check */,
     .vc-switch-container.vc-switch-checked .vc-switch-slider > svg > path {
         fill: var(--accent-2) !important;
     }
-    .container__3f21e rect[fill='white'] /* settings checkbutton slider */,
     .vc-switch-container .vc-switch-slider rect[fill='white'] {
         fill: var(--text-3) !important;
         transition: fill 0.2s ease;
     }
-    .container__3f21e.checked__3f21e rect[fill='white'] /* settings checkbutton slider */,
     .vc-switch-container.vc-switch-checked .vc-switch-slider rect[fill='white'] {
         fill: var(--text-0) !important;
     }
@@ -1496,20 +1477,17 @@ body {
     }
 
     .categoryText_d02962 /* gif chooser category names */,
-        .bannerColor_fb7f94 /* profile banner button */,
         .backButton_e4cb9a /* stream preview back button */,
         .viewersIcon_d6b206 /* stream preview viewers icon */,
         .bottomControls_e4cb9a /* stream preview viewer number */,
         .pictureInPictureVideo_e4cb9a .controlIcon_f1ceac /* stream preview control icon */,
         .bannerVisible_f37cb1 .name_f37cb1 /* server name over banner image */,
-        .dropdownButtonBannerVisible__2637a /* server name over banner dropdown button */,
         .mediaMosaicAltText__0f481 /* image alt text label */,
         .bannerButton_fb7f94 /* profile banner corner buttons */,
         .embed__98ba8 /* embed primary text */ {
         color: var(--text-1);
     }
-    .headerText_e4cb9a.base_eb1a4c /* stream preview header text */,
-        .participantName__2cdb8 /* stream preview participant name */ {
+    .participantName__2cdb8 /* stream preview participant name */ {
         color: var(--text-1) !important;
     }
     .playPausePopIcon_cf09d8 > path /* video play/pause popup */,
@@ -1530,8 +1508,7 @@ body {
         color: var(--text-2);
     }
     .wrapper__926d7 a:link,
-        .wrapper__926d7 a:visited,
-        .headerTitle_e4cb9a:hover .headerText_e4cb9a.base_eb1a4c /* stream preview back button hover */ {
+        .wrapper__926d7 a:visited {
         color: var(--text-2) !important;
     }
     .downloadHoverButtonIcon__6c706 /* video download button */,
@@ -1540,10 +1517,8 @@ body {
     .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc icon button */,
     .colorable_f1ceac.primaryDark_f1ceac /* vc icon button nub */,
     .iconBadge__650eb.base__463b7 /* server vc badge */,
-    #app-mount .akaBadge__488b1 /* aka badge */,
     #app-mount .message__9a9f9 /* you have unsaved settings message */,
     .friendRequestsButton_c7a32c .base__463b7 /* inbox friend request number */,
-    .tooltipBlack__382e7 /* server boost tooltip */,
     .colorable_f1ceac.primaryDark_f1ceac, .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc buttons */,
     .item_caf372.active_caf372 /* settings items active */,
     .interactive__972a0.interactiveSelected__972a0 /* dms list items active */,
@@ -1564,7 +1539,6 @@ body {
         background-color: var(--bg-2) !important;
         --white-500: var(--text-3);
     }
-    .akaPopoverBadge_f75fb0 /* dm vc user hover AKA badge */,
     .qualityIndicatorFullQuality__30845 {
         color: var(--text-3);
     }
@@ -1612,8 +1586,7 @@ body {
 
     .iconBadge__9293f /* icon badge */,
         .mentionsBar__7aaec /* new mention pill */,
-        .mention__3b95d /* server list new mention pill */,
-        .badge_c99c29 /* inbox badge */ {
+        .mention__3b95d /* server list new mention pill */ {
         background-color: var(--accent-new);
     }
 
@@ -1627,10 +1600,6 @@ body {
     .barButtonAlt__0f481 /* unread bar mark as read button */ {
         --control-secondary-background-default: var(--accent-3);
         --control-secondary-background-hover: var(--accent-4);
-    }
-
-    .updateIconForeground__49676 /* update button */ {
-        fill: var(--green-1);
     }
 
     .colorable_f1ceac.red_f1ceac:hover /* vc disconnect button hover */ {
@@ -1910,7 +1879,7 @@ body {
 }
 
 @property --top-bar-button-position {
-    syntax: 'off | hide | serverlist | titlebar';
+    syntax: 'off | hide | titlebar';
     inherits: false;
     initial-value: titlebar;
 }
@@ -1921,79 +1890,8 @@ body {
 
 @container body style(--top-bar-button-position: hide) {
     .trailing_c38106 > a[href='https://support.discord.com'],
-    .recentsIcon_c99c29,
     .winButtons_c38106::before {
         display: none;
-    }
-}
-
-@container body style(--top-bar-button-position: serverlist) {
-    /* remove help button */
-    .trailing_c38106 > a[href='https://support.discord.com'],
-    .winButtons_c38106::before {
-        display: none;
-    }
-
-    /* make server list inner scroll */
-    .stack_dbd263:not([id='guild-list-unread-dms']) {
-        overflow: hidden scroll;
-        scrollbar-width: none;
-    }
-    /* create space for inbox button */
-    .tutorialContainer__1f388 {
-        margin-bottom: 48px;
-    }
-    /* move inbox button */
-    .recentsIcon_c99c29 {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
-        left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
-    }
-    /* style inbox button */
-    .recentsIcon_c99c29 .button__85643 {
-        width: 100%;
-        height: 100%;
-        background-color: var(--background-surface-higher);
-        border-radius: var(--radius-md);
-        transition: background-color 0.15s ease-out;
-
-        &:hover {
-            background-color: var(--bg-brand);
-
-            .icon__9293f {
-                color: var(--white);
-            }
-        }
-    }
-    .recentsIcon_c99c29 .svg__2338f {
-        transition: color 0.15s ease-out;
-        width: 24px;
-        height: 24px;
-    }
-    /* shift inbox popup panel into view */
-    .recentMentionsPopout__95796 {
-        transform: translateX(100%);
-    }
-    /* fix settings animation transform */
-    .layer__960e4.baseLayer__960e4 {
-        transform: none !important;
-    }
-    .layers__960e4 > .layer__960e4.animating__960e4 {
-        will-change: opacity;
-    }
-
-    /* unread icon */
-    .recentsIcon_c99c29 .iconBadge__9293f {
-        --custom-icon-offset: 8px;
-        width: 10px;
-        height: 10px;
-        transition: background 0.15s ease-out;
-    }
-
-    .recentsIcon_c99c29:hover .iconBadge__9293f {
-        background: var(--white);
     }
 }
 
@@ -2064,9 +1962,6 @@ body {
     }
     .searchFloating__1ac1c {
         right: calc(var(--top-bar-right-margin) + var(--space-sm));
-    }
-    .balanceWidgetMenu__80679 {
-        margin-right: var(--top-bar-right-margin);
     }
     .inviteToolbar__133bf {
         padding-right: 0;
@@ -2239,7 +2134,7 @@ body {
         --panel-backdrop-filter: blur(var(--blur-amount));
     }
 
-    .popoverReactionHoverBar_f84418 /* message hover quick action bar */,
+    .popover_f84418.popover_f84418 /* message hover quick action bar */,
         .tooltip_c36707 /* tooltips */ {
         background: var(--bg-floating);
     }
@@ -2248,7 +2143,7 @@ body {
         .root__49fc1 /* modals like invite */,
         .outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
-        .container__55c99 /* search suggestions */,
+        .container__16eb0 /* search suggestions */,
         .messagesPopoutWrap__432f4 /* inbox */,
         .popout__76f04 /* channel hover popout */,
         .bar__7aaec /* channel list new unreads bar */ {
@@ -2265,11 +2160,11 @@ body {
         height: 100%;
     }
 
-    .submenuPaddingContainer_c1e9c4>.menu_c1e9c4::before {
+    .submenuPaddingContainer_c1e9c4 > .menu_c1e9c4::before {
         width: calc(100% - 16px);
     }
 
-    .submenuPaddingContainer_ce8328>.menu_c1e9c4::before {
+    .submenuPaddingContainer_ce8328 > .menu_c1e9c4::before {
         width: calc(100% - 24px);
     }
 }
