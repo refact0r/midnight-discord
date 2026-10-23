@@ -787,7 +787,7 @@
     .iconBadge__650eb.base__463b7 /* server vc badge */,
     #app-mount .akaBadge__488b1 /* aka badge */,
     #app-mount .message__9a9f9 /* you have unsaved settings message */,
-    .friendRequestsButton__523aa .base__463b7 /* inbox friend request number */,
+    .friendRequestsButton_c7a32c .base__463b7 /* inbox friend request number */,
     .tooltipBlack__382e7 /* server boost tooltip */,
     .colorable_f1ceac.primaryDark_f1ceac, .colorable_f1ceac.primaryDark_f1ceac .centerIcon_f1ceac /* vc buttons */,
     .item_caf372.active_caf372 /* settings items active */,
@@ -799,8 +799,7 @@
         .emptyChannelIcon__00de6 path[fill='var(--white)'] /* channel start icon */ {
         fill: var(--text-3);
     }
-    .grabber_a562c8 /* vc volume slider grabber */,
-    .grabber_ec237e /* slider grabber (settings, spotify plugin) */ {
+    .grabber_ec237e /* slider grabber (vc volume, settings, spotify plugin) */ {
         background-color: var(--text-3);
     }
     .textBadge__463b7 /* new text badge (right click on person in vc) */ {
