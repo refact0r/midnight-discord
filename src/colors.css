@@ -799,7 +799,8 @@
         .emptyChannelIcon__00de6 path[fill='var(--white)'] /* channel start icon */ {
         fill: var(--text-3);
     }
-    .grabber_a562c8 /* vc volume slider grabber */ {
+    .grabber_a562c8 /* vc volume slider grabber */,
+    .grabber_ec237e /* slider grabber (settings, spotify plugin) */ {
         background-color: var(--text-3);
     }
     .textBadge__463b7 /* new text badge (right click on person in vc) */ {
