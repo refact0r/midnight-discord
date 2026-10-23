@@ -95,11 +95,10 @@ body {
     padding-top: var(--custom-guild-list-padding) !important;
     padding-bottom: var(--custom-guild-list-padding);
 }
-.folderGroup__48112 {
-    width: 100%;
-}
+/* full scroller width (overlapping the scrollbar gutter) so items stay centered, like discord does */
+.folderGroup__48112,
 .listItem__650eb {
-    width: 100%;
+    width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
 }
 
 .sidebarList__5e434 /* channel list */ {
