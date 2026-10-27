@@ -20,7 +20,7 @@ A CSS theme for Discord. The maintainer may be running it through desktop Vencor
 - `scripts/dev.js` — watcher for desktop Vencord (`npm run dev`).
 - `scripts/serve.js` + `scripts/inject.js` + `scripts/theme-dev.user.js` — browser dev flow. See `docs/BROWSER_DEV.md`.
 - `scripts/screenshot-flavors.js` — captures flavor screenshots into `assets/flavors/` (plus README thumbnails in `assets/flavors/thumbs/`) by cycling each flavor through the live Vesktop theme file (`npm run screenshot`, macOS only, requires `DEV_OUTPUT_PATH`).
-- `scripts/check-classes.js` — lists Discord classes in `src/*.css` that no longer exist in the current client, with file, line, and same-name candidates (`npm run check-classes`; data from itmesarah/DiscordClasses, cached in `.theme-dev/`).
+- `scripts/check-classes.js` — lists Discord classes in `src/*.css` that no longer exist in the current client, with file, line, and same-name candidates (`npm run check-classes`; checks Discord Stable by default, `-- --canary` for Canary; data from itmesarah/DiscordClasses, cached in `.theme-dev/`).
 
 ## Hard rules
 
