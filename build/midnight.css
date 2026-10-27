@@ -1532,10 +1532,10 @@ body {
     .grabber_ec237e /* slider grabber (vc volume, settings, spotify plugin) */ {
         background-color: var(--text-3);
     }
-    .textBadge__463b7 /* new text badge (right click on person in vc) */ {
+    .badge_c2b88c /* new text badge (right click on person in vc) */ {
         color: var(--text-0);
     }
-    .textBadge__463b7[style='background-color: var(--primary-500);'] /* vc stream quality badge */ {
+    .badge_c2b88c[style='background-color: var(--primary-500);'] /* vc stream quality badge */ {
         background-color: var(--bg-2) !important;
         --white-500: var(--text-3);
     }
