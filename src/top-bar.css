@@ -1,5 +1,5 @@
 body {
-    --top-bar-height: 32px;
+    --top-bar-height: var(--gap); /* same default as midnight.theme.css and the flavors */
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 .refresh-title-bar-small {

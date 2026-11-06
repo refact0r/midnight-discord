@@ -94,7 +94,8 @@ body {
 }
 :is(.scroller_ef3116, .scroller_5dqHTG) /* server list inner scroller */ {
     padding-top: var(--custom-guild-list-padding) !important;
-    padding-bottom: var(--custom-guild-list-padding);
+    /* discord sets padding-bottom: calc(var(--space-xs) + 16px) !important */
+    padding-bottom: var(--custom-guild-list-padding) !important;
 }
 /* full scroller width (overlapping the scrollbar gutter) so items stay centered, like discord does */
 :is(.folderGroup__48112, .folderGroup_RTMSuZ),
@@ -163,6 +164,18 @@ body {
     margin-bottom: var(--gap);
     border-bottom: none;
 }
+/* titlebars styled as panels keep the bottom edge of their border */
+#app-mount :is(.container__133bf, .container_zrUwGA) > :is(.container__9293f, .container_ybUK7Z) /* friends titlebar */,
+#app-mount :is(.container_f391e3, .container_nMe-a6) > :is(.container__9293f, .container_ybUK7Z) /* message requests titlebar */,
+#app-mount :is(.homeWrapper__0920e, .homeWrapper_8iSxT3) > :is(.container__9293f, .container_ybUK7Z) /* nitro page titlebar */,
+#app-mount :is(.container__01ae2, .container_FrbQJp) > :is(.container__9293f, .container_ybUK7Z) /* vc chat titlebar */,
+#app-mount :is(.container_fb64c9, .container_UU236g) > :is(.container__9293f, .container_ybUK7Z) /* new thread panel */ {
+    border-bottom: var(--border-thickness) solid var(--border-subtle);
+
+    &:hover {
+        border-bottom-color: var(--border-hover);
+    }
+}
 
 :is(.subtitleContainer_f75fb0, .subtitleContainer_z_gUBg) /* chat titlebar  */ {
     margin-bottom: var(--gap);
@@ -219,6 +232,10 @@ body {
 
 :is(.nowPlayingColumn__133bf, .nowPlayingColumn_zrUwGA) /* active now */ {
     margin-left: var(--gap);
+}
+:is(.peopleColumn__133bf, .peopleColumn_zrUwGA) .searchBar_wVFOQW /* online friends search bar */ {
+    margin-block-start: 24px;
+    margin-inline: 24px;
 }
 :is(.container__7d20c, .container_GNEh_C) /* active now inner */ {
     background: none;
@@ -482,6 +499,14 @@ body {
 }
 :is(.inner_c0bea0, .inner_P1YEjQ) /* profile inner */ {
     border-radius: calc(var(--radius-lg) - 4px);
+}
+.user-profile-sidebar.user-profile-sidebar-redesign :is(.inner_c0bea0, .inner_P1YEjQ) /* dm user panel inner */ {
+    border-radius: calc(var(--radius-lg) - var(--custom-user-profile-theme-padding, 0px) - var(--border-thickness));
+}
+/* themed profiles move the avatar to 14px/55px but the banner cutout stays at 16px/57px */
+.custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign .avatar_WRLIGC /* dm user panel avatar */ {
+    inset-inline-start: 16px;
+    top: 57px;
 }
 
 :is(.outer_c0bea0, .outer_P1YEjQ) /* profile outer */ {
@@ -1871,7 +1896,7 @@ body {
 
 /* top-bar.css */
 body {
-    --top-bar-height: 32px;
+    --top-bar-height: var(--gap); /* same default as midnight.theme.css and the flavors */
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 .refresh-title-bar-small {
