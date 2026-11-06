@@ -9,7 +9,7 @@ body {
 }
 
 @container body style(--background-image: on) {
-    #app-mount .bg__960e4 {
+    #app-mount .bg_Fd0FEH {
         background: var(--background-image-url);
         background-size: cover;
         background-position: center;

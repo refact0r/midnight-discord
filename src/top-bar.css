@@ -12,13 +12,13 @@ body {
     initial-value: titlebar;
 }
 
-.platform-osx .wrapper_ef3116 {
+.platform-osx .wrapper_5dqHTG {
     margin-top: max(0px, calc(36px - var(--top-bar-height)));
 }
 
 @container body style(--top-bar-button-position: hide) {
-    .trailing_c38106 > a[href='https://support.discord.com'],
-    .winButtons_c38106::before {
+    .trailing_3zSH5d > a[href='https://support.discord.com'],
+    .winButtons_3zSH5d::before {
         display: none;
     }
 }
@@ -27,11 +27,11 @@ body {
     #app-mount {
         --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
     }
-    .title_c38106,
-    .trailing_c38106 > a[href='https://support.discord.com'] {
+    .title_3zSH5d,
+    .trailing_3zSH5d > a[href='https://support.discord.com'] {
         display: none;
     }
-    .trailing_c38106 {
+    .trailing_3zSH5d {
         position: absolute;
         top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
         right: calc(var(--gap) + var(--border-thickness));
@@ -43,109 +43,109 @@ body {
             transform 0.2s ease-in-out,
             opacity 0.2s ease-in-out;
     }
-    .popout__0bd4a .trailing_c38106 {
+    .popout_9Aa-7R .trailing_3zSH5d {
         z-index: 1100;
     }
     /* Fix window controls overlapping certain modals */
     #app-mount,
-    .modal_e44912 {
+    .modal__F9ieB {
         --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
     }
-    .layerContainer__59d0d .carouselModal_d3a6f0 {
+    .layerContainer_VVADeK .carouselModal_7QK1F9 {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    .base__5e434:has(> .content__5e434 > .page__5e434 > [style^='width'] > :is(.guildSidebar_f75fb0, .sidebarContainer__656be)) .trailing_c38106 {
+    .base_pog62O:has(> .content_pog62O > .page_pog62O > [style^='width'] > :is(.guildSidebar_z_gUBg, .sidebarContainer_MLLsfk)) .trailing_3zSH5d {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
     }
-    .page__5e434 div[style='width: 480px;'] {
+    .page_pog62O div[style='width: 480px;'] {
         min-width: 480px;
     }
-    .winButtons_c38106 {
+    .winButtons_3zSH5d {
         padding: 0;
     }
-    .winButton_c38106 {
+    .winButton_3zSH5d {
         height: calc(var(--window-control-size) * 2);
     }
-    .winButtons_c38106::before {
+    .winButtons_3zSH5d::before {
         height: 16px;
         width: var(--space-xs);
         box-sizing: border-box;
         margin: 0;
     }
-    .toolbar__9293f {
+    .toolbar_ybUK7Z {
         padding-right: var(--top-bar-right-margin);
     }
     /* Remove unused space when thread or VC chat is open */
-    .page__5e434:has(> div > .chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f,
-    .video_cb9592.sidebarOpen_cb9592 .toolbar__9293f {
+    .page_pog62O:has(> div > .chatLayerWrapper_FrbQJp) .chat_z_gUBg.threadSidebarOpen_z_gUBg .toolbar_ybUK7Z,
+    .video_hbKzX7.sidebarOpen_hbKzX7 .toolbar_ybUK7Z {
         padding-right: 0;
     }
-    .navBarContent__131a1,
-    .headerBarContent__1a9ce {
+    .navBarContent_jHfUxk,
+    .headerBarContent_tSk_LE {
         padding-right: var(--top-bar-right-margin);
     }
-    .headerBar__8a7fc {
+    .headerBar_Y0eJLL {
         padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
     }
-    .searchFloating__1ac1c {
+    .searchFloating_B1ffsk {
         right: calc(var(--top-bar-right-margin) + var(--space-sm));
     }
-    .inviteToolbar__133bf {
+    .inviteToolbar_zrUwGA {
         padding-right: 0;
     }
-    .chat_f75fb0 > .layerContainer__59d0d {
+    .chat_z_gUBg > .layerContainer_VVADeK {
         z-index: 999;
     }
-    .subtitleContainer_f75fb0 {
+    .subtitleContainer_z_gUBg {
         height: var(--custom-channel-header-height);
     }
-    .title_f75fb0.container__9293f {
+    .title_z_gUBg.container_ybUK7Z {
         min-height: 0;
         height: auto;
     }
-    .followButton_f75fb0 {
+    .followButton_z_gUBg {
         padding-top: 0;
         padding-bottom: 0;
     }
-    .base__5e434:has(> .notice__6e2b9) > .bar_c38106 > .trailing_c38106 {
+    .base_pog62O:has(> .notice_Q02kKo) > .bar_3zSH5d > .trailing_3zSH5d {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
 
-    .base__5e434:has(> .notice__29487) > .bar_c38106 > .trailing_c38106 {
+    .base_pog62O:has(> .notice_6g5Jai) > .bar_3zSH5d > .trailing_3zSH5d {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
 
     /* Fix header icons and window controls overlap */
-    .base__5e434 {
+    .base_pog62O {
         /* Supports up to 6 buttons */
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(1)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(1)) {
             --button-count: 1;
         }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(2)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(2)) {
             --button-count: 2;
         }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(3)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(3)) {
             --button-count: 3;
         }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(4)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(4)) {
             --button-count: 4;
         }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(5)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(5)) {
             --button-count: 5;
         }
-        &:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106):nth-of-type(6)) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > div:not(.winButtons_3zSH5d):nth-of-type(6)) {
             --button-count: 6;
         }
 
-        &:has(> .bar_c38106 > .trailing_c38106 > .winButtons_c38106) {
+        &:has(> .bar_3zSH5d > .trailing_3zSH5d > .winButtons_3zSH5d) {
             --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
 
         /* Revert icon sizing changes */
-        .trailing_c38106 {
-            > div:not(.winButtons_c38106),
-            div.clickable__81391 {
+        .trailing_3zSH5d {
+            > div:not(.winButtons_3zSH5d),
+            div.clickable_fErCLM {
                 width: 32px !important;
                 height: 32px !important;
                 display: flex;
@@ -160,41 +160,41 @@ body {
         }
     }
     /* Mac / Vesktop users */
-    .base__5e434 {
+    .base_pog62O {
         --top-bar-right-margin: calc(32px * var(--button-count) + var(--button-count) * var(--space-xs));
     }
     /* VC popout */
-    .popout__0bd4a:has(> .titleBar__0bd4a) {
+    .popout_9Aa-7R:has(> .titleBar_9Aa-7R) {
         --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
     /* Settings modal in portrait mode */
     @media screen and (max-width: 1080px) {
-        #app-mount:has(> .appAsidePanelWrapper_a3002d > div > .layerContainer__59d0d .modal_e44912) {
-            .modal_e44912 {
+        #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .layerContainer_VVADeK .modal__F9ieB) {
+            .modal__F9ieB {
                 padding-top: 0;
             }
 
-            .trailing_c38106 {
+            .trailing_3zSH5d {
                 top: calc(8.5px + var(--border-thickness));
                 right: var(--border-thickness);
             }
 
-            .contentHeader_e9e3ed {
+            .contentHeader_3Rvb29 {
                 padding-right: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs) * 2);
             }
         }
     }
 
     /* Hide page seek arrows */
-    .bar_c38106 .backForwardButtons__63abb {
+    .bar_3zSH5d .backForwardButtons_nS9Yqn {
         display: none;
     }
 
     /* Hide trailing in VC wrapper */
-    .base__5e434,
-    .popout__0bd4a {
-        &:has(:is(& > .content__5e434 > .page__5e434 .chat_f75fb0, & > .content__0bd4a .root) > .video_cb9592:not(.sidebarOpen_cb9592) .callContainer_cb9592 > .root_bfe55a.idle_bfe55a)
-            .trailing_c38106 {
+    .base_pog62O,
+    .popout_9Aa-7R {
+        &:has(:is(& > .content_pog62O > .page_pog62O .chat_z_gUBg, & > .content_9Aa-7R .root) > .video_hbKzX7:not(.sidebarOpen_hbKzX7) .callContainer_hbKzX7 > .root_rTsZa_.idle_rTsZa_)
+            .trailing_3zSH5d {
             transform: translateY(-8px);
             opacity: 0;
 
@@ -213,21 +213,21 @@ body {
 }
 
 @container body style(--top-bar-title-position: hide) {
-    .title_edbb22 {
+    .title_LnjVAX {
         display: none;
     }
 }
 
 @container body style(--top-bar-title-position: left) {
-    .title_c38106 {
+    .title_3zSH5d {
         padding-left: var(--gap);
         justify-content: flex-start;
     }
-    .title_edbb22 {
+    .title_LnjVAX {
         gap: 4px;
     }
     /* Hide page seek arrows */
-    .bar_c38106 .backForwardButtons__63abb {
+    .bar_3zSH5d .backForwardButtons_nS9Yqn {
         display: none;
     }
 }
@@ -239,11 +239,11 @@ body {
 }
 
 @container body style(--subtle-top-bar-title: on) {
-    .title_edbb22 .icon_f34534,
-    .title_edbb22 > svg {
+    .title_LnjVAX .icon_qqAqr1,
+    .title_LnjVAX > svg {
         display: none;
     }
-    .title_edbb22 .text-sm\/medium_cf4812 {
+    .title_LnjVAX .text-sm\/medium_RAOoio {
         line-height: 90%;
         font-weight: 700;
         color: var(--text-muted);

@@ -11,23 +11,23 @@ body {
 
 @container body style(--animations: on) {
     /* list hover animations */
-    .wrapper__2ea32 .link__2ea32 /* channels */,
-        .container__91a9d /* members */,
-        .channel__972a0 /* dms */,
-        .side_aa8da2 .item_aa8da2 /* settings */ {
+    .wrapper_TNyK-N .link_TNyK-N /* channels */,
+        .container_J1Adu_ /* members */,
+        .channel_zln_tS /* dms */,
+        .side_6zZYhF .item_6zZYhF /* settings */ {
         transition: margin-left var(--list-item-transition);
         will-change: margin-left;
     }
-    .wrapper__2ea32:hover .link__2ea32,
-    .side_aa8da2 .item_aa8da2:hover {
+    .wrapper_TNyK-N:hover .link_TNyK-N,
+    .side_6zZYhF .item_6zZYhF:hover {
         margin-left: 10px;
     }
-    .container__91a9d:hover,
-    .channel__972a0:hover {
+    .container_J1Adu_:hover,
+    .channel_zln_tS:hover {
         margin-left: 18px;
     }
     /* list hover channel dot */
-    .unread__2ea32 {
+    .unread_TNyK-N {
         border-radius: 50%;
         width: 8px;
         height: 8px;
@@ -35,13 +35,13 @@ body {
         transition: var(--list-item-transition);
         will-change: margin-left;
     }
-    .wrapper__2ea32:hover .unread__2ea32 {
+    .wrapper_TNyK-N:hover .unread_TNyK-N {
         margin-left: 4px;
     }
-    .typeThread__2ea32 .unread__2ea32 {
+    .typeThread_TNyK-N .unread_TNyK-N {
         margin-left: -8px;
     }
-    .wrapper__2ea32.typeThread__2ea32:hover .unread__2ea32 {
+    .wrapper_TNyK-N.typeThread_TNyK-N:hover .unread_TNyK-N {
         margin-left: 0px;
     }
 }
