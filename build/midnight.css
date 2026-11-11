@@ -1889,11 +1889,10 @@ body {
     .subtitleContainer_z_gUBg {
         height: var(--custom-channel-header-height);
         
-        /* Inner container */
+        /* Inner container fixes */
         .title_z_gUBg.container_ybUK7Z {
             height: auto;
 
-            /* "Follow" button */
             .followButton_z_gUBg {
                 padding-top: 0;
                 padding-bottom: 0;
@@ -1909,8 +1908,9 @@ body {
 }
 
 @container body style(--top-bar-button-position: hide) {
-    .trailing_3zSH5d > a[href='https://support.discord.com'],
-    .winButtons_3zSH5d::before {
+    .bar_3zSH5d .backForwardButtons_nS9Yqn /* page seek arrows */,
+    .title_3zSH5d /* top bar title */,
+    .trailing_3zSH5d /* top bar buttons */ {
         display: none;
     }
 }
