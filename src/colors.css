@@ -654,8 +654,8 @@
     }
 
     .colorPickerSwatch_BorJ2C[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
-        .newBadge_SOY5H6 /* forum post new badge */,
-        .mentioned_SY_P2T:before /* mention message left edge */ {
+    .newBadge_SOY5H6 .badge_4guu7- /* forum post new badge */,
+    .mentioned_SY_P2T:before /* mention message left edge */ {
         background-color: var(--accent-2) !important;
     }
     .replying_SY_P2T:before /* reply message left edge */ {

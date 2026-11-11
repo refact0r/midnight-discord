@@ -6,14 +6,35 @@ body {
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 
+.platform-osx .wrapper_5dqHTG {
+    margin-top: max(0px, calc(36px - var(--top-bar-height)));
+}
+
+/* Calculate and apply channel header height */
+#app-mount {
+    --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
+    
+    /* Outer container */
+    .subtitleContainer_z_gUBg {
+        height: var(--custom-channel-header-height);
+        
+        /* Inner container */
+        .title_z_gUBg.container_ybUK7Z {
+            height: auto;
+
+            /* "Follow" button */
+            .followButton_z_gUBg {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
 @property --top-bar-button-position {
     syntax: 'off | hide | titlebar';
     inherits: false;
     initial-value: titlebar;
-}
-
-.platform-osx .wrapper_5dqHTG {
-    margin-top: max(0px, calc(36px - var(--top-bar-height)));
 }
 
 @container body style(--top-bar-button-position: hide) {
@@ -24,9 +45,6 @@ body {
 }
 
 @container body style(--top-bar-button-position: titlebar) {
-    #app-mount {
-        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-    }
     .title_3zSH5d,
     .trailing_3zSH5d > a[href='https://support.discord.com'] {
         display: none;
@@ -97,17 +115,6 @@ body {
     .chat_z_gUBg > .layerContainer_VVADeK {
         z-index: 999;
     }
-    .subtitleContainer_z_gUBg {
-        height: var(--custom-channel-header-height);
-    }
-    .title_z_gUBg.container_ybUK7Z {
-        min-height: 0;
-        height: auto;
-    }
-    .followButton_z_gUBg {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
     .base_pog62O:has(> .notice_Q02kKo) > .bar_3zSH5d > .trailing_3zSH5d {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
@@ -142,7 +149,7 @@ body {
             --top-bar-right-margin: calc(32px * var(--button-count) + (var(--button-count) + 2) * var(--space-xs) + 6 * var(--window-control-size) + var(--window-controls-padding));
         }
 
-        /* Revert icon sizing changes */
+        /* Apply fixed 32x32 size for titlebar icons */
         .trailing_3zSH5d {
             > div:not(.winButtons_3zSH5d),
             div.clickable_fErCLM {
