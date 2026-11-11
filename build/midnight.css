@@ -1986,11 +1986,9 @@ body {
     .chat_z_gUBg > .layerContainer_VVADeK {
         z-index: 999;
     }
-    .base_pog62O:has(> .notice_Q02kKo) > .bar_3zSH5d > .trailing_3zSH5d {
-        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
-    }
 
-    .base_pog62O:has(> .notice_6g5Jai) > .bar_3zSH5d > .trailing_3zSH5d {
+    /* Adjust top bar positioning when notice is present */
+    .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)) > .bar_3zSH5d > .trailing_3zSH5d {
         top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
     }
 
