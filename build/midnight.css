@@ -881,7 +881,7 @@ body {
         --button-outline-primary-text: var(--text-1);
         --card-background-default: var(--bg-3);
         --card-primary-pressed-bg: lime;
-        --card-secondary-bg: blue;
+        --card-secondary-bg: var(--bg-2);
         --card-secondary-pressed-bg: magenta;
         --channel-icon: var(--text-4);
         --channel-text-area-placeholder: var(--text-5);
