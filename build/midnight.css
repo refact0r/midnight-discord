@@ -1409,7 +1409,8 @@ body {
         background-color: transparent !important;
     }
 
-    .sidebarRegionScroller_jnk11m /* server and channel settings sidebar */ {
+    .sidebarRegionScroller_jnk11m /* server and channel settings sidebar */,
+    .sidebar_cR4ic2 /* user settings sidebar */ {
         background-color: var(--bg-3);
     }
     .side_6zZYhF .item_6zZYhF:hover /* settings tab */ {
@@ -1418,6 +1419,17 @@ body {
     .side_6zZYhF .item_6zZYhF:active,
     .side_6zZYhF .item_6zZYhF.selected_6zZYhF {
         background-color: var(--bg-2) !important;
+    }
+
+    /* User settings searchbar */
+    .fixedContent_cR4ic2 {
+        &::after {
+            background: linear-gradient(to bottom,var(--bg-3),transparent);
+        }
+
+        .wrapper_UcGqzv {
+            background-color: var(--bg-4);
+        }
     }
 
     .participantsButton_1uD6uZ /* vc participants button */,
