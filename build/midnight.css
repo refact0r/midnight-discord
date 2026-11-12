@@ -1938,7 +1938,7 @@ body {
     /* Fix window controls overlapping certain modals */
     #app-mount,
     .modal__F9ieB {
-        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
+        --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height) + var(--border-thickness));
     }
     .layerContainer_VVADeK .carouselModal_7QK1F9 {
         margin-top: var(--custom-viewport-padding);
