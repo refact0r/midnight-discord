@@ -492,6 +492,11 @@ body {
     background: none;
 }
 
+/* Fix border radius when profile editing panel is present */
+#user-profile-editing-panel.isExpanded_s3DB6Y + .outer_P1YEjQ {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
+}
+
 .container_g6VwXp {
     margin-inline-start: 0;
     -webkit-margin-start: 0;
