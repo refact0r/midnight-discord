@@ -1954,7 +1954,7 @@ body {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    .base_pog62O:has(> .content_pog62O > .page_pog62O > [style^='width'] > :is(.guildSidebar_z_gUBg, .sidebarContainer_MLLsfk)) .trailing_3zSH5d {
+    #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .app_YRXZu0 .base_pog62O > .content_pog62O > .page_pog62O > div > :is(.guildSidebar_z_gUBg, .sidebarContainer_MLLsfk)) .trailing_3zSH5d {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
     }
     .page_pog62O div[style='width: 480px;'] {
