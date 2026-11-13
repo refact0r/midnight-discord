@@ -269,11 +269,23 @@ body {
 }
 
 .notice_Q02kKo /* notice banner */,
-.notice_6g5Jai /* nitro notice? */ {
+.notice_6g5Jai /* nitro notice */,
+#bd-notices .bd-notice /* BetterDiscord notice */ {
     margin: 0 var(--gap) var(--gap) 0;
     border-radius: var(--radius-md);
     box-sizing: border-box;
     height: 40px;
+}
+#bd-notices .bd-notice {
+	color: var(--text-0);
+	background-color: var(--accent-2);
+
+	.bd-notice-close {
+		mask: url(https://discord.com/assets/7731c77d99babca1a8faec204d98c380.svg) 50% 50% / 10px 10px no-repeat;
+		background: var(--text-0);
+		height: 100%;
+		width: 40px;
+	}
 }
 
 .container_FrbQJp /* vc chat + titlebar group */ {
@@ -426,21 +438,31 @@ body {
     margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
 }
 
-/* improve highlight message left edge */
+/* improve highlighted message styling */
 .message_SY_P2T.mentioned_SY_P2T::before,
 .replying_SY_P2T::before,
-.ephemeral_SY_P2T::before {
+.ephemeral_SY_P2T::before,
+.flashOverlay_EajVQV::before {
     width: var(--divider-thickness);
     border-radius: var(--divider-thickness);
     height: calc(100% - 2 * var(--radius-sm));
     top: var(--radius-sm);
-    left: calc(var(--divider-thickness) / -2 + 1px);
     left: calc(var(--radius-sm) / 2);
 }
-
-.message_SY_P2T {
+.message_SY_P2T,
+.flashOverlay_EajVQV {
     border-radius: var(--radius-md);
-    margin-left: 4px;
+    margin-left: calc(var(--radius-sm) / 2);
+}
+.flashOverlay_EajVQV {
+    border: 0;
+    background: var(--reply);
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--accent-1);
+    }
 }
 
 /* improve server selected marker */
@@ -1128,7 +1150,7 @@ body {
         --input-border-hover: var(--border);
         --input-border-readonly: red;
         --input-foreground-placeholder: yellow;
-        --input-icon-default: lime;
+        --input-icon-default: var(--text-4);
         --input-placeholder-text-default: var(--text-5);
         --input-text-default: var(--text-3);
         --input-text-error-default: var(--text-3);
@@ -1346,6 +1368,36 @@ body {
         --profile-gradient-secondary-color: var(--bg-4);
     }
 
+    /* Discord video player */
+    .themeAurora_aCnSGZ,
+    .themeBlurple_aCnSGZ,
+    .themeMidnight_aCnSGZ,
+    .themeNitro_aCnSGZ {
+        --custom-dvp-fill: linear-gradient(90deg,var(--background-brand),var(--accent-1));
+        --custom-dvp-track: var(--bg-2);
+        --custom-dvp-buffer: var(--text-4);
+        --custom-dvp-playhead-bg: var(--text-0);
+        --custom-dvp-hover-bg: radial-gradient(ellipse at center,var(--bg-1),transparent 75%);
+        --custom-dvp-speed-bg: var(--bg-1);
+        --custom-dvp-speed-badge-ink: var(--text-0);
+        --custom-dvp-slider-track: var(--bg-2);
+        --custom-dvp-slider-ring: var(--accent-2);
+        --custom-dvp-preview-border: var(--border);
+        --custom-dvp-popout-bg: linear-gradient(135deg,var(--bg-2),transparent 70%),var(--background-surface-high);
+
+        /* Player controls */
+        .videoFooterCont_hFq1lM {
+            --white: var(--text-2);
+        }
+        .videoContInnerRelative_hFq1lM {
+            --text-overlay-light: var(--text-2);
+
+            .grabber_p3RiOL {
+                background-color: var(--text-0);
+            }
+        }
+    }
+
     ::placeholder {
         color: var(--text-5);
     }
@@ -1386,7 +1438,8 @@ body {
         background-color: transparent !important;
     }
 
-    .sidebarRegionScroller_jnk11m /* server and channel settings sidebar */ {
+    .sidebarRegionScroller_jnk11m /* server and channel settings sidebar */,
+    .sidebar_cR4ic2 /* user settings sidebar */ {
         background-color: var(--bg-3);
     }
     .side_6zZYhF .item_6zZYhF:hover /* settings tab */ {
@@ -1395,6 +1448,17 @@ body {
     .side_6zZYhF .item_6zZYhF:active,
     .side_6zZYhF .item_6zZYhF.selected_6zZYhF {
         background-color: var(--bg-2) !important;
+    }
+
+    /* User settings searchbar */
+    .fixedContent_cR4ic2 {
+        &::after {
+            background: linear-gradient(to bottom,var(--bg-3),transparent);
+        }
+
+        .wrapper_UcGqzv {
+            background-color: var(--bg-4);
+        }
     }
 
     .participantsButton_1uD6uZ /* vc participants button */,
@@ -1641,14 +1705,6 @@ body {
 
     .reactionBtn_MmKct8.forceShow_MmKct8:hover /* fix add reaction button border hover */ {
         border-color: var(--bg-2);
-    }
-
-    .flash_EajVQV[data-flash=true] /* reply message flash */ {
-        background: var(--background-message-highlight);
-    }
-
-    .flash_EajVQV[data-flash='true'] /* reply message flash */ {
-        background: var(--reply);
     }
 
     /* status indicators */
@@ -1949,7 +2005,7 @@ body {
         margin-top: var(--custom-viewport-padding);
     }
     /* Move window controls when mod view is open */
-    .base_pog62O:has(> .content_pog62O > .page_pog62O > [style^='width'] > :is(.guildSidebar_z_gUBg, .sidebarContainer_MLLsfk)) .trailing_3zSH5d {
+    #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .app_YRXZu0 .base_pog62O > .content_pog62O > .page_pog62O > div > :is(.guildSidebar_z_gUBg, .sidebarContainer_MLLsfk)) .trailing_3zSH5d {
         right: calc(var(--gap) + var(--border-thickness) + 480px);
     }
     .page_pog62O div[style='width: 480px;'] {
@@ -1993,8 +2049,11 @@ body {
     }
 
     /* Adjust top bar positioning when notice is present */
-    .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)) > .bar_3zSH5d > .trailing_3zSH5d {
-        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+    .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)),
+    .base_pog62O:has(> #bd-notices > .bd-notice) {
+        > .bar_3zSH5d > .trailing_3zSH5d {
+            top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+        }
     }
 
     /* Fix header icons and window controls overlap */
@@ -2048,20 +2107,19 @@ body {
     .popout_9Aa-7R:has(> .titleBar_9Aa-7R) {
         --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
-    /* Settings modal in portrait mode */
+    /* Adjust top bar and settings modal in portrait mode */
     @media screen and (max-width: 1080px) {
-        #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .layerContainer_VVADeK .modal__F9ieB) {
+        #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .contents_qZv3Qq > div > .layerContainer_VVADeK > .layer_C_WHpX [aria-labelledby^="heading"]) {
             .modal__F9ieB {
                 padding-top: 0;
             }
 
-            .trailing_3zSH5d {
-                top: calc(8.5px + var(--border-thickness));
-                right: var(--border-thickness);
+            > .bar_3zSH5d .trailing_3zSH5d {
+                top: calc(8px + var(--border-thickness));
             }
 
             .contentHeader_3Rvb29 {
-                padding-right: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs) * 2);
+                padding-right: calc(var(--gap) + var(--border-thickness) + var(--space-xs) * 2 + var(--window-controls-padding) + var(--window-control-size) * 6);
             }
         }
     }
