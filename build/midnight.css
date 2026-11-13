@@ -1376,7 +1376,7 @@ body {
         --custom-dvp-fill: linear-gradient(90deg,var(--background-brand),var(--accent-1));
         --custom-dvp-track: var(--bg-2);
         --custom-dvp-buffer: var(--text-4);
-        --custom-dvp-playhead-bg: var(--text-1);
+        --custom-dvp-playhead-bg: var(--text-0);
         --custom-dvp-hover-bg: radial-gradient(ellipse at center,var(--bg-1),transparent 75%);
         --custom-dvp-speed-bg: lime;
         --custom-dvp-speed-badge-ink: blue;
@@ -1387,11 +1387,11 @@ body {
 
         /* Player controls */
         .videoContInnerRelative_hFq1lM {
-            --white: var(--text-1);
-            --text-overlay-light: var(--text-1);
+            --white: var(--text-2);
+            --text-overlay-light: var(--text-2);
 
             .grabber_p3RiOL {
-                background-color: var(--white);
+                background-color: var(--text-0);
             }
         }
     }
