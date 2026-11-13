@@ -147,7 +147,7 @@ body {
     overflow: hidden;
 }
 .container_zrUwGA /* friends page group outer */,
-    .page_pog62O {
+.page_pog62O {
     padding-bottom: var(--gap);
     padding-right: var(--gap);
     border: none !important;
@@ -160,10 +160,9 @@ body {
 
 #app-mount .container_ybUK7Z /* friends, message requests, + other stuff titlebar */ {
     margin-bottom: var(--gap);
-    border-bottom: none;
 }
 
-.subtitleContainer_z_gUBg /* chat titlebar  */ {
+.subtitleContainer_z_gUBg /* chat titlebar */ {
     margin-bottom: var(--gap);
 }
 .title_z_gUBg /* chat titlebar inner */ {
@@ -501,6 +500,11 @@ body {
 }
 .root_NxZlvf {
     background: none;
+}
+
+/* Fix border radius when profile editing panel is present */
+#user-profile-editing-panel.isExpanded_s3DB6Y + .outer_P1YEjQ {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
 }
 
 .container_g6VwXp {
