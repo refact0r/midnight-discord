@@ -2104,20 +2104,19 @@ body {
     .popout_9Aa-7R:has(> .titleBar_9Aa-7R) {
         --top-bar-right-margin: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs));
     }
-    /* Settings modal in portrait mode */
+    /* Adjust top bar and settings modal in portrait mode */
     @media screen and (max-width: 1080px) {
-        #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .layerContainer_VVADeK .modal__F9ieB) {
+        #app-mount:has(> .appAsidePanelWrapper_YRXZu0 > div > .contents_qZv3Qq > div > .layerContainer_VVADeK > .layer_C_WHpX [aria-labelledby^="heading"]) {
             .modal__F9ieB {
                 padding-top: 0;
             }
 
-            .trailing_3zSH5d {
-                top: calc(8.5px + var(--border-thickness));
-                right: var(--border-thickness);
+            > .bar_3zSH5d .trailing_3zSH5d {
+                top: calc(8px + var(--border-thickness));
             }
 
             .contentHeader_3Rvb29 {
-                padding-right: calc((var(--window-control-size) * 6) + var(--window-controls-padding) + var(--space-xs) * 2);
+                padding-right: calc(var(--gap) + var(--border-thickness) + var(--space-xs) * 2 + var(--window-controls-padding) + var(--window-control-size) * 6);
             }
         }
     }
