@@ -119,7 +119,7 @@ body {
     /* Adjust top bar positioning when notice is present */
     .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)),
     .base_pog62O:has(> #bd-notices > .bd-notice) {
-        & > .bar_3zSH5d > .trailing_3zSH5d {
+        > .bar_3zSH5d > .trailing_3zSH5d {
             top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
         }
     }
