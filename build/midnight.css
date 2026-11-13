@@ -1150,7 +1150,7 @@ body {
         --input-border-hover: var(--border);
         --input-border-readonly: red;
         --input-foreground-placeholder: yellow;
-        --input-icon-default: lime;
+        --input-icon-default: var(--text-4);
         --input-placeholder-text-default: var(--text-5);
         --input-text-default: var(--text-3);
         --input-text-error-default: var(--text-3);
@@ -1383,11 +1383,12 @@ body {
         --custom-dvp-slider-track: var(--bg-2);
         --custom-dvp-slider-ring: var(--accent-2);
         --custom-dvp-preview-border: var(--border);
-        --custom-dvp-popout-bg: linear-gradient(135deg,var(--bg-1),transparent 70%),var(--background-surface-high);
+        --custom-dvp-popout-bg: linear-gradient(135deg,var(--bg-2),transparent 70%),var(--background-surface-high);
 
         /* Player controls */
         .videoContInnerRelative_hFq1lM {
             --white: var(--text-1);
+            --text-overlay-light: var(--text-1);
 
             .grabber_p3RiOL {
                 background-color: var(--white);
@@ -2048,7 +2049,7 @@ body {
     /* Adjust top bar positioning when notice is present */
     .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)),
     .base_pog62O:has(> #bd-notices > .bd-notice) {
-        & > .bar_3zSH5d > .trailing_3zSH5d {
+        > .bar_3zSH5d > .trailing_3zSH5d {
             top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
         }
     }
