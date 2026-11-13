@@ -131,7 +131,7 @@
         --button-outline-primary-text: var(--text-1);
         --card-background-default: var(--bg-3);
         --card-primary-pressed-bg: lime;
-        --card-secondary-bg: blue;
+        --card-secondary-bg: var(--bg-2);
         --card-secondary-pressed-bg: magenta;
         --channel-icon: var(--text-4);
         --channel-text-area-placeholder: var(--text-5);
@@ -654,8 +654,8 @@
     }
 
     .colorPickerSwatch_BorJ2C[style="background-color: rgb(88, 101, 242);"] /* folder color picker swatch */,
-        .newBadge_SOY5H6 /* forum post new badge */,
-        .mentioned_SY_P2T:before /* mention message left edge */ {
+    .newBadge_SOY5H6 .badge_4guu7- /* forum post new badge */,
+    .mentioned_SY_P2T:before /* mention message left edge */ {
         background-color: var(--accent-2) !important;
     }
     .replying_SY_P2T:before /* reply message left edge */ {
@@ -778,7 +778,7 @@
         .emptyChannelIcon_w6h4R2 path[fill='var(--white)'] /* channel start icon */ {
         fill: var(--text-3);
     }
-    .grabber_p3RiOL /* slider grabber (vc volume, settings, spotify plugin) */ {
+    .grabber_OnqacX /* slider grabber (vc volume, settings, spotify plugin) */ {
         background-color: var(--text-3);
     }
     .badge_4guu7- /* new text badge (right click on person in vc) */ {
