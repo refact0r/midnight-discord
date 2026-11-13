@@ -446,13 +446,12 @@ body {
     border-radius: var(--divider-thickness);
     height: calc(100% - 2 * var(--radius-sm));
     top: var(--radius-sm);
-    left: calc(var(--divider-thickness) / -2 + 1px);
     left: calc(var(--radius-sm) / 2);
 }
 .message_SY_P2T,
 .flashOverlay_EajVQV {
     border-radius: var(--radius-md);
-    margin-left: 4px;
+    margin-left: calc(var(--radius-sm) / 2);
 }
 .flashOverlay_EajVQV {
     border: 0;
