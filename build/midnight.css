@@ -269,11 +269,23 @@ body {
 }
 
 .notice_Q02kKo /* notice banner */,
-.notice_6g5Jai /* nitro notice? */ {
+.notice_6g5Jai /* nitro notice */,
+#bd-notices .bd-notice /* BetterDiscord notice */ {
     margin: 0 var(--gap) var(--gap) 0;
     border-radius: var(--radius-md);
     box-sizing: border-box;
     height: 40px;
+}
+#bd-notices .bd-notice {
+	color: var(--text-0);
+	background-color: var(--accent-2);
+
+	.bd-notice-close {
+		mask: url(https://discord.com/assets/7731c77d99babca1a8faec204d98c380.svg) 50% 50% / 10px 10px no-repeat;
+		background: var(--text-0);
+		height: 100%;
+		width: 40px;
+	}
 }
 
 .container_FrbQJp /* vc chat + titlebar group */ {
@@ -2035,8 +2047,11 @@ body {
     }
 
     /* Adjust top bar positioning when notice is present */
-    .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)) > .bar_3zSH5d > .trailing_3zSH5d {
-        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+    .base_pog62O:has(> :is(.notice_Q02kKo, .notice_6g5Jai)),
+    .base_pog62O:has(> #bd-notices > .bd-notice) {
+        & > .bar_3zSH5d > .trailing_3zSH5d {
+            top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
+        }
     }
 
     /* Fix header icons and window controls overlap */
