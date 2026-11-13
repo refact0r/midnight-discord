@@ -927,14 +927,6 @@
         border-color: var(--bg-2);
     }
 
-    .flash_EajVQV[data-flash=true] /* reply message flash */ {
-        background: var(--background-message-highlight);
-    }
-
-    .flash_EajVQV[data-flash='true'] /* reply message flash */ {
-        background: var(--reply);
-    }
-
     /* status indicators */
     rect[fill='#84858d'] {
         fill: var(--offline);

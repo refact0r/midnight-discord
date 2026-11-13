@@ -427,10 +427,11 @@ body {
     margin-top: calc(var(--divider-thickness) - var(--divider-thickness) * 2);
 }
 
-/* improve highlight message left edge */
+/* improve highlighted message styling */
 .message_SY_P2T.mentioned_SY_P2T::before,
 .replying_SY_P2T::before,
-.ephemeral_SY_P2T::before {
+.ephemeral_SY_P2T::before,
+.flashOverlay_EajVQV::before {
     width: var(--divider-thickness);
     border-radius: var(--divider-thickness);
     height: calc(100% - 2 * var(--radius-sm));
@@ -438,10 +439,20 @@ body {
     left: calc(var(--divider-thickness) / -2 + 1px);
     left: calc(var(--radius-sm) / 2);
 }
-
-.message_SY_P2T {
+.message_SY_P2T,
+.flashOverlay_EajVQV {
     border-radius: var(--radius-md);
     margin-left: 4px;
+}
+.flashOverlay_EajVQV {
+    border: 0;
+    background: var(--reply);
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--accent-1);
+    }
 }
 
 /* improve server selected marker */
@@ -1676,14 +1687,6 @@ body {
 
     .reactionBtn_MmKct8.forceShow_MmKct8:hover /* fix add reaction button border hover */ {
         border-color: var(--bg-2);
-    }
-
-    .flash_EajVQV[data-flash=true] /* reply message flash */ {
-        background: var(--background-message-highlight);
-    }
-
-    .flash_EajVQV[data-flash='true'] /* reply message flash */ {
-        background: var(--reply);
     }
 
     /* status indicators */
