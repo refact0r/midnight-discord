@@ -585,10 +585,9 @@
         --white-500: var(--text-1);
     }
 
-    /* User profile sidebar */
-    .user-profile-sidebar .inner_P1YEjQ {
-        --user-profile-overlay-background: var(--bg-3);
-        --profile-gradient-secondary-color: var(--bg-4);
+    /* DM user profile sidebar */
+    .user-profile-sidebar:not(.custom-user-profile-theme) {
+        background: var(--bg-4) !important;
     }
 
     ::placeholder {
