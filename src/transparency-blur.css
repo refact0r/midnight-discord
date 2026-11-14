@@ -40,10 +40,10 @@
         }
     }
     .submenuPaddingContainer_M3qk4j > .menu_M3qk4j::before {
-        width: calc(var(--size) - 16px);    
+        width: calc(var(--size) - 16px);
     }
     .submenuPaddingContainer_nitlyF > .menu_M3qk4j::before {
-        width: calc(var(--size) - 24px);    
+        width: calc(var(--size) - 24px);
     }
 }
 
