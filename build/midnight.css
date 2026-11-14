@@ -2144,7 +2144,7 @@ body {
     }
 
     .popover_DpHsW6.popover_DpHsW6 /* message hover quick action bar */,
-    .tooltip_3_v8qp /* tooltips */,
+    .tooltip_3_v8qp /* tooltip class 1 */,
     .contentWrapper_58b0l2 /* emoji/gif panel */,
     .root__KoJTP /* modals like invite */,
     .outer_P1YEjQ.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
@@ -2152,9 +2152,20 @@ body {
     .container_cbVzxY /* search suggestions */,
     .messagesPopoutWrap_6bgemo /* inbox */,
     .popout_j5xNzb /* channel hover popout */,
-    .bar_t1P8Sn /* channel list new unreads bar */ {
+    .bar_t1P8Sn /* channel list new unreads bar */,
+    .orbWalletContainer_hSuDqh /* orb wallet container */ {
         background: var(--bg-floating);
         backdrop-filter: var(--panel-backdrop-filter);
+    }
+
+    /* Tooltip class 2 */
+    .tooltipLayer_ZDdyhE > div {
+        border-radius: var(--radius-sm);
+        backdrop-filter: var(--panel-backdrop-filter);
+
+        .tooltip_ZDdyhE {
+            background: var(--bg-floating);
+        }
     }
 
     /* Fix context menu positioning by applying pseudo element */
