@@ -1269,8 +1269,8 @@ body {
         --switch-border-hover: var(--border-hover);
         --switch-border-selected-default: var(--border-light);
         --switch-border-selected-hover: var(--border-hover);
-        --switch-thumb-background-default: rgb(255, 255, 255);
-        --switch-thumb-background-selected-default: rgb(255, 255, 255);
+        --switch-thumb-background-default: var(--text-3);
+        --switch-thumb-background-selected-default: var(--text-0);
         --switch-thumb-icon-active: blue;
         --switch-thumb-icon-default: magenta;
         --text-brand: var(--accent-1);
@@ -1447,9 +1447,11 @@ body {
         color: var(--text-0);
     }
 
+    /* Vencord/Equicord switches */
     .vc-switch-container {
         background-color: var(--bg-1) !important;
         transition: background-color 0.2s ease;
+        border-radius: var(--radius-lg);
     }
     .vc-switch-container.vc-switch-checked {
         background-color: var(--accent-2) !important;
@@ -1467,6 +1469,12 @@ body {
     }
     .vc-switch-container.vc-switch-checked .vc-switch-slider rect[fill='white'] {
         fill: var(--text-0) !important;
+    }
+    .vc-plugins-restart-button {
+        background-color: var(--text-status-idle) !important;
+    }
+    .vc-notice-text {
+        color: var(--text-2) !important;
     }
 
     .refreshIcon_jqZBm0 /* settings radiobutton center */ {
@@ -1526,7 +1534,9 @@ body {
         .emptyChannelIcon_w6h4R2 path[fill='var(--white)'] /* channel start icon */ {
         fill: var(--text-3);
     }
-    .grabber_OnqacX /* slider grabber (vc volume, settings, spotify plugin) */ {
+    /* slider grabber (vc volume, settings, spotify plugin) */
+    .grabber_p3RiOL,
+    .grabber_OnqacX {
         background-color: var(--text-3);
     }
     .badge_4guu7- /* new text badge (right click on person in vc) */ {
