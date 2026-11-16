@@ -1387,10 +1387,10 @@ body {
 
         /* Player controls */
         .videoFooterCont_hFq1lM {
-            --white: var(--text-2);
+            --white: var(--text-1);
         }
         .videoContInnerRelative_hFq1lM {
-            --text-overlay-light: var(--text-2);
+            --text-overlay-light: var(--text-1);
 
             .grabber_p3RiOL {
                 background-color: var(--text-0);
