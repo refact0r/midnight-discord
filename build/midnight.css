@@ -48,7 +48,11 @@ body {
 .headerBar_tSk_LE /* quests page titlebar */,
 .scroller_jkJlMe /* quests page */,
 .container_nMe-a6 > .content_z_gUBg /* message requests */,
-.shop_Mqg79R /* shop */,
+.shop_Mqg79R > div > .container_ybUK7Z /* shop titlebar */,
+.shopViewWrapper_Mqg79R /* shop inner container */,
+.container_Og3lGk > .container_ybUK7Z /* game shop titlebar */,
+.container_Og3lGk .scrollbarGutterStable_tqapBM /* game shop inner container */,
+.applicationStore_6U3jXZ /* nitro shop outer container */,
 .content_z_gUBg > aside > .outer_P1YEjQ /* dm user panel */,
 .searchResultsWrap_QHVbp3 /* search results */,
 .container_BkGrJJ /* forum */,
@@ -230,16 +234,38 @@ body {
     border: none;
     background: none;
 }
-.applicationStore_6U3jXZ /* nitro page group outer */ {
-    background: none;
-}
 
-.shop_Mqg79R /* shop */ {
+/* Shop outer */
+.shop_Mqg79R {
     overflow: hidden;
     height: auto;
+    background: none !important;
+    border: 0;
+
+    /* Shop inner */
+    .shopViewWrapper_Mqg79R {
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+    }
 }
-.shop_XBXDcd /* shop inner scroller */ {
+/* Shop inner scroller */
+.shop_XBXDcd {
     margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
+}
+/* Game Shop inner */
+.container_Og3lGk {
+    background: none;
+    border: 0;
+}
+/* Nitro Shop outer */
+.applicationStore_6U3jXZ {
+    background: none;
+
+    /* Nitro Shop header */
+    .navBar_jHfUxk {
+        background-color: var(--bg-4);
+        border-color: var(--border-subtle);
+    }
 }
 
 .container_ZTJWQo /* quests outer */ {
@@ -1780,6 +1806,11 @@ body {
     .colorable_K9Xq13.primaryDark_K9Xq13.active_K9Xq13:not(.disabled_K9Xq13),
     .colorable_K9Xq13.primaryDark_K9Xq13:hover:not(.disabled_K9Xq13) {
         background-color: var(--bg-1);
+    }
+
+    /* Game Shop details text */
+    .headerContainer_yKeh5i:has(> .upperContainer_ybUK7Z > .children_ybUK7Z > .shopHomeButton_yKeh5i) + .scrollbarGutterStable_tqapBM .details_RGwqSL {
+        --text-overlay-light: var(--text-1) !important;
     }
 }
 

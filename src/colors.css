@@ -1026,4 +1026,9 @@
     .colorable_K9Xq13.primaryDark_K9Xq13:hover:not(.disabled_K9Xq13) {
         background-color: var(--bg-1);
     }
+
+    /* Game Shop details text */
+    .headerContainer_yKeh5i:has(> .upperContainer_ybUK7Z > .children_ybUK7Z > .shopHomeButton_yKeh5i) + .scrollbarGutterStable_tqapBM .details_RGwqSL {
+        --text-overlay-light: var(--text-1) !important;
+    }
 }
