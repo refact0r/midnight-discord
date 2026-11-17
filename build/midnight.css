@@ -2180,10 +2180,11 @@ body {
         }
     }
 
-    /* Fix context menu positioning by applying pseudo element */
+    /* Context menus */
     .menu_M3qk4j {
         background: var(--bg-floating);
 
+        /* Fix menu positioning by applying pseudo element */
         &::before {
             --size: calc(100% - 1px);
             
