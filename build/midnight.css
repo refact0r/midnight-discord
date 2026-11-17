@@ -64,7 +64,7 @@ body {
 .container_dvN-MP /* popout modals */ {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-lg);
-    border: var(--border-thickness) solid var(--border-subtle) !important;
+    border: var(--border-thickness) solid var(--border-subtle);
     backdrop-filter: var(--panel-backdrop-filter);
     box-sizing: border-box;
     transition: border-color var(--border-hover-transition);
@@ -104,6 +104,11 @@ body {
 
 .sidebarList_pog62O /* channel list */ {
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
+    border-top: var(--border-thickness) solid var(--border-subtle) !important;
+
+    &:hover {
+        border-color: var(--border-hover) !important;
+    }
 }
 .container_H5ozaj /* channel list inner */ {
     padding-bottom: 0;
