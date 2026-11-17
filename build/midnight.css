@@ -986,7 +986,7 @@ body {
         --content-inventory-overlay-text-secondary: var(--text-3);
         --context-menu-backdrop-background: red;
         --control-brand-foreground: var(--accent-2);
-        --control-brand-foreground-new: lime;
+        --control-brand-foreground-new: var(--accent-2);
         --control-connect-background-active: var(--accent-5);
         --control-connect-background-default: var(--accent-4);
         --control-connect-background-hover: var(--accent-3);
