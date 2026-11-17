@@ -1808,8 +1808,8 @@ body {
         background-color: var(--bg-1);
     }
 
-    /* Game Shop details text */
-    .headerContainer_yKeh5i:has(> .upperContainer_ybUK7Z > .children_ybUK7Z > .shopHomeButton_yKeh5i) + .scrollbarGutterStable_tqapBM .details_RGwqSL {
+    .container_Og3lGk .scrollbarGutterStable_tqapBM .details_RGwqSL /* Game Shop details text */,
+    .container_ZTJWQo .scrollbarGutterStable_tqapBM .container_bvFqCe /* Quest tiles text */ {
         --text-overlay-light: var(--text-1) !important;
     }
 }
