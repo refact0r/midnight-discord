@@ -170,7 +170,7 @@ body {
     margin-bottom: var(--gap);
 }
 .title_z_gUBg /* chat titlebar inner */ {
-    border: none;
+    border: none !important;
     background: none !important;
     margin-bottom: 0;
 }
