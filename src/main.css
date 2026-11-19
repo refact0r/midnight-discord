@@ -373,9 +373,13 @@ body {
     display: none;
 }
 
-/* Apply gap to mod view container */
+/* Mod View container */
 .sidebarContainer_MLLsfk {
     margin-inline-start: var(--gap);
+
+    .outer_P1YEjQ {
+        border-width: var(--border-thickness);
+    }
 }
 
 /* remove excess background from settings  */
