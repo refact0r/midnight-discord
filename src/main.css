@@ -287,7 +287,8 @@ body {
     background-size: 100% calc(100% + 2 * var(--border-thickness));
     
     &.user-profile-popout {
-        --border-thickness: 0px;
+        --border-thickness: 1px;
+        box-shadow: none;
     }
 }
 .outer_P1YEjQ,
