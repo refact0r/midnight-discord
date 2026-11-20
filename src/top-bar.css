@@ -40,15 +40,22 @@ body {
     .bar_3zSH5d .backForwardButtons_nS9Yqn /* page seek arrows */,
     .title_3zSH5d /* top bar title */,
     .trailing_3zSH5d /* top bar buttons */ {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
 @container body style(--top-bar-button-position: titlebar) {
+    /* Hide top bar elements */
+    .bar_3zSH5d .backForwardButtons_nS9Yqn {
+        opacity: 0;
+        pointer-events: none;
+    }
     .title_3zSH5d,
     .trailing_3zSH5d > a[href='https://support.discord.com'] {
         display: none;
     }
+
     .trailing_3zSH5d {
         position: absolute;
         top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
@@ -64,6 +71,7 @@ body {
     .popout_9Aa-7R .trailing_3zSH5d {
         z-index: 1100;
     }
+    
     /* Fix window controls overlapping certain modals */
     #app-mount,
     .modal__F9ieB {
@@ -192,11 +200,6 @@ body {
         }
     }
 
-    /* Hide page seek arrows */
-    .bar_3zSH5d .backForwardButtons_nS9Yqn {
-        display: none;
-    }
-
     /* Hide trailing in VC wrapper */
     .base_pog62O,
     .popout_9Aa-7R {
@@ -235,7 +238,8 @@ body {
     }
     /* Hide page seek arrows */
     .bar_3zSH5d .backForwardButtons_nS9Yqn {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
