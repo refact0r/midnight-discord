@@ -205,7 +205,7 @@
         --content-inventory-overlay-text-secondary: var(--text-3);
         --context-menu-backdrop-background: red;
         --control-brand-foreground: var(--accent-2);
-        --control-brand-foreground-new: lime;
+        --control-brand-foreground-new: var(--accent-2);
         --control-connect-background-active: var(--accent-5);
         --control-connect-background-default: var(--accent-4);
         --control-connect-background-hover: var(--accent-3);
@@ -497,6 +497,7 @@
         --scrollbar-auto-track: transparent;
         --scrollbar-thin-thumb: var(--bg-1);
         --scrollbar-thin-track: transparent;
+        --slider-indicator-background: var(--accent-2);
         --slider-track-background: var(--bg-2);
         --spine-default: var(--text-5);
         --spoiler-hidden-background: yellow;
@@ -1068,5 +1069,10 @@
     .colorable_K9Xq13.primaryDark_K9Xq13.active_K9Xq13:not(.disabled_K9Xq13),
     .colorable_K9Xq13.primaryDark_K9Xq13:hover:not(.disabled_K9Xq13) {
         background-color: var(--bg-1);
+    }
+
+    .container_Og3lGk .scrollbarGutterStable_tqapBM .details_RGwqSL /* Game Shop details text */,
+    .container_ZTJWQo .scrollbarGutterStable_tqapBM .container_bvFqCe /* Quest tiles text */ {
+        --text-overlay-light: var(--text-1) !important;
     }
 }
