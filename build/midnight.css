@@ -176,6 +176,10 @@ body {
     margin-bottom: 0;
 }
 
+.headerBar_tSk_LE /* quests page titlebar */ {
+    border: var(--border-thickness) solid var(--border-subtle) !important;
+}
+
 .page_pog62O > div > .chat_z_gUBg > .content_z_gUBg /* chat outer */ {
     border-left: none;
 }
