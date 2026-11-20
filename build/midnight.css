@@ -1308,6 +1308,7 @@ body {
         --scrollbar-auto-track: transparent;
         --scrollbar-thin-thumb: var(--bg-1);
         --scrollbar-thin-track: transparent;
+        --slider-indicator-background: var(--accent-2);
         --slider-track-background: var(--bg-2);
         --spine-default: var(--text-5);
         --spoiler-hidden-background: yellow;
