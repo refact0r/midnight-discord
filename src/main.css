@@ -280,6 +280,23 @@ body {
     border: none;
 }
 
+/* Profile / sidebar panels */
+.outer_P1YEjQ {
+    border: var(--border-thickness) solid var(--border-subtle);
+    background-position: center calc(-1 * var(--border-thickness));
+    background-size: 100% calc(100% + 2 * var(--border-thickness));
+    
+    &.user-profile-popout {
+        --border-thickness: 0px;
+    }
+}
+.outer_P1YEjQ,
+.inner_P1YEjQ {
+    border-radius: var(--radius-lg) !important;
+}
+.root_NxZlvf {
+    background: none;
+}
 /* DM user profile sidebar */
 .aside_HbUF2J {
     padding: 0;
@@ -287,10 +304,12 @@ body {
 
     .user-profile-sidebar {
         margin-left: var(--gap);
-        background-position: center calc(-1 * var(--border-thickness));
-        background-size: 100% calc(100% + 2 * var(--border-thickness));
         box-shadow: none;
     }
+}
+/* Fix border radius when profile editing panel is present */
+#user-profile-editing-panel.isExpanded_s3DB6Y + .outer_P1YEjQ {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
 }
 
 .searchResultsWrap_QHVbp3 /* search results */ {
@@ -380,10 +399,6 @@ body {
 /* Mod View container */
 .sidebarContainer_MLLsfk {
     margin-inline-start: var(--gap);
-
-    .outer_P1YEjQ {
-        border-width: var(--border-thickness);
-    }
 }
 
 /* remove excess background from settings  */
@@ -530,25 +545,8 @@ body {
     border-radius: var(--radius-md);
 }
 
-.contentWrapper_58b0l2  /* gif panel */,
-.outer_P1YEjQ /* profile/sidebar panel outer */,
-.inner_P1YEjQ /* profile/sidebar panel inner */ {
+.contentWrapper_58b0l2 /* gif panel */ {
     border-radius: var(--radius-lg) !important;
-}
-
-/* profile/sidebar panel outer */
-.outer_P1YEjQ {
-    border: 1px solid var(--border-subtle);
-    background-position: center calc(-1 * var(--border-thickness));
-    background-size: 100% calc(100% + 2 * var(--border-thickness));
-}
-.root_NxZlvf {
-    background: none;
-}
-
-/* Fix border radius when profile editing panel is present */
-#user-profile-editing-panel.isExpanded_s3DB6Y + .outer_P1YEjQ {
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
 }
 
 .container_g6VwXp {
